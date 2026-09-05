@@ -1,0 +1,47 @@
+# Umami — mesure d'audience sans cookies, hébergée sur le VPS.
+# Les secrets sont dans .env, jamais dans le dépôt.
+services:
+  umami:
+    image: ghcr.io/umami-software/umami:postgresql-latest
+    container_name: umami_app
+    restart: unless-stopped
+    depends_on:
+      umami_db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://umami:${DB_PASSWORD}@umami_db:5432/umami
+      DATABASE_TYPE: postgresql
+      APP_SECRET: ${APP_SECRET}
+      DISABLE_TELEMETRY: "1"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.umami.rule=Host(`stats.3h33.com`)"
+      - "traefik.http.routers.umami.entrypoints=websecure"
+      - "traefik.http.routers.umami.tls=true"
+      - "traefik.http.routers.umami.tls.certresolver=letsencrypt"
+      - "traefik.http.services.umami.loadbalancer.server.port=3000"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:3000/api/heartbeat >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+
+  umami_db:
+    image: postgres:16-alpine
+    container_name: umami_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: umami
+      POSTGRES_USER: umami
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - umami_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U umami -d umami"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  umami_data:

@@ -5,3 +5,6 @@
 /infra/
 /references/
 .DS_Store
+
+# secrets des services
+services/*/.env
