@@ -1,7 +1,7 @@
 # Le dépôt ne contient que ce qui est servi et sa configuration.
-audit/
-maquettes/
-medias/
-infra/
-references/
+/audit/
+/maquettes/
+/medias/
+/infra/
+/references/
 .DS_Store
