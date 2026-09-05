@@ -1,0 +1,20 @@
+services:
+  web:
+    image: nginx:1.27-alpine
+    container_name: h3h33_web
+    restart: unless-stopped
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.h3h33.rule=Host(`nouveau.3h33.com`)"
+      - "traefik.http.routers.h3h33.entrypoints=websecure"
+      - "traefik.http.routers.h3h33.tls=true"
+      - "traefik.http.routers.h3h33.tls.certresolver=letsencrypt"
+      - "traefik.http.services.h3h33.loadbalancer.server.port=80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/robots.txt"]
+      interval: 30s
+      timeout: 5s
+      retries: 3

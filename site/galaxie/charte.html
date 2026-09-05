@@ -1,0 +1,900 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Charte & Médias · Galaxie 3H33</title>
+<meta name="description" content="Charte graphique et médias — logos, couleurs, vidéos, textes prêts à l'emploi pour la communication des sites de la Galaxie 3H33." />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230b0b10'/><g fill='none' stroke='%23a78bfa' stroke-width='2.5' stroke-linecap='round'><path d='M32 32 m-22 0 a22 22 0 1 0 44 0 a22 22 0 1 0 -44 0' opacity='.25'/><path d='M14 32 Q22 16 32 22 T50 32' /><path d='M50 32 Q42 48 32 42 T14 32' /></g><circle cx='32' cy='32' r='3' fill='%23ffffff'/></svg>" />
+
+<style>
+  /* ---------- Tokens (synced with hub) ---------- */
+  :root{
+    --bg:#f6f5f1;
+    --bg-2:#efece4;
+    --ink:#0b0b10;
+    --ink-2:#2a2a32;
+    --muted:#6b6b78;
+    --line:#e3dfd4;
+    --line-2:#d6d1c3;
+    --card:#ffffff;
+    --accent:#5b3df5;
+    --accent-ink:#3a25c4;
+    --accent-soft:#ece7ff;
+    --chip:#f1ede2;
+    --shadow: 0 1px 0 rgba(11,11,16,.04), 0 8px 24px -12px rgba(11,11,16,.10);
+    --radius: 14px;
+    --radius-sm: 10px;
+    --maxw: 1240px;
+  }
+  html[data-theme="dark"]{
+    --bg:#0c0c11;
+    --bg-2:#121218;
+    --ink:#f7f5ef;
+    --ink-2:#e6e3da;
+    --muted:#b3b1bd;
+    --line:#2a2a36;
+    --line-2:#363644;
+    --card:#1a1a23;
+    --accent:#b9a8ff;
+    --accent-ink:#e0d6ff;
+    --accent-soft:#221f3d;
+    --chip:#23232f;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{
+    background:var(--bg);color:var(--ink);
+    font-family: ui-sans-serif, -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    font-size:16px;line-height:1.45;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  body{min-height:100vh}
+  a{color:inherit}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+  ::selection{background:var(--accent);color:#fff}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  @media (max-width:560px){ .wrap{padding:0 16px} }
+
+  /* ---------- Topbar ---------- */
+  .topbar{
+    position:relative;border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(700px 240px at 90% -40%, color-mix(in oklab, var(--accent) 14%, transparent), transparent 60%),
+      var(--bg);
+  }
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0}
+  .back-link{
+    display:inline-flex;align-items:center;gap:6px;
+    color:var(--muted);font-size:13.5px;text-decoration:none;
+    padding:6px 10px;border-radius:8px;
+    transition:color .15s,background .15s;
+  }
+  .back-link:hover{color:var(--ink);background:var(--chip)}
+  .theme-btn{
+    width:36px;height:36px;border-radius:10px;
+    border:1px solid var(--line);background:var(--card);
+    display:grid;place-items:center;color:var(--ink-2);
+    transition:border-color .15s,color .15s;
+  }
+  .theme-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .theme-btn .icn-moon{display:none}
+  html[data-theme="dark"] .theme-btn .icn-sun{display:none}
+  html[data-theme="dark"] .theme-btn .icn-moon{display:block}
+
+  .hero{padding:56px 0 36px}
+  h1.title{
+    font-family: ui-serif, "New York", "Iowan Old Style", Georgia, serif;
+    font-weight:500;font-size:clamp(34px,4.6vw,52px);
+    letter-spacing:-.02em;line-height:1.05;margin:0;
+  }
+  h1.title em{font-style:italic;color:var(--accent)}
+  .lede{color:var(--ink-2);font-size:17px;max-width:62ch;margin:14px 0 0}
+
+  /* ---------- Layout : sidebar + main ---------- */
+  .layout{
+    display:grid;grid-template-columns: 220px 1fr;gap:48px;
+    padding:32px 0 80px;align-items:start;
+  }
+  @media (max-width:900px){ .layout{grid-template-columns:1fr;gap:24px} }
+
+  .sidenav{
+    position:sticky;top:24px;
+    border-left:2px solid var(--line);
+    padding:4px 0 4px 16px;
+  }
+  .sidenav-group{margin-bottom:18px}
+  .sidenav-group > strong{
+    display:block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--muted);margin-bottom:8px;
+  }
+  .sidenav a{
+    display:block;text-decoration:none;color:var(--ink-2);
+    padding:6px 8px;border-radius:6px;font-size:14px;
+    transition:background .15s,color .15s;
+  }
+  .sidenav a:hover{background:var(--chip);color:var(--ink)}
+  .sidenav a.active{color:var(--accent);font-weight:600}
+  @media (max-width:900px){
+    .sidenav{position:static;border-left:0;border-top:1px solid var(--line);
+             padding:16px 0 0;display:grid;grid-template-columns:repeat(2,1fr);gap:0 16px}
+  }
+
+  /* ---------- Sections ---------- */
+  section.block{
+    scroll-margin-top:24px;
+    margin-bottom:64px;
+  }
+  section.block > header{
+    display:flex;align-items:baseline;justify-content:space-between;gap:16px;
+    border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:24px;
+  }
+  section.block > header h2{
+    font-family: ui-serif, "New York", Georgia, serif;
+    font-weight:500;font-size:28px;letter-spacing:-.01em;margin:0;
+  }
+  section.block > header .meta{color:var(--muted);font-size:13px}
+  section.block > header .meta a{color:var(--accent);text-decoration:none}
+  section.block > header .meta a:hover{text-decoration:underline}
+
+  /* ---------- Brand sub-blocks ---------- */
+  .brand-summary{color:var(--ink-2);max-width:70ch;margin:0 0 24px;font-size:15.5px}
+  .grid{display:grid;gap:14px}
+  .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+  .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+  @media (max-width:720px){ .grid.cols-2,.grid.cols-3{grid-template-columns:1fr} }
+
+  .panel{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius);padding:18px;
+    box-shadow:var(--shadow);
+  }
+  .panel h3{
+    font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--muted);margin:0 0 12px;font-weight:600;
+  }
+
+  /* ---------- Logo previews ---------- */
+  .logo-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  @media (max-width:720px){ .logo-strip{grid-template-columns:1fr} }
+  .logo-tile{
+    aspect-ratio: 4/3;border-radius:10px;
+    display:grid;place-items:center;padding:18px;
+    border:1px solid var(--line);position:relative;overflow:hidden;
+  }
+  .logo-tile.bg-light{background:#fff;color:#0b0b10}
+  .logo-tile.bg-dark{background:#0b0b10;color:#fff}
+  .logo-tile.bg-accent{background:var(--accent);color:#fff}
+  .logo-tile img{max-width:100%;max-height:100%;object-fit:contain}
+  .logo-tile .placeholder{
+    width:100%;height:100%;display:grid;place-items:center;
+    border:1.5px dashed currentColor;border-radius:8px;opacity:.5;
+    font-size:12px;letter-spacing:.05em;text-transform:uppercase;
+  }
+  .logo-tile .bg-label{
+    position:absolute;bottom:6px;left:8px;
+    font-size:10px;text-transform:uppercase;letter-spacing:.08em;
+    opacity:.55;
+  }
+  .logo-actions{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:6px 11px;border-radius:8px;font-size:12.5px;
+    background:var(--chip);color:var(--ink-2);
+    border:1px solid transparent;
+    transition:all .15s;text-decoration:none;
+  }
+  .btn:hover{background:var(--accent-soft);color:var(--accent-ink);border-color:var(--accent)}
+  .btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .btn.primary:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .btn.ok{color:#1f7a3a;background:#e6f5ec;border-color:#bfe5cd}
+  html[data-theme="dark"] .btn.ok{color:#7be0a0;background:#10271a;border-color:#1e4530}
+
+  /* ---------- Color swatches ---------- */
+  .swatch{
+    border-radius:10px;border:1px solid var(--line);
+    overflow:hidden;cursor:pointer;
+    transition:transform .15s,box-shadow .2s;
+  }
+  .swatch:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .swatch-color{height:80px}
+  .swatch-meta{padding:10px 12px;background:var(--card)}
+  .swatch-name{font-size:13px;font-weight:600}
+  .swatch-hex{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+              font-size:12px;color:var(--muted);margin-top:2px}
+
+  /* ---------- Type sample ---------- */
+  .type-sample{padding:16px 0}
+  .type-name{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .type-display{font-size:32px;line-height:1.1;margin:6px 0 4px;letter-spacing:-.01em}
+  .type-meta{font-size:12px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+  /* ---------- Text snippets (copy on click) ---------- */
+  .snippet{
+    background:var(--card);border:1px solid var(--line);
+    border-radius:var(--radius-sm);padding:10px 14px;
+    margin-bottom:6px;position:relative;
+  }
+  .snippet-label{
+    font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--muted);margin-bottom:4px;display:flex;justify-content:space-between;align-items:center;gap:12px;
+  }
+  .snippet-body{
+    font-size:14px;line-height:1.5;color:var(--ink-2);
+    white-space:pre-wrap;
+  }
+  .snippet-copy{
+    background:transparent;border:1px solid var(--line);
+    padding:3px 9px;border-radius:6px;font-size:11px;
+    color:var(--muted);cursor:pointer;transition:all .15s;
+  }
+  .snippet-copy:hover{color:var(--accent);border-color:var(--accent)}
+  .snippet-copy.ok{color:#1f7a3a;border-color:#bfe5cd;background:#e6f5ec}
+  .snippet-category{
+    font-size:11px;text-transform:uppercase;letter-spacing:.12em;
+    color:var(--ink);font-weight:600;
+    margin:18px 0 8px;padding-bottom:4px;
+    border-bottom:1px solid var(--line);
+  }
+  .snippet-category:first-child{margin-top:0}
+
+  /* ---------- Video ---------- */
+  .video-frame{
+    aspect-ratio:16/9;border-radius:var(--radius-sm);overflow:hidden;
+    background:var(--bg-2);border:1px solid var(--line);
+    display:grid;place-items:center;color:var(--muted);font-size:13px;
+  }
+  .video-frame iframe,.video-frame video{width:100%;height:100%;border:0}
+
+  /* ---------- Screenshots ---------- */
+  .screenshot{
+    aspect-ratio:16/10;border-radius:var(--radius-sm);overflow:hidden;
+    background:var(--bg-2);border:1px solid var(--line);
+    display:grid;place-items:center;color:var(--muted);font-size:13px;
+  }
+  .screenshot img{width:100%;height:100%;object-fit:cover}
+
+  /* ---------- Add-asset hint ---------- */
+  .hint{
+    background:var(--accent-soft);color:var(--accent-ink);
+    border:1px solid color-mix(in oklab, var(--accent) 30%, transparent);
+    border-radius:var(--radius-sm);padding:14px 18px;font-size:13.5px;
+    margin-top:32px;
+  }
+  .hint code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+             background:rgba(0,0,0,.05);padding:1px 6px;border-radius:4px}
+  html[data-theme="dark"] .hint code{background:rgba(255,255,255,.08)}
+
+  /* ---------- Empty placeholders ---------- */
+  .placeholder-block{
+    border:1.5px dashed var(--line-2);border-radius:var(--radius-sm);
+    padding:18px;color:var(--muted);font-size:13.5px;
+    background:var(--bg-2);
+  }
+
+  /* ---------- Brand color marker ---------- */
+  .brand-marker{
+    display:inline-block;width:10px;height:10px;border-radius:3px;
+    margin-right:8px;vertical-align:middle;
+    background:var(--brand-color, var(--accent));
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a href="index.html" class="back-link" aria-label="Retour au hub">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+      Retour à la galaxie
+    </a>
+    <button id="themeBtn" class="theme-btn" type="button" aria-label="Basculer le thème" title="Thème clair / sombre">
+      <svg class="icn-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icn-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+  <div class="wrap hero">
+    <h1 class="title">Charte &amp; <em>Médias</em></h1>
+    <p class="lede">Logos, couleurs, vidéos, textes prêts à l'emploi pour la communication des sites de la galaxie 3H33. Cliquer pour copier, déposer dans <code style="background:var(--chip);padding:2px 6px;border-radius:4px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px">assets/</code> pour ajouter.</p>
+  </div>
+</header>
+
+<main class="wrap layout">
+
+  <!-- Sidebar nav (auto-built from BRANDS) -->
+  <nav class="sidenav" id="sidenav" aria-label="Sommaire"></nav>
+
+  <!-- Main content (auto-built) -->
+  <div id="content"></div>
+
+</main>
+
+<script>
+/* ============================================================
+   Données — ajouter / modifier ICI
+   ============================================================ */
+
+/* Textes de communication réutilisables (copier-coller en 1 clic) */
+const COMMS = [
+  { category: "Pitchs" },
+  {
+    label: "Pitch — 1 phrase (slogan)",
+    share: ["linkedin","twitter"],
+    text: "3H33 — un studio qui rend l'IA générative compréhensible, utile et applicable, à toutes les échelles."
+  },
+  {
+    label: "Pitch — 1 phrase (alternative)",
+    text: "3H33 transforme la complexité de l'IA en outils, formations et contenus utilisables dès demain matin."
+  },
+  {
+    label: "Pitch — 30 secondes (oral)",
+    text: "3H33 est un studio d'IA appliquée. On aide les organisations, les équipes et les créatifs à passer de la curiosité aux usages concrets : on forme, on conçoit des outils sur mesure, on produit des podcasts et des études. Notre conviction : l'IA n'a de valeur que si les gens qui l'utilisent la comprennent vraiment."
+  },
+  {
+    label: "Pitch — 1 paragraphe (web / dossier)",
+    text: "3H33 est un studio dédié à l'IA appliquée. Nous accompagnons organisations, équipes et créatifs dans l'appropriation concrète de l'IA générative à travers quatre activités : des formations (IA Talent, La Forge, Formation Claude), des solutions sur mesure (Mairie.ai, Mon IA Privée), des podcasts (Voix de l'IA, Choucroute & Citron) et des études. Notre approche : pas de promesses magiques, pas de jargon — des cas d'usage réels, des outils robustes et des contenus qui démocratisent les pratiques émergentes."
+  },
+
+  { category: "Bios" },
+  {
+    label: "Bio — courte (Twitter / X · 280 c.)",
+    limit: 280,
+    text: "Studio 3H33 · IA appliquée. Formations, projets sur mesure, podcasts et études — pour celles et ceux qui veulent comprendre l'IA et s'en servir vraiment. 3h33.com"
+  },
+  {
+    label: "Bio — moyenne (LinkedIn / 500 c.)",
+    limit: 500,
+    text: "3H33 est un studio dédié à l'IA appliquée. Nous accompagnons organisations et talents avec des formations, des projets sur mesure, des podcasts et des études. Notre conviction : l'IA n'est utile que lorsqu'elle est comprise et maîtrisée par celles et ceux qui s'en servent. → 3h33.com"
+  },
+  {
+    label: "Bio — longue (À propos / presse)",
+    text: "Fondé par Alexandre Stopnicki, 3H33 est un studio d'IA appliquée basé en France. Nous concevons des formations, des outils sur mesure, des podcasts et des études autour des usages concrets de l'IA générative. Notre galaxie regroupe plusieurs projets : IA Talent (formations professionnelles), Mairie.ai (IA pour les collectivités), Mon IA Privée (IA souveraine), IA Magique (vulgarisation), La Forge (atelier prototypes), ainsi que les podcasts Voix de l'IA et Choucroute & Citron. Notre ligne : rendre l'IA lisible, utile et accessible — sans hype, sans jargon, sans promesses magiques."
+  },
+  {
+    label: "Bio fondateur — Alexandre Stopnicki",
+    text: "Alexandre Stopnicki est le fondateur du studio 3H33. Il accompagne organisations, équipes et créatifs dans l'appropriation concrète de l'IA générative, à travers des formations, des projets sur mesure, des podcasts et des études."
+  },
+
+  { category: "Tagline & valeurs" },
+  {
+    label: "Tagline officielle",
+    text: "L'IA appliquée, en clair."
+  },
+  {
+    label: "Taglines alternatives (3 versions)",
+    text: "• L'IA appliquée, en clair.\n• Comprendre l'IA, vraiment.\n• De la curiosité à l'usage."
+  },
+  {
+    label: "Manifeste — 3 piliers",
+    text: "Trois convictions guident 3H33 :\n\n1. Comprendre avant d'utiliser. L'IA n'a de valeur que si l'on sait ce qu'elle fait — et ce qu'elle ne fait pas.\n2. Appliquer, pas spéculer. On préfère les cas d'usage concrets aux promesses magiques.\n3. Partager ce qu'on apprend. Formations, podcasts, études, code ouvert : la connaissance circule."
+  },
+
+  { category: "Signatures email" },
+  {
+    label: "Signature email — minimale",
+    text: "Alexandre Stopnicki\nFondateur · Studio 3H33\n3h33.com"
+  },
+  {
+    label: "Signature email — complète",
+    text: "Alexandre Stopnicki\nFondateur · Studio 3H33 — IA appliquée\nFormations · Projets sur mesure · Podcasts · Études\n3h33.com · contact@3h33.com\nLinkedIn : /in/stopnicki"
+  },
+
+  { category: "Réseaux sociaux" },
+  {
+    label: "Post LinkedIn — annonce générique",
+    share: ["linkedin"],
+    text: "Chez 3H33, on continue d'explorer ce que l'IA générative peut vraiment apporter aux organisations.\n\nPas de hype, pas de jargon : des cas d'usage concrets, des outils robustes, des formations qui rendent autonomes.\n\n[Annonce / lien / contexte ici]\n\n#IA #IAappliquée #3H33"
+  },
+  {
+    label: "Post LinkedIn — sortie podcast",
+    share: ["linkedin"],
+    text: "🎙️ Nouvel épisode de [Voix de l'IA / Choucroute & Citron].\n\nAu programme : [sujet / invité·e / angle en 1 phrase].\n\nÀ écouter ici → [lien]\n\n#IA #Podcast #VoixDeLIA #3H33"
+  },
+  {
+    label: "Post LinkedIn — formation / événement",
+    share: ["linkedin"],
+    text: "📅 Prochaine session [IA Talent / La Forge / Formation Claude].\n\n→ Pour qui : [public]\n→ Quand : [date]\n→ Format : [présentiel / distanciel / durée]\n\nLe but : repartir avec des compétences directement applicables, pas un PowerPoint de plus.\n\nInscriptions → [lien]\n\n#FormationIA #IATalent #3H33"
+  },
+  {
+    label: "Tweet / X — court",
+    limit: 280,
+    share: ["twitter"],
+    text: "À 3H33, on parie qu'une IA bien comprise vaut dix outils mal utilisés.\n\n→ 3h33.com"
+  },
+
+  { category: "Hashtags" },
+  {
+    label: "Hashtags — officiels",
+    text: "#3H33 #IAappliquée #IATalent #VoixDeLIA #ChoucrouteEtCitron"
+  },
+  {
+    label: "Hashtags — par projet",
+    text: "Studio : #3H33 #IAappliquée\nFormations : #IATalent #LaForge #FormationClaude\nProjets : #MairieAI #MonIAPrivée #IAMagique\nPodcasts : #VoixDeLIA #ChoucrouteEtCitron"
+  },
+
+  { category: "Pieds de page" },
+  {
+    label: "Mention légale — pied de page court",
+    text: "© 3H33 — Studio d'IA appliquée. Tous droits réservés."
+  },
+  {
+    label: "Mention partenariat / sponsoring",
+    text: "Cet épisode / contenu est produit par le studio 3H33. 3H33 conçoit des formations, des projets sur mesure et des podcasts autour de l'IA appliquée. → 3h33.com"
+  },
+
+  { category: "Présentation orale" },
+  {
+    label: "Présentation — table ronde / conférence",
+    text: "Bonjour, je suis Alexandre Stopnicki, fondateur du studio 3H33. On accompagne organisations et équipes sur l'IA générative — formations, outils sur mesure, podcasts. L'idée derrière le studio : que les gens qui utilisent l'IA comprennent vraiment ce qu'ils font."
+  }
+];
+
+/* Garde-fous éditoriaux & visuels — règles courtes pour rester cohérent */
+const GUARDRAILS = [
+  {
+    title: "Nom du studio",
+    do: [
+      "Écrire « 3H33 » avec deux H et deux 3 majuscules (ex. : « Studio 3H33 »).",
+      "Accepter « 3h33.com » uniquement quand on parle du domaine.",
+      "« Studio 3H33 » est l'usage long ; « 3H33 » seul est aussi correct."
+    ],
+    dont: [
+      "Ne pas écrire « 3h33 » en minuscules dans un titre, un logo ou un en-tête.",
+      "Ne pas écrire « Trois Heures Trente-Trois » en toutes lettres.",
+      "Ne pas ajouter d'espace : pas « 3 H 33 » ni « 3-H-33 »."
+    ]
+  },
+  {
+    title: "Ton & vocabulaire",
+    do: [
+      "Direct, factuel, un peu ironique quand c'est juste — jamais cynique.",
+      "Préférer « cas d'usage », « outil », « pratique » à « solution » et « innovation ».",
+      "Dire « IA générative » ou « IA appliquée » plutôt que juste « IA » seul."
+    ],
+    dont: [
+      "Pas de « magique », « révolutionnaire », « disruptif », « game-changer ».",
+      "Pas de promesses de productivité chiffrées non sourcées (« +300 % »).",
+      "Éviter le jargon RH/marketing (« synergies », « ADN », « écosystème »)."
+    ]
+  },
+  {
+    title: "Visuels & logos",
+    do: [
+      "Conserver une marge libre autour du logo équivalente à la hauteur du « 3 ».",
+      "Utiliser la version monochrome quand le fond est complexe ou photo.",
+      "Aligner les blocs sur la grille 8 px ; arrondis cohérents (12 px par défaut)."
+    ],
+    dont: [
+      "Ne pas déformer ni faire pivoter le logo.",
+      "Ne pas appliquer d'ombre portée, de dégradé ou de contour au logo.",
+      "Ne pas placer le logo violet sur un fond violet ou rouge saturé."
+    ]
+  },
+  {
+    title: "IA & images générées",
+    do: [
+      "Mentionner quand une image / un texte a été généré par IA si c'est éditorialement utile.",
+      "Privilégier les illustrations conceptuelles abstraites aux faux portraits.",
+      "Vérifier les citations et les chiffres avant publication."
+    ],
+    dont: [
+      "Pas de visages photoréalistes générés par IA pour incarner 3H33 ou ses partenaires.",
+      "Ne pas publier de chiffres ou citations inventés par un modèle sans vérification.",
+      "Ne pas reproduire les tropes visuels « cerveau bleu » / « robot humanoïde »."
+    ]
+  }
+];
+
+/* Marques / sites — chaque entrée devient une section.
+   logo, palette, typo, video, screenshot sont OPTIONNELS.
+   Si vide → placeholder visible avec instructions. */
+const BRANDS = [
+  /* ============ Marque principale (exemple complet) ============ */
+  {
+    id: "3h33",
+    name: "3H33",
+    group: "Studio",
+    url: "https://3h33.com",
+    color: "#5b3df5",
+    summary: "Studio d'IA appliquée — conseil, projets, formations, podcasts. La marque ombrelle de toute la galaxie.",
+    palette: [
+      { name: "Violet 3H33",  hex: "#5b3df5" },
+      { name: "Encre",        hex: "#0b0b10" },
+      { name: "Papier chaud", hex: "#f6f5f1" },
+      { name: "Lavande",      hex: "#ece7ff" }
+    ],
+    type: [
+      { role: "Titres",  family: "ui-serif, New York, Georgia, serif", weight: "500 italic", note: "Italique pour l'accent ‘3h33’" },
+      { role: "Texte",   family: "ui-sans-serif, SF Pro, Inter, system-ui", weight: "400 / 500", note: "Sans-serif neutre" },
+      { role: "Code",    family: "ui-monospace, SFMono-Regular, Menlo", weight: "400", note: "Mono pour hex / liens" }
+    ],
+    pitch: "3H33 transforme la complexité de l'IA en outils, formations et contenus utilisables au quotidien.",
+    description: "3H33 est un studio dédié à l'IA appliquée. Nous accompagnons organisations et talents avec des formations, des projets sur mesure, des études et des podcasts. La marque regroupe l'ensemble des projets de la galaxie : Mairie.ai, Mon IA Privée, IA Talent, IA Magique, La Forge, les podcasts Voix de l'IA et Choucroute & Citron, et plusieurs sites réalisés ou études.",
+    tagline: "L'IA appliquée, en clair.",
+    logos: [
+      // À déposer dans assets/logos/3h33/ et décommenter :
+      // { src: "assets/logos/3h33/logo.svg",       bg: "light", label: "Sur fond clair" },
+      // { src: "assets/logos/3h33/logo-light.png", bg: "dark",  label: "Sur fond sombre" },
+      // { src: "assets/logos/3h33/logo-mono.svg",  bg: "accent",label: "Monochrome" }
+    ],
+    video: null,        // ex: { src: "assets/videos/3h33-demo.mp4" } ou { youtube: "ID_VIDEO" }
+    screenshot: null    // ex: "assets/screenshots/3h33.jpg"
+  },
+
+  /* ============ Sites principaux (placeholders) ============ */
+  {
+    id: "ia-talent",
+    name: "IA Talent",
+    group: "Formations",
+    url: "https://iatalent.net",
+    color: "#0ea5e9",
+    summary: "Acculturation et formations IA pour professionnels et organisations.",
+    palette: [],
+    type: [],
+    pitch: "Faire monter en compétence vos équipes sur l'IA générative — durablement.",
+    description: "",
+    tagline: "",
+    logos: [], video: null, screenshot: null
+  },
+  {
+    id: "mairie-ai",
+    name: "Mairie.ai",
+    group: "Solutions",
+    url: "https://mairie.ai",
+    color: "#0a7c44",
+    summary: "L'IA au service des collectivités locales et des élus.",
+    palette: [], type: [],
+    pitch: "L'IA pratique pour les communes : du diagnostic à l'outillage.",
+    description: "",
+    tagline: "",
+    logos: [], video: null, screenshot: null
+  },
+  {
+    id: "mon-ia-privee",
+    name: "Mon IA Privée",
+    group: "Solutions",
+    url: "https://mon-ia-privee.com",
+    color: "#1f3b5e",
+    summary: "Solutions d'IA souveraines et locales — vos données restent chez vous.",
+    palette: [], type: [],
+    pitch: "Toute la puissance de l'IA, aucune fuite de données.",
+    description: "",
+    tagline: "",
+    logos: [], video: null, screenshot: null
+  },
+  {
+    id: "ia-magique",
+    name: "IA Magique",
+    group: "Découverte",
+    url: "https://ia-magique.com",
+    color: "#d946ef",
+    summary: "L'IA pour les curieux — vulgarisation et premiers pas.",
+    palette: [], type: [],
+    pitch: "Comprendre l'IA en s'amusant.",
+    description: "",
+    tagline: "",
+    logos: [], video: null, screenshot: null
+  },
+  {
+    id: "alexandre-ai",
+    name: "Alexandre.ai",
+    group: "IA'rtistes",
+    url: "https://alexandre.ai",
+    color: "#ec4899",
+    summary: "Espace créatif d'Alexandre — explorations IA, vidéos, photos.",
+    palette: [], type: [],
+    pitch: "Explorations visuelles à la frontière du réel et du génératif.",
+    description: "",
+    tagline: "",
+    logos: [], video: null, screenshot: null
+  },
+  {
+    id: "voix-de-lia",
+    name: "Voix de l'IA",
+    group: "Podcasts",
+    url: "https://3h33.com/podcast-voix-de-lia/",
+    color: "#7c3aed",
+    summary: "Podcast 3H33 — celles et ceux qui font l'IA en France.",
+    palette: [], type: [],
+    pitch: "Le podcast qui donne la parole aux praticiens de l'IA.",
+    description: "",
+    tagline: "",
+    logos: [], video: null, screenshot: null
+  },
+  {
+    id: "choucroute-citron",
+    name: "Choucroute & Citron",
+    group: "Podcasts",
+    url: "https://choucroute-citron.com",
+    color: "#facc15",
+    summary: "Podcast — conversations entre deux cultures.",
+    palette: [], type: [],
+    pitch: "Regards croisés sur la société, l'innovation, le quotidien franco-allemand.",
+    description: "",
+    tagline: "",
+    logos: [], video: null, screenshot: null
+  }
+];
+
+/* ============================================================
+   Render
+   ============================================================ */
+const $ = (s, r=document) => r.querySelector(s);
+const escapeHTML = (s) => String(s||"").replace(/[&<>"']/g, c => ({
+  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+}[c]));
+
+/* ---- Sidebar ---- */
+function renderSidebar(){
+  const groups = {};
+  for(const b of BRANDS){ (groups[b.group] = groups[b.group] || []).push(b); }
+  const html = [
+    `<div class="sidenav-group">
+       <strong>Communication</strong>
+       <a href="#textes-com" data-target="textes-com">Textes prêts à l'emploi</a>
+     </div>`,
+    ...Object.entries(groups).map(([g, list]) => `
+       <div class="sidenav-group">
+         <strong>${escapeHTML(g)}</strong>
+         ${list.map(b => `
+           <a href="#${b.id}" data-target="${b.id}">
+             <span class="brand-marker" style="--brand-color:${b.color}"></span>${escapeHTML(b.name)}
+           </a>`).join("")}
+       </div>`)
+  ].join("");
+  $("#sidenav").innerHTML = html;
+}
+
+/* ---- Logo block ---- */
+function renderLogos(b){
+  const tiles = (b.logos && b.logos.length)
+    ? b.logos.map(l => `
+        <div class="logo-tile bg-${l.bg||"light"}">
+          <img src="${escapeHTML(l.src)}" alt="Logo ${escapeHTML(b.name)}" />
+          <span class="bg-label">${escapeHTML(l.label||l.bg||"")}</span>
+        </div>`).join("")
+    : ["light","dark","accent"].map(bg => `
+        <div class="logo-tile bg-${bg}">
+          <div class="placeholder">à déposer</div>
+          <span class="bg-label">${bg === "light" ? "Sur clair" : bg === "dark" ? "Sur sombre" : "Sur accent"}</span>
+        </div>`).join("");
+
+  const actions = (b.logos && b.logos.length)
+    ? b.logos.map(l => `<a class="btn" href="${escapeHTML(l.src)}" download>↓ ${escapeHTML((l.src.split("/").pop()||"").split(".").pop().toUpperCase())}</a>`).join("")
+    : `<span class="btn" style="cursor:default;opacity:.6">Dépose des fichiers dans <code style="margin-left:4px">assets/logos/${b.id}/</code></span>`;
+
+  return `
+    <div class="panel">
+      <h3>Logos</h3>
+      <div class="logo-strip">${tiles}</div>
+      <div class="logo-actions">${actions}</div>
+    </div>`;
+}
+
+/* ---- Palette block ---- */
+function renderPalette(b){
+  if(!b.palette || !b.palette.length){
+    return `<div class="panel"><h3>Couleurs</h3>
+      <div class="placeholder-block">Ajoute une palette dans <code>BRANDS["${b.id}"].palette</code> — clic sur un swatch copiera le hex.</div>
+    </div>`;
+  }
+  const cells = b.palette.map(c => `
+    <button class="swatch copyable" data-copy="${escapeHTML(c.hex)}" title="Cliquer pour copier ${c.hex}">
+      <div class="swatch-color" style="background:${c.hex}"></div>
+      <div class="swatch-meta">
+        <div class="swatch-name">${escapeHTML(c.name)}</div>
+        <div class="swatch-hex">${escapeHTML(c.hex)}</div>
+      </div>
+    </button>`).join("");
+  return `<div class="panel"><h3>Couleurs</h3><div class="grid cols-3" style="gap:10px">${cells}</div></div>`;
+}
+
+/* ---- Typo block ---- */
+function renderType(b){
+  if(!b.type || !b.type.length){
+    return `<div class="panel"><h3>Typographies</h3>
+      <div class="placeholder-block">Ajoute des typos dans <code>BRANDS["${b.id}"].type</code>.</div>
+    </div>`;
+  }
+  const rows = b.type.map(t => `
+    <div class="type-sample">
+      <div class="type-name">${escapeHTML(t.role)}</div>
+      <div class="type-display" style="font-family:${t.family}">${escapeHTML(b.name)}</div>
+      <div class="type-meta">${escapeHTML(t.family)} · ${escapeHTML(t.weight||"")}${t.note?" · "+escapeHTML(t.note):""}</div>
+    </div>`).join("");
+  return `<div class="panel"><h3>Typographies</h3>${rows}</div>`;
+}
+
+/* ---- Texts block ---- */
+function renderTexts(b){
+  const items = [
+    b.tagline    && { label: "Tagline",          text: b.tagline },
+    b.pitch      && { label: "Pitch (1 phrase)", text: b.pitch },
+    b.description&& { label: "Description longue", text: b.description }
+  ].filter(Boolean);
+  if(!items.length){
+    return `<div class="panel"><h3>Textes</h3>
+      <div class="placeholder-block">Renseigne <code>tagline</code>, <code>pitch</code> et <code>description</code> dans <code>BRANDS["${b.id}"]</code>.</div>
+    </div>`;
+  }
+  const rows = items.map(it => `
+    <div class="snippet">
+      <div class="snippet-label">
+        <span>${escapeHTML(it.label)}</span>
+        <button class="snippet-copy" data-copy="${escapeHTML(it.text)}">Copier</button>
+      </div>
+      <div class="snippet-body">${escapeHTML(it.text)}</div>
+    </div>`).join("");
+  return `<div class="panel"><h3>Textes</h3>${rows}</div>`;
+}
+
+/* ---- Video block ---- */
+function renderVideo(b){
+  let inner;
+  if(b.video?.youtube){
+    inner = `<iframe src="https://www.youtube.com/embed/${escapeHTML(b.video.youtube)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  } else if(b.video?.src){
+    inner = `<video src="${escapeHTML(b.video.src)}" controls playsinline></video>`;
+  } else {
+    inner = `Dépose une vidéo dans <code style="margin-left:4px">assets/videos/${b.id}.mp4</code><br>ou ajoute <code style="margin-left:4px">{ youtube: "ID" }</code>`;
+  }
+  return `<div class="panel"><h3>Vidéo de démo</h3><div class="video-frame">${inner}</div></div>`;
+}
+
+/* ---- Screenshot block ---- */
+function renderScreenshot(b){
+  const inner = b.screenshot
+    ? `<img src="${escapeHTML(b.screenshot)}" alt="Capture ${escapeHTML(b.name)}" />`
+    : `Dépose une capture dans <code style="margin-left:4px">assets/screenshots/${b.id}.jpg</code>`;
+  return `<div class="panel"><h3>Capture du site</h3><div class="screenshot">${inner}</div></div>`;
+}
+
+/* ---- Brand section ---- */
+function renderBrand(b){
+  return `
+    <section class="block" id="${b.id}">
+      <header>
+        <h2><span class="brand-marker" style="--brand-color:${b.color}"></span>${escapeHTML(b.name)}</h2>
+        <span class="meta">
+          <a href="${escapeHTML(b.url)}" target="_blank" rel="noopener">${escapeHTML(new URL(b.url).hostname)} ↗</a>
+        </span>
+      </header>
+      ${b.summary ? `<p class="brand-summary">${escapeHTML(b.summary)}</p>` : ""}
+      <div class="grid cols-2">
+        ${renderLogos(b)}
+        ${renderPalette(b)}
+        ${renderType(b)}
+        ${renderTexts(b)}
+        ${renderVideo(b)}
+        ${renderScreenshot(b)}
+      </div>
+    </section>`;
+}
+
+/* ---- Comms section ---- */
+function renderComms(){
+  const rows = COMMS.map(c => {
+    if(c.category){
+      return `<h3 class="snippet-category">${escapeHTML(c.category)}</h3>`;
+    }
+    return `
+    <div class="snippet">
+      <div class="snippet-label">
+        <span>${escapeHTML(c.label)}</span>
+        <button class="snippet-copy" data-copy="${escapeHTML(c.text)}">Copier</button>
+      </div>
+      <div class="snippet-body">${escapeHTML(c.text)}</div>
+    </div>`;
+  }).join("");
+  return `
+    <section class="block" id="textes-com">
+      <header>
+        <h2>Textes prêts à l'emploi</h2>
+        <span class="meta">Cliquer "Copier" pour récupérer le texte</span>
+      </header>
+      ${rows}
+      <div class="hint">
+        💡 Pour ajouter / modifier un texte : éditer la constante <code>COMMS</code> en haut de <code>charte.html</code>.
+      </div>
+    </section>`;
+}
+
+/* ---- Render all ---- */
+$("#content").innerHTML = renderComms() + BRANDS.map(renderBrand).join("") + `
+  <div class="hint">
+    🛠 <strong>Pour ajouter une marque ou un asset :</strong>
+    1) Dépose les fichiers dans <code>assets/logos/&lt;id&gt;/</code>, <code>assets/videos/</code>, <code>assets/screenshots/</code>.
+    2) Ouvre <code>charte.html</code> et complète l'objet correspondant dans <code>BRANDS</code> (ou ajoute-en un nouveau).
+    3) Recharge la page.
+  </div>`;
+renderSidebar();
+
+/* ---- Copy-on-click ---- */
+function copyText(text){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(text);
+  }
+  return new Promise((resolve, reject) => {
+    try{
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly","");
+      ta.style.position = "fixed";
+      ta.style.top = "-1000px";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      ok ? resolve() : reject(new Error("execCommand failed"));
+    }catch(err){ reject(err); }
+  });
+}
+
+document.addEventListener("click", async (e) => {
+  const btn = e.target.closest("[data-copy]");
+  if(!btn) return;
+  e.preventDefault();
+  try{
+    await copyText(btn.dataset.copy);
+    const original = btn.textContent;
+    btn.classList.add("ok");
+    if(btn.classList.contains("snippet-copy")){
+      btn.textContent = "✓ Copié";
+      setTimeout(() => { btn.classList.remove("ok"); btn.textContent = original; }, 1400);
+    } else {
+      btn.style.outline = "2px solid var(--accent)";
+      setTimeout(() => { btn.style.outline = ""; }, 700);
+    }
+  }catch(err){
+    console.warn("Copy failed:", err);
+    if(btn.classList.contains("snippet-copy")){
+      const original = btn.textContent;
+      btn.textContent = "⚠ Échec";
+      setTimeout(() => { btn.textContent = original; }, 1600);
+    }
+  }
+});
+
+/* ---- Theme toggle ---- */
+const THEME_KEY = "galaxie-theme";
+const applyTheme = (t) => document.documentElement.setAttribute("data-theme", t);
+const stored = localStorage.getItem(THEME_KEY);
+if(stored) applyTheme(stored);
+else if(window.matchMedia("(prefers-color-scheme: dark)").matches) applyTheme("dark");
+$("#themeBtn").addEventListener("click", () => {
+  const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  applyTheme(next); localStorage.setItem(THEME_KEY, next);
+});
+
+/* ---- Sidebar active link on scroll ---- */
+const links = [...document.querySelectorAll(".sidenav a")];
+const targets = links.map(a => document.getElementById(a.dataset.target)).filter(Boolean);
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      links.forEach(a => a.classList.toggle("active", a.dataset.target === entry.target.id));
+    }
+  });
+}, { rootMargin: "-30% 0px -65% 0px" });
+targets.forEach(t => io.observe(t));
+
+/* ---- Smooth scroll for anchor links ---- */
+links.forEach(a => a.addEventListener("click", (e) => {
+  const tgt = document.getElementById(a.dataset.target);
+  if(tgt){
+    e.preventDefault();
+    window.scrollTo({ top: tgt.offsetTop - 16, behavior: "smooth" });
+    history.replaceState(null, "", "#" + a.dataset.target);
+  }
+}));
+</script>
+
+</body>
+</html>

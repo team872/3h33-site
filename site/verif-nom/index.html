@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>verif-nom · Vérification d'un nom de marque, domaine, brevet — 14 bases en parallèle · 3h33.com</title>
+<meta name="description" content="Vérifie en 3 secondes la disponibilité d'un nom : domaine (RDAP multi-TLD), marque (INPI, USPTO, EUIPO, WIPO), brevet, RNE, GitHub, npm, PyPI, Wikipedia. 14 bases interrogées en automatique, 30+ recherches manuelles en 1 clic. Gratuit, sans inscription.">
+<meta name="keywords" content="vérification nom marque, disponibilité nom de domaine, recherche INPI, USPTO trademark search, WHOIS RDAP, vérifier marque déposée, RNE entreprise, brevet, copyright, recherche d'antériorité, naming, brand check">
+<meta name="author" content="3h33.com">
+<meta name="robots" content="index, follow">
+<meta name="language" content="French">
+<link rel="canonical" href="https://3h33.com/verif-nom">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🔍%3C/text%3E%3C/svg%3E">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn, Discord, Slack…) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="3h33.com">
+<meta property="og:url" content="https://3h33.com/verif-nom">
+<meta property="og:title" content="verif-nom — Vérification 360° d'un nom">
+<meta property="og:description" content="Marque, domaine, brevet, INPI, USPTO, GitHub, npm… 14 bases interrogées en parallèle pour vérifier instantanément la disponibilité d'un nom. Gratuit, sans inscription.">
+<meta property="og:image" content="https://3h33.com/verif-nom/og-image.png">
+<meta property="og:image:secure_url" content="https://3h33.com/verif-nom/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="verif-nom — Vérification 360° d'un nom — 14 bases en parallèle, gratuit, 100% navigateur">
+<meta property="og:locale" content="fr_FR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="verif-nom — Vérification 360° d'un nom">
+<meta name="twitter:description" content="Marque, domaine, brevet, INPI, USPTO, GitHub, npm… 14 bases interrogées en parallèle. Gratuit.">
+<meta name="twitter:image" content="https://3h33.com/verif-nom/og-image.png">
+<meta name="twitter:image:alt" content="verif-nom — Vérification 360° d'un nom">
+
+<!-- Theme color (chrome mobile, PWA) -->
+<meta name="theme-color" content="#c96442">
+<meta name="apple-mobile-web-app-title" content="verif-nom">
+
+<!-- Structured data (Schema.org) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "verif-nom",
+  "alternateName": "Vérification 360° d'un nom",
+  "url": "https://3h33.com/verif-nom",
+  "description": "Vérifie en parallèle la disponibilité d'un nom dans 14 bases (domaines, marques INPI/USPTO/EUIPO, brevets, RNE, GitHub, npm, Wikipedia) et 30+ recherches manuelles en 1 clic.",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any (browser)",
+  "browserRequirements": "Requires JavaScript. Modern browser.",
+  "inLanguage": "fr-FR",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "3h33.com",
+    "url": "https://3h33.com"
+  },
+  "featureList": [
+    "Vérification RDAP multi-TLD avec fallback DNS",
+    "Recherche RNE (INPI) automatique",
+    "Catalogue Library of Congress automatique",
+    "GitHub, npm, PyPI, Crates.io, RubyGems en parallèle",
+    "Wikipedia, Wikidata, Open Library",
+    "Liens 1-clic vers USPTO, EUIPO, WIPO, UKIPO, DPMA, CIPO, IP Australia, JPO",
+    "Espacenet, Google Patents, WIPO PatentScope, Lens.org",
+    "UK Companies House, OpenCorporates, SEC EDGAR, Zefix, KBO",
+    "Suggestions alternatives automatiques",
+    "Historique local des recherches",
+    "Auto-copie du nom dans le presse-papier"
+  ]
+}
+</script>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #fafaf7;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --border: #e5e5e0;
+    --accent: #c96442;
+    --accent-hover: #a8512f;
+    --green: #16a34a;
+    --green-bg: #dcfce7;
+    --red: #dc2626;
+    --red-bg: #fee2e2;
+    --amber: #d97706;
+    --amber-bg: #fef3c7;
+    --blue: #2563eb;
+    --blue-bg: #dbeafe;
+    --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 32px 20px;
+    line-height: 1.5;
+  }
+  .container { max-width: 880px; margin: 0 auto; }
+  header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    letter-spacing: -0.02em;
+  }
+  header p {
+    margin: 0 0 28px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+  .search-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .kbd-hint {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .kbd-hint kbd {
+    display: inline-block;
+    padding: 1px 6px;
+    background: white;
+    border: 1px solid var(--border);
+    border-bottom-width: 2px;
+    border-radius: 4px;
+    font-family: "SF Mono", "Menlo", Consolas, monospace;
+    font-size: 11px;
+    color: var(--text);
+    margin: 0 1px;
+  }
+  .kbd-hint-text { color: var(--muted); }
+  #shareBtn {
+    background: white;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 0 14px;
+    transition: all 0.15s;
+    cursor: pointer;
+  }
+  #shareBtn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .tld-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .preset-btn {
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    background: white;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .preset-btn:hover {
+    border-color: var(--text);
+    color: var(--text);
+  }
+  .preset-btn.active {
+    background: var(--text);
+    color: white;
+    border-color: var(--text);
+  }
+  #searchInput.glow {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(201, 100, 66, 0.15);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  details.collapsible-card > summary {
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+  }
+  details.collapsible-card > summary::-webkit-details-marker { display: none; }
+  details.collapsible-card > summary .caret {
+    display: inline-block;
+    width: 0; height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid var(--muted);
+    transition: transform 0.2s;
+    margin-right: 8px;
+    vertical-align: middle;
+    transform: rotate(-90deg);
+  }
+  details.collapsible-card[open] > summary .caret {
+    transform: rotate(0deg);
+  }
+  details.collapsible-card[open] > summary {
+    margin-bottom: 0;
+  }
+  input[type=text] {
+    flex: 1;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg);
+    font-family: inherit;
+    transition: border-color 0.15s;
+  }
+  input[type=text]:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  button {
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s;
+  }
+  button:hover { background: var(--accent-hover); }
+  button:disabled { background: #ccc; cursor: not-allowed; }
+  button.secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  button.secondary:hover { background: var(--bg); }
+  .tld-section {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .tld-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+  .tld-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .tld-chip {
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: white;
+    color: var(--text);
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.15s;
+  }
+  .tld-chip.selected {
+    background: var(--text);
+    color: white;
+    border-color: var(--text);
+  }
+  .tld-chip-input {
+    border-style: dashed;
+    color: var(--muted);
+  }
+  .results { margin-top: 4px; }
+  .result-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    background: white;
+  }
+  .result-domain {
+    font-family: "SF Mono", "Menlo", Consolas, monospace;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .badge {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .badge.free { background: var(--green-bg); color: var(--green); }
+  .badge.taken { background: var(--red-bg); color: var(--red); }
+  .badge.unknown { background: var(--amber-bg); color: var(--amber); }
+  .badge.loading { background: var(--blue-bg); color: var(--blue); }
+  .badge .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: currentColor;
+  }
+  .spinner {
+    width: 12px; height: 12px; border: 2px solid currentColor;
+    border-top-color: transparent; border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .result-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .section-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 12px;
+    color: var(--text);
+  }
+  .alt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 8px;
+  }
+  .alt-item {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    font-family: "SF Mono", "Menlo", Consolas, monospace;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: border-color 0.15s;
+  }
+  .alt-item:hover { border-color: var(--accent); }
+  .history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .history-item:last-child { border-bottom: none; }
+  .history-term {
+    font-family: "SF Mono", "Menlo", Consolas, monospace;
+    cursor: pointer;
+    color: var(--text);
+  }
+  .history-term:hover { color: var(--accent); }
+  .history-meta { color: var(--muted); font-size: 12px; }
+  .empty {
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+    padding: 12px;
+  }
+  .info-note {
+    font-size: 12px;
+    color: var(--muted);
+    padding: 8px 12px;
+    background: var(--bg);
+    border-radius: 6px;
+    margin-top: 12px;
+  }
+  details summary {
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--muted);
+    user-select: none;
+  }
+  details[open] summary { margin-bottom: 10px; }
+  .entreprise-item {
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 6px;
+    background: white;
+  }
+  .entreprise-name {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .entreprise-meta {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 2px;
+  }
+  .entreprise-meta a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .entreprise-meta a:hover { text-decoration: underline; }
+  .entreprise-status {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-left: 6px;
+  }
+  .entreprise-status.active { background: var(--green-bg); color: var(--green); }
+  .entreprise-status.closed { background: #f3f4f6; color: #6b6b6b; }
+  .inpi-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    font-family: inherit;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .inpi-btn:hover {
+    border-color: var(--accent);
+    background: var(--bg);
+  }
+  .inpi-btn .icon {
+    width: 14px; height: 14px;
+    opacity: 0.6;
+  }
+  .group-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 16px 0 8px;
+  }
+  .group-title:first-child { margin-top: 0; }
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .fame-summary {
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .fame-thumb {
+    width: 60px; height: 60px;
+    border-radius: 8px;
+    background: var(--bg);
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .fame-body { flex: 1; min-width: 0; }
+  .fame-title { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+  .fame-extract {
+    font-size: 13px;
+    color: var(--text);
+    margin: 4px 0 6px;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .fame-meta { font-size: 11px; color: var(--muted); }
+  .fame-meta a { color: var(--accent); text-decoration: none; }
+  .fame-meta a:hover { text-decoration: underline; }
+  .domain-link {
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px dotted transparent;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .domain-link:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+  .google-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px; height: 32px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    color: var(--muted);
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .google-btn:hover {
+    border-color: var(--accent);
+    background: var(--bg);
+    color: var(--accent);
+  }
+  .google-btn svg { width: 16px; height: 16px; }
+  .copy-flash {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 1000;
+  }
+  .copy-flash.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+  }
+  .topnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .topnav-brand {
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: -0.01em;
+  }
+  .topnav-brand:hover { color: var(--accent); }
+  .topnav-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .topnav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.15s;
+  }
+  .topnav-links a:hover { color: var(--text); }
+  section.info-section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    scroll-margin-top: 20px;
+  }
+  section.info-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  section.info-section .lede {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 20px;
+  }
+  section.info-section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 22px 0 8px;
+  }
+  section.info-section p,
+  section.info-section li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  section.info-section ol,
+  section.info-section ul {
+    padding-left: 22px;
+    margin: 8px 0 12px;
+  }
+  section.info-section ol li,
+  section.info-section ul li { margin-bottom: 6px; }
+  section.info-section code {
+    background: var(--bg);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: "SF Mono", "Menlo", Consolas, monospace;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item summary {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 18px;
+    color: var(--muted);
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item[open] summary { margin-bottom: 8px; color: var(--accent); }
+  .faq-item .faq-body {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .limit-row {
+    display: flex;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .limit-row:last-child { border-bottom: none; }
+  .limit-icon {
+    flex-shrink: 0;
+    font-size: 16px;
+    color: var(--amber);
+    line-height: 1.5;
+  }
+  .limit-body { flex: 1; }
+  .limit-title { font-weight: 500; font-size: 14px; margin-bottom: 2px; }
+  .limit-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  /* ======================================================================
+     Formaloo — on laisse leur design natif s'exprimer. Le test sur une
+     page neutre a confirmé que leur rendu par défaut est propre ; mes
+     overrides précédentes cassaient plus qu'elles n'amélioraient.
+     On garde uniquement : un wrapper carte (pour la cohérence visuelle
+     avec les autres cartes du site) + un message de chargement.
+     ====================================================================== */
+  .formaloo-host {
+    margin-top: 14px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 8px;
+    min-height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  .formaloo--root-container:empty::after {
+    content: "Chargement du formulaire…";
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+    text-align: center;
+    padding: 60px 0;
+  }
+  footer.page-footer {
+    text-align: center;
+    padding: 32px 16px 16px;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+    margin-top: 12px;
+  }
+  .ecosystem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 18px;
+  }
+  .ecosystem-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    width: 100%;
+    max-width: 800px;
+  }
+  .ecosystem-card {
+    display: block;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: white;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.15s, transform 0.15s;
+    text-align: left;
+  }
+  .ecosystem-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .ecosystem-card-emoji { font-size: 22px; margin-bottom: 6px; display: block; }
+  .ecosystem-card-name { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+  .ecosystem-card-desc { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .footer-credit {
+    margin-top: 12px;
+    font-size: 12px;
+  }
+  .footer-credit a { color: var(--muted); text-decoration: none; }
+  .footer-credit a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+<div id="copyFlash" class="copy-flash">✓ Nom copié dans le presse-papier</div>
+<div class="container">
+  <nav class="topnav">
+    <a href="https://3h33.com" class="topnav-brand">3h33.com<span style="color:var(--muted); font-weight:400"> / </span><span style="color:var(--accent)">verif-nom</span></a>
+    <div class="topnav-links">
+      <a href="#guide">Mode d'emploi</a>
+      <a href="#faq">FAQ</a>
+      <a href="#limites">Limites</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>verif-nom <span style="color:var(--muted); font-weight:400; font-size:18px; letter-spacing:0">— vérification 360° d'un nom</span></h1>
+    <p>Domaine, marque (INPI, USPTO, EUIPO, WIPO), brevet, RNE, GitHub, npm, PyPI, Wikipedia… <strong>14 bases interrogées automatiquement</strong> en simultané, plus 30+ recherches manuelles en 1 clic. Tout est gratuit et tourne dans ton navigateur.</p>
+  </header>
+
+  <div class="card">
+    <div class="search-row">
+      <input type="text" id="searchInput" placeholder="ex. monsuperprojet ou monprojet.io" autocomplete="off" autofocus>
+      <button id="searchBtn">Vérifier</button>
+      <button id="shareBtn" class="secondary" title="Copier le lien de cette recherche pour la partager" style="display:none">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </button>
+    </div>
+    <div class="kbd-hint" id="kbdHint">
+      <span><kbd>⌘</kbd><kbd>K</kbd> <span class="kbd-hint-text">pour revenir ici depuis n'importe où</span></span>
+    </div>
+    <div class="tld-section">
+      <div class="tld-presets">
+        <span class="tld-label" style="margin-bottom:0">Extensions :</span>
+        <button class="preset-btn" data-preset="default" title="Sélection par défaut">★ Par défaut</button>
+        <button class="preset-btn" data-preset="tech" title=".com .io .dev .app .ai">Tech</button>
+        <button class="preset-btn" data-preset="fr" title=".fr .com .eu .net">FR</button>
+        <button class="preset-btn" data-preset="perso" title=".me .blog .studio .xyz .online">Perso</button>
+        <button class="preset-btn" data-preset="all" title="Toutes">Toutes</button>
+        <button class="preset-btn" data-preset="clear" title="Désélectionner">Aucune</button>
+      </div>
+      <div class="tld-chips" id="tldChips"></div>
+    </div>
+  </div>
+
+  <div id="resultsCard" class="card" style="display:none">
+    <h2 class="section-title" id="resultsTitle">Résultats</h2>
+    <div class="results" id="results"></div>
+  </div>
+
+  <div id="inpiCard" class="card" style="display:none">
+    <h2 class="section-title">Vérification France · INPI <span style="font-weight:400; color:var(--muted); font-size:12px">· entreprises, marques, brevets</span></h2>
+    <div id="inpiEntreprises"></div>
+    <div id="inpiLinks" style="margin-top:14px; display:flex; flex-wrap:wrap; gap:8px"></div>
+    <div class="info-note">
+      Données entreprises : <strong>RNE</strong> (Registre National des Entreprises, tenu par l'INPI depuis 2023) via l'API publique <code>recherche-entreprises.api.gouv.fr</code>. Les recherches marques et brevets s'ouvrent sur les portails officiels INPI car leur API n'est pas accessible sans clé.
+    </div>
+  </div>
+
+  <div id="usCard" class="card" style="display:none">
+    <h2 class="section-title">Vérification États-Unis · Library of Congress, USPTO, Copyright Office</h2>
+    <div id="locResults"></div>
+    <div id="usLinks" style="margin-top:14px; display:flex; flex-wrap:wrap; gap:8px"></div>
+    <div class="info-note">
+      <strong>Library of Congress</strong> : recherche automatique dans le catalogue (livres, musique, films, archives) via l'API publique <code>loc.gov</code>.
+      <strong>USPTO</strong> (trademarks) et <strong>U.S. Copyright Office</strong> : pas d'API ouverte → recherche manuelle en 1 clic.
+      Rappel : un nom ne peut pas être protégé par copyright — c'est le trademark (USPTO) qui compte pour un nom de marque.
+    </div>
+  </div>
+
+  <div id="devCard" class="card" style="display:none">
+    <h2 class="section-title">Écosystèmes développeur <span style="font-weight:400; color:var(--muted); font-size:12px">· packages, repos</span></h2>
+    <div class="results" id="devResults"></div>
+    <div class="info-note">Si tu nommes un produit tech, ces réservations comptent autant qu'un domaine : un nom de package déjà pris peut bloquer ta distribution.</div>
+  </div>
+
+  <div id="fameCard" class="card" style="display:none">
+    <h2 class="section-title">Notoriété publique <span style="font-weight:400; color:var(--muted); font-size:12px">· Wikipedia, Wikidata, livres</span></h2>
+    <div id="fameResults"></div>
+    <div class="info-note">Si ton nom correspond à une entité notable (personne, œuvre, entreprise), il sera plus difficile de te référencer.</div>
+  </div>
+
+  <details id="intlCard" class="card collapsible-card" style="display:none">
+    <summary>
+      <h2 class="section-title" style="margin:0">
+        <span class="caret"></span>
+        Vérifications internationales
+        <span style="font-weight:400; color:var(--muted); font-size:12px">· marques, brevets, sociétés · 30+ bases · clique pour déployer</span>
+      </h2>
+    </summary>
+    <div style="margin-top:14px">
+      <div id="intlGroups"></div>
+      <div class="info-note">Ces bases nécessitent une clé API ou ne sont pas accessibles depuis un navigateur. Les boutons ouvrent les recherches officielles pré-remplies dans un nouvel onglet — et copient automatiquement le nom dans ton presse-papier.</div>
+    </div>
+  </details>
+
+  <div id="altCard" class="card" style="display:none">
+    <h2 class="section-title">Suggestions alternatives</h2>
+    <div class="alt-grid" id="alternatives"></div>
+    <div class="info-note">Clique sur une suggestion pour la re-tester.</div>
+  </div>
+
+  <div class="card">
+    <details open>
+      <summary><strong style="color:var(--text)">Historique</strong> &middot; recherches récentes (stockées localement)</summary>
+      <div id="history"></div>
+      <div style="text-align:right; margin-top:10px">
+        <button class="secondary" id="clearHistory" style="font-size:12px; padding:6px 12px">Effacer l'historique</button>
+      </div>
+    </details>
+  </div>
+
+  <div class="info-note">
+    <strong>Comment ça marche :</strong> RDAP (Registration Data Access Protocol) renvoie 404 si le domaine n'est pas enregistré. Pour les TLDs sans RDAP (.io, .co, …), on utilise DNS-over-HTTPS : un domaine sans entrée DNS est probablement libre. Les statuts "incertain" signifient qu'il faut vérifier manuellement chez un registrar.
+  </div>
+
+  <section class="info-section" id="guide">
+    <h2>Mode d'emploi</h2>
+    <p class="lede">Quatre étapes, trois minutes, vingt sources interrogées.</p>
+
+    <h3>1. Tape un nom ou un domaine</h3>
+    <p>Dans le champ de recherche en haut de la page :</p>
+    <ul>
+      <li>Tape juste un nom (<code>monprojet</code>) → l'outil teste <strong>toutes les extensions cochées</strong> en parallèle (.com, .io, .fr, etc.) et lance les vérifications marque, brevet, RNE, etc. sur ce nom.</li>
+      <li>Tape un domaine complet (<code>monprojet.io</code>) → seul ce domaine est testé, plus les bases connexes sur la racine.</li>
+    </ul>
+
+    <h3>2. Lis les résultats de disponibilité de domaine</h3>
+    <p>Pour chaque extension, tu vois :</p>
+    <ul>
+      <li><span class="badge free" style="display:inline-flex"><span class="dot"></span>Disponible</span> — le domaine est libre auprès du registre officiel.</li>
+      <li><span class="badge taken" style="display:inline-flex"><span class="dot"></span>Pris</span> — déjà enregistré. Le nom du domaine devient cliquable pour ouvrir le site, et un bouton Google à côté te montre ce que Google indexe dessus.</li>
+      <li><span class="badge unknown" style="display:inline-flex"><span class="dot"></span>Incertain</span> — l'API n'a pas pu trancher (TLD rare, anomalie). Vérifie chez un registrar.</li>
+    </ul>
+
+    <h3>3. Explore les cartes thématiques en dessous</h3>
+    <p>Chaque carte qui s'affiche correspond à un type de protection :</p>
+    <ul>
+      <li><strong>Vérification France · INPI</strong> : recherche automatique dans le <strong>RNE</strong> (Registre National des Entreprises, géré par l'INPI). Si une société française porte ce nom, elle apparaît avec SIREN, adresse, statut.</li>
+      <li><strong>Vérification États-Unis</strong> : catalogue Library of Congress en automatique + boutons USPTO Trademark Search, U.S. Copyright Office, Justia.</li>
+      <li><strong>Écosystèmes développeur</strong> : si tu nommes un produit tech, c'est aussi important qu'un domaine. GitHub, npm, PyPI, Crates.io, RubyGems testés en parallèle.</li>
+      <li><strong>Notoriété publique</strong> : Wikipedia FR + EN, Wikidata, Open Library. Détecte si ton nom correspond déjà à une entité notable.</li>
+      <li><strong>Vérifications internationales</strong> : 30+ boutons vers les bureaux nationaux (EUIPO, UKIPO, DPMA, JPO, CNIPA…), brevets (Google Patents, Espacenet, WIPO PatentScope), registres de sociétés (Companies House, OpenCorporates, SEC EDGAR…) et réseaux (LinkedIn, X, YouTube).</li>
+    </ul>
+
+    <h3>4. Astuce — le clic auto-copie</h3>
+    <p>Quand tu cliques sur un bouton de recherche manuelle, le <strong>nom est automatiquement copié dans ton presse-papier</strong>. Si la page d'arrivée ne pré-remplit pas le champ (cas fréquent avec les bases USPTO, Copyright Office, DPMA…), tu fais juste <code>Cmd+V</code> et <code>Entrée</code>. Trois secondes par base.</p>
+    <p>Un point orange <span style="display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--amber); vertical-align:middle"></span> sur un bouton signale précisément les bases où le pré-remplissage n'est pas garanti.</p>
+
+    <h3>Bonus — historique local</h3>
+    <p>Les 20 dernières recherches sont sauvegardées dans le navigateur (localStorage). Clique sur une entrée pour la relancer. Rien n'est envoyé à un serveur — tout reste sur ton appareil.</p>
+  </section>
+
+  <section class="info-section" id="limites">
+    <h2>Limites — ce que l'outil ne fait pas</h2>
+    <p class="lede">Pour rester transparent : aucun système gratuit ne peut tout couvrir. Voici ce que tu dois savoir avant de prendre une décision juridique ou financière.</p>
+
+    <div class="limit-row">
+      <div class="limit-icon">●</div>
+      <div class="limit-body">
+        <div class="limit-title">Pas un avis juridique</div>
+        <div class="limit-desc">Cet outil est un <strong>premier filtre</strong>, pas un audit de propriété intellectuelle. Avant un dépôt de marque ou un investissement important, consulte un Conseil en Propriété Industrielle (CPI). Une marque peut bloquer ton projet même si elle n'apparaît pas sur ces bases (marques notoires non déposées, droits d'auteur, etc.).</div>
+      </div>
+    </div>
+
+    <div class="limit-row">
+      <div class="limit-icon">●</div>
+      <div class="limit-body">
+        <div class="limit-title">Le pré-remplissage de certaines bases peut échouer</div>
+        <div class="limit-desc">Plusieurs sites (USPTO Trademark Search, U.S. Copyright Office, DPMA, JPO, CNIPA) sont des applications JavaScript qui n'acceptent pas toujours les paramètres URL. C'est pour ça qu'on copie automatiquement le nom dans ton presse-papier — tu fais Cmd+V pour coller.</div>
+      </div>
+    </div>
+
+    <div class="limit-row">
+      <div class="limit-icon">●</div>
+      <div class="limit-body">
+        <div class="limit-title">Status "Incertain" sur les TLDs sans RDAP</div>
+        <div class="limit-desc">Pour les extensions comme .io, .co, .ai, on utilise un fallback DNS : un domaine sans entrée DNS est <em>probablement</em> libre, mais peut être enregistré sans avoir été configuré. Confirme toujours sur un registrar (Gandi, OVH, Namecheap) avant achat.</div>
+      </div>
+    </div>
+
+    <div class="limit-row">
+      <div class="limit-icon">●</div>
+      <div class="limit-body">
+        <div class="limit-title">Pas de marques internationales exhaustives en automatique</div>
+        <div class="limit-desc">Les API publiques des bureaux nationaux (USPTO, DPMA, JPO…) sont fermées ou payantes. On compense avec des boutons 1-clic vers leurs portails de recherche officiels. La couverture automatique est limitée à RNE/INPI (France) et Library of Congress (US).</div>
+      </div>
+    </div>
+
+    <div class="limit-row">
+      <div class="limit-icon">●</div>
+      <div class="limit-body">
+        <div class="limit-title">Quotas et limites des API publiques</div>
+        <div class="limit-desc">GitHub limite à 60 requêtes/heure par IP pour les utilisateurs anonymes. RDAP, Wikipedia, etc. ont des quotas similaires. Si tu fais beaucoup de tests d'affilée, attends quelques minutes.</div>
+      </div>
+    </div>
+
+    <div class="limit-row">
+      <div class="limit-icon">●</div>
+      <div class="limit-body">
+        <div class="limit-title">Couverture géographique des sociétés</div>
+        <div class="limit-desc">Le RNE INPI couvre la France. Pour les autres pays, l'outil propose des liens manuels (Companies House UK, SEC EDGAR US, Zefix CH, KBO BE, Handelsregister DE…). OpenCorporates en agrégateur global existe mais nécessite une clé API payante pour usage intensif.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section" id="faq">
+    <h2>Questions fréquentes</h2>
+    <p class="lede">Tout ce qu'il faut savoir avant et après usage.</p>
+
+    <details class="faq-item">
+      <summary>Mes recherches sont-elles enregistrées quelque part ?</summary>
+      <div class="faq-body">Non. Aucun serveur ne reçoit tes recherches — tout se passe dans ton navigateur. L'historique des 20 dernières recherches est stocké en local (<code>localStorage</code>) sur ton appareil uniquement, et tu peux l'effacer en un clic. Les API publiques que l'outil interroge (RDAP, Wikipedia, GitHub, etc.) voient passer ta requête mais ne savent pas qui tu es au-delà de ton adresse IP.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>"Disponible" sur cet outil = je peux acheter le domaine en toute sécurité ?</summary>
+      <div class="faq-body">Dans 95% des cas oui, mais reconfirme toujours auprès d'un registrar (Gandi, OVH, Namecheap, Cloudflare…) <strong>juste avant d'acheter</strong>. Un domaine peut être enregistré dans la minute qui sépare ma vérification et ton achat. De même, "Pris" peut occasionnellement être un faux positif sur des TLDs exotiques — vérifie sur le site officiel du registre.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Pourquoi certaines bases s'ouvrent sans pré-remplir le champ ?</summary>
+      <div class="faq-body">Beaucoup de bureaux officiels (USPTO, Copyright Office, DPMA…) ont des interfaces de recherche en JavaScript qui n'acceptent pas toujours les paramètres URL. C'est une limitation côté serveur, pas de cet outil. Pour compenser : <strong>chaque clic copie automatiquement le nom dans ton presse-papier</strong>. Tu fais Cmd+V (Mac) ou Ctrl+V (Windows) dans leur champ de recherche, Entrée, et tu as ton résultat en 5 secondes.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Pourquoi je vois des résultats Wikipedia pour un mot très commun ?</summary>
+      <div class="faq-body">La carte "Notoriété publique" cherche si ton nom correspond à une page Wikipedia existante. Si tu cherches "lampe" ou "ciel", il y aura toujours un résultat. C'est utile pour les <strong>noms inventés</strong> ou peu communs : si Wikipedia, Wikidata et Open Library ne trouvent rien, ton nom est probablement original.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Que vaut un "Disponible" sur GitHub / npm / PyPI ?</summary>
+      <div class="faq-body">Très fiable. Ces plateformes ont des APIs strictes et le statut est en temps réel. Mais attention : un nom "Disponible" aujourd'hui peut être pris dans l'heure. Si tu lances un produit open-source, <strong>réserve le nom rapidement</strong> en publiant un package vide ou en créant l'organisation GitHub.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>L'outil détecte-t-il les marques notoires non déposées ?</summary>
+      <div class="faq-body">Non, c'est une vraie limite. Les "marques notoires" (Coca-Cola, Google, Disney…) sont protégées même sans dépôt formel via la jurisprudence. Aucune base de données ne les liste exhaustivement. Pour un projet sérieux, fais une recherche d'antériorité avec un Conseil en Propriété Industrielle.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Puis-je copier-coller cet outil sur mon propre site ?</summary>
+      <div class="faq-body">Oui, c'est un fichier HTML autonome sans dépendances. Tu peux l'auto-héberger librement. Si tu en fais une version dérivée, un crédit vers <a href="https://3h33.com" target="_blank" rel="noopener">3h33.com</a> est apprécié mais pas obligatoire. Pas de revente intégrale telle quelle, par contre.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Quelles différences entre marque, copyright, brevet, nom de domaine ?</summary>
+      <div class="faq-body">
+        <strong>Marque</strong> : protège un nom commercial, un logo, un slogan dans une catégorie d'activité (INPI en France, USPTO aux US). Renouvelable 10 ans.<br><br>
+        <strong>Copyright / droit d'auteur</strong> : protège une <em>œuvre</em> (texte, musique, code, image), pas un nom. Automatique à la création, pas besoin de dépôt en France.<br><br>
+        <strong>Brevet</strong> : protège une invention technique pendant 20 ans. Dépôt INPI / EPO / WIPO.<br><br>
+        <strong>Nom de domaine</strong> : ce n'est pas une protection juridique, c'est juste une réservation auprès d'un registre. Mais conflit possible avec une marque.<br><br>
+        <strong>Dénomination sociale</strong> : nom de la société au RNE. Protégé sur le territoire d'enregistrement.
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Ça fonctionne sur mobile ?</summary>
+      <div class="faq-body">Oui, la page est responsive. Mais le mode bureau reste plus confortable vu le nombre de résultats parallèles à scanner. Sur mobile, certains liens vers les portails officiels (USPTO, EUIPO…) peuvent afficher des versions desktop peu adaptées au tactile — ce n'est pas un défaut de cet outil mais des sites de destination.</div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Un bug ? Une base à ajouter ? Une suggestion ?</summary>
+      <div class="faq-body">Utilise le <a href="#contact">formulaire de contact</a> en bas de page. Toute remontée est lue et beaucoup sont implémentées.</div>
+    </details>
+  </section>
+
+  <section class="info-section" id="contact">
+    <h2>Contact</h2>
+    <p class="lede">Bug, suggestion, base à ajouter, collaboration ? Le formulaire ci-dessous arrive directement dans ma boîte.</p>
+    <div class="formaloo-host">
+      <!-- Formaloo JS embed — rendu dans le DOM de la page (pas en iframe),
+           ce qui permet d'appliquer les styles ci-dessous pour qu'il matche le site -->
+      <div class="formaloo--root-container" data-form-slug="UPaD9ml3" style="width:100%"></div>
+      <script src="https://embed.formaloo.me/v1/main.js" defer async></script>
+    </div>
+    <p style="font-size:12px; color:var(--muted); margin-top:14px; text-align:center">
+      Problème d'affichage ? <a href="https://learningcool.formaloo.me/0ijpfa" target="_blank" rel="noopener" style="color:var(--accent)">Ouvrir le formulaire dans un nouvel onglet ↗</a>
+    </p>
+  </section>
+
+  <footer class="page-footer">
+    <div class="ecosystem">
+      <div class="ecosystem-title">L'écosystème 3h33</div>
+      <div class="ecosystem-grid">
+        <a href="https://3h33.com" target="_blank" rel="noopener" class="ecosystem-card">
+          <span class="ecosystem-card-emoji">🌐</span>
+          <div class="ecosystem-card-name">3h33.com</div>
+          <div class="ecosystem-card-desc">Le hub principal — projets, articles, expérimentations.</div>
+        </a>
+        <a href="https://elfe.studio" target="_blank" rel="noopener" class="ecosystem-card">
+          <span class="ecosystem-card-emoji">🧝</span>
+          <div class="ecosystem-card-name">elfe.studio</div>
+          <div class="ecosystem-card-desc">Studio IA — création, automatisation, prototypage d'agents.</div>
+        </a>
+        <a href="https://sparringvox.com" target="_blank" rel="noopener" class="ecosystem-card">
+          <span class="ecosystem-card-emoji">🗣️</span>
+          <div class="ecosystem-card-name">sparringvox.com</div>
+          <div class="ecosystem-card-desc">Entraînement vocal — partenaire de sparring conversationnel.</div>
+        </a>
+        <a href="https://choucroute-citron.com" target="_blank" rel="noopener" class="ecosystem-card">
+          <span class="ecosystem-card-emoji">🎙️</span>
+          <div class="ecosystem-card-name">Choucroute Citron</div>
+          <div class="ecosystem-card-desc">Le podcast — conversations qui décapent.</div>
+        </a>
+      </div>
+    </div>
+    <div class="footer-credit">
+      Outil gratuit · sans inscription · 100% client-side · <a href="https://3h33.com" target="_blank" rel="noopener">3h33.com</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+const DEFAULT_TLDS = ['com', 'io', 'fr', 'app', 'dev', 'net', 'org', 'co', 'ai', 'xyz'];
+const ALL_TLDS = ['com', 'io', 'fr', 'app', 'dev', 'net', 'org', 'co', 'ai', 'xyz', 'me', 'tech', 'studio', 'design', 'tools', 'cloud', 'site', 'online', 'eu', 'be', 'ch'];
+const RDAP_UNSUPPORTED = new Set(['io', 'co', 'ai']); // these typically lack open RDAP — go straight to DNS
+
+const STORAGE_HISTORY = 'domain-checker-history-v1';
+const STORAGE_TLDS = 'domain-checker-tlds-v1';
+
+let selectedTlds = JSON.parse(localStorage.getItem(STORAGE_TLDS) || 'null') || DEFAULT_TLDS.slice();
+
+// ---------- TLD chips ----------
+function renderTlds() {
+  const wrap = document.getElementById('tldChips');
+  wrap.innerHTML = '';
+  ALL_TLDS.forEach(tld => {
+    const chip = document.createElement('span');
+    chip.className = 'tld-chip' + (selectedTlds.includes(tld) ? ' selected' : '');
+    chip.textContent = '.' + tld;
+    chip.onclick = () => {
+      if (selectedTlds.includes(tld)) {
+        selectedTlds = selectedTlds.filter(t => t !== tld);
+      } else {
+        selectedTlds.push(tld);
+      }
+      localStorage.setItem(STORAGE_TLDS, JSON.stringify(selectedTlds));
+      renderTlds();
+      if (typeof highlightActivePreset === 'function') highlightActivePreset();
+    };
+    wrap.appendChild(chip);
+  });
+}
+renderTlds();
+
+// ---------- Domain availability check ----------
+async function checkRdap(domain) {
+  try {
+    const r = await fetch(`https://rdap.org/domain/${encodeURIComponent(domain)}`, { redirect: 'follow' });
+    if (r.status === 404) return { status: 'free', source: 'RDAP' };
+    if (r.ok) {
+      const data = await r.json().catch(() => null);
+      return { status: 'taken', source: 'RDAP', data };
+    }
+    return { status: 'unknown', source: 'RDAP', error: `HTTP ${r.status}` };
+  } catch (e) {
+    return { status: 'unknown', source: 'RDAP', error: e.message };
+  }
+}
+
+async function checkDns(domain) {
+  try {
+    const r = await fetch(`https://dns.google/resolve?name=${encodeURIComponent(domain)}&type=SOA`);
+    if (!r.ok) return { status: 'unknown', source: 'DNS', error: `HTTP ${r.status}` };
+    const data = await r.json();
+    // Status 3 = NXDOMAIN → domain doesn't exist in DNS → likely free
+    // Status 0 with Answer → SOA exists → registered
+    if (data.Status === 3) return { status: 'free', source: 'DNS', note: 'NXDOMAIN' };
+    if (data.Status === 0 && data.Answer && data.Answer.length > 0) {
+      return { status: 'taken', source: 'DNS', note: 'SOA exists' };
+    }
+    // No answer but no NXDOMAIN — try A record as final check
+    const r2 = await fetch(`https://dns.google/resolve?name=${encodeURIComponent(domain)}&type=A`);
+    const d2 = await r2.json();
+    if (d2.Status === 3) return { status: 'free', source: 'DNS', note: 'NXDOMAIN' };
+    if (d2.Answer && d2.Answer.length > 0) return { status: 'taken', source: 'DNS', note: 'A record' };
+    return { status: 'unknown', source: 'DNS', note: 'ambigu' };
+  } catch (e) {
+    return { status: 'unknown', source: 'DNS', error: e.message };
+  }
+}
+
+async function checkDomain(domain) {
+  const tld = domain.split('.').pop().toLowerCase();
+  // For unsupported RDAP TLDs, go straight to DNS
+  if (RDAP_UNSUPPORTED.has(tld)) {
+    return await checkDns(domain);
+  }
+  const rdapResult = await checkRdap(domain);
+  if (rdapResult.status !== 'unknown') return rdapResult;
+  // RDAP failed → fall back to DNS
+  return await checkDns(domain);
+}
+
+// ---------- UI rendering ----------
+function badgeFor(status, source) {
+  if (status === 'free') return `<span class="badge free"><span class="dot"></span>Disponible</span>`;
+  if (status === 'taken') return `<span class="badge taken"><span class="dot"></span>Pris</span>`;
+  if (status === 'loading') return `<span class="badge loading"><span class="spinner"></span>Vérification…</span>`;
+  return `<span class="badge unknown"><span class="dot"></span>Incertain</span>`;
+}
+
+function sanitize(s) {
+  // Strip http(s)://, trailing slashes, spaces, accents → ASCII-ish
+  return s.toLowerCase().trim()
+    .replace(/^https?:\/\//, '')
+    .replace(/^www\./, '')
+    .replace(/\/.*$/, '')
+    .replace(/\s+/g, '')
+    .normalize('NFD').replace(/[̀-ͯ]/g, '');
+}
+
+function isFullDomain(s) {
+  return /\.[a-z]{2,}$/i.test(s);
+}
+
+async function runSearch(query) {
+  const cleaned = sanitize(query);
+  if (!cleaned) return;
+
+  const resultsCard = document.getElementById('resultsCard');
+  const resultsEl = document.getElementById('results');
+  const altCard = document.getElementById('altCard');
+
+  // Decide which domains to test
+  let domainsToTest;
+  let baseName;
+  if (isFullDomain(cleaned)) {
+    domainsToTest = [cleaned];
+    baseName = cleaned.split('.').slice(0, -1).join('.');
+  } else {
+    baseName = cleaned;
+    if (selectedTlds.length === 0) {
+      alert('Sélectionne au moins une extension.');
+      return;
+    }
+    domainsToTest = selectedTlds.map(tld => `${cleaned}.${tld}`);
+  }
+
+  document.getElementById('resultsTitle').textContent = `Résultats pour "${baseName}"`;
+  resultsCard.style.display = '';
+  resultsEl.innerHTML = '';
+  altCard.style.display = 'none';
+  document.getElementById('inpiCard').style.display = 'none';
+  document.getElementById('usCard').style.display = 'none';
+  document.getElementById('devCard').style.display = 'none';
+  document.getElementById('fameCard').style.display = 'none';
+  document.getElementById('intlCard').style.display = 'none';
+
+  // Render placeholders
+  const itemEls = {};
+  domainsToTest.forEach(d => {
+    const div = document.createElement('div');
+    div.className = 'result-item';
+    div.innerHTML = `
+      <div style="min-width:0; flex:1">
+        <div class="result-domain">
+          <a href="https://${d}" target="_blank" rel="noopener" class="domain-link" title="Ouvrir ${d} dans un nouvel onglet">${d}</a>
+        </div>
+        <div class="result-meta" data-meta></div>
+      </div>
+      <div style="display:flex; gap:8px; align-items:center">
+        <a href="https://www.google.com/search?q=%22${encodeURIComponent(d)}%22"
+           target="_blank" rel="noopener"
+           class="google-btn"
+           title="Voir ce que Google indexe sur ${d}">
+          ${iconGoogle()}
+        </a>
+        <div data-badge>${badgeFor('loading')}</div>
+      </div>
+    `;
+    resultsEl.appendChild(div);
+    itemEls[d] = div;
+  });
+
+  // Run checks in parallel
+  const results = await Promise.all(domainsToTest.map(async (d) => {
+    const r = await checkDomain(d);
+    const el = itemEls[d];
+    el.querySelector('[data-badge]').innerHTML = badgeFor(r.status);
+    let meta = `via ${r.source}`;
+    if (r.note) meta += ` · ${r.note}`;
+    if (r.error) meta += ` · ${r.error}`;
+    el.querySelector('[data-meta]').textContent = meta;
+    return { domain: d, ...r };
+  }));
+
+  // Save history
+  saveHistory(baseName, results);
+  renderHistory();
+
+  // Run all extended checks in parallel (each manages its own UI)
+  if (baseName) {
+    checkInpi(baseName);
+    checkUS(baseName);
+    checkDevEcosystems(baseName);
+    checkFame(baseName);
+    renderInternational(baseName);
+  }
+
+  // Render alternatives if any domain is taken
+  const anyTaken = results.some(r => r.status === 'taken');
+  if (anyTaken && baseName) {
+    renderAlternatives(baseName);
+  }
+}
+
+// ---------- INPI / RNE check ----------
+async function checkInpi(baseName) {
+  const card = document.getElementById('inpiCard');
+  const entreprisesEl = document.getElementById('inpiEntreprises');
+  const linksEl = document.getElementById('inpiLinks');
+
+  card.style.display = '';
+  entreprisesEl.innerHTML = `<div class="empty"><span class="spinner" style="display:inline-block; color:var(--blue)"></span> Recherche dans le RNE…</div>`;
+  linksEl.innerHTML = '';
+
+  // 1. Search RNE (companies — INPI database since 2023) via public API
+  try {
+    const url = `https://recherche-entreprises.api.gouv.fr/search?q=${encodeURIComponent(baseName)}&per_page=5&page=1`;
+    const r = await fetch(url);
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+
+    if (!data.results || data.results.length === 0) {
+      entreprisesEl.innerHTML = `
+        <div class="entreprise-item" style="border-color:var(--green-bg); background:var(--green-bg)">
+          <span style="color:var(--green); font-weight:500">✓ Aucune entreprise française enregistrée avec ce nom dans le RNE.</span>
+        </div>
+      `;
+    } else {
+      // Filter to exact-ish matches first
+      const norm = s => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]/g, '');
+      const target = norm(baseName);
+      const exact = data.results.filter(e => norm(e.nom_complet).includes(target) || norm(e.nom_raison_sociale || '').includes(target));
+      const toShow = exact.length > 0 ? exact : data.results;
+
+      const count = data.total_results || data.results.length;
+      let html = `<div style="font-size:13px; color:var(--muted); margin-bottom:8px"><strong style="color:var(--text)">${count}</strong> résultat${count > 1 ? 's' : ''} dans le RNE${count > toShow.length ? ` · top ${toShow.length} affichés` : ''}</div>`;
+
+      html += toShow.map(e => {
+        const active = e.nombre_etablissements_ouverts > 0 && (e.etat_administratif === 'A' || !e.etat_administratif);
+        const activeBadge = active
+          ? `<span class="entreprise-status active">Active</span>`
+          : `<span class="entreprise-status closed">Fermée</span>`;
+        const addr = e.siege?.adresse || '';
+        const siren = e.siren || '';
+        const created = e.date_creation_entreprise || e.siege?.date_creation || '';
+        return `
+          <div class="entreprise-item">
+            <div class="entreprise-name">${escapeHtml(e.nom_complet)}${activeBadge}</div>
+            <div class="entreprise-meta">
+              SIREN ${siren} ${created ? '· créée le ' + created : ''} ${addr ? '· ' + escapeHtml(addr) : ''}
+              <br>
+              <a href="https://annuaire-entreprises.data.gouv.fr/entreprise/${siren}" target="_blank" rel="noopener">Voir sur annuaire-entreprises ↗</a>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      entreprisesEl.innerHTML = html;
+    }
+  } catch (e) {
+    entreprisesEl.innerHTML = `<div class="empty" style="color:var(--amber)">Impossible de joindre l'API RNE : ${e.message}</div>`;
+  }
+
+  // 2. Add manual lookup buttons for marques (trademarks) and brevets (patents)
+  const inpiMarquesUrl = `https://data.inpi.fr/search?advanced_search=&action=marque&q=${encodeURIComponent(baseName)}&type=marques`;
+  const inpiMarquesFallback = `https://data.inpi.fr/recherche_avancee/marques?q=${encodeURIComponent(baseName)}`;
+  const inpiBrevetsUrl = `https://data.inpi.fr/recherche_avancee/brevets?q=${encodeURIComponent(baseName)}`;
+  const euipoUrl = `https://www.tmdn.org/tmview/#/tmview/results?text=${encodeURIComponent(baseName)}`;
+
+  const safeBase = escapeHtml(baseName);
+  linksEl.innerHTML = `
+    <a class="inpi-btn" href="${inpiMarquesFallback}" target="_blank" rel="noopener" data-copy="${safeBase}">
+      ${iconExternal()} Rechercher "${safeBase}" dans <strong style="margin-left:3px">INPI Marques</strong>
+    </a>
+    <a class="inpi-btn" href="${inpiBrevetsUrl}" target="_blank" rel="noopener" data-copy="${safeBase}">
+      ${iconExternal()} INPI Brevets
+    </a>
+    <a class="inpi-btn" href="${euipoUrl}" target="_blank" rel="noopener" data-copy="${safeBase}">
+      ${iconExternal()} TMview (marques UE & monde)
+    </a>
+  `;
+  linksEl.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', _intlCopyHandler));
+}
+
+// ---------- US check : Library of Congress + USPTO + Copyright Office ----------
+async function checkUS(baseName) {
+  const card = document.getElementById('usCard');
+  const locEl = document.getElementById('locResults');
+  const linksEl = document.getElementById('usLinks');
+
+  card.style.display = '';
+  locEl.innerHTML = `<div class="empty"><span class="spinner" style="display:inline-block; color:var(--blue)"></span> Recherche dans la Library of Congress…</div>`;
+  linksEl.innerHTML = '';
+
+  // 1. Library of Congress catalog search — public, CORS-enabled
+  try {
+    const url = `https://www.loc.gov/search/?q=${encodeURIComponent(baseName)}&fo=json&c=5`;
+    const r = await fetch(url);
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+
+    const results = (data.results || []).filter(x => x.title);
+    const total = (data.search && data.search.hits) || results.length;
+
+    if (results.length === 0) {
+      locEl.innerHTML = `
+        <div class="entreprise-item" style="border-color:var(--green-bg); background:var(--green-bg)">
+          <span style="color:var(--green); font-weight:500">✓ Aucun résultat dans le catalogue Library of Congress.</span>
+        </div>
+      `;
+    } else {
+      let html = `<div style="font-size:13px; color:var(--muted); margin-bottom:8px"><strong style="color:var(--text)">${total.toLocaleString('fr-FR')}</strong> résultat${total > 1 ? 's' : ''} dans le catalogue LoC · top ${results.length} affichés</div>`;
+      html += results.map(item => {
+        const title = item.title || 'Sans titre';
+        const dates = item.dates ? item.dates.join(', ') : (item.date || '');
+        const type = (item.original_format || item.type || []).slice(0, 2).join(', ');
+        const url = item.url || (item.id ? item.id : '#');
+        const desc = (item.description && item.description[0]) || '';
+        return `
+          <div class="entreprise-item">
+            <div class="entreprise-name">${escapeHtml(title.length > 110 ? title.slice(0, 107) + '…' : title)}</div>
+            <div class="entreprise-meta">
+              ${type ? escapeHtml(type) : 'œuvre'} ${dates ? '· ' + escapeHtml(String(dates)) : ''}
+              ${desc ? '<br>' + escapeHtml(desc.length > 160 ? desc.slice(0, 157) + '…' : desc) : ''}
+              <br>
+              <a href="${escapeHtml(url)}" target="_blank" rel="noopener">Voir sur loc.gov ↗</a>
+            </div>
+          </div>
+        `;
+      }).join('');
+      locEl.innerHTML = html;
+    }
+  } catch (e) {
+    locEl.innerHTML = `<div class="empty" style="color:var(--amber)">Impossible de joindre l'API Library of Congress : ${e.message}</div>`;
+  }
+
+  // 2. Manual lookup buttons
+  const usptoUrl = `https://tmsearch.uspto.gov/search/search-information?searchText=${encodeURIComponent(baseName)}`;
+  const copyrightUrl = `https://publicrecords.copyright.gov/advanced-search?fieldValues=${encodeURIComponent(baseName)}`;
+  const wipoUrl = `https://branddb.wipo.int/en/quicksearch?q=${encodeURIComponent(baseName)}`;
+
+  const safeBase = escapeHtml(baseName);
+  const justiaUrl = `https://trademarks.justia.com/search?q=${encodeURIComponent(baseName)}`;
+  linksEl.innerHTML = `
+    <a class="inpi-btn" href="${usptoUrl}" target="_blank" rel="noopener" data-copy="${safeBase}" title="Pré-remplissage instable — utilise Cmd+V">
+      <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--amber); margin-right:6px"></span>
+      ${iconExternal()} <strong style="margin-left:3px">USPTO Trademark Search</strong>
+    </a>
+    <a class="inpi-btn" href="${justiaUrl}" target="_blank" rel="noopener" data-copy="${safeBase}">
+      ${iconExternal()} Justia Trademarks <span style="font-size:11px; color:var(--muted); margin-left:4px">(agrégateur USPTO)</span>
+    </a>
+    <a class="inpi-btn" href="${copyrightUrl}" target="_blank" rel="noopener" data-copy="${safeBase}" title="Pré-remplissage instable — utilise Cmd+V">
+      <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--amber); margin-right:6px"></span>
+      ${iconExternal()} U.S. Copyright Public Records
+    </a>
+    <a class="inpi-btn" href="${wipoUrl}" target="_blank" rel="noopener" data-copy="${safeBase}">
+      ${iconExternal()} WIPO Global Brand DB
+    </a>
+  `;
+  linksEl.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', _intlCopyHandler));
+}
+
+// ---------- Developer ecosystems ----------
+async function checkDevEcosystems(baseName) {
+  const card = document.getElementById('devCard');
+  const el = document.getElementById('devResults');
+  card.style.display = '';
+  el.innerHTML = '';
+
+  // npm allows hyphens, others may vary — we normalize once
+  const slug = baseName.toLowerCase().replace(/[^a-z0-9._-]/g, '-').replace(/^-+|-+$/g, '');
+
+  const checks = [
+    {
+      label: 'GitHub',
+      target: `github.com/${slug}`,
+      url: `https://api.github.com/users/${encodeURIComponent(slug)}`,
+      browseUrl: `https://github.com/${slug}`,
+      parse: r => r.status === 404 ? 'free' : (r.status === 200 ? 'taken' : 'unknown'),
+    },
+    {
+      label: 'npm',
+      target: `npmjs.com/package/${slug}`,
+      url: `https://registry.npmjs.org/${encodeURIComponent(slug)}`,
+      browseUrl: `https://www.npmjs.com/package/${slug}`,
+      parse: r => r.status === 404 ? 'free' : (r.status === 200 ? 'taken' : 'unknown'),
+    },
+    {
+      label: 'PyPI',
+      target: `pypi.org/project/${slug}`,
+      url: `https://pypi.org/pypi/${encodeURIComponent(slug)}/json`,
+      browseUrl: `https://pypi.org/project/${slug}/`,
+      parse: r => r.status === 404 ? 'free' : (r.status === 200 ? 'taken' : 'unknown'),
+    },
+    {
+      label: 'Crates.io',
+      target: `crates.io/crates/${slug}`,
+      url: `https://crates.io/api/v1/crates/${encodeURIComponent(slug)}`,
+      browseUrl: `https://crates.io/crates/${slug}`,
+      parse: r => r.status === 404 ? 'free' : (r.status === 200 ? 'taken' : 'unknown'),
+    },
+    {
+      label: 'RubyGems',
+      target: `rubygems.org/gems/${slug}`,
+      url: `https://rubygems.org/api/v1/gems/${encodeURIComponent(slug)}.json`,
+      browseUrl: `https://rubygems.org/gems/${slug}`,
+      parse: r => r.status === 404 ? 'free' : (r.status === 200 ? 'taken' : 'unknown'),
+    },
+  ];
+
+  // Render placeholders
+  const itemEls = {};
+  checks.forEach(c => {
+    const div = document.createElement('div');
+    div.className = 'result-item';
+    div.innerHTML = `
+      <div>
+        <div class="result-domain">${escapeHtml(c.target)}</div>
+        <div class="result-meta">${escapeHtml(c.label)}</div>
+      </div>
+      <div data-badge>${badgeFor('loading')}</div>
+    `;
+    el.appendChild(div);
+    itemEls[c.label] = div;
+  });
+
+  // Fetch in parallel
+  await Promise.all(checks.map(async c => {
+    let status = 'unknown';
+    try {
+      const r = await fetch(c.url, { cache: 'no-store' });
+      status = c.parse(r);
+    } catch (e) {
+      status = 'unknown';
+    }
+    const item = itemEls[c.label];
+    const badge = badgeFor(status);
+    const link = status === 'taken'
+      ? ` <a href="${c.browseUrl}" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none; font-size:11px; margin-left:8px">voir ↗</a>`
+      : '';
+    item.querySelector('[data-badge]').innerHTML = badge + link;
+  }));
+}
+
+// ---------- Notoriety: Wikipedia + Wikidata + Open Library ----------
+async function checkFame(baseName) {
+  const card = document.getElementById('fameCard');
+  const el = document.getElementById('fameResults');
+  card.style.display = '';
+  el.innerHTML = `<div class="empty"><span class="spinner" style="display:inline-block; color:var(--blue)"></span> Recherche de notoriété…</div>`;
+
+  const titleCase = baseName.charAt(0).toUpperCase() + baseName.slice(1).toLowerCase();
+
+  const [wikiFR, wikiEN, wikidata, openLib] = await Promise.all([
+    fetchJsonSafe(`https://fr.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(titleCase)}?redirect=true`),
+    fetchJsonSafe(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(titleCase)}?redirect=true`),
+    fetchJsonSafe(`https://www.wikidata.org/w/api.php?action=wbsearchentities&search=${encodeURIComponent(baseName)}&language=en&format=json&origin=*&limit=3`),
+    fetchJsonSafe(`https://openlibrary.org/search.json?q=${encodeURIComponent(baseName)}&limit=3`),
+  ]);
+
+  let html = '';
+
+  // Wikipedia summaries
+  [['Wikipedia (FR)', wikiFR, 'fr'], ['Wikipedia (EN)', wikiEN, 'en']].forEach(([label, data, lang]) => {
+    if (data && data.type !== 'https://mediawiki.org/wiki/HyperSwitch/errors/not_found' && data.title) {
+      const thumb = data.thumbnail?.source;
+      const link = data.content_urls?.desktop?.page || `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(data.title)}`;
+      html += `
+        <div class="fame-summary">
+          ${thumb ? `<img class="fame-thumb" src="${escapeHtml(thumb)}" alt="">` : ''}
+          <div class="fame-body">
+            <div class="fame-title">${escapeHtml(data.title)} <span style="font-weight:400; font-size:11px; color:var(--muted); margin-left:4px">${label}</span></div>
+            <div class="fame-extract">${escapeHtml(data.extract || '')}</div>
+            <div class="fame-meta"><a href="${escapeHtml(link)}" target="_blank" rel="noopener">Lire sur Wikipedia ↗</a></div>
+          </div>
+        </div>
+      `;
+    }
+  });
+
+  // Wikidata
+  if (wikidata && wikidata.search && wikidata.search.length > 0) {
+    const top = wikidata.search.slice(0, 3);
+    html += `<div class="group-title" style="margin-top:14px">Wikidata · entités</div>`;
+    top.forEach(w => {
+      const link = `https://www.wikidata.org/wiki/${w.id}`;
+      html += `
+        <div class="entreprise-item">
+          <div class="entreprise-name">${escapeHtml(w.label || w.id)} <span style="font-weight:400; color:var(--muted); font-size:11px">${escapeHtml(w.id)}</span></div>
+          <div class="entreprise-meta">
+            ${escapeHtml(w.description || '—')}
+            <br><a href="${escapeHtml(link)}" target="_blank" rel="noopener">Voir sur Wikidata ↗</a>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  // Open Library
+  if (openLib && openLib.docs && openLib.docs.length > 0) {
+    const top = openLib.docs.slice(0, 3);
+    html += `<div class="group-title" style="margin-top:14px">Open Library · livres</div>`;
+    top.forEach(b => {
+      const author = (b.author_name || []).slice(0, 2).join(', ');
+      const year = b.first_publish_year || '';
+      const olid = b.key || '';
+      html += `
+        <div class="entreprise-item">
+          <div class="entreprise-name">${escapeHtml(b.title || 'Sans titre')}</div>
+          <div class="entreprise-meta">
+            ${author ? 'par ' + escapeHtml(author) : ''} ${year ? '· ' + year : ''}
+            ${olid ? `<br><a href="https://openlibrary.org${escapeHtml(olid)}" target="_blank" rel="noopener">Voir sur Open Library ↗</a>` : ''}
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  if (!html) {
+    html = `
+      <div class="entreprise-item" style="border-color:var(--green-bg); background:var(--green-bg)">
+        <span style="color:var(--green); font-weight:500">✓ Aucune entité notable trouvée — le nom n'a pas de doublon évident sur Wikipedia, Wikidata ou Open Library.</span>
+      </div>
+    `;
+  }
+
+  el.innerHTML = html;
+}
+
+async function fetchJsonSafe(url) {
+  try {
+    const r = await fetch(url);
+    if (!r.ok) return null;
+    return await r.json();
+  } catch (e) { return null; }
+}
+
+// ---------- International IP & company offices (manual lookup buttons) ----------
+// Each button auto-copies the search term to clipboard on click — so even if
+// the destination page doesn't pre-fill, Cmd+V instantly works.
+function renderInternational(baseName) {
+  const card = document.getElementById('intlCard');
+  const el = document.getElementById('intlGroups');
+  card.style.display = '';
+
+  const q = encodeURIComponent(baseName);
+  // RELIABLE = URL pre-fill confirmed to work in real browsers
+  // HOMEPAGE = no reliable deep-link, user must paste (auto-copy on click handles this)
+
+  const groups = [
+    {
+      title: 'Marques — Europe & monde',
+      items: [
+        { label: 'EUIPO eSearch plus', url: `https://euipo.europa.eu/eSearch/#advanced/trademarks/1/100/n1=MarkVerbalElementText&v1=${q}&o1=AND&c1=CONTAINS`, reliable: true },
+        { label: 'TMview (EU + 70 pays)', url: `https://www.tmdn.org/tmview/#/tmview/results?text=${q}`, reliable: true },
+        { label: 'WIPO Global Brand DB', url: `https://branddb.wipo.int/en/quicksearch?q=${q}`, reliable: true },
+        { label: 'Madrid Monitor (OMPI)', url: `https://www3.wipo.int/madrid/monitor/en/?searchText=${q}`, reliable: true },
+      ],
+    },
+    {
+      title: 'Marques — États-Unis',
+      items: [
+        { label: 'USPTO Trademark Search', url: `https://tmsearch.uspto.gov/search/search-information?searchText=${q}`, reliable: false, note: 'pré-remplissage instable' },
+        { label: 'Justia Trademarks', url: `https://trademarks.justia.com/search?q=${q}`, reliable: true, note: 'agrégateur USPTO, plus fiable' },
+        { label: 'U.S. Copyright Office', url: `https://publicrecords.copyright.gov/advanced-search?fieldValues=${q}`, reliable: false, note: 'pré-remplissage instable' },
+      ],
+    },
+    {
+      title: 'Marques — autres bureaux nationaux',
+      items: [
+        { label: 'UKIPO (UK)', url: `https://www.gov.uk/search-for-trademark?searchTerm=${q}`, reliable: true },
+        { label: 'DPMA (Allemagne)', url: `https://register.dpma.de/DPMAregister/marke/einsteiger`, reliable: false, note: 'session-based, colle après ouverture' },
+        { label: 'CIPO (Canada)', url: `https://ised-isde.canada.ca/cipo/trademark-search/srch?lang=eng&keyword=${q}`, reliable: true },
+        { label: 'IP Australia', url: `https://search.ipaustralia.gov.au/trademarks/search/quick?q=${q}`, reliable: true },
+        { label: 'JPO (Japon)', url: `https://www.j-platpat.inpit.go.jp/`, reliable: false, note: 'pas de deep-link' },
+        { label: 'CNIPA (Chine)', url: `https://wsjs.cnipa.gov.cn/`, reliable: false, note: 'pas de deep-link' },
+      ],
+    },
+    {
+      title: 'Brevets',
+      items: [
+        { label: 'Google Patents', url: `https://patents.google.com/?q=${q}`, reliable: true },
+        { label: 'EPO Espacenet', url: `https://worldwide.espacenet.com/patent/search?q=${q}`, reliable: true },
+        { label: 'WIPO PatentScope', url: `https://patentscope.wipo.int/search/en/result.jsf?query=${q}`, reliable: true },
+        { label: 'USPTO Patent Public Search', url: `https://ppubs.uspto.gov/pubwebapp/external.html?q=${q}`, reliable: true },
+        { label: 'Lens.org', url: `https://www.lens.org/lens/search/patent/list?q=${q}`, reliable: true },
+      ],
+    },
+    {
+      title: 'Registres de sociétés (hors France)',
+      items: [
+        { label: 'UK Companies House', url: `https://find-and-update.company-information.service.gov.uk/search/companies?q=${q}`, reliable: true },
+        { label: 'OpenCorporates (global)', url: `https://opencorporates.com/companies?q=${q}&utf8=%E2%9C%93`, reliable: true },
+        { label: 'SEC EDGAR (US)', url: `https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=${q}&type=&dateb=&owner=include&count=40`, reliable: true },
+        { label: 'Crunchbase (via Google)', url: `https://www.google.com/search?q=site%3Acrunchbase.com+%22${q}%22`, reliable: true, note: 'CB bloque les liens directs' },
+        { label: 'Handelsregister (DE)', url: `https://www.handelsregister.de/`, reliable: false, note: 'pas de deep-link' },
+        { label: 'Zefix (CH)', url: `https://www.zefix.ch/fr/search/entity/list?name=${q}`, reliable: true },
+        { label: 'KBO (BE)', url: `https://kbopub.economie.fgov.be/kbopub/zoekwoordenform.html?lang=fr&searchWord=${q}`, reliable: true },
+      ],
+    },
+    {
+      title: 'Réseaux & contenus',
+      items: [
+        { label: 'GitHub search', url: `https://github.com/search?q=${q}&type=users`, reliable: true },
+        { label: 'X/Twitter handle', url: `https://x.com/${baseName}`, reliable: true },
+        { label: 'LinkedIn companies', url: `https://www.linkedin.com/search/results/companies/?keywords=${q}`, reliable: true },
+        { label: 'YouTube', url: `https://www.youtube.com/results?search_query=${q}`, reliable: true },
+        { label: 'Google "exact"', url: `https://www.google.com/search?q=%22${q}%22`, reliable: true },
+      ],
+    },
+  ];
+
+  el.innerHTML = groups.map(g => `
+    <div class="group-title">${escapeHtml(g.title)}</div>
+    <div class="btn-row">
+      ${g.items.map(i => {
+        const noteAttr = i.note ? `title="${escapeHtml(i.note)}"` : '';
+        const dot = i.reliable === false
+          ? '<span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:var(--amber); margin-right:6px" title="Pré-remplissage non garanti — le nom sera copié, fais Cmd+V"></span>'
+          : '';
+        return `<a class="inpi-btn" href="${escapeHtml(i.url)}" target="_blank" rel="noopener" data-copy="${escapeHtml(baseName)}" ${noteAttr}>${dot}${iconExternal()} ${escapeHtml(i.label)}</a>`;
+      }).join('')}
+    </div>
+  `).join('');
+
+  // Wire up click-to-copy on all manual lookup buttons (international + INPI + US cards)
+  document.querySelectorAll('[data-copy]').forEach(btn => {
+    btn.removeEventListener('click', _intlCopyHandler);
+    btn.addEventListener('click', _intlCopyHandler);
+  });
+}
+
+function _intlCopyHandler(e) {
+  const term = e.currentTarget.getAttribute('data-copy');
+  if (term) copyToClipboard(term);
+}
+
+function iconExternal() {
+  return `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`;
+}
+
+function iconGoogle() {
+  return `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>`;
+}
+
+// ---------- Copy to clipboard helper ----------
+function copyToClipboard(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).catch(() => {});
+  } else {
+    // Fallback for older browsers
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+  const flash = document.getElementById('copyFlash');
+  flash.textContent = `✓ "${text}" copié dans le presse-papier`;
+  flash.classList.add('show');
+  setTimeout(() => flash.classList.remove('show'), 1800);
+}
+
+function escapeHtml(s) {
+  return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// ---------- Alternative suggestions ----------
+function generateAlternatives(base) {
+  const prefixes = ['get', 'try', 'use', 'go', 'my', 'the', 'hey', 'app'];
+  const suffixes = ['app', 'hq', 'io', 'labs', 'studio', 'ly', 'now', 'pro'];
+  const out = new Set();
+
+  prefixes.forEach(p => out.add(`${p}${base}`));
+  suffixes.forEach(s => out.add(`${base}${s}`));
+  out.add(`${base}-app`);
+  out.add(`${base}-hq`);
+  out.add(`real${base}`);
+
+  return Array.from(out).slice(0, 16);
+}
+
+function renderAlternatives(base) {
+  const card = document.getElementById('altCard');
+  const grid = document.getElementById('alternatives');
+  grid.innerHTML = '';
+  generateAlternatives(base).forEach(alt => {
+    const el = document.createElement('div');
+    el.className = 'alt-item';
+    el.innerHTML = `<span>${alt}</span><span style="color:var(--muted); font-size:11px">tester →</span>`;
+    el.onclick = () => {
+      document.getElementById('searchInput').value = alt;
+      runSearch(alt);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    grid.appendChild(el);
+  });
+  card.style.display = '';
+}
+
+// ---------- History ----------
+function saveHistory(term, results) {
+  const hist = JSON.parse(localStorage.getItem(STORAGE_HISTORY) || '[]');
+  const summary = results.map(r => `${r.domain}:${r.status}`).join(',');
+  const free = results.filter(r => r.status === 'free').map(r => r.domain);
+  const entry = {
+    term,
+    when: Date.now(),
+    summary,
+    free,
+    total: results.length,
+  };
+  // Dedupe by term — keep most recent
+  const filtered = hist.filter(h => h.term !== term);
+  filtered.unshift(entry);
+  localStorage.setItem(STORAGE_HISTORY, JSON.stringify(filtered.slice(0, 20)));
+}
+
+function formatTime(ts) {
+  const diff = (Date.now() - ts) / 1000;
+  if (diff < 60) return 'à l\'instant';
+  if (diff < 3600) return `il y a ${Math.floor(diff / 60)} min`;
+  if (diff < 86400) return `il y a ${Math.floor(diff / 3600)} h`;
+  return new Date(ts).toLocaleDateString('fr-FR');
+}
+
+function renderHistory() {
+  const el = document.getElementById('history');
+  const hist = JSON.parse(localStorage.getItem(STORAGE_HISTORY) || '[]');
+  if (hist.length === 0) {
+    el.innerHTML = '<div class="empty">Aucune recherche pour l\'instant.</div>';
+    return;
+  }
+  el.innerHTML = hist.map(h => {
+    const freeText = h.free && h.free.length
+      ? `<span style="color:var(--green)">${h.free.length} libre(s)</span>`
+      : `<span style="color:var(--muted)">0 libre</span>`;
+    return `
+      <div class="history-item">
+        <span class="history-term" data-term="${h.term.replace(/"/g, '&quot;')}">${h.term}</span>
+        <span class="history-meta">${freeText} sur ${h.total} · ${formatTime(h.when)}</span>
+      </div>
+    `;
+  }).join('');
+  el.querySelectorAll('.history-term').forEach(node => {
+    node.onclick = () => {
+      const t = node.getAttribute('data-term');
+      document.getElementById('searchInput').value = t;
+      runSearch(t);
+    };
+  });
+}
+
+document.getElementById('clearHistory').onclick = () => {
+  if (confirm('Effacer tout l\'historique ?')) {
+    localStorage.removeItem(STORAGE_HISTORY);
+    renderHistory();
+  }
+};
+
+// ---------- TLD presets ----------
+const TLD_PRESETS = {
+  default: ['com', 'io', 'fr', 'app', 'dev', 'net', 'org', 'co', 'ai', 'xyz'],
+  tech:    ['com', 'io', 'dev', 'app', 'ai', 'tech', 'tools', 'cloud'],
+  fr:      ['fr', 'com', 'eu', 'net', 'be', 'ch'],
+  perso:   ['me', 'blog', 'studio', 'xyz', 'online', 'site', 'design'],
+  all:     ALL_TLDS.slice(),
+  clear:   [],
+};
+
+document.querySelectorAll('.preset-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const preset = btn.getAttribute('data-preset');
+    selectedTlds = TLD_PRESETS[preset].slice();
+    localStorage.setItem(STORAGE_TLDS, JSON.stringify(selectedTlds));
+    renderTlds();
+    highlightActivePreset();
+  });
+});
+
+function highlightActivePreset() {
+  // Mark preset as "active" only if exact match
+  const current = JSON.stringify(selectedTlds.slice().sort());
+  document.querySelectorAll('.preset-btn').forEach(btn => {
+    const preset = TLD_PRESETS[btn.getAttribute('data-preset')];
+    btn.classList.toggle('active', JSON.stringify(preset.slice().sort()) === current);
+  });
+}
+
+// ---------- Share search link ----------
+function updateShareUrl(query) {
+  if (!query) return;
+  const url = new URL(window.location.href);
+  url.searchParams.set('q', query);
+  history.replaceState(null, '', url.toString());
+  const shareBtn = document.getElementById('shareBtn');
+  shareBtn.style.display = '';
+}
+
+document.getElementById('shareBtn').addEventListener('click', () => {
+  const url = window.location.href;
+  copyToClipboard(url);
+});
+
+// Hook into runSearch to update URL each time
+const _origRunSearch = runSearch;
+runSearch = async function(query) {
+  const cleaned = sanitize(query);
+  if (cleaned) updateShareUrl(cleaned);
+  await _origRunSearch(query);
+  // Smooth scroll to results after they render
+  setTimeout(() => {
+    const results = document.getElementById('resultsCard');
+    if (results && results.style.display !== 'none') {
+      const offset = results.getBoundingClientRect().top + window.pageYOffset - 16;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
+  }, 100);
+};
+
+// ---------- Keyboard shortcuts ----------
+document.addEventListener('keydown', e => {
+  // Cmd+K / Ctrl+K → focus search
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+    e.preventDefault();
+    const input = document.getElementById('searchInput');
+    input.focus();
+    input.select();
+    input.classList.add('glow');
+    setTimeout(() => input.classList.remove('glow'), 600);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  // Echap → blur input
+  if (e.key === 'Escape' && document.activeElement && document.activeElement.id === 'searchInput') {
+    document.activeElement.blur();
+  }
+  // "/" → focus search (like GitHub, only when not already in an input)
+  if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes((document.activeElement || {}).tagName)) {
+    e.preventDefault();
+    document.getElementById('searchInput').focus();
+  }
+});
+
+// Adapt the kbd hint to OS
+(() => {
+  const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+  if (!isMac) {
+    document.querySelectorAll('.kbd-hint kbd')[0].textContent = 'Ctrl';
+  }
+})();
+
+// ---------- Wire up ----------
+document.getElementById('searchBtn').onclick = () => {
+  runSearch(document.getElementById('searchInput').value);
+};
+document.getElementById('searchInput').addEventListener('keydown', e => {
+  if (e.key === 'Enter') runSearch(e.target.value);
+});
+
+// ---------- Read ?q= from URL on load ----------
+(() => {
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get('q');
+  if (q) {
+    document.getElementById('searchInput').value = q;
+    // Wait one tick so all rendering is in place
+    setTimeout(() => runSearch(q), 50);
+  }
+})();
+
+renderHistory();
+highlightActivePreset();
+</script>
+</body>
+</html>

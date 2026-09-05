@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3h33, l'agence de l'IA : masterclass, ateliers et sessions Forge</title>
+<meta name="description" content="3h33 forme vos équipes à l'IA en construisant avec elles des outils qui tournent le lendemain : masterclass, ateliers, sessions Forge, studio créatif. Vibe coding, pour de vrai.">
+<link rel="canonical" href="https://3h33.com/">
+<meta property="og:title" content="3h33, l'agence de l'IA">
+<meta property="og:description" content="À l'heure de l'IA, on ne présente plus des idées. On les construit.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://3h33.com/">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+:root{
+  --ground:#ffffff;--ground-2:#f3f7fd;--panel:#ffffff;--ink:#0f1524;--ink-2:#3f475a;--ink-3:#7a8193;--trait:#e1e7f2;
+  --acc:#1f6ff5;--acc-ink:#fff;--acc-ombre:rgba(31,111,245,.28);--or:#ffb020;--or-ink:#0f1524;
+  --ciel-1:#ffffff;--ciel-2:#e6f0ff;--ciel-3:#fff3dc;
+  --sans:"Manrope","Helvetica Neue",Arial,sans-serif;--mono:"JetBrains Mono",Menlo,monospace;
+  --ease:cubic-bezier(.22,1,.36,1);--radius:24px;--radius-s:16px;
+  --ombre:0 1px 0 rgba(15,21,36,.04),0 24px 60px -30px rgba(15,21,36,.25);
+  --px:0;--py:0;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:17.5px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--acc)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+h1,h2,h3{margin:0;line-height:1.08;letter-spacing:-.03em;text-wrap:balance;font-weight:800}
+h1{font-size:clamp(40px,6vw,84px)}
+h2{font-size:clamp(30px,4.2vw,56px)}
+h3{font-size:24px;letter-spacing:-.02em}
+p{margin:0 0 16px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:700}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:var(--ink-2);background:#fff;border:1px solid var(--trait);border-radius:999px;padding:6px 14px;box-shadow:var(--ombre)}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--or)}
+.bloc{max-width:1160px;margin:0 auto;padding:0 28px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:16px;color:var(--acc-ink);background:var(--acc);border-radius:999px;padding:14px 26px;text-decoration:none;border:0;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s;will-change:transform}
+.btn:hover{box-shadow:0 16px 36px var(--acc-ombre)}
+.btn--or{background:var(--or);color:var(--or-ink)}
+.btn--ghost{background:#fff;color:var(--ink);border:1.5px solid var(--trait)}
+.lien{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--acc);padding-bottom:2px;font-weight:700}
+.mention{font-size:13px;color:var(--ink-3);margin-top:14px}
+/* mots qui se révèlent */
+.mots .m{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em;margin-bottom:-.08em}
+.mots .m>span{display:inline-block;transform:translateY(110%);opacity:0;transition:transform .8s var(--ease),opacity .5s;transition-delay:calc(var(--i)*55ms)}
+.mots.in .m>span{transform:none;opacity:1}
+/* fond de verre cannelé */
+#verre{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block;opacity:.9}
+.progress{position:fixed;top:0;left:0;height:4px;width:100%;background:var(--acc);transform-origin:left;transform:scaleX(0);z-index:60}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;gap:10px}
+.topbar .marque{font-weight:800;font-size:24px;letter-spacing:-.03em;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.7);backdrop-filter:blur(10px);padding:8px 16px 8px 10px;border-radius:999px;border:1px solid var(--trait)}
+.topbar .marque .logo{width:30px;height:30px;border-radius:50%;background:var(--acc);display:grid;place-items:center;color:#fff;font-family:var(--mono);font-size:10px;font-weight:700}
+.topbar .heure{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);font-weight:400;letter-spacing:.04em;margin-left:6px;padding-left:12px;border-left:1px solid var(--trait)}
+.topbar .heure b{color:var(--acc);font-variant-numeric:tabular-nums}
+.bouton-calme{font:inherit;font-size:14px;font-weight:700;color:var(--ink);background:rgba(255,255,255,.7);border:1px solid var(--trait);border-radius:999px;padding:9px 16px;cursor:pointer;backdrop-filter:blur(10px);display:flex;gap:8px;align-items:center;white-space:nowrap}
+.bouton-calme .etat{font-family:var(--mono);font-size:12px;color:var(--acc)}
+/* curseur */
+.curseur{position:fixed;left:0;top:0;width:34px;height:34px;border:2px solid var(--acc);border-radius:50%;pointer-events:none;z-index:70;transform:translate(-50%,-50%) scale(.6);opacity:0;transition:transform .25s var(--ease),opacity .3s,background .25s;mix-blend-mode:multiply}
+.curseur.on{opacity:.9}
+.curseur.gros{transform:translate(-50%,-50%) scale(1.6);background:rgba(255,176,32,.35);border-color:var(--or)}
+@media (hover:none){.curseur{display:none}}
+main{position:relative;z-index:2}
+/* ---------- hero en plans ---------- */
+.hero{position:relative;overflow:clip;background:linear-gradient(180deg,var(--ciel-1) 0%,var(--ciel-2) 42%,var(--ciel-3) 66%,#ffffff 100%);padding:150px 0 430px}
+.hero .plan{position:absolute;left:50%;bottom:0;width:max(1600px,112%);transform:translateX(-50%);will-change:transform;pointer-events:none}
+.hero .plan svg{display:block;width:100%;height:auto}
+.hero .plan--soleil{bottom:auto;top:70px;left:auto;right:12%;width:220px;transform:none}
+.plan--soleil .disque{width:220px;height:220px;border-radius:50%;background:radial-gradient(circle at 50% 45%,#ffd37a,#ffb020 60%,rgba(255,176,32,0) 61%);box-shadow:0 0 120px 40px rgba(255,176,32,.18);animation:lever-soleil 2.2s var(--ease) both}
+@keyframes lever-soleil{from{transform:translateY(160px);opacity:0}to{transform:none;opacity:1}}
+.plan--loin{bottom:210px;z-index:1}
+.plan--milieu{bottom:120px;z-index:2}
+.plan--devant{bottom:-80px;z-index:5}
+.plan--loin svg{animation:monte 1.4s .1s var(--ease) both}.plan--milieu svg{animation:monte 1.4s .25s var(--ease) both}.plan--devant svg{animation:monte 1.4s .4s var(--ease) both}
+@keyframes monte{from{transform:translateY(120px);opacity:0}to{transform:none;opacity:1}}
+.oiseaux{position:absolute;z-index:2;top:120px;left:0;right:0;height:200px;pointer-events:none}
+.oiseau{position:absolute;width:34px;height:14px;animation:vole var(--d,26s) linear infinite;left:-60px;top:var(--t,20px)}
+.oiseau svg{width:100%;height:100%;overflow:visible}
+.oiseau path{fill:none;stroke:#5a7bb3;stroke-width:2.2;stroke-linecap:round;animation:bat .7s ease-in-out infinite alternate;transform-origin:50% 50%}
+@keyframes vole{from{transform:translateX(0)}to{transform:translateX(calc(100vw + 120px))}}
+@keyframes bat{from{transform:scaleY(.4)}to{transform:scaleY(1)}}
+.hero__contenu{position:relative;z-index:3;text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px;padding:0 28px}
+.hero__contenu h1{max-width:min(18ch,100%)}
+.hero__contenu .sous{font-size:clamp(17px,1.5vw,21px);color:var(--ink-2);max-width:56ch;margin:0;animation:apparait 1s .9s var(--ease) both}
+.hero__actions{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:10px;animation:apparait 1s 1.1s var(--ease) both}
+@keyframes apparait{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.ecran{position:relative;z-index:4;width:min(900px,88vw);margin:54px auto 0;will-change:transform;perspective:1400px;animation:apparait 1.2s 1.2s var(--ease) both}
+.fenetre{background:#fff;border-radius:18px;border:1px solid var(--trait);box-shadow:0 60px 120px -40px rgba(15,21,36,.45),0 0 0 8px rgba(255,255,255,.4);overflow:hidden;transform:rotateX(var(--rx,10deg));transform-origin:50% 100%;transition:transform .1s linear}
+.fenetre .barre{display:flex;gap:6px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--trait);background:#f8fafc}
+.fenetre .barre i{width:10px;height:10px;border-radius:50%;background:#dfe5f0;display:block}
+.fenetre .barre span{margin-left:12px;font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.fenetre .corps{display:grid;grid-template-columns:1fr 1.3fr;min-height:320px}
+.fenetre .gauche{padding:26px 28px;border-right:1px solid var(--trait);display:flex;flex-direction:column;gap:12px}
+.fenetre .droite{padding:26px 28px;background:linear-gradient(180deg,#fff,#f3f7fd)}
+.tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--acc);border-radius:999px;padding:4px 10px;white-space:nowrap;font-weight:700;align-self:flex-start}
+.ondes{display:flex;align-items:flex-end;gap:5px;height:96px;margin:8px 0 14px}
+.ondes span{flex:1;background:linear-gradient(to top,var(--acc),#7fb0ff);border-radius:3px;height:20%;animation:onde 1.6s ease-in-out infinite;transform-origin:bottom}
+@keyframes onde{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+.repl{font-size:15.5px;color:var(--ink-2);border-left:3px solid var(--or);padding:6px 14px;margin:10px 0}
+.repl b{color:var(--ink)}
+.hero__sol{position:absolute;z-index:6;left:0;right:0;bottom:0;height:140px;background:linear-gradient(180deg,rgba(255,255,255,0),#fff 75%)}
+.chantier{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.chantier li{display:grid;grid-template-columns:52px 1fr;gap:12px;font-size:15px;color:var(--ink-2);opacity:.22;transform:translateX(10px);transition:opacity .5s,transform .5s}
+.chantier li.on{opacity:1;transform:none}
+.chantier li::before{content:attr(data-h);font-family:var(--mono);font-size:12px;color:var(--acc);font-weight:700;padding-top:2px}
+.chantier li b{color:var(--ink)}
+.chantier li.on:last-child b{color:var(--acc)}
+.jauge{height:8px;border-radius:999px;background:var(--ground-2);margin-top:14px;overflow:hidden}
+.jauge__fill{height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--or));transition:width .6s var(--ease)}
+.jauge__l{font-family:var(--mono);font-size:12px;color:var(--ink-3);margin-top:8px}
+html.calme .chantier li{opacity:1;transform:none}html.calme .jauge__fill{width:100%}
+/* ---------- intro lecture + portrait ---------- */
+.intro{padding:150px 0 110px}
+.intro__grille{display:grid;grid-template-columns:1fr 300px;gap:60px;align-items:center;max-width:1040px;margin:0 auto}
+.intro__p{font-size:clamp(23px,2.5vw,31px);line-height:1.25;letter-spacing:-.025em;font-weight:600;color:var(--ink);opacity:.2;margin:0 0 34px;transition:opacity .4s}
+.intro__p.on{opacity:1}
+.portrait{perspective:1000px}
+.portrait .carte-photo{border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--trait);box-shadow:0 40px 80px -30px rgba(15,21,36,.4);transform-style:preserve-3d;transition:transform .35s var(--ease);animation:flotte 7s ease-in-out infinite alternate}
+.portrait img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.portrait .legende{padding:12px 16px;font-size:14px;color:var(--ink-2)}
+.portrait .legende b{display:block;color:var(--ink);font-size:15px}
+/* ---------- logos ---------- */
+.confiance{padding:20px 0 40px;overflow:hidden}
+.confiance .titre-conf{text-align:center;margin-bottom:22px}
+.defile{display:flex;gap:18px;width:max-content;will-change:transform}
+.defile.deux{margin-top:18px}
+.logo-c{height:64px;width:150px;background:#fff;border:1px solid var(--trait);border-radius:14px;display:grid;place-items:center;padding:10px 16px;box-shadow:var(--ombre);flex:none}
+.logo-c img{max-width:100%;max-height:100%;object-fit:contain;filter:grayscale(1) contrast(1.05);opacity:.75;transition:filter .3s,opacity .3s}
+.logo-c:hover img{filter:none;opacity:1}
+/* ---------- sections ---------- */
+section.chap{padding:100px 0 30px}
+.tete{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:34px}
+.tete .desc{color:var(--ink-2);font-size:18px;max-width:52ch;margin:0}
+.tete .chip{margin-bottom:14px}
+/* projecteur */
+.spot{position:relative}
+.spot::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(360px circle at var(--sx,50%) var(--sy,50%),rgba(31,111,245,.13),transparent 60%);opacity:0;transition:opacity .35s}
+.spot:hover::after{opacity:1}
+/* scène à onglets */
+.onglets{display:flex;gap:6px;background:#fff;border:1px solid var(--trait);border-radius:999px;padding:6px;box-shadow:var(--ombre);width:max-content;max-width:100%;overflow-x:auto}
+.onglets button{font:inherit;font-weight:700;font-size:14.5px;padding:10px 18px;border-radius:999px;border:0;background:transparent;color:var(--ink-2);cursor:pointer;white-space:nowrap}
+.onglets button[aria-selected="true"]{background:var(--ink);color:#fff}
+.scene{position:relative;margin-top:16px;height:520px;border-radius:var(--radius);overflow:clip;background:linear-gradient(135deg,#f3f7fd,#fff);border:1px solid var(--trait);box-shadow:var(--ombre)}
+.scene .diapo{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1.2fr;gap:30px;padding:48px 56px;opacity:0;transform:translateY(16px) scale(.985);transition:opacity .6s var(--ease),transform .6s var(--ease);pointer-events:none}
+.scene .diapo.on{opacity:1;transform:none;pointer-events:auto}
+.diapo h3{font-size:30px;margin-bottom:12px}
+.diapo .texte{color:var(--ink-2);font-size:16.5px}
+.diapo .visuel{background:#fff;border:1px solid var(--trait);border-radius:var(--radius-s);padding:24px 26px;box-shadow:var(--ombre);align-self:center}
+.barre-scene{margin-top:14px;height:58px;display:grid;grid-template-columns:48px 1fr 48px;align-items:center;padding:0 6px;border-radius:999px;background:#fff;border:1px solid var(--trait);box-shadow:var(--ombre)}
+.barre-scene button{width:46px;height:46px;border-radius:50%;background:var(--ground-2);border:1px solid var(--trait);display:grid;place-items:center;color:var(--ink);cursor:pointer;font-size:18px}
+.barre-scene .legende{text-align:center;font-size:15.5px;color:var(--ink-2);font-weight:600}
+.page-livre{background:#fffdf6;color:#1a1712;border-radius:6px;padding:22px 26px;box-shadow:0 18px 40px rgba(0,0,0,.12);max-width:48ch}
+.page-livre .chapitre{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8e2144;margin-bottom:6px}
+.page-livre .titre-livre{font-size:26px;font-weight:800;margin-bottom:8px;letter-spacing:-.02em}
+.page-livre p{font-size:16px;line-height:1.6;margin:0}
+.bulle{max-width:85%;padding:11px 15px;border-radius:18px;margin:8px 0;font-size:15.5px;line-height:1.45}
+.bulle.vous{background:var(--ground-2);color:var(--ink);margin-left:auto;border-bottom-right-radius:4px}
+.bulle.bot{background:var(--acc);color:#fff;border-bottom-left-radius:4px}
+.audio{display:grid;grid-template-columns:14px 1fr auto;gap:12px;align-items:center;border:1px solid var(--trait);border-radius:12px;padding:12px 16px;margin:0 0 14px;font-size:15px;color:var(--ink-2)}
+.audio .pt{width:14px;height:14px;border-radius:50%;background:var(--acc)}
+.audio .d{font-family:var(--mono);font-size:12.5px;color:var(--acc);font-weight:700}
+.essentiel{padding-left:0;margin:0;list-style:none;display:grid;gap:10px}
+.essentiel li{display:grid;grid-template-columns:20px 1fr;gap:10px;color:var(--ink-2);font-size:15.5px}
+.essentiel li::before{content:"—";color:var(--or);font-weight:700}
+.etapes{list-style:none;padding:0;margin:0 0 12px;display:grid;gap:8px}
+.etapes li{display:grid;grid-template-columns:26px 1fr auto;gap:12px;align-items:center;padding:8px 0;border-bottom:1px dashed var(--trait);font-size:15.5px}
+.etapes .c{width:24px;height:24px;border-radius:50%;display:inline-grid;place-items:center;font-weight:800;font-size:13px;color:#fff;background:var(--acc)}
+.etapes li.afaire .c{background:var(--or);color:var(--ink);border-radius:5px}
+.etapes .r{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+.utiles{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;margin-top:26px}
+.util{color:var(--ink);text-decoration:none;font-weight:700;padding:10px 16px;border:1px solid var(--trait);border-radius:999px;display:inline-flex;gap:10px;align-items:baseline;background:#fff;box-shadow:var(--ombre)}
+.util small{color:var(--ink-3);font-size:13px;font-weight:500}
+/* cartes flottantes */
+.flottantes{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin:10px 0 30px;perspective:1200px}
+.carte{aspect-ratio:4/5;border-radius:var(--radius-s);background:#fff;border:1px solid var(--trait);box-shadow:0 30px 60px -30px rgba(15,21,36,.35),0 1px 0 rgba(15,21,36,.04);padding:18px;display:flex;flex-direction:column;justify-content:flex-end;gap:6px;transform-style:preserve-3d;transition:transform .35s var(--ease),box-shadow .35s;position:relative;overflow:hidden;animation:flotte 6s ease-in-out infinite alternate}
+.carte:nth-child(2){animation-delay:-2s}.carte:nth-child(3){animation-delay:-4s}.carte:nth-child(4){animation-delay:-1s}
+@keyframes flotte{from{translate:0 0}to{translate:0 -10px}}
+.carte .fond{position:absolute;inset:0;background:var(--f);opacity:.95}
+.carte .t{position:relative;font-family:var(--mono);font-size:11px;letter-spacing:.12em;font-weight:700;color:var(--ink-2);background:rgba(255,255,255,.85);padding:4px 8px;border-radius:6px;align-self:flex-start}
+.carte b{position:relative;font-size:18px;letter-spacing:-.02em;background:rgba(255,255,255,.85);padding:4px 8px;border-radius:6px;align-self:flex-start}
+.carte span{position:relative;font-size:13.5px;color:var(--ink-2);background:rgba(255,255,255,.85);padding:4px 8px;border-radius:6px}
+.carte:hover{box-shadow:0 50px 90px -30px rgba(31,111,245,.35)}
+.preuves{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.preuve{border:1px solid var(--trait);border-radius:var(--radius-s);padding:22px 24px;background:#fff;display:grid;gap:8px;font-size:15.5px;box-shadow:var(--ombre)}
+.preuve .secteur{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700}
+.preuve dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px}
+.preuve dt{color:var(--ink-3)}.preuve dd{margin:0;color:var(--ink-2)}
+/* bandeau cinétique */
+.bandeau{overflow:hidden;padding:70px 0 10px;user-select:none}
+.bandeau .ligne{display:flex;gap:40px;width:max-content;white-space:nowrap;will-change:transform;font-size:clamp(48px,7vw,110px);font-weight:800;letter-spacing:-.04em;line-height:1;color:transparent;-webkit-text-stroke:2px var(--ink);}
+.bandeau .ligne b{color:var(--or);-webkit-text-stroke:0}
+.bandeau .ligne span{padding-right:40px}
+/* chiffres */
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:0 0 70px}
+.chiffre{padding:22px 0 0;border-top:3px solid var(--acc)}
+.chiffre .n{font-size:clamp(52px,6.5vw,88px);font-weight:800;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.chiffre .n small{font-size:.4em;color:var(--acc)}
+.chiffre .l{color:var(--ink-2);margin-top:8px;max-width:26ch}
+.chiffre .src{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-top:6px}
+/* piles de cartes */
+.piles{position:relative}
+.pile{position:sticky;top:110px;display:grid;grid-template-columns:1fr 1fr;height:560px;margin-bottom:44px;border-radius:var(--radius);overflow:clip;background:#fff;border:1px solid var(--trait);box-shadow:0 0 0 8px rgba(255,255,255,.5),0 50px 100px -50px rgba(15,21,36,.4);transform-origin:50% 0;will-change:transform,filter}
+.pile__texte{padding:52px 48px;display:flex;flex-direction:column}
+.pile__label{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700}
+.pile__titre{margin-top:48px;font-size:34px;letter-spacing:-.03em;font-weight:800;max-width:14ch;line-height:1.1}
+.pile__p{margin-top:24px;font-size:16.5px;color:var(--ink-2);max-width:40ch}
+.pile__pied{margin-top:auto}
+.pile__media{position:relative;margin:10px;border-radius:18px;overflow:clip;background:var(--f);display:grid;place-items:center}
+.pile__media .ecranette{width:78%;background:#fff;border-radius:12px;box-shadow:0 40px 80px -30px rgba(15,21,36,.5);padding:18px 20px;font-size:14px;color:var(--ink-2)}
+.ecranette .l{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--trait)}
+.ecranette .l:last-child{border-bottom:0}
+.ecranette .l b{color:var(--ink)}
+.ecranette .ok{color:var(--acc);font-family:var(--mono);font-size:12px;font-weight:700}
+.bandes{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:20px}
+.bande{border-left:4px solid var(--or);padding:6px 0 6px 22px}
+.bande h3{margin:6px 0 10px}
+.bande p{color:var(--ink-2);font-size:16.5px;margin:0}
+.bande p b{color:var(--ink)}
+/* forge */
+.forge{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.ticker{font-family:var(--mono);font-size:13.5px;border:1px solid var(--trait);border-radius:var(--radius-s);background:#fff;padding:14px 0;overflow:hidden;position:relative;height:222px;box-shadow:var(--ombre)}
+.ticker::before,.ticker::after{content:"";position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none}
+.ticker::before{top:0;background:linear-gradient(#fff,transparent)}.ticker::after{bottom:0;background:linear-gradient(transparent,#fff)}
+.ticker ul{margin:0;padding:0;list-style:none;animation:defile 26s linear infinite}
+.ticker li{display:grid;grid-template-columns:64px 150px 1fr;gap:12px;padding:7px 18px;color:var(--ink-2);white-space:nowrap}
+.ticker li .h{color:var(--ink-3)}.ticker li .p{color:var(--acc);font-weight:700}
+@keyframes defile{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+.compteur{display:flex;gap:12px;align-items:center;font-size:16px;color:var(--ink-2)}
+.compteur .pt{width:12px;height:12px;border-radius:50%;background:var(--acc);box-shadow:0 0 0 4px rgba(31,111,245,.15)}
+/* faq */
+.faq{display:grid;grid-template-columns:1fr 1.4fr;gap:40px}
+.qa{border-top:1px solid var(--trait)}
+.qa button{width:100%;font:inherit;text-align:left;background:none;border:0;padding:18px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-weight:700;font-size:17px;color:var(--ink);cursor:pointer}
+.qa .chev{width:28px;height:28px;border-radius:50%;border:1px solid var(--trait);display:grid;place-items:center;transition:transform .35s var(--ease),background .35s;flex:none}
+.qa.open .chev{transform:rotate(45deg);background:var(--or);border-color:var(--or)}
+.qa .rep{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s var(--ease)}
+.qa.open .rep{grid-template-rows:1fr}
+.qa .rep>div{overflow:hidden}
+.qa .rep p{color:var(--ink-2);padding-bottom:18px;font-size:16px;max-width:60ch}
+/* final */
+.final{position:relative;margin-top:120px;padding:140px 0 0;overflow:clip;background:linear-gradient(180deg,#fff,var(--ciel-2) 60%,#ffe2b8)}
+.final .plan{position:absolute;left:50%;bottom:0;width:max(1600px,112%);transform:translateX(-50%);pointer-events:none;will-change:transform}
+.final .plan svg{display:block;width:100%;height:auto}
+.final .plan--milieu{bottom:60px;z-index:1}.final .plan--devant{bottom:-60px;z-index:2}
+.final .soleil-soir{position:absolute;left:50%;bottom:150px;width:260px;height:260px;margin-left:-130px;border-radius:50%;background:radial-gradient(circle at 50% 45%,#ffd37a,#ff9a3c 62%,rgba(255,154,60,0) 63%);box-shadow:0 0 140px 50px rgba(255,154,60,.2);z-index:0}
+.capture{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:44px 48px 40px;border-radius:var(--radius);background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border:1px solid var(--trait);box-shadow:var(--ombre);text-align:center;display:grid;gap:14px;justify-items:center}
+.capture h2{font-size:clamp(26px,3.4vw,44px);max-width:22ch}
+.capture form{display:flex;gap:10px;width:100%;max-width:540px;margin-top:8px}
+.capture input{flex:1;min-width:0;font:inherit;font-size:16.5px;padding:14px 18px;border-radius:999px;border:2px solid #cfd6e4;background:#fff;color:#111}
+.capture .petit{font-size:13.5px;color:var(--ink-3)}
+.retour{font-size:15px;color:var(--acc);min-height:22px;font-weight:700}
+.final .espace{height:380px}
+footer{position:relative;z-index:3;background:#fff;padding:30px 0 50px;color:var(--ink-3);font-size:14px}
+footer .bloc{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid var(--trait);padding-top:22px}
+/* animations natives */
+@keyframes lever{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+@keyframes croit{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@supports (animation-timeline: scroll()){
+  .progress{animation:croit linear both;animation-timeline:scroll(root)}
+  .reveal{animation:lever linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.mots .m>span{transform:none;opacity:1}}
+html.calme *,html.calme *::before,html.calme *::after{animation:none!important;transition:none!important}
+html.calme #verre{opacity:.3}
+html.calme .mots .m>span{transform:none;opacity:1}
+html.calme .fenetre{transform:none}
+@media (max-width:900px){
+  .hero{padding:120px 0 300px}.fenetre .corps{grid-template-columns:1fr}.fenetre .gauche{border-right:0;border-bottom:1px solid var(--trait)}
+  .hero .plan--soleil{right:6%;width:150px;top:80px}.plan--soleil .disque{width:150px;height:150px}
+  .topbar .heure{display:none}.bouton-calme{font-size:12.5px;padding:8px 12px}
+  .intro__grille,.tete,.faq,.forge,.bandes,.scene .diapo{grid-template-columns:1fr}.portrait{max-width:300px}
+  .flottantes{grid-template-columns:1fr 1fr}.chiffres,.preuves{grid-template-columns:1fr}
+  .scene{height:auto;min-height:620px}.scene .diapo{position:relative;display:none;padding:28px}.scene .diapo.on{display:grid}
+  .pile{grid-template-columns:1fr;height:auto}.pile__media{min-height:220px}.capture form{flex-direction:column}
+  .bandeau{padding-top:40px}
+}
+</style>
+</head>
+<body>
+<canvas id="verre" aria-hidden="true"></canvas>
+<div class="progress" aria-hidden="true"></div>
+<div class="curseur" id="curseur" aria-hidden="true"></div>
+<div class="topbar">
+  <a class="marque" href="#" aria-label="3h33, accueil"><span class="logo">3h</span>3h33 <span class="heure">il est <b id="heure">3h33</b></span></a>
+  <button class="bouton-calme" type="button" id="btn-calme" aria-pressed="false">Calmer les animations <span class="etat">off</span></button>
+</div>
+
+<main>
+  <section class="hero" id="haut">
+    <div class="plan plan--soleil" data-rate="0.05"><div class="disque"></div></div>
+    <div class="oiseaux" aria-hidden="true">
+      <div class="oiseau" style="--d:34s;--t:10px"><svg viewBox="0 0 34 14"><path d="M1 12 Q 9 2 17 10 Q 25 2 33 12"/></svg></div>
+      <div class="oiseau" style="--d:41s;--t:60px;animation-delay:-14s;transform:scale(.7)"><svg viewBox="0 0 34 14"><path d="M1 12 Q 9 2 17 10 Q 25 2 33 12"/></svg></div>
+      <div class="oiseau" style="--d:29s;--t:120px;animation-delay:-22s;transform:scale(.55)"><svg viewBox="0 0 34 14"><path d="M1 12 Q 9 2 17 10 Q 25 2 33 12"/></svg></div>
+    </div>
+    <div class="plan plan--loin" data-rate="0.12" data-souris="6"><svg id="svg-loin" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+    <div class="plan plan--milieu" data-rate="0.26" data-souris="12"><svg id="svg-milieu" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+    <div class="hero__contenu">
+      <span class="chip" style="animation:apparait .8s .2s var(--ease) both"><span class="dot"></span>3h33 · l'agence de l'IA</span>
+      <h1 class="mots" data-mots>À l'heure de l'IA, on ne présente plus des idées. On les construit.</h1>
+      <p class="sous">Masterclass, ateliers et sessions Forge : vos équipes apprennent l'IA en fabriquant, avec nous, des outils qui tournent le lendemain.</p>
+      <div class="hero__actions"><a class="btn" href="#demontrer" data-aimant>Essayer une démo →</a><a class="btn btn--ghost" href="#capture" data-aimant>Recevoir une démo par semaine</a></div>
+    </div>
+    <div class="ecran" data-rate="0.28">
+      <div class="fenetre" id="fenetre">
+        <div class="barre"><i></i><i></i><i></i><span>session forge · exemple · 14:02 → 17:30</span></div>
+        <div class="corps">
+          <div class="gauche"><span class="tag">forge · ½ journée</span><h3>Un outil construit en une demi-journée</h3><p style="color:var(--ink-2);font-size:15px;margin:0">Besoin exprimé le matin par une mairie : répondre aux courriers des administrés en deux minutes, sans rien perdre du ton.</p><div class="jauge"><div class="jauge__fill" id="jauge"></div></div><div class="jauge__l" id="jauge-l">14:02 · on commence</div></div>
+          <div class="droite"><ul class="chantier" id="chantier">
+            <li data-h="14:02"><span><b>Besoin décrit</b> avec l'équipe, sur trois courriers réels</span></li>
+            <li data-h="14:20"><span><b>Premier prototype</b> : brouillon de réponse généré, ton de la mairie respecté</span></li>
+            <li data-h="15:45"><span><b>Testé par les agents</b> sur douze courriers, deux corrections</span></li>
+            <li data-h="17:10"><span><b>Documenté</b> : qui fait quoi, avec quelles données, en douze pages</span></li>
+            <li data-h="17:30"><span><b>En ligne</b>, utilisé dès le lendemain matin</span></li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+    <div class="plan plan--devant" data-rate="0.5" data-souris="22"><svg id="svg-devant" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+    <div class="hero__sol"></div>
+  </section>
+
+  <section class="intro bloc">
+    <div class="intro__grille">
+      <div>
+        <p class="intro__p" data-intro>3h33 est une agence de l'IA qui préfère fabriquer plutôt que présenter. Masterclass, ateliers, sessions Forge : on apprend en construisant, avec vos équipes, des outils qui servent le lendemain.</p>
+        <p class="intro__p" data-intro>La plupart des entreprises découvrent l'IA par des conférences. Ici, on démarre par un besoin réel, on construit en direct, on documente, on livre. Le vibe coding n'est pas un slogan : c'est la méthode.</p>
+        <p class="intro__p" data-intro>Vous n'avez pas besoin d'une équipe technique. Alexandre Stopnicki accompagne des entreprises, des écoles et des mairies depuis seize ans, et construit lui-même ce qu'il enseigne.</p>
+      </div>
+      <div class="portrait reveal"><div class="carte-photo" data-tilt><img src="/medias/alexandre-stopnicki.jpg" alt="Alexandre Stopnicki, fondateur de 3h33" width="600" height="600"><div class="legende"><b>Alexandre Stopnicki</b>fondateur de 3h33, formateur et constructeur</div></div></div>
+    </div>
+  </section>
+
+  <section class="confiance">
+    <div class="titre-conf"><span class="chip"><span class="dot"></span>Ils nous font confiance</span></div>
+    <div class="defile" id="defile-1"></div>
+    <div class="defile deux" id="defile-2"></div>
+  </section>
+
+  <section class="chap bloc" id="demontrer">
+    <div class="tete reveal">
+      <div><span class="chip"><span class="dot"></span>Démontrer</span><h2 class="mots" data-mots>Essayez, plutôt que de lire.</h2></div>
+      <p class="desc">Cinq outils construits en vibe coding, à essayer ici même. Ce que vous voyez est le résultat ; la méthode, on la pratique ensemble en session Forge.</p>
+    </div>
+    <div class="reveal">
+      <div class="onglets" role="tablist" aria-label="Démonstrations">
+        <button role="tab" aria-selected="true" data-d="0">NegoVox</button>
+        <button role="tab" aria-selected="false" data-d="1">chapitre.ai</button>
+        <button role="tab" aria-selected="false" data-d="2">BotMoiLeQi</button>
+        <button role="tab" aria-selected="false" data-d="3">ListenEngine</button>
+        <button role="tab" aria-selected="false" data-d="4">IA Conforme</button>
+      </div>
+      <div class="scene spot" id="scene" data-spot>
+        <div class="diapo on" data-legende="NegoVox · un acheteur virtuel qui répond à la voix">
+          <div><span class="tag">voix · 2 minutes</span><h3 style="margin-top:14px">Négociez avec une IA qui répond</h3><p class="texte">Un scénario, un acheteur virtuel, deux minutes chrono. Vous argumentez à la voix, il vous relance, puis vous recevez un débrief.</p></div>
+          <div class="visuel"><div class="ondes" aria-hidden="true"><span style="animation-delay:0s"></span><span style="animation-delay:.1s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:.15s"></span><span style="animation-delay:.05s"></span><span style="animation-delay:.25s"></span><span style="animation-delay:.35s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.1s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:0s"></span></div><div class="repl"><b>Vous :</b> « Votre tarif est 20 % au-dessus du marché. »</div><div class="repl"><b>L'acheteur IA :</b> « Sur quel comparable vous appuyez-vous ? »</div><p class="mention">Maquette : le vrai simulateur, avec micro, sera branché ici.</p></div>
+        </div>
+        <div class="diapo" data-legende="chapitre.ai · vous racontez, il écrit le livre">
+          <div><span class="tag">voix → livre</span><h3 style="margin-top:14px">Vous racontez, il écrit le livre</h3><p class="texte">Trois phrases dictées à voix haute deviennent une page mise en forme, avec son chapitre et son titre. Chaque vie mérite son livre.</p></div>
+          <div class="visuel"><div class="repl"><b>Vous :</b> « Ma grand-mère tenait l'épicerie de la rue des Carmes… »</div><div class="page-livre"><div class="chapitre">Chapitre 3</div><div class="titre-livre">La rue des Carmes</div><p>On entrait par la cour. L'épicerie sentait le café moulu et le savon de Marseille, et la cloche de la porte sonnait deux fois, comme si elle hésitait.</p></div></div>
+        </div>
+        <div class="diapo" data-legende="BotMoiLeQi · une IA pédagogique qui vous fait réviser">
+          <div><span class="tag">pédagogie</span><h3 style="margin-top:14px">Une IA qui vous fait réviser</h3><p class="texte">Elle explique, puis elle interroge. Le rythme s'adapte à vos réponses, comme un bon professeur particulier.</p></div>
+          <div class="visuel"><div class="bulle vous">Explique-moi la TVA comme si j'avais douze ans.</div><div class="bulle bot">Tu achètes un jeu 12 €. Le vendeur en garde 10 et donne 2 à l'État : c'est la TVA. Si le jeu coûte 24 €, combien va à l'État ?</div><div class="bulle vous">4 € ?</div><div class="bulle bot">Exact. On passe aux taux réduits ?</div></div>
+        </div>
+        <div class="diapo" data-legende="ListenEngine · cinquante-deux minutes, trois points">
+          <div><span class="tag">bientôt en code ouvert</span><h3 style="margin-top:14px">Cinquante-deux minutes, trois points</h3><p class="texte">Déposez une conférence, une réunion, un podcast. Vous recevez l'essentiel, sourcé à la minute près.</p></div>
+          <div class="visuel"><div class="audio"><span class="pt"></span><span>Conférence « L'IA dans les collectivités » · 52 min</span><span class="d">→ 40 s</span></div><ul class="essentiel"><li>Les agents gagnent d'abord du temps sur les courriers et les comptes rendus.</li><li>Le frein n'est pas la technique mais le cadre : qui utilise quoi, avec quelles données.</li><li>Les communes qui avancent ont nommé un référent et formé les équipes sur leurs dossiers.</li></ul></div>
+        </div>
+        <div class="diapo" data-legende="IA Conforme · votre système d'IA face à l'AI Act">
+          <div><span class="tag">conformité</span><h3 style="margin-top:14px">Votre système d'IA, face à l'AI Act</h3><p class="texte">Cinq questions, un état des lieux, et le prochain pas à faire. Sans jargon juridique.</p></div>
+          <div class="visuel"><ul class="etapes"><li><span class="c">✓</span>Usage décrit<span class="r">fait</span></li><li><span class="c">✓</span>Niveau de risque identifié<span class="r">fait</span></li><li class="afaire"><span class="c">!</span>Information des utilisateurs<span class="r">à faire</span></li><li class="afaire"><span class="c">!</span>Registre et documentation<span class="r">à faire</span></li></ul><div class="repl"><b>Prochaine étape :</b> rédiger la mention de transparence, modèle fourni.</div></div>
+        </div>
+      </div>
+      <div class="barre-scene"><button type="button" id="prec" aria-label="Démo précédente">←</button><div class="legende" id="legende"></div><button type="button" id="suiv" aria-label="Démo suivante">→</button></div>
+    </div>
+    <div class="utiles reveal"><span class="eyebrow">Outils utiles, en accès libre</span><a class="util" href="https://3h33.com/verif-nom/">Un nom est-il libre ?<small>14 bases, 3 secondes</small></a><a class="util" href="https://prompts.3h33.org/">Bibliothèque de prompts<small>gratuite</small></a></div>
+  </section>
+
+  <section class="chap bloc" id="creer">
+    <div class="tete reveal">
+      <div><span class="chip"><span class="dot"></span>Créer</span><h2 class="mots" data-mots>Un film, un clip, une musique : dites ce que vous voulez faire ressentir.</h2></div>
+      <p class="desc">Le studio 3h33 écrit, tourne, compose et monte avec l'IA. Des films entiers, des vidéos de marque, des musiques originales, des personnages cohérents d'un plan à l'autre.</p>
+    </div>
+    <div class="flottantes reveal">
+      <div class="carte" data-tilt style="--f:linear-gradient(160deg,#dbe8ff,#1f6ff5)"><div class="fond"></div><span class="t">FILM · ELFE</span><b>WAWW, le film</b><span>écrit et produit dans le studio ELFE</span></div>
+      <div class="carte" data-tilt style="--f:linear-gradient(160deg,#fff1cf,#ffb020)"><div class="fond"></div><span class="t">MUSIQUE</span><b>Canta Dream</b><span>compositions originales, voix, arrangements</span></div>
+      <div class="carte" data-tilt style="--f:linear-gradient(160deg,#e9f2ff,#7fb0ff)"><div class="fond"></div><span class="t">VIDÉOS</span><b>alexandre.ai</b><span>galerie de vidéos IA, du plan à la séquence</span></div>
+      <div class="carte" data-tilt style="--f:linear-gradient(160deg,#f3f7fd,#3f475a)"><div class="fond"></div><span class="t">IMAGES</span><b>alexandre.photos</b><span>portraits, décors, personnages cohérents</span></div>
+    </div>
+    <p class="mention" style="margin:-10px 0 26px">Maquette : les cartes recevront de vrais extraits vidéo lus au survol. Elles réagissent déjà à la souris.</p>
+    <h3 style="margin-bottom:14px">Ce qu'on a fait pour des clients, raconté officiellement</h3>
+    <div class="preuves">
+      <div class="preuve spot reveal" data-spot><div class="secteur">Client 1 · secteur à préciser</div><dl><dt>Besoin</dt><dd>à rédiger ensemble</dd><dt>Livré</dt><dd>un film de présentation et ses déclinaisons</dd><dt>Délai</dt><dd>à préciser</dd></dl></div>
+      <div class="preuve spot reveal" data-spot><div class="secteur">Client 2 · secteur à préciser</div><dl><dt>Besoin</dt><dd>à rédiger ensemble</dd><dt>Livré</dt><dd>une musique originale et son clip</dd><dt>Délai</dt><dd>à préciser</dd></dl></div>
+      <div class="preuve spot reveal" data-spot><div class="secteur">Client 3 · secteur à préciser</div><dl><dt>Besoin</dt><dd>à rédiger ensemble</dd><dt>Livré</dt><dd>des personnages et un univers visuel réutilisables</dd><dt>Délai</dt><dd>à préciser</dd></dl></div>
+    </div>
+  </section>
+
+  <div class="bandeau" aria-hidden="true"><div class="ligne" id="bandeau"><span>Masterclass</span><b>·</b><span>Ateliers</span><b>·</b><span>Forge</span><b>·</b><span>Studio</span><b>·</b><span>Mairies</span><b>·</b><span>Vibe coding</span><b>·</b><span>Masterclass</span><b>·</b><span>Ateliers</span><b>·</b><span>Forge</span><b>·</b><span>Studio</span><b>·</b><span>Mairies</span><b>·</b><span>Vibe coding</span><b>·</b></div></div>
+
+  <section class="chap bloc" id="expliquer" style="padding-top:60px">
+    <div class="tete reveal">
+      <div><span class="chip"><span class="dot"></span>Expliquer</span><h2 class="mots" data-mots>Ce que ça change pour votre entreprise.</h2></div>
+      <p class="desc">Des chiffres calculés, pas déclarés. Puis trois façons d'entrer, de la plus légère à la plus engagée : elles s'empilent au défilement.</p>
+    </div>
+    <div class="chiffres">
+      <div class="chiffre reveal"><div class="n" data-cible="34">0</div><div class="l">sites et outils en ligne, construits depuis 2024</div><div class="src">source : galaxie 3h33, vérifié le 02/09/2026</div></div>
+      <div class="chiffre reveal"><div class="n" data-cible="16"><span>0</span><small> ans</small></div><div class="l">d'agence, du marketing digital à l'IA</div><div class="src">source : 2010 → 2026</div></div>
+      <div class="chiffre reveal"><div class="n" data-cible="0.5"><span>0</span><small> journée</small></div><div class="l">de co-construction en visio pour livrer un outil qui tourne</div><div class="src">source : méthode Forge, un module</div></div>
+    </div>
+    <div class="piles" id="piles">
+      <div class="pile spot" data-pile data-spot>
+        <div class="pile__texte"><span class="pile__label">◆ Masterclass · 2 heures</span><div class="pile__titre">Découvrir ce que l'IA change dans vos métiers.</div><p class="pile__p">Démontré en direct, sans jargon, sur vos cas. Pour décider par où commencer, et avec qui.</p><div class="pile__pied"><a class="lien" href="#">Voir la masterclass</a></div></div>
+        <div class="pile__media" style="--f:linear-gradient(160deg,#e9f2ff,#bcd3ff)"><div class="ecranette"><div class="l"><b>Ce que l'IA fait déjà</b><span class="ok">démo</span></div><div class="l"><span>Rédiger un compte rendu</span><span class="ok">3 min</span></div><div class="l"><span>Préparer un appel d'offres</span><span class="ok">12 min</span></div><div class="l"><span>Répondre à 40 courriels</span><span class="ok">8 min</span></div></div></div>
+      </div>
+      <div class="pile spot" data-pile data-spot>
+        <div class="pile__texte"><span class="pile__label">◆ Ateliers · 1 à 2 jours</span><div class="pile__titre">Agir sur vos propres dossiers.</div><p class="pile__p">Vos équipes pratiquent : contenus, données, automatisations, avec les outils qu'elles garderont. Elles repartent avec un usage, pas des notes.</p><div class="pile__pied"><a class="lien" href="#">Voir les ateliers</a></div></div>
+        <div class="pile__media" style="--f:linear-gradient(160deg,#fff1cf,#ffd37a)"><div class="ecranette"><div class="l"><b>Atelier « courriers »</b><span class="ok">jour 1</span></div><div class="l"><span>Gabarits validés</span><span class="ok">6</span></div><div class="l"><span>Temps gagné par agent</span><span class="ok">40 min/j</span></div><div class="l"><span>Référent nommé</span><span class="ok">oui</span></div></div></div>
+      </div>
+      <div class="pile spot" data-pile data-spot>
+        <div class="pile__texte"><span class="pile__label">◆ Forge · ½ journée + consolidation</span><div class="pile__titre">Construire, en live, l'outil qui manque.</div><p class="pile__p">Un agent, une automatisation, un tableau de bord : fabriqué avec vous en session, documenté, livré, opérationnel.</p><div class="pile__pied"><a class="lien" href="#">Voir la Forge</a></div></div>
+        <div class="pile__media" style="--f:linear-gradient(160deg,#dbe8ff,#1f6ff5)"><div class="ecranette"><div class="l"><b>Session Forge · mairie</b><span class="ok">livré</span></div><div class="l"><span>Assistant délibérations</span><span class="ok">en ligne</span></div><div class="l"><span>Documentation</span><span class="ok">12 pages</span></div><div class="l"><span>Temps de construction</span><span class="ok">½ journée</span></div></div></div>
+      </div>
+    </div>
+    <div class="bandes">
+      <div class="bande reveal"><div class="eyebrow">Collectivités</div><h3>Mairies et administrations</h3><p>Les agents se forment à l'IA sur leurs propres dossiers, et plusieurs communes ont déjà leur site ou leur outil, construit en session avec leurs équipes. Le point d'entrée : <a href="https://mairie.ai/">mairie.ai</a>.</p></div>
+      <div class="bande reveal"><div class="eyebrow">Les grands chantiers</div><h3>Ce qu'on construit de plus gros</h3><p><b>Sator OS</b>, un LMS agentique qui retrouve la bonne seconde dans des centaines d'heures de cours. <b>Atelier LMS</b>, l'éditeur avec lequel on fabrique des LMS. <b>Subsidium</b>, le plus gros projet, dont on choisira ensemble ce qu'on en dit.</p></div>
+    </div>
+  </section>
+
+  <section class="chap bloc" id="suggerer">
+    <div class="tete reveal">
+      <div><span class="chip"><span class="dot"></span>Suggérer</span><h2 class="mots" data-mots>La forge tourne.</h2></div>
+      <p class="desc">Chaque semaine, quelque chose est mis en ligne. On ne liste pas tout ; on laisse voir que ça avance.</p>
+    </div>
+    <div class="forge">
+      <div class="reveal"><div class="ticker" aria-label="Activité récente de la forge (exemple)"><ul id="flux"></ul></div><p class="mention">Exemple de flux. En production, ces lignes viendront des dépôts publics, mises à jour toutes les heures.</p></div>
+      <div class="reveal"><div class="compteur"><span class="pt"></span><span><b>34</b> sites et outils en ligne, vérifiés toutes les heures.</span></div><p style="color:var(--ink-2);margin-top:18px">Rien n'est écrit sur la façon de faire. Ceux qui veulent comprendre viennent en session ; ceux qui veulent voir plus loin trouvent <a href="#">l'atelier</a> en bas de page.</p></div>
+    </div>
+  </section>
+
+  <section class="chap bloc" id="questions">
+    <div class="faq">
+      <div class="reveal"><span class="chip"><span class="dot"></span>Questions</span><h2 class="mots" data-mots style="margin-top:14px">Les questions qui reviennent le plus.</h2><p class="desc" style="color:var(--ink-2);margin-top:14px">Comment ça se passe, ce que ça coûte, ce qu'il faut préparer.</p></div>
+      <div class="reveal" id="faq">
+        <div class="qa"><button type="button" aria-expanded="false">Faut-il une équipe technique pour travailler avec 3h33 ?<span class="chev">+</span></button><div class="rep"><div><p>Non. Les ateliers et la Forge sont faits pour des équipes métier. Ce qui est construit vous est livré documenté, et l'on vous apprend à le faire vivre.</p></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false">Que se passe-t-il pendant une session Forge ?<span class="chev">+</span></button><div class="rep"><div><p>Une demi-journée en visio : on part d'un besoin réel, on construit en direct l'agent, l'automatisation ou le tableau de bord, puis une phase de consolidation le rend propre et documenté.</p></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false">Nos données restent-elles chez nous ?<span class="chev">+</span></button><div class="rep"><div><p>Oui quand c'est nécessaire : on sait travailler avec des modèles hébergés en Europe ou installés chez vous. La question est posée dès le premier échange.</p></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false">Travaillez-vous avec les collectivités ?<span class="chev">+</span></button><div class="rep"><div><p>Oui, formation des agents et construction d'outils pour plusieurs communes. Le point d'entrée dédié est mairie.ai.</p></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false">Combien ça coûte ?<span class="chev">+</span></button><div class="rep"><div><p>Une masterclass, un atelier et une session Forge ont chacun un tarif fixe, annoncé avant tout engagement. Le devis tient sur une page.</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" id="capture">
+    <div class="soleil-soir" aria-hidden="true"></div>
+    <div class="plan plan--milieu" data-rate="0.18"><svg id="svg-final-milieu" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+    <div class="plan plan--devant" data-rate="0.36"><svg id="svg-final-devant" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+    <div class="bloc">
+      <div class="capture reveal">
+        <span class="eyebrow">Une démo par semaine, pendant cinq semaines</span>
+        <h2>Deux minutes, un outil construit, et la question : chez vous, ça donnerait quoi ?</h2>
+        <form id="f-mail"><input type="email" placeholder="votre@email.fr" aria-label="Votre adresse email" required><button class="btn btn--or" type="submit" data-aimant>Recevoir la première démo</button></form>
+        <div class="retour" id="retour" aria-live="polite"></div>
+        <div class="petit">Cinq envois, puis plus rien sauf si vous le demandez. Maquette : l'envoi sera branché à l'étape 4.</div>
+      </div>
+    </div>
+    <div class="espace"></div>
+  </section>
+  <footer><div class="bloc"><span>© 3h33 · piste « L'aube claire », v2 du 3 septembre 2026</span><span>Plans superposés, cartes empilées, verre cannelé, mots révélés, curseur, aimants · aucun script tiers</span></div></footer>
+</main>
+
+<script>
+const LOGOS=[{"alt": "Le Cnam", "src": "/medias/logo-le-cnam.jpg"}, {"alt": "Esmod", "src": "/medias/logo-esmod.jpg"}, {"alt": "Casino", "src": "/medias/logo-casino.jpg"}, {"alt": "Maria Schools", "src": "/medias/logo-maria-schools.jpg"}, {"alt": "Criteo", "src": "/medias/logo-criteo.jpg"}, {"alt": "Saint-Gobain", "src": "/medias/logo-saint-gobain.jpg"}, {"alt": "Air Liquide", "src": "/medias/logo-air-liquide.jpg"}, {"alt": "Dentsply Sirona", "src": "/medias/logo-dentsply-sirona.jpg"}, {"alt": "Bolton Group", "src": "/medias/logo-bolton-group.jpg"}, {"alt": "Robert Half", "src": "/medias/logo-robert-half.jpg"}, {"alt": "De Vinci Executive Education", "src": "/medias/logo-de-vinci-executive-education.jpg"}, {"alt": "ETS", "src": "/medias/logo-ets.jpg"}, {"alt": "Giropharm", "src": "/medias/logo-giropharm.jpg"}, {"alt": "Institut français", "src": "/medias/logo-institut-francais.jpg"}, {"alt": "Les Acteurs de la Compétence", "src": "/medias/logo-les-acteurs-de-la-competence.jpg"}, {"alt": "Acorus Ingénierie", "src": "/medias/logo-acorus-ingenierie.jpg"}];
+/* ---------- ?fin : saute à l'état final (vérification par capture) ---------- */
+if(location.search.includes("fin")){addEventListener("load",()=>{setTimeout(()=>{document.getAnimations().forEach(a=>{try{a.finish()}catch(e){}})},300)})}
+/* ---------- calme (bouton, ?calme, mouvement réduit) ---------- */
+const html=document.documentElement, btn=document.getElementById("btn-calme");
+let calme=false; try{calme=localStorage.getItem("3h33-calme")==="1"}catch(e){}
+if(location.search.includes("calme"))calme=true;
+const reduit=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function appliquerCalme(){html.classList.toggle("calme",calme);btn.setAttribute("aria-pressed",String(calme));btn.querySelector(".etat").textContent=calme?"on":"off";try{localStorage.setItem("3h33-calme",calme?"1":"0")}catch(e){}}
+btn.addEventListener("click",()=>{calme=!calme;appliquerCalme();if(!calme)boucle();else rendre(scrollY)}); appliquerCalme();
+const immobile=()=>calme||reduit;
+
+/* ---------- mots révélés ---------- */
+document.querySelectorAll("[data-mots]").forEach(el=>{const mots=el.textContent.trim().split(/\s+/);el.innerHTML=mots.map((m,i)=>`<span class="m"><span style="--i:${i}">${m}</span></span>`).join(" ")});
+const ioMots=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");ioMots.unobserve(en.target)}}),{threshold:.3});
+document.querySelectorAll(".mots").forEach(el=>{if(immobile()||el.closest(".hero"))el.classList.add("in");else ioMots.observe(el)});
+
+/* ---------- logos ---------- */
+function remplir(id,liste){const d=document.getElementById(id);d.innerHTML=[...liste,...liste].map(l=>`<div class="logo-c"><img src="${l.src}" alt="${l.alt}" loading="lazy"></div>`).join("")}
+remplir("defile-1",LOGOS.slice(0,8));remplir("defile-2",LOGOS.slice(8));
+
+/* ---------- paysage en plans (SVG généré) ---------- */
+function alea(seed){return()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646}}
+function crete(seed,base,amp,n,couleur,arbres){
+  const r=alea(seed),W=1600,H=420;let pts=[];
+  for(let i=0;i<=n;i++){pts.push([i*W/n,base-amp*(0.35+0.65*r())])}
+  let d=`M0 ${H} L0 ${pts[0][1].toFixed(1)}`;
+  for(let i=0;i<n;i++){const [x0,y0]=pts[i],[x1,y1]=pts[i+1];const cx=(x0+x1)/2;d+=` C ${cx.toFixed(1)} ${y0.toFixed(1)}, ${cx.toFixed(1)} ${y1.toFixed(1)}, ${x1.toFixed(1)} ${y1.toFixed(1)}`}
+  d+=` L${W} ${H} Z`;
+  let s=`<path d="${d}" fill="${couleur}"/>`;
+  for(let i=0;i<arbres;i++){const x=r()*W;const seg=Math.min(n-1,Math.floor(x/(W/n)));const t=(x-seg*W/n)/(W/n);const y=pts[seg][1]*(1-t)+pts[seg+1][1]*t+6;const h=14+r()*26,w=h*0.55;
+    s+=`<path d="M${(x-w).toFixed(1)} ${y.toFixed(1)} L${x.toFixed(1)} ${(y-h).toFixed(1)} L${(x+w).toFixed(1)} ${y.toFixed(1)} Z" fill="#3d5f9c"/>`}
+  return s;
+}
+document.getElementById("svg-loin").innerHTML=crete(11,300,150,9,"#dbe8fb",0);
+document.getElementById("svg-milieu").innerHTML=crete(23,330,120,12,"#b9d1f5",0);
+document.getElementById("svg-devant").innerHTML=crete(37,360,90,16,"#6e8fc4",70);
+document.getElementById("svg-final-milieu").innerHTML=crete(41,330,110,10,"#cfe0fb",0);
+document.getElementById("svg-final-devant").innerHTML=crete(53,360,80,14,"#9fbcee",40);
+
+/* ---------- rendu au défilement : une seule valeur, lissée ---------- */
+const plans=[...document.querySelectorAll(".hero .plan, .hero .ecran")].map(el=>({el,rate:parseFloat(el.dataset.rate||"0"),souris:parseFloat(el.dataset.souris||"0")}));
+const finaux=[...document.querySelectorAll(".final .plan")].map(el=>({el,rate:parseFloat(el.dataset.rate||"0"),sec:el.closest(".final")}));
+const intros=[...document.querySelectorAll("[data-intro]")], piles=[...document.querySelectorAll("[data-pile]")];
+const fenetre=document.getElementById("fenetre"), heure=document.getElementById("heure"), bandeau=document.getElementById("bandeau"), defiles=[document.getElementById("defile-1"),document.getElementById("defile-2")];
+let cible=scrollY,cour=scrollY,anim=false,vitesse=0,dernierY=scrollY,bx=0,dx1=0,dx2=0,mx=0,my=0;
+function rendre(y){
+  const vh=innerHeight, calm=immobile();
+  const p=Math.max(0,Math.min(1,y/Math.max(1,document.documentElement.scrollHeight-vh)));
+  heure.textContent="3h"+String(33+Math.round(p*27)).padStart(2,"0");
+  if(calm){plans.forEach(q=>q.el.style.transform=q.el.classList.contains("plan")&&!q.el.classList.contains("plan--soleil")?"translateX(-50%)":"");fenetre.style.setProperty("--rx","0deg");intros.forEach(q=>q.classList.add("on"));piles.forEach(q=>{q.style.transform="";q.style.filter=""});return}
+  plans.forEach(q=>{const t=Math.min(y,1400)*q.rate;const sx=(mx*q.souris).toFixed(1),sy=(my*q.souris*0.5).toFixed(1);
+    if(q.el.classList.contains("ecran")){q.el.style.transform=`translateY(${(-t).toFixed(1)}px) scale(${(1+Math.min(y,600)/6000).toFixed(3)})`}
+    else if(q.el.classList.contains("plan--soleil")){q.el.style.transform=`translate(${(-mx*8).toFixed(1)}px,${(t*0.8-my*4).toFixed(1)}px)`}
+    else{q.el.style.transform=`translateX(calc(-50% + ${sx}px)) translateY(${(t*0.6+parseFloat(sy)).toFixed(1)}px)`}});
+  fenetre.style.setProperty("--rx",(Math.max(0,10-y/30)).toFixed(2)+"deg");
+  finaux.forEach(q=>{const r=q.sec.getBoundingClientRect();const d=Math.max(0,vh-r.top);q.el.style.transform=`translateX(-50%) translateY(${(-(d*q.rate)+120).toFixed(1)}px)`});
+  let best=null,bd=1e9;intros.forEach(q=>{const r=q.getBoundingClientRect();const d=Math.abs(r.top+r.height/2-vh/2);if(d<bd){bd=d;best=q}});intros.forEach(q=>q.classList.toggle("on",q===best));
+  piles.forEach((q,i)=>{const n=piles[i+1];if(!n){q.style.transform="";q.style.filter="";return}const r=n.getBoundingClientRect();const debut=110+560,fin=110;const t=Math.min(1,Math.max(0,(debut-r.top)/(debut-fin)));q.style.transform=`scale(${(1-0.06*t).toFixed(3)}) translateY(${(-24*t).toFixed(1)}px) rotate(${(-1.2*t).toFixed(2)}deg)`;q.style.filter=`brightness(${(1-0.12*t).toFixed(3)})`});
+}
+function boucle(){if(anim)return;anim=true;(function pas(){cour+=(cible-cour)*0.14;if(Math.abs(cible-cour)<0.3){cour=cible;rendre(cour);anim=false;return}rendre(cour);requestAnimationFrame(pas)})()}
+addEventListener("scroll",()=>{cible=scrollY;boucle()},{passive:true});
+addEventListener("resize",()=>rendre(cour));
+addEventListener("pointermove",e=>{mx=(e.clientX/innerWidth-.5);my=(e.clientY/innerHeight-.5);if(scrollY<1400&&!anim)rendre(cour)},{passive:true});
+rendre(scrollY);
+
+/* ---------- bandeau cinétique + logos : vitesse liée au défilement ---------- */
+(function tourne(){const v=scrollY-dernierY;dernierY=scrollY;vitesse+= (v-vitesse)*0.1;
+  if(!immobile()&&!document.hidden){const base=0.9;bx-=base+Math.min(24,Math.abs(vitesse)*0.6);const w=bandeau.scrollWidth/2;if(-bx>w)bx+=w;bandeau.style.transform=`translateX(${bx.toFixed(1)}px)`;
+    dx1-=0.5+Math.abs(vitesse)*0.15;dx2+=0.4+Math.abs(vitesse)*0.12;const w1=defiles[0].scrollWidth/2,w2=defiles[1].scrollWidth/2;if(-dx1>w1)dx1+=w1;if(dx2>0)dx2-=w2;defiles[0].style.transform=`translateX(${dx1.toFixed(1)}px)`;defiles[1].style.transform=`translateX(${dx2.toFixed(1)}px)`}
+  requestAnimationFrame(tourne)})();
+
+/* ---------- chantier forge dans la fenêtre du haut ---------- */
+(function(){const li=[...document.querySelectorAll("#chantier li")],j=document.getElementById("jauge"),l=document.getElementById("jauge-l");if(!li.length)return;let i=0;
+  function etape(){if(immobile()){li.forEach(x=>x.classList.add("on"));j.style.width="100%";l.textContent="17:30 · en ligne";return}
+    li.forEach((x,k)=>x.classList.toggle("on",k<=i));j.style.width=((i+1)/li.length*100).toFixed(0)+"%";l.textContent=li[i].dataset.h+" · "+li[i].querySelector("b").textContent.toLowerCase();
+    i=(i+1)%li.length;setTimeout(etape,i===0?3600:1500)}
+  setTimeout(etape,1600)})();
+/* ---------- scène à onglets ---------- */
+const onglets=[...document.querySelectorAll(".onglets [role=tab]")],diapos=[...document.querySelectorAll(".scene .diapo")],legende=document.getElementById("legende");let cur=0;
+function aller(i){cur=(i+diapos.length)%diapos.length;onglets.forEach((o,k)=>o.setAttribute("aria-selected",String(k===cur)));diapos.forEach((d,k)=>d.classList.toggle("on",k===cur));legende.textContent=diapos[cur].dataset.legende}
+onglets.forEach((o,i)=>o.addEventListener("click",()=>aller(i)));document.getElementById("prec").addEventListener("click",()=>aller(cur-1));document.getElementById("suiv").addEventListener("click",()=>aller(cur+1));aller(0);
+
+/* ---------- cartes 3D, projecteur, aimants, curseur ---------- */
+document.querySelectorAll("[data-tilt]").forEach(c=>{c.addEventListener("pointermove",e=>{if(immobile())return;const r=c.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`rotateY(${(x*14).toFixed(2)}deg) rotateX(${(-y*14).toFixed(2)}deg) translateZ(18px)`});c.addEventListener("pointerleave",()=>{c.style.transform=""})});
+document.querySelectorAll("[data-spot]").forEach(s=>s.addEventListener("pointermove",e=>{const r=s.getBoundingClientRect();s.style.setProperty("--sx",((e.clientX-r.left)/r.width*100).toFixed(1)+"%");s.style.setProperty("--sy",((e.clientY-r.top)/r.height*100).toFixed(1)+"%")}));
+document.querySelectorAll("[data-aimant]").forEach(b=>{b.addEventListener("pointermove",e=>{if(immobile())return;const r=b.getBoundingClientRect();const x=e.clientX-(r.left+r.width/2),y=e.clientY-(r.top+r.height/2);b.style.transform=`translate(${(x*0.18).toFixed(1)}px,${(y*0.25).toFixed(1)}px)`});b.addEventListener("pointerleave",()=>{b.style.transform=""})});
+const curseur=document.getElementById("curseur");let cx=-100,cy=-100,tx=-100,ty=-100;
+addEventListener("pointermove",e=>{tx=e.clientX;ty=e.clientY;curseur.classList.add("on");curseur.classList.toggle("gros",!!e.target.closest("a,button,[data-tilt],[role=tab]"))},{passive:true});
+addEventListener("pointerleave",()=>curseur.classList.remove("on"));
+(function suit(){cx+=(tx-cx)*0.22;cy+=(ty-cy)*0.22;curseur.style.left=cx.toFixed(1)+"px";curseur.style.top=cy.toFixed(1)+"px";requestAnimationFrame(suit)})();
+
+/* ---------- compteurs ---------- */
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const el=en.target,cibleN=parseFloat(el.dataset.cible),span=el.querySelector("span")||el;const d0=performance.now(),dur=1400;
+  function pas(n){const p=Math.min((n-d0)/dur,1),v=cibleN*(1-Math.pow(1-p,3));span.textContent=(cibleN%1?v.toFixed(1).replace(".",","):Math.round(v));if(p<1)requestAnimationFrame(pas)}
+  if(immobile()){span.textContent=(cibleN%1?String(cibleN).replace(".",","):cibleN)}else requestAnimationFrame(pas);io.unobserve(el)}),{threshold:.5});
+document.querySelectorAll(".chiffre .n").forEach(n=>io.observe(n));
+
+/* ---------- faq ---------- */
+document.querySelectorAll(".qa button").forEach(b=>b.addEventListener("click",()=>{const qa=b.parentElement,o=!qa.classList.contains("open");document.querySelectorAll(".qa").forEach(q=>{q.classList.remove("open");q.querySelector("button").setAttribute("aria-expanded","false")});if(o){qa.classList.add("open");b.setAttribute("aria-expanded","true")}}));
+
+/* ---------- flux + formulaire ---------- */
+const FLUX=[["09:12","science-marine","nouvelle page « Le plancton respire »"],["08:40","prompts.3h33","1 240 prompts indexés, recherche par usage"],["07:55","verif-nom","INPI brevets ajouté, 14 bases"],["hier","ia-conforme","questionnaire AI Act, version 3"],["hier","chapitre.ai","export du livre en ePub"],["hier","listen-engine","résumés audio en 3 langues"],["lun.","negovox","scénario « achat de licences »"],["lun.","mairie.ai","modèle de délibération assisté"],["dim.","science-marine","carte des courants en WebGL"],["sam.","voix-de-l-ia","épisode 12 en ligne"]];
+document.getElementById("flux").innerHTML=[...FLUX,...FLUX].map(f=>`<li><span class="h">${f[0]}</span><span class="p">${f[1]}</span><span>${f[2]}</span></li>`).join("");
+document.getElementById("f-mail").addEventListener("submit",e=>{e.preventDefault();document.getElementById("retour").textContent="Maquette : merci, l'envoi réel sera branché à l'étape 4."});
+
+/* ---------- verre cannelé (WebGL) ---------- */
+(function(){
+  const cv=document.getElementById("verre");const gl=cv.getContext("webgl",{alpha:true,antialias:false,premultipliedAlpha:false});
+  if(!gl){cv.style.background="radial-gradient(60% 50% at 20% 20%,#e6f0ff,transparent),radial-gradient(50% 40% at 80% 70%,#fff3dc,transparent)";return}
+  const vs=`attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}`;
+  const fs=`precision mediump float;uniform vec2 R;uniform float T;
+  float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+  float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
+  void main(){vec2 uv=gl_FragCoord.xy/R;float t=T*0.06;
+    float fl=sin(uv.x*R.x/22.0)*0.5+0.5;
+    vec2 q=uv;q.x+=(fl-0.5)*0.035;
+    float a=n(q*2.2+vec2(t*0.7,t*0.3))*0.6+n(q*5.0-vec2(t*0.4,t*0.9))*0.4;
+    vec3 blanc=vec3(1.0),bleu=vec3(0.80,0.88,1.0),sable=vec3(1.0,0.95,0.86);
+    vec3 col=mix(blanc,bleu,smoothstep(0.35,0.85,a));
+    col=mix(col,sable,smoothstep(0.75,1.0,n(q*1.4+vec2(-t*0.5,t*0.2)))*0.7);
+    col+=(fl-0.5)*0.035;
+    float vig=smoothstep(0.0,0.6,uv.y);col=mix(col,blanc,vig*0.35);
+    gl_FragColor=vec4(col,1.0);}`;
+  function sh(t,s){const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);return o}
+  const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+  const buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+  const lp=gl.getAttribLocation(pr,"p");gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
+  const uR=gl.getUniformLocation(pr,"R"),uT=gl.getUniformLocation(pr,"T");
+  function taille(){const s=0.5;cv.width=Math.floor(innerWidth*s);cv.height=Math.floor(innerHeight*s);gl.viewport(0,0,cv.width,cv.height)}
+  taille();addEventListener("resize",taille);
+  let fige=false;
+  function frame(t){gl.uniform2f(uR,cv.width,cv.height);gl.uniform1f(uT,t/1000);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);if(!immobile()&&!document.hidden){requestAnimationFrame(frame)}else{fige=true}}
+  requestAnimationFrame(frame);
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&fige&&!immobile()){fige=false;requestAnimationFrame(frame)}});
+  btn.addEventListener("click",()=>{if(!immobile()&&fige){fige=false;requestAnimationFrame(frame)}});
+})();
+</script>
+</body>
+</html>

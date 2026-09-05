@@ -1,0 +1,1709 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Galaxie 3h33 — l'annuaire de tous mes sites</title>
+<meta name="description" content="Galaxie 3h33 : annuaire personnel des sites, formations, podcasts, études et projets d'Alexandre Stopnicki et du studio 3H33." />
+<meta name="theme-color" content="#0b0b10" />
+
+<!-- Favicon (SVG inline — galaxie / spirale) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230b0b10'/><g transform='translate(32 32)' fill='none' stroke='%239d8bff' stroke-width='2.6' stroke-linecap='round'><path d='M0 0 C 6 -2 14 -6 18 -14 C 14 -22 4 -22 -4 -16'/><path d='M0 0 C -6 2 -14 6 -18 14 C -14 22 -4 22 4 16'/><path d='M0 0 C 2 6 6 14 14 18 C 22 14 22 4 16 -4'/></g><circle cx='32' cy='32' r='2.4' fill='%23ffffff'/></svg>" />
+<link rel="apple-touch-icon" href="og-image.png" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Galaxie 3h33" />
+<meta property="og:title" content="Galaxie 3h33 — l'annuaire de tous mes sites" />
+<meta property="og:description" content="Tous les sites, projets, formations et études — en un seul endroit." />
+<meta property="og:image" content="og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Galaxie 3h33 — annuaire des sites" />
+<meta property="og:locale" content="fr_FR" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Galaxie 3h33" />
+<meta name="twitter:description" content="Tous les sites, projets, formations et études — en un seul endroit." />
+<meta name="twitter:image" content="og-image.png" />
+<style>
+  /* ---------- Tokens ---------- */
+  :root{
+    --bg:#f6f5f1;          /* warm paper */
+    --bg-2:#efece4;
+    --ink:#0b0b10;
+    --ink-2:#2a2a32;
+    --muted:#6b6b78;
+    --line:#e3dfd4;
+    --line-2:#d6d1c3;
+    --card:#ffffff;
+    --accent:#5b3df5;       /* electric violet */
+    --accent-ink:#3a25c4;
+    --accent-soft:#ece7ff;
+    --chip:#f1ede2;
+    --shadow: 0 1px 0 rgba(11,11,16,.04), 0 8px 24px -12px rgba(11,11,16,.10);
+    --radius: 14px;
+    --radius-sm: 10px;
+    --maxw: 1240px;
+  }
+  html[data-theme="dark"]{
+    --bg:#0c0c11;
+    --bg-2:#121218;
+    --ink:#f7f5ef;
+    --ink-2:#e6e3da;
+    --muted:#b3b1bd;
+    --line:#2a2a36;
+    --line-2:#363644;
+    --card:#1a1a23;
+    --accent:#b9a8ff;
+    --accent-ink:#e0d6ff;
+    --accent-soft:#221f3d;
+    --chip:#23232f;
+    --shadow: 0 1px 0 rgba(0,0,0,.4), 0 12px 32px -16px rgba(0,0,0,.6);
+  }
+
+  /* ---------- Reset ---------- */
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{
+    background:var(--bg);
+    color:var(--ink);
+    font-family: ui-sans-serif, -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    font-size:16px;
+    line-height:1.45;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  body{min-height:100vh}
+  a{color:inherit}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+  ::selection{background:var(--accent);color:#fff}
+
+  /* ---------- Layout ---------- */
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  @media (max-width:560px){ .wrap{padding:0 16px} }
+
+  /* ---------- Hero / Header ---------- */
+  .topbar{
+    position:relative;
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(700px 240px at 90% -40%, color-mix(in oklab, var(--accent) 14%, transparent), transparent 60%),
+      var(--bg);
+  }
+  .topbar-inner{
+    display:flex;align-items:center;justify-content:space-between;gap:24px;
+    padding:18px 0;
+  }
+  .brand{display:flex;align-items:center;gap:12px;letter-spacing:-.01em}
+  .brand-mark{
+    width:32px;height:32px;border-radius:8px;
+    background:var(--ink);color:var(--bg);
+    display:grid;place-items:center;font-weight:700;font-size:13px;
+    letter-spacing:.02em;
+  }
+  .brand-name{font-weight:600;font-size:15px}
+  .brand-name span{color:var(--muted);font-weight:500;margin-left:6px}
+  .topbar-actions{display:flex;gap:8px;align-items:center}
+  .ghost-link{
+    color:var(--muted);font-size:13px;text-decoration:none;
+    padding:8px 12px;border-radius:8px;
+  }
+  .ghost-link:hover{color:var(--ink);background:var(--bg-2)}
+
+  .hero{padding:32px 0 24px}
+  @media (max-width:560px){ .hero{padding:24px 0 18px} }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);
+    box-shadow:0 0 0 4px color-mix(in oklab, var(--accent) 18%, transparent);
+  }
+  h1.title{
+    font-family: ui-serif, "New York", "Iowan Old Style", "Apple Garamond", Georgia, serif;
+    font-weight:500;
+    font-size: clamp(34px, 4.6vw, 52px);
+    line-height:1;
+    letter-spacing:-.02em;
+    margin:0;
+  }
+  h1.title em{font-style:italic;color:var(--accent)}
+  .lede{
+    color:var(--ink-2);font-size:17px;max-width:62ch;margin:0;
+  }
+  .lede b{color:var(--ink);font-weight:600}
+
+  .stats{
+    display:flex;gap:28px;flex-wrap:wrap;margin-top:28px;
+    color:var(--muted);font-size:13px;
+  }
+  .stats b{color:var(--ink);font-weight:600}
+  .stat-dot{width:4px;height:4px;border-radius:50%;background:var(--line-2);align-self:center}
+
+  /* ---------- Sticky toolbar ---------- */
+  .toolbar{
+    position:sticky;top:0;z-index:20;
+    background:color-mix(in oklab, var(--bg) 88%, transparent);
+    backdrop-filter:saturate(140%) blur(10px);
+    -webkit-backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid var(--line);
+    margin-top:32px;
+  }
+  .toolbar-inner{
+    display:grid;
+    grid-template-columns: 1fr auto auto;
+    gap:12px;align-items:center;
+    padding:14px 0;
+  }
+  @media (max-width:780px){
+    .toolbar-inner{grid-template-columns:1fr;gap:10px}
+  }
+
+  .search{
+    position:relative;display:flex;align-items:center;
+    background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:0 12px;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .search:focus-within{
+    border-color: color-mix(in oklab, var(--accent) 60%, var(--line));
+    box-shadow:0 0 0 4px color-mix(in oklab, var(--accent) 18%, transparent);
+  }
+  .search svg{flex:0 0 auto;color:var(--muted)}
+  .search input{
+    flex:1;border:0;outline:0;background:transparent;color:var(--ink);
+    padding:12px 10px;font-size:15px;
+  }
+  .search input::placeholder{color:var(--muted)}
+  .search kbd{
+    font:500 11px/1 ui-monospace, "SF Mono", Menlo, monospace;
+    color:var(--muted);background:var(--bg-2);border:1px solid var(--line);
+    padding:4px 6px;border-radius:6px;
+  }
+
+  .sortwrap, .viewwrap{
+    display:flex;align-items:center;gap:8px;
+    background:var(--card);border:1px solid var(--line);
+    border-radius:12px;padding:6px 8px 6px 12px;
+  }
+  .sortwrap label{font-size:12px;color:var(--muted)}
+  .sortwrap select{
+    border:0;background:transparent;color:var(--ink);
+    font:inherit;font-size:14px;padding:6px 4px;outline:0;cursor:pointer;
+  }
+
+  .viewwrap{padding:4px;gap:2px}
+  .viewbtn{
+    padding:7px 10px;border-radius:8px;color:var(--muted);
+    display:inline-flex;align-items:center;gap:6px;font-size:13px;
+  }
+  .viewbtn[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+  .viewbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  /* ---------- Filter chips ---------- */
+  .filters{
+    display:flex;flex-direction:column;gap:10px;
+    padding:14px 0 18px;border-bottom:1px solid var(--line);
+  }
+  .filter-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .filter-label{
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted);margin-right:6px;min-width:78px;
+  }
+  .chip{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:6px 10px;border-radius:999px;
+    background:var(--chip);color:var(--ink-2);
+    font-size:13px;border:1px solid transparent;
+    transition:background .12s, color .12s, border-color .12s;
+    user-select:none;
+  }
+  .chip:hover{background:color-mix(in oklab, var(--chip) 70%, var(--line-2))}
+  .chip[aria-pressed="true"]{
+    background:var(--ink);color:var(--bg);border-color:var(--ink);
+  }
+  .chip .count{
+    font-variant-numeric:tabular-nums;color:var(--muted);
+    font-size:11px;
+  }
+  .chip[aria-pressed="true"] .count{color:color-mix(in oklab, var(--bg) 70%, transparent)}
+  .chip.tag[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .chip.clear{
+    background:transparent;color:var(--muted);
+    border:1px dashed var(--line-2);
+  }
+  .chip.clear:hover{color:var(--ink);border-color:var(--ink)}
+
+  /* ---------- Results meta ---------- */
+  .results-meta{
+    display:flex;justify-content:space-between;align-items:baseline;
+    padding:22px 0 14px;color:var(--muted);font-size:13px;
+  }
+  .results-meta strong{color:var(--ink);font-weight:600}
+
+  /* ---------- Grid ---------- */
+  .grid{
+    display:grid;gap:16px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding-bottom:80px;
+  }
+  .list{
+    display:flex;flex-direction:column;gap:0;
+    padding-bottom:80px;
+    border-top:1px solid var(--line);
+  }
+
+  /* ---------- Card (grid) ---------- */
+  .card{
+    position:relative;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:18px 18px 16px;
+    display:flex;flex-direction:column;gap:10px;
+    transition: transform .18s ease, border-color .18s, box-shadow .18s;
+    overflow:hidden;
+  }
+  .card::after{
+    content:"";position:absolute;inset:0;border-radius:inherit;
+    box-shadow: inset 0 0 0 1px transparent;
+    pointer-events:none;transition:box-shadow .18s;
+  }
+  .card:hover{
+    transform:translateY(-2px);
+    border-color: color-mix(in oklab, var(--accent) 35%, var(--line));
+    box-shadow: var(--shadow);
+  }
+  .card:hover::after{
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--accent) 20%, transparent);
+  }
+  /* Vignette de tête. Même technique de débordement que .card-foot
+     (marges négatives égales au padding de .card) : aucun autre style
+     n'a besoin d'être touché, et l'arrondi vient de l'overflow:hidden
+     de la carte. */
+  .card-media{
+    margin:-18px -18px 2px;
+    aspect-ratio:8/5;
+    background:var(--bg-2);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+    position:relative;
+  }
+  .card-media img{
+    width:100%;height:100%;display:block;
+    object-fit:cover;object-position:center top;
+    transition:transform .6s cubic-bezier(.16,1,.3,1);
+  }
+  .card:hover .card-media img{transform:scale(1.04)}
+  /* Les vignettes sont des captures sur fond clair : en thème sombre,
+     un léger retrait de luminosité évite qu'elles éclatent sur la page. */
+  html[data-theme="dark"] .card-media img{filter:brightness(.9) saturate(.95)}
+  @media (prefers-reduced-motion: reduce){
+    .card-media img{transition:none}
+    .card:hover .card-media img{transform:none}
+  }
+
+  .card-head{
+    display:flex;align-items:flex-start;justify-content:space-between;gap:10px;
+  }
+  .favicon{
+    width:36px;height:36px;border-radius:9px;
+    background:var(--bg-2);border:1px solid var(--line);
+    display:grid;place-items:center;
+    color:var(--ink);flex:0 0 auto;
+    overflow:hidden;
+    position:relative;
+  }
+  .favicon img{
+    width:22px;height:22px;object-fit:contain;
+    image-rendering: -webkit-optimize-contrast;
+  }
+  .favicon .ini{
+    font-weight:700;font-size:14px;letter-spacing:-.01em;
+    color:var(--ink-2);
+  }
+  .badge{
+    font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);
+    border:1px solid var(--line);
+    padding:5px 8px;border-radius:999px;
+    white-space:nowrap;
+  }
+  .card-title{
+    font-size:17px;font-weight:600;letter-spacing:-.005em;
+    line-height:1.25;margin:2px 0 0;
+  }
+  .card-title a{
+    color:inherit;text-decoration:none;
+    background-image: linear-gradient(currentColor,currentColor);
+    background-size:0 1px;background-repeat:no-repeat;background-position:0 100%;
+    transition: background-size .25s ease;
+  }
+  .card-title a:hover{background-size:100% 1px}
+  .card-title a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+  .card-desc{
+    color:var(--muted);font-size:13.5px;line-height:1.5;
+    margin:0;
+    display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  @media (max-width:560px){ .card-desc{-webkit-line-clamp:6} }
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+  .card-tags{display:none}
+  .tagchip{
+    font-size:11.5px;color:var(--muted);
+    padding:3px 8px;border-radius:999px;
+    background:var(--bg-2);
+  }
+  .card-foot{
+    display:flex;align-items:center;justify-content:space-between;
+    border-top:1px solid var(--line);
+    margin:6px -18px -16px;padding:10px 18px 12px;
+  }
+  .url{
+    color:var(--muted);font-size:12px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:60%;
+  }
+  .iconbtn{
+    color:var(--muted);padding:6px 8px;border-radius:8px;
+    display:inline-flex;align-items:center;gap:6px;font-size:12px;
+  }
+  .iconbtn:hover{color:var(--ink);background:var(--bg-2)}
+  .iconbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .iconbtn.ok{color:#1f7a3a}
+  /* dark-mode iconbtn ok */
+  html[data-theme="dark"] .iconbtn.ok{color:#7be0a0}
+
+  /* ---------- List view ---------- */
+  .list .card{
+    border-radius:0;border-left:0;border-right:0;border-top:0;
+    padding:14px 4px;
+    flex-direction:row;align-items:center;gap:14px;
+    background:transparent;
+  }
+  .list .card:hover{transform:none;background:var(--card);border-color:var(--line)}
+  .list .card::after{display:none}
+  /* La vue liste est faite pour la densité : la vignette y ferait
+     perdre l'avantage qu'on vient y chercher. Le favicon suffit. */
+  .list .card-media{display:none}
+  .list .card-head{flex:0 0 auto}
+  .list .badge{display:none}
+  .list .card-mid{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+  .list .card-title{font-size:15.5px}
+  .list .card-desc{-webkit-line-clamp:1;font-size:13px}
+  .list .card-tags{margin:0;padding:0}
+  .list .card-foot{
+    border:0;margin:0;padding:0;flex:0 0 auto;
+    display:flex;gap:6px;
+  }
+  .list .url{display:none}
+  @media (max-width:640px){
+    .list .card-tags{display:none}
+  }
+
+  /* ---------- Empty state ---------- */
+  .empty{
+    text-align:center;padding:80px 24px;color:var(--muted);
+    border:1px dashed var(--line-2);border-radius:var(--radius);
+    margin:24px 0 80px;
+  }
+  .empty h3{margin:0 0 6px;color:var(--ink);font-weight:600;font-size:18px}
+
+  /* Le bloc « Ajouter un site au hub » et sa CSS ont été retirés le
+     06/08/2026 : ce mode d'emploi d'édition s'adressait aux mainteneurs,
+     pas aux visiteurs, et n'avait rien à faire sur une page publique.
+     Il vit désormais dans le README du dépôt, son seul bon endroit. */
+
+  /* ---------- Theme toggle ---------- */
+  .hero{position:relative}
+  .theme-btn{
+    position:absolute;top:50%;right:24px;transform:translateY(-50%);
+    width:36px;height:36px;border-radius:50%;
+    background:var(--card);border:1px solid var(--line);
+    color:var(--ink-2);
+    display:grid;place-items:center;
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .theme-btn:hover{color:var(--ink);border-color:var(--line-2)}
+  .theme-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .theme-btn .icn-moon{display:none}
+  html[data-theme="dark"] .theme-btn .icn-sun{display:none}
+  html[data-theme="dark"] .theme-btn .icn-moon{display:block}
+  @media (max-width:560px){ .theme-btn{right:16px} }
+
+  /* ---------- Sections ---------- */
+  .section{padding-bottom:32px}
+  .section-head{
+    display:flex;align-items:baseline;gap:14px;
+    padding:28px 0 14px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:16px;
+  }
+  .section-head h2{
+    font-family: ui-serif, "New York", Georgia, serif;
+    font-weight:500;font-size:22px;letter-spacing:-.01em;margin:0;
+  }
+  .section-head .count{
+    font-size:12px;color:var(--muted);
+    font-variant-numeric:tabular-nums;
+  }
+  .section-head .rule{flex:1;height:1px;background:transparent}
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--line);
+    padding:24px 0 48px;color:var(--muted);font-size:12.5px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  }
+
+  /* ---------- (hover tooltip retiré — description visible directement sur la carte) ---------- */
+
+  /* ---------- Animated background ---------- */
+  #bgfx{
+    position:fixed;inset:0;width:100%;height:100%;
+    z-index:-1;pointer-events:none;
+    opacity:0;transition:opacity .6s ease;
+  }
+  #bgfx.on{opacity:1}
+
+  /* ---------- Card stagger entry ---------- */
+  @keyframes cardIn{
+    from{opacity:0;transform:translateY(8px) scale(.985)}
+    to{opacity:1;transform:none}
+  }
+  body.fx-on .card{
+    animation: cardIn .45s cubic-bezier(.2,.7,.2,1) both;
+    animation-delay: var(--card-d, 0ms);
+  }
+  body.fx-on .card{
+    transition: transform .25s cubic-bezier(.2,.7,.2,1), border-color .2s, box-shadow .3s;
+  }
+  body.fx-on .card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px -18px rgba(124,58,237,.45),
+                0 4px 14px -8px rgba(0,0,0,.12);
+  }
+  [data-theme="dark"] body.fx-on .card:hover{
+    box-shadow: 0 14px 40px -14px rgba(167,139,250,.35),
+                0 4px 14px -8px rgba(0,0,0,.5);
+  }
+
+  /* ---------- Title glow pulse ---------- */
+  @keyframes titleGlow{
+    0%,100%{filter:drop-shadow(0 0 8px rgba(124,58,237,.10))}
+    50%   {filter:drop-shadow(0 0 18px rgba(124,58,237,.32))}
+  }
+  body.fx-on .title em{
+    animation: titleGlow 5.5s ease-in-out infinite;
+  }
+
+  /* ---------- Section header reveal ---------- */
+  @keyframes sectionIn{
+    from{opacity:0;transform:translateY(6px)}
+    to{opacity:1;transform:none}
+  }
+  body.fx-on .section-head{
+    animation: sectionIn .5s ease both;
+  }
+
+  /* ---------- Tweaks panel ---------- */
+  .tweaks-panel{
+    position:fixed;right:18px;bottom:18px;
+    width:280px;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:14px;
+    box-shadow: 0 24px 48px -16px rgba(0,0,0,.25),
+                0 4px 16px -8px rgba(0,0,0,.12);
+    padding:14px 14px 12px;
+    z-index:60;
+    font-size:13px;
+    display:none;
+  }
+  .tweaks-panel.show{display:block; animation: tweaksIn .25s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes tweaksIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .tweaks-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+  .tweaks-head strong{font-size:13px;letter-spacing:.02em}
+  .tweaks-close{
+    background:transparent;border:0;color:var(--muted);cursor:pointer;
+    padding:4px;border-radius:6px;line-height:0;
+  }
+  .tweaks-close:hover{background:var(--chip-bg);color:var(--ink)}
+  .tweaks-row{margin:10px 0}
+  .tweaks-row > label{display:block;color:var(--muted);font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+  .tweaks-radio{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+  .tweaks-radio button{
+    border:1px solid var(--border);background:var(--surface);color:var(--ink);
+    border-radius:8px;padding:7px 8px;font-size:12.5px;cursor:pointer;
+    transition:all .15s;
+  }
+  .tweaks-radio button:hover{border-color:var(--accent)}
+  .tweaks-radio button[aria-pressed="true"]{
+    background:var(--accent);color:#fff;border-color:var(--accent);
+  }
+  .tweaks-toggle{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:8px 10px;border:1px solid var(--border);border-radius:8px;
+    cursor:pointer;background:var(--surface);
+  }
+  .tweaks-toggle:hover{border-color:var(--accent)}
+  .tweaks-toggle input{accent-color:var(--accent)}
+
+  /* ---------- Dark mode legibility booster ---------- */
+  html[data-theme="dark"] .card{
+    background:rgba(26,26,35,.92);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  html[data-theme="dark"] .toolbar{
+    background:rgba(12,12,17,.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  html[data-theme="dark"] .topbar{
+    background:rgba(12,12,17,.6);
+  }
+  html[data-theme="dark"] #bgfx{ opacity:.55 }
+  html[data-theme="dark"] .card-desc{ color:var(--ink-2) }
+  html[data-theme="dark"] .chip,
+  html[data-theme="dark"] .viewbtn,
+  html[data-theme="dark"] .iconbtn{
+    background:rgba(35,35,47,.85);
+  }
+
+  /* ---------- Reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important; animation:none !important}
+  }
+</style>
+</head>
+<body>
+
+<canvas id="bgfx" aria-hidden="true"></canvas>
+
+<header class="topbar">
+  <div class="wrap hero">
+    <h1 class="title">Galaxie <em>3h33</em></h1>
+    <div style="position:absolute;top:18px;right:64px;display:flex;gap:10px;align-items:center;z-index:5">
+      <a href="charte.html" style="color:var(--muted);text-decoration:none;font-size:13.5px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);transition:all .15s" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--line)';this.style.color='var(--muted)'">Charte &amp; médias →</a>
+    </div>
+    <button id="themeBtn" class="theme-btn" type="button" aria-label="Basculer le thème" title="Thème clair / sombre">
+      <svg class="icn-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="icn-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- Toolbar -->
+<div class="toolbar" role="region" aria-label="Recherche et filtres">
+  <div class="wrap toolbar-inner">
+    <label class="search" aria-label="Rechercher un site">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" autocomplete="off" placeholder="Rechercher : nom, URL, tag, description…" />
+      <kbd>/</kbd>
+    </label>
+    <div class="sortwrap">
+      <label for="sort">Trier</label>
+      <select id="sort" aria-label="Trier les résultats">
+        <option value="relevance">Pertinence</option>
+        <option value="az">A → Z</option>
+        <option value="domain">Par domaine</option>
+        <option value="recent">Nouveautés</option>
+      </select>
+    </div>
+    <div class="viewwrap" role="group" aria-label="Mode d'affichage">
+      <button class="viewbtn" id="viewGrid" aria-pressed="true" title="Grille">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+        Grille
+      </button>
+      <button class="viewbtn" id="viewList" aria-pressed="false" title="Liste">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        Liste
+      </button>
+    </div>
+  </div>
+
+  <div class="wrap filters">
+    <div class="filter-row" id="catRow">
+      <span class="filter-label">Catégories</span>
+      <!-- chips injected -->
+    </div>
+
+  </div>
+</div>
+
+<main class="wrap" id="main">
+  <div class="results-meta">
+    <div><strong id="countShown">0</strong> résultat<span id="countS">s</span> · <span id="countCtx">tous</span></div>
+    <div id="activeFilters" aria-live="polite"></div>
+  </div>
+
+  <section id="results" class="grid" aria-label="Liste des sites"></section>
+
+</main>
+
+<footer class="wrap">
+  <div>© <span id="yr"></span> 3H33 — Annuaire personnel</div>
+  <div>Construit en HTML pur, sans tracker.</div>
+</footer>
+
+<script>
+/* ============================================================
+   Données — éditer ICI pour ajouter/modifier un site.
+   ============================================================ */
+const sites = [
+  /* ===========================================================
+     6 catégories courtes, ordre fixé côté render() :
+       1. 3H33 & Offres   2. Formations    3. IA'rtistes
+       4. Podcast         5. Réalisations  6. Études
+
+     `summary` = 1 phrase courte affichée sur la carte
+     `description` = phrase plus longue (tooltip au survol)
+     =========================================================== */
+
+  /* ----- 3H33 & Offres ----- */
+  {
+    id: "alexandrestopnicki",
+    name: "Alexandre Stopnicki",
+    url: "https://alexandrestopnicki.com/",
+    image: "images/og-sites/alexandrestopnicki.jpg",
+    category: "3H33 & Offres",
+    summary: "Site personnel d'Alexandre.",
+    description: "Site personnel d'Alexandre Stopnicki — présentation, conférences, parcours et contact pour interventions et accompagnements.",
+    tags: ["personnel", "vitrine", "conférencier"],
+    addedAt: "2024-01-15"
+  },
+  {
+    id: "3h33",
+    name: "3H33",
+    url: "https://3h33.com",
+    image: "images/og-sites/3h33.jpg",
+    category: "3H33 & Offres",
+    summary: "Le studio 3H33.",
+    description: "Site officiel du studio 3H33 — IA appliquée, conseil, projets clients et expérimentations autour de l'intelligence artificielle.",
+    tags: ["studio", "ia", "vitrine"],
+    addedAt: "2024-01-15"
+  },
+  {
+    id: "ia-magique",
+    name: "IA Magique",
+    url: "https://ia-magique.com",
+    image: "images/og-sites/ia-magique.jpg",
+    category: "3H33 & Offres",
+    summary: "L'IA pour les curieux.",
+    description: "Découverte de l'IA générative pour le grand public et les curieux — cas d'usage simples, vulgarisation et premiers pas concrets.",
+    tags: ["ia", "découverte", "grand-public"],
+    addedAt: "2024-04-01"
+  },
+  {
+    /* Manquait ici alors qu'elle était déjà en ligne dans ia-magique.com/galaxie :
+       les deux hubs sont réalignés au 06/08/2026. Texte repris de la fiche existante. */
+    id: "app-ia-locale",
+    name: "App IA Locale",
+    url: "https://ia-magique.com/app-IA-locale/",
+    image: "images/og-sites/app-ia-locale.jpg",
+    category: "3H33 & Offres",
+    summary: "Une IA qui ne quitte pas votre ordinateur.",
+    description: "Application gratuite pour faire tourner une IA conversationnelle 100 % sur votre ordinateur — sans cloud, sans inscription, sans fuite de données. Idéale pour la santé, le droit, les RH et toute donnée sensible.",
+    tags: ["ia", "local", "rgpd", "confidentialité"],
+    addedAt: "2026-08-06"
+  },
+  {
+    id: "mairie-ai",
+    name: "Mairie.ai",
+    url: "https://mairie.ai/",
+    image: "images/og-sites/mairie-ai.jpg",
+    category: "3H33 & Offres",
+    summary: "L'IA pour les collectivités.",
+    description: "L'IA au service des collectivités locales et des élus — cas d'usage, accompagnement et outils adaptés au secteur public.",
+    tags: ["ia", "secteur-public", "collectivités"],
+    addedAt: "2024-09-10"
+  },
+  {
+    id: "mon-ia-privee",
+    name: "Mon IA Privée",
+    url: "https://mon-ia-privee.com/",
+    image: "images/og-sites/mon-ia-privee.jpg",
+    category: "3H33 & Offres",
+    summary: "IA souveraine et locale.",
+    description: "Solutions d'IA souveraines et locales pour les entreprises soucieuses de leurs données — déploiement on-premise et confidentialité.",
+    tags: ["ia", "souveraineté", "données"],
+    addedAt: "2024-11-05"
+  },
+  {
+    id: "iatalent-net",
+    name: "IA Talent",
+    url: "https://iatalent.net/",
+    image: "images/og-sites/iatalent.jpg",
+    category: "3H33 & Offres",
+    summary: "Acculturer les équipes à l'IA.",
+    description: "Accompagnement des talents et des organisations vers l'IA opérationnelle — acculturation, ateliers et programmes sur mesure.",
+    tags: ["ia", "formation", "entreprise"],
+    addedAt: "2024-06-12"
+  },
+  {
+    id: "sparringvox",
+    name: "SparringVox",
+    url: "https://sparringvox.com/",
+    image: "images/og-sites/sparringvox.jpg",
+    category: "3H33 & Offres",
+    summary: "Famille de simulateurs vocaux IA.",
+    description: "Famille de simulateurs vocaux IA pour préparer les prises de parole sous pression — vente, politique, scène, formation. Marque ombrelle de NegoVox, PolitikVox, ActorVox et LearnVox.",
+    tags: ["ia", "voix", "simulateur"],
+    addedAt: "2026-05-17"
+  },
+  {
+    id: "negovox",
+    name: "NegoVox",
+    url: "https://negovox.com/",
+    image: "images/og-sites/negovox.jpg",
+    category: "3H33 & Offres",
+    summary: "Sparring vocal pour la vente.",
+    description: "Simulateur vocal IA dédié à la vente et à la négociation — cold-call, découverte, traitement d'objections, closing. Verticale commerciale de SparringVox.",
+    tags: ["ia", "voix", "vente", "négociation"],
+    addedAt: "2026-05-17"
+  },
+  {
+    id: "politikvox",
+    name: "PolitikVox",
+    url: "https://politikvox.com/",
+    image: "images/og-sites/politikvox.jpg",
+    category: "3H33 & Offres",
+    summary: "Sparring vocal pour la parole publique.",
+    description: "Simulateur vocal IA pour préparer débats, interviews, réunions publiques et gestion de crise — élus, candidats, cabinets de communication. Verticale politique de SparringVox.",
+    tags: ["ia", "voix", "politique", "média-training"],
+    addedAt: "2026-05-17"
+  },
+  {
+    id: "actorvox",
+    name: "ActorVox",
+    url: "https://actorvox.com/",
+    image: "images/og-sites/actorvox.jpg",
+    category: "3H33 & Offres",
+    summary: "Partenaire de scène IA pour comédiens.",
+    description: "Simulateur vocal IA pour comédiens, conservatoires et écoles d'art dramatique — répétition, improvisation, mémorisation et préparation d'auditions avec Léa. Verticale arts vivants de SparringVox.",
+    tags: ["ia", "voix", "théâtre", "comédien"],
+    addedAt: "2026-05-17"
+  },
+  {
+    /* Renommé le 06/08/2026 : AmourTop devient chapitre.ai. Le périmètre
+       s'élargit du couple à toute vie racontée — texte aligné sur la fiche
+       déjà en ligne dans ia-magique.com/galaxie. amourtop.com reste servi
+       par le même conteneur, mais chapitre.ai est le nom porté. */
+    id: "chapitre-ai",
+    name: "chapitre.ai",
+    url: "https://chapitre.ai/",
+    image: "images/og-sites/chapitre-ai.jpg",
+    category: "3H33 & Offres",
+    summary: "Chaque vie mérite son livre.",
+    description: "Une IA-biographe vous interviewe à la voix ou par chat, recueille votre histoire et l'écrit comme un biographe — pour en faire un livre, une BD, une chanson ou un film. Amour, aventure, héritage, héros, hommage. Privé par défaut, hébergé en France, RGPD.",
+    tags: ["ia", "biographe", "récit", "mémoire"],
+    addedAt: "2026-05-17"
+  },
+
+  /* ----- Formations ----- */
+  {
+    id: "formation-ia-talent",
+    name: "Formation IA Talent",
+    url: "https://formation.ia-talent.fr/",
+    image: "images/og-sites/formation-iatalent.jpg",
+    category: "Formations",
+    summary: "Catalogue de formations IA.",
+    description: "Catalogue complet de formations IA pour professionnels — parcours certifiants, modules courts et accompagnements en entreprise.",
+    tags: ["formation", "ia", "pro"],
+    addedAt: "2024-07-01"
+  },
+  {
+    id: "mini-masterclass",
+    name: "Mini-Masterclass offerte",
+    url: "https://go.iatalent.org/mini-masterclass-offerte-page",
+    image: "images/og-sites/mini-masterclass.jpg",
+    category: "Formations",
+    summary: "Masterclass gratuite.",
+    description: "Masterclass offerte pour faire ses premiers pas concrets avec l'IA générative — sans prérequis, format court et 100 % en ligne.",
+    tags: ["formation", "masterclass", "gratuit"],
+    addedAt: "2025-02-10"
+  },
+  {
+    id: "manager-ia-talent",
+    name: "Manager IA Talent",
+    url: "https://manager.ia-talent.com/",
+    image: "images/og-sites/manager-iatalent.jpg",
+    category: "Formations",
+    summary: "L'IA pour managers.",
+    description: "Programme dédié aux managers : piloter une équipe à l'ère de l'IA — enjeux, méthodes et postures pour transformer son organisation.",
+    tags: ["formation", "manager", "leadership"],
+    addedAt: "2025-03-20"
+  },
+  {
+    id: "3h33-forge",
+    name: "La Forge 3H33",
+    url: "https://3h33.com/forge/",
+    image: "images/og-sites/forge-3h33.jpg",
+    category: "Formations",
+    summary: "Atelier prototypage IA.",
+    description: "Atelier de production : prototyper et livrer de vrais projets IA — cadrage, conception, build et mise en production en équipe.",
+    tags: ["atelier", "prototypage", "ia"],
+    addedAt: "2025-04-05"
+  },
+  {
+    id: "formation-claude",
+    name: "Formation Claude",
+    url: "https://3h33.com/formation-claude/",
+    image: "images/og-sites/formation-claude.jpg",
+    category: "Formations",
+    summary: "Maîtriser Claude.",
+    description: "Maîtriser Claude (Anthropic) de A à Z — prompts, projets, automatisations et bonnes pratiques pour en tirer le meilleur au quotidien.",
+    tags: ["formation", "claude", "ia"],
+    addedAt: "2025-09-01"
+  },
+
+  /* ----- IA'rtistes ----- */
+  {
+    id: "alexandre-ai",
+    name: "Alexandre.ai",
+    url: "https://alexandre.ai",
+    image: "images/og-sites/alexandre-ai.jpg",
+    category: "IA'rtistes",
+    summary: "Espace créatif d'Alexandre.",
+    description: "Espace créatif d'Alexandre — explorations artistiques avec l'IA, images et expérimentations visuelles autour des modèles génératifs.",
+    tags: ["art", "ia", "création"],
+    addedAt: "2024-10-15"
+  },
+  {
+    id: "alexandre-ai-videos",
+    name: "Alexandre.ai · Vidéos",
+    url: "https://alexandre.ai/videos/",
+    image: "images/og-sites/alexandre-ai-videos.jpg",
+    category: "IA'rtistes",
+    summary: "Galerie de vidéos IA.",
+    description: "Galerie de vidéos générées et d'expérimentations visuelles — narrations courtes, tests de modèles et pièces cinématographiques.",
+    tags: ["vidéo", "ia", "art"],
+    addedAt: "2024-10-15"
+  },
+  {
+    id: "alexandre-photos",
+    name: "Alexandre.photos",
+    url: "https://alexandre.photos/",
+    image: "images/og-sites/alexandre-photos.jpg",
+    category: "IA'rtistes",
+    summary: "Photographies & images.",
+    description: "Galerie photographique d'Alexandre — images, séries visuelles et explorations à la frontière du réel et du génératif.",
+    tags: ["photo", "ia", "art"],
+    addedAt: "2026-05-01"
+  },
+  {
+    id: "raconteur",
+    name: "Le Raconteur",
+    url: "https://histoires.alexandre.ai/",
+    image: "images/og-sites/histoires-alexandre.jpg",
+    category: "IA'rtistes",
+    summary: "Les objets racontent leurs histoires.",
+    description: "Galerie narrative où chaque objet — un billet de 10 francs, un téléphone à cadran, un bocal de boutons — devient le point de départ d'un récit illustré, écrit et mis en images avec l'IA.",
+    tags: ["ia", "récit", "objets", "galerie"],
+    addedAt: "2026-08-06"
+  },
+
+  /* ----- Podcast ----- */
+  {
+    id: "choucroute-citron",
+    name: "Choucroute & Citron",
+    url: "https://choucroute-citron.com/",
+    image: "images/og-sites/choucroute-citron.jpg",
+    category: "Podcast",
+    summary: "Conversations croisées.",
+    description: "Podcast — conversations entre deux cultures, regards croisés sur la société, l'innovation et le quotidien franco-allemand.",
+    tags: ["podcast", "conversation"],
+    addedAt: "2024-05-20"
+  },
+  {
+    id: "voix-de-lia",
+    name: "Voix de l'IA",
+    url: "https://3h33.com/podcast-voix-de-lia/",
+    image: "images/og-sites/voix-de-lia.jpg",
+    category: "Podcast",
+    summary: "Celles & ceux qui font l'IA.",
+    description: "Podcast 3H33 — celles et ceux qui font l'IA en France : entrepreneurs, chercheurs, artistes et praticiens partagent leurs pratiques.",
+    tags: ["podcast", "ia", "interview"],
+    addedAt: "2024-12-01"
+  },
+
+  /* ----- Réalisations ----- */
+  {
+    id: "ia-conforme",
+    name: "IA Conforme",
+    url: "https://ia-conforme.com/",
+    image: "images/og-sites/ia-conforme.jpg",
+    category: "Réalisations",
+    summary: "AI Act & conformité.",
+    description: "Conformité, AI Act et bonnes pratiques pour déployer l'IA sereinement — cadre légal, méthodologie et outils opérationnels.",
+    tags: ["ia", "conformité", "ai-act"],
+    addedAt: "2025-01-12"
+  },
+  {
+    id: "prompts-3h33",
+    name: "Prompts 3H33",
+    url: "https://prompts.3h33.org/",
+    image: "images/og-sites/prompts-3h33.jpg",
+    category: "Réalisations",
+    summary: "Bibliothèque de prompts.",
+    description: "Bibliothèque de prompts utiles, classés par usage et par modèle — ressources prêtes à copier-coller pour gagner du temps.",
+    tags: ["prompts", "ia", "ressources"],
+    addedAt: "2025-05-08"
+  },
+  {
+    id: "science-marine",
+    name: "Science Marine",
+    url: "https://science-marine.com/",
+    image: "images/og-sites/science-marine.jpg",
+    category: "Réalisations",
+    summary: "Vulgariser l'océan.",
+    description: "Site dédié à la science marine — vulgarisation, ressources pédagogiques et contenus autour des océans et de la biodiversité.",
+    tags: ["science", "océan", "vulgarisation"],
+    addedAt: "2025-06-15"
+  },
+  {
+    id: "botmoileqi",
+    name: "BotMoiLeQi",
+    url: "https://botmoileqi.com",
+    image: "images/og-sites/botmoileqi.jpg",
+    category: "Réalisations",
+    summary: "Bots conversationnels sur mesure.",
+    description: "Projet web ludique — agents conversationnels sur mesure, expérimentations autour des personnages-bots et de l'écriture interactive.",
+    tags: ["bot", "ia", "ludique"],
+    addedAt: "2025-07-20"
+  },
+  {
+    id: "surprend",
+    name: "Surprend.fr",
+    url: "https://surprend.fr/",
+    image: "images/og-sites/surprend.jpg",
+    category: "Réalisations",
+    summary: "Idées pour surprendre.",
+    description: "Idées et expériences pour surprendre vos proches — site public, simple et joyeux, pour offrir des moments inattendus.",
+    tags: ["expérience", "vitrine"],
+    addedAt: "2025-08-10"
+  },
+  {
+    id: "canta-dream",
+    name: "Canta Dream",
+    url: "https://canta-dream.com/",
+    image: "images/og-sites/canta-dream.jpg",
+    category: "Réalisations",
+    summary: "Projet musical & créatif.",
+    description: "Projet musical et créatif réalisé par 3H33 — mélange de voix, d'ambiances et d'IA pour créer des paysages sonores nouveaux.",
+    tags: ["musique", "création"],
+    addedAt: "2025-09-25"
+  },
+  {
+    id: "verif-nom",
+    name: "verif-nom",
+    url: "https://3h33.com/verif-nom/",
+    image: "images/og-sites/verif-nom.jpg",
+    category: "Réalisations",
+    summary: "Vérifie un nom en 3 secondes.",
+    description: "Outil 360° pour vérifier la disponibilité d'un nom : domaine (RDAP multi-TLD), marque (INPI, USPTO, EUIPO, WIPO), brevet, RNE, GitHub, npm, PyPI, Wikipedia. 14 bases en parallèle, gratuit, sans inscription.",
+    tags: ["outil", "naming", "gratuit"],
+    addedAt: "2026-05-17"
+  },
+  {
+    /* On lie la vitrine publique, jamais l'application elle-même. */
+    id: "listen-engine",
+    name: "ListenEngine",
+    url: "https://listen-engine.com/",
+    image: "images/og-sites/listen-engine.jpg",
+    category: "Réalisations",
+    summary: "Écoutez tout. Gardez l'essentiel. Créez mieux.",
+    description: "Moteur de veille : collecte de newsletters, flux RSS et pages web, tri des signaux utiles, mise en relation des idées et production de livrables sourcés. Chaque synthèse conserve sa source, ses extraits, ses thèmes et son niveau de confiance.",
+    tags: ["veille", "ia", "rss", "connaissance"],
+    addedAt: "2026-08-06"
+  },
+
+  /* ----- Études ----- */
+  {
+    id: "carto-ia",
+    name: "Cartographie mondiale des usages de l'IA",
+    url: "https://3h33.com/cartographie-mondiale-des-usages-de-l-ia/",
+    image: "images/og-sites/cartographie.jpg",
+    category: "Études",
+    summary: "Comment le monde utilise l'IA.",
+    description: "Étude visuelle : comment le monde utilise réellement l'IA générative — cartographie des usages par pays, secteurs et profils.",
+    tags: ["étude", "ia", "cartographie"],
+    addedAt: "2025-10-12"
+  },
+  {
+    id: "micro-dramas",
+    name: "Micro-Dramas",
+    url: "https://micro-dramas.fr/",
+    image: "images/og-sites/micro-dramas.jpg",
+    category: "Études",
+    summary: "L'économie des micro-dramas.",
+    description: "Décryptage du phénomène des micro-dramas et de leur économie — codes narratifs, plateformes, modèles et opportunités.",
+    tags: ["étude", "média", "format-court"],
+    addedAt: "2025-11-04"
+  },
+  {
+    id: "cobrandz",
+    name: "Cobrandz",
+    url: "https://3h33.com/cobrandz/",
+    image: "images/og-sites/cobrandz.jpg",
+    category: "Études",
+    summary: "Co-branding à l'ère IA.",
+    description: "Exploration des collaborations de marques à l'ère générative — patterns, cas emblématiques et nouvelles formes de co-création.",
+    tags: ["marque", "étude", "co-branding"],
+    addedAt: "2026-01-22"
+  }
+];
+
+/* ============================================================
+   App
+   ============================================================ */
+/* Custom hover tooltip for longer descriptions */
+let __tip;
+function ensureTip(){
+  if(__tip) return __tip;
+  __tip = document.createElement("div");
+  __tip.className = "hover-tip";
+  document.body.appendChild(__tip);
+  return __tip;
+}
+document.addEventListener("mouseover", (e) => {
+  const card = e.target.closest && e.target.closest(".card");
+  if(!card) return;
+  const id = card.dataset.id;
+  const s = sites.find(x => x.id === id);
+  if(!s || !s.description) return;
+  const tip = ensureTip();
+  tip.textContent = s.description;
+  tip.classList.add("show");
+  const r = card.getBoundingClientRect();
+  const top = window.scrollY + r.bottom + 8;
+  let left = window.scrollX + r.left;
+  // keep tip within viewport
+  const maxLeft = window.scrollX + window.innerWidth - 360 - 16;
+  if(left > maxLeft) left = maxLeft;
+  tip.style.top = top + "px";
+  tip.style.left = left + "px";
+});
+document.addEventListener("mouseout", (e) => {
+  if(!__tip) return;
+  const card = e.target.closest && e.target.closest(".card");
+  if(card && !card.contains(e.relatedTarget)) __tip.classList.remove("show");
+});
+
+const $  = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+
+const state = {
+  q: "",
+  cats: new Set(),
+  sort: "relevance",
+  view: "grid",
+};
+
+/* ---- helpers ---- */
+function domainOf(url){
+  try { return new URL(url).hostname.replace(/^www\./,""); }
+  catch { return url; }
+}
+function initialsFor(name){
+  const clean = name.replace(/[^\p{L}\p{N}\s]/gu, " ").trim();
+  const parts = clean.split(/\s+/);
+  if(parts.length === 1) return parts[0].slice(0,2).toUpperCase();
+  return (parts[0][0] + parts[1][0]).toUpperCase();
+}
+function toneFor(s){
+  let h = 0;
+  for (let i=0;i<s.length;i++) h = (h*31 + s.charCodeAt(i)) >>> 0;
+  return (h % 7) + 1;
+}
+function escapeHTML(s){
+  return s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+/* ---- score / search ---- */
+function scoreFor(site, q){
+  if(!q) return 0;
+  const ql = q.toLowerCase();
+  const fields = [
+    [site.name, 6],
+    [site.category, 2],
+    [site.description, 2],
+    [site.url, 1.5],
+    [(site.tags||[]).join(" "), 3],
+  ];
+  let score = 0;
+  for (const [val, w] of fields){
+    if(!val) continue;
+    const v = String(val).toLowerCase();
+    if(v === ql) score += 10*w;
+    else if(v.startsWith(ql)) score += 4*w;
+    else if(v.includes(ql)) score += 2*w;
+    // word boundary bonus
+    if (new RegExp(`\\b${ql.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}`).test(v)) score += 0.5*w;
+  }
+  return score;
+}
+
+function matches(site){
+  // category filter
+  if(state.cats.size && !state.cats.has(site.category)) return false;
+  // search
+  if(state.q){
+    const ql = state.q.toLowerCase();
+    const hay = [site.name, site.url, site.category, site.description, (site.tags||[]).join(" ")].join(" ").toLowerCase();
+    if(!hay.includes(ql)) return false;
+  }
+  return true;
+}
+
+/* ---- render filters ---- */
+function renderFilters(){
+  // categories
+  const cats = {};
+  for (const s of sites){
+    cats[s.category] = (cats[s.category]||0)+1;
+  }
+
+  const catRow = $("#catRow");
+
+  // clear existing chips (keep label)
+  $$(".chip", catRow).forEach(n => n.remove());
+
+  // "Tous" chip for category
+  const allChip = document.createElement("button");
+  allChip.className = "chip";
+  allChip.type = "button";
+  allChip.setAttribute("aria-pressed", state.cats.size === 0 ? "true" : "false");
+  allChip.innerHTML = `Toutes <span class="count">${sites.length}</span>`;
+  allChip.addEventListener("click", () => {
+    state.cats.clear();
+    render();
+  });
+  catRow.appendChild(allChip);
+
+  Object.entries(cats).sort((a,b)=>b[1]-a[1]).forEach(([cat,n]) => {
+    const c = document.createElement("button");
+    c.className = "chip cat";
+    c.type = "button";
+    c.setAttribute("aria-pressed", state.cats.has(cat) ? "true" : "false");
+    c.innerHTML = `${escapeHTML(cat)} <span class="count">${n}</span>`;
+    c.addEventListener("click", () => {
+      if(state.cats.has(cat)) state.cats.delete(cat);
+      else state.cats.add(cat);
+      render();
+    });
+    catRow.appendChild(c);
+  });
+
+  if(state.cats.size || state.q){
+    const clr = document.createElement("button");
+    clr.className = "chip clear";
+    clr.type = "button";
+    clr.textContent = "× Tout effacer";
+    clr.addEventListener("click", () => {
+      state.cats.clear(); state.q = "";
+      $("#q").value = "";
+      render();
+    });
+    catRow.appendChild(clr);
+  }
+}
+
+/* ---- render results ---- */
+function compareSites(a, b){
+  if(state.sort === "az") return a.name.localeCompare(b.name, "fr");
+  if(state.sort === "domain"){
+    const da = domainOf(a.url), db = domainOf(b.url);
+    return da.localeCompare(db) || a.name.localeCompare(b.name);
+  }
+  if(state.sort === "recent"){
+    return (b.addedAt||"").localeCompare(a.addedAt||"");
+  }
+  // relevance
+  if(state.q){
+    return scoreFor(b, state.q) - scoreFor(a, state.q);
+  }
+  // default: keep authoring order (category groups stay readable)
+  return 0;
+}
+
+function siteCard(s){
+  const dom = domainOf(s.url);
+  const ini = initialsFor(s.name);
+  const fav = `https://www.google.com/s2/favicons?sz=64&domain=${encodeURIComponent(dom)}`;
+  /* Si la vignette manque ou tombe, on retire le bloc entier plutôt que
+     de laisser une image cassée : la carte retrouve exactement son
+     ancienne apparence, sans trou. */
+  const media = s.image ? `
+      <div class="card-media">
+        <img src="${escapeHTML(s.image)}" alt="" loading="lazy" decoding="async"
+             onerror="this.closest('.card-media')?.remove()" />
+      </div>` : "";
+  return `
+    <article class="card" data-id="${s.id}">${media}
+      <div class="card-head">
+        <div class="favicon" aria-hidden="true">
+          <img src="${fav}" alt="" width="22" height="22" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ini',textContent:'${escapeHTML(ini)}'}))" />
+        </div>
+        <span class="badge">${escapeHTML(s.category)}</span>
+      </div>
+      <div class="card-mid">
+        <h3 class="card-title"><a href="${escapeHTML(s.url)}" target="_blank" rel="noopener">${escapeHTML(s.name)}</a></h3>
+        <p class="card-desc">${escapeHTML(s.description||s.summary||"")}</p>
+      </div>
+      <div class="card-foot">
+        <span class="url" title="${escapeHTML(s.url)}">${escapeHTML(dom)}</span>
+        <span style="display:flex;gap:2px">
+          <button class="iconbtn" data-act="copy" data-url="${escapeHTML(s.url)}" aria-label="Copier l'URL">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            Copier
+          </button>
+          <a class="iconbtn" href="${escapeHTML(s.url)}" target="_blank" rel="noopener" aria-label="Ouvrir le site">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            Ouvrir
+          </a>
+        </span>
+      </div>
+    </article>
+  `;
+}
+
+function render(){
+  // filters first (counts may need refresh in future)
+  renderFilters();
+
+  const filtered = sites.filter(matches).slice().sort(compareSites);
+
+  const root = $("#results");
+  // sections only in grid view, when not searching/sorting (sort=relevance & no q)
+  const useSections = state.view === "grid" && !state.q && state.sort === "relevance";
+  root.className = useSections ? "sections" : (state.view === "grid" ? "grid" : "list");
+
+  if(filtered.length === 0){
+    root.innerHTML = `
+      <div class="empty" style="grid-column:1/-1">
+        <h3>Aucun résultat</h3>
+        <div>Essayez d'élargir la recherche ou retirez un filtre.</div>
+      </div>`;
+  } else if(useSections){
+    // fixed category order
+    const CAT_ORDER = ["3H33 & Offres", "Formations", "IA'rtistes", "Podcast", "Réalisations", "Études"];
+    const groups = {};
+    for(const s of filtered){
+      (groups[s.category] = groups[s.category] || []).push(s);
+    }
+    const order = CAT_ORDER.filter(c => groups[c]);
+    // append any unknown categories at the end
+    for(const c of Object.keys(groups)) if(!order.includes(c)) order.push(c);
+    root.innerHTML = order.map(cat => `
+      <section class="section">
+        <div class="section-head">
+          <h2>${escapeHTML(cat)}</h2>
+          <span class="count">${groups[cat].length} site${groups[cat].length>1?"s":""}</span>
+          <span class="rule"></span>
+        </div>
+        <div class="grid">
+          ${groups[cat].map(siteCard).join("")}
+        </div>
+      </section>
+    `).join("");
+  } else {
+    root.innerHTML = filtered.map(siteCard).join("");
+  }
+
+  // counts
+  $("#countShown").textContent = filtered.length;
+  $("#countS").textContent = filtered.length > 1 ? "s" : "";
+  const ctxParts = [];
+  if(state.q) ctxParts.push(`pour « ${state.q} »`);
+  if(state.cats.size) ctxParts.push(`${state.cats.size} catégorie${state.cats.size>1?"s":""}`);
+  $("#countCtx").textContent = ctxParts.length ? ctxParts.join(" · ") : "tous";
+
+  // active filter summary
+  $("#activeFilters").innerHTML = "";
+}
+
+/* ---- copy interaction (with fallback for file:// and non-secure contexts) ---- */
+function copyText(text){
+  if(navigator.clipboard && window.isSecureContext){
+    return navigator.clipboard.writeText(text);
+  }
+  return new Promise((resolve, reject) => {
+    try{
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.setAttribute("readonly","");
+      ta.style.position = "fixed";
+      ta.style.top = "-1000px";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      const ok = document.execCommand("copy");
+      document.body.removeChild(ta);
+      ok ? resolve() : reject(new Error("execCommand failed"));
+    }catch(err){ reject(err); }
+  });
+}
+
+document.addEventListener("click", async (e) => {
+  const btn = e.target.closest("[data-act='copy']");
+  if(!btn) return;
+  e.preventDefault();
+  const url = btn.dataset.url;
+  const old = btn.innerHTML;
+  try{
+    await copyText(url);
+    btn.classList.add("ok");
+    btn.innerHTML = `
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg>
+      Copié !`;
+    setTimeout(() => { btn.classList.remove("ok"); btn.innerHTML = old; }, 1400);
+  } catch(err){
+    console.warn("Copy failed:", err);
+    btn.innerHTML = `<span style="font-size:11px">⚠ Échec — copiez à la main</span>`;
+    setTimeout(() => { btn.innerHTML = old; }, 2000);
+  }
+});
+
+/* ---- bind controls ---- */
+$("#q").addEventListener("input", (e) => {
+  state.q = e.target.value.trim();
+  render();
+});
+$("#sort").addEventListener("change", (e) => {
+  state.sort = e.target.value;
+  render();
+});
+$("#viewGrid").addEventListener("click", () => {
+  state.view = "grid";
+  $("#viewGrid").setAttribute("aria-pressed","true");
+  $("#viewList").setAttribute("aria-pressed","false");
+  render();
+});
+$("#viewList").addEventListener("click", () => {
+  state.view = "list";
+  $("#viewGrid").setAttribute("aria-pressed","false");
+  $("#viewList").setAttribute("aria-pressed","true");
+  render();
+});
+
+/* ---- theme toggle ---- */
+const THEME_KEY = "galaxie-theme";
+function applyTheme(t){
+  document.documentElement.setAttribute("data-theme", t);
+  localStorage.setItem(THEME_KEY, t);
+}
+(function initTheme(){
+  const stored = localStorage.getItem(THEME_KEY);
+  const sys = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  applyTheme(stored || sys);
+})();
+$("#themeBtn").addEventListener("click", () => {
+  const cur = document.documentElement.getAttribute("data-theme");
+  applyTheme(cur === "dark" ? "light" : "dark");
+});
+
+/* keyboard: "/" focuses search */
+document.addEventListener("keydown", (e) => {
+  if(e.key === "/" && document.activeElement !== $("#q")){
+    e.preventDefault();
+    $("#q").focus();
+    $("#q").select();
+  }
+  if(e.key === "Escape" && document.activeElement === $("#q")){
+    $("#q").value = ""; state.q = ""; render();
+  }
+});
+
+/* ---- init ---- */
+$("#yr").textContent = new Date().getFullYear();
+
+render();
+
+/* ============================================================
+   Tweaks state (EDITMODE-persistable defaults)
+   ============================================================ */
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "ambiance": "galaxie",
+  "intensity": "subtil",
+  "animations": true
+}/*EDITMODE-END*/;
+
+const tweaks = { ...TWEAK_DEFAULTS };
+const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const IS_MOBILE = window.matchMedia("(max-width: 720px)").matches;
+if(REDUCED){ tweaks.animations = false; }
+if(IS_MOBILE && tweaks.ambiance !== "none"){ tweaks.ambiance = "aurora"; }
+
+/* ---------- Card stagger + body class ---------- */
+function applyAnimations(){
+  document.body.classList.toggle("fx-on", !!tweaks.animations);
+  if(tweaks.animations){
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((c, i) => { c.style.setProperty("--card-d", Math.min(i, 24) * 28 + "ms"); });
+  } else {
+    document.querySelectorAll(".card").forEach(c => c.style.removeProperty("--card-d"));
+  }
+}
+applyAnimations();
+// Re-stagger whenever cards re-render (instead of patching render fn)
+const cardsHost = document.querySelector("#results") || document.body;
+new MutationObserver(() => applyAnimations()).observe(cardsHost, { childList: true, subtree: true });
+
+/* ============================================================
+   Background ambiances (Canvas)
+   ============================================================ */
+const bgfx = document.getElementById("bgfx");
+const bgctx = bgfx.getContext("2d", { alpha: true });
+let bgRAF = 0, bgScene = null;
+
+function sizeCanvas(){
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  bgfx.width  = window.innerWidth  * dpr;
+  bgfx.height = window.innerHeight * dpr;
+  bgctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+window.addEventListener("resize", () => { sizeCanvas(); });
+sizeCanvas();
+
+const INTENSITY_MULT = { subtil: .55, moyen: 1, "marqué": 1.6 };
+
+function makeGalaxie(){
+  const W = () => window.innerWidth, H = () => window.innerHeight;
+  const k = INTENSITY_MULT[tweaks.intensity] || 1;
+  const N = Math.floor(70 * k);
+  const parts = Array.from({length: N}, () => {
+    const r = Math.random() * Math.min(W(), H()) * 0.55 + 40;
+    const a = Math.random() * Math.PI * 2;
+    return {
+      r, a,
+      speed: (0.0003 + Math.random() * 0.0008) * (Math.random() < .5 ? 1 : -1),
+      size: Math.random() * 1.8 + 0.4,
+      hue: 260 + Math.random() * 30,
+      alpha: Math.random() * 0.5 + 0.15
+    };
+  });
+  return {
+    step(){
+      const cx = W()/2, cy = H()/2;
+      bgctx.clearRect(0, 0, W(), H());
+      for(const p of parts){
+        p.a += p.speed;
+        const x = cx + Math.cos(p.a) * p.r;
+        const y = cy + Math.sin(p.a) * p.r * 0.55;
+        bgctx.beginPath();
+        bgctx.arc(x, y, p.size, 0, Math.PI * 2);
+        bgctx.fillStyle = `hsla(${p.hue}, 70%, 65%, ${p.alpha})`;
+        bgctx.shadowColor = `hsla(${p.hue}, 80%, 65%, .6)`;
+        bgctx.shadowBlur = 8;
+        bgctx.fill();
+      }
+      bgctx.shadowBlur = 0;
+    }
+  };
+}
+
+function makeConstellations(){
+  const W = () => window.innerWidth, H = () => window.innerHeight;
+  const k = INTENSITY_MULT[tweaks.intensity] || 1;
+  const N = Math.floor(60 * k);
+  const pts = Array.from({length: N}, () => ({
+    x: Math.random() * W(), y: Math.random() * H(),
+    vx: (Math.random() - .5) * .25, vy: (Math.random() - .5) * .25
+  }));
+  const mouse = { x: -9999, y: -9999 };
+  const onMove = (e) => { mouse.x = e.clientX; mouse.y = e.clientY; };
+  window.addEventListener("mousemove", onMove, { passive: true });
+  const LINK = 130;
+  return {
+    step(){
+      bgctx.clearRect(0, 0, W(), H());
+      for(const p of pts){
+        p.x += p.vx; p.y += p.vy;
+        if(p.x < 0 || p.x > W()) p.vx *= -1;
+        if(p.y < 0 || p.y > H()) p.vy *= -1;
+        bgctx.beginPath();
+        bgctx.arc(p.x, p.y, 1.4, 0, Math.PI * 2);
+        bgctx.fillStyle = "rgba(124,58,237,.55)";
+        bgctx.fill();
+      }
+      for(let i = 0; i < pts.length; i++){
+        for(let j = i+1; j < pts.length; j++){
+          const a = pts[i], b = pts[j];
+          const dx = a.x - b.x, dy = a.y - b.y;
+          const d2 = dx*dx + dy*dy;
+          if(d2 < LINK*LINK){
+            const o = (1 - Math.sqrt(d2)/LINK) * .25;
+            bgctx.strokeStyle = `rgba(124,58,237,${o})`;
+            bgctx.lineWidth = 1;
+            bgctx.beginPath(); bgctx.moveTo(a.x, a.y); bgctx.lineTo(b.x, b.y); bgctx.stroke();
+          }
+        }
+        const dx = pts[i].x - mouse.x, dy = pts[i].y - mouse.y;
+        const d2 = dx*dx + dy*dy;
+        if(d2 < (LINK*1.4)*(LINK*1.4)){
+          const o = (1 - Math.sqrt(d2)/(LINK*1.4)) * .55;
+          bgctx.strokeStyle = `rgba(167,139,250,${o})`;
+          bgctx.lineWidth = 1;
+          bgctx.beginPath(); bgctx.moveTo(pts[i].x, pts[i].y); bgctx.lineTo(mouse.x, mouse.y); bgctx.stroke();
+        }
+      }
+    },
+    cleanup(){ window.removeEventListener("mousemove", onMove); }
+  };
+}
+
+function makeAurora(){
+  const W = () => window.innerWidth, H = () => window.innerHeight;
+  const k = INTENSITY_MULT[tweaks.intensity] || 1;
+  const blobs = [
+    { cx: .25, cy: .30, r: .55, hue: 270, a: 0.18 * k, speed: .00025 },
+    { cx: .75, cy: .55, r: .60, hue: 240, a: 0.16 * k, speed: .00018 },
+    { cx: .50, cy: .85, r: .50, hue: 290, a: 0.14 * k, speed: .00030 }
+  ];
+  let t = 0;
+  return {
+    step(){
+      t += 1;
+      bgctx.clearRect(0, 0, W(), H());
+      bgctx.globalCompositeOperation = "lighter";
+      for(const b of blobs){
+        const ph = t * b.speed;
+        const x = (b.cx + Math.sin(ph) * .12) * W();
+        const y = (b.cy + Math.cos(ph * 1.3) * .10) * H();
+        const r = b.r * Math.min(W(), H()) * (.9 + Math.sin(ph*2) * .08);
+        const g = bgctx.createRadialGradient(x, y, 0, x, y, r);
+        g.addColorStop(0, `hsla(${b.hue}, 80%, 60%, ${b.a})`);
+        g.addColorStop(1, `hsla(${b.hue}, 80%, 60%, 0)`);
+        bgctx.fillStyle = g;
+        bgctx.fillRect(0, 0, W(), H());
+      }
+      bgctx.globalCompositeOperation = "source-over";
+    }
+  };
+}
+
+function stopBg(){
+  cancelAnimationFrame(bgRAF);
+  bgRAF = 0;
+  if(bgScene && bgScene.cleanup) bgScene.cleanup();
+  bgScene = null;
+  bgctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+  bgfx.classList.remove("on");
+}
+
+function startBg(){
+  stopBg();
+  if(!tweaks.animations || tweaks.ambiance === "none"){ return; }
+  if(tweaks.ambiance === "galaxie")              bgScene = makeGalaxie();
+  else if(tweaks.ambiance === "constellations")  bgScene = makeConstellations();
+  else if(tweaks.ambiance === "aurora")          bgScene = makeAurora();
+  if(!bgScene) return;
+  bgfx.classList.add("on");
+  const loop = () => { bgScene.step(); bgRAF = requestAnimationFrame(loop); };
+  bgRAF = requestAnimationFrame(loop);
+}
+document.addEventListener("visibilitychange", () => {
+  if(document.hidden){ cancelAnimationFrame(bgRAF); }
+  else if(bgScene){
+    const loop = () => { bgScene.step(); bgRAF = requestAnimationFrame(loop); };
+    bgRAF = requestAnimationFrame(loop);
+  }
+});
+startBg();
+
+/* ============================================================
+   Tweaks panel
+   ============================================================ */
+const tweaksPanel = document.createElement("aside");
+tweaksPanel.className = "tweaks-panel";
+tweaksPanel.setAttribute("role", "dialog");
+tweaksPanel.setAttribute("aria-label", "Tweaks");
+tweaksPanel.innerHTML = `
+  <div class="tweaks-head">
+    <strong>Tweaks</strong>
+    <button class="tweaks-close" type="button" aria-label="Fermer">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="tweaks-row">
+    <label>Fond animé</label>
+    <div class="tweaks-radio" data-key="ambiance">
+      <button data-v="galaxie">Galaxie</button>
+      <button data-v="constellations">Constellations</button>
+      <button data-v="aurora">Aurora</button>
+      <button data-v="none">Aucun</button>
+    </div>
+  </div>
+  <div class="tweaks-row">
+    <label>Intensité</label>
+    <div class="tweaks-radio" data-key="intensity" style="grid-template-columns:repeat(3,1fr)">
+      <button data-v="subtil">Subtil</button>
+      <button data-v="moyen">Moyen</button>
+      <button data-v="marqué">Marqué</button>
+    </div>
+  </div>
+  <div class="tweaks-row">
+    <label class="tweaks-toggle">
+      <span>Animations sur la page</span>
+      <input type="checkbox" data-key="animations">
+    </label>
+  </div>
+`;
+document.body.appendChild(tweaksPanel);
+
+function syncPanel(){
+  tweaksPanel.querySelectorAll(".tweaks-radio").forEach(group => {
+    const key = group.dataset.key;
+    group.querySelectorAll("button").forEach(btn => {
+      btn.setAttribute("aria-pressed", String(btn.dataset.v === tweaks[key]));
+    });
+  });
+  tweaksPanel.querySelectorAll("input[type='checkbox']").forEach(cb => {
+    cb.checked = !!tweaks[cb.dataset.key];
+  });
+}
+syncPanel();
+
+function setTweak(key, value){
+  tweaks[key] = value;
+  syncPanel();
+  if(key === "ambiance" || key === "intensity" || key === "animations") startBg();
+  if(key === "animations") applyAnimations();
+  try{ window.parent.postMessage({type: "__edit_mode_set_keys", edits: { [key]: value }}, "*"); }catch(e){}
+}
+
+tweaksPanel.addEventListener("click", (e) => {
+  const btn = e.target.closest(".tweaks-radio button");
+  if(btn){
+    const key = btn.parentElement.dataset.key;
+    setTweak(key, btn.dataset.v);
+    return;
+  }
+  if(e.target.closest(".tweaks-close")){
+    tweaksPanel.classList.remove("show");
+    try{ window.parent.postMessage({type: "__edit_mode_dismissed"}, "*"); }catch(e){}
+  }
+});
+tweaksPanel.addEventListener("change", (e) => {
+  const cb = e.target.closest("input[type='checkbox']");
+  if(cb) setTweak(cb.dataset.key, cb.checked);
+});
+
+window.addEventListener("message", (e) => {
+  const t = e.data && e.data.type;
+  if(t === "__activate_edit_mode")   tweaksPanel.classList.add("show");
+  if(t === "__deactivate_edit_mode") tweaksPanel.classList.remove("show");
+});
+try{ window.parent.postMessage({type: "__edit_mode_available"}, "*"); }catch(e){}
+</script>
+</body>
