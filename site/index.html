@@ -11,6 +11,9 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://3h33.com/">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="https://3h33.com/medias/partage.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@alexandre3h33">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -57,6 +60,10 @@ p{margin:0 0 16px}
 .topbar .marque .logo{width:30px;height:30px;border-radius:50%;background:var(--acc);display:grid;place-items:center;color:#fff;font-family:var(--mono);font-size:10px;font-weight:700}
 .topbar .heure{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);font-weight:400;letter-spacing:.04em;margin-left:6px;padding-left:12px;border-left:1px solid var(--trait)}
 .topbar .heure b{color:var(--acc);font-variant-numeric:tabular-nums}
+.nav-haut{display:flex;gap:20px;align-items:center;background:rgba(255,255,255,.72);backdrop-filter:blur(10px);border:1px solid var(--trait);border-radius:999px;padding:9px 22px}
+.nav-haut a{color:var(--ink-2);text-decoration:none;font-weight:600;font-size:15px;white-space:nowrap}
+.nav-haut a:hover{color:var(--acc)}
+@media (max-width:1100px){.nav-haut{display:none}}
 .bouton-calme{font:inherit;font-size:14px;font-weight:700;color:var(--ink);background:rgba(255,255,255,.7);border:1px solid var(--trait);border-radius:999px;padding:9px 16px;cursor:pointer;backdrop-filter:blur(10px);display:flex;gap:8px;align-items:center;white-space:nowrap}
 .bouton-calme .etat{font-family:var(--mono);font-size:12px;color:var(--acc)}
 /* curseur */
@@ -254,7 +261,18 @@ section.chap{padding:100px 0 30px}
 .capture .petit{font-size:13.5px;color:var(--ink-3)}
 .retour{font-size:15px;color:var(--acc);min-height:22px;font-weight:700}
 .final .espace{height:380px}
-footer{position:relative;z-index:3;background:#fff;padding:30px 0 50px;color:var(--ink-3);font-size:14px}
+footer.pied-site{position:relative;z-index:3;background:#fff;padding:56px 0 46px;color:var(--ink-3);font-size:14px}
+.pied-cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px;padding-bottom:32px}
+.pied-cols h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin:0 0 14px;font-weight:700}
+.pied-cols p{color:var(--ink-2);font-size:15px;max-width:32ch;margin:12px 0 0}
+.pied-cols ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.pied-cols a{color:var(--ink-2);text-decoration:none;font-size:15px}
+.pied-cols a:hover{color:var(--acc);text-decoration:underline}
+.pied-bas{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-top:24px;border-top:1px solid var(--trait)}
+.pied-bas a{color:var(--ink-3);text-decoration:none}
+.pied-bas a:hover{color:var(--acc)}
+@media (max-width:860px){.pied-cols{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.pied-cols{grid-template-columns:1fr}}
 footer .bloc{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-top:1px solid var(--trait);padding-top:22px}
 /* animations natives */
 @keyframes lever{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
@@ -285,7 +303,14 @@ html.calme .fenetre{transform:none}
 <div class="progress" aria-hidden="true"></div>
 <div class="curseur" id="curseur" aria-hidden="true"></div>
 <div class="topbar">
-  <a class="marque" href="#" aria-label="3h33, accueil"><span class="logo">3h</span>3h33 <span class="heure">il est <b id="heure">3h33</b></span></a>
+  <a class="marque" href="/" aria-label="3h33, accueil"><span class="logo">3h</span>3h33 <span class="heure">il est <b id="heure">3h33</b></span></a>
+  <nav class="nav-haut" aria-label="Navigation principale">
+    <a href="/formations/">Formations</a>
+    <a href="/agence/">Agence</a>
+    <a href="/vibe-coding/">Vibe coding</a>
+    <a href="/studio/">Studio</a>
+    <a href="/contact/">Contact</a>
+  </nav>
   <button class="bouton-calme" type="button" id="btn-calme" aria-pressed="false">Calmer les animations <span class="etat">off</span></button>
 </div>
 
@@ -360,12 +385,13 @@ html.calme .fenetre{transform:none}
           <div class="visuel"><div class="ondes" aria-hidden="true"><span style="animation-delay:0s"></span><span style="animation-delay:.1s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:.15s"></span><span style="animation-delay:.05s"></span><span style="animation-delay:.25s"></span><span style="animation-delay:.35s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.1s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:0s"></span></div><div class="repl"><b>Vous :</b> « Cette pièce est à 4 200 €. »</div><div class="repl"><b>La cliente IA :</b> « Je l'ai vue à 3 600 rue Saint-Honoré. Qu'est-ce qui justifie 600 € de plus ? »</div><p class="mention">Maquette : le vrai simulateur, avec micro, sera branché ici.</p></div>
         </div>
         <div class="diapo" data-legende="chapitre.ai · vous racontez, il écrit le livre">
-          <div><span class="tag">voix → livre</span><h3 style="margin-top:14px">Vous racontez, il écrit le livre</h3><p class="texte">Trois phrases dictées à voix haute deviennent une page mise en forme, avec son chapitre et son titre. Chaque vie mérite son livre.</p></div>
+          <div><span class="tag">voix → livre</span><h3 style="margin-top:14px">Vous racontez, elle écrit le livre</h3><p class="texte">Une IA-biographe vous interviewe, recueille votre histoire et l'écrit comme un livre. Vous corrigez à la voix. Données privées, hébergées en France.</p></div>
           <div class="visuel"><div class="repl"><b>Vous :</b> « Ma grand-mère tenait l'épicerie de la rue des Carmes… »</div><div class="page-livre"><div class="chapitre">Chapitre 3</div><div class="titre-livre">La rue des Carmes</div><p>On entrait par la cour. L'épicerie sentait le café moulu et le savon de Marseille, et la cloche de la porte sonnait deux fois, comme si elle hésitait.</p></div></div>
         </div>
-        <div class="diapo" data-legende="BotMoiLeQi · une IA pédagogique qui vous fait réviser">
-          <div><span class="tag">pédagogie</span><h3 style="margin-top:14px">Une IA qui vous fait réviser</h3><p class="texte">Elle explique, puis elle interroge. Le rythme s'adapte à vos réponses, comme un bon professeur particulier.</p></div>
-          <div class="visuel"><div class="bulle vous">Explique-moi la TVA comme si j'avais douze ans.</div><div class="bulle bot">Tu achètes un jeu 12 €. Le vendeur en garde 10 et donne 2 à l'État : c'est la TVA. Si le jeu coûte 24 €, combien va à l'État ?</div><div class="bulle vous">4 € ?</div><div class="bulle bot">Exact. On passe aux taux réduits ?</div></div>
+        <div class="diapo" data-legende="BotMoiLeQi · un fait surprenant et sourcé chaque matin">
+          <div><span class="tag">90 secondes</span><h3 style="margin-top:14px">Un fait surprenant, chaque matin</h3><p class="texte">Trouvé, vérifié, sourcé, mis en voix, publié. Tous les jours, sans personne derrière le clavier. Un rituel de culture générale en quatre-vingt-dix secondes.</p></div>
+          <div class="visuel"><div class="repl"><b>Ce matin :</b> « Les fourmis n'ont pas de poumons. L'air entre par des orifices minuscules répartis le long de leur corps. »</div><div class="audio"><span class="pt"></span><span>À écouter</span><span class="d">1 min 30</span></div><p class="mention">Maquette : le fait du jour arrivera en direct depuis botmoileqi.com.</p></div>
+        </div>
         </div>
         <div class="diapo" data-legende="ListenEngine · cinquante-deux minutes, trois points">
           <div><span class="tag">bientôt en code ouvert</span><h3 style="margin-top:14px">Cinquante-deux minutes, trois points</h3><p class="texte">Déposez une conférence, une réunion, un podcast. Vous recevez l'essentiel, sourcé à la minute près.</p></div>
@@ -429,7 +455,7 @@ html.calme .fenetre{transform:none}
     </div>
     <div class="bandes">
       <div class="bande reveal"><div class="eyebrow">Collectivités</div><h3>Mairies et administrations</h3><p>Les agents se forment à l'IA sur leurs propres dossiers. <b>La mairie de Laxou</b> fait partie des communes accompagnées, et plusieurs ont déjà leur outil, construit en session avec leurs équipes. Le point d'entrée : <a href="https://mairie.ai/">mairie.ai</a>.</p></div>
-      <div class="bande reveal"><div class="eyebrow">Les grands chantiers</div><h3>Ce qu'on construit de plus gros</h3><p><b>Sator OS</b>, un LMS agentique qui retrouve la bonne seconde dans des centaines d'heures de cours. <b>Atelier LMS</b>, l'éditeur avec lequel on fabrique des LMS. <b>Subsidium</b>, le plus gros projet, dont on choisira ensemble ce qu'on en dit.</p></div>
+      <div class="bande reveal"><div class="eyebrow">Les grands chantiers</div><h3>Ce qu'on construit de plus gros</h3><p><b><a href="/lma-learning-management-agentique/">Sator</a></b>, une plateforme devenue agentique : un LMA, qui retrouve la bonne seconde dans des centaines d'heures de cours. <b>Atelier LMS</b>, l'éditeur avec lequel on fabrique des LMS. <b><a href="https://subsidium.world">Subsidium</a></b>, notre plus grande plateforme : agir là où vous vivez, avec des IA qui préparent le travail sans décider à votre place.</p></div>
     </div>
   </section>
 
@@ -440,7 +466,7 @@ html.calme .fenetre{transform:none}
     </div>
     <div class="forge">
       <div class="reveal"><div class="ticker" aria-label="Activité récente de la forge (exemple)"><ul id="flux"></ul></div><p class="mention">Exemple de flux. En production, ces lignes viendront des dépôts publics, mises à jour toutes les heures.</p></div>
-      <div class="reveal"><div class="compteur"><span class="pt"></span><span><b>34</b> sites et outils en ligne, vérifiés toutes les heures.</span></div><p style="color:var(--ink-2);margin-top:18px">Rien n'est écrit sur la façon de faire. Ceux qui veulent comprendre viennent en session ; ceux qui veulent voir plus loin trouvent <a href="#">l'atelier</a> en bas de page.</p></div>
+      <div class="reveal"><div class="compteur"><span class="pt"></span><span><b>34</b> sites et outils en ligne, vérifiés toutes les heures.</span></div><p style="color:var(--ink-2);margin-top:18px">Rien n'est écrit sur la façon de faire. Ceux qui veulent comprendre viennent en session ; ceux qui veulent voir plus loin trouvent <a href="/galaxie/">la galaxie</a> en bas de page.</p></div>
     </div>
   </section>
 
@@ -472,7 +498,42 @@ html.calme .fenetre{transform:none}
     </div>
     <div class="espace"></div>
   </section>
-  <footer><div class="bloc"><span>© 3h33 · piste « L'aube claire », v2 du 3 septembre 2026</span><span>Plans superposés, cartes empilées, verre cannelé, mots révélés, curseur, aimants · aucun script tiers</span></div></footer>
+  <footer class="pied-site"><div class="bloc">
+  <div class="pied-cols">
+    <div>
+      <a class="marque" href="/" style="margin-bottom:12px"><span class="logo">3h</span>3h33</a>
+      <p>L'agence de l'IA. On apprend en construisant : masterclass, ateliers, sessions Forge, studio créatif.</p>
+    </div>
+    <div><h3>Formations</h3><ul>
+      <li><a href="/masterclass-ia/">Masterclass IA</a></li>
+      <li><a href="/ateliers-formation/">Ateliers de formation</a></li>
+      <li><a href="/rendez-vous-ia-talent/">Rendez-vous IA Talent</a></li>
+      <li><a href="/formation-claude/">Formation Claude</a></li>
+      <li><a href="/forge/">Méthode Forge</a></li>
+      <li><a href="/formations-au-marketing-digital/">Marketing digital</a></li>
+    </ul></div>
+    <div><h3>Agence</h3><ul>
+      <li><a href="/vibe-coding/">Vibe coding</a></li>
+      <li><a href="/lma-learning-management-agentique/">LMA</a></li>
+      <li><a href="/chatbots/">Chatbots et agents</a></li>
+      <li><a href="/chatgpt/">Contenus avec l'IA</a></li>
+      <li><a href="/synthetic-content/">Comédiens virtuels</a></li>
+      <li><a href="/agence-conseil-marketing-digital/">Conseil et stratégie</a></li>
+    </ul></div>
+    <div><h3>Voir et écouter</h3><ul>
+      <li><a href="/studio/videos/">Vidéos IA</a></li>
+      <li><a href="/podcasts/">Podcasts</a></li>
+      <li><a href="/galaxie/">La galaxie 3h33</a></li>
+      <li><a href="/verif-nom/">Vérifier un nom</a></li>
+      <li><a href="/blog/">Le blog</a></li>
+      <li><a href="/archives/">Archives</a></li>
+    </ul></div>
+  </div>
+  <div class="pied-bas">
+    <span>© 2010–2026 3h33 · organisme de formation spécialisé dans les usages de l'intelligence artificielle</span>
+    <span><a href="/a-propos/">À propos</a> · <a href="/contact/">Contact</a> · <a href="/politique-de-confidentialite/">Confidentialité</a> · <a href="/conditions-generales/">CGV</a> · <a href="/plan-du-site/">Plan du site</a></span>
+  </div>
+</div></footer>
 </main>
 
 <script>

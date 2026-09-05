@@ -1,0 +1,36 @@
+---
+titre: "Formations à l'intelligence artificielle"
+titre_seo: "Formations IA en entreprise : masterclass, ateliers, Forge · 3h33"
+description: "Organisme de formation spécialisé dans les usages de l'IA générative : masterclass d'acculturation, ateliers pratiques, sessions de construction et veille mensuelle."
+url: /formations/
+type: page
+rubrique: "Formations|"
+fil: "Formations"
+priorite: 0.9
+eyebrow: "Formations"
+chapo: "Quatre façons d'entrer, de la plus légère à la plus engagée. Toutes ont un point commun : on apprend en fabriquant, pas en écoutant."
+---
+
+## Par où commencer
+
+Le bon point d'entrée dépend de votre maturité. Une équipe qui n'a jamais ouvert un outil d'IA n'a pas besoin de la même chose qu'une direction qui veut automatiser un processus précis.
+
+<div class="cartes">
+<a class="carte" href="/masterclass-ia/"><span class="duree">Masterclass · 2 heures</span><h2>Découvrir</h2><p>Comprendre ce que l'IA change dans vos métiers, avec des démonstrations en direct et sans jargon.</p><span class="suite">Voir la masterclass →</span></a>
+<a class="carte" href="/ateliers-formation/"><span class="duree">Ateliers · 1 à 2 jours</span><h2>Pratiquer</h2><p>Vos équipes travaillent sur leurs propres dossiers et repartent avec des usages installés.</p><span class="suite">Voir les ateliers →</span></a>
+<a class="carte" href="/forge/"><span class="duree">Forge · ½ journée</span><h2>Construire</h2><p>On fabrique ensemble, en direct, l'agent ou l'automatisation qui vous manque. Livré documenté.</p><span class="suite">Voir la méthode Forge →</span></a>
+<a class="carte" href="/rendez-vous-ia-talent/"><span class="duree">Rendez-vous · mensuel</span><h2>Suivre</h2><p>Un point par mois pour ne pas se laisser distancer par des outils qui changent chaque semaine.</p><span class="suite">Voir les rendez-vous →</span></a>
+</div>
+
+## Formations spécialisées
+
+- **[Formation Claude](/formation-claude/)** — une à deux journées pour maîtriser Claude en entreprise, du premier échange à l'automatisation.
+- **[Formations au marketing digital](/formations-au-marketing-digital/)** — le socle numérique, réseaux sociaux, contenus, référencement, désormais éclairé par l'IA.
+
+## Pour les collectivités
+
+Les mairies et les administrations ont leurs propres contraintes : marchés publics, données des administrés, cadre juridique. Nous accompagnons plusieurs communes, dont la mairie de Laxou, sur la formation des agents et la construction d'outils internes. Le point d'entrée dédié est [mairie.ai](https://mairie.ai/).
+
+## Un organisme de formation
+
+3h33 est un organisme de formation déclaré, actif depuis 2010. Les formations peuvent entrer dans votre plan de développement des compétences. Écrivez-nous pour le détail administratif et les modalités de prise en charge.
