@@ -13,11 +13,42 @@ chapo: "Décrivez votre besoin en quelques lignes. Nous répondons sous un jour 
 
 ## Écrivez-nous
 
-Le plus simple est le formulaire ci-dessous. Dites-nous qui vous êtes, ce que vous cherchez, et si vous avez une échéance.
+<form class="formulaire" id="f-contact" novalidate>
+  <div class="champ"><label for="c-nom">Votre nom</label><input id="c-nom" name="nom" type="text" autocomplete="name" required></div>
+  <div class="champ"><label for="c-email">Votre adresse électronique</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+  <div class="champ"><label for="c-orga">Votre organisation <span>facultatif</span></label><input id="c-orga" name="organisation" type="text" autocomplete="organization"></div>
+  <div class="champ"><label for="c-sujet">Votre demande</label><select id="c-sujet" name="sujet">
+    <option>Une formation pour mes équipes</option>
+    <option>Un outil à construire</option>
+    <option>Un film, un clip, une musique</option>
+    <option>Une intervention ou une conférence</option>
+    <option>Autre chose</option>
+  </select></div>
+  <div class="champ"><label for="c-message">Votre message</label><textarea id="c-message" name="message" rows="6" required placeholder="Votre contexte, votre besoin, et une date si vous en avez une."></textarea></div>
+  <div class="piege" aria-hidden="true"><label>Ne remplissez pas ce champ<input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
+  <button class="btn" type="submit">Envoyer le message</button>
+  <p class="retour" id="c-retour" role="status" aria-live="polite"></p>
+</form>
 
-<div class="encadre">
-<p><strong>Formulaire à brancher.</strong> Le formulaire de contact sera installé ici lors de la mise en ligne définitive.</p>
-</div>
+<script>
+(function(){
+  var f=document.getElementById("f-contact"), r=document.getElementById("c-retour"), ouvert=Date.now();
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    var b=f.querySelector("button"); b.disabled=true; r.textContent="Envoi en cours…"; r.className="retour";
+    var d=Object.fromEntries(new FormData(f).entries());
+    d.instant=ouvert; d.page=location.pathname;
+    fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
+      .then(function(rep){ return rep.json().then(function(j){ return {st:rep.status,j:j}; }); })
+      .then(function(x){
+        if(x.st===200){ f.reset(); r.className="retour ok"; r.textContent="Merci, votre message est parti. Nous répondons sous un jour ouvré."; }
+        else { r.className="retour erreur"; r.textContent=(x.j.erreurs||["Envoi impossible pour le moment."]).join(" "); b.disabled=false; }
+      })
+      .catch(function(){ r.className="retour erreur"; r.textContent="L'envoi a échoué. Réessayez, ou écrivez-nous depuis votre messagerie."; b.disabled=false; });
+  });
+})();
+</script>
+
 
 ## Prendre rendez-vous
 

@@ -1,0 +1,25 @@
+# Formulaire de contact de 3h33.com.
+# L'adresse de destination n'est jamais dans les pages : elle est ici, en .env.
+services:
+  contact:
+    build: .
+    container_name: h3h33_contact
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - messages:/données/messages
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.h3h33contact.rule=Host(`nouveau.3h33.com`) && PathPrefix(`/api/contact`)"
+      - "traefik.http.routers.h3h33contact.entrypoints=websecure"
+      - "traefik.http.routers.h3h33contact.tls=true"
+      - "traefik.http.routers.h3h33contact.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.h3h33contact.priority=100"
+      - "traefik.http.services.h3h33contact.loadbalancer.server.port=3020"
+    healthcheck:
+      test: ["CMD-SHELL","wget -qO- http://127.0.0.1:3020/sante >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+volumes:
+  messages:
