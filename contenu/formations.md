@@ -22,6 +22,23 @@ Le bon point d'entrée dépend de votre maturité. Une équipe qui n'a jamais ou
 <a class="carte" href="/rendez-vous-ia-talent/"><span class="duree">Rendez-vous · mensuel</span><h2>Suivre</h2><p>Un point par mois pour ne pas se laisser distancer par des outils qui changent chaque semaine.</p><span class="suite">Voir les rendez-vous →</span></a>
 </div>
 
+## Une demi-journée, heure par heure
+
+Voici comment se déroule une session Forge, sur un cas réel de commune : le besoin est posé le matin, l'outil est en ligne avant la fin de la journée.
+
+<div class="frise">
+  <div class="frise__rail">
+    <span class="frise__pleine"></span>
+    <ul class="frise__pts">
+      <li style="--x:2%"  data-fait><b></b><span class="h">14:02</span><span class="q">le besoin est posé</span></li>
+      <li style="--x:26%" data-fait><b></b><span class="h">14:40</span><span class="q">première version qui tourne</span></li>
+      <li style="--x:52%" data-fait><b></b><span class="h">15:35</span><span class="q">essai sur de vrais dossiers</span></li>
+      <li style="--x:76%" data-fait><b></b><span class="h">16:50</span><span class="q">consolidation, documentation</span></li>
+      <li style="--x:98%"><b></b><span class="h">17:30</span><span class="q">livré, entre vos mains</span></li>
+    </ul>
+  </div>
+</div>
+
 ## Formations spécialisées
 
 - **[Formation Claude](/formation-claude/)** — une à deux journées pour maîtriser Claude en entreprise, du premier échange à l'automatisation.

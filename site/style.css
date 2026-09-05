@@ -45,13 +45,41 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--or);outline-offset:
 
 /* en-tête illustré, en écho à l'accueil */
 .aube{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0%,var(--ground-3) 48%,#fff6e6 78%,#fff 100%);
-  padding:52px 28px 0;margin-bottom:40px}
-.aube__soleil{position:absolute;right:8%;top:34px;width:150px;height:150px;border-radius:50%;
-  background:radial-gradient(circle at 50% 45%,#ffd37a,var(--or) 60%,rgba(255,176,32,0) 61%);
-  box-shadow:0 0 90px 30px rgba(255,176,32,.16)}
+  padding:56px 28px 0;margin-bottom:40px}
 .aube__collines{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:110px;display:block}
 .aube__texte{position:relative;z-index:2;max-width:var(--large);margin:0 auto;padding-bottom:120px}
-@media (max-width:860px){.aube{padding-top:34px}.aube__soleil{width:100px;height:100px;right:5%}.aube__texte{padding-bottom:90px}}
+@media (max-width:860px){.aube{padding-top:34px}.aube__texte{padding-bottom:90px}
+  .aube__sablier{width:172px;right:-16px;top:auto;bottom:-16px}
+  .aube__sablier canvas{opacity:.11}}
+
+
+/* ---------------------------------------------------------------- le temps
+   Le sablier remplace le soleil : même place, en filigrane. Les oiseaux
+   descendent de l'accueil. Le surtitre peut porter une heure, et les pages
+   de contenu annoncent leur durée de lecture. */
+.aube__scene{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+.aube__sablier{position:absolute;right:7%;top:16px;width:300px}
+.aube__sablier .boite{position:relative;aspect-ratio:440/620;line-height:0}
+.aube__sablier canvas{display:block;width:100%;height:auto;opacity:.17}
+.aube__oiseaux{position:absolute;z-index:2;top:44px;left:0;right:0;height:180px;pointer-events:none}
+.oiseau{position:absolute;width:34px;height:14px;animation:vole var(--d,26s) linear infinite;left:-60px;top:var(--t,20px)}
+.oiseau svg{width:100%;height:100%;overflow:visible}
+.oiseau path{fill:none;stroke:#5a7bb3;stroke-width:2.2;stroke-linecap:round;animation:bat .7s ease-in-out infinite alternate;transform-origin:50% 50%}
+@keyframes vole{from{transform:translateX(0)}to{transform:translateX(calc(100vw + 120px))}}
+@keyframes bat{from{transform:scaleY(.4)}to{transform:scaleY(1)}}
+html.calme .aube__sablier canvas{opacity:.13}
+
+/* le surtitre porte une heure : la pastille bat une fois par seconde */
+.eyebrow--heure::before{border:1.5px solid var(--ink);animation:bat-tic 2s steps(1,end) infinite}
+.eyebrow--heure .hh{font-variant-numeric:tabular-nums;color:var(--acc-fonce)}
+@keyframes bat-tic{0%,50%{transform:scale(1)}50.01%,100%{transform:scale(.45)}}
+
+/* durée de lecture : la notion de temps la plus utile au lecteur */
+.duree-lecture{display:inline-flex;align-items:center;gap:9px;margin:20px 0 0;
+  font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.duree-lecture svg{width:17px;height:17px;flex:none}
+.duree-lecture .c{fill:none;stroke:var(--ink-3);stroke-width:1.6}
+.duree-lecture .a{stroke:var(--ink);stroke-width:1.8;stroke-linecap:round}
 
 /* page */
 .page{max-width:var(--large);margin:0 auto;padding:0 28px 40px}
@@ -143,3 +171,149 @@ h1{font-size:clamp(34px,5vw,60px);line-height:1.06;letter-spacing:-.03em;font-we
 .retour.ok::before{content:"✓ ";font-weight:800}
 .retour.erreur{color:#b3261e}
 .retour.erreur::before{content:"✕ ";font-weight:800}
+
+
+/* ================================================================ horlogerie
+   Huit pièces, posées là où chacune a un sens. Règle tenue partout :
+   une seule pièce animée par écran, et jamais d'information portée par la
+   couleur seule. Le repos (classe « calme » ou mouvement réduit) les fige. */
+/* ================= 1. cadran ================= */
+.cadran{width:150px;height:150px;display:block;flex:none}
+.cadran .verre{fill:#fff;stroke:rgba(15,21,36,.16);stroke-width:1.4}
+.cadran .min{fill:none;stroke:rgba(15,21,36,.34);stroke-width:5;stroke-dasharray:1.3 6.973;stroke-dashoffset:.65}
+.cadran .heu{fill:none;stroke:rgba(15,21,36,.85);stroke-width:11;stroke-dasharray:2.6 37.72;stroke-dashoffset:1.3}
+.cadran .aig{stroke-linecap:round}   /* le centre de rotation est deja dans l'attribut transform */
+.cadran .aig--h{stroke:var(--ink);stroke-width:6.5}
+.cadran .aig--m{stroke:var(--ink);stroke-width:4}
+.cadran .noyau{fill:var(--ink)}
+.cadran .noyau-clair{fill:#fff}
+.cadran .sig{font-family:var(--mono);font-size:13px;font-weight:700;fill:var(--ink-3);letter-spacing:.08em}
+
+/* ================= 2. trotteuse ================= */
+.trotteuse{width:104px;height:104px;flex:none}
+.trotteuse .piste{fill:none;stroke:var(--trait);stroke-width:2}
+.trotteuse .crans{fill:none;stroke:rgba(15,21,36,.3);stroke-width:6;stroke-dasharray:1.2 24.15;stroke-dashoffset:.6}
+.trotteuse .bras{stroke:var(--ink);stroke-width:3;stroke-linecap:round;transform-origin:60px 60px;
+  animation:tourne 60s steps(60,end) infinite}
+.trotteuse .contrepoids{fill:var(--or);stroke:var(--ink);stroke-width:1.6;transform-origin:60px 60px;
+  animation:tourne 60s steps(60,end) infinite}
+.trotteuse--lisse .bras,.trotteuse--lisse .contrepoids{animation-timing-function:linear;animation-duration:8s}
+@keyframes tourne{to{transform:rotate(360deg)}}
+
+/* ================= 3. rouage ================= */
+.rouage{width:100%;max-width:320px;height:auto}
+.rouage .dent{fill:none;stroke:rgba(15,21,36,.62);stroke-width:1.7;stroke-linejoin:round}
+.rouage .moyeu{fill:none;stroke:rgba(15,21,36,.32);stroke-width:1.5}
+.rouage .rai{stroke:rgba(15,21,36,.32);stroke-width:2.6;stroke-linecap:round}
+.rouage .axe{fill:var(--or);stroke:var(--ink);stroke-width:1.6}
+.rouage .roue{transform-box:fill-box;transform-origin:center;animation:tourne linear infinite}
+.rouage .roue--a{animation-duration:24s}
+.rouage .roue--b{animation-duration:16s;animation-direction:reverse}
+.rouage .roue--c{animation-duration:12s}
+
+/* ================= 4. échappement ================= */
+.echap{width:180px;height:150px;flex:none}
+.echap .cage{fill:none;stroke:var(--trait);stroke-width:1.6}
+.echap .jante{fill:none;stroke:rgba(15,21,36,.7);stroke-width:4}
+.echap .rai{stroke:rgba(15,21,36,.45);stroke-width:2.4;stroke-linecap:round}
+.echap .plot{fill:var(--or);stroke:var(--ink);stroke-width:1.4}
+.echap .balancier{transform-box:fill-box;transform-origin:center;
+  animation:oscille 1.6s cubic-bezier(.42,0,.58,1) infinite alternate}
+.echap .ancre{fill:none;stroke:rgba(15,21,36,.75);stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;
+  transform-origin:90px 34px;animation:bascule 1.6s cubic-bezier(.5,0,.5,1) infinite alternate}
+@keyframes oscille{from{transform:rotate(-32deg)}to{transform:rotate(32deg)}}
+@keyframes bascule{from{transform:rotate(-8deg)}to{transform:rotate(8deg)}}
+
+/* ================= 5. compteur ================= */
+.compteur{display:grid;gap:9px;width:100%;max-width:330px}
+.compteur__n{font-size:56px;font-weight:800;letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.compteur__n .u{font-size:22px;font-weight:700;color:var(--ink-2);letter-spacing:-.01em;margin-left:6px;white-space:nowrap}
+.compteur__l{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+.compteur__barre{height:12px;border-radius:999px;background:var(--ground-3);border:1px solid var(--trait);overflow:hidden;position:relative}
+.compteur__barre i{display:block;height:100%;width:0;background:
+  repeating-linear-gradient(135deg,var(--acc) 0 7px,#4d8dff 7px 14px);transition:width 1.4s var(--ease)}
+.compteur__pied{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;color:var(--ink-3)}
+
+/* ================= 6. frise horaire ================= */
+.frise{width:100%;padding:8px 0 4px}
+.frise__rail{position:relative;height:3px;background:var(--trait);border-radius:2px;margin:34px 62px 64px}
+.frise__pleine{position:absolute;inset:0;background:var(--ink);border-radius:2px;transform-origin:left;transform:scaleX(1)}
+.frise__pts{list-style:none;margin:0;padding:0;position:absolute;inset:0}
+.frise__pts li{position:absolute;top:-6px;left:var(--x);transform:translateX(-50%);text-align:center;width:120px}
+.frise__pts b{display:block;width:15px;height:15px;margin:0 auto;border-radius:50%;background:#fff;border:3px solid var(--ink)}
+.frise__pts li[data-fait] b{background:var(--ink)}
+.frise__pts li[data-fait] b::after{content:"";display:block;width:5px;height:5px;margin:2px auto;border-radius:50%;background:#fff}
+.frise__pts .h{display:block;margin-top:10px;font-family:var(--mono);font-size:12px;font-weight:700;color:var(--ink)}
+.frise__pts .q{display:block;font-size:13.5px;color:var(--ink-2);line-height:1.35}
+@supports (animation-timeline: view()){
+  .frise__pleine{transform:scaleX(0);animation:croitX linear both;animation-timeline:view();animation-range:entry 40% cover 45%}
+}
+@keyframes croitX{to{transform:scaleX(1)}}
+/* au repos, une frise vide serait un mensonge : on la remet pleine */
+html.calme .frise__pleine{transform:scaleX(1)!important}
+@media (prefers-reduced-motion:reduce){.frise__pleine{transform:scaleX(1)!important}}
+
+/* ================= 7. minuterie ================= */
+.minuterie{position:relative;width:158px;height:158px;flex:none}
+.minuterie svg{width:100%;height:100%}
+.minuterie .crans,.minuterie .arc{transform:rotate(-90deg);transform-origin:79px 79px}
+.minuterie .fond{fill:none;stroke:var(--ground-3);stroke-width:13}
+.minuterie .crans{fill:none;stroke:rgba(15,21,36,.22);stroke-width:13;stroke-dasharray:1.8 14.85;stroke-dashoffset:.9}
+.minuterie .arc{fill:none;stroke:var(--ink);stroke-width:13;stroke-linecap:butt;
+  stroke-dasharray:var(--c);stroke-dashoffset:calc(var(--c) * (1 - var(--part)))}
+.minuterie .repere{stroke:var(--or);stroke-width:4;stroke-linecap:round}
+.minuterie__val{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.minuterie__val b{display:block;font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1;font-variant-numeric:tabular-nums}
+.minuterie__val span{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;line-height:1.3;
+  text-transform:uppercase;color:var(--ink-3);margin:6px auto 0;max-width:82px}
+@supports (animation-timeline: view()){
+  .minuterie .arc{animation:remplit linear both;animation-timeline:view();animation-range:entry 40% cover 40%}
+}
+@keyframes remplit{from{stroke-dashoffset:var(--c)}}
+
+/* ================= 8. badge heure ================= */
+.tic{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-family:var(--mono);font-size:12px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink);background:var(--ground-2);
+  border:1px solid var(--trait);border-radius:999px;padding:6px 14px}
+.tic .pt{width:7px;height:7px;border-radius:50%;background:var(--or);border:1.5px solid var(--ink);
+  animation:bat-tic 2s steps(1,end) infinite}
+.tic .hh{font-variant-numeric:tabular-nums;color:var(--acc-fonce)}
+@keyframes bat-tic{0%,50%{transform:scale(1)}50.01%,100%{transform:scale(.45)}}
+
+/* repos */
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+html.calme *,html.calme *::before,html.calme *::after{animation:none!important;transition:none!important}
+@media (max-width:700px){.frise__pts li{width:86px}.frise__pts .q{display:none}}
+
+
+/* placements dans les pages */
+.signature-heure{display:flex;align-items:center;gap:16px;margin:0 0 14px}
+.signature-heure .cadran{width:56px;height:56px}
+.signature-heure p{margin:0;font-size:14px;color:var(--ink-3);max-width:26ch;line-height:1.4}
+.bloc-temps{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;
+  background:var(--ground-2);border:1px solid var(--trait);border-radius:18px;padding:24px 28px;margin:34px 0}
+.bloc-temps p{margin:0;color:var(--ink-2);font-size:16px}
+.bloc-temps p strong{color:var(--ink)}
+.rouage-fond{position:relative}
+.rouage-fond .rouage{position:absolute;right:-40px;top:50%;transform:translateY(-50%);
+  max-width:260px;opacity:.13;pointer-events:none;z-index:0}
+.rouage-fond > *{position:relative;z-index:1}
+@media (max-width:900px){.rouage-fond .rouage{display:none}.bloc-temps{grid-template-columns:1fr}}
+html.calme .rouage .roue,html.calme .echap .balancier,html.calme .echap .ancre,
+html.calme .trotteuse .bras,html.calme .trotteuse .contrepoids{animation:none!important}
+
+.envoi{display:flex;align-items:center;gap:16px}
+.envoi__tourne .trotteuse{width:38px;height:38px}
+
+/* l'avancement de lecture, en bas à droite, discret */
+.avancement{position:fixed;right:22px;bottom:22px;z-index:30;background:rgba(255,255,255,.9);
+  border:1px solid var(--trait);border-radius:999px;padding:8px;box-shadow:var(--ombre);
+  opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s;pointer-events:none}
+.avancement.visible{opacity:1;transform:none}
+.avancement .minuterie{gap:0}
+.avancement .minuterie svg{width:52px;height:52px}
+.avancement .minuterie__val{position:absolute;inset:0;display:grid;place-content:center;margin:0;text-align:center}
+.avancement .minuterie__val b{font-size:12px;letter-spacing:-.02em}
+.avancement .minuterie__val span{display:none}
+.avancement .arc{transition:stroke-dashoffset .12s linear}
+@media (max-width:860px){.avancement{display:none}}

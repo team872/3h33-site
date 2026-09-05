@@ -22,6 +22,13 @@ chapo: "Nous ne vendons pas de l'intelligence artificielle. Nous l'utilisons pou
 <a class="carte" href="/agence-conseil-marketing-digital/"><span class="duree">Conseil</span><h2>Conseil et stratégie</h2><p>Par où commencer, avec quelles données, dans quel cadre. Le diagnostic avant les outils.</p><span class="suite">Voir le conseil →</span></a>
 </div>
 
+<div class="compteur" data-compteur data-fin="34" data-part="1">
+  <p class="compteur__l">Construits et mis en ligne depuis 2024</p>
+  <p class="compteur__n"><span class="v">34</span><span class="u">sites et outils</span></p>
+  <div class="compteur__barre"><i></i></div>
+  <div class="compteur__pied"><span>2024</span><span>vérifié le 2 septembre 2026</span></div>
+</div>
+
 ## Notre façon de travailler
 
 Nous commençons rarement par une réunion et souvent par une démonstration. Un besoin décrit le matin devient un prototype l'après-midi. C'est plus rapide à juger qu'un cahier des charges, et beaucoup moins cher à corriger.

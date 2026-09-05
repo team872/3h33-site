@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script>try{if(localStorage.getItem("3h33-calme")==="1")document.documentElement.classList.add("calme")}catch(e){}</script>
 <title>3h33, l'agence de l'IA : qui nous sommes · 3h33</title>
 <meta name="description" content="3h33 est une agence et un organisme de formation spécialisés dans les usages de l'IA générative, fondés par Alexandre Stopnicki.">
 <link rel="canonical" href="https://3h33.com/a-propos/">
@@ -44,7 +45,14 @@
   <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a> <span aria-hidden="true">›</span> <span aria-current="page">Le site</span> <span aria-hidden="true">›</span> <span aria-current="page">À propos</span></nav>
 
   <div class="aube">
-    <div class="aube__soleil" aria-hidden="true"></div>
+    <div class="aube__scene" aria-hidden="true">
+      <div class="aube__sablier"><div class="boite"><canvas data-sablier data-duree="26" data-debit="52"></canvas></div></div>
+    </div>
+    <div class="aube__oiseaux" aria-hidden="true">
+      <div class="oiseau" style="--d:34s;--t:10px"><svg viewBox="0 0 34 14"><path d="M1 12 Q 9 2 17 10 Q 25 2 33 12"/></svg></div>
+      <div class="oiseau" style="--d:41s;--t:60px;animation-delay:-14s;transform:scale(.7)"><svg viewBox="0 0 34 14"><path d="M1 12 Q 9 2 17 10 Q 25 2 33 12"/></svg></div>
+      <div class="oiseau" style="--d:29s;--t:120px;animation-delay:-22s;transform:scale(.55)"><svg viewBox="0 0 34 14"><path d="M1 12 Q 9 2 17 10 Q 25 2 33 12"/></svg></div>
+    </div>
     <svg class="aube__collines" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
       <path d="M0 200 L0 118 C 200 96, 300 140, 480 112 S 820 74, 1000 108 S 1360 138, 1600 96 L1600 200 Z" fill="#dbe8fb"/>
       <path d="M0 200 L0 150 C 240 128, 420 168, 640 144 S 980 112, 1180 146 S 1440 168, 1600 140 L1600 200 Z" fill="#b9d1f5"/>
@@ -54,6 +62,7 @@
       <p class="eyebrow">À propos</p>
       <h1>À propos de 3h33</h1>
       <p class="chapo">Une agence qui préfère fabriquer plutôt que présenter, et un organisme de formation qui apprend en construisant.</p>
+      
     </div>
   </div>
 
@@ -70,6 +79,12 @@
 <p>Trente-quatre sites et outils sont en ligne aujourd'hui, tous fabriqués en <a href="/vibe-coding/">vibe coding</a>. C'est notre carte de visite : la <a href="/galaxie/">galaxie 3h33</a>.</p>
 <h2>Ils nous font confiance</h2>
 <p>Criteo, Saint-Gobain, Air Liquide, Dentsply Sirona, Bolton Group, Robert Half, le Cnam, Esmod, Casino, Maria Schools, De Vinci Executive Education, l'Institut français, Giropharm, Les Acteurs de la Compétence, Acorus, la mairie de Laxou et d'autres.</p>
+<div class="bloc-temps">
+<svg class="echap" viewBox="0 0 180 150" role="img" aria-label="Balancier et ancre d'echappement">
+<p>  <line class="cage" x1="90" y1="10" x2="90" y2="34"/>   <path class="ancre" d="M62 46 L90 34 L118 46 M74 41 L74 52 M106 41 L106 52"/>   <g transform="translate(90,96)">     <g class="balancier">       <circle class="jante" r="40"/>       <line class="rai" x1="-38" y1="0" x2="38" y2="0"/>       <line class="rai" x1="0" y1="-38" x2="0" y2="38"/>       <circle class="plot" cx="-40" cy="0" r="5"/>       <circle class="plot" cx="40" cy="0" r="5"/>     </g>     <circle class="axe" r="3" fill="#0f1524"/>   </g></p>
+</svg>
+<p><strong>Trois heures trente-trois.</strong> C'est l'heure où une idée tient encore debout quand tout le reste est éteint. On en a fait un nom, puis un métier : rendre aux gens le temps que la technique leur avait pris.</p>
+</div>
     </div>
   </article>
 
@@ -82,11 +97,36 @@
   </aside>
 </main>
 
+<div class="avancement" aria-hidden="true" hidden>
+<div class="minuterie">
+  <svg viewBox="0 0 158 158" aria-hidden="true">
+    <circle class="fond"  cx="79" cy="79" r="53"/>
+    <circle class="crans" cx="79" cy="79" r="53"/>
+    <circle class="arc"   cx="79" cy="79" r="53"/>
+    <line class="repere" x1="79" y1="4" x2="79" y2="18" transform="rotate(255.6 79 79)"/>
+  </svg>
+  <p class="minuterie__val"><b class="pc">0 %</b><span>lu</span></p>
+</div>
+</div>
+
 <footer class="pied">
   <div class="pied__haut">
     <div class="pied__col">
       <a class="marque marque--pied" href="/"><span class="logo">3h</span>3h33</a>
-      <p>L'agence de l'IA. On apprend en construisant : masterclass, ateliers, sessions Forge, studio créatif.</p>
+      <div class="signature-heure">
+        <svg class="cadran" viewBox="0 0 200 200" role="img" aria-label="Cadran indiquant 3 h 33">
+          <circle class="verre" cx="100" cy="100" r="92"/>
+          <circle class="min" cx="100" cy="100" r="79"/>
+          <circle class="heu" cx="100" cy="100" r="77"/>
+          <!-- 3 h 33 : petite aiguille a 106,5 deg, grande a 198 deg -->
+          <line class="aig aig--h" x1="100" y1="100" x2="100" y2="56" transform="rotate(106.5 100 100)"/>
+          <line class="aig aig--m" x1="100" y1="100" x2="100" y2="34" transform="rotate(198 100 100)"/>
+          <circle class="noyau" cx="100" cy="100" r="5.5"/>
+          <circle class="noyau-clair" cx="100" cy="100" r="1.8"/>
+          <text class="sig" x="100" y="72" text-anchor="middle">3h33</text>
+        </svg>
+        <p>Trois heures trente-trois. L'heure où l'on construit encore, et le nom qu'on en a gardé.</p>
+      </div>
     </div>
     <div class="pied__col">
       <h2>Formations</h2>
@@ -136,6 +176,28 @@ document.querySelector(".burger").addEventListener("click",function(){
   var m=document.querySelector(".menu"),o=m.classList.toggle("ouvert");
   this.setAttribute("aria-expanded",String(o));
 });
+</script>
+<script defer src="/sablier.js"></script>
+<script>
+/* L'avancement de lecture : la seule notion de temps qui soit toujours vraie.
+   Le pourcentage est écrit en clair, l'arc n'en est que le rappel. */
+(function(){
+  var a=document.querySelector(".avancement"); if(!a) return;
+  if(!document.querySelector(".duree-lecture")) return;      // pages courtes : inutile
+  var arc=a.querySelector(".arc"), pc=a.querySelector(".pc"), C=333;
+  arc.style.strokeDasharray=C; a.hidden=false;
+  var enCours=false;
+  function place(){
+    enCours=false;
+    var h=document.documentElement, max=h.scrollHeight-innerHeight;
+    var p=max>0?Math.min(1,Math.max(0,scrollY/max)):0;
+    arc.style.strokeDashoffset=(C*(1-p)).toFixed(1);
+    pc.textContent=Math.round(p*100)+" %";
+    a.classList.toggle("visible", scrollY>320);
+  }
+  addEventListener("scroll",function(){ if(!enCours){enCours=true;requestAnimationFrame(place);} },{passive:true});
+  addEventListener("resize",place); place();
+})();
 </script>
 </body>
 </html>

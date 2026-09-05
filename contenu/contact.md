@@ -9,6 +9,7 @@ fil: "Contact"
 priorite: 0.9
 eyebrow: "Contact"
 chapo: "Décrivez votre besoin en quelques lignes. Nous répondons sous un jour ouvré, et nous commençons volontiers par une démonstration."
+duree_lecture: non
 ---
 
 ## Écrivez-nous
@@ -26,7 +27,19 @@ chapo: "Décrivez votre besoin en quelques lignes. Nous répondons sous un jour 
   </select></div>
   <div class="champ"><label for="c-message">Votre message</label><textarea id="c-message" name="message" rows="6" required placeholder="Votre contexte, votre besoin, et une date si vous en avez une."></textarea></div>
   <div class="piege" aria-hidden="true"><label>Ne remplissez pas ce champ<input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
-  <button class="btn" type="submit">Envoyer le message</button>
+  <div class="envoi"><button class="btn" type="submit">Envoyer le message</button><span class="envoi__tourne" hidden aria-hidden="true"><svg class="trotteuse trotteuse--lisse" viewBox="0 0 120 120" role="img" aria-label="Trotteuse, un cran par seconde">
+  <circle class="piste" cx="60" cy="60" r="52"/>
+  <circle class="crans" cx="60" cy="60" r="46"/>
+  <line class="bras" x1="60" y1="66" x2="60" y2="20"/>
+  <circle class="contrepoids" cx="60" cy="74" r="5.5"/>
+</svg>
+
+<svg class="trotteuse trotteuse--lisse" viewBox="0 0 120 120" role="img" aria-label="Indicateur d'activite">
+  <circle class="piste" cx="60" cy="60" r="52"/>
+  <circle class="crans" cx="60" cy="60" r="46"/>
+  <line class="bras" x1="60" y1="66" x2="60" y2="20"/>
+  <circle class="contrepoids" cx="60" cy="74" r="5.5"/>
+</svg></span></div>
   <p class="retour" id="c-retour" role="status" aria-live="polite"></p>
 </form>
 
@@ -35,16 +48,16 @@ chapo: "Décrivez votre besoin en quelques lignes. Nous répondons sous un jour 
   var f=document.getElementById("f-contact"), r=document.getElementById("c-retour"), ouvert=Date.now();
   f.addEventListener("submit", function(e){
     e.preventDefault();
-    var b=f.querySelector("button"); b.disabled=true; r.textContent="Envoi en cours…"; r.className="retour";
+    var b=f.querySelector("button"), tr=f.querySelector(".envoi__tourne"); b.disabled=true; if(tr) tr.hidden=false; r.textContent="Envoi en cours…"; r.className="retour";
     var d=Object.fromEntries(new FormData(f).entries());
     d.instant=ouvert; d.page=location.pathname;
     fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
       .then(function(rep){ return rep.json().then(function(j){ return {st:rep.status,j:j}; }); })
       .then(function(x){
-        if(x.st===200){ f.reset(); r.className="retour ok"; r.textContent="Merci, votre message est parti. Nous répondons sous un jour ouvré."; }
-        else { r.className="retour erreur"; r.textContent=(x.j.erreurs||["Envoi impossible pour le moment."]).join(" "); b.disabled=false; }
+        if(x.st===200){ f.reset(); if(tr) tr.hidden=true; r.className="retour ok"; r.textContent="Merci, votre message est parti. Nous répondons sous un jour ouvré."; }
+        else { if(tr) tr.hidden=true; r.className="retour erreur"; r.textContent=(x.j.erreurs||["Envoi impossible pour le moment."]).join(" "); b.disabled=false; }
       })
-      .catch(function(){ r.className="retour erreur"; r.textContent="L'envoi a échoué. Réessayez, ou écrivez-nous depuis votre messagerie."; b.disabled=false; });
+      .catch(function(){ if(tr) tr.hidden=true; r.className="retour erreur"; r.textContent="L'envoi a échoué. Réessayez, ou écrivez-nous depuis votre messagerie."; b.disabled=false; });
   });
 })();
 </script>

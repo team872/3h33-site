@@ -10,6 +10,7 @@ enseigne: "Veille et montée en compétence continue sur l'IA générative"
 rubrique: "Formations|/formations/"
 priorite: 0.8
 eyebrow: "Rendez-vous · en visioconférence"
+heure: "11:00 → 12:00"
 chapo: "L'IA change toutes les semaines. Ces rendez-vous vous évitent de passer à côté sans y consacrer vos journées."
 faq:
   - À quel rythme ont lieu les rendez-vous ?|Un rendez-vous par mois, en visioconférence, d'une heure environ.

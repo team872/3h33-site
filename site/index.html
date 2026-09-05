@@ -76,8 +76,10 @@ main{position:relative;z-index:2}
 .hero{position:relative;overflow:clip;background:linear-gradient(180deg,var(--ciel-1) 0%,var(--ciel-2) 42%,var(--ciel-3) 66%,#ffffff 100%);padding:150px 0 430px}
 .hero .plan{position:absolute;left:50%;bottom:0;width:max(1600px,112%);transform:translateX(-50%);will-change:transform;pointer-events:none}
 .hero .plan svg{display:block;width:100%;height:auto}
-.hero .plan--soleil{bottom:auto;top:70px;left:auto;right:12%;width:220px;transform:none}
-.plan--soleil .disque{width:220px;height:220px;border-radius:50%;background:radial-gradient(circle at 50% 45%,#ffd37a,#ffb020 60%,rgba(255,176,32,0) 61%);box-shadow:0 0 120px 40px rgba(255,176,32,.18);animation:lever-soleil 2.2s var(--ease) both}
+.hero .plan--sablier{bottom:auto;top:56px;left:auto;right:11%;width:300px;transform:none}
+.hero .plan--sablier .boite{position:relative;aspect-ratio:440/620;line-height:0}
+.hero .plan--sablier canvas{display:block;width:100%;height:auto;opacity:.17}
+html.calme .hero .plan--sablier canvas{opacity:.13}
 @keyframes lever-soleil{from{transform:translateY(160px);opacity:0}to{transform:none;opacity:1}}
 .plan--loin{bottom:210px;z-index:1}
 .plan--milieu{bottom:120px;z-index:2}
@@ -253,7 +255,6 @@ section.chap{padding:100px 0 30px}
 .final .plan{position:absolute;left:50%;bottom:0;width:max(1600px,112%);transform:translateX(-50%);pointer-events:none;will-change:transform}
 .final .plan svg{display:block;width:100%;height:auto}
 .final .plan--milieu{bottom:60px;z-index:1}.final .plan--devant{bottom:-60px;z-index:2}
-.final .soleil-soir{position:absolute;left:50%;bottom:150px;width:260px;height:260px;margin-left:-130px;border-radius:50%;background:radial-gradient(circle at 50% 45%,#ffd37a,#ff9a3c 62%,rgba(255,154,60,0) 63%);box-shadow:0 0 140px 50px rgba(255,154,60,.2);z-index:0}
 .capture{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:44px 48px 40px;border-radius:var(--radius);background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border:1px solid var(--trait);box-shadow:var(--ombre);text-align:center;display:grid;gap:14px;justify-items:center}
 .capture h2{font-size:clamp(26px,3.4vw,44px);max-width:22ch}
 .capture form{display:flex;gap:10px;width:100%;max-width:540px;margin-top:8px}
@@ -288,8 +289,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
 html.calme .fenetre{transform:none}
 @media (max-width:900px){
   .hero{padding:120px 0 300px}.fenetre .corps{grid-template-columns:1fr}.fenetre .gauche{border-right:0;border-bottom:1px solid var(--trait)}
-  .hero .plan--soleil{right:6%;width:150px;top:80px}.plan--soleil .disque{width:150px;height:150px}
-  .topbar .heure{display:none}.bouton-calme{font-size:12.5px;padding:8px 12px}
+  .hero .plan--soleil{right:6%;width:150px;top:80px}  .topbar .heure{display:none}.bouton-calme{font-size:12.5px;padding:8px 12px}
   .intro__grille,.tete,.faq,.forge,.bandes,.scene .diapo{grid-template-columns:1fr}.portrait{max-width:300px}
   .flottantes{grid-template-columns:1fr 1fr}.chiffres,.preuves{grid-template-columns:1fr}
   .scene{height:auto;min-height:620px}.scene .diapo{position:relative;display:none;padding:28px}.scene .diapo.on{display:grid}
@@ -318,7 +318,7 @@ html.calme .fenetre{transform:none}
 
 <main>
   <section class="hero" id="haut">
-    <div class="plan plan--soleil" data-rate="0.05"><div class="disque"></div></div>
+    <div class="plan plan--sablier" data-rate="0.05" aria-hidden="true"><div class="boite"><canvas data-sablier data-duree="28" data-debit="52"></canvas></div></div>
     <div class="oiseaux" aria-hidden="true">
       <div class="oiseau" style="--d:34s;--t:10px"><svg viewBox="0 0 34 14"><path d="M1 12 Q 9 2 17 10 Q 25 2 33 12"/></svg></div>
       <div class="oiseau" style="--d:41s;--t:60px;animation-delay:-14s;transform:scale(.7)"><svg viewBox="0 0 34 14"><path d="M1 12 Q 9 2 17 10 Q 25 2 33 12"/></svg></div>
@@ -486,7 +486,7 @@ html.calme .fenetre{transform:none}
   </section>
 
   <section class="final" id="capture">
-    <div class="soleil-soir" aria-hidden="true"></div>
+    
     <div class="plan plan--milieu" data-rate="0.18"><svg id="svg-final-milieu" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
     <div class="plan plan--devant" data-rate="0.36"><svg id="svg-final-devant" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
     <div class="bloc">
@@ -589,10 +589,10 @@ function rendre(y){
   const vh=innerHeight, calm=immobile();
   const p=Math.max(0,Math.min(1,y/Math.max(1,document.documentElement.scrollHeight-vh)));
   heure.textContent="3h"+String(33+Math.round(p*27)).padStart(2,"0");
-  if(calm){plans.forEach(q=>q.el.style.transform=q.el.classList.contains("plan")&&!q.el.classList.contains("plan--soleil")?"translateX(-50%)":"");fenetre.style.setProperty("--rx","0deg");intros.forEach(q=>q.classList.add("on"));piles.forEach(q=>{q.style.transform="";q.style.filter=""});return}
+  if(calm){plans.forEach(q=>q.el.style.transform=q.el.classList.contains("plan")&&!q.el.classList.contains("plan--sablier")?"translateX(-50%)":"");fenetre.style.setProperty("--rx","0deg");intros.forEach(q=>q.classList.add("on"));piles.forEach(q=>{q.style.transform="";q.style.filter=""});return}
   plans.forEach(q=>{const t=Math.min(y,1400)*q.rate;const sx=(mx*q.souris).toFixed(1),sy=(my*q.souris*0.5).toFixed(1);
     if(q.el.classList.contains("ecran")){q.el.style.transform=`translateY(${(-t).toFixed(1)}px) scale(${(1+Math.min(y,600)/6000).toFixed(3)})`}
-    else if(q.el.classList.contains("plan--soleil")){q.el.style.transform=`translate(${(-mx*8).toFixed(1)}px,${(t*0.8-my*4).toFixed(1)}px)`}
+    else if(q.el.classList.contains("plan--sablier")){q.el.style.transform=`translate(${(-mx*8).toFixed(1)}px,${(t*0.8-my*4).toFixed(1)}px)`}
     else{q.el.style.transform=`translateX(calc(-50% + ${sx}px)) translateY(${(t*0.6+parseFloat(sy)).toFixed(1)}px)`}});
   fenetre.style.setProperty("--rx",(Math.max(0,10-y/30)).toFixed(2)+"deg");
   finaux.forEach(q=>{const r=q.sec.getBoundingClientRect();const d=Math.max(0,vh-r.top);q.el.style.transform=`translateX(-50%) translateY(${(-(d*q.rate)+120).toFixed(1)}px)`});
@@ -677,5 +677,6 @@ document.getElementById("f-mail").addEventListener("submit",e=>{e.preventDefault
   btn.addEventListener("click",()=>{if(!immobile()&&fige){fige=false;requestAnimationFrame(frame)}});
 })();
 </script>
+<script defer src="/sablier.js"></script>
 </body>
 </html>

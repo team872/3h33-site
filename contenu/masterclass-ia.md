@@ -10,6 +10,7 @@ enseigne: "Acculturation à l'intelligence artificielle générative en entrepri
 rubrique: "Formations|/formations/"
 priorite: 0.9
 eyebrow: "Masterclass · 2 heures"
+heure: "14:00 → 16:00"
 chapo: "Deux heures pour comprendre ce que l'IA change vraiment dans vos métiers, avec des démonstrations en direct et aucune ligne de jargon."
 faq:
   - Combien de temps dure la masterclass ?|Deux heures, en présentiel ou en visioconférence, pour un groupe de dix à cent personnes.

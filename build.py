@@ -162,6 +162,21 @@ def fil_dariane(meta):
     fil.append((courant, None))
     return fil
 
+def duree_lecture(corps, meta):
+    """Une horloge et un nombre de minutes, sur les pages qu'on lit vraiment.
+    Deux cents mots la minute. Rien sur les pages légales ni le plan du site."""
+    if meta.get("duree_lecture") == "non" or meta.get("priorite") in ("0.2", "0.3"):
+        return ""
+    mots = len(re.sub(r"<[^>]+>", " ", corps).split())
+    if mots < 260:
+        return ""
+    minutes = max(1, round(mots / 200))
+    return ('<p class="duree-lecture"><svg viewBox="0 0 24 24" aria-hidden="true">'
+            '<circle class="c" cx="12" cy="12" r="9"/>'
+            '<path class="a" d="M12 7v5l3.2 2"/></svg>'
+            f'{minutes} minute{"s" if minutes > 1 else ""} de lecture</p>')
+
+
 def fil_html(meta):
     parts = ['<a href="/">Accueil</a>']
     for nom, lien in fil_dariane(meta):
@@ -211,10 +226,17 @@ def construire(verifie=False):
         page = page.replace("{{jsonld}}", jsonld(meta, url))
         page = page.replace("{{fil}}", fil_html(meta))
         page = page.replace("{{titre}}", esc(meta["titre"]))
-        page = page.replace("{{eyebrow}}", f'<p class="eyebrow">{esc(meta["eyebrow"])}</p>'
-                            if meta.get("eyebrow") else "")
+        if meta.get("heure"):
+            eyebrow = (f'<p class="eyebrow eyebrow--heure">{esc(meta.get("eyebrow", meta["titre"]))} · '
+                       f'<span class="hh">{esc(meta["heure"])}</span></p>')
+        elif meta.get("eyebrow"):
+            eyebrow = f'<p class="eyebrow">{esc(meta["eyebrow"])}</p>'
+        else:
+            eyebrow = ""
+        page = page.replace("{{eyebrow}}", eyebrow)
         page = page.replace("{{chapo}}", f'<p class="chapo">{enligne(esc(meta["chapo"]))}</p>'
                             if meta.get("chapo") else "")
+        page = page.replace("{{duree}}", duree_lecture(corps, meta))
         page = page.replace("{{contenu}}", md(corps))
         dest = SITE / url.strip("/") / "index.html" if url != "/" else SITE / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)

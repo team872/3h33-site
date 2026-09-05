@@ -10,6 +10,7 @@ enseigne: "Pratique de l'IA générative appliquée aux métiers"
 rubrique: "Formations|/formations/"
 priorite: 0.9
 eyebrow: "Ateliers · 1 à 2 jours"
+heure: "09:00 → 17:30"
 chapo: "Vos équipes ne regardent pas une démonstration : elles travaillent sur leurs vrais dossiers, avec les outils qu'elles garderont ensuite."
 faq:
   - Combien de personnes par atelier ?|Entre six et quinze participants, pour que chacun pratique réellement.
