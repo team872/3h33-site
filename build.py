@@ -155,7 +155,11 @@ def fil_dariane(meta):
     if meta.get("rubrique"):
         nom, lien = meta["rubrique"].split("|")
         fil.append((nom.strip(), lien.strip()))
-    fil.append((meta.get("fil", meta["titre"]), None))
+    courant = meta.get("fil", meta["titre"])
+    # ne pas répéter la rubrique quand la page EST la rubrique
+    if fil and fil[-1][0].lower() == courant.lower():
+        return [(courant, None)]
+    fil.append((courant, None))
     return fil
 
 def fil_html(meta):

@@ -39,12 +39,22 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--or);outline-offset:
 .btn--clair{background:#fff;color:var(--ink)!important;border:1.5px solid var(--trait)}
 
 /* fil d'Ariane */
-.fil{max-width:var(--large);margin:0 auto;padding:18px 28px 0;font-size:14px;color:var(--ink-3)}
+.fil{max-width:var(--large);margin:0 auto;padding:16px 28px 0;font-size:14px;color:var(--ink-3)}
 .fil a{color:var(--ink-3)}
 .fil span[aria-current]{color:var(--ink-2);font-weight:600}
 
+/* en-tête illustré, en écho à l'accueil */
+.aube{position:relative;overflow:hidden;background:linear-gradient(180deg,#fff 0%,var(--ground-3) 48%,#fff6e6 78%,#fff 100%);
+  padding:52px 28px 0;margin-bottom:40px}
+.aube__soleil{position:absolute;right:8%;top:34px;width:150px;height:150px;border-radius:50%;
+  background:radial-gradient(circle at 50% 45%,#ffd37a,var(--or) 60%,rgba(255,176,32,0) 61%);
+  box-shadow:0 0 90px 30px rgba(255,176,32,.16)}
+.aube__collines{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:110px;display:block}
+.aube__texte{position:relative;z-index:2;max-width:var(--large);margin:0 auto;padding-bottom:120px}
+@media (max-width:860px){.aube{padding-top:34px}.aube__soleil{width:100px;height:100px;right:5%}.aube__texte{padding-bottom:90px}}
+
 /* page */
-.page{max-width:var(--large);margin:0 auto;padding:10px 28px 40px}
+.page{max-width:var(--large);margin:0 auto;padding:0 28px 40px}
 .page__tete{padding:26px 0 30px;border-bottom:1px solid var(--trait);margin-bottom:34px}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;letter-spacing:.13em;
   text-transform:uppercase;color:var(--acc);font-weight:700;background:var(--ground-2);border:1px solid var(--trait);
