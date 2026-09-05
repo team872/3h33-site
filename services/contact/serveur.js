@@ -112,6 +112,9 @@ async function envoyer(sujet, corps, repondreA) {
 
 // ---------------------------------------------------------------- serveur
 const serveur = http.createServer((req, rep) => {
+  // Traefik transmet le chemin complet : /api/contact/... On le normalise
+  // pour que le service réponde aussi bien derrière le proxy qu'en direct.
+  const chemin = (req.url || "/").replace(/^\/api\/contact/, "") || "/";
   const origine = req.headers.origin || "";
   const autorisee = CONF.origines.includes(origine);
   if (autorisee) {
@@ -123,13 +126,13 @@ const serveur = http.createServer((req, rep) => {
 
   if (req.method === "OPTIONS") { rep.writeHead(204).end(); return; }
 
-  if (req.method === "GET" && req.url === "/sante") {
+  if (req.method === "GET" && (chemin === "/sante" || chemin === "/sante/")) {
     rep.writeHead(200, { "Content-Type": "application/json" });
     rep.end(JSON.stringify({ ok: true, envoiConfigure: Boolean(CONF.smtp.hote && CONF.destinataire) }));
     return;
   }
 
-  if (req.method !== "POST" || !req.url.startsWith("/contact")) {
+  if (req.method !== "POST" || !(chemin === "/" || chemin.startsWith("/contact"))) {
     rep.writeHead(404, { "Content-Type": "application/json" });
     rep.end(JSON.stringify({ erreur: "Adresse inconnue." }));
     return;
