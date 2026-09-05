@@ -80,7 +80,6 @@ main{position:relative;z-index:2}
 .hero .plan--sablier .boite{position:relative;aspect-ratio:440/620;line-height:0}
 .hero .plan--sablier canvas{display:block;width:100%;height:auto;opacity:.17}
 html.calme .hero .plan--sablier canvas{opacity:.13}
-@keyframes lever-soleil{from{transform:translateY(160px);opacity:0}to{transform:none;opacity:1}}
 .plan--loin{bottom:210px;z-index:1}
 .plan--milieu{bottom:120px;z-index:2}
 .plan--devant{bottom:-80px;z-index:5}
@@ -289,7 +288,9 @@ html.calme .mots .m>span{transform:none;opacity:1}
 html.calme .fenetre{transform:none}
 @media (max-width:900px){
   .hero{padding:120px 0 300px}.fenetre .corps{grid-template-columns:1fr}.fenetre .gauche{border-right:0;border-bottom:1px solid var(--trait)}
-  .hero .plan--soleil{right:6%;width:150px;top:80px}  .topbar .heure{display:none}.bouton-calme{font-size:12.5px;padding:8px 12px}
+  .hero .plan--sablier{width:180px;right:-10px;top:auto;bottom:150px}
+  .hero .plan--sablier canvas{opacity:.11}
+  .topbar .heure{display:none}.bouton-calme{font-size:12.5px;padding:8px 12px}
   .intro__grille,.tete,.faq,.forge,.bandes,.scene .diapo{grid-template-columns:1fr}.portrait{max-width:300px}
   .flottantes{grid-template-columns:1fr 1fr}.chiffres,.preuves{grid-template-columns:1fr}
   .scene{height:auto;min-height:620px}.scene .diapo{position:relative;display:none;padding:28px}.scene .diapo.on{display:grid}
