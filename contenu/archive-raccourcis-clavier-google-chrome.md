@@ -1,7 +1,7 @@
 ---
 titre: "Raccourcis clavier Google Chrome"
 titre_seo: "Raccourcis clavier Google Chrome · Archives 3h33"
-description: "fusion_builder_container background_color= » » background_image= » » background_parallax= »none » enable_mobile= »no » parallax_speed= »0.3″…"
+description: "Raccourcis clavier Google Chrome Windows & Mac Raccourcis clavier Windows Raccourcis liés aux onglets et aux fenêtres Ctrl+N Ouvre une nouvelle…"
 url: /archives/raccourcis-clavier-google-chrome/
 type: page
 rubrique: "Archives|/archives/"
@@ -12,7 +12,7 @@ eyebrow: "Archive · 2013"
 chapo: "Cette page fait partie des archives de 3h33. Elle a été publiée en 2013 et n'est plus mise à jour."
 ---
 
-[fusion_builder_container background_color= » » background_image= » » background_parallax= »none » enable_mobile= »no » parallax_speed= »0.3″ background_repeat= »no-repeat » background_position= »left top » video_url= » » video_aspect_ratio= »16:9″ video_webm= » » video_mp4= » » video_ogv= » » video_preview_image= » » overlay_color= » » overlay_opacity= »0.5″ video_mute= »yes » video_loop= »yes » fade= »no » border_size= »0px » border_color= » » border_style= » » padding_top= »20″ padding_bottom= »20″ padding_left= »0″ padding_right= »0″ hundred_percent= »no » equal_height_columns= »no » hide_on_mobile= »no » menu_anchor= » » class= » » id= » »][fusion_builder_row][fusion_builder_column type= »1_1″ background_position= »left top » background_color= » » border_size= » » border_color= » » border_style= »solid » spacing= »yes » background_image= » » background_repeat= »no-repeat » padding= » » margin_top= »0px » margin_bottom= »0px » class= » » id= » » animation_type= » » animation_speed= »0.3″ animation_direction= »left » hide_on_mobile= »no » center_content= »no » min_height= »none »][fusion_title size= »1″ content_align= »left » style_type= »single solid » sep_color= » » class= » » id= » »]Raccourcis clavier Google Chrome (Windows & Mac)[/fusion_title][/fusion_builder_column][fusion_builder_column type= »1_2″ last= »no » spacing= »yes » center_content= »no » hide_on_mobile= »no » background_color= » » background_image= » » background_repeat= »no-repeat » background_position= »left top » border_size= »0px » border_color= » » border_style= » » padding= » » margin_top= » » margin_bottom= » » animation_type= » » animation_direction= » » animation_speed= »0.1″ class= » » id= » »][fusion_text]
+Raccourcis clavier Google Chrome (Windows & Mac)
 
 ## Raccourcis clavier Windows
 
@@ -194,7 +194,7 @@ Ctrl+V ou Maj+Inser Colle le contenu du Presse-papiers.
 
 Ctrl+Maj+V Colle le contenu du Presse-papiers sans la mise en forme.
 
-Ctrl+X ou Maj+Suppr Supprime le contenu en surbrillance et le copie dans le Presse-papiers.[/fusion_text][/fusion_builder_column][fusion_builder_column type= »1_2″ last= »yes » spacing= »yes » center_content= »no » hide_on_mobile= »no » background_color= » » background_image= » » background_repeat= »no-repeat » background_position= »left top » border_size= »0px » border_color= » » border_style= » » padding= » » margin_top= » » margin_bottom= » » animation_type= » » animation_direction= » » animation_speed= »0.1″ class= » » id= » »][fusion_text]
+Ctrl+X ou Maj+Suppr Supprime le contenu en surbrillance et le copie dans le Presse-papiers.
 
 ## Raccourcis clavier Mac
 
@@ -364,4 +364,4 @@ Raccourcis liés au texte
 
 ⌘-: Ouvre la boîte de dialogue « Grammaire et orthographe ».
 
-⌘-; Lance la vérification orthographique sur la page active.[/fusion_text][/fusion_builder_column][/fusion_builder_row][/fusion_builder_container]
+⌘-; Lance la vérification orthographique sur la page active.
