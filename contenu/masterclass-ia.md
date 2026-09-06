@@ -12,7 +12,7 @@ rubrique: "Formations|/formations/"
 priorite: 0.9
 eyebrow: "Masterclass · 2 heures"
 heure: "14:00 → 16:00"
-chapo: "Deux heures pour comprendre ce que l'IA change vraiment dans vos métiers, avec des démonstrations en direct et aucune ligne de jargon."
+chapo: "Deux heures, des démonstrations en direct sur vos propres cas, et une salle qui sait enfin par où commencer."
 faq:
   - Combien de temps dure la masterclass ?|Deux heures, en présentiel ou en visioconférence, pour un groupe de dix à cent personnes.
   - Faut-il des connaissances techniques ?|Aucune. La masterclass s'adresse à des équipes métier, des dirigeants et des agents publics qui n'ont jamais utilisé l'IA générative.
@@ -21,7 +21,7 @@ faq:
 
 ## Pourquoi commencer par une masterclass
 
-L'intelligence artificielle s'est invitée dans les métiers sans prévenir. Les équipes entendent parler de ChatGPT, de Claude, d'agents et d'automatisations, mais peu de gens ont vu ces outils travailler sur leurs propres dossiers.
+Tout le monde a entendu parler de ChatGPT. Presque personne n'a vu l'IA travailler sur ses propres dossiers, dans son métier, avec ses contraintes. C'est toute la différence entre en avoir entendu parler et savoir quoi en faire.
 
 La masterclass sert à ça : montrer, en direct, ce que l'IA sait faire aujourd'hui dans votre secteur, et ce qu'elle ne sait pas faire. Une fois ce socle posé, la question « par où commencer » devient simple.
 

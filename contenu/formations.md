@@ -9,7 +9,7 @@ rubrique: "Formations|"
 fil: "Formations"
 priorite: 0.9
 eyebrow: "Formations"
-chapo: "Quatre façons d'entrer, de la plus légère à la plus engagée. Toutes ont un point commun : on apprend en fabriquant, pas en écoutant."
+chapo: "Quatre formats, de deux heures à deux jours. Un seul point commun : on apprend en fabriquant, jamais en écoutant."
 ---
 
 ## Par où commencer

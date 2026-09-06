@@ -10,7 +10,7 @@ rubrique: "Agence|/agence/"
 fil: "Chatbots et agents"
 priorite: 0.9
 eyebrow: "Agence · agents"
-chapo: "Un bon agent ne récite pas un script : il comprend la question, va chercher la réponse dans vos documents et dit quand il ne sait pas."
+chapo: "Un bon agent ne récite pas un script. Il comprend la question, va chercher dans vos documents, cite le passage utilisé, et dit quand il ne sait pas."
 faq:
   - Quelle différence entre un chatbot et un agent ?|Un chatbot classique suit un arbre de réponses préécrites. Un agent comprend la demande, cherche dans vos documents, peut appeler d'autres outils et formule une réponse propre à la question posée.
   - L'agent peut-il se tromper ?|Oui, comme un humain. On réduit le risque en l'obligeant à citer ses sources, en limitant son périmètre et en lui apprenant à dire qu'il ne sait pas.

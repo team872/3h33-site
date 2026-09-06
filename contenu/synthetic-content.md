@@ -9,7 +9,7 @@ rubrique: "Agence|/agence/"
 fil: "Comédiens virtuels"
 priorite: 0.8
 eyebrow: "Agence · vidéo"
-chapo: "Un texte, une voix, un visage : la vidéo se fabrique sans caméra, sans plateau et sans reprendre le tournage à chaque correction."
+chapo: "Corriger une phrase ne coûtait rien. Corriger une phrase dans une vidéo coûtait une journée de tournage. C'est fini."
 ---
 
 ## L'idée

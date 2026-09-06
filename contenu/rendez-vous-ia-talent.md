@@ -12,7 +12,7 @@ rubrique: "Formations|/formations/"
 priorite: 0.8
 eyebrow: "Rendez-vous · en visioconférence"
 heure: "11:00 → 12:00"
-chapo: "L'IA change toutes les semaines. Ces rendez-vous vous évitent de passer à côté sans y consacrer vos journées."
+chapo: "Une équipe formée en janvier travaille en juin avec des outils qui ont changé trois fois. Une heure par mois suffit à ne pas décrocher."
 faq:
   - À quel rythme ont lieu les rendez-vous ?|Un rendez-vous par mois, en visioconférence, d'une heure environ.
   - Faut-il avoir suivi une formation avant ?|Non, mais les rendez-vous prennent tout leur sens après une masterclass ou un atelier.

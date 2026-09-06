@@ -10,7 +10,7 @@ rubrique: "Agence|/agence/"
 fil: "Contenus avec l'IA"
 priorite: 0.9
 eyebrow: "Agence · contenus"
-chapo: "ChatGPT a fait entrer l'IA dans les bureaux. Depuis, la question n'est plus de savoir si ça marche, mais comment produire vite sans perdre sa voix."
+chapo: "La question n'est plus de savoir si ça marche. C'est de produire vite sans que tous vos textes se mettent à se ressembler."
 faq:
   - Les contenus produits avec l'IA sont-ils pénalisés par Google ?|Non. Google sanctionne les contenus sans valeur, quelle que soit leur origine. Un contenu utile, exact et personnel se positionne, qu'il ait été écrit avec ou sans assistance.
   - Comment garder le ton de la marque ?|En donnant à l'IA de vrais exemples de vos textes, en fixant des règles explicites et en relisant. C'est une bonne partie du travail que nous faisons en atelier.

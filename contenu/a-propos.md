@@ -9,7 +9,7 @@ rubrique: "Le site|"
 fil: "À propos"
 priorite: 0.8
 eyebrow: "À propos"
-chapo: "Une agence qui préfère fabriquer plutôt que présenter, et un organisme de formation qui apprend en construisant."
+chapo: "Une agence qui fabrique au lieu de présenter, et un organisme de formation où l'on apprend en construisant."
 ---
 
 ## L'agence

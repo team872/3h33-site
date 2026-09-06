@@ -10,7 +10,7 @@ rubrique: "Studio|/studio/"
 fil: "Studio créatif"
 priorite: 0.9
 eyebrow: "Studio · création"
-chapo: "Dites ce que vous voulez faire ressentir. Nous écrivons, tournons, composons et montons avec l'IA, sans perdre ce qui fait un film : l'intention."
+chapo: "Dites-nous ce que vous voulez faire ressentir. On écrit, on tourne, on compose et on monte avec l'IA, sans jamais perdre ce qui fait un film : l'intention."
 ---
 
 ## Ce que le studio produit

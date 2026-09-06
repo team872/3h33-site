@@ -9,7 +9,7 @@ rubrique: "Studio|/studio/"
 fil: "Podcasts"
 priorite: 0.8
 eyebrow: "Podcasts"
-chapo: "Deux émissions, deux formats : des conversations bousculées par des IA, et des portraits de celles et ceux qui construisent cette technologie."
+chapo: "Deux émissions. L'une fait dialoguer des invités avec des IA en direct, l'autre dresse le portrait de ceux qui construisent cette technologie."
 ---
 
 ## Choucroute Citron

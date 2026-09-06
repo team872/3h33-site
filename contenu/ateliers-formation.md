@@ -12,7 +12,7 @@ rubrique: "Formations|/formations/"
 priorite: 0.9
 eyebrow: "Ateliers · 1 à 2 jours"
 heure: "09:00 → 17:30"
-chapo: "Vos équipes ne regardent pas une démonstration : elles travaillent sur leurs vrais dossiers, avec les outils qu'elles garderont ensuite."
+chapo: "Personne ne regarde une démonstration. Chacun travaille sur ce qui lui prend du temps, avec les outils qu'il gardera ensuite."
 faq:
   - Combien de personnes par atelier ?|Entre six et quinze participants, pour que chacun pratique réellement.
   - Sur quels outils travaille-t-on ?|Sur ceux que vous utiliserez ensuite. Le choix se fait avec vous selon vos contraintes de sécurité et de budget.
@@ -21,7 +21,7 @@ faq:
 
 ## Apprendre en faisant
 
-Une formation à l'IA qui se contente d'expliquer ne change rien. Trois jours après, les outils sont oubliés et personne ne les ouvre.
+Une formation qui se contente d'expliquer ne change rien. Trois jours après, les outils sont refermés et personne ne les rouvre. Le problème n'est pas la compréhension, c'est le premier usage réel.
 
 Nos ateliers partent donc des dossiers de vos équipes : les courriers qu'elles écrivent, les comptes rendus qu'elles rédigent, les données qu'elles trient, les réponses qu'elles préparent. À la fin de la journée, chacun a produit quelque chose d'utilisable.
 

@@ -9,7 +9,7 @@ rubrique: "Vibe coding|/vibe-coding/"
 fil: "LMA"
 priorite: 0.9
 eyebrow: "Un mot nouveau, pour une chose nouvelle"
-chapo: "Nous appelons LMA, pour Learning Management Agentique, ce que devient une plateforme d'apprentissage quand des agents y travaillent en continu à la place d'un catalogue figé."
+chapo: "Un LMS range des cours. Un LMA les fait travailler : il retrouve, explique, interroge et s'adapte. Nous appelons ça le Learning Management Agentique."
 faq:
   - Que veut dire LMA ?|LMA signifie Learning Management Agentique. Le terme désigne une plateforme d'apprentissage dont le cœur n'est plus un catalogue de cours à parcourir, mais des agents qui retrouvent l'information, l'expliquent, interrogent l'apprenant et suivent sa progression.
   - Quelle différence avec un LMS ?|Un LMS, Learning Management System, range des contenus et suit des inscriptions. Un LMA travaille sur ces contenus : il retrouve le passage exact qui répond à une question, reformule pour le niveau de la personne, pose des questions et adapte la suite du parcours.

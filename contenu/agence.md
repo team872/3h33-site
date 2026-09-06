@@ -9,7 +9,7 @@ rubrique: "Agence|"
 fil: "Agence"
 priorite: 0.9
 eyebrow: "L'agence"
-chapo: "Nous ne vendons pas de l'intelligence artificielle. Nous l'utilisons pour fabriquer ce dont vous avez besoin, et nous apprenons à vos équipes à faire de même."
+chapo: "Nous ne vendons pas d'intelligence artificielle. Nous fabriquons avec, ce dont vous avez besoin, et nous apprenons à vos équipes à en faire autant."
 ---
 
 ## Ce que nous faisons
