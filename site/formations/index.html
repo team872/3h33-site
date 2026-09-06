@@ -184,6 +184,40 @@ document.querySelector(".burger").addEventListener("click",function(){
   this.setAttribute("aria-expanded",String(o));
 });
 </script>
+<script>
+/* Le trace au crayon. Chrome et Edge le font en CSS avec animation-timeline ;
+   Safari et Firefox ne le savent pas encore, alors on le pilote a la main.
+   Dans les deux cas le dessin finit visible : il ne peut jamais rester cache. */
+(function(){
+  var css = CSS && CSS.supports && CSS.supports("animation-timeline: view()");
+  if (css) return;                                  // le CSS s'en charge
+  var images = [].slice.call(document.querySelectorAll(".dessin img"));
+  if (!images.length) return;
+  var calme = document.documentElement.classList.contains("calme")
+           || matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (calme) return;                                 // au repos : rien a animer
+  images.forEach(function(img){ img.dataset.trace = "0"; });
+  var enCours = false;
+  function place(){
+    enCours = false;
+    var h = innerHeight;
+    images.forEach(function(img){
+      var r = img.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > h) return;
+      /* 0 quand le haut de l'image entre par le bas, 1 quand elle est aux trois quarts montee */
+      var p = (h - r.top) / (h * 0.78 + r.height * 0.2);
+      p = Math.max(0, Math.min(1, p));
+      var f = (p * 106).toFixed(1);
+      img.style.webkitMaskImage = "linear-gradient(100deg,#000 0%,#000 " + f + "%,transparent " + (+f + 6) + "%,transparent 100%)";
+      img.style.maskImage = img.style.webkitMaskImage;
+      img.style.opacity = (0.55 + 0.45 * p).toFixed(2);
+    });
+  }
+  addEventListener("scroll", function(){ if(!enCours){ enCours = true; requestAnimationFrame(place); } }, {passive:true});
+  addEventListener("resize", place);
+  place();
+})();
+</script>
 <script defer src="/sablier.js"></script>
 <script>
 /* L'avancement de lecture : la seule notion de temps qui soit toujours vraie.

@@ -397,12 +397,12 @@ html.calme .fenetre{transform:none}
         <button role="tab" aria-selected="false" data-d="4">IA Conforme</button>
       </div>
       <div class="scene spot" id="scene" data-spot>
-        <div class="diapo on" data-legende="NegoVox · le simulateur vocal des équipes commerciales">
-          <div><span class="tag">voix · 2 minutes</span><h3 style="margin-top:14px">Cent fois la conversation difficile. Avant la vraie.</h3><p class="texte">Le commercial choisit son scénario et parle à voix haute avec un client qui résiste vraiment. Il reçoit un débrief sur douze compétences, et recommence autant qu'il veut.</p><a class="vignette vignette--demo" href="https://negovox.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>negovox.com</em></span><img src="/vignettes/negovox.jpg" alt="La page d'accueil de NegoVox" loading="lazy" width="760" height="412"></a></div>
+        <div class="diapo on" data-legende="NegoVox · s'entraîner cent fois avant le vrai rendez-vous">
+          <div><span class="tag">voix · 2 minutes</span><h3 style="margin-top:14px">Le rendez-vous décisif se joue avant le rendez-vous.</h3><p class="texte">Votre commercial affronte cent fois le client le plus difficile, à voix haute, face à quelqu'un qui résiste vraiment. Débrief immédiat sur douze compétences, et il recommence jusqu'à ce que ça passe. Le vrai entretien n'est plus le premier essai.</p><a class="vignette vignette--demo" href="https://negovox.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>negovox.com</em></span><img src="/vignettes/negovox.jpg" alt="La page d'accueil de NegoVox" loading="lazy" width="760" height="412"></a></div>
           <div class="visuel"><div class="ondes" aria-hidden="true"><span style="animation-delay:0s"></span><span style="animation-delay:.1s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:.15s"></span><span style="animation-delay:.05s"></span><span style="animation-delay:.25s"></span><span style="animation-delay:.35s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.1s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:0s"></span></div><div class="repl"><b>Vous :</b> « Cette pièce est à 4 200 €. »</div><div class="repl"><b>La cliente IA :</b> « Je l'ai vue à 3 600 rue Saint-Honoré. Qu'est-ce qui justifie 600 € de plus ? »</div><p class="mention">Maquette : le vrai simulateur, avec micro, sera branché ici.</p></div>
         </div>
-        <div class="diapo" data-legende="chapitre.ai · l'IA-biographe qui écrit votre livre">
-          <div><span class="tag">voix → livre</span><h3 style="margin-top:14px">Vous parlez. Elle écrit votre livre.</h3><p class="texte">Une IA-biographe vous interviewe à la voix, recueille votre histoire et l'écrit. À la fin, un vrai livre. Vos souvenirs restent privés et hébergés en France.</p><a class="vignette vignette--demo" href="https://chapitre.ai" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>chapitre.ai</em></span><img src="/vignettes/chapitre.jpg" alt="La page d'accueil de chapitre.ai" loading="lazy" width="760" height="412"></a></div>
+        <div class="diapo" data-legende="chapitre.ai · l'IA-biographe qui recueille une vie">
+          <div><span class="tag">voix → livre</span><h3 style="margin-top:14px">Vos parents ont une histoire. Personne ne l'a écrite.</h3><p class="texte">Une IA-biographe les interroge à la voix, patiemment, séance après séance, et en fait un livre. Ils corrigent en parlant, sans jamais toucher un clavier. Leurs souvenirs restent privés, hébergés en France.</p><a class="vignette vignette--demo" href="https://chapitre.ai" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>chapitre.ai</em></span><img src="/vignettes/chapitre.jpg" alt="La page d'accueil de chapitre.ai" loading="lazy" width="760" height="412"></a></div>
           <div class="visuel"><div class="repl"><b>Vous :</b> « Ma grand-mère tenait l'épicerie de la rue des Carmes… »</div><div class="page-livre"><div class="chapitre">Chapitre 3</div><div class="titre-livre">La rue des Carmes</div><p>On entrait par la cour. L'épicerie sentait le café moulu et le savon de Marseille, et la cloche de la porte sonnait deux fois, comme si elle hésitait.</p></div></div>
         </div>
         <div class="diapo" data-legende="BotMoiLeQi · le fait du jour, en 90 secondes">
@@ -690,6 +690,27 @@ document.getElementById("f-mail").addEventListener("submit",e=>{e.preventDefault
   requestAnimationFrame(frame);
   document.addEventListener("visibilitychange",()=>{if(!document.hidden&&fige&&!immobile()){fige=false;requestAnimationFrame(frame)}});
   btn.addEventListener("click",()=>{if(!immobile()&&fige){fige=false;requestAnimationFrame(frame)}});
+})();
+</script>
+<script>
+/* trace-accueil : les dessins des offres et du studio se revelent en montant */
+(function(){
+  var imgs=[].slice.call(document.querySelectorAll(".pile__media--dessin img,.carte__img"));
+  if(!imgs.length) return;
+  if(document.documentElement.classList.contains("calme")||matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var att=false;
+  function place(){
+    att=false; var h=innerHeight;
+    imgs.forEach(function(i){
+      var r=i.getBoundingClientRect(); if(r.bottom<0||r.top>h) return;
+      var p=Math.max(0,Math.min(1,(h-r.top)/(h*0.8)));
+      var f=(p*106).toFixed(1);
+      i.style.webkitMaskImage="linear-gradient(100deg,#000 0%,#000 "+f+"%,transparent "+(+f+6)+"%,transparent 100%)";
+      i.style.maskImage=i.style.webkitMaskImage;
+    });
+  }
+  addEventListener("scroll",function(){if(!att){att=true;requestAnimationFrame(place);}},{passive:true});
+  addEventListener("resize",place); place();
 })();
 </script>
 <script defer src="/sablier.js"></script>
