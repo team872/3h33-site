@@ -119,12 +119,9 @@ main{position:relative;z-index:2}
 .hero__preuves span{font-size:13.5px;color:var(--ink-3);max-width:15ch;line-height:1.3}
 /* le sablier prend la colonne de droite, entier, jamais derrière le titre */
 .hero .plan--sablier{top:150px;right:4%;width:340px}
-@media (max-width:1180px){.hero .plan--sablier{width:250px;right:2%;top:150px;opacity:.9}}
-@media (max-width:900px){
-  .hero{padding-top:104px}
-  .hero .plan--sablier{width:170px;right:-8px;top:auto;bottom:180px}
-  .hero__preuves{gap:22px}.hero__preuves b{font-size:25px}
-}
+
+
+
 
 /* ---------- hero en plans ---------- */
 .hero{position:relative;overflow:clip;background:linear-gradient(180deg,var(--ciel-1) 0%,var(--ciel-2) 44%,var(--ciel-3) 70%,#ffffff 100%);padding:150px 0 380px}
@@ -362,14 +359,35 @@ html.calme .mots .m>span{transform:none;opacity:1}
 html.calme .fenetre{transform:none}
 @media (max-width:900px){
   .hero{padding:120px 0 300px}.fenetre .corps{grid-template-columns:1fr}.fenetre .gauche{border-right:0;border-bottom:1px solid var(--trait)}
-  .hero .plan--sablier{width:180px;right:-10px;top:auto;bottom:150px}
-  .hero .plan--sablier canvas{opacity:.11}
   .bouton-calme{font-size:12.5px;padding:8px 12px}
   .intro__grille,.tete,.faq,.forge,.bandes,.scene .diapo{grid-template-columns:1fr}.portrait{max-width:300px}
   .flottantes{grid-template-columns:1fr 1fr}.chiffres,.preuves{grid-template-columns:1fr}
   .scene{height:auto;min-height:620px}.scene .diapo{position:relative;display:none;padding:28px}.scene .diapo.on{display:grid}
   .pile{grid-template-columns:1fr;height:auto}.pile__media{min-height:220px}.capture form{flex-direction:column}
   .bandeau{padding-top:40px}
+}
+
+/* Les tailles d'ecran, en dernier : elles doivent avoir le dernier mot
+   sur les regles de base ecrites plus haut. */
+@media (max-width:1180px){.hero .plan--sablier{width:250px;right:2%;top:150px}}
+@media (max-width:900px){
+  .hero{padding-top:104px}
+  /* Le sablier remonte derriere le titre, en vrai filigrane : plus grand,
+     plus pale, il tient le coin superieur droit sans gener la lecture. */
+  .hero .plan--sablier{width:200px;right:-26px;top:64px;bottom:auto}
+  .hero .plan--sablier canvas{opacity:.15}
+  /* Les trois preuves tiennent sur une seule ligne, chacune dans sa colonne. */
+  .hero__preuves{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:none;
+    margin-top:18px;padding-top:18px}
+  .hero__preuves li{gap:1px}
+  .hero__preuves b{font-size:23px}
+  .hero__preuves span{font-size:12px;max-width:none;line-height:1.25}
+}
+@media (max-width:400px){
+  .hero__preuves{gap:10px}
+  .hero__preuves b{font-size:21px}
+  .hero__preuves span{font-size:11.5px}
+  .hero .plan--sablier{width:172px;right:-24px;top:70px}
 }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://3h33.com/#organisation","name":"3h33","alternateName":"3h33, l'agence de l'IA","url":"https://3h33.com/","logo":"https://3h33.com/medias/partage.jpg","description":"Agence et organisme de formation spécialisés dans les usages de l'intelligence artificielle générative : masterclass, ateliers, sessions Forge, studio créatif.","foundingDate":"2010","email":"info@3h33.fr","areaServed":"FR","founder":{"@type":"Person","@id":"https://3h33.com/#alexandre"},"sameAs":["https://alexandrestopnicki.com","https://fr.linkedin.com/in/alexandrestopnicki","https://twitter.com/alexandre3h33","https://www.facebook.com/3h33.FORMATIONS","https://instagram.com/alexandre3h33","https://choucroute-citron.com"],"knowsAbout":["Intelligence artificielle générative","Vibe coding","Formation professionnelle","Agents conversationnels","Learning Management Agentique","Production audiovisuelle par IA"]},{"@type":"Person","@id":"https://3h33.com/#alexandre","name":"Alexandre Stopnicki","jobTitle":"Fondateur de 3h33, formateur et conférencier en intelligence artificielle","url":"https://alexandrestopnicki.com","image":"https://3h33.com/medias/alexandre-stopnicki.jpg","worksFor":{"@id":"https://3h33.com/#organisation"},"sameAs":["https://fr.linkedin.com/in/alexandrestopnicki","https://alexandre.ai"]},{"@type":"WebSite","@id":"https://3h33.com/#site","url":"https://3h33.com/","name":"3h33","inLanguage":"fr-FR","publisher":{"@id":"https://3h33.com/#organisation"}},{"@type":"WebPage","@id":"https://3h33.com/#accueil","url":"https://3h33.com/","name":"3h33, l'agence de l'IA","isPartOf":{"@id":"https://3h33.com/#site"},"about":{"@id":"https://3h33.com/#organisation"},"description":"3h33 forme vos équipes à l'IA en construisant avec elles des outils qui tournent le lendemain."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Faut-il une équipe technique pour travailler avec 3h33 ?","acceptedAnswer":{"@type":"Answer","text":"Non. Les ateliers et la Forge sont faits pour des équipes métier. Ce qui est construit vous est livré documenté, et l'on vous apprend à le faire vivre."}},{"@type":"Question","name":"Que se passe-t-il pendant une session Forge ?","acceptedAnswer":{"@type":"Answer","text":"Une demi-journée en visioconférence : on part d'un besoin réel, on construit en direct l'agent, l'automatisation ou le tableau de bord, puis une phase de consolidation le rend propre et documenté."}},{"@type":"Question","name":"Nos données restent-elles chez nous ?","acceptedAnswer":{"@type":"Answer","text":"Oui quand c'est nécessaire : nous savons travailler avec des modèles hébergés en Europe ou installés chez vous. La question est posée dès le premier échange."}},{"@type":"Question","name":"Travaillez-vous avec les collectivités ?","acceptedAnswer":{"@type":"Answer","text":"Oui, formation des agents et construction d'outils pour plusieurs communes, dont la mairie de Laxou. Le point d'entrée dédié est mairie.ai."}}]}]}</script>
@@ -421,9 +439,9 @@ html.calme .fenetre{transform:none}
           <a class="lien lien--hero" href="#capture">Recevoir une démo par semaine</a>
         </div>
         <ul class="hero__preuves">
-          <li><b>34</b><span>sites et outils en ligne</span></li>
+          <li><b>34</b><span>sites et outils<br>en ligne</span></li>
           <li><b>16</b><span>ans d'agence</span></li>
-          <li><b>½</b><span>journée pour livrer</span></li>
+          <li><b>½</b><span>journée<br>pour livrer</span></li>
         </ul>
       </div>
     </div>
