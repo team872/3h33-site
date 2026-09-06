@@ -89,13 +89,19 @@ Trente-quatre sites et outils sont en ligne aujourd'hui, tous fabriqués de cett
 
 Ce n'est pas un chatbot déguisé : c'est un produit complet, avec un parcours d'entretien, une fabrication de livre et des options de bande dessinée ou de film.
 
+<a class="vignette" href="https://chapitre.ai" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>chapitre.ai</em></span><img src="/vignettes/chapitre.jpg" alt="La page d'accueil de chapitre.ai" loading="lazy" width="760" height="412"></a>
+
 ### BotMoiLeQi — un rituel quotidien
 
 [botmoileqi.com](https://botmoileqi.com) publie chaque matin un fait surprenant et sourcé, à lire ou à écouter en quatre-vingt-dix secondes. Un objet simple en apparence, mais qui suppose une chaîne complète : trouver, vérifier, sourcer, rédiger, mettre en voix, publier, tous les jours.
 
+<a class="vignette" href="https://botmoileqi.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>botmoileqi.com</em></span><img src="/vignettes/botmoileqi.jpg" alt="La page d'accueil de BotMoiLeQi" loading="lazy" width="760" height="412"></a>
+
 ### Subsidium — agir là où vous vivez
 
 [subsidium.world](https://subsidium.world) est la plus grosse de nos plateformes. Elle réunit une communauté, des outils et des IA qui préparent le travail sans jamais décider à la place des gens : on y dépose une idée, elle rencontre ceux qui peuvent l'aider, elle devient un projet situé, et elle sert ensuite à d'autres ailleurs. Repair cafés, compostage de quartier, aide aux personnes âgées : des projets réels, portés par quelqu'un.
+
+<a class="vignette" href="https://subsidium.world" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>subsidium.world</em></span><img src="/vignettes/subsidium.jpg" alt="La page d'accueil de Subsidium" loading="lazy" width="760" height="412"></a>
 
 La liste complète vit dans [la galaxie 3h33](/galaxie/).
 
