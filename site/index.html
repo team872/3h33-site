@@ -124,7 +124,7 @@ main{position:relative;z-index:2}
 
 
 /* ---------- hero en plans ---------- */
-.hero{position:relative;overflow:clip;background:linear-gradient(180deg,var(--ciel-1) 0%,var(--ciel-2) 44%,var(--ciel-3) 70%,#ffffff 100%);padding:150px 0 380px}
+.hero{position:relative;overflow:clip;background:linear-gradient(180deg,var(--ciel-1) 0%,var(--ciel-2) 44%,var(--ciel-3) 70%,#ffffff 100%);padding:150px 0 230px}
 .hero .plan{position:absolute;left:50%;bottom:0;width:max(1600px,112%);transform:translateX(-50%);will-change:transform;pointer-events:none}
 .hero .plan svg{display:block;width:100%;height:auto}
 .hero .plan--sablier{bottom:auto;top:56px;left:auto;right:11%;width:300px;transform:none}
@@ -147,12 +147,15 @@ html.calme .hero .plan--sablier canvas{opacity:.13}
 
 
 @keyframes apparait{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-.ecran{position:relative;z-index:4;width:min(940px,90vw);margin:34px auto 0;will-change:transform;perspective:1400px;animation:apparait 1.2s 1.2s var(--ease) both}
-.fenetre{background:#fff;border-radius:18px;border:1px solid var(--trait);box-shadow:0 60px 120px -40px rgba(15,21,36,.45),0 0 0 8px rgba(255,255,255,.4);overflow:hidden;transform:rotateX(var(--rx,10deg));transform-origin:50% 100%;transition:transform .1s linear}
+.ecran{position:relative;z-index:4;width:min(960px,100%);margin:8px auto 0}
+.ecran__intro{max-width:960px;margin:74px auto 0;text-align:center}
+.ecran__intro h3{font-size:clamp(22px,2.4vw,30px);letter-spacing:-.02em;margin:0 0 10px}
+.ecran__intro p{color:var(--ink-2);max-width:60ch;margin:0 auto;font-size:16.5px}
+.fenetre{background:#fff;border-radius:18px;border:1px solid var(--trait);box-shadow:0 34px 70px -34px rgba(15,21,36,.30);overflow:hidden}
 .fenetre .barre{display:flex;gap:6px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--trait);background:#f8fafc}
 .fenetre .barre i{width:10px;height:10px;border-radius:50%;background:#dfe5f0;display:block}
 .fenetre .barre span{margin-left:12px;font-family:var(--mono);font-size:12px;color:var(--ink-3)}
-.fenetre .corps{display:grid;grid-template-columns:1fr 1.3fr;min-height:320px}
+.fenetre .corps{display:grid;grid-template-columns:1fr 1.3fr}
 .fenetre .gauche{padding:26px 28px;border-right:1px solid var(--trait);display:flex;flex-direction:column;gap:12px}
 .fenetre .droite{padding:26px 28px;background:linear-gradient(180deg,#fff,#f3f7fd)}
 .tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--acc);border-radius:999px;padding:4px 10px;white-space:nowrap;font-weight:700;align-self:flex-start}
@@ -191,7 +194,7 @@ html.calme .chantier li{opacity:1;transform:none}html.calme .jauge__fill{width:1
 .logo-c img{max-width:100%;max-height:100%;object-fit:contain;filter:grayscale(1) contrast(1.05);opacity:.75;transition:filter .3s,opacity .3s}
 .logo-c:hover img{filter:none;opacity:1}
 /* ---------- sections ---------- */
-section.chap{padding:100px 0 30px}
+section.chap{padding:100px 28px 30px}
 .tete{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:end;margin-bottom:34px}
 .tete .desc{color:var(--ink-2);font-size:18px;max-width:52ch;margin:0}
 .tete .chip{margin-bottom:14px}
@@ -356,9 +359,8 @@ footer .bloc{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 html.calme *,html.calme *::before,html.calme *::after{animation:none!important;transition:none!important}
 html.calme #verre{opacity:.3}
 html.calme .mots .m>span{transform:none;opacity:1}
-html.calme .fenetre{transform:none}
 @media (max-width:900px){
-  .hero{padding:120px 0 300px}.fenetre .corps{grid-template-columns:1fr}.fenetre .gauche{border-right:0;border-bottom:1px solid var(--trait)}
+  .hero{padding:120px 0 170px}.fenetre .corps{grid-template-columns:1fr}.fenetre .gauche{border-right:0;border-bottom:1px solid var(--trait)}
   .bouton-calme{font-size:12.5px;padding:8px 12px}
   .intro__grille,.tete,.faq,.forge,.bandes,.scene .diapo{grid-template-columns:1fr}.portrait{max-width:300px}
   .flottantes{grid-template-columns:1fr 1fr}.chiffres,.preuves{grid-template-columns:1fr}
@@ -374,7 +376,7 @@ html.calme .fenetre{transform:none}
   .hero{padding-top:104px}
   /* Le sablier remonte derriere le titre, en vrai filigrane : plus grand,
      plus pale, il tient le coin superieur droit sans gener la lecture. */
-  .hero .plan--sablier{width:200px;right:-26px;top:64px;bottom:auto}
+  .hero .plan--sablier{width:186px;right:12px;top:64px;bottom:auto}
   .hero .plan--sablier canvas{opacity:.15}
   /* Les trois preuves tiennent sur une seule ligne, chacune dans sa colonne. */
   .hero__preuves{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:none;
@@ -387,7 +389,7 @@ html.calme .fenetre{transform:none}
   .hero__preuves{gap:10px}
   .hero__preuves b{font-size:21px}
   .hero__preuves span{font-size:11.5px}
-  .hero .plan--sablier{width:172px;right:-24px;top:70px}
+  .hero .plan--sablier{width:156px;right:8px;top:70px}
 }
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://3h33.com/#organisation","name":"3h33","alternateName":"3h33, l'agence de l'IA","url":"https://3h33.com/","logo":"https://3h33.com/medias/partage.jpg","description":"Agence et organisme de formation spécialisés dans les usages de l'intelligence artificielle générative : masterclass, ateliers, sessions Forge, studio créatif.","foundingDate":"2010","email":"info@3h33.fr","areaServed":"FR","founder":{"@type":"Person","@id":"https://3h33.com/#alexandre"},"sameAs":["https://alexandrestopnicki.com","https://fr.linkedin.com/in/alexandrestopnicki","https://twitter.com/alexandre3h33","https://www.facebook.com/3h33.FORMATIONS","https://instagram.com/alexandre3h33","https://choucroute-citron.com"],"knowsAbout":["Intelligence artificielle générative","Vibe coding","Formation professionnelle","Agents conversationnels","Learning Management Agentique","Production audiovisuelle par IA"]},{"@type":"Person","@id":"https://3h33.com/#alexandre","name":"Alexandre Stopnicki","jobTitle":"Fondateur de 3h33, formateur et conférencier en intelligence artificielle","url":"https://alexandrestopnicki.com","image":"https://3h33.com/medias/alexandre-stopnicki.jpg","worksFor":{"@id":"https://3h33.com/#organisation"},"sameAs":["https://fr.linkedin.com/in/alexandrestopnicki","https://alexandre.ai"]},{"@type":"WebSite","@id":"https://3h33.com/#site","url":"https://3h33.com/","name":"3h33","inLanguage":"fr-FR","publisher":{"@id":"https://3h33.com/#organisation"}},{"@type":"WebPage","@id":"https://3h33.com/#accueil","url":"https://3h33.com/","name":"3h33, l'agence de l'IA","isPartOf":{"@id":"https://3h33.com/#site"},"about":{"@id":"https://3h33.com/#organisation"},"description":"3h33 forme vos équipes à l'IA en construisant avec elles des outils qui tournent le lendemain."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Faut-il une équipe technique pour travailler avec 3h33 ?","acceptedAnswer":{"@type":"Answer","text":"Non. Les ateliers et la Forge sont faits pour des équipes métier. Ce qui est construit vous est livré documenté, et l'on vous apprend à le faire vivre."}},{"@type":"Question","name":"Que se passe-t-il pendant une session Forge ?","acceptedAnswer":{"@type":"Answer","text":"Une demi-journée en visioconférence : on part d'un besoin réel, on construit en direct l'agent, l'automatisation ou le tableau de bord, puis une phase de consolidation le rend propre et documenté."}},{"@type":"Question","name":"Nos données restent-elles chez nous ?","acceptedAnswer":{"@type":"Answer","text":"Oui quand c'est nécessaire : nous savons travailler avec des modèles hébergés en Europe ou installés chez vous. La question est posée dès le premier échange."}},{"@type":"Question","name":"Travaillez-vous avec les collectivités ?","acceptedAnswer":{"@type":"Answer","text":"Oui, formation des agents et construction d'outils pour plusieurs communes, dont la mairie de Laxou. Le point d'entrée dédié est mairie.ai."}}]}]}</script>
@@ -443,21 +445,6 @@ html.calme .fenetre{transform:none}
           <li><b>16</b><span>ans d'agence</span></li>
           <li><b>½</b><span>journée<br>pour livrer</span></li>
         </ul>
-      </div>
-    </div>
-    <div class="ecran" data-rate="0.28">
-      <div class="fenetre" id="fenetre">
-        <div class="barre"><i></i><i></i><i></i><span>session forge · exemple · 14:02 → 17:30</span></div>
-        <div class="corps">
-          <div class="gauche"><span class="tag">forge · ½ journée</span><h3>Un besoin le matin, un outil le soir</h3><p style="color:var(--ink-2);font-size:15px;margin:0">Besoin exprimé le matin par une mairie : répondre aux courriers des administrés en deux minutes, sans rien perdre du ton.</p><div class="jauge"><div class="jauge__fill" id="jauge"></div></div><div class="jauge__l" id="jauge-l">14:02 · on commence</div></div>
-          <div class="droite"><ul class="chantier" id="chantier">
-            <li data-h="14:02"><span><b>Besoin décrit</b> avec l'équipe, sur trois courriers réels</span></li>
-            <li data-h="14:20"><span><b>Premier prototype</b> : brouillon de réponse généré, ton de la mairie respecté</span></li>
-            <li data-h="15:45"><span><b>Testé par les agents</b> sur douze courriers, deux corrections</span></li>
-            <li data-h="17:10"><span><b>Documenté</b> : qui fait quoi, avec quelles données, en douze pages</span></li>
-            <li data-h="17:30"><span><b>En ligne</b>, utilisé dès le lendemain matin</span></li>
-          </ul></div>
-        </div>
       </div>
     </div>
     <div class="plan plan--devant" data-rate="0.5" data-souris="22"><svg id="svg-devant" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
@@ -556,18 +543,38 @@ html.calme .fenetre{transform:none}
     </div>
     <div class="piles" id="piles">
       <div class="pile spot" data-pile data-spot>
-        <div class="pile__texte"><span class="pile__label">◆ Masterclass · 2 heures</span><div class="pile__titre">Deux heures pour savoir par où commencer.</div><p class="pile__p">On démontre en direct, sur vos propres cas, sans une ligne de jargon. Vos équipes repartent en sachant ce qui les concerne et ce qui ne les concerne pas.</p><div class="pile__pied"><a class="lien" href="#">Voir la masterclass</a></div></div>
+        <div class="pile__texte"><span class="pile__label">◆ Masterclass · 2 heures</span><div class="pile__titre">Deux heures pour savoir par où commencer.</div><p class="pile__p">On démontre en direct, sur vos propres cas, sans une ligne de jargon. Vos équipes repartent en sachant ce qui les concerne et ce qui ne les concerne pas.</p><div class="pile__pied"><a class="lien" href="/masterclass-ia/">Voir la masterclass</a></div></div>
         <div class="pile__media pile__media--dessin"><img src="/dessins/flux-masterclass.jpg" alt="Une masterclass devant un petit groupe, croquis au crayon" loading="lazy" width="1400" height="933"></div></div>
       </div>
       <div class="pile spot" data-pile data-spot>
-        <div class="pile__texte"><span class="pile__label">◆ Ateliers · 1 à 2 jours</span><div class="pile__titre">Vos équipes pratiquent sur leurs vrais dossiers.</div><p class="pile__p">Contenus, données, automatisations : chacun travaille sur ce qui lui prend du temps, avec les outils qu'il gardera. À la fin de la journée, l'usage est installé.</p><div class="pile__pied"><a class="lien" href="#">Voir les ateliers</a></div></div>
+        <div class="pile__texte"><span class="pile__label">◆ Ateliers · 1 à 2 jours</span><div class="pile__titre">Vos équipes pratiquent sur leurs vrais dossiers.</div><p class="pile__p">Contenus, données, automatisations : chacun travaille sur ce qui lui prend du temps, avec les outils qu'il gardera. À la fin de la journée, l'usage est installé.</p><div class="pile__pied"><a class="lien" href="/ateliers-formation/">Voir les ateliers</a></div></div>
         <div class="pile__media pile__media--dessin"><img src="/dessins/flux-atelier.jpg" alt="Deux collègues en atelier sur un ordinateur, croquis au crayon" loading="lazy" width="1400" height="933"></div></div>
       </div>
       <div class="pile spot" data-pile data-spot>
-        <div class="pile__texte"><span class="pile__label">◆ Forge · ½ journée + consolidation</span><div class="pile__titre">Une demi-journée avec vos équipes. Un outil qui tourne le lendemain.</div><p class="pile__p">Un agent, une automatisation, un tableau de bord. On le fabrique avec vous pendant la séance, on le documente, on le met en ligne. Le code est à vous.</p><div class="pile__pied"><a class="lien" href="#">Voir la Forge</a></div></div>
+        <div class="pile__texte"><span class="pile__label">◆ Forge · ½ journée + consolidation</span><div class="pile__titre">Une demi-journée avec vos équipes. Un outil qui tourne le lendemain.</div><p class="pile__p">Un agent, une automatisation, un tableau de bord. On le fabrique avec vous pendant la séance, on le documente, on le met en ligne. Le code est à vous.</p><div class="pile__pied"><a class="lien" href="/forge/">Voir la Forge</a></div></div>
         <div class="pile__media pile__media--dessin"><img src="/dessins/flux-vibecoding.jpg" alt="Des mains au clavier et une structure qui s'assemble, croquis au crayon" loading="lazy" width="1400" height="933"></div></div>
       </div>
     </div>
+    <div class="ecran__intro reveal" id="deroule">
+      <h3>À quoi ressemble une demi-journée</h3>
+      <p>Le déroulé d'une session Forge menée avec une mairie, heure par heure. Rien n'est préparé à l'avance : le besoin arrive le matin, l'outil tourne le soir.</p>
+    </div>
+    <div class="ecran reveal">
+      <div class="fenetre" id="fenetre">
+        <div class="barre"><i></i><i></i><i></i><span>session forge · mairie · 14:02 → 17:30</span></div>
+        <div class="corps">
+          <div class="gauche"><span class="tag">forge · ½ journée</span><h3>Un besoin le matin, un outil le soir</h3><p style="color:var(--ink-2);font-size:15px;margin:0">Besoin exprimé le matin par une mairie : répondre aux courriers des administrés en deux minutes, sans rien perdre du ton.</p><div class="jauge"><div class="jauge__fill" id="jauge"></div></div><div class="jauge__l" id="jauge-l">14:02 · on commence</div></div>
+          <div class="droite"><ul class="chantier" id="chantier">
+            <li data-h="14:02"><span><b>Besoin décrit</b> avec l'équipe, sur trois courriers réels</span></li>
+            <li data-h="14:20"><span><b>Premier prototype</b> : brouillon de réponse généré, ton de la mairie respecté</span></li>
+            <li data-h="15:45"><span><b>Testé par les agents</b> sur douze courriers, deux corrections</span></li>
+            <li data-h="17:10"><span><b>Documenté</b> : qui fait quoi, avec quelles données, en douze pages</span></li>
+            <li data-h="17:30"><span><b>En ligne</b>, utilisé dès le lendemain matin</span></li>
+          </ul></div>
+        </div>
+      </div>
+    </div>
+
     <div class="bandes">
       <div class="bande reveal"><div class="eyebrow">Collectivités</div><h3>Mairies et administrations</h3><p>Marchés publics, données des administrés, cadre juridique : une commune n'a pas les contraintes d'une entreprise. Les agents se forment sur leurs propres dossiers, et plusieurs communes, dont <b>la mairie de Laxou</b>, ont déjà leur outil construit en séance. Le point d'entrée : <a href="https://mairie.ai/">mairie.ai</a>.</p></div>
       <div class="bande reveal"><div class="eyebrow">Les grands chantiers</div><h3>Ce qu'on construit de plus gros</h3><p><b><a href="/lma-learning-management-agentique/">Sator</a></b>, une plateforme devenue agentique : un LMA, qui retrouve la bonne seconde dans des centaines d'heures de cours. <b>Atelier LMS</b>, l'éditeur avec lequel on fabrique des LMS. <b><a href="https://subsidium.world">Subsidium</a></b>, notre plus grande plateforme : agir là où vous vivez, avec des IA qui préparent le travail sans décider à votre place.</p></div>
@@ -693,21 +700,19 @@ document.getElementById("svg-final-milieu").innerHTML=crete(41,330,110,10,"#cfe0
 document.getElementById("svg-final-devant").innerHTML=crete(53,360,80,14,"#9fbcee",40);
 
 /* ---------- rendu au défilement : une seule valeur, lissée ---------- */
-const plans=[...document.querySelectorAll(".hero .plan, .hero .ecran")].map(el=>({el,rate:parseFloat(el.dataset.rate||"0"),souris:parseFloat(el.dataset.souris||"0")}));
+const plans=[...document.querySelectorAll(".hero .plan")].map(el=>({el,rate:parseFloat(el.dataset.rate||"0"),souris:parseFloat(el.dataset.souris||"0")}));
 const finaux=[...document.querySelectorAll(".final .plan")].map(el=>({el,rate:parseFloat(el.dataset.rate||"0"),sec:el.closest(".final")}));
 const intros=[...document.querySelectorAll("[data-intro]")], piles=[...document.querySelectorAll("[data-pile]")];
-const fenetre=document.getElementById("fenetre"), heure=document.getElementById("heure"), bandeau=document.getElementById("bandeau"), defiles=[document.getElementById("defile-1"),document.getElementById("defile-2")];
+const heure=document.getElementById("heure"), bandeau=document.getElementById("bandeau"), defiles=[document.getElementById("defile-1"),document.getElementById("defile-2")];
 let cible=scrollY,cour=scrollY,anim=false,vitesse=0,dernierY=scrollY,bx=0,dx1=0,dx2=0,mx=0,my=0;
 function rendre(y){
   const vh=innerHeight, calm=immobile();
   const p=Math.max(0,Math.min(1,y/Math.max(1,document.documentElement.scrollHeight-vh)));
   heure.textContent="3h"+String(33+Math.round(p*27)).padStart(2,"0");
-  if(calm){plans.forEach(q=>q.el.style.transform=q.el.classList.contains("plan")&&!q.el.classList.contains("plan--sablier")?"translateX(-50%)":"");fenetre.style.setProperty("--rx","0deg");intros.forEach(q=>q.classList.add("on"));piles.forEach(q=>{q.style.transform="";q.style.filter=""});return}
+  if(calm){plans.forEach(q=>q.el.style.transform=q.el.classList.contains("plan")&&!q.el.classList.contains("plan--sablier")?"translateX(-50%)":"");intros.forEach(q=>q.classList.add("on"));piles.forEach(q=>{q.style.transform="";q.style.filter=""});return}
   plans.forEach(q=>{const t=Math.min(y,1400)*q.rate;const sx=(mx*q.souris).toFixed(1),sy=(my*q.souris*0.5).toFixed(1);
-    if(q.el.classList.contains("ecran")){q.el.style.transform=`translateY(${(-t).toFixed(1)}px) scale(${(1+Math.min(y,600)/6000).toFixed(3)})`}
-    else if(q.el.classList.contains("plan--sablier")){q.el.style.transform=`translate(${(-mx*8).toFixed(1)}px,${(t*0.8-my*4).toFixed(1)}px)`}
+    if(q.el.classList.contains("plan--sablier")){q.el.style.transform=`translate(${(-mx*8).toFixed(1)}px,${(t*0.8-my*4).toFixed(1)}px)`}
     else{q.el.style.transform=`translateX(calc(-50% + ${sx}px)) translateY(${(t*0.6+parseFloat(sy)).toFixed(1)}px)`}});
-  fenetre.style.setProperty("--rx",(Math.max(0,10-y/30)).toFixed(2)+"deg");
   finaux.forEach(q=>{const r=q.sec.getBoundingClientRect();const d=Math.max(0,vh-r.top);q.el.style.transform=`translateX(-50%) translateY(${(-(d*q.rate)+120).toFixed(1)}px)`});
   let best=null,bd=1e9;intros.forEach(q=>{const r=q.getBoundingClientRect();const d=Math.abs(r.top+r.height/2-vh/2);if(d<bd){bd=d;best=q}});intros.forEach(q=>q.classList.toggle("on",q===best));
   piles.forEach((q,i)=>{const n=piles[i+1];if(!n){q.style.transform="";q.style.filter="";return}const r=n.getBoundingClientRect();const debut=110+560,fin=110;const t=Math.min(1,Math.max(0,(debut-r.top)/(debut-fin)));q.style.transform=`scale(${(1-0.06*t).toFixed(3)}) translateY(${(-24*t).toFixed(1)}px) rotate(${(-1.2*t).toFixed(2)}deg)`;q.style.filter=`brightness(${(1-0.12*t).toFixed(3)})`});
@@ -731,7 +736,9 @@ rendre(scrollY);
   function etape(){if(immobile()){li.forEach(x=>x.classList.add("on"));j.style.width="100%";l.textContent="17:30 · en ligne";return}
     li.forEach((x,k)=>x.classList.toggle("on",k<=i));j.style.width=((i+1)/li.length*100).toFixed(0)+"%";l.textContent=li[i].dataset.h+" · "+li[i].querySelector("b").textContent.toLowerCase();
     i=(i+1)%li.length;setTimeout(etape,i===0?3600:1500)}
-  setTimeout(etape,1600)})();
+  var vu=false;
+  new IntersectionObserver(function(e,o){ if(e[0].isIntersecting && !vu){ vu=true; o.disconnect(); setTimeout(etape,400); } },{threshold:.35}).observe(document.getElementById("chantier"));
+})();
 /* ---------- scène à onglets ---------- */
 const onglets=[...document.querySelectorAll(".onglets [role=tab]")],diapos=[...document.querySelectorAll(".scene .diapo")],legende=document.getElementById("legende");let cur=0;
 function aller(i){cur=(i+diapos.length)%diapos.length;onglets.forEach((o,k)=>o.setAttribute("aria-selected",String(k===cur)));diapos.forEach((d,k)=>d.classList.toggle("on",k===cur));legende.textContent=diapos[cur].dataset.legende}
