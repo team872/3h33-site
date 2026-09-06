@@ -359,3 +359,6 @@ html.calme .dessin img{animation:none;-webkit-mask-image:none;mask-image:none;op
   color:var(--ink-3);letter-spacing:.02em}
 .vignette img{display:block;width:100%;height:auto}
 @media (max-width:640px){.vignette{max-width:none}}
+
+/* meme regle pour les pages : une grille ne doit pas s'elargir a cause d'une ligne */
+.cartes>*,.preuves>*,.pied__haut>*,.faq>*{min-width:0}

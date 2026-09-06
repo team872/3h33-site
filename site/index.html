@@ -298,6 +298,12 @@ section.chap{padding:100px 0 30px}
 .bande p b{color:var(--ink)}
 /* forge */
 .forge{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+/* Une colonne « 1fr » ne descend pas sous la largeur de son contenu : une ligne
+   qui ne se coupe pas elargit toute la grille, et la page part en largeur sur
+   telephone. On autorise ces colonnes a retrecir. */
+.forge>*,.demos>*,.bandes>*,.faq>*,.piles>*,.pile>*,.chiffres>*,.preuves>*,.offres>*,.flottantes>*{min-width:0}
+.ticker,.ticker ul,.ticker li{min-width:0;max-width:100%}
+.ticker li span{overflow:hidden;text-overflow:ellipsis}
 .ticker{font-family:var(--mono);font-size:13.5px;border:1px solid var(--trait);border-radius:var(--radius-s);background:#fff;padding:14px 0;overflow:hidden;position:relative;height:222px;box-shadow:var(--ombre)}
 .ticker::before,.ticker::after{content:"";position:absolute;left:0;right:0;height:40px;z-index:2;pointer-events:none}
 .ticker::before{top:0;background:linear-gradient(#fff,transparent)}.ticker::after{bottom:0;background:linear-gradient(transparent,#fff)}
