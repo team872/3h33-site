@@ -3,6 +3,7 @@ titre: "Le studio"
 titre_seo: "Studio 3h33 : films, vidéos IA, musiques et images · 3h33"
 description: "Films, clips, musiques originales, vidéos IA et univers visuels produits par le studio 3h33. Galerie de réalisations et prestations créatives."
 url: /studio/
+dessin: "flux-tournage.jpg|Un petit plateau de tournage avec caméra, perche et projecteurs, croquis au crayon"
 type: page
 rubrique: "Studio|"
 fil: "Studio"
@@ -17,3 +18,9 @@ chapo: "Un film, un clip, une musique, une image : ce que nous produisons avec l
 <a class="carte" href="/synthetic-content/"><span class="duree">Vidéo</span><h2>Comédiens virtuels</h2><p>Vos textes en vidéo incarnée, dans plusieurs langues, sans tournage.</p><span class="suite">Voir les comédiens virtuels →</span></a>
 <a class="carte" href="/podcasts/"><span class="duree">Audio</span><h2>Podcasts</h2><p>Choucroute Citron, le podcast augmenté par des IA, et Les Voix de l'IA.</p><span class="suite">Écouter →</span></a>
 </div>
+
+## Dans la salle de montage
+
+Le travail ne s'arrête pas au tournage. C'est au montage que le rythme se décide, que les plans trouvent leur durée, et qu'un film devient regardable.
+
+<figure class="dessin dessin--corps"><img src="/dessins/flux-montage.jpg" alt="Une salle de montage vue derrière le monteur, croquis au crayon" loading="lazy" width="1400" height="933"></figure>
