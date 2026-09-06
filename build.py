@@ -60,8 +60,18 @@ def md(texte):
             liste = None
     while i < len(lignes):
         l = lignes[i]
-        # bloc HTML brut : recopié tel quel
-        if l.startswith("<"):
+        # bloc HTML brut : recopié tel quel, indentation comprise.
+        # Un <svg> est recopié jusqu'à sa fermeture : ses lignes internes
+        # ne commencent pas toutes par « < », et un <p> glissé dedans fait
+        # sortir l'analyseur HTML du SVG, qui ne s'affiche alors plus du tout.
+        if l.lstrip().startswith("<svg"):
+            ferme()
+            while i < len(lignes):
+                out.append(lignes[i])
+                if "</svg>" in lignes[i]: i += 1; break
+                i += 1
+            continue
+        if l.lstrip().startswith("<"):
             ferme(); out.append(l); i += 1; continue
         if not l.strip():
             ferme(); i += 1; continue
@@ -93,7 +103,7 @@ def md(texte):
         ferme()
         para = [l]
         i += 1
-        while i < len(lignes) and lignes[i].strip() and not re.match(r"^(#{2,4}\s|[-*]\s|\d+\.\s|>\s|<)", lignes[i]):
+        while i < len(lignes) and lignes[i].strip() and not re.match(r"^\s*(#{2,4}\s|[-*]\s|\d+\.\s|>\s|<)", lignes[i]):
             para.append(lignes[i]); i += 1
         out.append("<p>" + enligne(" ".join(para)) + "</p>")
     ferme()
