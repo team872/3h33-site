@@ -3,6 +3,7 @@ titre: "L'agence"
 titre_seo: "Agence IA : conseil, contenus, agents, création · 3h33"
 description: "Agence spécialisée dans les usages de l'IA : conseil, contenus, agents conversationnels, studio créatif et outils sur mesure en vibe coding."
 url: /agence/
+dessin: "flux-atelier3h33.jpg|Un bureau éclairé par une lampe la nuit, avec un sablier, croquis au crayon"
 type: page
 rubrique: "Agence|"
 fil: "Agence"

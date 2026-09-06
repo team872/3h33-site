@@ -3,6 +3,7 @@ titre: "Formations à l'intelligence artificielle"
 titre_seo: "Formations IA en entreprise : masterclass, ateliers, Forge · 3h33"
 description: "Organisme de formation spécialisé dans les usages de l'IA générative : masterclass d'acculturation, ateliers pratiques, sessions de construction et veille mensuelle."
 url: /formations/
+dessin: "flux-formation.jpg|Une session de formation à l'IA autour d'une table, croquis au crayon"
 type: page
 rubrique: "Formations|"
 fil: "Formations"
@@ -45,6 +46,9 @@ Voici comment se déroule une session Forge, sur un cas réel de commune : le be
 - **[Formations au marketing digital](/formations-au-marketing-digital/)** — le socle numérique, réseaux sociaux, contenus, référencement, désormais éclairé par l'IA.
 
 ## Pour les collectivités
+
+<figure class="dessin dessin--corps"><img src="/dessins/flux-mairie.jpg" alt="Une mairie française avec son horloge, croquis au crayon" loading="lazy" width="1400" height="933"></figure>
+
 
 Les mairies et les administrations ont leurs propres contraintes : marchés publics, données des administrés, cadre juridique. Nous accompagnons plusieurs communes, dont la mairie de Laxou, sur la formation des agents et la construction d'outils internes. Le point d'entrée dédié est [mairie.ai](https://mairie.ai/).
 

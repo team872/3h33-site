@@ -3,6 +3,7 @@ titre: "Chatbots et agents conversationnels"
 titre_seo: "Création de chatbots et d'agents IA sur mesure · 3h33"
 description: "Nous concevons des agents conversationnels qui répondent vraiment : nourris de vos documents, capables de citer leurs sources et branchés sur vos outils."
 url: /chatbots/
+dessin: "flux-agents.jpg|Une personne parlant à un appareil, une bulle de dialogue en fines lignes, croquis au crayon"
 type: service
 service: "Conception d'agents conversationnels et de chatbots sur mesure"
 rubrique: "Agence|/agence/"

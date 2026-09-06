@@ -3,6 +3,7 @@ titre: "LMA : le Learning Management Agentique"
 titre_seo: "LMA : qu'est-ce qu'un Learning Management Agentique ? · 3h33"
 description: "Le LMA, Learning Management Agentique, succède au LMS : une plateforme où des agents retrouvent, expliquent et interrogent l'apprenant."
 url: /lma-learning-management-agentique/
+dessin: "flux-apprentissage.jpg|Un mur d'archives dont un seul tiroir est ouvert et lumineux, croquis au crayon"
 type: page
 rubrique: "Vibe coding|/vibe-coding/"
 fil: "LMA"

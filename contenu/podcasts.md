@@ -3,6 +3,7 @@ titre: "Podcasts"
 titre_seo: "Podcasts 3h33 : Choucroute Citron et Les Voix de l'IA · 3h33"
 description: "Choucroute Citron, le premier podcast augmenté par des IA en direct, et Les Voix de l'IA, les portraits de celles et ceux qui font l'intelligence artificielle."
 url: /podcasts/
+dessin: "flux-podcast.jpg|Un microphone de studio et un casque posé à côté, croquis au crayon"
 type: page
 rubrique: "Studio|/studio/"
 fil: "Podcasts"

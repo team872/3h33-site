@@ -236,6 +236,13 @@ def construire(verifie=False):
         page = page.replace("{{eyebrow}}", eyebrow)
         page = page.replace("{{chapo}}", f'<p class="chapo">{enligne(esc(meta["chapo"]))}</p>'
                             if meta.get("chapo") else "")
+        dessin = ""
+        if meta.get("dessin"):
+            fichier, legende = (meta["dessin"].split("|") + [""])[:2]
+            dessin = (f'<figure class="dessin"><img src="/dessins/{fichier.strip()}" '
+                      f'alt="{esc(legende.strip() or meta["titre"])}" loading="lazy" '
+                      f'width="1400" height="933"></figure>')
+        page = page.replace("{{dessin}}", dessin)
         page = page.replace("{{duree}}", duree_lecture(corps, meta))
         page = page.replace("{{contenu}}", md(corps))
         dest = SITE / url.strip("/") / "index.html" if url != "/" else SITE / "index.html"

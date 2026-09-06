@@ -3,6 +3,7 @@ titre: "Vibe coding : construire des outils en dialoguant avec l'IA"
 titre_seo: "Vibe coding en entreprise : de l'idée à l'outil en ligne · 3h33"
 description: "Le vibe coding consiste à fabriquer un logiciel en dialoguant avec une IA. Ce que ça change pour une entreprise, et ce que ça ne remplace pas."
 url: /vibe-coding/
+dessin: "flux-vibecoding.jpg|Des mains au clavier et une structure qui s'assemble au-dessus de l'écran, croquis au crayon"
 type: service
 service: "Conception d'outils sur mesure en vibe coding"
 rubrique: "Vibe coding|"

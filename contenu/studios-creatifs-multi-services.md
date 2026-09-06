@@ -3,6 +3,7 @@ titre: "Studio créatif"
 titre_seo: "Studio créatif IA : films, clips, musiques, images · 3h33"
 description: "Le studio 3h33 écrit, produit et monte avec l'IA : films entiers, vidéos de marque, musiques originales et univers visuels cohérents d'un plan à l'autre."
 url: /studios-creatifs-multi-services/
+dessin: "flux-studio.jpg|Une caméra de cinéma face à un plateau éclairé, croquis au crayon"
 type: service
 service: "Production audiovisuelle et création visuelle assistée par IA"
 rubrique: "Studio|/studio/"

@@ -3,6 +3,7 @@ titre: "À propos de 3h33"
 titre_seo: "3h33, l'agence de l'IA : qui nous sommes · 3h33"
 description: "3h33 est une agence et un organisme de formation spécialisés dans les usages de l'IA générative, fondés par Alexandre Stopnicki."
 url: /a-propos/
+dessin: "flux-atelier3h33.jpg|Le bureau de 3h33 la nuit, croquis au crayon"
 type: page
 rubrique: "Le site|"
 fil: "À propos"

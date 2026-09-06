@@ -3,6 +3,7 @@ titre: "Masterclass IA"
 titre_seo: "Masterclass IA en entreprise : acculturer vos équipes · 3h33"
 description: "Deux heures pour démystifier l'intelligence artificielle et repartir avec des usages concrets. Masterclass d'acculturation à l'IA animée par Alexandre Stopnicki."
 url: /masterclass-ia/
+dessin: "flux-masterclass.jpg|Une masterclass devant un petit groupe, croquis au crayon"
 type: formation
 duree: PT2H
 mode: onsite

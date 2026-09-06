@@ -3,6 +3,7 @@ titre: "Créer des contenus avec l'IA"
 titre_seo: "Créer ses contenus avec ChatGPT et l'IA générative · 3h33"
 description: "Textes, images, vidéos, voix : ce que les IA génératives savent produire aujourd'hui pour une entreprise, comment s'y prendre et quelles limites connaître."
 url: /chatgpt/
+dessin: "flux-contenus.jpg|Une feuille qui se démultiplie en plusieurs versions, croquis au crayon"
 type: service
 service: "Production de contenus assistée par intelligence artificielle"
 rubrique: "Agence|/agence/"

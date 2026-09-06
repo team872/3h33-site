@@ -3,6 +3,7 @@ titre: "Rendez-vous IA Talent"
 titre_seo: "Rendez-vous IA Talent : la veille IA en visio · 3h33"
 description: "Des points réguliers en visioconférence pour suivre les évolutions de l'intelligence artificielle et adapter vos usages, sans y passer vos journées."
 url: /rendez-vous-ia-talent/
+dessin: "flux-rendezvous.jpg|Un rendez-vous en visioconférence sur un ordinateur portable, croquis au crayon"
 type: formation
 duree: PT1H
 mode: online

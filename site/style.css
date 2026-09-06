@@ -317,3 +317,30 @@ html.calme .trotteuse .bras,html.calme .trotteuse .contrepoids{animation:none!im
 .avancement .minuterie__val span{display:none}
 .avancement .arc{transition:stroke-dashoffset .12s linear}
 @media (max-width:860px){.avancement{display:none}}
+
+/* ---------------------------------------------------------------- dessins
+   Crayonnés à la main. Ils se tracent de gauche à droite quand on arrive
+   dessus, comme sous un crayon, puis restent. Sans support du défilement
+   piloté, ils sont simplement là — jamais invisibles. */
+.dessin{margin:6px 0 40px;max-width:none}
+.dessin img{display:block;width:100%;height:auto;border-radius:0;box-shadow:none;
+  mix-blend-mode:multiply}
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion:no-preference){
+    .dessin img{
+      animation:trace-crayon linear both;
+      animation-timeline:view();
+      animation-range:entry 8% entry 78%;
+    }
+  }
+}
+@keyframes trace-crayon{
+  from{-webkit-mask-image:linear-gradient(100deg,#000 0%,#000 0%,transparent 6%,transparent 100%);
+       mask-image:linear-gradient(100deg,#000 0%,#000 0%,transparent 6%,transparent 100%);opacity:.55}
+  to{-webkit-mask-image:linear-gradient(100deg,#000 0%,#000 100%,transparent 106%,transparent 100%);
+     mask-image:linear-gradient(100deg,#000 0%,#000 100%,transparent 106%,transparent 100%);opacity:1}
+}
+html.calme .dessin img{animation:none;-webkit-mask-image:none;mask-image:none;opacity:1}
+/* un dessin dans le fil du texte : plus petit, aligné sur la colonne */
+.dessin--corps{margin:26px 0 34px;max-width:72ch}
+@media (max-width:860px){.dessin{margin:4px -28px 30px}.dessin--corps{margin:20px 0 26px}}

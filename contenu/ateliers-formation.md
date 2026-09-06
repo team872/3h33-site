@@ -3,6 +3,7 @@ titre: "Ateliers de formation à l'IA"
 titre_seo: "Ateliers de formation à l'IA sur mesure en entreprise · 3h33"
 description: "Un à deux jours pour que vos équipes pratiquent l'IA sur leurs propres dossiers : contenus, données, automatisations. Ateliers sur mesure."
 url: /ateliers-formation/
+dessin: "flux-atelier.jpg|Deux collègues travaillant côte à côte sur un ordinateur, croquis au crayon"
 type: formation
 duree: P1D
 mode: blended
