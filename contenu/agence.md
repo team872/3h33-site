@@ -32,7 +32,7 @@ chapo: "Nous ne vendons pas de l'intelligence artificielle. Nous l'utilisons pou
 
 ## Notre façon de travailler
 
-Nous commençons rarement par une réunion et souvent par une démonstration. Un besoin décrit le matin devient un prototype l'après-midi. C'est plus rapide à juger qu'un cahier des charges, et beaucoup moins cher à corriger.
+Une demi-journée avec vos équipes, un outil qui tourne le lendemain : c'est le format qui revient le plus souvent. Nous commençons rarement par une réunion et souvent par une démonstration. Un besoin décrit le matin devient un prototype l'après-midi. C'est plus rapide à juger qu'un cahier des charges, et beaucoup moins cher à corriger.
 
 Une fois l'outil validé, nous le consolidons, le documentons et l'installons. Vous en êtes propriétaire, code compris.
 

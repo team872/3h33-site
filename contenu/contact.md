@@ -8,7 +8,7 @@ rubrique: "Le site|"
 fil: "Contact"
 priorite: 0.9
 eyebrow: "Contact"
-chapo: "Décrivez votre besoin en quelques lignes. Nous répondons sous un jour ouvré, et nous commençons volontiers par une démonstration."
+chapo: "Vous avez assez entendu parler d'IA. Décrivez votre besoin en quelques lignes : nous répondons sous un jour ouvré, et nous commençons volontiers par une démonstration."
 duree_lecture: non
 ---
 

@@ -26,6 +26,8 @@ Il anime le podcast [Choucroute Citron](/podcasts/) et publie ses créations vis
 
 ## Ce qui nous distingue
 
+On ne vend pas de l'IA. On vous rend du temps.
+
 Nous ne faisons pas de conférence sur l'IA sans montrer. Nous ne vendons pas d'outil sans l'avoir construit. Et nous ne formons pas sur des exemples génériques, mais sur les dossiers réels de ceux qui sont dans la salle.
 
 Trente-quatre sites et outils sont en ligne aujourd'hui, tous fabriqués en [vibe coding](/vibe-coding/). C'est notre carte de visite : la [galaxie 3h33](/galaxie/).

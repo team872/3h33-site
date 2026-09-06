@@ -11,7 +11,7 @@ fil: "Vibe coding"
 priorite: 1.0
 eyebrow: "Vibe coding"
 heure: "14:02 → 17:30"
-chapo: "Décrire ce qu'on veut, voir l'outil apparaître, le corriger à la voix. Ce n'est plus une promesse : c'est comme ça que nous construisons depuis deux ans."
+chapo: "Votre outil existe déjà. Il n'est simplement pas encore écrit. Décrire ce qu'on veut, le voir apparaître, le corriger à la voix : c'est comme ça que nous construisons depuis deux ans."
 faq:
   - Qu'est-ce que le vibe coding ?|Le vibe coding consiste à fabriquer un logiciel en décrivant en langage courant ce qu'on veut obtenir, en dialoguant avec une intelligence artificielle qui écrit le code, puis en corrigeant par itérations successives jusqu'au résultat.
   - Est-ce la même chose que le no-code ?|Non. Le no-code assemble des briques prévues à l'avance dans un outil fermé. Le vibe coding produit du vrai code, que vous possédez, sans limite de forme et sans abonnement à une plateforme.
@@ -73,6 +73,8 @@ Le vibe coding va plus loin : pas de brique imposée, pas de limite de forme, pa
     <circle class="axe" r="3.4"/>
   </g>
 </svg>
+
+Une demi-journée avec vos équipes, et un outil qui tourne le lendemain. Le déroulé tient en trois temps.
 
 1. **On part d'un besoin réel**, pas d'une idée générale. Un formulaire qui prend trop de temps, des courriers à traiter, un tableau de bord qui n'existe pas.
 2. **On construit en direct**, avec vos équipes, en visioconférence. Vous voyez l'outil se former et vous corrigez au fur et à mesure.

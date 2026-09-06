@@ -19,7 +19,7 @@ Le bon point d'entrée dépend de votre maturité. Une équipe qui n'a jamais ou
 <div class="cartes">
 <a class="carte" href="/masterclass-ia/"><span class="duree">Masterclass · 2 heures</span><h2>Découvrir</h2><p>Comprendre ce que l'IA change dans vos métiers, avec des démonstrations en direct et sans jargon.</p><span class="suite">Voir la masterclass →</span></a>
 <a class="carte" href="/ateliers-formation/"><span class="duree">Ateliers · 1 à 2 jours</span><h2>Pratiquer</h2><p>Vos équipes travaillent sur leurs propres dossiers et repartent avec des usages installés.</p><span class="suite">Voir les ateliers →</span></a>
-<a class="carte" href="/forge/"><span class="duree">Forge · ½ journée</span><h2>Construire</h2><p>On fabrique ensemble, en direct, l'agent ou l'automatisation qui vous manque. Livré documenté.</p><span class="suite">Voir la méthode Forge →</span></a>
+<a class="carte" href="/forge/"><span class="duree">Forge · ½ journée</span><h2>Construire</h2><p>Une demi-journée avec vos équipes. Un outil qui tourne le lendemain, documenté et livré.</p><span class="suite">Voir la méthode Forge →</span></a>
 <a class="carte" href="/rendez-vous-ia-talent/"><span class="duree">Rendez-vous · mensuel</span><h2>Suivre</h2><p>Un point par mois pour ne pas se laisser distancer par des outils qui changent chaque semaine.</p><span class="suite">Voir les rendez-vous →</span></a>
 </div>
 
