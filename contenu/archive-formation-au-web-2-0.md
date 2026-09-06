@@ -9,7 +9,7 @@ fil: "Formation au web 2.0"
 priorite: 0.3
 modifie: 2017-10-31
 eyebrow: "Archive · 2012"
-chapo: "Cette page fait partie des archives de 3h33. Elle a été publiée en 2012 et n'est plus mise à jour."
+chapo: "Page d'archive, publiée en 2012 et laissée telle quelle. Pour ce que nous faisons aujourd'hui, voyez les [formations](/formations/) et [l'agence](/agence/)."
 ---
 
 # La formation qui vous ouvre les portes du web 2.0 !

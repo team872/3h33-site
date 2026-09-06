@@ -9,7 +9,7 @@ fil: "Formations Marketing Digital et E-Pédago"
 priorite: 0.3
 modifie: 2022-05-25
 eyebrow: "Archive · 2014"
-chapo: "Cette page fait partie des archives de 3h33. Elle a été publiée en 2014 et n'est plus mise à jour."
+chapo: "Page d'archive, publiée en 2014 et laissée telle quelle. Pour ce que nous faisons aujourd'hui, voyez les [formations](/formations/) et [l'agence](/agence/)."
 ---
 
 ### 3H33 AGENCE & FORMATIONS AU MARKETING DIGITAL

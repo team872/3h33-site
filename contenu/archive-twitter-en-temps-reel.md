@@ -9,7 +9,7 @@ fil: "Twitter en temps reel"
 priorite: 0.3
 modifie: 2022-05-19
 eyebrow: "Archive · 2013"
-chapo: "Cette page fait partie des archives de 3h33. Elle a été publiée en 2013 et n'est plus mise à jour."
+chapo: "Page d'archive, publiée en 2013 et laissée telle quelle. Pour ce que nous faisons aujourd'hui, voyez les [formations](/formations/) et [l'agence](/agence/)."
 ---
 
 ## CLIQUEZ SUR L’IMAGE CI DESSOUS POUR DECOUVRIR TWITTER EN TEMPS REEL DANS LE MONDE

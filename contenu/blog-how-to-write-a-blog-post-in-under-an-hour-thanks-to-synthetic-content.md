@@ -1,7 +1,7 @@
 ---
 titre: "Écrire un article en moins d'une heure grâce au contenu synthétique"
 titre_seo: "Écrire un article en moins d'une heure grâce au  · 3h33"
-description: "How to Write a Blog Post in Under an Hour ? Thanks to synthetic content Cette vidéo et le texte ci-dessous ont été réalisé à l’aide d’intelligence…"
+description: "Un article écrit avec l'IA, qui explique en même temps comment il a été écrit. La démonstration est le sujet."
 url: /blog/how-to-write-a-blog-post-in-under-an-hour-thanks-to-synthetic-content/
 type: article
 rubrique: "Blog|/blog/"
@@ -10,6 +10,7 @@ priorite: 0.6
 publie: 2023-02-24
 modifie: 2023-02-24
 eyebrow: "Article · 2023"
+chapo: "Écrit en 2023, à l'époque où produire un texte avec l'IA était encore une prouesse."
 ---
 
 ## # How to Write a Blog Post in Under an Hour ?

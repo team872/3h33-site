@@ -1,7 +1,7 @@
 ---
 titre: "Tout comprendre sur Pokémon GO"
 titre_seo: "Tout comprendre sur Pokémon GO · 3h33"
-description: "En quoi consiste ce jeu ? Il se base vraiment sur l’histoire et les jeux Pokémons : - Attraper des pokémons dans le monde réel - Les entraîner et…"
+description: "Le jeu qui a fait sortir des millions de gens dans la rue, expliqué : règles, mécanique, et ce qu'il annonçait."
 url: /blog/comprendre-pokemon-go/
 type: article
 rubrique: "Blog|/blog/"
@@ -10,6 +10,7 @@ priorite: 0.6
 publie: 2024-01-21
 modifie: 2024-01-21
 eyebrow: "Article · 2024"
+chapo: "Écrit en 2016. À relire aujourd'hui, c'est la réalité augmentée qui arrivait dix ans avant l'IA."
 ---
 
 ## En quoi consiste ce jeu ?

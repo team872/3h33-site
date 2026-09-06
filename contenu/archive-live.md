@@ -9,7 +9,7 @@ fil: "3h33 Live : La TV de l’Agence 3h33"
 priorite: 0.3
 modifie: 2022-05-25
 eyebrow: "Archive · 2012"
-chapo: "Cette page fait partie des archives de 3h33. Elle a été publiée en 2012 et n'est plus mise à jour."
+chapo: "Page d'archive, publiée en 2012 et laissée telle quelle. Pour ce que nous faisons aujourd'hui, voyez les [formations](/formations/) et [l'agence](/agence/)."
 ---
 
 Vous pouvez retrouver sur cette page les programmes de 3h33 lorsque je diffuse en live !PGlmcmFtZSBzdHlsZT0iYm9yZGVyOiAwIG5vbmUgdHJhbnNwYXJlbnQ7IiBzcmM9Ii8vd3d3LnVzdHJlYW0udHYvZW1iZWQvMTEyNzg0MDI/d21vZGU9ZGlyZWN0JnZvbHVtZT0wIiB3aWR0aD0iNzIwIiBoZWlnaHQ9IjQzNyIgZnJhbWVib3JkZXI9Im5vIj48L2lmcmFtZT4NCjxhIHN0eWxlPSJwYWRkaW5nOiAycHggMHB4IDRweDsgd2lkdGg6IDQwMHB4OyBiYWNrZ3JvdW5kOiAjZmZmZmZmOyBkaXNwbGF5OiBibG9jazsgY29sb3I6ICMwMDAwMDA7IGZvbnQtd2VpZ2h0OiBub3JtYWw7IGZvbnQtc2l6ZTogMTBweDsgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7IHRleHQtYWxpZ246IGNlbnRlcjsiIGhyZWY9Imh0dHA6Ly93d3cudXN0cmVhbS50di8iIHRhcmdldD0iX2JsYW5rIj5MaXZlIHN0cmVhbWluZyB2aWRlbyBieSAzaDMzPC9hPjwvcD4=

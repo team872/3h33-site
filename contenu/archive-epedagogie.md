@@ -9,7 +9,7 @@ fil: "epédagogie"
 priorite: 0.3
 modifie: 2023-01-15
 eyebrow: "Archive · 2013"
-chapo: "Cette page fait partie des archives de 3h33. Elle a été publiée en 2013 et n'est plus mise à jour."
+chapo: "Page d'archive, publiée en 2013 et laissée telle quelle. Pour ce que nous faisons aujourd'hui, voyez les [formations](/formations/) et [l'agence](/agence/)."
 ---
 
 L’Epédagogie, la prochaine grande évolution du monde de la formation ?

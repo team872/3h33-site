@@ -9,7 +9,7 @@ fil: "Formation pour les journalistes au Marke"
 priorite: 0.3
 modifie: 2022-05-25
 eyebrow: "Archive · 2015"
-chapo: "Cette page fait partie des archives de 3h33. Elle a été publiée en 2015 et n'est plus mise à jour."
+chapo: "Page d'archive, publiée en 2015 et laissée telle quelle. Pour ce que nous faisons aujourd'hui, voyez les [formations](/formations/) et [l'agence](/agence/)."
 ---
 
 # Apprenez à mettre en place une stratégie de RP performante avec le digital

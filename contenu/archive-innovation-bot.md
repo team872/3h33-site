@@ -9,7 +9,7 @@ fil: "Innovation Bot"
 priorite: 0.3
 modifie: 2022-05-19
 eyebrow: "Archive · 2018"
-chapo: "Cette page fait partie des archives de 3h33. Elle a été publiée en 2018 et n'est plus mise à jour."
+chapo: "Page d'archive, publiée en 2018 et laissée telle quelle. Pour ce que nous faisons aujourd'hui, voyez les [formations](/formations/) et [l'agence](/agence/)."
 ---
 
 https://3h33.com/wp-content/uploads/2018/03/innovation-bot.png

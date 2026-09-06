@@ -1,7 +1,7 @@
 ---
 titre: "L'IA au service de Notion"
 titre_seo: "L'IA au service de Notion · 3h33"
-description: "L'IA de notion.so révolutionne la productivité. L’IA au service de Notion ? Notion.so est une plateforme de travail collaboratif qui permet aux…"
+description: "Une IA installée dans l'espace de travail : ce qu'elle change à la prise de notes, à la rédaction et à la recherche dans ses propres documents."
 url: /blog/lia-au-service-de-notion/
 type: article
 rubrique: "Blog|/blog/"
@@ -10,6 +10,7 @@ priorite: 0.6
 publie: 2024-07-12
 modifie: 2024-07-12
 eyebrow: "Article · 2024"
+chapo: "Écrit en 2024, quand les IA se sont installées dans les outils qu'on utilisait déjà."
 ---
 
 ## L'IA de notion.so révolutionne la productivité.

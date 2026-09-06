@@ -9,7 +9,7 @@ fil: "Toutes les méthodes pour faire un cv"
 priorite: 0.3
 modifie: 2015-11-30
 eyebrow: "Archive · 2015"
-chapo: "Cette page fait partie des archives de 3h33. Elle a été publiée en 2015 et n'est plus mise à jour."
+chapo: "Page d'archive, publiée en 2015 et laissée telle quelle. Pour ce que nous faisons aujourd'hui, voyez les [formations](/formations/) et [l'agence](/agence/)."
 ---
 
 ## Voici les liens qui vous permettrons de faire votre CV dans les meilleurs conditions.

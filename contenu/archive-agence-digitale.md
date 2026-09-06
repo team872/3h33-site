@@ -9,7 +9,7 @@ fil: "Agence digitale"
 priorite: 0.3
 modifie: 2022-02-10
 eyebrow: "Archive · 2012"
-chapo: "Cette page fait partie des archives de 3h33. Elle a été publiée en 2012 et n'est plus mise à jour."
+chapo: "Page d'archive, publiée en 2012 et laissée telle quelle. Pour ce que nous faisons aujourd'hui, voyez les [formations](/formations/) et [l'agence](/agence/)."
 ---
 
 ### NOUS OFFRONS UNE VARIÉTÉ DE SERVICES CRÉATIFS POUR RÉPONDRE À CHAQUE BESOIN

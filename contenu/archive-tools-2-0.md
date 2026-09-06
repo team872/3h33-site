@@ -9,7 +9,7 @@ fil: "Tools 2.0"
 priorite: 0.3
 modifie: 2017-10-31
 eyebrow: "Archive · 2014"
-chapo: "Cette page fait partie des archives de 3h33. Elle a été publiée en 2014 et n'est plus mise à jour."
+chapo: "Page d'archive, publiée en 2014 et laissée telle quelle. Pour ce que nous faisons aujourd'hui, voyez les [formations](/formations/) et [l'agence](/agence/)."
 ---
 
 # Un mur réalisé par 3h33 avec de très nombreuses solutions 2.0 et des concepts clés pour réussir votre stratégie de Marketing Digital

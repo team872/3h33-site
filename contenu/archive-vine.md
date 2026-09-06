@@ -9,7 +9,7 @@ fil: "Vine des vidéos de 6 secondes pour faire"
 priorite: 0.3
 modifie: 2017-10-31
 eyebrow: "Archive · 2016"
-chapo: "Cette page fait partie des archives de 3h33. Elle a été publiée en 2016 et n'est plus mise à jour."
+chapo: "Page d'archive, publiée en 2016 et laissée telle quelle. Pour ce que nous faisons aujourd'hui, voyez les [formations](/formations/) et [l'agence](/agence/)."
 ---
 
  !

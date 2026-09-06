@@ -61,11 +61,11 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 - [webinar.show](/archives/webinar-show/) — Nous vous présentons notre concept de webinar agrémenté d’un show : webinar.show…
 
 ## Blog
-- [33 conseils dont vous pourriez vous inspirer](/blog/33-conseils-dont-vous-pourriez-vous-inspirer-en-2022/) — Vous démarrez l’année 2021 avec de bonnes résolutions pour votre famille et votre travail.
-- [L'IA au service de Notion](/blog/lia-au-service-de-notion/) — L'IA de notion.so révolutionne la productivité. L’IA au service de Notion ? Notion.so est 
-- [Tout comprendre sur Pokémon GO](/blog/comprendre-pokemon-go/) — En quoi consiste ce jeu ? Il se base vraiment sur l’histoire et les jeux Pokémons : - Attr
-- [Voulez-vous connaître l'avenir ?](/blog/connaitre-l-avenir/) — Si vous souhaitez connaitre l’avenir des technologies, je vous recommande d’écouter attent
-- [Écrire un article en moins d'une heure grâce au contenu synthétique](/blog/how-to-write-a-blog-post-in-under-an-hour-thanks-to-synthetic-content/) — How to Write a Blog Post in Under an Hour ? Thanks to synthetic content Cette vidéo et le 
+- [33 conseils dont vous pourriez vous inspirer](/blog/33-conseils-dont-vous-pourriez-vous-inspirer-en-2022/) — Trente-trois habitudes de travail, à prendre ou à laisser, rassemblées pour bien commencer
+- [L'IA au service de Notion](/blog/lia-au-service-de-notion/) — Une IA installée dans l'espace de travail : ce qu'elle change à la prise de notes, à la ré
+- [Tout comprendre sur Pokémon GO](/blog/comprendre-pokemon-go/) — Le jeu qui a fait sortir des millions de gens dans la rue, expliqué : règles, mécanique, e
+- [Voulez-vous connaître l'avenir ?](/blog/connaitre-l-avenir/) — Une sélection d'interventions où des chercheurs et des entrepreneurs décrivent ce qui vien
+- [Écrire un article en moins d'une heure grâce au contenu synthétique](/blog/how-to-write-a-blog-post-in-under-an-hour-thanks-to-synthetic-content/) — Un article écrit avec l'IA, qui explique en même temps comment il a été écrit. La démonstr
 
 ## Formations
 - [Ateliers de formation à l'IA](/ateliers-formation/) — Un à deux jours pour que vos équipes pratiquent l'IA sur leurs propres dossiers : contenus
@@ -77,7 +77,7 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 ## Le site
 - [Archives](/archives/) — Les pages historiques de 3h33 : formations au marketing digital, réseaux sociaux, réalité 
 - [Conditions générales](/conditions-generales/) — Les conditions générales de vente et d'utilisation des services et formations proposés par
-- [Le blog](/blog/) — Le carnet de bord de 3h33 : ce que nous construisons avec l'IA, les outils qui tiennent, l
+- [Le blog](/blog/) — Le carnet de bord de 3h33 : ce qu'on construit avec l'IA, ce qu'on apprend en le faisant, 
 - [Nous contacter](/contact/) — Un projet, une formation, une question sur l'IA ? Écrivez-nous : nous répondons vite et co
 - [Plan du site](/plan-du-site/) — Toutes les pages de 3h33.com : formations à l'IA, prestations de l'agence, vibe coding, st
 - [Politique de confidentialité](/politique-de-confidentialite/) — Comment 3h33 collecte, utilise et protège vos données personnelles, et comment exercer vos

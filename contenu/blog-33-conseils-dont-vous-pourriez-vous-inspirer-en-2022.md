@@ -1,7 +1,7 @@
 ---
 titre: "33 conseils dont vous pourriez vous inspirer"
 titre_seo: "33 conseils dont vous pourriez vous inspirer · 3h33"
-description: "Vous démarrez l’année 2021 avec de bonnes résolutions pour votre famille et votre travail. Vous souhaiteriez bien que cette nouvelle année soit un…"
+description: "Trente-trois habitudes de travail, à prendre ou à laisser, rassemblées pour bien commencer une année."
 url: /blog/33-conseils-dont-vous-pourriez-vous-inspirer-en-2022/
 type: article
 rubrique: "Blog|/blog/"
@@ -10,6 +10,7 @@ priorite: 0.6
 publie: 2024-03-19
 modifie: 2024-03-19
 eyebrow: "Article · 2024"
+chapo: "Écrit pour l'année 2022, et relu depuis sans qu'on ait eu à en retirer beaucoup."
 ---
 
 Vous démarrez l’année 2021 avec de bonnes résolutions pour votre famille et votre travail. Vous souhaiteriez bien que cette nouvelle année soit un succès pour votre carrière. La solution est peut-être parmi les 33 conseils dont vous pourriez vous inspirer en 2021 qui se trouvent ci-dessous. Le succès des grands CEO provient d’un savant mélange de techniques, de charisme, de chance, d’innovation, de persévérance, de créativité… Nous pouvons nous inspirer des plus grands CEO du monde pour améliorer notre vie personnelle et professionnelle.

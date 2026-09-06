@@ -1,7 +1,7 @@
 ---
 titre: "Voulez-vous connaître l'avenir ?"
 titre_seo: "Voulez-vous connaître l'avenir ? · 3h33"
-description: "Si vous souhaitez connaitre l’avenir des technologies, je vous recommande d’écouter attentivement ces vidéos car il semblerait que de nombreuses…"
+description: "Une sélection d'interventions où des chercheurs et des entrepreneurs décrivent ce qui vient. Beaucoup se sont réalisées depuis."
 url: /blog/connaitre-l-avenir/
 type: article
 rubrique: "Blog|/blog/"
@@ -10,6 +10,7 @@ priorite: 0.6
 publie: 2024-05-29
 modifie: 2024-05-29
 eyebrow: "Article · 2024"
+chapo: "Écrit en 2024. L'exercice est cruel : on peut vérifier aujourd'hui ce qui s'est réalisé."
 ---
 
 ## Si vous souhaitez connaitre l’avenir des technologies, je vous recommande d’écouter attentivement ces vidéos car il semblerait que de nombreuses pistes soient parfaitement identifiables.
