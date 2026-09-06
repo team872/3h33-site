@@ -12,7 +12,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:clip}
-body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:17.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:17.5px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip;max-width:100vw}
 img{max-width:100%;height:auto}
 a{color:var(--acc-fonce);text-underline-offset:3px}
 a:focus-visible,button:focus-visible{outline:3px solid var(--or);outline-offset:3px;border-radius:4px}
