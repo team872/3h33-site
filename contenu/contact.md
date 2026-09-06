@@ -8,7 +8,7 @@ rubrique: "Le site|"
 fil: "Contact"
 priorite: 0.9
 eyebrow: "Contact"
-chapo: "Vous avez assez entendu parler d'IA. Décrivez votre besoin en quelques lignes : nous répondons sous un jour ouvré, et nous commençons volontiers par une démonstration."
+chapo: "Vous avez assez entendu parler d'IA. Dites-nous en trois lignes ce qui vous prend du temps : on répond sous un jour ouvré, souvent par une démonstration plutôt que par une réunion."
 duree_lecture: non
 ---
 
@@ -65,15 +65,17 @@ duree_lecture: non
 
 ## Prendre rendez-vous
 
-Pour convenir d'une date de masterclass, d'atelier ou de session Forge, l'organisation passe par **Frédérique**, qui tient l'agenda et vous proposera les créneaux disponibles.
+Pour fixer une date de masterclass, d'atelier ou de session Forge, l'agenda passe par **Frédérique**. Indiquez-le dans votre message : elle vous proposera des créneaux dans la journée.
 
-## Ce qu'on vous demandera
+## Trois lignes suffisent
 
-Pour répondre utilement, trois éléments suffisent :
+Pas besoin d'un cahier des charges. Ces trois éléments nous permettent déjà de répondre précisément :
 
-1. **Le contexte.** Votre structure, la taille de l'équipe concernée, votre secteur.
-2. **Le besoin.** Ce qui prend trop de temps aujourd'hui, ou ce que vous aimeriez pouvoir faire.
-3. **L'horizon.** Une date, même approximative, change beaucoup la réponse.
+1. **Qui vous êtes.** Votre structure, votre secteur, le nombre de personnes concernées.
+2. **Ce qui coince.** La tâche qui prend trop de temps, ou ce que vous aimeriez pouvoir faire et que vous ne savez pas faire.
+3. **Quand.** Une date même approximative change complètement la réponse.
+
+Si vous ne savez pas encore, écrivez-le : on commence souvent par une démonstration de vingt minutes qui clarifie tout.
 
 ## Nous suivre
 

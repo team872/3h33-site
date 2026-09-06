@@ -10,6 +10,11 @@ priorite: 0.2
 eyebrow: "Informations légales"
 ---
 
+<div class="encadre">
+<p><strong>Ces conditions datent de février 2023 et parlent encore de vente en ligne.</strong> Elles doivent être reprises pour correspondre à ce que 3h33 vend aujourd'hui : masterclass, ateliers, sessions Forge et prestations de studio. À faire relire par un professionnel avant la mise en ligne définitive.</p>
+</div>
+
+
 Les conditions générales ont été mises à jour pour la dernière fois le 21 février 2023
 ## 1. Introduction
 Les présentes conditions générales s’appliquent à ce site web et aux transactions liées à nos produits et services. Vous pouvez être liés par des contrats supplémentaires en lien avec votre relation avec nous ou à tout produit ou service que vous recevez de notre part. Si des dispositions de contrats supplémentaires sont en conflit avec des dispositions des présentes conditions générales, les dispositions de ces contrats supplémentaires prévaudront.

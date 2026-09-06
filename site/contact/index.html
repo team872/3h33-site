@@ -18,9 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@alexandre3h33">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="/polices/polices.css">
 <link rel="stylesheet" href="/style.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://3h33.com/"},{"@type":"ListItem","position":2,"name":"Le site"},{"@type":"ListItem","position":3,"name":"Contact"}]},{"@type":"WebPage","name":"Nous contacter","description":"Un projet, une formation, une question sur l'IA ? Écrivez-nous : nous répondons vite et commençons souvent par une démonstration plutôt que par une réunion.","url":"https://3h33.com/contact/","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"3h33","url":"https://3h33.com/"},"publisher":{"@type":"Organization","name":"3h33","url":"https://3h33.com/"}}]}</script>
 <script defer src="https://stats.3h33.com/script.js" data-website-id="9456f661-e1ea-4c9d-90bc-dec50970f3b4" data-domains="3h33.com,nouveau.3h33.com"></script>
@@ -61,7 +59,7 @@
     <div class="aube__texte">
       <p class="eyebrow">Contact</p>
       <h1>Nous contacter</h1>
-      <p class="chapo">Vous avez assez entendu parler d'IA. Décrivez votre besoin en quelques lignes : nous répondons sous un jour ouvré, et nous commençons volontiers par une démonstration.</p>
+      <p class="chapo">Vous avez assez entendu parler d'IA. Dites-nous en trois lignes ce qui vous prend du temps : on répond sous un jour ouvré, souvent par une démonstration plutôt que par une réunion.</p>
       
     </div>
   </div>
@@ -82,14 +80,15 @@
 <p>(function(){   var f=document.getElementById("f-contact"), r=document.getElementById("c-retour"), ouvert=Date.now();   f.addEventListener("submit", function(e){     e.preventDefault();     var b=f.querySelector("button"), tr=f.querySelector(".envoi__tourne"); b.disabled=true; if(tr) tr.hidden=false; r.textContent="Envoi en cours…"; r.className="retour";     var d=Object.fromEntries(new FormData(f).entries());     d.instant=ouvert; d.page=location.pathname;     fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})       .then(function(rep){ return rep.json().then(function(j){ return {st:rep.status,j:j}; }); })       .then(function(x){         if(x.st===200){ f.reset(); if(tr) tr.hidden=true; r.className="retour ok"; r.textContent="Merci, votre message est parti. Nous répondons sous un jour ouvré."; }         else { if(tr) tr.hidden=true; r.className="retour erreur"; r.textContent=(x.j.erreurs||["Envoi impossible pour le moment."]).join(" "); b.disabled=false; }       })       .catch(function(){ if(tr) tr.hidden=true; r.className="retour erreur"; r.textContent="L'envoi a échoué. Réessayez, ou écrivez-nous depuis votre messagerie."; b.disabled=false; });   }); })();</p>
 </script>
 <h2>Prendre rendez-vous</h2>
-<p>Pour convenir d'une date de masterclass, d'atelier ou de session Forge, l'organisation passe par <strong>Frédérique</strong>, qui tient l'agenda et vous proposera les créneaux disponibles.</p>
-<h2>Ce qu'on vous demandera</h2>
-<p>Pour répondre utilement, trois éléments suffisent :</p>
+<p>Pour fixer une date de masterclass, d'atelier ou de session Forge, l'agenda passe par <strong>Frédérique</strong>. Indiquez-le dans votre message : elle vous proposera des créneaux dans la journée.</p>
+<h2>Trois lignes suffisent</h2>
+<p>Pas besoin d'un cahier des charges. Ces trois éléments nous permettent déjà de répondre précisément :</p>
 <ol>
-<li><strong>Le contexte.</strong> Votre structure, la taille de l'équipe concernée, votre secteur.</li>
-<li><strong>Le besoin.</strong> Ce qui prend trop de temps aujourd'hui, ou ce que vous aimeriez pouvoir faire.</li>
-<li><strong>L'horizon.</strong> Une date, même approximative, change beaucoup la réponse.</li>
+<li><strong>Qui vous êtes.</strong> Votre structure, votre secteur, le nombre de personnes concernées.</li>
+<li><strong>Ce qui coince.</strong> La tâche qui prend trop de temps, ou ce que vous aimeriez pouvoir faire et que vous ne savez pas faire.</li>
+<li><strong>Quand.</strong> Une date même approximative change complètement la réponse.</li>
 </ol>
+<p>Si vous ne savez pas encore, écrivez-le : on commence souvent par une démonstration de vingt minutes qui clarifie tout.</p>
 <h2>Nous suivre</h2>
 <ul>
 <li><a href="https://choucroute-citron.com">Choucroute Citron</a>, le podcast</li>

@@ -77,11 +77,12 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 ## Le site
 - [Archives](/archives/) — Les pages historiques de 3h33 : formations au marketing digital, réseaux sociaux, réalité 
 - [Conditions générales](/conditions-generales/) — Les conditions générales de vente et d'utilisation des services et formations proposés par
+- [Confidentialité](/politique-de-confidentialite/) — Ce que 3h33.com collecte, pourquoi, combien de temps, et comment exercer vos droits. Site 
+- [Cookies](/politique-de-cookies-ue/) — Ce site n'utilise aucun cookie de suivi ni de publicité. Ce qui explique l'absence de band
 - [Le blog](/blog/) — Le carnet de bord de 3h33 : ce qu'on construit avec l'IA, ce qu'on apprend en le faisant, 
+- [Mentions légales](/mentions-legales/) — Éditeur, directeur de la publication, hébergeur et propriété intellectuelle du site 3h33.c
 - [Nous contacter](/contact/) — Un projet, une formation, une question sur l'IA ? Écrivez-nous : nous répondons vite et co
 - [Plan du site](/plan-du-site/) — Toutes les pages de 3h33.com : formations à l'IA, prestations de l'agence, vibe coding, st
-- [Politique de confidentialité](/politique-de-confidentialite/) — Comment 3h33 collecte, utilise et protège vos données personnelles, et comment exercer vos
-- [Politique de cookies et mentions légales](/politique-de-cookies-ue/) — Mentions légales de 3h33 et politique relative aux cookies et traceurs utilisés sur le sit
 - [À propos de 3h33](/a-propos/) — 3h33 est une agence et un organisme de formation spécialisés dans les usages de l'IA génér
 
 ## Studio
