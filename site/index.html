@@ -188,6 +188,11 @@ section.chap{padding:100px 0 30px}
 .carte:nth-child(2){animation-delay:-2s}.carte:nth-child(3){animation-delay:-4s}.carte:nth-child(4){animation-delay:-1s}
 @keyframes flotte{from{translate:0 0}to{translate:0 -10px}}
 .carte .fond{position:absolute;inset:0;background:var(--f);opacity:.95}
+.carte--dessin{background:#fff;justify-content:flex-end}
+.carte__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;mix-blend-mode:multiply;opacity:.92}
+.carte--dessin .t,.carte--dessin b,.carte--dessin span{position:relative;z-index:1}
+.pile__media--dessin{background:#fff;padding:0;overflow:hidden}
+.pile__media--dessin img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply}
 .carte .t{position:relative;font-family:var(--mono);font-size:11px;letter-spacing:.12em;font-weight:700;color:var(--ink-2);background:rgba(255,255,255,.85);padding:4px 8px;border-radius:6px;align-self:flex-start}
 .carte b{position:relative;font-size:18px;letter-spacing:-.02em;background:rgba(255,255,255,.85);padding:4px 8px;border-radius:6px;align-self:flex-start}
 .carte span{position:relative;font-size:13.5px;color:var(--ink-2);background:rgba(255,255,255,.85);padding:4px 8px;border-radius:6px}
@@ -416,10 +421,10 @@ html.calme .fenetre{transform:none}
       <p class="desc">Le studio 3h33 écrit, tourne, compose et monte avec l'IA. Des films entiers, des vidéos de marque, des musiques originales, des personnages cohérents d'un plan à l'autre.</p>
     </div>
     <div class="flottantes reveal">
-      <div class="carte" data-tilt style="--f:linear-gradient(160deg,#dbe8ff,#1f6ff5)"><div class="fond"></div><span class="t">FILM · ELFE</span><b>WAWW, le film</b><span>écrit et produit dans le studio ELFE</span></div>
-      <div class="carte" data-tilt style="--f:linear-gradient(160deg,#fff1cf,#ffb020)"><div class="fond"></div><span class="t">MUSIQUE</span><b>Canta Dream</b><span>compositions originales, voix, arrangements</span></div>
-      <div class="carte" data-tilt style="--f:linear-gradient(160deg,#e9f2ff,#7fb0ff)"><div class="fond"></div><span class="t">VIDÉOS</span><b>alexandre.ai</b><span>galerie de vidéos IA, du plan à la séquence</span></div>
-      <div class="carte" data-tilt style="--f:linear-gradient(160deg,#f3f7fd,#3f475a)"><div class="fond"></div><span class="t">IMAGES</span><b>alexandre.photos</b><span>portraits, décors, personnages cohérents</span></div>
+      <div class="carte carte--dessin" data-tilt><img class="carte__img" src="/dessins/flux-studio.jpg" alt="WAWW, le film, croquis au crayon" loading="lazy" width="1400" height="933"><span class="t">FILM · ELFE</span><b>WAWW, le film</b><span>écrit et produit dans le studio ELFE</span></div>
+      <div class="carte carte--dessin" data-tilt><img class="carte__img" src="/dessins/flux-podcast.jpg" alt="Canta Dream, croquis au crayon" loading="lazy" width="1400" height="933"><span class="t">MUSIQUE</span><b>Canta Dream</b><span>compositions originales, voix, arrangements</span></div>
+      <div class="carte carte--dessin" data-tilt><img class="carte__img" src="/dessins/flux-contenus.jpg" alt="alexandre.ai, croquis au crayon" loading="lazy" width="1400" height="933"><span class="t">VIDÉOS</span><b>alexandre.ai</b><span>galerie de vidéos IA, du plan à la séquence</span></div>
+      <div class="carte carte--dessin" data-tilt><img class="carte__img" src="/dessins/flux-agents.jpg" alt="alexandre.photos, croquis au crayon" loading="lazy" width="1400" height="933"><span class="t">IMAGES</span><b>alexandre.photos</b><span>portraits, décors, personnages cohérents</span></div>
     </div>
     <p class="mention" style="margin:-10px 0 26px">Maquette : les cartes recevront de vrais extraits vidéo lus au survol. Elles réagissent déjà à la souris.</p>
     <h3 style="margin-bottom:14px">Ce qu'on a fait pour des clients, raconté officiellement</h3>
@@ -445,15 +450,15 @@ html.calme .fenetre{transform:none}
     <div class="piles" id="piles">
       <div class="pile spot" data-pile data-spot>
         <div class="pile__texte"><span class="pile__label">◆ Masterclass · 2 heures</span><div class="pile__titre">Découvrir ce que l'IA change dans vos métiers.</div><p class="pile__p">Démontré en direct, sans jargon, sur vos cas. Pour décider par où commencer, et avec qui.</p><div class="pile__pied"><a class="lien" href="#">Voir la masterclass</a></div></div>
-        <div class="pile__media" style="--f:linear-gradient(160deg,#e9f2ff,#bcd3ff)"><div class="ecranette"><div class="l"><b>Ce que l'IA fait déjà</b><span class="ok">démo</span></div><div class="l"><span>Rédiger un compte rendu</span><span class="ok">3 min</span></div><div class="l"><span>Préparer un appel d'offres</span><span class="ok">12 min</span></div><div class="l"><span>Répondre à 40 courriels</span><span class="ok">8 min</span></div></div></div>
+        <div class="pile__media pile__media--dessin"><img src="/dessins/flux-masterclass.jpg" alt="Une masterclass devant un petit groupe, croquis au crayon" loading="lazy" width="1400" height="933"></div></div>
       </div>
       <div class="pile spot" data-pile data-spot>
         <div class="pile__texte"><span class="pile__label">◆ Ateliers · 1 à 2 jours</span><div class="pile__titre">Agir sur vos propres dossiers.</div><p class="pile__p">Vos équipes pratiquent : contenus, données, automatisations, avec les outils qu'elles garderont. Elles repartent avec un usage, pas des notes.</p><div class="pile__pied"><a class="lien" href="#">Voir les ateliers</a></div></div>
-        <div class="pile__media" style="--f:linear-gradient(160deg,#fff1cf,#ffd37a)"><div class="ecranette"><div class="l"><b>Atelier « courriers »</b><span class="ok">jour 1</span></div><div class="l"><span>Gabarits validés</span><span class="ok">6</span></div><div class="l"><span>Temps gagné par agent</span><span class="ok">40 min/j</span></div><div class="l"><span>Référent nommé</span><span class="ok">oui</span></div></div></div>
+        <div class="pile__media pile__media--dessin"><img src="/dessins/flux-atelier.jpg" alt="Deux collègues en atelier sur un ordinateur, croquis au crayon" loading="lazy" width="1400" height="933"></div></div>
       </div>
       <div class="pile spot" data-pile data-spot>
         <div class="pile__texte"><span class="pile__label">◆ Forge · ½ journée + consolidation</span><div class="pile__titre">Construire, en live, l'outil qui manque.</div><p class="pile__p">Un agent, une automatisation, un tableau de bord : fabriqué avec vous en session, documenté, livré, opérationnel.</p><div class="pile__pied"><a class="lien" href="#">Voir la Forge</a></div></div>
-        <div class="pile__media" style="--f:linear-gradient(160deg,#dbe8ff,#1f6ff5)"><div class="ecranette"><div class="l"><b>Session Forge · mairie</b><span class="ok">livré</span></div><div class="l"><span>Assistant délibérations</span><span class="ok">en ligne</span></div><div class="l"><span>Documentation</span><span class="ok">12 pages</span></div><div class="l"><span>Temps de construction</span><span class="ok">½ journée</span></div></div></div>
+        <div class="pile__media pile__media--dessin"><img src="/dessins/flux-vibecoding.jpg" alt="Des mains au clavier et une structure qui s'assemble, croquis au crayon" loading="lazy" width="1400" height="933"></div></div>
       </div>
     </div>
     <div class="bandes">
