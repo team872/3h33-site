@@ -16,6 +16,13 @@ services:
       - "traefik.http.routers.h3h33contact.tls.certresolver=letsencrypt"
       - "traefik.http.routers.h3h33contact.priority=100"
       - "traefik.http.services.h3h33contact.loadbalancer.server.port=3020"
+      # ---- Bascule de 3h33.com : à décommenter le jour où le DNS pointe ici.
+      # - "traefik.http.routers.h3h33contact-prod.rule=Host(`3h33.com`) && PathPrefix(`/api/contact`)"
+      # - "traefik.http.routers.h3h33contact-prod.entrypoints=websecure"
+      # - "traefik.http.routers.h3h33contact-prod.tls=true"
+      # - "traefik.http.routers.h3h33contact-prod.tls.certresolver=letsencrypt"
+      # - "traefik.http.routers.h3h33contact-prod.priority=100"
+      # - "traefik.http.routers.h3h33contact-prod.service=h3h33contact"
     healthcheck:
       test: ["CMD-SHELL","wget -qO- http://127.0.0.1:3020/sante >/dev/null || exit 1"]
       interval: 30s
