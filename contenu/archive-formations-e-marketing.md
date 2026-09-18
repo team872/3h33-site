@@ -22,19 +22,11 @@ Nos formations
 
 Découvrez les fondamentaux du marketing digital et utilisez les bons outils 2.0 pour accompagner votre e-transformation
 
-Sélectionner
-
 Formation 100% pragmatique qui permettra d’acquérir les clés pour se lancer rapidement et tirer profit du potentiel offert par Twitter
-
-Sélectionner
 
 Cette formation WordPress vous permettra de réaliser rapidement et en toute simplicité, votre site, blog ou plateforme E-commerce
 
-Sélectionner
-
 Du Big Data au Smart Data : les nouveaux paradigmes du marketing des entreprises. Transformer vos données en avantage compétitif
-
-Contactez-nous
 
 Gérez et optimisez votre présence en ligne : e-reputation entreprise, image de marque en ligne et personnal branding
 
@@ -42,19 +34,11 @@ Contactez_nous
 
 Cette formation vous permettra de mieux cerner le rôle de Community Manager et de mettre en place vos premiers dispositifs digitaux avec efficacité.
 
-Contactez-nous
-
 La révolution d’achat de publicité en ligne est en marche : appréhender sereinement ce nouvel ecosystème
-
-Contactez-nous
 
 Apprenez les nouvelles techniques marketing de création et de distribution de contenu à forte valeur ajoutée pour toucher et engager votre audience
 
-Contactez-nous
-
 Comprendre et intégrer les nouveaux enjeux marketing et opportunités business de l’Internet des Objets, de l’impression en 3D et de la robotique
-
-Contactez-nous
 
 Merci de remplir ce formulaire de contact et notre équipe vous contactera très prochainement.
 

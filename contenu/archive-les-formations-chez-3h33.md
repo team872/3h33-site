@@ -19,5 +19,3 @@ chapo: "Page d'archive, publiée en 2015 et laissée telle quelle. Pour ce que n
 SÉLECTIONNER Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididui labore dolore magna.
 
 Sélectionner Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod tempor incididui labore dolore magna.
-
-Sélectionner

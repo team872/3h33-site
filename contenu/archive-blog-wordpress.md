@@ -16,8 +16,8 @@ WordPress – Un outil incontournable pour créer des sites, blogs ou plateforme
 
 ## Depuis de nombreuses années j’utilise WordPress pour créer mes sites et ceux de mes clients.
 
-PGlmcmFtZSBzdHlsZT0iYm9yZGVyOiAwcHg7IiBzcmM9Ii8vd3d3LnBlYXJsdHJlZXMuY29tL2FsZXhhbmRyZTNoMzMvd29yZHByZXNzL2lkMTA0NzU0NDc/ZW1iZWQ9MSIgd2lkdGg9IjU2MCIgaGVpZ2h0PSI0MTMiPjxhIGhyZWY9Imh0dHA6Ly93d3cucGVhcmx0cmVlcy5jb20vYWxleGFuZHJlM2gzMy93b3JkcHJlc3MvaWQxMDQ3NTQ0NyI+V09SRFBSRVNTLCBUSEVNRVMsIFBsdWdpbnM8L2E+PC9pZnJhbWU+
+<div class="integration"><iframe loading="lazy" style="width:100%;aspect-ratio:16/10;border:0" src="//www.pearltrees.com/alexandre3h33/wordpress/id10475447?embed=1"><a href="http://www.pearltrees.com/alexandre3h33/wordpress/id10475447">WORDPRESS, THEMES, Plugins</a></iframe></div>
 
 ## Retrouvez notre blog scoop.it sur WordPress
 
-PGRpdiBpZD0nc2Nvb3BpdC1jb250YWluZXItMTA5NzM0NCc+DQogIDxhIGhyZWY9J2h0dHA6Ly93d3cuc2Nvb3AuaXQvdC93b3JkcHJlczR5b3UnPldPUkRQUkVTUzRZb3U8L2E+DQo8L2Rpdj4NCjxzY3JpcHQgdHlwZT0ndGV4dC9qYXZhc2NyaXB0JyBzcmM9J2h0dHBzOi8vd3d3LnNjb29wLml0L2VtYmVkLWZ1bGwtdG9waWMvMTA5NzM0NC5qcycgPjwvc2NyaXB0Pg==
+<p class="note-archive"><em>Contenu intégré (Scoop.it) disparu avec le service.</em></p>

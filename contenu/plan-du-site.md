@@ -26,6 +26,7 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 - [Digital Trend](/archives/digital-trend/) — Digital Trend Retrouvez les tendances digitales du monde technologique et marketing.…
 - [Digital commandements – Les D Commandements de l’Agence 3h33](/archives/les-d-commandements/) — Les D Commandements Voici les D Commandements proposés aux étudiants que nous formons au M
 - [Editions Numériques – Marketing Digital](/archives/editions-numeriques/) — Le Studio 3h33 – Silence, ça tourne 3h33 est l’éditeur du site des Bonnes Nouvelles Newzit
+- [Formation : initiation au marketing digital](/archives/formations-e-marketing/formation-initiation-au-marketing-digital/) — Une formation pour comprendre les enjeux et les rouages du marketing digital : acquisition
 - [Formation RTB et programmatique](/archives/formation-rtb-programmatique/) — La formation de référence pour se former au RTB et Programmatique Notre formation Twitter 
 - [Formation Smart Data – Agence 3h33](/archives/formation-smart-data/) — Formation Smart Data – Agence 3h33 — archive de l'agence 3h33, conservée telle qu'elle a é
 - [Formation Twitter en entreprise](/archives/formation-twitter/) — La formation de référence pour tirer profit du potentiel de Twitter Notre formation Twitte
@@ -38,6 +39,8 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 - [Formation pour les professeurs](/archives/formation-marketing-digital-professeurs/) — Une formation de référence pour adapter vos cours à la génération Y Vous améliorer vos cou
 - [Formation pro du digital](/archives/formation-community-management/) — Une formation de référence pour devenir un pro du digital en 3 jours Vous souhaitez compre
 - [Formation pro du digital – Agence 3h33](/archives/formation-content-marketing/) — Formation pro du digital – Agence 3h33 — archive de l'agence 3h33, conservée telle qu'elle
+- [Formation réseaux sociaux](/archives/formations-e-marketing/formation-reseaux-sociaux/) — Formation aux médias sociaux par la pratique : Facebook, Twitter, LinkedIn, blogs et vidéo
+- [Formation « Comment communiquer sur internet ? »](/archives/formations-e-marketing/formation-comment-communiquer-sur-internet/) — Une formation pour choisir sa stratégie de communication sur internet : site, blog, réseau
 - [Formations 3h33](/archives/les-formations-chez-3h33/) — CHOISISSEZ VOTRE PROFIL Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmo
 - [Formations E-Marketing Digital – Toutes les formations innovantes de 3](/archives/formations-e-marketing/) — Toutes les formations innovantes en Marketing Digital de 3h33 3h33 est une société spécial
 - [Formations Marketing Digital et E-Pédagogie](/archives/3h33-e-pedagogie-formations-marketing-digital/) — 3H33 AGENCE & FORMATIONS AU MARKETING DIGITAL 3h33 est un organisme de formation spécialis

@@ -26,6 +26,22 @@ GABARIT = (RACINE / "gabarits" / "page.html").read_text(encoding="utf-8")
 SITE_URL = "https://3h33.com"
 AUJOURD_HUI = datetime.date.today().isoformat()
 
+def date_git(chemin):
+    """Date du dernier commit qui a touché ce fichier. Sans dépôt, sa date sur le disque.
+    Sert de <lastmod> quand la fiche n'en fixe pas : un plan du site qui redate
+    toutes les pages à chaque compilation dit aux moteurs qu'elles ont toutes changé."""
+    import subprocess
+    try:
+        d = subprocess.run(["git", "log", "-1", "--format=%cs", "--", str(chemin)],
+                           capture_output=True, text=True, cwd=RACINE).stdout.strip()
+        if d: return d
+    except Exception:
+        pass
+    try:
+        return datetime.date.fromtimestamp(pathlib.Path(chemin).stat().st_mtime).isoformat()
+    except Exception:
+        return AUJOURD_HUI
+
 # ---------------------------------------------------------------- front matter
 def lire_fiche(chemin):
     txt = chemin.read_text(encoding="utf-8")
@@ -267,16 +283,16 @@ def construire(verifie=False):
 def sitemap(pages):
     lignes = ['<?xml version="1.0" encoding="UTF-8"?>',
               '<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">'.replace("sitemap.org", "sitemaps.org")]
-    entrees = [("/", "1.0", AUJOURD_HUI)]
+    entrees = [("/", "1.0", date_git(SITE / "index.html"))]
     for meta, _, _ in pages:
         if meta.get("indexer") == "non" or meta["url"] == "/":
             continue
         prio = meta.get("priorite", "0.7")
-        entrees.append((meta["url"], prio, meta.get("modifie", AUJOURD_HUI)))
+        entrees.append((meta["url"], prio, meta.get("modifie") or date_git(RACINE / "contenu" / meta["_fichier"])))
     # les sept sites HTML purs, conservés à l'identique
     for u in ("/galaxie/", "/forge/", "/formation-claude/", "/podcast-voix-de-lia/",
               "/verif-nom/", "/cartographie-mondiale-des-usages-de-l-ia/", "/cobrandz/"):
-        entrees.append((u, "0.8", AUJOURD_HUI))
+        entrees.append((u, "0.8", date_git(SITE / u.strip("/") / "index.html")))
     for url, prio, date in entrees:
         lignes += ["  <url>", f"    <loc>{SITE_URL}{url}</loc>",
                    f"    <lastmod>{date}</lastmod>", f"    <priority>{prio}</priority>", "  </url>"]

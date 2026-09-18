@@ -16,8 +16,6 @@ chapo: "Page d'archive, publiée en 2015 et laissée telle quelle. Pour ce que n
 
 Vous souhaitez prendre le virage du Digital ? Vous doter de nouvelles compétences? Maîtriser les fondamentaux du marketing sur le web ? Suivez cette formation 100% opérationnelle.
 
-INSCRIVEZ-VOUS FormateurJours de formationTasses de caféOutils 2.0
-
 ## Les objectifs de la formation
 
 Vous êtes Rédacteurs en chef, chefs de service, journalistes désirant participer au développement de l’audience ? Vous êtes au bon endroit.
@@ -36,7 +34,7 @@ Chaque utilisateur doit disposer d’un ordinateur avec la configuration suivant
 
 - Une adresse « Gmail » (même temporaire) serait un plus pour gagner du temps.
 
- !INSCRIVEZ-VOUS
+ !
 
 ## Contenu de la formation
 
@@ -66,7 +64,7 @@ Comment identifier les meilleures sources de diffusion ? Les bons réseaux socia
 
 Vérifier l’efficacité de vos actions digitales et créer votre stratégie sur-mesure. Mesurez vos résultats en Marketing Digital avec les bons Indicateurs Clé.
 
- !INSCRIVEZ-VOUS
+ !
 
 ## A l’issue de cette formation, vous serez capable de :
 

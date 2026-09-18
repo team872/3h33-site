@@ -16,8 +16,6 @@ chapo: "Page d'archive, publiée en 2012 et laissée telle quelle. Pour ce que n
 
 Cette formation combine les avantages de la théorie (comprendre et choisir) et de la pratique (utiliser et optimiser).
 
-INSCRIVEZ-VOUS !FormateurJours de formationTasses de caféOutils 2.0
-
 ## Les objectifs de la formation
 
 Apprenez à être efficace et productif et vous réaliserez de sérieuses économies sur toutes vos problématiques de marketing digitale avec notre méthode de COST KILLING 2.0 
@@ -26,7 +24,7 @@ Apprenez à être efficace et productif et vous réaliserez de sérieuses écono
 
 Vous avez entendu parler dans les médias des startups dont la valorisation dépasse la centaine de millions de dollars !
 
-Pour découvrir pourquoi et comment, formez-vous avec 3h33 au web 2.0 et aux nouvelles techniques de création de contenus et devenez redoutablement efficace et productif en utilisant ces fantastiques outils disponibles sur Internet. !INSCRIVEZ-VOUS
+Pour découvrir pourquoi et comment, formez-vous avec 3h33 au web 2.0 et aux nouvelles techniques de création de contenus et devenez redoutablement efficace et productif en utilisant ces fantastiques outils disponibles sur Internet. !
 
 ## Le web 2.0 ?
 
@@ -34,7 +32,7 @@ Tout le monde parle d’innovation, de réseaux sociaux, de cloud, de SaaS, mais
 
 Que comprend le terme du [web 2.0 ?](http://fr.wikipedia.org/wiki/Web_2.0) Si l’on se cantonne à la définition de Wikipédia qui date de 2003 on constate qu’il serait sûrement temps de faire évoluer cette notion ! Allons-nous parler maintenant d’outils ou de solutions 3.0 ? Ce qui est sûr c’est que peu importe le terme il existe des outils et des solutions conçus au fur et à mesure des avancées technologiques qui vous permettront d’être plus efficace dans votre travail quotidien.
 
- !INSCRIVEZ-VOUS
+ !
 
 ## A l’issue de cette formation, vous serez capable de :
 

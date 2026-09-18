@@ -16,8 +16,6 @@ chapo: "Page d'archive, publiée en 2015 et laissée telle quelle. Pour ce que n
 
 Notre formation Twitter vous permettra de débuter rapidement et efficacement sur ce réseau social devenu incontournable. Nous vous accompagnons dans la mise en place d’une stratégie optimale et sur mesure. Lancez-vous !
 
-INSCRIVEZ-VOUS !FormateurJours de formationTasses de caféOutils 2.0
-
 ## Les objectifs de la formation
 
 Twitter est devenu en quelques années le réseau le plus actif du monde. Les TV du monde entier utilise Twitter pour communiquer avec leurs téléspectateurs, les internautes suivent tous les événements LIVE  sur Twitter.
@@ -34,7 +32,7 @@ Disposer d’une adresse Gmail et de comptes sur les réseaux sociaux vous perme
 
 La salle doit disposer d’une connexion internet wifi de bonne qualité et d’un vidéo projecteur récent (véritable résolution HD) pour votre confort.
 
-Nous vous recommandons d’amener votre ordinateur portable connecté à Internet afin d’accéder à des contenus complémentaires et de réaliser des exercices. !INSCRIVEZ-VOUS
+Nous vous recommandons d’amener votre ordinateur portable connecté à Internet afin d’accéder à des contenus complémentaires et de réaliser des exercices. !
 
 ## Contenu de la formation
 
@@ -48,7 +46,7 @@ Quels types de contenus créer en fonction de votre activité ? Quels outils uti
 
 Vous allez pouvoir vérifier l’efficacité de vos actions digitales, et créer votre stratégie sur-mesure. Mesurez vos résultats quand vous parlez marketing digital avec les bons KPI.
 
- !INSCRIVEZ-VOUS
+ !
 
 ## A l’issue de cette formation, vous serez capable de :
 
@@ -69,7 +67,3 @@ Vous allez pouvoir vérifier l’efficacité de vos actions digitales, et créer
 Alexandre Stopnicki ([@alexandre3h33](http://www.twitter.com/alexandre3h33)) est un sérial entrepreneur passionné par l’innovation et le marketing digital. Pionnier dans les technologies de l’information, il construit sa carrière dès 1994 en créant sa première startup : Numériland, une agence digitale bien avant l’heure et également une importante régie publicitaire. Il contribue au lancement de l’internet en France en tant que membre de l’IAB et Président du premier syndicat des régies publicitaires sur internet. Il est aujourd’hui  investi dans la formation, le conseil en stratégie digitale et dans l’accompagnement de Startups.
 
 Il est le directeur pédagogique du MBA MCI (Marketing et Commerce sur Internet), la formation de référence en France dans le Marketing Digital à l’institut Léonard de Vinci, Paris-la-Défense. EN SAVOIR PLUS
-
-# Ils nous font confiance
-
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem sadips ipsums aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.

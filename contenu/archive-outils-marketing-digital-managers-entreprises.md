@@ -38,8 +38,6 @@ Comment gagner des followers et faire de l’ « engagement » sur vos réseau
 
 Comment créer des tableaux de bords efficaces pour suivre toutes vos activités numériques et mesurer votre ROI.
 
-INSCRIVEZ-VOUShttps://3h33.com/wp-content/uploads/2017/12/BotMoiLeQi-3h33-300×300.jpg
-
 Cette formation pragmatique vous permettra d’être immédiatement opérationnel(le) pour créer, développer et optimiser une stratégie de marketing digital.
 
 Afin que vous puissiez obtenir les bons réflexes et les compétences nécessaires nous avons déployé une pédagogie originale et éprouvée. Cette « E-pédagogie » est la combinaison de plusieurs facteurs clés pour apprendre :
@@ -49,8 +47,6 @@ Afin que vous puissiez obtenir les bons réflexes et les compétences nécessair
 2) Des outils pour s’exercer et continuer à apprendre même après la formation (Fast learning, blending learning, MOOC…).
 
 3) Un coach sous la forme d’un ChatBot une IA (intelligence artificielle) nommée « BotMoiLeQi« . Il vous accompagnera, vous challengera et vous guidera pendant tout votre apprentissage avant et APRES la formation. Il s’agit d’une innovation dans le monde de la pédagogie et outil unique en France fonctionnant déjà avec plusieurs centaines d’apprenants.
-
-INSCRIVEZ-VOUSFormateurJours de formationTasses de caféOutils 2.0
 
 ## Les objectifs de la formation
 
@@ -64,7 +60,7 @@ Disposer d’un compte Gmail et de comptes sur les réseaux sociaux vous permett
 
 Nous vous recommandons d’apporter votre ordinateur portable afin d’accéder à notre chatbot « BotMoiLeQI« , à des contenus complémentaires OnLine et de réaliser des exercices.
 
- !INSCRIVEZ-VOUS
+ !
 
 ## Contenu de la formation
 
@@ -78,7 +74,7 @@ Quels types de contenus créer en fonction de votre activité ? Quels outils uti
 
 Vous allez pouvoir vérifier l’efficacité de vos actions digitales, et créer votre stratégie sur-mesure. Mesurez vos résultats quand vous parlez marketing digital avec les bons KPI.
 
- !INSCRIVEZ-VOUS
+ !
 
 ## A l’issue de cette formation, vous serez capable de :
 

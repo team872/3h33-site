@@ -16,8 +16,6 @@ chapo: "Page d'archive, publiée en 2013 et laissée telle quelle. Pour ce que n
 
 Vous améliorer vos cours au monde du digital et devenir capable de vous faire comprendre par vos étudiants ? C’est possible grâce à cette formation.
 
-INSCRIVEZ-VOUS FormateurJours de formationTasses de caféOutils 2.0
-
 ## Les objectifs de la formation
 
 Vous êtes professeur ou formateur, vous souhaitez adapter et améliorer vos cours aux apprenants ou aux étudiants de la génération Y ?
@@ -26,7 +24,7 @@ Vous êtes professeur ou formateur, vous souhaitez adapter et améliorer vos cou
 
 Nous avons réalisé pour vous une formation adaptée aux professeurs. Découvrez les technologies à utiliser pour concevoir, diffuser, faire passer des tests et analyser vos cours.
 
-Avec plus de 10 ans d’expériences dans la formation et dans l’utilisation des technologies Alexandre Stopnicki vous propose une formation unique et personnalisée pour que les cordonniers soit parfaitement bien chaussées. !INSCRIVEZ-VOUS
+Avec plus de 10 ans d’expériences dans la formation et dans l’utilisation des technologies Alexandre Stopnicki vous propose une formation unique et personnalisée pour que les cordonniers soit parfaitement bien chaussées. !
 
 ## Contenu de la formation
 
@@ -40,7 +38,7 @@ Quels types de contenus créer en fonction de votre activité ? Quels outils uti
 
 Vous allez pouvoir vérifier l’efficacité de vos actions digitales, et créer votre stratégie sur-mesure. Mesurez vos résultats quand vous parlez marketing digital avec les bons KPI.
 
- !INSCRIVEZ-VOUS
+ !
 
 ## A l’issue de cette formation, vous serez capable de :
 

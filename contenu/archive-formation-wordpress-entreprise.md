@@ -16,8 +16,6 @@ chapo: "Page d'archive, publiée en 2015 et laissée telle quelle. Pour ce que n
 
 Vous souhaitez maîtrisez facilement la construction de votre premier site Web WordPress? Cette formation WordPress complète s’adresse aussi bien à des débutants qu’à des utilisateurs plus expérimentés qui mettront à profit les diverses techniques et savoir-faire enseignés  pour lancer rapidement son site web, blog ou plateforme e-commerce.
 
-INSCRIVEZ-VOUS FormateurJours de formationTasses de caféOutils 2.0
-
 ## Les objectifs de la formation
 
 Apprenez et maîtriser rapidement les fondamentaux de WordPress et lancer son premier site web, blog ou plateforme e-commerce.
@@ -30,7 +28,7 @@ Disposer d’une adresse Gmail et de comptes sur les réseaux sociaux vous perme
 
 La salle doit disposer d’une connexion internet wifi de bonne qualité et d’un vidéo projecteur récent (véritable résolution HD) pour votre confort.
 
-Nous vous recommandons d’amener votre ordinateur portable connecté à Internet afin d’accéder à des contenus complémentaires et de réaliser des exercices. !INSCRIVEZ-VOUS
+Nous vous recommandons d’amener votre ordinateur portable connecté à Internet afin d’accéder à des contenus complémentaires et de réaliser des exercices. !
 
 ## Contenu de la formation WordPress
 
@@ -44,7 +42,7 @@ Quels types de contenus créer en fonction de votre activité ? Quels outils uti
 
 Vous allez pouvoir vérifier l’efficacité de vos actions digitales, et créer votre stratégie sur-mesure. Mesurez vos résultats quand vous parlez marketing digital avec les bons KPI.
 
- !INSCRIVEZ-VOUS
+ !
 
 ## A l’issue de cette formation, vous serez capable de :
 

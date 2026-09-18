@@ -16,8 +16,6 @@ chapo: "Page d'archive, publiée en 2015 et laissée telle quelle. Pour ce que n
 
 Notre formation Twitter vous permettra de débuter rapidement et efficacement sur ce réseau social devenu incontournable. Nous vous accompagnons dans la mise en place d’une stratégie optimale et sur mesure. Lancez-vous !
 
-INSCRIVEZ-VOUS !FormateurJours de formationTasses de caféOutils 2.0
-
 ## La formation pour tirer profit de tout le véritable potentiel de Twitter.
 
 Notre formation à Twitter vous permettra de débuter rapidement et efficacement sur ce très puissant média social qui est au fil des années est devenu un outil totalement incontournable pour les entreprises.
@@ -38,7 +36,7 @@ Disposer d’une adresse Gmail et de comptes sur les réseaux sociaux vous perme
 
 La salle doit disposer d’une connexion internet wifi de bonne qualité et d’un vidéo projecteur récent (véritable résolution HD) pour votre confort.
 
-Nous vous recommandons d’amener votre ordinateur portable connecté à Internet afin d’accéder à des contenus complémentaires et de réaliser des exercices. !INSCRIVEZ-VOUS
+Nous vous recommandons d’amener votre ordinateur portable connecté à Internet afin d’accéder à des contenus complémentaires et de réaliser des exercices. !
 
 ## Contenu de la formation
 
@@ -68,7 +66,7 @@ Vous allez pouvoir vérifier l’efficacité de vos actions digitales, et créer
 
 Si vous n’avez pas encore pris conscience que Twitter est l’outil qu’il faut absolument maîtriser dans une stratégie digitale, ou si vous voulez optimiser et trouver les meilleures façons d’utiliser Twitter pour votre entreprise cette « formation Twitter » est faite pour vous.
 
- !INSCRIVEZ-VOUS
+ !
 
 ## A l’issue de cette formation, vous serez capable de :
 

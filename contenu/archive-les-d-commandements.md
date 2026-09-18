@@ -16,4 +16,4 @@ Les D Commandements
 
 ## Voici les D Commandements proposés aux étudiants que nous formons au Marketing Digital.
 
-PGlmcmFtZSBzcmM9Imh0dHBzOi8vZG9jcy5nb29nbGUuY29tL3ByZXNlbnRhdGlvbi9kLzFuSTNJRlFfTFBXell0c1lmN3RNNVZxQm5QbHNKMW85aUV2clhrYmxGbG5jL2VtYmVkP3N0YXJ0PWZhbHNlJmFtcDtsb29wPWZhbHNlJmFtcDtkZWxheW1zPTMwMDAiIHdpZHRoPSI5NjAiIGhlaWdodD0iNzQ5IiBmcmFtZWJvcmRlcj0iMCIgYWxsb3dmdWxsc2NyZWVuPSJhbGxvd2Z1bGxzY3JlZW4iPjwvaWZyYW1lPg==
+<div class="integration"><iframe loading="lazy" style="width:100%;aspect-ratio:16/10;border:0" src="https://docs.google.com/presentation/d/1nI3IFQ_LPWzYtsYf7tM5VqBnPlsJ1o9iEvrXkblFlnc/embed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>

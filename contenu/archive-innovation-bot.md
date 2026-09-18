@@ -12,4 +12,4 @@ eyebrow: "Archive · 2018"
 chapo: "Page d'archive, publiée en 2018 et laissée telle quelle. Pour ce que nous faisons aujourd'hui, voyez les [formations](/formations/) et [l'agence](/agence/)."
 ---
 
-https://3h33.com/wp-content/uploads/2018/03/innovation-bot.png
+/medias/archives/innovation-bot.png

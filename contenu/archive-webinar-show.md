@@ -16,4 +16,4 @@ chapo: "Page d'archive, publiée en 2020 et laissée telle quelle. Pour ce que n
 
 ## webinar.show
 
-PGRpdiBjbGFzcz0iZ29vZ2xlLXNsaWRlcy1jb250YWluZXIiPgoJWzxpZnJhbWUgc3JjPSJodHRwczovL2RvY3MuZ29vZ2xlLmNvbS9wcmVzZW50YXRpb24vZC9lLzJQQUNYLTF2UzRIQ1d6UGJxN3lILUtvMWdObHFqM2V2QjVPWnZMUlZzaldUTUhWTVM0bUg0dnpPS0IwcHpadjlBbElwWkdGTkVuM3RJdnVOSk1zNTBuL2VtYmVkP3N0YXJ0PWZhbHNlJmxvb3A9ZmFsc2UmZGVsYXltcz02MDAwMCIgZnJhbWVib3JkZXI9IjAiIHdpZHRoPSI5NjAiIGhlaWdodD0iNTY5IiBhbGxvd2Z1bGxzY3JlZW49InRydWUiIG1vemFsbG93ZnVsbHNjcmVlbj0idHJ1ZSIgd2Via2l0YWxsb3dmdWxsc2NyZWVuPSJ0cnVlIj48L2lmcmFtZT5dCjwvZGl2Pg==
+<div class="integration"><iframe loading="lazy" style="width:100%;aspect-ratio:16/10;border:0" src="https://docs.google.com/presentation/d/e/2PACX-1vS4HCWzPbq7yH-Ko1gNlqj3evB5OZvLRVsjWTMHVMS4mH4vzOKB0pzZv9AlIpZGFNEn3tIvuNJMs50n/embed?start=false&loop=false&delayms=60000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>

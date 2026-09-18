@@ -405,3 +405,8 @@ html.calme .dessin img{animation:none;-webkit-mask-image:none;mask-image:none;op
   .compteur__l,.compteur__pied,.vignette__barre em{font-size:12.5px}
   .frise__pts .h,.duree{font-size:12.5px}
 }
+
+/* Archives : ce qui reste des anciennes intégrations */
+.note-archive{color:var(--ink-3);font-size:15px;border-left:3px solid var(--trait);padding:6px 0 6px 14px;margin:18px 0}
+.integration{margin:22px 0}
+.integration iframe{display:block;border:0;width:100%;aspect-ratio:16/10;border-radius:10px;background:var(--ground-2)}

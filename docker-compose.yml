@@ -14,6 +14,23 @@ services:
       - "traefik.http.routers.h3h33.tls=true"
       - "traefik.http.routers.h3h33.tls.certresolver=letsencrypt"
       - "traefik.http.services.h3h33.loadbalancer.server.port=80"
+      # ---- Bascule de 3h33.com : à décommenter le jour où le DNS pointe ici.
+      # Deux routeurs séparés : si Let's Encrypt échoue sur un nom, l'autre garde
+      # son certificat. www est renvoyé vers le nom nu.
+      # - "traefik.http.routers.h3h33-prod.rule=Host(`3h33.com`)"
+      # - "traefik.http.routers.h3h33-prod.entrypoints=websecure"
+      # - "traefik.http.routers.h3h33-prod.tls=true"
+      # - "traefik.http.routers.h3h33-prod.tls.certresolver=letsencrypt"
+      # - "traefik.http.routers.h3h33-prod.service=h3h33"
+      # - "traefik.http.routers.h3h33-www.rule=Host(`www.3h33.com`)"
+      # - "traefik.http.routers.h3h33-www.entrypoints=websecure"
+      # - "traefik.http.routers.h3h33-www.tls=true"
+      # - "traefik.http.routers.h3h33-www.tls.certresolver=letsencrypt"
+      # - "traefik.http.routers.h3h33-www.middlewares=h3h33-sanswww"
+      # - "traefik.http.routers.h3h33-www.service=h3h33"
+      # - "traefik.http.middlewares.h3h33-sanswww.redirectregex.regex=^https?://www\\.3h33\\.com/(.*)"
+      # - "traefik.http.middlewares.h3h33-sanswww.redirectregex.replacement=https://3h33.com/$${1}"
+      # - "traefik.http.middlewares.h3h33-sanswww.redirectregex.permanent=true"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://127.0.0.1/robots.txt"]
       interval: 30s
