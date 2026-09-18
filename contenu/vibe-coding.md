@@ -108,5 +108,5 @@ Ce n'est pas un chatbot déguisé : c'est un produit complet, avec un parcours d
 La liste complète vit dans [la galaxie 3h33](/galaxie/).
 
 <div class="encadre">
-<p><strong>Une démo par semaine, pendant cinq semaines.</strong> Deux minutes de vidéo, un outil construit sous vos yeux, et la question qui compte : chez vous, ça donnerait quoi ? <a href="/contact/">Demandez la série</a>.</p>
+<p><strong>Et chez vous, ça donnerait quoi ?</strong> Dites-nous en trois lignes ce qui vous prend du temps. On répond sous un jour ouvré, souvent par une démonstration plutôt que par une réunion. <a href="/contact/">Nous écrire</a>.</p>
 </div>

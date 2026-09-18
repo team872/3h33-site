@@ -260,7 +260,7 @@ section.chap{padding:100px 28px 30px}
 .carte b{position:relative;font-size:18px;letter-spacing:-.02em;background:rgba(255,255,255,.85);padding:4px 8px;border-radius:6px;align-self:flex-start}
 .carte span{position:relative;font-size:13.5px;color:var(--ink-2);background:rgba(255,255,255,.85);padding:4px 8px;border-radius:6px}
 .carte:hover{box-shadow:0 50px 90px -30px rgba(31,111,245,.35)}
-.preuves{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.preuves{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,440px));gap:18px}
 .preuve{border:1px solid var(--trait);border-radius:var(--radius-s);padding:22px 24px;background:#fff;display:grid;gap:8px;font-size:15.5px;box-shadow:var(--ombre)}
 .preuve .secteur{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc);font-weight:700}
 .preuve dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px}
@@ -330,10 +330,7 @@ section.chap{padding:100px 28px 30px}
 .final .plan--milieu{bottom:60px;z-index:1}.final .plan--devant{bottom:-60px;z-index:2}
 .capture{position:relative;z-index:3;max-width:820px;margin:0 auto;padding:44px 48px 40px;border-radius:var(--radius);background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border:1px solid var(--trait);box-shadow:var(--ombre);text-align:center;display:grid;gap:14px;justify-items:center}
 .capture h2{font-size:clamp(26px,3.4vw,44px);max-width:22ch}
-.capture form{display:flex;gap:10px;width:100%;max-width:540px;margin-top:8px}
-.capture input{flex:1;min-width:0;font:inherit;font-size:16.5px;padding:14px 18px;border-radius:999px;border:2px solid #cfd6e4;background:#fff;color:#111}
-.capture .petit{font-size:13.5px;color:var(--ink-3)}
-.retour{font-size:15px;color:var(--acc);min-height:22px;font-weight:700}
+.capture__p{font-size:17px;color:var(--ink-2);max-width:56ch;margin:0 0 6px}
 .final .espace{height:380px}
 footer.pied-site{position:relative;z-index:3;background:#fff;padding:56px 0 46px;color:var(--ink-3);font-size:14px}
 .pied-cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px;padding-bottom:32px}
@@ -365,7 +362,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
   .intro__grille,.tete,.faq,.forge,.bandes,.scene .diapo{grid-template-columns:1fr}.portrait{max-width:300px}
   .flottantes{grid-template-columns:1fr 1fr}.chiffres,.preuves{grid-template-columns:1fr}
   .scene{height:auto;min-height:620px}.scene .diapo{position:relative;display:none;padding:28px}.scene .diapo.on{display:grid}
-  .pile{grid-template-columns:1fr;height:auto}.pile__media{min-height:220px}.capture form{flex-direction:column}
+  .pile{grid-template-columns:1fr;height:auto}.pile__media{min-height:220px}
   .bandeau{padding-top:40px}
 }
 
@@ -438,7 +435,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
         <p class="sous">Vos équipes apprennent l'IA en fabriquant. Masterclass, ateliers, sessions Forge : on repart avec un outil, pas avec des notes.</p>
         <div class="hero__actions">
           <a class="btn" href="#demontrer" data-aimant>Voir les cinq outils <span class="fl">→</span></a>
-          <a class="lien lien--hero" href="#capture">Recevoir une démo par semaine</a>
+          <a class="lien lien--hero" href="/contact/">Nous écrire</a>
         </div>
         <ul class="hero__preuves">
           <li><b>34</b><span>sites et outils<br>en ligne</span></li>
@@ -484,7 +481,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
       <div class="scene spot" id="scene" data-spot>
         <div class="diapo on" data-legende="NegoVox · s'entraîner cent fois avant le vrai rendez-vous">
           <div><span class="tag">voix · 2 minutes</span><h3 style="margin-top:14px">Le rendez-vous décisif se joue avant le rendez-vous.</h3><p class="texte">Votre commercial affronte cent fois le client le plus difficile, à voix haute, face à quelqu'un qui résiste vraiment. Débrief immédiat sur douze compétences, et il recommence jusqu'à ce que ça passe. Le vrai entretien n'est plus le premier essai.</p><a class="vignette vignette--demo" href="https://negovox.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>negovox.com</em></span><img src="/vignettes/negovox.jpg" alt="La page d'accueil de NegoVox" loading="lazy" width="760" height="412"></a></div>
-          <div class="visuel"><div class="ondes" aria-hidden="true"><span style="animation-delay:0s"></span><span style="animation-delay:.1s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:.15s"></span><span style="animation-delay:.05s"></span><span style="animation-delay:.25s"></span><span style="animation-delay:.35s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.1s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:0s"></span></div><div class="repl"><b>Vous :</b> « Cette pièce est à 4 200 €. »</div><div class="repl"><b>La cliente IA :</b> « Je l'ai vue à 3 600 rue Saint-Honoré. Qu'est-ce qui justifie 600 € de plus ? »</div><p class="mention">Maquette : le vrai simulateur, avec micro, sera branché ici.</p></div>
+          <div class="visuel"><div class="ondes" aria-hidden="true"><span style="animation-delay:0s"></span><span style="animation-delay:.1s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:.15s"></span><span style="animation-delay:.05s"></span><span style="animation-delay:.25s"></span><span style="animation-delay:.35s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.1s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:0s"></span></div><div class="repl"><b>Vous :</b> « Cette pièce est à 4 200 €. »</div><div class="repl"><b>La cliente IA :</b> « Je l'ai vue à 3 600 rue Saint-Honoré. Qu'est-ce qui justifie 600 € de plus ? »</div></div>
         </div>
         <div class="diapo" data-legende="chapitre.ai · l'IA-biographe qui recueille une vie">
           <div><span class="tag">voix → livre</span><h3 style="margin-top:14px">Vos parents ont une histoire. Personne ne l'a écrite.</h3><p class="texte">Une IA-biographe les interroge à la voix, patiemment, séance après séance, et en fait un livre. Ils corrigent en parlant, sans jamais toucher un clavier. Leurs souvenirs restent privés, hébergés en France.</p><a class="vignette vignette--demo" href="https://chapitre.ai" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>chapitre.ai</em></span><img src="/vignettes/chapitre.jpg" alt="La page d'accueil de chapitre.ai" loading="lazy" width="760" height="412"></a></div>
@@ -492,7 +489,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
         </div>
         <div class="diapo" data-legende="BotMoiLeQi · le fait du jour, en 90 secondes">
           <div><span class="tag">90 secondes</span><h3 style="margin-top:14px">Un fait surprenant, chaque matin</h3><p class="texte">Quatre-vingt-dix secondes, à lire ou à écouter. Trouvé, vérifié, sourcé, mis en voix, publié : la chaîne entière tourne seule, tous les jours depuis des mois.</p><a class="vignette vignette--demo" href="https://botmoileqi.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>botmoileqi.com</em></span><img src="/vignettes/botmoileqi.jpg" alt="La page d'accueil de BotMoiLeQi" loading="lazy" width="760" height="412"></a></div>
-          <div class="visuel"><div class="repl"><b>Ce matin :</b> « Les fourmis n'ont pas de poumons. L'air entre par des orifices minuscules répartis le long de leur corps. »</div><div class="audio"><span class="pt"></span><span>À écouter</span><span class="d">1 min 30</span></div><p class="mention">Maquette : le fait du jour arrivera en direct depuis botmoileqi.com.</p></div>
+          <div class="visuel"><div class="repl"><b>Ce matin :</b> « Les fourmis n'ont pas de poumons. L'air entre par des orifices minuscules répartis le long de leur corps. »</div><div class="audio"><span class="pt"></span><span>À écouter</span><span class="d">1 min 30</span></div></div>
         </div>
         </div>
         <div class="diapo" data-legende="ListenEngine · capitalisez pour de vrai sur votre veille">
@@ -520,12 +517,9 @@ html.calme .mots .m>span{transform:none;opacity:1}
       <div class="carte carte--dessin" data-tilt><img class="carte__img" src="/dessins/flux-contenus.jpg" alt="alexandre.ai, croquis au crayon" loading="lazy" width="1400" height="933"><span class="t">VIDÉOS</span><b>alexandre.ai</b><span>galerie de vidéos IA, du plan à la séquence</span></div>
       <div class="carte carte--dessin" data-tilt><img class="carte__img" src="/dessins/flux-agents.jpg" alt="alexandre.photos, croquis au crayon" loading="lazy" width="1400" height="933"><span class="t">IMAGES</span><b>alexandre.photos</b><span>portraits, décors, personnages cohérents</span></div>
     </div>
-    <p class="mention" style="margin:-10px 0 26px">Maquette : les cartes recevront de vrais extraits vidéo lus au survol. Elles réagissent déjà à la souris.</p>
-    <h3 style="margin-bottom:14px">Ce qu'on a fait pour des clients, raconté officiellement</h3>
+    <h3 style="margin-bottom:14px">Ce qu'on a fait pour un client, raconté officiellement</h3>
     <div class="preuves">
       <div class="preuve spot reveal" data-spot><div class="secteur">Sator · formation en ligne</div><dl><dt>Besoin</dt><dd>rendre des centaines d'heures de cours vidéo réellement consultables</dd><dt>Livré</dt><dd>une plateforme qui retrouve la bonne seconde et interroge l'apprenant</dd><dt>Voir</dt><dd><a href="https://sator.fr">sator.fr</a></dd></dl></div>
-      <div class="preuve spot reveal" data-spot><div class="secteur">Client 2 · secteur à préciser</div><dl><dt>Besoin</dt><dd>à rédiger ensemble</dd><dt>Livré</dt><dd>une musique originale et son clip</dd><dt>Délai</dt><dd>à préciser</dd></dl></div>
-      <div class="preuve spot reveal" data-spot><div class="secteur">Client 3 · secteur à préciser</div><dl><dt>Besoin</dt><dd>à rédiger ensemble</dd><dt>Livré</dt><dd>des personnages et un univers visuel réutilisables</dd><dt>Délai</dt><dd>à préciser</dd></dl></div>
     </div>
   </section>
 
@@ -611,11 +605,10 @@ html.calme .mots .m>span{transform:none;opacity:1}
     <div class="plan plan--devant" data-rate="0.36"><svg id="svg-final-devant" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
     <div class="bloc">
       <div class="capture reveal">
-        <span class="eyebrow">Une démo par semaine, pendant cinq semaines</span>
+        <span class="eyebrow">Et chez vous ?</span>
         <h2>Deux minutes, un outil construit, et la question : chez vous, ça donnerait quoi ?</h2>
-        <form id="f-mail"><input type="email" placeholder="votre@email.fr" aria-label="Votre adresse email" required><button class="btn btn--or" type="submit" data-aimant>Recevoir la première démo</button></form>
-        <div class="retour" id="retour" aria-live="polite"></div>
-        <div class="petit">Cinq envois, puis plus rien sauf si vous le demandez. Maquette : l'envoi sera branché à l'étape 4.</div>
+        <p class="capture__p">Dites-nous en trois lignes ce qui vous prend du temps. On répond sous un jour ouvré, souvent par une démonstration plutôt que par une réunion.</p>
+        <a class="btn btn--or" href="/contact/" data-aimant>Nous contacter</a>
       </div>
     </div>
     <div class="espace"></div>
@@ -765,7 +758,6 @@ document.querySelectorAll(".qa button").forEach(b=>b.addEventListener("click",()
 /* ---------- flux + formulaire ---------- */
 const FLUX=[["09:12","science-marine","nouvelle page « Le plancton respire »"],["08:40","prompts.3h33","1 240 prompts indexés, recherche par usage"],["07:55","verif-nom","INPI brevets ajouté, 14 bases"],["hier","ia-conforme","questionnaire AI Act, version 3"],["hier","chapitre.ai","export du livre en ePub"],["hier","listen-engine","résumés audio en 3 langues"],["lun.","negovox","scénario « achat de licences »"],["lun.","mairie.ai","modèle de délibération assisté"],["dim.","science-marine","carte des courants en WebGL"],["sam.","voix-de-l-ia","épisode 12 en ligne"]];
 document.getElementById("flux").innerHTML=[...FLUX,...FLUX].map(f=>`<li><span class="h">${f[0]}</span><span class="p">${f[1]}</span><span>${f[2]}</span></li>`).join("");
-document.getElementById("f-mail").addEventListener("submit",e=>{e.preventDefault();document.getElementById("retour").textContent="Maquette : merci, l'envoi réel sera branché à l'étape 4."});
 
 /* ---------- verre cannelé (WebGL) ---------- */
 (function(){
