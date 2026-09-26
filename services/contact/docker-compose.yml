@@ -16,6 +16,15 @@ services:
       - "traefik.http.routers.h3h33contact.tls.certresolver=letsencrypt"
       - "traefik.http.routers.h3h33contact.priority=100"
       - "traefik.http.services.h3h33contact.loadbalancer.server.port=3020"
+      # ---- Vitrine d'ATELIER LMA (26/09/2026) : son formulaire de demande de
+      # demonstration passe par ce meme service, vers la meme adresse cachee.
+      # Ajouter https://lma.botmoileqi.com a ORIGINES dans le .env du VPS.
+      - "traefik.http.routers.h3h33contact-lma.rule=Host(`lma.botmoileqi.com`) && PathPrefix(`/api/contact`)"
+      - "traefik.http.routers.h3h33contact-lma.entrypoints=websecure"
+      - "traefik.http.routers.h3h33contact-lma.tls=true"
+      - "traefik.http.routers.h3h33contact-lma.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.h3h33contact-lma.priority=100"
+      - "traefik.http.routers.h3h33contact-lma.service=h3h33contact"
       # ---- Bascule de 3h33.com : à décommenter le jour où le DNS pointe ici.
       # - "traefik.http.routers.h3h33contact-prod.rule=Host(`3h33.com`) && PathPrefix(`/api/contact`)"
       # - "traefik.http.routers.h3h33contact-prod.entrypoints=websecure"
