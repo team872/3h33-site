@@ -19,6 +19,11 @@ services:
       # ---- Vitrine d'ATELIER LMA (26/09/2026) : son formulaire de demande de
       # demonstration passe par ce meme service, vers la meme adresse cachee.
       # Ajouter https://lma.botmoileqi.com a ORIGINES dans le .env du VPS.
+      # ---- Site principal BotMoiLeQi (29/09/2026) : botmoileqi.com est servi par
+      # un AUTRE VPS (217.65.146.187) ; son formulaire poste en direct (CORS) vers
+      # https://lma.botmoileqi.com/api/contact. Pour cela ORIGINES contient aussi
+      # https://botmoileqi.com et https://www.botmoileqi.com (ancien .env garde
+      # en .env.avant-botmoileqi). Sujet des messages : « Demonstration BotMoiLeQi ».
       - "traefik.http.routers.h3h33contact-lma.rule=Host(`lma.botmoileqi.com`) && PathPrefix(`/api/contact`)"
       - "traefik.http.routers.h3h33contact-lma.entrypoints=websecure"
       - "traefik.http.routers.h3h33contact-lma.tls=true"

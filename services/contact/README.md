@@ -15,3 +15,16 @@ lue dans `.env` côté serveur. Aucun robot ne peut la récupérer sur le site.
 
 Protections : champ piège invisible, délai minimum de trois secondes,
 cinq messages par heure et par adresse IP, taille limitée.
+
+## Sites qui utilisent ce service (au 29/09/2026)
+
+| Site | Comment il poste | Sujet des messages |
+|---|---|---|
+| nouveau.3h33.com | même domaine, `/api/contact` | selon le formulaire |
+| lma.botmoileqi.com | même domaine, `/api/contact` (routeur `h3h33contact-lma`) | « Démonstration ATELIER LMA » |
+| botmoileqi.com | **autre serveur** : appel direct vers `https://lma.botmoileqi.com/api/contact` (CORS) | « Démonstration BotMoiLeQi » |
+
+Chaque domaine appelant doit figurer dans `ORIGINES` du `.env` du VPS vitrine
+(`/opt/3h33-contact/.env`), sinon le navigateur bloque l'envoi. Essai sans
+envoyer de vrai message : poster avec le champ piège `site` rempli, le service
+répond `{"ok":true}` et n'envoie rien.
