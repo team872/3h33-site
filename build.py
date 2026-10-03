@@ -91,6 +91,23 @@ def md(texte):
                 if "</svg>" in lignes[i]: i += 1; break
                 i += 1
             continue
+        # galerie : lignes consécutives « @video <id> | <titre> | <AAAA-MM-JJ> | <m:ss> | <texte> ».
+        # Miniature d'abord, lecteur au clic (une page de vingt lecteurs YouTube chargés
+        # d'avance pèserait plusieurs mégaoctets) ; les mêmes lignes nourrissent les
+        # VideoObject du JSON-LD (videos_de).
+        if l.startswith("@video "):
+            ferme()
+            out.append('<div class="videos">')
+            while i < len(lignes) and lignes[i].startswith("@video "):
+                v = video(lignes[i])
+                out.append(f'<figure class="vcarte"><button type="button" class="vcarte__lire" data-video="{v["id"]}" '
+                           f'aria-label="Lire la vidéo : {esc(v["titre"])}"><img src="https://i.ytimg.com/vi/{v["id"]}/hqdefault.jpg" '
+                           f'alt="" loading="lazy" width="480" height="360"><span class="vcarte__play" aria-hidden="true">▶</span></button>'
+                           f'<figcaption><b>{esc(v["titre"])}</b><span class="vcarte__meta">{v["annee"]} · {v["duree"]}</span>'
+                           f'<span class="vcarte__texte">{enligne(esc(v["texte"]))}</span></figcaption></figure>')
+                i += 1
+            out.append("</div>")
+            continue
         # vidéo YouTube : « @youtube <identifiant> | <titre> ». Lecteur youtube-nocookie,
         # chargé paresseusement : aucun cookie déposé tant qu'on ne lance pas la vidéo,
         # donc pas de bandeau de consentement à ajouter pour une simple page.
@@ -156,6 +173,16 @@ def md(texte):
     ferme()
     return "\n".join(out)
 
+def video(ligne):
+    """« @video <id> | <titre> | <AAAA-MM-JJ> | <m:ss> | <texte> » → dict."""
+    vid, titre, date, duree, texte = [x.strip() for x in ligne[len("@video "):].split("|", 4)]
+    m, sec = duree.split(":")
+    return {"id": vid, "titre": titre, "date": date, "annee": date[:4], "duree": duree,
+            "iso": f"PT{int(m)}M{int(sec)}S", "texte": texte}
+
+def videos_de(corps):
+    return [video(l) for l in corps.split("\n") if l.startswith("@video ")]
+
 def enligne(t):
     t = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", r'<img src="\2" alt="\1" loading="lazy">', t)
     t = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', t)
@@ -165,7 +192,7 @@ def enligne(t):
     return t
 
 # ---------------------------------------------------------------- données structurées
-def jsonld(meta, url):
+def jsonld(meta, url, corps=""):
     fil = [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE_URL + "/"}]
     for n, (nom, lien) in enumerate(fil_dariane(meta), start=2):
         fil.append({"@type": "ListItem", "position": n, "name": nom,
@@ -203,6 +230,15 @@ def jsonld(meta, url):
         blocs.append({"@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q.strip(),
              "acceptedAnswer": {"@type": "Answer", "text": texte_brut(r)}} for q, r in qr]})
+    for v in videos_de(corps):
+        blocs.append({"@type": "VideoObject", "name": v["titre"], "description": texte_brut(v["texte"]),
+                      "thumbnailUrl": f"https://i.ytimg.com/vi/{v['id']}/hqdefault.jpg",
+                      "uploadDate": v["date"], "duration": v["iso"],
+                      "embedUrl": f"https://www.youtube-nocookie.com/embed/{v['id']}",
+                      "contentUrl": f"https://www.youtube.com/watch?v={v['id']}",
+                      "inLanguage": "fr-FR",
+                      "creator": {"@type": "Person", "name": "Alexandre Stopnicki", "url": "https://alexandre.ai"},
+                      "publisher": {"@type": "Organization", "name": "3h33", "url": SITE_URL + "/"}})
     return json.dumps({"@context": "https://schema.org", "@graph": blocs},
                       ensure_ascii=False, separators=(",", ":"))
 
@@ -303,7 +339,7 @@ def construire(verifie=False):
         page = page.replace("{{og_type}}", "article" if meta.get("type") == "article" else "website")
         page = page.replace("{{robots}}", '<meta name="robots" content="noindex, follow">'
                             if meta.get("indexer") == "non" else "")
-        page = page.replace("{{jsonld}}", jsonld(meta, url))
+        page = page.replace("{{jsonld}}", jsonld(meta, url, corps))
         page = page.replace("{{fil}}", fil_html(meta))
         page = page.replace("{{titre}}", esc(meta["titre"]))
         if meta.get("heure"):
@@ -472,6 +508,10 @@ def llms_complet(pages):
                     if "</svg>" in l: dans_svg = False
                     continue
                 if l.lstrip().startswith("<"): continue
+                if l.startswith("@video "):
+                    v = video(l)
+                    texte.append(f"- Vidéo « {v['titre']} » ({v['annee']}, {v['duree']}) : {texte_brut(v['texte'])} — https://www.youtube.com/watch?v={v['id']}")
+                    continue
                 m = re.match(r"^@youtube\s+([\w-]{11})\s*\|\s*(.+)$", l)
                 texte.append(f"Vidéo : {m.group(2).strip()} — https://www.youtube.com/watch?v={m.group(1)}" if m else l)
         blocs += [f"# {meta['titre']}", f"URL : {url}", "", f"> {meta['description']}", ""]

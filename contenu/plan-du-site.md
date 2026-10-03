@@ -100,10 +100,10 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 - [À propos de 3h33](/a-propos/) — 3h33 est une agence et un organisme de formation spécialisés dans les usages de l'IA génér
 
 ## Studio
-- [Le studio](/studio/) — Films, clips, musiques originales, vidéos IA et univers visuels produits par le studio 3h3
-- [Podcasts](/podcasts/) — Choucroute Citron, le premier podcast augmenté par des IA en direct, et Les Voix de l'IA, 
+- [Le studio : films, clips et podcasts faits avec l'IA](/studio/) — Courts métrages, clips, podcasts et comédiens virtuels : ce que le studio 3h33 et Alexandr
+- [Les podcasts d'Alexandre Stopnicki](/podcasts/) — Choucroute Citron, le podcast où des IA interviewent des invités en direct, et Les Voix de
+- [Les vidéos IA d'Alexandre Stopnicki](/studio/videos/) — Vingt films, clips et courts métrages réalisés avec l'IA par Alexandre Stopnicki et le stu
 - [Studio créatif](/studios-creatifs-multi-services/) — Le studio 3h33 écrit, produit et monte avec l'IA : films entiers, vidéos de marque, musiqu
-- [Vidéos IA](/studio/videos/) — Films, clips et expérimentations visuelles réalisés avec des intelligences artificielles p
 
 ## Vibe coding
 - [LMA : le Learning Management Agentique](/lma-learning-management-agentique/) — Le LMA, Learning Management Agentique, succède au LMS : une plateforme où des agents retro

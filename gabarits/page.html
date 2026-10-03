@@ -159,6 +159,12 @@
 </footer>
 
 <script>
+/* Vidéos : le lecteur YouTube (sans cookie) ne se charge qu'au clic. */
+document.querySelectorAll(".vcarte__lire").forEach(function(b){b.addEventListener("click",function(){
+  var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.video+"?autoplay=1&rel=0";
+  f.title=b.getAttribute("aria-label");f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;
+  var cadre=document.createElement("div");cadre.className="vcarte__lire";cadre.appendChild(f);b.replaceWith(cadre);
+});});
 document.querySelector(".burger").addEventListener("click",function(){
   var m=document.querySelector(".menu"),o=m.classList.toggle("ouvert");
   this.setAttribute("aria-expanded",String(o));

@@ -19,7 +19,7 @@
 <meta name="twitter:site" content="@alexandre3h33">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/polices/polices.css">
-<link rel="stylesheet" href="/style.css?v=b056fdb4">
+<link rel="stylesheet" href="/style.css?v=f556fbd8">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://3h33.com/"},{"@type":"ListItem","position":2,"name":"Archives","item":"https://3h33.com/archives/"},{"@type":"ListItem","position":3,"name":"Formations Marketing Digital et E-Pédago"}]},{"@type":"WebPage","name":"Formations Marketing Digital et E-Pédagogie","description":"3H33 AGENCE & FORMATIONS AU MARKETING DIGITAL 3h33 est un organisme de formation spécialisé dans les formations au marketing digital et une agence…","url":"https://3h33.com/archives/3h33-e-pedagogie-formations-marketing-digital/","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"3h33","url":"https://3h33.com/"},"publisher":{"@type":"Organization","name":"3h33","url":"https://3h33.com/"}}]}</script>
 <script defer src="https://stats.3h33.com/script.js" data-website-id="9456f661-e1ea-4c9d-90bc-dec50970f3b4" data-domains="3h33.com,nouveau.3h33.com"></script>
 </head>
@@ -170,6 +170,12 @@
 </footer>
 
 <script>
+/* Vidéos : le lecteur YouTube (sans cookie) ne se charge qu'au clic. */
+document.querySelectorAll(".vcarte__lire").forEach(function(b){b.addEventListener("click",function(){
+  var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.video+"?autoplay=1&rel=0";
+  f.title=b.getAttribute("aria-label");f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;
+  var cadre=document.createElement("div");cadre.className="vcarte__lire";cadre.appendChild(f);b.replaceWith(cadre);
+});});
 document.querySelector(".burger").addEventListener("click",function(){
   var m=document.querySelector(".menu"),o=m.classList.toggle("ouvert");
   this.setAttribute("aria-expanded",String(o));

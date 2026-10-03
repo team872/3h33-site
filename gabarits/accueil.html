@@ -440,6 +440,25 @@ html.calme .mots .m>span{transform:none;opacity:1}
 .final{margin-top:110px}
 .burger-accueil{display:none;font:inherit;font-size:22px;line-height:1;background:#fff;border:1px solid var(--trait);border-radius:999px;width:42px;height:42px;cursor:pointer;color:var(--ink)}
 .final .espace{height:240px}
+.videos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.vcarte{margin:0;display:flex;flex-direction:column;gap:10px}
+.vcarte__lire{position:relative;display:block;width:100%;padding:0;border:0;border-radius:16px;overflow:hidden;cursor:pointer;background:var(--ground-2);aspect-ratio:16/9;box-shadow:var(--ombre)}
+.vcarte__lire img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)}
+.vcarte__lire:hover img{transform:scale(1.04)}
+.vcarte__play{position:absolute;left:12px;bottom:12px;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--acc);display:grid;place-items:center;font-size:16px;padding-left:3px}
+.vcarte iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vcarte figcaption{display:flex;flex-direction:column;gap:2px}
+.vcarte figcaption b{font-size:17px}
+.vcarte__meta{font-size:13px;color:var(--ink-3)}
+.vcarte__texte{font-size:14.5px;color:var(--ink-2);line-height:1.45}
+.podcasts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+.podcast{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink);padding:22px 24px;border-radius:var(--radius-s);border:1px solid var(--trait);background:#fff;box-shadow:var(--ombre);transition:border-color .3s}
+.podcast:hover{border-color:var(--acc)}
+.podcast b{font-size:22px;letter-spacing:-.02em}
+.podcast span:last-child{color:var(--ink-2);font-size:15.5px}
+@media (max-width:860px){.videos{grid-template-columns:1fr 1fr}.podcasts{grid-template-columns:1fr}}
+@media (max-width:560px){.videos{grid-template-columns:1fr}}
+
 @media (max-width:980px){.burger-accueil{display:inline-grid;place-items:center}
   .nav.ouvert{display:flex;position:fixed;top:70px;left:12px;right:12px;flex-direction:column;gap:0;background:#fff;padding:6px 20px 12px;border:1px solid var(--trait);border-radius:18px;box-shadow:var(--ombre)}
   .nav.ouvert a{padding:13px 0;border-bottom:1px solid var(--trait);font-size:17px;border-radius:0}
@@ -549,10 +568,11 @@ html.calme .mots .m>span{transform:none;opacity:1}
       <article class="porte">
         <span class="porte__n">04</span>
         <h3>Créer avec de l'IA</h3>
-        <p>Le studio écrit, tourne, compose et monte avec l'IA : films, vidéos de marque, musiques originales, comédiens virtuels qui parlent toutes les langues.</p>
+        <p>Le studio écrit, tourne, compose et monte avec l'IA : courts métrages, clips, podcasts, comédiens virtuels qui parlent toutes les langues.</p>
         <ul>
-          <li><a href="/studio/">Le studio</a></li>
-          <li><a href="/studio/videos/">Vidéos IA</a></li>
+          <li><a href="/studio/videos/">Nos vidéos IA</a></li>
+          <li><a href="/podcasts/">Podcast Choucroute Citron</a></li>
+          <li><a href="/podcast-voix-de-lia/">Les Voix de l'IA</a></li>
           <li><a href="/synthetic-content/">Comédiens virtuels</a></li>
         </ul>
       </article>
@@ -593,6 +613,23 @@ html.calme .mots .m>span{transform:none;opacity:1}
       <a class="outil" href="https://listen-engine.com/"><img src="/vignettes/listen-engine.jpg" alt="ListenEngine, la veille qui devient des contenus" width="800" height="500" loading="lazy"><b>ListenEngine</b><span>Votre veille arrive au même endroit et devient un cours, des diapositives ou un article.</span></a>
       <a class="outil" href="https://ia-conforme.com/"><img src="/vignettes/ia-conforme.jpg" alt="IA Conforme, le RGPD et l'AI Act expliqués" width="800" height="500" loading="lazy"><b>IA Conforme</b><span>Le RGPD et l'AI Act en clair : diagnostic express et assistant qui cite les textes officiels.</span></a>
       <a class="outil" href="https://botmoileqi.com/"><img src="/vignettes/botmoileqi.jpg" alt="BotMoiLeQi, le fait du jour en 90 secondes" width="800" height="500" loading="lazy"><b>BotMoiLeQi</b><span>Un fait surprenant chaque matin, trouvé, vérifié, sourcé et mis en voix par une chaîne entièrement automatique.</span></a>
+    </div>
+  </section>
+
+  <section class="bloc section" aria-labelledby="studio-titre">
+    <div class="entree">
+      <span class="eyebrow">Studio</span>
+      <h2 id="studio-titre">Nos films, clips et podcasts faits avec l'IA</h2>
+      <p>Tout est écrit, filmé, mis en musique et monté avec des IA génératives. <a href="/studio/videos/">Les vingt vidéos →</a></p>
+    </div>
+    <div class="videos">
+      <figure class="vcarte"><button type="button" class="vcarte__lire" data-video="4B2qV8A2kb0" aria-label="Lire la vidéo : Les Grandes Statues"><img src="https://i.ytimg.com/vi/4B2qV8A2kb0/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="vcarte__play" aria-hidden="true">▶</span></button><figcaption><b>Les Grandes Statues</b><span class="vcarte__meta">2024 · 3:33</span><span class="vcarte__texte">Thriller de science-fiction : un monde où d'anciennes IA dominent l'humanité.</span></figcaption></figure>
+      <figure class="vcarte"><button type="button" class="vcarte__lire" data-video="HLUH1fxOFZo" aria-label="Lire la vidéo : Le programme de l'amour"><img src="https://i.ytimg.com/vi/HLUH1fxOFZo/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="vcarte__play" aria-hidden="true">▶</span></button><figcaption><b>Le programme de l'amour</b><span class="vcarte__meta">2025 · 3:51</span><span class="vcarte__texte">Une IA découvre l'humanité, et ce que veut dire aimer.</span></figcaption></figure>
+      <figure class="vcarte"><button type="button" class="vcarte__lire" data-video="qoEDtP7cRVg" aria-label="Lire la vidéo : Le clip de Choucroute Citron"><img src="https://i.ytimg.com/vi/qoEDtP7cRVg/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="vcarte__play" aria-hidden="true">▶</span></button><figcaption><b>Le clip de Choucroute Citron</b><span class="vcarte__meta">2025 · 3:18</span><span class="vcarte__texte">Le podcast, ses invités et ses IA-nimatrices, entièrement en images IA.</span></figcaption></figure>
+    </div>
+    <div class="podcasts">
+      <a class="podcast" href="/podcasts/"><span class="eyebrow">Podcast</span><b>Choucroute Citron</b><span>Des IA interviewent en direct des invités au parcours remarquable, de Richard Orlinski à Christian Etchebest. Plus de trente épisodes.</span></a>
+      <a class="podcast" href="/podcast-voix-de-lia/"><span class="eyebrow">Podcast</span><b>Les Voix de l'IA</b><span>Le portrait, en cinq à huit minutes, des dirigeants qui font l'IA : Sam Altman, Dario Amodei, Jensen Huang…</span></a>
     </div>
   </section>
 
@@ -711,6 +748,8 @@ function rendre(y){const p=Math.max(0,Math.min(1,y/Math.max(1,document.documentE
   plans.forEach(q=>{const sab=q.el.classList.contains("plan--sablier");if(immobile()){q.el.style.transform=sab?"":"translateX(-50%)";return}const t=Math.min(y,1400)*q.rate;q.el.style.transform=sab?`translateY(${(t*0.8).toFixed(1)}px)`:`translateX(-50%) translateY(${(t*0.6).toFixed(1)}px)`})}
 let attente=false;addEventListener("scroll",()=>{entete.classList.toggle("pose",scrollY>40);if(!attente){attente=true;requestAnimationFrame(()=>{attente=false;rendre(scrollY)})}},{passive:true});
 rendre(scrollY);
+/* ---------- vidéos : le lecteur ne se charge qu'au clic ---------- */
+document.querySelectorAll(".vcarte__lire").forEach(b=>b.addEventListener("click",()=>{const f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.video+"?autoplay=1&rel=0";f.title=b.getAttribute("aria-label");f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;const c=document.createElement("div");c.className="vcarte__lire";c.appendChild(f);b.replaceWith(c)}));
 /* ---------- menu sur petit écran ---------- */
 const burger=document.querySelector(".burger-accueil"),nav=document.getElementById("nav-principale");
 burger.addEventListener("click",()=>{const o=nav.classList.toggle("ouvert");burger.setAttribute("aria-expanded",String(o));burger.textContent=o?"✕":"☰"});

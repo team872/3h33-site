@@ -848,30 +848,48 @@ Dans tous les cas, la question n'est plus « savez-vous programmer ? » mais « 
 
 ---
 
-# Podcasts
+# Les podcasts d'Alexandre Stopnicki
 URL : https://3h33.com/podcasts/
 
-> Choucroute Citron, le premier podcast augmenté par des IA en direct, et Les Voix de l'IA, les portraits de celles et ceux qui font l'intelligence artificielle.
+> Choucroute Citron, le podcast où des IA interviewent des invités en direct, et Les Voix de l'IA, les portraits des dirigeants de l'IA mondiale.
 
-Deux émissions. L'une fait dialoguer des invités avec des IA en direct, l'autre dresse le portrait de ceux qui construisent cette technologie.
+Deux émissions. Dans la première, des IA posent leurs questions à des invités en chair et en os. Dans la seconde, on raconte en quelques minutes qui sont les dirigeants qui façonnent l'IA.
 
-## Choucroute Citron
+## Choucroute Citron, le podcast où des IA interviewent les invités
 
-Le premier podcast augmenté par des intelligences artificielles en direct.
+Alexandre Stopnicki reçoit un invité au parcours remarquable, et des **IA-nimatrices** s'invitent dans la conversation : elles posent leurs propres questions, relancent, contredisent, lancent des défis en direct. La choucroute et le citron ne vont pas ensemble, les humains et les IA non plus : c'est ce mélange qui donne le goût de l'émission.
 
-Le principe tient en une phrase : Alexandre Stopnicki reçoit un invité au parcours remarquable, entrepreneur, artiste ou sportif, et des **IA-nimatrices** s'invitent dans la conversation. Elles posent leurs propres questions, relancent, contredisent parfois. L'invité ne parle donc pas seulement à un journaliste : il se retrouve face à des intelligences artificielles qui écoutent et réagissent en direct.
+Plus de trente épisodes depuis 2025, et des invités comme Richard Orlinski, Christian Etchebest ou un ancien instructeur du RAID.
 
-D'où le nom. La choucroute et le citron ne vont pas ensemble, les humains et les IA non plus, et c'est justement ce mélange qui donne le goût de l'émission. Une blague sérieuse, comme il est dit sur le site.
+**Les derniers épisodes**
 
-C'est un laboratoire vivant autant qu'une émission : on y observe comment les IA dialoguent avec les humains, ce qu'elles comprennent, ce qui leur échappe et ce qu'elles font dire aux gens.
+- [Dr Anne Benhamou : « On me disait qu'une femme avec un bistouri devait être à la cuisine »](https://podcast.ausha.co/choucroute-citron/on-me-disait-qu-une-femme-avec-un-bistouri-devait-etre-a-la-cuisine) · juin 2026
+- [Éric Lewin : à 23 ans, il a refusé un dîner avec Bernard Arnault](https://choucroute-citron.com/episodes/eric-lewin-a-23-ans-j-ai-refuse-un-diner-avec-bernard-arnault/) · avril 2026
+- [Armand Paranque : à 3 ans il a su, à 86 ans elle l'a convaincu](https://choucroute-citron.com/episodes/armand-paranque-a-3-ans-j-ai-su-a-86-ans-elle-m-a-convaincu/) · avril 2026
+- [Gaspard Meier-Chaurand : un acteur et réalisateur fait passer un casting à une IA](https://choucroute-citron.com/episodes/gaspard-meier-chaurand-acteur-et-realisateur-il-fait-passer-un-casting-a-une-ia/) · mars 2026
+- [Ariel Fuchs : l'avenir de l'humanité se joue entre l'océan et l'espace](https://choucroute-citron.com/episodes/ariel-fuchs-pourquoi-l-avenir-de-l-humanite-se-joue-entre-l-ocean-et-l-espace/) · mars 2026
+- [Christian Etchebest : une IA a essayé de lui apprendre à cuisiner](https://podcast.ausha.co/choucroute-citron/christian-etchebest-une-ia-a-essaye-de-lui-apprendre-a-cuisiner-il-l-a-remise-a-sa-place) · février 2026
+- [Richard Orlinski : ce que le public ignore](https://podcast.ausha.co/choucroute-citron/richard-orlinski-ce-que-le-public-ignore) · janvier 2026
 
-À écouter sur [choucroute-citron.com](https://choucroute-citron.com), Apple Podcasts, Spotify et Deezer.
+Tous les épisodes sur [choucroute-citron.com](https://choucroute-citron.com/episodes/), et sur [Apple Podcasts](https://podcasts.apple.com/fr/podcast/choucroute-citron/id1812305442), [Spotify](https://open.spotify.com/search/choucroute%20citron/shows), [Deezer](https://www.deezer.com/search/Choucroute%20Citron/show) et [Ausha](https://podcast.ausha.co/show/9peJafn6W6DR).
 
-## Les Voix de l'IA
+Vidéo : Le clip de Choucroute Citron, entièrement en images IA — https://www.youtube.com/watch?v=qoEDtP7cRVg
 
-Des portraits de celles et ceux qui font l'intelligence artificielle aujourd'hui : les fondateurs, les chercheurs, les dirigeants dont les décisions façonnent ce que nous utiliserons demain.
+## Les Voix de l'IA, les dirigeants de l'IA en portraits
 
-À découvrir sur [la page dédiée](/podcast-voix-de-lia/).
+Qui sont les gens qui décident de ce que nous utiliserons demain ? Chaque épisode dresse, en cinq à huit minutes, le portrait d'un dirigeant de l'intelligence artificielle : son parcours, sa vision, ses obsessions. Un dialogue à deux voix, construit à partir d'interviews, de biographies et de conférences.
+
+Les portraits : **Sam Altman** (OpenAI), **Dario Amodei** (Anthropic), **Jensen Huang** (NVIDIA), **Satya Nadella** (Microsoft), **Sundar Pichai** (Google), **Demis Hassabis** (Google DeepMind), **David Holz** (Midjourney), **Tim Cook** (Apple) et **Aravind Srinivas** (Perplexity), plus une introduction et un épisode sur ce qu'il ne faut jamais dire à une IA.
+
+[Écouter Les Voix de l'IA →](/podcast-voix-de-lia/)
+
+## Questions fréquentes
+
+**Qu'est-ce que Choucroute Citron ?** Un podcast animé par Alexandre Stopnicki, où des IA-nimatrices et IA-nimateurs interviennent en direct pour interroger des invités au parcours remarquable : entrepreneurs, artistes, chercheurs, sportifs. Plus de trente épisodes depuis 2025, à écouter sur Apple Podcasts, Spotify, Deezer, Amazon Music et Ausha.
+
+**Qu'est-ce que Les Voix de l'IA ?** Une série de portraits de 5 à 8 minutes consacrés aux dirigeants de l'intelligence artificielle, de Sam Altman à Dario Amodei en passant par Jensen Huang, construits à partir de recherches approfondies et racontés sous forme de dialogue.
+
+**Peut-on être invité ou sponsoriser une émission ?** Oui. Les deux podcasts accueillent des partenaires, et Choucroute Citron reçoit des propositions d'invités. Écrivez-nous.
 
 ---
 
@@ -962,40 +980,88 @@ Les rendez-vous complètent naturellement les [ateliers de formation](/ateliers-
 
 ---
 
-# Vidéos IA
+# Les vidéos IA d'Alexandre Stopnicki
 URL : https://3h33.com/studio/videos/
 
-> Films, clips et expérimentations visuelles réalisés avec des intelligences artificielles par le studio 3h33 et Alexandre Stopnicki.
+> Vingt films, clips et courts métrages réalisés avec l'IA par Alexandre Stopnicki et le studio 3h33, de 2024 à 2026. À regarder directement sur la page.
 
-Une vingtaine de films courts, clips et essais visuels produits avec des IA génératives. Certains sont des commandes, d'autres des recherches de forme.
+Courts métrages, clips, films musicaux : tout est écrit, filmé, mis en musique et monté avec des IA génératives. Cliquez sur une image pour lancer la vidéo.
 
-## Ce que vous allez voir
+## Bandes démo
 
-Ces vidéos ont été produites entre 2024 et 2026, au fil des outils. Elles servent deux choses : montrer ce qu'on sait faire, et chercher ce que la technique permet quand on la pousse.
+- Vidéo « Bande démo 2026, version longue » (2026, 4:06) : Un tour d'horizon de nos réalisations vidéo en IA. — https://www.youtube.com/watch?v=KfcYw3yPQNQ
+- Vidéo « Bande démo 2026, version courte » (2026, 3:38) : Le même parcours, en plus resserré. — https://www.youtube.com/watch?v=yG6cVrpI_WA
 
-- **Les Grandes Statues** — quand l'IA sculpte notre destin.
-- **Le clip du podcast Choucroute Citron** — le générique animé de l'émission.
-- **A Night of Animal Concerts** — un concert impossible, filmé comme un vrai.
-- **Le programme de l'amour** — court métrage.
-- **Between Man & Beast** — voyage visuel.
-- **The Ocean's Melody** — film expérimental sur l'océan.
-- **De mémoire d'objets** — les objets racontent leur histoire.
-- **Cas d'or IA 2024** — la réalisation primée.
+## Courts métrages
 
-La galerie complète, avec les vidéos, vit sur [alexandre.ai/videos](https://alexandre.ai/videos/), le site personnel d'Alexandre Stopnicki.
+- Vidéo « Les Grandes Statues » (2024, 3:33) : Thriller de science-fiction : un monde où le temps s'est arrêté et où d'anciennes IA dominent l'humanité. — https://www.youtube.com/watch?v=4B2qV8A2kb0
+- Vidéo « Le programme de l'amour » (2025, 3:51) : Une IA découvre l'humanité, et ce que veut dire aimer. — https://www.youtube.com/watch?v=HLUH1fxOFZo
+- Vidéo « What Women Think? » (2025, 1:52) : Ce que pensent les femmes quand le monde se tait, dans un univers d'ombres. — https://www.youtube.com/watch?v=AJ7_KYRRyWk
+- Vidéo « Between Man & Beast » (2025, 3:03) : Un film onirique où l'homme et le lion se répondent. — https://www.youtube.com/watch?v=n0FLLaeN5ng
+- Vidéo « De mémoire d'objets » (2025, 1:38) : Les objets racontent l'histoire de ceux qui les ont gardés. — https://www.youtube.com/watch?v=etegPFgGVxQ
+- Vidéo « Cleared for Takeoff » (2024, 1:09) : Un court métrage tout en images générées, prêt au décollage. — https://www.youtube.com/watch?v=F7g0r4qZnLk
+- Vidéo « Besoin d'un dentiste extra ? » (2024, 2:22) : L'incroyable odyssée d'une dentiste intergalactique. — https://www.youtube.com/watch?v=iZ4V0kMCX6M
+
+## Films visuels et musicaux
+
+- Vidéo « The Ocean's Melody » (2024, 2:27) : Film expérimental sur l'océan, entre image et musique. — https://www.youtube.com/watch?v=6Ybr_uNHQMY
+- Vidéo « Horses and the Sea » (2025, 1:20) : Des chevaux et la mer, animés avec Kling AI. — https://www.youtube.com/watch?v=7p-4l_M6fMk
+- Vidéo « Animals Fashion AI Style » (2025, 2:29) : Un défilé de mode imaginaire, porté par des animaux. — https://www.youtube.com/watch?v=bwv-Dx8sUzo
+- Vidéo « A Night of Animal Concerts » (2025, 1:18) : Un concert donné par des animaux musiciens. — https://www.youtube.com/watch?v=EYunea6h1k4
+- Vidéo « Don't be afraid of AI's roar! » (2025, 0:50) : Un univers onirique où l'humain et le lion se côtoient. — https://www.youtube.com/watch?v=ZY17m_LQtHo
+- Vidéo « Piano Dream in Space » (2025, 2:10) : Une rêverie musicale : un piano en apesanteur. — https://www.youtube.com/watch?v=BFEJJVBn0_0
+- Vidéo « Bonne année 2026 » (2025, 3:06) : Nos vœux pour 2026, en images générées. — https://www.youtube.com/watch?v=gA6xWdDEGgk
+
+## Clips
+
+- Vidéo « Le clip du podcast Choucroute Citron » (2025, 3:18) : Alex, ses invités et les IA-nimatrices, entièrement en images IA. Voir le podcast. — https://www.youtube.com/watch?v=qoEDtP7cRVg
+- Vidéo « Arôme Naturel, Professeur Virtuoso » (2024, 4:10) : Le premier clip électro du Professeur Virtuoso. — https://www.youtube.com/watch?v=ACKF4lX6J7U
+
+## Pour des événements
+
+- Vidéo « Cas d'or de l'IA 2024 » (2024, 1:45) : Film réalisé pour la remise des prix des Cas d'or de l'IA. — https://www.youtube.com/watch?v=JU8rvdxJd6I
+- Vidéo « ChatGPT nous a invités au salon Tech For Retail » (2025, 1:36) : L'organisateur du salon raconte comment ChatGPT lui a recommandé notre podcast. — https://www.youtube.com/watch?v=N1PnLiYaKDc
+
+## Voir aussi
+
+Les galeries d'images, les objets et le journal d'Alexandre Stopnicki sont sur son site d'artiste, [alexandre.ai](https://alexandre.ai/films). Pour faire parler un personnage dans plusieurs langues sans tournage, voyez [les comédiens virtuels](/synthetic-content/).
+
+## Questions fréquentes
+
+**Avec quels outils ces vidéos sont-elles faites ?** Selon les films : Midjourney pour les images, Kling AI pour l'animation, ElevenLabs pour les voix et la musique, et un logiciel de montage classique pour assembler. Le choix change d'un projet à l'autre, au rythme des outils.
+
+**Combien de temps faut-il pour réaliser un film IA ?** De quelques heures pour un clip court à plusieurs semaines pour un court métrage écrit, avec un personnage cohérent d'un plan à l'autre. L'écriture et le montage prennent souvent plus de temps que la génération des images.
+
+**Peut-on commander une vidéo IA ?** Oui. Le studio créatif prend en charge l'écriture, la production et le montage de films, de clips et de vidéos de marque. Parlons de votre projet.
 
 ---
 
-# Le studio
+# Le studio : films, clips et podcasts faits avec l'IA
 URL : https://3h33.com/studio/
 
-> Films, clips, musiques originales, vidéos IA et univers visuels produits par le studio 3h33. Galerie de réalisations et prestations créatives.
+> Courts métrages, clips, podcasts et comédiens virtuels : ce que le studio 3h33 et Alexandre Stopnicki créent avec l'IA, à regarder et à écouter.
 
-Un film, un clip, une musique, une image : ce que nous produisons avec l'IA, et ce que vous pouvez voir dès maintenant.
+Depuis 2024, Alexandre Stopnicki écrit, filme, met en musique et monte avec des IA génératives. Voici ce qu'on peut regarder et écouter dès maintenant, et ce que le studio peut faire pour vous.
+
+## Trois films à voir
+
+- Vidéo « Les Grandes Statues » (2024, 3:33) : Thriller de science-fiction : un monde où d'anciennes IA dominent l'humanité. — https://www.youtube.com/watch?v=4B2qV8A2kb0
+- Vidéo « Le programme de l'amour » (2025, 3:51) : Une IA découvre l'humanité, et ce que veut dire aimer. — https://www.youtube.com/watch?v=HLUH1fxOFZo
+- Vidéo « Le clip du podcast Choucroute Citron » (2025, 3:18) : Alex, ses invités et les IA-nimatrices, entièrement en images IA. — https://www.youtube.com/watch?v=qoEDtP7cRVg
+
+[Les vingt vidéos →](/studio/videos/)
+
+## Deux podcasts
+
+**[Choucroute Citron](/podcasts/)** : des IA interviewent en direct des invités au parcours remarquable, de Richard Orlinski à Christian Etchebest. Plus de trente épisodes depuis 2025.
+
+**[Les Voix de l'IA](/podcast-voix-de-lia/)** : en cinq à huit minutes, le portrait des dirigeants qui façonnent l'IA, de Sam Altman à Jensen Huang.
+
+## Ce que le studio fait pour vous
 
 ## Dans la salle de montage
 
-Le travail ne s'arrête pas au tournage. C'est au montage que le rythme se décide, que les plans trouvent leur durée, et qu'un film devient regardable.
+Le travail ne s'arrête pas à la génération des images. C'est au montage que le rythme se décide, que les plans trouvent leur durée, et qu'un film devient regardable.
 
 ---
 
