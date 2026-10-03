@@ -8,7 +8,7 @@ Site statique en HTML pur, servi par nginx derrière le Traefik du VPS « vitrin
 - `audit/` : l'inventaire du site WordPress (205 contenus en Markdown, classification).
 - `medias/` : logos clients et photo, à la source.
 
-Adresse de test : https://nouveau.3h33.com (jamais indexée). Bascule vers 3h33.com : changer l'enregistrement A/ALIAS de la racine et de `www`, ajouter les hôtes dans les labels Traefik.
+**En service sur 3h33.com depuis le 03/10/2026.** Adresse de test : https://nouveau.3h33.com (jamais indexée). L'ancien WordPress reste consultable sur https://old.3h33.com (jamais indexé, voir `nginx.conf`). Bascule vers 3h33.com : changer l'enregistrement A/ALIAS de la racine et de `www`, ajouter les hôtes dans les labels Traefik.
 
 **Ce qui reste sur l'ancien hébergement mutualisé, servi par procuration** (voir `nginx.conf`) : les decks de masterclass (liste dans `masterclass-3h33/publier.json`), leur relais PHP, `/img/`, `/galaxie/` (dépôt `3h33-galaxie`) et les médias WordPress. Un deck ajouté à `publier.json` doit l'être aussi à la liste de `nginx.conf`, sinon il répond 404 sur 3h33.com.
 
