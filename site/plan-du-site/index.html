@@ -19,7 +19,7 @@
 <meta name="twitter:site" content="@alexandre3h33">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/polices/polices.css">
-<link rel="stylesheet" href="/style.css?v=b056fdb4">
+<link rel="stylesheet" href="/style.css?v=f556fbd8">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://3h33.com/"},{"@type":"ListItem","position":2,"name":"Plan du site"}]},{"@type":"WebPage","name":"Plan du site","description":"Toutes les pages de 3h33.com : formations à l'IA, prestations de l'agence, vibe coding, studio créatif, podcasts et archives.","url":"https://3h33.com/plan-du-site/","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"3h33","url":"https://3h33.com/"},"publisher":{"@type":"Organization","name":"3h33","url":"https://3h33.com/"}}]}</script>
 <script defer src="https://stats.3h33.com/script.js" data-website-id="9456f661-e1ea-4c9d-90bc-dec50970f3b4" data-domains="3h33.com,nouveau.3h33.com"></script>
 </head>
@@ -154,6 +154,7 @@
 </ul>
 <h2>Le site</h2>
 <ul>
+<li><a href="/">3h33, l'agence de l'IA</a> — Agence et organisme de formation en IA générative depuis 2010 : formations, outils sur mes</li>
 <li><a href="/archives/">Archives</a> — Les pages historiques de 3h33 : formations au marketing digital, réseaux sociaux, réalité </li>
 <li><a href="/conditions-generales/">Conditions générales</a> — Les conditions générales de vente et d'utilisation des services et formations proposés par</li>
 <li><a href="/politique-de-confidentialite/">Confidentialité</a> — Ce que 3h33.com collecte, pourquoi, combien de temps, et comment exercer vos droits. Site </li>
@@ -167,10 +168,10 @@
 </ul>
 <h2>Studio</h2>
 <ul>
-<li><a href="/studio/">Le studio</a> — Films, clips, musiques originales, vidéos IA et univers visuels produits par le studio 3h3</li>
-<li><a href="/podcasts/">Podcasts</a> — Choucroute Citron, le premier podcast augmenté par des IA en direct, et Les Voix de l'IA, </li>
+<li><a href="/studio/">Le studio : films, clips et podcasts faits avec l'IA</a> — Courts métrages, clips, podcasts et comédiens virtuels : ce que le studio 3h33 et Alexandr</li>
+<li><a href="/podcasts/">Les podcasts d'Alexandre Stopnicki</a> — Choucroute Citron, le podcast où des IA interviewent des invités en direct, et Les Voix de</li>
+<li><a href="/studio/videos/">Les vidéos IA d'Alexandre Stopnicki</a> — Vingt films, clips et courts métrages réalisés avec l'IA par Alexandre Stopnicki et le </li>
 <li><a href="/studios-creatifs-multi-services/">Studio créatif</a> — Le studio 3h33 écrit, produit et monte avec l'IA : films entiers, vidéos de marque, musiqu</li>
-<li><a href="/studio/videos/">Vidéos IA</a> — Films, clips et expérimentations visuelles réalisés avec des intelligences artificielles p</li>
 </ul>
 <h2>Vibe coding</h2>
 <ul>
@@ -279,6 +280,12 @@
 </footer>
 
 <script>
+/* Vidéos : le lecteur YouTube (sans cookie) ne se charge qu'au clic. */
+document.querySelectorAll(".vcarte__lire").forEach(function(b){b.addEventListener("click",function(){
+  var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.video+"?autoplay=1&rel=0";
+  f.title=b.getAttribute("aria-label");f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;
+  var cadre=document.createElement("div");cadre.className="vcarte__lire";cadre.appendChild(f);b.replaceWith(cadre);
+});});
 document.querySelector(".burger").addEventListener("click",function(){
   var m=document.querySelector(".menu"),o=m.classList.toggle("ouvert");
   this.setAttribute("aria-expanded",String(o));

@@ -19,7 +19,7 @@
 <meta name="twitter:site" content="@alexandre3h33">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/polices/polices.css">
-<link rel="stylesheet" href="/style.css?v=b056fdb4">
+<link rel="stylesheet" href="/style.css?v=f556fbd8">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://3h33.com/"},{"@type":"ListItem","position":2,"name":"Formations","item":"https://3h33.com/formations/"},{"@type":"ListItem","position":3,"name":"Ateliers de formation à l'IA"}]},{"@type":"Course","name":"Ateliers de formation à l'IA","description":"Un à deux jours pour que vos équipes pratiquent l'IA sur leurs propres dossiers : contenus, données, automatisations. Ateliers sur mesure.","url":"https://3h33.com/ateliers-formation/","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"3h33","url":"https://3h33.com/"},"publisher":{"@type":"Organization","name":"3h33","url":"https://3h33.com/"},"provider":{"@type":"Organization","name":"3h33","url":"https://3h33.com/"},"teaches":"Pratique de l'IA générative appliquée aux métiers","hasCourseInstance":{"@type":"CourseInstance","courseMode":"blended","courseWorkload":"P1D"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Combien de personnes par atelier ?","acceptedAnswer":{"@type":"Answer","text":"Entre six et quinze participants, pour que chacun pratique réellement."}},{"@type":"Question","name":"Sur quels outils travaille-t-on ?","acceptedAnswer":{"@type":"Answer","text":"Sur ceux que vous utiliserez ensuite. Le choix se fait avec vous selon vos contraintes de sécurité et de budget."}},{"@type":"Question","name":"Que se passe-t-il après l'atelier ?","acceptedAnswer":{"@type":"Answer","text":"Vos équipes repartent avec leurs gabarits, leur documentation et un référent identifié en interne."}}]}]}</script>
 <script defer src="https://stats.3h33.com/script.js" data-website-id="9456f661-e1ea-4c9d-90bc-dec50970f3b4" data-domains="3h33.com,nouveau.3h33.com"></script>
 </head>
@@ -177,6 +177,12 @@
 </footer>
 
 <script>
+/* Vidéos : le lecteur YouTube (sans cookie) ne se charge qu'au clic. */
+document.querySelectorAll(".vcarte__lire").forEach(function(b){b.addEventListener("click",function(){
+  var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.video+"?autoplay=1&rel=0";
+  f.title=b.getAttribute("aria-label");f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;
+  var cadre=document.createElement("div");cadre.className="vcarte__lire";cadre.appendChild(f);b.replaceWith(cadre);
+});});
 document.querySelector(".burger").addEventListener("click",function(){
   var m=document.querySelector(".menu"),o=m.classList.toggle("ouvert");
   this.setAttribute("aria-expanded",String(o));

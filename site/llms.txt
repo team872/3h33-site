@@ -27,7 +27,9 @@ Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes 
 - [ChatGPT, Claude, Mistral ou Gemini : lequel pour votre entreprise ?](https://3h33.com/chatgpt-claude-mistral-gemini/): Les grands assistants d'IA comparés pour un usage professionnel : points forts, données, hébergement, intégration à vos outils, et comment choisir.
 - [IA locale et souveraine : faire tourner l'IA chez soi](https://3h33.com/ia-locale-souveraine/): Garder ses données en Europe, ou ne rien laisser sortir : modèles européens, cloud souverain, IA installée sur vos serveurs. Ce qui est possible, à quel prix.
 - [No-code, low-code ou vibe coding : lequel choisir ?](https://3h33.com/no-code/): Bubble, Airtable, Zapier, Power Apps ou une IA qui écrit le code : ce que chaque approche permet, ce qu'elle coûte à terme, et comment choisir pour votre entreprise.
+- [Les podcasts d'Alexandre Stopnicki](https://3h33.com/podcasts/): Choucroute Citron, le podcast où des IA interviewent des invités en direct, et Les Voix de l'IA, les portraits des dirigeants de l'IA mondiale.
 - [Dix ans d'agents conversationnels, de LècheBot à NegoVox](https://3h33.com/realisations-chatbots-agents/): De LècheBot en 2017 aux simulateurs vocaux NegoVox et Media Training Vox : les chatbots et agents conversationnels construits par 3h33, et ce qu'ils ont appris.
+- [Les vidéos IA d'Alexandre Stopnicki](https://3h33.com/studio/videos/): Vingt films, clips et courts métrages réalisés avec l'IA par Alexandre Stopnicki et le studio 3h33, de 2024 à 2026. À regarder directement sur la page.
 
 ## Articles
 
@@ -44,9 +46,7 @@ Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes 
 - [Nous contacter](https://3h33.com/contact/): Un projet, une formation, une question sur l'IA ? Écrivez-nous : nous répondons vite et commençons souvent par une démonstration plutôt que par une réunion.
 - [Formations à l'intelligence artificielle](https://3h33.com/formations/): Organisme de formation spécialisé dans les usages de l'IA générative : masterclass d'acculturation, ateliers pratiques, sessions de construction et veille mensuelle.
 - [À propos de 3h33](https://3h33.com/a-propos/): 3h33 est une agence et un organisme de formation spécialisés dans les usages de l'IA générative, fondés par Alexandre Stopnicki.
-- [Podcasts](https://3h33.com/podcasts/): Choucroute Citron, le premier podcast augmenté par des IA en direct, et Les Voix de l'IA, les portraits de celles et ceux qui font l'intelligence artificielle.
-- [Vidéos IA](https://3h33.com/studio/videos/): Films, clips et expérimentations visuelles réalisés avec des intelligences artificielles par le studio 3h33 et Alexandre Stopnicki.
-- [Le studio](https://3h33.com/studio/): Films, clips, musiques originales, vidéos IA et univers visuels produits par le studio 3h33. Galerie de réalisations et prestations créatives.
+- [Le studio : films, clips et podcasts faits avec l'IA](https://3h33.com/studio/): Courts métrages, clips, podcasts et comédiens virtuels : ce que le studio 3h33 et Alexandre Stopnicki créent avec l'IA, à regarder et à écouter.
 - [Le blog](https://3h33.com/blog/): Le carnet de bord de 3h33 : ce qu'on construit avec l'IA, ce qu'on apprend en le faisant, et quelques archives qui ont bien vieilli.
 
 ## Sites et outils

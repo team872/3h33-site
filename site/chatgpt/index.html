@@ -19,7 +19,7 @@
 <meta name="twitter:site" content="@alexandre3h33">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/polices/polices.css">
-<link rel="stylesheet" href="/style.css?v=b056fdb4">
+<link rel="stylesheet" href="/style.css?v=f556fbd8">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://3h33.com/"},{"@type":"ListItem","position":2,"name":"Agence","item":"https://3h33.com/agence/"},{"@type":"ListItem","position":3,"name":"Contenus avec l'IA"}]},{"@type":"Service","name":"Créer des contenus avec l'IA","description":"Textes, images, vidéos, voix : ce que les IA génératives savent produire aujourd'hui pour une entreprise, comment s'y prendre et quelles limites connaître.","url":"https://3h33.com/chatgpt/","inLanguage":"fr-FR","isPartOf":{"@type":"WebSite","name":"3h33","url":"https://3h33.com/"},"publisher":{"@type":"Organization","name":"3h33","url":"https://3h33.com/"},"serviceType":"Production de contenus assistée par intelligence artificielle","areaServed":"FR","provider":{"@type":"Organization","name":"3h33","url":"https://3h33.com/"}},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Les contenus produits avec l'IA sont-ils pénalisés par Google ?","acceptedAnswer":{"@type":"Answer","text":"Non. Google sanctionne les contenus sans valeur, quelle que soit leur origine. Un contenu utile, exact et personnel se positionne, qu'il ait été écrit avec ou sans assistance."}},{"@type":"Question","name":"Comment garder le ton de la marque ?","acceptedAnswer":{"@type":"Answer","text":"En donnant à l'IA de vrais exemples de vos textes, en fixant des règles explicites et en relisant. C'est une bonne partie du travail que nous faisons en atelier."}}]}]}</script>
 <script defer src="https://stats.3h33.com/script.js" data-website-id="9456f661-e1ea-4c9d-90bc-dec50970f3b4" data-domains="3h33.com,nouveau.3h33.com"></script>
 </head>
@@ -177,6 +177,12 @@
 </footer>
 
 <script>
+/* Vidéos : le lecteur YouTube (sans cookie) ne se charge qu'au clic. */
+document.querySelectorAll(".vcarte__lire").forEach(function(b){b.addEventListener("click",function(){
+  var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.video+"?autoplay=1&rel=0";
+  f.title=b.getAttribute("aria-label");f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;
+  var cadre=document.createElement("div");cadre.className="vcarte__lire";cadre.appendChild(f);b.replaceWith(cadre);
+});});
 document.querySelector(".burger").addEventListener("click",function(){
   var m=document.querySelector(".menu"),o=m.classList.toggle("ouvert");
   this.setAttribute("aria-expanded",String(o));
