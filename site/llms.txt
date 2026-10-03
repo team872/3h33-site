@@ -10,6 +10,7 @@ Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes 
 - [Ateliers de formation à l'IA](https://3h33.com/ateliers-formation/): Un à deux jours pour que vos équipes pratiquent l'IA sur leurs propres dossiers : contenus, données, automatisations. Ateliers sur mesure.
 - [Chatbots et agents conversationnels](https://3h33.com/chatbots/): Nous concevons des agents conversationnels qui répondent vraiment : nourris de vos documents, capables de citer leurs sources et branchés sur vos outils.
 - [Créer des contenus avec l'IA](https://3h33.com/chatgpt/): Textes, images, vidéos, voix : ce que les IA génératives savent produire aujourd'hui pour une entreprise, comment s'y prendre et quelles limites connaître.
+- [Coaching IA des dirigeants : construire, négocier, prendre la parole](https://3h33.com/coaching-ia-dirigeants/): Construire ses propres outils en une demi-journée, s'entraîner à négocier et à prendre la parole face à une IA vocale : l'accompagnement des dirigeants par 3h33.
 - [Masterclass IA](https://3h33.com/masterclass-ia/): Deux heures pour démystifier l'intelligence artificielle et repartir avec des usages concrets. Masterclass d'acculturation à l'IA animée par Alexandre Stopnicki.
 - [Studio créatif](https://3h33.com/studios-creatifs-multi-services/): Le studio 3h33 écrit, produit et monte avec l'IA : films entiers, vidéos de marque, musiques originales et univers visuels cohérents d'un plan à l'autre.
 - [Conseil et stratégie IA](https://3h33.com/agence-conseil-marketing-digital/): Par où commencer avec l'IA, avec quelles données et dans quel cadre. Un diagnostic court avant d'investir, plutôt qu'un projet qu'on regrette.
@@ -20,9 +21,13 @@ Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes 
 
 ## Comprendre l'IA
 
+- [Former ses salariés à l'IA : ce que demande vraiment l'AI Act](https://3h33.com/formation-ia-obligatoire-ai-act/): L'article 4 de l'AI Act oblige les entreprises à développer la maîtrise de l'IA de leurs équipes. Ce que dit le texte depuis l'omnibus de 2026, et comment faire.
 - [L'IA en entreprise : les réponses aux questions qu'on nous pose](https://3h33.com/ia-en-entreprise/): Par où commencer, quels usages, quels modèles, que faire des données, ce que demande l'AI Act, ce que change le vibe coding : nos réponses aux entreprises.
 - [LMA : le Learning Management Agentique](https://3h33.com/lma-learning-management-agentique/): Le LMA, Learning Management Agentique, succède au LMS : une plateforme où des agents retrouvent, expliquent et interrogent l'apprenant.
+- [ChatGPT, Claude, Mistral ou Gemini : lequel pour votre entreprise ?](https://3h33.com/chatgpt-claude-mistral-gemini/): Les grands assistants d'IA comparés pour un usage professionnel : points forts, données, hébergement, intégration à vos outils, et comment choisir.
+- [IA locale et souveraine : faire tourner l'IA chez soi](https://3h33.com/ia-locale-souveraine/): Garder ses données en Europe, ou ne rien laisser sortir : modèles européens, cloud souverain, IA installée sur vos serveurs. Ce qui est possible, à quel prix.
 - [No-code, low-code ou vibe coding : lequel choisir ?](https://3h33.com/no-code/): Bubble, Airtable, Zapier, Power Apps ou une IA qui écrit le code : ce que chaque approche permet, ce qu'elle coûte à terme, et comment choisir pour votre entreprise.
+- [Dix ans d'agents conversationnels, de LècheBot à NegoVox](https://3h33.com/realisations-chatbots-agents/): De LècheBot en 2017 aux simulateurs vocaux NegoVox et Media Training Vox : les chatbots et agents conversationnels construits par 3h33, et ce qu'ils ont appris.
 
 ## Articles
 
@@ -50,3 +55,8 @@ Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes 
 - [Formation Claude](https://3h33.com/formation-claude/): formation à Claude (Anthropic) pour salariés et managers, un ou deux jours.
 - [La galaxie 3h33](https://3h33.com/galaxie/): l'annuaire des sites et applications de l'écosystème 3h33.
 - [Cartographie mondiale des usages de l'IA](https://3h33.com/cartographie-mondiale-des-usages-de-l-ia/)
+
+## Applications éditées par 3h33
+
+- [NegoVox](https://negovox.com/): simulateur d'entraînement vocal par IA pour les commerciaux ; un client joué par l'IA, puis un débrief noté sur douze compétences de vente.
+- [Media Training Vox](https://media-training-vox.com/): entraînement par IA vocale aux prises de parole des dirigeants, face aux médias, au comité de direction, au conseil ou aux actionnaires.

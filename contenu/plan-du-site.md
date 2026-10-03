@@ -70,12 +70,21 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 - [Voulez-vous connaître l'avenir ?](/blog/connaitre-l-avenir/) — Une sélection d'interventions où des chercheurs et des entrepreneurs décrivent ce qui vien
 - [Écrire un article en moins d'une heure grâce au contenu synthétique](/blog/how-to-write-a-blog-post-in-under-an-hour-thanks-to-synthetic-content/) — Un article écrit avec l'IA, qui explique en même temps comment il a été écrit. La démonstr
 
+## Chatbots et agents
+- [Dix ans d'agents conversationnels, de LècheBot à NegoVox](/realisations-chatbots-agents/) — De LècheBot en 2017 aux simulateurs vocaux NegoVox et Media Training Vox : les chatbots et
+
 ## Formations
 - [Ateliers de formation à l'IA](/ateliers-formation/) — Un à deux jours pour que vos équipes pratiquent l'IA sur leurs propres dossiers : contenus
+- [Coaching IA des dirigeants : construire, négocier, prendre la parole](/coaching-ia-dirigeants/) — Construire ses propres outils en une demi-journée, s'entraîner à négocier et à prendre la 
 - [Formations au marketing digital](/formations-au-marketing-digital/) — Réseaux sociaux, contenus, référencement, données : le socle du marketing numérique, désor
 - [Formations à l'intelligence artificielle](/formations/) — Organisme de formation spécialisé dans les usages de l'IA générative : masterclass d'accul
+- [Former ses salariés à l'IA : ce que demande vraiment l'AI Act](/formation-ia-obligatoire-ai-act/) — L'article 4 de l'AI Act oblige les entreprises à développer la maîtrise de l'IA de leurs é
 - [Masterclass IA](/masterclass-ia/) — Deux heures pour démystifier l'intelligence artificielle et repartir avec des usages concr
 - [Rendez-vous IA Talent](/rendez-vous-ia-talent/) — Des points réguliers en visioconférence pour suivre les évolutions de l'intelligence artif
+
+## L'IA en entreprise
+- [ChatGPT, Claude, Mistral ou Gemini : lequel pour votre entreprise ?](/chatgpt-claude-mistral-gemini/) — Les grands assistants d'IA comparés pour un usage professionnel : points forts, données, h
+- [IA locale et souveraine : faire tourner l'IA chez soi](/ia-locale-souveraine/) — Garder ses données en Europe, ou ne rien laisser sortir : modèles européens, cloud souvera
 
 ## Le site
 - [Archives](/archives/) — Les pages historiques de 3h33 : formations au marketing digital, réseaux sociaux, réalité 

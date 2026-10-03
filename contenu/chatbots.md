@@ -38,6 +38,8 @@ D'abord un périmètre clair : un agent qui prétend tout savoir se trompe parto
 
 ## Nos réalisations
 
+Dix ans d'agents conversationnels, de LècheBot en 2017 aux simulateurs vocaux d'aujourd'hui : [voir l'historique complet](/realisations-chatbots-agents/).
+
 [BotMoiLeQi](https://botmoileqi.com), qui trouve, vérifie et met en voix un fait chaque matin, et l'[assistant de recherche](/assistant-de-recherche/) qui explore un corpus documentaire. Plusieurs agents métier tournent aujourd'hui chez nos clients, dont un assistant de rédaction des délibérations pour une commune.
 
 Pour construire le vôtre, tout commence par une [session Forge](/forge/) d'une demi-journée.
