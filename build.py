@@ -171,9 +171,29 @@ def jsonld(meta, url):
         qr = [q.split("|") for q in meta["faq"]]
         blocs.append({"@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": q.strip(),
-             "acceptedAnswer": {"@type": "Answer", "text": r.strip()}} for q, r in qr]})
+             "acceptedAnswer": {"@type": "Answer", "text": texte_brut(r)}} for q, r in qr]})
     return json.dumps({"@context": "https://schema.org", "@graph": blocs},
                       ensure_ascii=False, separators=(",", ":"))
+
+def texte_brut(t):
+    """Une réponse de FAQ sans sa syntaxe Markdown, pour les données structurées."""
+    t = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", t.strip())
+    return re.sub(r"\*\*?([^*]+)\*\*?", r"\1", t)
+
+def faq_html(meta):
+    """La FAQ, AFFICHÉE. Jusqu'au 03/10/2026 elle n'existait que dans les données
+    structurées : invisible du lecteur comme des robots d'IA qui lisent le texte,
+    et contraire aux consignes de Google, qui veut un balisage fidèle à la page.
+    <details> s'ouvre sans JavaScript, et son texte reste lu par les robots."""
+    if not meta.get("faq"):
+        return ""
+    blocs = []
+    for q in meta["faq"]:
+        question, reponse = q.split("|", 1)
+        blocs.append(f'<details><summary>{esc(question.strip())}</summary>'
+                     f'<p>{enligne(esc(reponse.strip()))}</p></details>')
+    return ('<section class="faq-page" aria-labelledby="faq-titre">'
+            '<h2 id="faq-titre">Questions fréquentes</h2>\n' + "\n".join(blocs) + '</section>')
 
 def fil_dariane(meta):
     """[(nom, lien ou None pour la page courante)]"""
@@ -270,7 +290,7 @@ def construire(verifie=False):
                       f'width="1400" height="933"></figure>')
         page = page.replace("{{dessin}}", dessin)
         page = page.replace("{{duree}}", duree_lecture(corps, meta))
-        page = page.replace("{{contenu}}", md(corps))
+        page = page.replace("{{contenu}}", md(corps) + faq_html(meta))
         dest = SITE / url.strip("/") / "index.html" if url != "/" else SITE / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(page, encoding="utf-8")
@@ -278,7 +298,41 @@ def construire(verifie=False):
 
     sitemap(pages)
     plan(pages)
-    print(f"  ✓ {ecrites} pages écrites, sitemap et plan du site à jour")
+    llms(pages)
+    print(f"  ✓ {ecrites} pages écrites, sitemap, plan du site et llms.txt à jour")
+
+def llms(pages):
+    """/llms.txt : le résumé du site à l'usage des assistants d'IA (format llmstxt.org).
+    Régénéré à chaque construction, comme le sitemap, pour ne jamais décrire un site
+    qui n'existe plus. Les archives et les pages légales restent hors du résumé."""
+    groupes = {"Offres": [], "Comprendre l'IA": [], "Articles": [], "Autres pages": []}
+    for meta, _, _ in sorted(pages, key=lambda p: -float(p[0].get("priorite", "0.7"))):
+        u = meta["url"]
+        if meta.get("indexer") == "non" or u in ("/", "/plan-du-site/") or u.startswith("/archives/") \
+                or float(meta.get("priorite", "0.7")) <= 0.3 or meta.get("type") == "legal":
+            continue
+        t = meta.get("type", "page")
+        cle = ("Offres" if t in ("service", "formation") else "Articles" if t == "article"
+               else "Comprendre l'IA" if meta.get("faq") else "Autres pages")
+        groupes[cle].append(f"- [{meta['titre']}]({SITE_URL}{u}): {meta['description']}")
+    lignes = ["# 3h33", "",
+              "> 3h33 est une agence et un organisme de formation français spécialisés dans les "
+              "usages de l'intelligence artificielle générative en entreprise, fondés par "
+              "Alexandre Stopnicki. 3h33 forme les équipes (masterclass, ateliers, formation "
+              "Claude), construit avec elles des outils d'IA en vibe coding (agents, "
+              "automatisations, tableaux de bord, méthode Forge en une demi-journée) et produit "
+              "des contenus avec son studio créatif.", "",
+              "Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes sur "
+              "l'IA en entreprise sont rassemblées sur https://3h33.com/ia-en-entreprise/.", ""]
+    for nom, items in groupes.items():
+        if items:
+            lignes += [f"## {nom}", ""] + items + [""]
+    lignes += ["## Sites et outils", "",
+               f"- [Méthode Forge]({SITE_URL}/forge/): des solutions IA (agent, automatisation, tableau de bord) co-construites avec vos équipes en une demi-journée.",
+               f"- [Formation Claude]({SITE_URL}/formation-claude/): formation à Claude (Anthropic) pour salariés et managers, un ou deux jours.",
+               f"- [La galaxie 3h33]({SITE_URL}/galaxie/): l'annuaire des sites et applications de l'écosystème 3h33.",
+               f"- [Cartographie mondiale des usages de l'IA]({SITE_URL}/cartographie-mondiale-des-usages-de-l-ia/)", ""]
+    (SITE / "llms.txt").write_text("\n".join(lignes), encoding="utf-8")
 
 def sitemap(pages):
     lignes = ['<?xml version="1.0" encoding="UTF-8"?>',

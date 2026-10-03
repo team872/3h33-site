@@ -410,3 +410,12 @@ html.calme .dessin img{animation:none;-webkit-mask-image:none;mask-image:none;op
 .note-archive{color:var(--ink-3);font-size:15px;border-left:3px solid var(--trait);padding:6px 0 6px 14px;margin:18px 0}
 .integration{margin:22px 0}
 .integration iframe{display:block;border:0;width:100%;aspect-ratio:16/10;border-radius:10px;background:var(--ground-2)}
+
+/* FAQ affichée en bas des pages (build.py, faq_html) */
+.prose .faq-page{margin-top:56px;border-top:1px solid var(--trait);padding-top:8px}
+.prose .faq-page details{border-bottom:1px solid var(--trait);padding:16px 0}
+.prose .faq-page summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:18px;font-weight:700;font-size:19px;line-height:1.35}
+.prose .faq-page summary::-webkit-details-marker{display:none}
+.prose .faq-page summary::after{content:"+";color:var(--or);font-weight:800;flex:none}
+.prose .faq-page details[open] summary::after{content:"\2212"}
+.prose .faq-page details p{margin:12px 0 2px;color:var(--ink-2)}

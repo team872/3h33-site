@@ -17,6 +17,11 @@ faq:
   - Est-ce la même chose que le no-code ?|Non. Le no-code assemble des briques prévues à l'avance dans un outil fermé. Le vibe coding produit du vrai code, que vous possédez, sans limite de forme et sans abonnement à une plateforme.
   - Faut-il savoir programmer ?|Pas pour décrire le besoin ni pour juger le résultat. Il faut en revanche quelqu'un qui sache lire ce qui est produit, tester et sécuriser : c'est notre rôle.
   - Combien de temps pour un premier outil ?|Une demi-journée de session suffit à obtenir un outil qui tourne, puis une phase de consolidation le rend propre et documenté.
+  - Quels outils utilise-t-on pour faire du vibe coding ?|Trois familles : des agents qui travaillent directement dans le projet, comme Claude Code ou Codex ; des éditeurs de code augmentés, comme Cursor ; des plateformes qui génèrent une application complète dans le navigateur, comme Lovable, Bolt ou Replit. Le bon choix dépend de ce que l'outil deviendra : une maquette pour convaincre, ou un logiciel à maintenir.
+  - Le code produit par l'IA est-il sûr ?|Pas par défaut. Une IA écrit vite du code qui fonctionne, mais elle peut laisser une clé d'accès en clair, oublier un contrôle de droits ou une limite de requêtes. Avant toute mise en ligne, on relit, on teste et on vérifie la sécurité et les données personnelles. C'est la partie du travail qu'on ne délègue pas.
+  - Peut-on mettre en production une application construite en vibe coding ?|Oui, à condition de la traiter comme n'importe quel logiciel : code versionné, tests, sauvegardes, surveillance, hébergement maîtrisé. Plusieurs sites et applications de la [galaxie 3h33](/galaxie/) ont été construits ainsi et tournent tous les jours.
+  - Qui maintient l'outil une fois livré ?|Vous, si vous le souhaitez : le code est à vous, documenté, et on apprend à vos équipes à le faire évoluer en dialoguant avec l'IA. Ou nous, pour les outils critiques. Dans les deux cas, pas de dépendance à une plateforme propriétaire.
+  - Comment devenir vibe coder ?|En construisant, tout simplement, sur un vrai besoin plutôt que sur un tutoriel. Une [session Forge](/forge/) ou une [formation Claude](/formation-claude/) donnent la méthode : décrire précisément, découper, vérifier à chaque étape, garder la main sur ce qui part en production.
 ---
 
 ## Ce que c'est
