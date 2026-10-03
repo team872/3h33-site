@@ -81,6 +81,7 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 - [Conditions générales](/conditions-generales/) — Les conditions générales de vente et d'utilisation des services et formations proposés par
 - [Confidentialité](/politique-de-confidentialite/) — Ce que 3h33.com collecte, pourquoi, combien de temps, et comment exercer vos droits. Site 
 - [Cookies](/politique-de-cookies-ue/) — Ce site n'utilise aucun cookie de suivi ni de publicité. Ce qui explique l'absence de band
+- [L'IA en entreprise : les réponses aux questions qu'on nous pose](/ia-en-entreprise/) — Par où commencer, quels usages, quels modèles, que faire des données, ce que demande l'AI 
 - [Le blog](/blog/) — Le carnet de bord de 3h33 : ce qu'on construit avec l'IA, ce qu'on apprend en le faisant, 
 - [Mentions légales](/mentions-legales/) — Éditeur, directeur de la publication, hébergeur et propriété intellectuelle du site 3h33.c
 - [Nous contacter](/contact/) — Un projet, une formation, une question sur l'IA ? Écrivez-nous : nous répondons vite et co
