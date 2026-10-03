@@ -1,0 +1,1472 @@
+# 3h33 — texte complet du site
+
+> 3h33 est une agence et un organisme de formation français, créé en 2010 par Alexandre Stopnicki, spécialisé dans les usages de l'intelligence artificielle générative en entreprise. Résumé court : https://3h33.com/llms.txt
+
+# 3h33, l'agence de l'IA
+URL : https://3h33.com/
+
+> Agence et organisme de formation en IA générative depuis 2010 : formations, outils sur mesure en vibe coding, agents conversationnels et studio créatif.
+
+## Questions fréquentes
+
+**Qu'est-ce que 3h33 ?** 3h33 est une agence et un organisme de formation français, créé en 2010 par Alexandre Stopnicki, spécialisé dans les usages de l'intelligence artificielle générative en entreprise. Elle forme les équipes, construit avec elles des outils d'IA en vibe coding et des agents conversationnels, et produit des contenus avec son studio créatif.
+
+**Qui est Alexandre Stopnicki ?** Le fondateur de 3h33, formateur et conférencier en intelligence artificielle. Il travaille dans le numérique depuis trente ans : en 1997, sa société Numériland tenait la régie publicitaire du Deuxième Monde, le métavers de Canal+. Il construit des chatbots depuis 2017 et commente l'actualité de l'IA dans l'émission The Artificial Intelligence Society.
+
+**Quelles formations à l'IA propose 3h33 ?** Une masterclass de deux heures pour acculturer jusqu'à cent personnes, des ateliers d'un à deux jours où six à quinze participants pratiquent sur leurs propres dossiers, une formation Claude d'un ou deux jours, et des rendez-vous de veille réguliers. Toutes partent des métiers et des cas réels.
+
+**Qu'est-ce que la méthode Forge ?** Une session Forge est une demi-journée de co-construction en visioconférence, préparée en amont et consolidée après. On y fabrique avec vos équipes un agent, une automatisation ou un tableau de bord, documenté et utilisable dès le lendemain. L'objectif est de vous rendre autonomes, pas dépendants.
+
+**Qu'est-ce que le vibe coding ?** Fabriquer un logiciel en décrivant en français ce qu'on veut, pendant qu'une IA écrit le code. 3h33 construit ainsi ses propres applications depuis 2024, et les outils de ses clients, dont le code leur appartient. Voir le vibe coding en entreprise.
+
+**La formation à l'IA est-elle obligatoire ?** L'article 4 de l'AI Act demande aux entreprises qui utilisent l'IA de prendre des mesures pour développer la maîtrise de l'IA de leurs équipes. Depuis l'omnibus numérique de juillet 2026, c'est une obligation de moyens et non de résultat. Le détail.
+
+**Faut-il une équipe technique pour travailler avec 3h33 ?** Non. Formations, ateliers et sessions Forge sont conçus pour des équipes métier. Ce qui est construit est livré documenté, et l'on vous apprend à le faire vivre.
+
+**Nos données restent-elles chez nous ?** Oui quand c'est nécessaire : nous travaillons avec des modèles hébergés en Europe ou installés sur vos propres serveurs, et la question est posée dès le premier échange. Voir IA locale et souveraine.
+
+**Travaillez-vous avec les collectivités ?** Oui : formation des agents et construction d'outils pour plusieurs communes, dont la mairie de Laxou. Le point d'entrée dédié est mairie.ai.
+
+**Combien ça coûte ?** Masterclass, ateliers et sessions Forge ont chacun un tarif fixe, annoncé avant tout engagement, et le devis tient sur une page. Nous intervenons à distance comme en présentiel, et le premier échange de vingt minutes est gratuit.
+
+---
+
+# Vibe coding : construire des outils en dialoguant avec l'IA
+URL : https://3h33.com/vibe-coding/
+
+> Le vibe coding consiste à fabriquer un logiciel en dialoguant avec une IA. Ce que ça change pour une entreprise, et ce que ça ne remplace pas.
+
+Votre outil existe déjà. Il n'est simplement pas encore écrit. Décrire ce qu'on veut, le voir apparaître, le corriger à la voix : c'est comme ça que nous construisons depuis deux ans.
+
+## Ce que c'est
+
+Pendant trente ans, fabriquer un logiciel voulait dire écrire des lignes de code. Le vibe coding change le point de départ : on décrit ce qu'on veut obtenir, en français, et l'intelligence artificielle écrit le programme. On regarde le résultat, on corrige, on recommence. En quelques heures, l'outil existe.
+
+Ce n'est pas de la magie et ce n'est pas non plus du bricolage. Le code produit est du vrai code, qui vous appartient, qu'on peut relire, tester, héberger et faire évoluer.
+
+## Ce que ça change pour une entreprise
+
+- **Le délai.** Un outil interne qui demandait deux mois de développement se construit en une demi-journée de session, puis se consolide en quelques jours.
+- **Le coût d'essai.** On peut se tromper. Fabriquer une première version pour voir si l'idée tient ne coûte plus un budget de projet.
+- **La propriété.** Pas d'abonnement à une plateforme qui décide de vos limites. Le code est chez vous.
+- **La précision.** L'outil colle à votre métier, parce qu'il est écrit pour vous et pas pour un marché.
+
+## Ce que ça ne remplace pas
+
+Il faut être honnête sur les limites, sinon la promesse se retourne contre vous.
+
+Le vibe coding ne dispense pas de savoir ce qu'on veut. Il ne dispense pas non plus de relire, de tester, de penser à la sécurité et aux données personnelles. Une intelligence artificielle produit vite du code qui marche, pas forcément du code qu'on peut mettre entre toutes les mains. C'est exactement là que nous intervenons.
+
+## Et le no-code dans tout ça
+
+Beaucoup d'entreprises sont arrivées à ces questions par le no-code, ces plateformes où l'on assemble des briques sans écrire une ligne. Le no-code reste utile pour des besoins simples et bien cadrés.
+
+Le vibe coding va plus loin : pas de brique imposée, pas de limite de forme, pas de dépendance à un éditeur. Si vous êtes venu chercher du no-code, lisez notre [comparatif no-code, low-code et vibe coding](/no-code/), puis regardez ce que la [méthode Forge](/forge/) produit en une demi-journée.
+
+## Comment on travaille
+
+Une demi-journée avec vos équipes, et un outil qui tourne le lendemain. Le déroulé tient en trois temps.
+
+1. **On part d'un besoin réel**, pas d'une idée générale. Un formulaire qui prend trop de temps, des courriers à traiter, un tableau de bord qui n'existe pas.
+2. **On construit en direct**, avec vos équipes, en visioconférence. Vous voyez l'outil se former et vous corrigez au fur et à mesure.
+3. **On consolide**, on documente, on met en ligne. L'outil est à vous, avec son mode d'emploi.
+
+## Ce qu'on a construit comme ça
+
+Trente-quatre sites et outils sont en ligne aujourd'hui, tous fabriqués de cette manière. Trois exemples qui montrent l'écart de nature entre eux.
+
+### chapitre.ai — une IA qui écrit votre livre
+
+[chapitre.ai](https://chapitre.ai) est une IA-biographe. Elle vous interviewe, recueille votre histoire et l'écrit comme un livre : amour, aventure, héritage, hommage. Vous parlez, elle écrit, vous corrigez à la voix. Les données restent privées par défaut et hébergées en France.
+
+Ce n'est pas un chatbot déguisé : c'est un produit complet, avec un parcours d'entretien, une fabrication de livre et des options de bande dessinée ou de film.
+
+### BotMoiLeQi — un rituel quotidien
+
+[botmoileqi.com](https://botmoileqi.com) publie chaque matin un fait surprenant et sourcé, à lire ou à écouter en quatre-vingt-dix secondes. Un objet simple en apparence, mais qui suppose une chaîne complète : trouver, vérifier, sourcer, rédiger, mettre en voix, publier, tous les jours.
+
+### Subsidium — agir là où vous vivez
+
+[subsidium.world](https://subsidium.world) est la plus grosse de nos plateformes. Elle réunit une communauté, des outils et des IA qui préparent le travail sans jamais décider à la place des gens : on y dépose une idée, elle rencontre ceux qui peuvent l'aider, elle devient un projet situé, et elle sert ensuite à d'autres ailleurs. Repair cafés, compostage de quartier, aide aux personnes âgées : des projets réels, portés par quelqu'un.
+
+La liste complète vit dans [la galaxie 3h33](/galaxie/).
+
+## Questions fréquentes
+
+**Qu'est-ce que le vibe coding ?** Le vibe coding consiste à fabriquer un logiciel en décrivant en langage courant ce qu'on veut obtenir, en dialoguant avec une intelligence artificielle qui écrit le code, puis en corrigeant par itérations successives jusqu'au résultat.
+
+**Est-ce la même chose que le no-code ?** Non. Le no-code assemble des briques prévues à l'avance dans un outil fermé. Le vibe coding produit du vrai code, que vous possédez, sans limite de forme et sans abonnement à une plateforme.
+
+**Faut-il savoir programmer ?** Pas pour décrire le besoin ni pour juger le résultat. Il faut en revanche quelqu'un qui sache lire ce qui est produit, tester et sécuriser : c'est notre rôle.
+
+**Combien de temps pour un premier outil ?** Une demi-journée de session suffit à obtenir un outil qui tourne, puis une phase de consolidation le rend propre et documenté.
+
+**Quels outils utilise-t-on pour faire du vibe coding ?** Trois familles : des agents qui travaillent directement dans le projet, comme Claude Code ou Codex ; des éditeurs de code augmentés, comme Cursor ; des plateformes qui génèrent une application complète dans le navigateur, comme Lovable, Bolt ou Replit. Le bon choix dépend de ce que l'outil deviendra : une maquette pour convaincre, ou un logiciel à maintenir.
+
+**Le code produit par l'IA est-il sûr ?** Pas par défaut. Une IA écrit vite du code qui fonctionne, mais elle peut laisser une clé d'accès en clair, oublier un contrôle de droits ou une limite de requêtes. Avant toute mise en ligne, on relit, on teste et on vérifie la sécurité et les données personnelles. C'est la partie du travail qu'on ne délègue pas.
+
+**Peut-on mettre en production une application construite en vibe coding ?** Oui, à condition de la traiter comme n'importe quel logiciel : code versionné, tests, sauvegardes, surveillance, hébergement maîtrisé. Plusieurs sites et applications de la galaxie 3h33 ont été construits ainsi et tournent tous les jours.
+
+**Qui maintient l'outil une fois livré ?** Vous, si vous le souhaitez : le code est à vous, documenté, et on apprend à vos équipes à le faire évoluer en dialoguant avec l'IA. Ou nous, pour les outils critiques. Dans les deux cas, pas de dépendance à une plateforme propriétaire.
+
+**Comment devenir vibe coder ?** En construisant, tout simplement, sur un vrai besoin plutôt que sur un tutoriel. Une session Forge ou une formation Claude donnent la méthode : décrire précisément, découper, vérifier à chaque étape, garder la main sur ce qui part en production.
+
+---
+
+# L'agence
+URL : https://3h33.com/agence/
+
+> Agence spécialisée dans les usages de l'IA : conseil, contenus, agents conversationnels, studio créatif et outils sur mesure en vibe coding.
+
+Nous ne vendons pas d'intelligence artificielle. Nous fabriquons avec, ce dont vous avez besoin, et nous apprenons à vos équipes à en faire autant.
+
+## Ce que nous faisons
+
+## Notre façon de travailler
+
+Une demi-journée avec vos équipes, un outil qui tourne le lendemain : c'est le format qui revient le plus souvent. Nous commençons rarement par une réunion et souvent par une démonstration. Un besoin décrit le matin devient un prototype l'après-midi. C'est plus rapide à juger qu'un cahier des charges, et beaucoup moins cher à corriger.
+
+Une fois l'outil validé, nous le consolidons, le documentons et l'installons. Vous en êtes propriétaire, code compris.
+
+## Nos grands chantiers
+
+Nous ne construisons pas que des outils courts. **Sator** est une plateforme d'apprentissage devenue agentique, ce que nous appelons désormais un [LMA](/lma-learning-management-agentique/). **Atelier LMS** est l'éditeur qui permet d'en fabriquer. **[Subsidium](https://subsidium.world)** est notre plus grande plateforme : une communauté, des outils et des IA au service de projets locaux, où l'IA prépare le travail sans jamais décider à la place des gens.
+
+---
+
+# Ateliers de formation à l'IA
+URL : https://3h33.com/ateliers-formation/
+
+> Un à deux jours pour que vos équipes pratiquent l'IA sur leurs propres dossiers : contenus, données, automatisations. Ateliers sur mesure.
+
+Personne ne regarde une démonstration. Chacun travaille sur ce qui lui prend du temps, avec les outils qu'il gardera ensuite.
+
+## Apprendre en faisant
+
+Une formation qui se contente d'expliquer ne change rien. Trois jours après, les outils sont refermés et personne ne les rouvre. Le problème n'est pas la compréhension, c'est le premier usage réel.
+
+Nos ateliers partent donc des dossiers de vos équipes : les courriers qu'elles écrivent, les comptes rendus qu'elles rédigent, les données qu'elles trient, les réponses qu'elles préparent. À la fin de la journée, chacun a produit quelque chose d'utilisable.
+
+## Ce qu'on y travaille
+
+- **Contenus.** Rédaction, réécriture, traduction, synthèse de documents longs, adaptation au ton de la maison.
+- **Données.** Extraction, classement, comparaison de documents, tableaux de bord.
+- **Automatisations.** Enchaîner les tâches répétitives pour qu'elles se fassent seules.
+- **Cadre et sécurité.** Ce qu'on a le droit de faire, avec quelles données, et comment le dire à ses équipes.
+
+## Le format
+
+Un jour pour découvrir et pratiquer, deux jours pour aller jusqu'à des usages installés. En présentiel ou à distance, six à quinze participants.
+
+Chaque atelier est préparé avec vous. Nous récupérons en amont une poignée de cas réels, anonymisés si besoin, qui deviennent les exercices de la journée.
+
+## Ce qu'il en reste
+
+Vos équipes repartent avec leurs propres gabarits, une documentation écrite pendant la séance, et un référent identifié pour continuer. C'est ce qui fait la différence entre une formation et un usage installé.
+
+Pour un besoin plus profond, la [méthode Forge](/forge/) construit avec vous l'outil qui manque. Pour rester à jour, les [rendez-vous IA Talent](/rendez-vous-ia-talent/) font le point tous les mois.
+
+## Questions fréquentes
+
+**Combien de personnes par atelier ?** Entre six et quinze participants, pour que chacun pratique réellement.
+
+**Sur quels outils travaille-t-on ?** Sur ceux que vous utiliserez ensuite. Le choix se fait avec vous selon vos contraintes de sécurité et de budget.
+
+**Que se passe-t-il après l'atelier ?** Vos équipes repartent avec leurs gabarits, leur documentation et un référent identifié en interne.
+
+---
+
+# Chatbots et agents conversationnels
+URL : https://3h33.com/chatbots/
+
+> Nous concevons des agents conversationnels qui répondent vraiment : nourris de vos documents, capables de citer leurs sources et branchés sur vos outils.
+
+Un bon agent ne récite pas un script. Il comprend la question, va chercher dans vos documents, cite le passage utilisé, et dit quand il ne sait pas.
+
+## Ce qui a changé
+
+Les premiers chatbots suivaient des arbres de décision. Ils butaient dès qu'on sortait du script, et tout le monde s'en est lassé.
+
+Les agents d'aujourd'hui comprennent une question formulée librement, cherchent la réponse dans les documents qu'on leur a confiés, et peuvent agir : consulter un agenda, remplir un formulaire, écrire un courrier, déclencher une tâche.
+
+## Ce que nous construisons
+
+- **Des agents nourris de vos documents.** Ils répondent à partir de votre base, citent le passage utilisé et ne brodent pas.
+- **Des agents vocaux.** On leur parle, ils répondent, ils relancent. C'est le principe de nos simulateurs d'entraînement.
+- **Des agents éditoriaux.** [BotMoiLeQi](https://botmoileqi.com) publie chaque matin un fait surprenant et sourcé, à lire ou écouter en quatre-vingt-dix secondes.
+- **Des agents internes.** Pour vos équipes : retrouver une procédure, préparer une réponse, vérifier un dossier.
+
+## Ce qui fait un agent utile
+
+Trois choses, dans l'ordre.
+
+D'abord un périmètre clair : un agent qui prétend tout savoir se trompe partout. Ensuite des sources vérifiables : quand il répond, on doit pouvoir remonter au document. Enfin le droit de dire non : un agent qui sait reconnaître qu'il ne sait pas vaut mieux qu'un agent brillant qui invente.
+
+## Nos réalisations
+
+Dix ans d'agents conversationnels, de LècheBot en 2017 aux simulateurs vocaux d'aujourd'hui : [voir l'historique complet](/realisations-chatbots-agents/).
+
+[BotMoiLeQi](https://botmoileqi.com), qui trouve, vérifie et met en voix un fait chaque matin, et l'[assistant de recherche](/assistant-de-recherche/) qui explore un corpus documentaire. Plusieurs agents métier tournent aujourd'hui chez nos clients, dont un assistant de rédaction des délibérations pour une commune.
+
+Pour construire le vôtre, tout commence par une [session Forge](/forge/) d'une demi-journée.
+
+## Questions fréquentes
+
+**Quelle différence entre un chatbot et un agent ?** Un chatbot classique suit un arbre de réponses préécrites. Un agent comprend la demande, cherche dans vos documents, peut appeler d'autres outils et formule une réponse propre à la question posée.
+
+**L'agent peut-il se tromper ?** Oui, comme un humain. On réduit le risque en l'obligeant à citer ses sources, en limitant son périmètre et en lui apprenant à dire qu'il ne sait pas.
+
+**Où sont hébergées les données ?** Selon votre choix : chez un fournisseur européen, ou entièrement sur vos serveurs quand la sensibilité l'exige.
+
+---
+
+# Créer des contenus avec l'IA
+URL : https://3h33.com/chatgpt/
+
+> Textes, images, vidéos, voix : ce que les IA génératives savent produire aujourd'hui pour une entreprise, comment s'y prendre et quelles limites connaître.
+
+La question n'est plus de savoir si ça marche. C'est de produire vite sans que tous vos textes se mettent à se ressembler.
+
+## Ce que l'IA sait produire aujourd'hui
+
+En trois ans, les IA génératives sont passées du texte approximatif à la production professionnelle. Elles écrivent, traduisent, résument, reformulent, dessinent, filment, parlent et chantent.
+
+Pour une entreprise, l'intérêt n'est pas de tout automatiser mais de retirer les frottements : la page blanche, la reformulation, la traduction, la mise en forme, la déclinaison d'un même message sur cinq supports.
+
+## Les usages qui tiennent
+
+- **Écrire plus vite, mieux relire.** Brouillons, plans, reformulations, résumés de documents longs.
+- **Traduire et adapter.** Passer d'une langue à l'autre, d'un ton à l'autre, d'un format à l'autre.
+- **Produire des images.** Illustrations, visuels de campagne, décors, personnages cohérents d'une image à l'autre.
+- **Donner de la voix.** Voix de synthèse, doublage, [comédiens virtuels](/synthetic-content/) pour vos vidéos.
+- **Décliner.** Un même contenu adapté pour le site, la lettre d'information, les réseaux et la présentation client.
+
+## Les limites qu'il faut connaître
+
+Une IA générative invente quand elle ne sait pas. Elle ne connaît pas votre entreprise si vous ne lui donnez pas vos documents. Elle n'a pas de goût, seulement des habitudes statistiques. Et tout ce que vous lui donnez part sur un serveur, sauf si vous avez choisi une solution qui reste chez vous.
+
+C'est pour ça qu'un contenu produit avec l'IA demande toujours un humain qui décide, relit et assume. La productivité vient du temps gagné sur la mise en forme, pas de la disparition de l'auteur.
+
+## Comment nous accompagnons
+
+Nous formons vos équipes à produire elles-mêmes, en [atelier](/ateliers-formation/), sur vos propres contenus. Et quand le volume le justifie, nous construisons l'outil qui automatise la chaîne, en [vibe coding](/vibe-coding/).
+
+Le [studio créatif](/studios-creatifs-multi-services/) prend en charge les productions qui demandent un vrai savoir-faire d'image et de montage.
+
+## Questions fréquentes
+
+**Les contenus produits avec l'IA sont-ils pénalisés par Google ?** Non. Google sanctionne les contenus sans valeur, quelle que soit leur origine. Un contenu utile, exact et personnel se positionne, qu'il ait été écrit avec ou sans assistance.
+
+**Comment garder le ton de la marque ?** En donnant à l'IA de vrais exemples de vos textes, en fixant des règles explicites et en relisant. C'est une bonne partie du travail que nous faisons en atelier.
+
+---
+
+# Coaching IA des dirigeants : construire, négocier, prendre la parole
+URL : https://3h33.com/coaching-ia-dirigeants/
+
+> Construire ses propres outils en une demi-journée, s'entraîner à négocier et à prendre la parole face à une IA vocale : l'accompagnement des dirigeants par 3h33.
+
+Un dirigeant n'a pas besoin d'un cours sur l'IA. Il a besoin d'outils qui lui font gagner du temps, et d'un partenaire d'entraînement disponible la veille du rendez-vous qui compte. C'est ce que nous proposons, en trois volets.
+
+## 1. Construire ses outils : la méthode Forge
+
+« C'est en forgeant qu'on devient forgeron. » Un module [Forge](/forge/), c'est une demi-journée de co-construction en visioconférence, préparée en amont et consolidée après. On y construit, avec vous, un outil qui sert dès le lendemain : un agent qui prépare vos comités, un tableau de bord qui se met à jour seul, une veille sectorielle automatisée, un assistant branché sur vos documents.
+
+La méthode tient en quatre temps : **cadrage**, **co-construction**, **consolidation**, **suivi**. Soixante-dix pour cent du temps se passe en direct, sur votre cas réel, sans présentation générique. Le livrable est documenté, et l'objectif est de vous rendre autonome, pas dépendant.
+
+## 2. S'entraîner à négocier : NegoVox
+
+[NegoVox](https://negovox.com/) fait jouer à une IA vocale un interlocuteur réaliste : un directeur des achats fidèle à son fournisseur depuis quinze ans, une cliente qui détecte les techniques de vente à dix mètres. Vous négociez à voix haute, cinq à neuf minutes, puis vous recevez une note sur dix, douze compétences mesurées et les moments clés de l'échange. Vous rejouez le passage qui a coincé jusqu'à ce qu'il passe.
+
+Pour un dirigeant, c'est la répétition d'une négociation importante. Pour une direction commerciale, c'est un entraînement quotidien pour toute l'équipe, avec un tableau de bord du manager.
+
+## 3. Préparer ses prises de parole : Media Training Vox
+
+[Media Training Vox](https://media-training-vox.com/) vous entraîne à toutes les prises de parole qui comptent. Face aux médias : matinale radio, plateau télévisé, point presse de crise, débat. Face à ceux qui comptent : vos salariés lors d'une réorganisation, votre comité de direction, votre conseil d'administration, vos actionnaires en assemblée générale, des investisseurs.
+
+L'IA connaît votre dossier. Elle vous interroge, vous coupe, relance, pose la question qui piège. Le débrief cite la phrase exacte qui n'a pas tenu, propose celle qu'il aurait fallu dire, et vous la rejouez. Jeudi, à 7 h 50, en direct, vous aurez déjà répondu trois fois à la question difficile.
+
+## Pour qui
+
+- **Dirigeants de PME et d'ETI** qui veulent des résultats concrets, vite, et garder la main.
+- **Équipes de direction** qui préparent une échéance : levée de fonds, réorganisation, assemblée générale, négociation clé.
+- **Directions commerciales** qui veulent entraîner leurs équipes entre deux formations.
+
+Ce n'est pas fait pour un projet « IA pour l'IA » sans responsable interne, ni pour qui cherche à tout déléguer sans s'impliquer.
+
+## Questions fréquentes
+
+**En quoi consiste le coaching IA d'un dirigeant ?** En trois volets combinables : construire avec lui ses propres outils d'IA en session Forge, l'entraîner à la négociation avec NegoVox, et le préparer à ses prises de parole avec Media Training Vox. On part toujours de ses échéances réelles.
+
+**Faut-il des connaissances techniques ?** Aucune. Forge est conçue pour des équipes métier, et les simulateurs vocaux s'utilisent dans le navigateur, avec un micro et un casque.
+
+**Combien de temps faut-il y consacrer ?** Une demi-journée pour un module Forge, et quelques minutes par séance d'entraînement vocal, le soir ou la veille d'une échéance. Le reste du temps, les outils travaillent pour vous.
+
+**Les échanges restent-ils confidentiels ?** Oui. Les applications d'entraînement sont hébergées en France, les données stockées dans l'Union européenne, et les séances ne servent jamais à entraîner un modèle tiers. Vous choisissez ce que vous partagez.
+
+**Par où commencer ?** Par un échange gratuit de vingt minutes pour identifier le cas à plus fort impact : un outil à construire, une négociation ou une prise de parole à préparer. Nous contacter.
+
+---
+
+# Nous contacter
+URL : https://3h33.com/contact/
+
+> Un projet, une formation, une question sur l'IA ? Écrivez-nous : nous répondons vite et commençons souvent par une démonstration plutôt que par une réunion.
+
+Vous avez assez entendu parler d'IA. Dites-nous en trois lignes ce qui vous prend du temps : on répond sous un jour ouvré, souvent par une démonstration plutôt que par une réunion.
+
+## Écrivez-nous
+
+(function(){
+  var f=document.getElementById("f-contact"), r=document.getElementById("c-retour"), ouvert=Date.now();
+  f.addEventListener("submit", function(e){
+    e.preventDefault();
+    var b=f.querySelector("button"), tr=f.querySelector(".envoi__tourne"); b.disabled=true; if(tr) tr.hidden=false; r.textContent="Envoi en cours…"; r.className="retour";
+    var d=Object.fromEntries(new FormData(f).entries());
+    d.instant=ouvert; d.page=location.pathname;
+    fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
+      .then(function(rep){ return rep.json().then(function(j){ return {st:rep.status,j:j}; }); })
+      .then(function(x){
+        if(x.st===200){ f.reset(); if(tr) tr.hidden=true; r.className="retour ok"; r.textContent="Merci, votre message est parti. Nous répondons sous un jour ouvré."; }
+        else { if(tr) tr.hidden=true; r.className="retour erreur"; r.textContent=(x.j.erreurs||["Envoi impossible pour le moment."]).join(" "); b.disabled=false; }
+      })
+      .catch(function(){ if(tr) tr.hidden=true; r.className="retour erreur"; r.textContent="L'envoi a échoué. Réessayez, ou écrivez-nous depuis votre messagerie."; b.disabled=false; });
+  });
+})();
+
+## Prendre rendez-vous
+
+Pour fixer une date de masterclass, d'atelier ou de session Forge, l'agenda passe par **Frédérique**. Indiquez-le dans votre message : elle vous proposera des créneaux dans la journée.
+
+## Trois lignes suffisent
+
+Pas besoin d'un cahier des charges. Ces trois éléments nous permettent déjà de répondre précisément :
+
+1. **Qui vous êtes.** Votre structure, votre secteur, le nombre de personnes concernées.
+2. **Ce qui coince.** La tâche qui prend trop de temps, ou ce que vous aimeriez pouvoir faire et que vous ne savez pas faire.
+3. **Quand.** Une date même approximative change complètement la réponse.
+
+Si vous ne savez pas encore, écrivez-le : on commence souvent par une démonstration de vingt minutes qui clarifie tout.
+
+## Nous suivre
+
+- [Choucroute Citron](https://choucroute-citron.com), le podcast
+- [alexandre.ai](https://alexandre.ai), les créations visuelles
+- [La galaxie 3h33](/galaxie/), tous nos sites et outils
+
+---
+
+# Former ses salariés à l'IA : ce que demande vraiment l'AI Act
+URL : https://3h33.com/formation-ia-obligatoire-ai-act/
+
+> L'article 4 de l'AI Act oblige les entreprises à développer la maîtrise de l'IA de leurs équipes. Ce que dit le texte depuis l'omnibus de 2026, et comment faire.
+
+Depuis février 2025, une entreprise qui utilise l'intelligence artificielle doit agir pour que ses équipes sachent s'en servir. Le texte a été assoupli en juillet 2026, mais l'obligation demeure. Voici ce qu'elle recouvre, sans jargon.
+
+## Ce que dit le texte
+
+Le règlement européen sur l'intelligence artificielle, le règlement (UE) 2024/1689, est entré en vigueur en août 2024 et s'applique par étapes. Son **article 4**, consacré à la « maîtrise de l'IA », s'applique depuis le **2 février 2025**. Il vise les fournisseurs, mais aussi les **déployeurs** : toute organisation qui utilise un système d'IA dans le cadre de son activité.
+
+En juillet 2026, l'**omnibus numérique** (règlement (UE) 2026/1744) a réécrit cet article. L'entreprise doit désormais prendre des mesures pour **soutenir le développement** de la maîtrise de l'IA de ses équipes, en tenant compte de leurs compétences, de leur expérience et du contexte d'usage. Le texte précise qu'il n'exige pas de garantir un niveau donné chez chaque personne.
+
+Autrement dit : l'obligation est devenue une **obligation de moyens**. Elle n'a pas disparu.
+
+## Ce que ça veut dire pour une entreprise
+
+- **Recenser les usages.** Qui utilise quel outil d'IA, pour quoi faire, avec quelles données.
+- **Former selon les métiers.** Le juriste, le commercial et la DRH n'ont pas les mêmes risques ni les mêmes usages.
+- **Apprendre les limites autant que les possibilités.** Vérifier une réponse, ne pas confier de données sensibles à un outil non validé, savoir quand garder la main.
+- **Garder une trace.** Programmes, participants, supports : c'est ce qu'on montrera si la question est posée.
+
+## Nous en parlions dès 2024
+
+Le 13 mars 2024, le Parlement européen adoptait l'AI Act par 523 voix pour, 46 contre et 49 abstentions. Alexandre Stopnicki le commentait dans sa chronique de *The Artificial Intelligence Society*, l'émission de Michel Juvillier consacrée à l'IA, et posait déjà la question de la formation : comment les entreprises allaient-elles s'adapter, et qui allait former les équipes ? Quelques semaines plus tard, la commission de l'intelligence artificielle remettait au président de la République ses recommandations, dont un grand plan de formation.
+
+Vidéo : Les recommandations du rapport de la commission « intelligence artificielle » — The Artificial Intelligence Society — https://www.youtube.com/watch?v=MuqmSskk5ig
+
+## Notre réponse
+
+Former à l'IA ne se fait pas avec une vidéo regardée en diagonale. Chez 3h33, on apprend en construisant : chaque participant repart avec un usage qui sert dans son métier, et l'entreprise avec la trace de ce qui a été fait. Voir [nos formations](/formations/), ou [écrivez-nous](/contact/) pour bâtir un plan adapté à vos équipes.
+
+## Questions fréquentes
+
+**La formation à l'IA est-elle obligatoire pour les entreprises ?** L'article 4 du règlement européen sur l'IA oblige les entreprises qui fournissent ou utilisent des systèmes d'IA à prendre des mesures pour développer la maîtrise de l'IA de leur personnel et des personnes qui les utilisent pour leur compte. Ce n'est pas une formation au contenu imposé, mais il faut pouvoir montrer ce qu'on a fait.
+
+**Qu'a changé l'omnibus numérique de 2026 ?** Le règlement (UE) 2026/1744, entré en vigueur le 27 juillet 2026, a réécrit l'article 4. Les entreprises doivent désormais « soutenir le développement » de la maîtrise de l'IA, et non plus « garantir » un niveau suffisant : c'est une obligation de moyens, pas de résultat. Le texte précise qu'aucun niveau individuel n'est exigé.
+
+**Qui est concerné ?** Toute organisation qui met un système d'IA à disposition de ses équipes, y compris un simple assistant comme ChatGPT, Claude ou Copilot utilisé dans le cadre du travail. Les PME sont concernées comme les grands groupes, avec un soutien annoncé de la Commission et des États membres.
+
+**Faut-il une certification ?** Non. Aucune certification ni aucun organisme n'est imposé. Ce qui compte : des actions adaptées aux métiers, au niveau des personnes et aux usages réels, et une trace de ce qui a été fait.
+
+**Quelles sont les échéances pour les systèmes à haut risque ?** Depuis l'omnibus de 2026, les obligations des systèmes d'IA à haut risque s'appliqueront le 2 décembre 2027 pour les systèmes autonomes (recrutement, crédit, éducation, infrastructures critiques) et le 2 août 2028 pour l'IA intégrée à des produits déjà réglementés.
+
+**Comment former ses équipes concrètement ?** En trois temps : une masterclass de deux heures pour toute l'organisation, des ateliers sur les dossiers réels de chaque métier, et un approfondissement par outil, comme la formation Claude. Chaque étape laisse une trace : programme, participants, supports, ce qui a été construit.
+
+---
+
+# Formations à l'intelligence artificielle
+URL : https://3h33.com/formations/
+
+> Organisme de formation spécialisé dans les usages de l'IA générative : masterclass d'acculturation, ateliers pratiques, sessions de construction et veille mensuelle.
+
+Quatre formats, de deux heures à deux jours. Un seul point commun : on apprend en fabriquant, jamais en écoutant.
+
+## Par où commencer
+
+Le bon point d'entrée dépend de votre maturité. Une équipe qui n'a jamais ouvert un outil d'IA n'a pas besoin de la même chose qu'une direction qui veut automatiser un processus précis.
+
+## Une demi-journée, heure par heure
+
+Voici comment se déroule une session Forge, sur un cas réel de commune : le besoin est posé le matin, l'outil est en ligne avant la fin de la journée.
+
+## Formations spécialisées
+
+- **[Formation Claude](/formation-claude/)** — une à deux journées pour maîtriser Claude en entreprise, du premier échange à l'automatisation.
+- **[Formations au marketing digital](/formations-au-marketing-digital/)** — le socle numérique, réseaux sociaux, contenus, référencement, désormais éclairé par l'IA.
+
+## Pour les collectivités
+
+Les mairies et les administrations ont leurs propres contraintes : marchés publics, données des administrés, cadre juridique. Nous accompagnons plusieurs communes, dont la mairie de Laxou, sur la formation des agents et la construction d'outils internes. Le point d'entrée dédié est [mairie.ai](https://mairie.ai/).
+
+## Un organisme de formation
+
+3h33 est un organisme de formation déclaré, actif depuis 2010. Les formations peuvent entrer dans votre plan de développement des compétences. Écrivez-nous pour le détail administratif et les modalités de prise en charge.
+
+---
+
+# L'IA en entreprise : les réponses aux questions qu'on nous pose
+URL : https://3h33.com/ia-en-entreprise/
+
+> Par où commencer, quels usages, quels modèles, que faire des données, ce que demande l'AI Act, ce que change le vibe coding : nos réponses aux entreprises.
+
+Dirigeants, DRH, directions métier, agents publics : ce sont les questions qu'on nous pose avant, pendant et après un premier projet d'intelligence artificielle. Les réponses tiennent en quelques lignes, et renvoient vers le détail quand il existe.
+
+## Avant de lire les réponses
+
+Ces questions reviennent dans presque toutes les entreprises, quelle que soit leur taille. Elles portent rarement sur la technique. Elles portent sur le point de départ, les données, le coût, la responsabilité et les équipes.
+
+Notre parti pris tient en une phrase : **on apprend l'IA en construisant quelque chose qui sert dès le lendemain.** C'est pourquoi beaucoup de réponses ci-dessous renvoient vers une démonstration plutôt que vers un document.
+
+## Trois chiffres à garder en tête
+
+- **Deux heures** pour qu'une équipe comprenne ce que l'IA sait faire pour son métier, en [masterclass](/masterclass-ia/).
+- **Une demi-journée** pour obtenir un premier outil qui tourne, en [session Forge](/forge/).
+- **Article 4 de l'AI Act** : depuis le 2 février 2025, une entreprise qui utilise l'IA doit agir pour que ses équipes la maîtrisent. Une [obligation de moyens](/formation-ia-obligatoire-ai-act/) depuis juillet 2026.
+
+## Questions fréquentes
+
+**Par où commencer avec l'IA dans une entreprise ?** Par un irritant concret plutôt que par une stratégie générale : une tâche répétitive, un document qu'on rédige chaque semaine, une question que tout le monde pose au même collègue. On mesure le temps qu'elle prend aujourd'hui, on construit une première réponse avec l'IA, on compare. Une masterclass de deux heures suffit souvent à faire émerger les trois premiers cas d'usage.
+
+**Quels usages de l'IA rapportent le plus vite ?** Ceux qui touchent l'écrit et la recherche d'information : rédiger et reformuler, résumer des réunions et des documents, répondre à partir d'une base documentaire interne, préparer des comptes rendus, trier des demandes entrantes. Viennent ensuite les petites automatisations entre outils et les tableaux de bord construits sur mesure.
+
+**Quelle différence entre ChatGPT et un agent IA ?** ChatGPT, Claude ou Gemini sont des assistants généralistes : on leur parle, ils répondent. Un agent reçoit une mission, consulte vos documents ou vos outils, enchaîne plusieurs étapes et rend un résultat, par exemple traiter une demande client de bout en bout. Voir chatbots et agents.
+
+**Faut-il choisir entre ChatGPT, Claude, Gemini ou Mistral ?** Pas une fois pour toutes. Les modèles progressent tous les trimestres et n'excellent pas dans les mêmes tâches. Ce qui compte : les conditions d'usage des données, l'hébergement, l'intégration à vos outils et le coût par utilisateur. Nous faisons le choix avec vous, et nous construisons de façon à pouvoir changer de modèle sans tout refaire. Voir notre comparatif.
+
+**Peut-on utiliser l'IA sans exposer ses données ?** Oui. Les offres professionnelles des grands fournisseurs n'entraînent pas leurs modèles sur vos échanges, des modèles sont hébergés en Europe, et d'autres peuvent être installés sur vos propres serveurs quand la sensibilité l'exige. La question se pose dès le premier échange, avec votre référent RGPD.
+
+**Que demande l'AI Act aux entreprises ?** Le règlement européen sur l'intelligence artificielle (règlement (UE) 2024/1689) s'applique par étapes depuis 2024. Son article 4, en vigueur depuis le 2 février 2025, demande aux entreprises qui utilisent l'IA de prendre des mesures pour développer la maîtrise de l'IA de leurs équipes ; depuis l'omnibus numérique de juillet 2026, c'est une obligation de moyens et non de résultat. Les systèmes dits à haut risque relèveront d'obligations bien plus lourdes à partir de décembre 2027. Le détail : former ses salariés à l'IA, ce que demande l'AI Act.
+
+**L'IA peut-elle se tromper, et comment s'en protéger ?** Oui : un modèle peut affirmer avec aplomb quelque chose de faux. On s'en protège en l'obligeant à citer ses sources, en le cantonnant à vos documents, en gardant un humain dans la boucle pour ce qui engage l'entreprise, et en apprenant aux équipes à vérifier. C'est le cœur de nos ateliers.
+
+**Combien coûte un projet d'IA ?** Moins qu'on ne le croit pour commencer. Un abonnement professionnel à un assistant coûte quelques dizaines d'euros par utilisateur et par mois. Un premier outil sur mesure se construit en une session Forge d'une demi-journée. Chez 3h33, masterclass, atelier et Forge ont chacun un tarif fixe, annoncé avant tout engagement.
+
+**Faut-il une équipe technique ou un data scientist ?** Non pour démarrer. Les ateliers et la Forge sont conçus pour des équipes métier. Il faut en revanche quelqu'un, en interne ou chez nous, qui sache relire ce qui est produit, le tester et le sécuriser avant de le confier à tout le monde.
+
+**Qu'est-ce que le vibe coding, et pourquoi les entreprises s'y intéressent ?** Le vibe coding consiste à fabriquer un logiciel en décrivant en français ce qu'on veut, pendant qu'une IA écrit le code. Pour une entreprise, c'est la possibilité d'obtenir un outil interne en quelques heures au lieu de quelques mois, qui lui appartient, sans abonnement à une plateforme. Voir le vibe coding en entreprise.
+
+**Peut-on construire un outil interne sans développeur ?** Une première version, oui : tableau de bord, formulaire intelligent, assistant documentaire, automatisation entre deux logiciels. La mettre entre toutes les mains demande ensuite une relecture, des tests et une attention à la sécurité. C'est exactement la phase de consolidation qui suit une session Forge.
+
+**Comment former ses équipes à l'IA ?** En trois temps. Une masterclass de deux heures pour acculturer jusqu'à cent personnes. Des ateliers d'un à deux jours où six à quinze participants pratiquent sur leurs propres dossiers. Une formation Claude pour aller plus loin avec un outil précis. Puis une veille régulière, parce que les outils changent tous les mois.
+
+**L'IA va-t-elle supprimer des postes dans mon entreprise ?** Elle transforme d'abord des tâches, pas des métiers entiers. Ce que nous observons : les équipes qui maîtrisent l'IA gagnent du temps sur l'écrit et la recherche, et le réinvestissent dans ce que l'IA fait mal, la relation, le jugement, la décision. L'enjeu est de former tout le monde, pas seulement les plus curieux.
+
+**Comment mesurer le retour sur investissement ?** Sur des cas précis, avant et après : minutes passées par dossier, délai de réponse, nombre de demandes traitées, erreurs évitées. Un usage qui ne se mesure pas reste une impression. On commence petit, on mesure, et on étend ce qui marche.
+
+**Peut-on installer une IA chez soi, sans cloud ?** Oui. Des modèles ouverts tournent sur un serveur de l'entreprise, voire sur un poste puissant, sans qu'aucune donnée ne sorte. Ils sont un peu moins brillants que les meilleurs modèles en ligne, mais largement suffisants pour résumer, classer ou répondre à partir de documents internes. Voir IA locale et souveraine.
+
+**Comment créer un assistant qui répond à partir de nos documents ?** On le nourrit de vos procédures, contrats, catalogues ou bases de connaissances, on l'oblige à citer le passage d'où vient chaque réponse, et on limite son périmètre. On parle de génération augmentée par recherche, ou RAG. Voir chatbots et agents.
+
+**Les collectivités peuvent-elles se lancer aussi ?** Oui, avec les mêmes précautions sur les données et quelques contraintes propres à l'achat public. Nous formons des agents et construisons des outils pour des communes ; le point d'entrée dédié est mairie.ai.
+
+**Que fait 3h33, concrètement ?** 3h33 est une agence et un organisme de formation spécialisés dans les usages de l'IA générative, fondés par Alexandre Stopnicki. Nous formons les équipes, nous construisons avec elles des outils qui tournent le lendemain, agents, automatisations, tableaux de bord, et nous produisons des contenus avec le studio. Pour en parler : nous contacter.
+
+---
+
+# LMA : le Learning Management Agentique
+URL : https://3h33.com/lma-learning-management-agentique/
+
+> Le LMA, Learning Management Agentique, succède au LMS : une plateforme où des agents retrouvent, expliquent et interrogent l'apprenant.
+
+Un LMS range des cours. Un LMA les fait travailler : il retrouve, explique, interroge et s'adapte. Nous appelons ça le Learning Management Agentique.
+
+## D'où vient le mot
+
+Depuis vingt ans, la formation en ligne s'organise autour du LMS, le Learning Management System. Un LMS range des cours, inscrit des apprenants, suit des progressions et délivre des attestations. C'est un classeur, très bien fait, mais un classeur.
+
+L'arrivée des agents change la nature de l'objet. Ce n'est plus l'apprenant qui cherche dans le classeur : c'est le système qui va chercher, qui explique, qui interroge et qui s'adapte. Le mot LMS ne décrit plus ce qui se passe. Nous proposons donc **LMA, Learning Management Agentique**.
+
+## Ce qu'un LMA sait faire qu'un LMS ne sait pas
+
+- **Retrouver la bonne seconde.** Sur des centaines d'heures de vidéo, répondre à une question précise en citant le passage exact, avec l'horodatage.
+- **Expliquer au bon niveau.** Reformuler la même notion pour un débutant ou pour un professionnel, selon qui pose la question.
+- **Interroger.** Poser des questions à la volée, corriger, et revenir sur ce qui n'est pas acquis.
+- **Composer des parcours.** Assembler des extraits venus de plusieurs cours plutôt que d'imposer des modules entiers.
+- **Rendre compte.** Montrer aux responsables ce qui est réellement compris, et pas seulement ce qui a été cliqué.
+
+## Ce que ça demande
+
+Un LMA ne s'improvise pas. Il faut transcrire le corpus, l'indexer par le sens, savoir citer ses sources à la seconde près, mesurer ce que coûte chaque appel au modèle, et garder la main sur les données.
+
+C'est un travail d'ingénierie, mais il se construit vite quand on sait le faire : le socle d'un LMA se met en place en quelques semaines, pas en deux ans.
+
+## Un exemple
+
+Pour [Sator](https://sator.fr), nous avons transformé une plateforme de formation classique en système agentique : le corpus entier a été repris, transcrit et indexé, et l'apprenant dialogue désormais avec un professeur qui cite ses sources à la seconde.
+
+C'est aujourd'hui notre définition de travail du LMA, et nous construisons également l'éditeur qui permet d'en fabriquer.
+
+## Questions fréquentes
+
+**Que veut dire LMA ?** LMA signifie Learning Management Agentique. Le terme désigne une plateforme d'apprentissage dont le cœur n'est plus un catalogue de cours à parcourir, mais des agents qui retrouvent l'information, l'expliquent, interrogent l'apprenant et suivent sa progression.
+
+**Quelle différence avec un LMS ?** Un LMS, Learning Management System, range des contenus et suit des inscriptions. Un LMA travaille sur ces contenus : il retrouve le passage exact qui répond à une question, reformule pour le niveau de la personne, pose des questions et adapte la suite du parcours.
+
+**Faut-il jeter son LMS pour passer au LMA ?** Non. On part du corpus existant, cours, vidéos, documents, et on ajoute la couche agentique par-dessus. C'est ce que nous avons fait pour Sator.
+
+---
+
+# Masterclass IA
+URL : https://3h33.com/masterclass-ia/
+
+> Deux heures pour démystifier l'intelligence artificielle et repartir avec des usages concrets. Masterclass d'acculturation à l'IA animée par Alexandre Stopnicki.
+
+Deux heures, des démonstrations en direct sur vos propres cas, et une salle qui sait enfin par où commencer.
+
+## Pourquoi commencer par une masterclass
+
+Tout le monde a entendu parler de ChatGPT. Presque personne n'a vu l'IA travailler sur ses propres dossiers, dans son métier, avec ses contraintes. C'est toute la différence entre en avoir entendu parler et savoir quoi en faire.
+
+La masterclass sert à ça : montrer, en direct, ce que l'IA sait faire aujourd'hui dans votre secteur, et ce qu'elle ne sait pas faire. Une fois ce socle posé, la question « par où commencer » devient simple.
+
+## Cinq raisons d'y participer
+
+- **Démystifier l'IA.** Comprendre ce qui a changé, pourquoi maintenant, et ce que ça implique pour vos métiers.
+- **Voir les usages.** Identifier là où l'intelligence artificielle apporte du temps et de la qualité, secteur par secteur.
+- **Voir l'IA en action.** Des démonstrations en direct, sur des cas que vous proposez pendant la séance.
+- **Repartir avec des clés.** Les premiers pas à faire en interne, dans le bon ordre, sans investissement lourd.
+- **Un intervenant qui construit.** Alexandre Stopnicki forme depuis seize ans et fabrique lui-même les outils qu'il présente.
+
+## Comment ça se passe
+
+La masterclass se donne en présentiel dans vos locaux ou en visioconférence, pour un groupe de dix à cent personnes. Le déroulé s'adapte à votre secteur : les démonstrations d'une mairie ne sont pas celles d'un cabinet de conseil ou d'une école.
+
+Nous préparons la séance avec vous à partir de trois cas réels que vos équipes rencontrent chaque semaine. C'est sur ces cas que l'IA travaille en direct.
+
+## Ensuite
+
+La masterclass ouvre la porte. Pour aller plus loin, deux suites naturelles : les [ateliers de formation](/ateliers-formation/), où vos équipes pratiquent sur leurs propres dossiers, et la [méthode Forge](/forge/), où l'on construit ensemble un outil qui vous servira dès le lendemain.
+
+## Questions fréquentes
+
+**Combien de temps dure la masterclass ?** Deux heures, en présentiel ou en visioconférence, pour un groupe de dix à cent personnes.
+
+**Faut-il des connaissances techniques ?** Aucune. La masterclass s'adresse à des équipes métier, des dirigeants et des agents publics qui n'ont jamais utilisé l'IA générative.
+
+**Que repart-on avec ?** Une vision claire des usages applicables à votre métier, une liste de premiers pas et les démonstrations rejouables.
+
+---
+
+# Studio créatif
+URL : https://3h33.com/studios-creatifs-multi-services/
+
+> Le studio 3h33 écrit, produit et monte avec l'IA : films entiers, vidéos de marque, musiques originales et univers visuels cohérents d'un plan à l'autre.
+
+Dites-nous ce que vous voulez faire ressentir. On écrit, on tourne, on compose et on monte avec l'IA, sans jamais perdre ce qui fait un film : l'intention.
+
+## Ce que le studio produit
+
+- **Des films.** De l'écriture au montage final, avec des personnages qui restent eux-mêmes d'un plan à l'autre.
+- **Des vidéos de marque.** Présentation, campagne, déclinaisons pour les réseaux, formats courts.
+- **Des musiques originales.** Composition, voix, arrangements, jusqu'au clip.
+- **Des univers visuels.** Personnages, décors, illustrations, chartes d'images réutilisables.
+
+## Ce qui fait la différence
+
+L'IA sait produire une belle image en dix secondes. Elle ne sait pas décider ce qu'il faut raconter, ni pourquoi ce plan doit durer trois secondes de plus.
+
+Notre travail commence là : comprendre l'intention, écrire, choisir. Les outils viennent après, et ils changent tous les mois. C'est cette partie-là, la direction, qui fait qu'un film tient.
+
+## Nos productions
+
+Le studio a produit des films entiers, des clips et des compositions originales. Vous pouvez voir une partie du travail dans notre [galerie de vidéos IA](/studio/videos/), et écouter le générique de [Choucroute Citron](/podcasts/), notre podcast.
+
+## Ce que nous avons fait pour des clients
+
+Certaines productions ne peuvent pas être montrées publiquement. Nous racontons alors ce qui a été fait, ce qui a été livré et en combien de temps, sans diffuser les images.
+
+Écrivez-nous en décrivant votre projet : nous répondons avec des références comparables et un ordre de grandeur.
+
+---
+
+# À propos de 3h33
+URL : https://3h33.com/a-propos/
+
+> 3h33 est une agence et un organisme de formation spécialisés dans les usages de l'IA générative, fondés par Alexandre Stopnicki.
+
+Une agence qui fabrique au lieu de présenter, et un organisme de formation où l'on apprend en construisant.
+
+## L'agence
+
+3h33 accompagne depuis 2010 des entreprises, des écoles et des collectivités sur le numérique. Depuis 2023, l'essentiel de ce travail porte sur les usages de l'intelligence artificielle générative : former les équipes, construire les outils, produire les contenus.
+
+Le nom vient d'une heure : celle où l'on travaille encore quand une idée tient. C'est resté.
+
+## Alexandre Stopnicki
+
+Fondateur de 3h33, formateur, conférencier et constructeur. Il enseigne l'IA à des dirigeants, des agents publics, des enseignants et des créatifs, et fabrique lui-même les outils qu'il présente.
+
+Il anime le podcast [Choucroute Citron](/podcasts/) et publie ses créations visuelles sur [alexandre.ai](https://alexandre.ai). Son site personnel : [alexandrestopnicki.com](https://alexandrestopnicki.com).
+
+## Ce qui nous distingue
+
+On ne vend pas de l'IA. On vous rend du temps.
+
+Nous ne faisons pas de conférence sur l'IA sans montrer. Nous ne vendons pas d'outil sans l'avoir construit. Et nous ne formons pas sur des exemples génériques, mais sur les dossiers réels de ceux qui sont dans la salle.
+
+Trente-quatre sites et outils sont en ligne aujourd'hui, tous fabriqués en [vibe coding](/vibe-coding/). C'est notre carte de visite : la [galaxie 3h33](/galaxie/).
+
+## Ils nous font confiance
+
+Criteo, Saint-Gobain, Air Liquide, Dentsply Sirona, Bolton Group, Robert Half, le Cnam, Esmod, Casino, Maria Schools, De Vinci Executive Education, l'Institut français, Giropharm, Les Acteurs de la Compétence, Acorus, la mairie de Laxou et d'autres.
+
+---
+
+# Conseil et stratégie IA
+URL : https://3h33.com/agence-conseil-marketing-digital/
+
+> Par où commencer avec l'IA, avec quelles données et dans quel cadre. Un diagnostic court avant d'investir, plutôt qu'un projet qu'on regrette.
+
+Avant d'acheter un outil, il faut savoir ce qu'on cherche à gagner. C'est court, et ça évite les projets qu'on abandonne au bout de six mois.
+
+## Le diagnostic
+
+Nous passons une journée avec vos équipes pour répondre à trois questions : où va le temps aujourd'hui, ce que l'IA peut en reprendre, et à quelles conditions.
+
+Le résultat tient en quelques pages : les usages classés par gain et par difficulté, ce qu'il faut mettre en place, et ce que ça coûte.
+
+## Ce que nous regardons
+
+- **Vos processus.** Ce qui se répète, ce qui prend du temps, ce qui coince.
+- **Vos données.** Ce dont vous disposez, où c'est rangé, ce qu'on a le droit d'utiliser.
+- **Votre cadre.** Contraintes de secteur, RGPD, AI Act, marchés publics le cas échéant.
+- **Vos équipes.** Qui portera l'usage, et ce qu'il faut leur apprendre.
+
+## Ce qui suit
+
+Un diagnostic sans suite ne sert à rien. Nous enchaînons en général par une [masterclass](/masterclass-ia/) pour embarquer les équipes, puis par une [session Forge](/forge/) qui construit le premier outil.
+
+Pour les questions de conformité, notre outil [IA Conforme](https://ia-conforme.com) fait le point sur votre situation vis-à-vis de l'AI Act.
+
+---
+
+# ChatGPT, Claude, Mistral ou Gemini : lequel pour votre entreprise ?
+URL : https://3h33.com/chatgpt-claude-mistral-gemini/
+
+> Les grands assistants d'IA comparés pour un usage professionnel : points forts, données, hébergement, intégration à vos outils, et comment choisir.
+
+C'est la question qu'on nous pose le plus souvent, et la réponse la plus honnête est : ça dépend de ce que vous en faites, de vos données et des outils que vous utilisez déjà. Voici comment trancher.
+
+## Les cinq grands assistants
+
+| | Éditeur | Points forts | À savoir |
+|---|---|---|---|
+| **ChatGPT** | OpenAI (États-Unis) | Polyvalence, voix, images, très large écosystème | Le plus répandu : vos équipes l'utilisent peut-être déjà, avec un compte personnel |
+| **Claude** | Anthropic (États-Unis) | Rédaction, analyse de longs documents, code et vibe coding | Très apprécié des équipes qui écrivent et des développeurs |
+| **Gemini** | Google (États-Unis) | Intégration à Gmail, Docs, Drive ; multimodal | Naturel si l'entreprise vit dans Google Workspace |
+| **Copilot** | Microsoft (États-Unis) | Intégration à Word, Excel, Outlook, Teams | Naturel si l'entreprise vit dans Microsoft 365 |
+| **Le Chat** | Mistral AI (France) | Souveraineté, hébergement européen, modèles ouverts | La réponse quand les données doivent rester en Europe |
+
+Les classements de performance changent tous les trimestres : un modèle en tête au printemps est rattrapé à l'automne. C'est pourquoi il vaut mieux choisir sur des critères stables.
+
+## Les critères qui durent
+
+- **Vos données.** Offre professionnelle, engagement de non-entraînement, hébergement européen si nécessaire.
+- **Vos outils.** Un assistant intégré à la messagerie et aux documents qu'on utilise déjà sera adopté plus vite.
+- **Vos usages.** Rédaction, analyse, code, recherche : faites tester les deux ou trois candidats sur de vrais dossiers.
+- **La réversibilité.** Construisez vos outils internes de façon à pouvoir changer de modèle sans tout refaire. C'est ce que nous faisons en [vibe coding](/vibe-coding/).
+
+## Chercher n'est pas rédiger
+
+Les moteurs de réponse comme Perplexity ont changé la recherche d'information : ils interrogent le web et citent leurs sources. Ils complètent un assistant, ils ne le remplacent pas.
+
+Vidéo : Perplexity : la révolution des moteurs de recherche alimentée par l'IA — The Artificial Intelligence Society — https://www.youtube.com/watch?v=QXQKnuYKEqA
+
+## Notre conseil
+
+Ne choisissez pas pour toujours. Choisissez une offre professionnelle pour tout le monde, formez les équipes aux principes communs, et gardez la liberté de changer. Pour les cas où les données ne doivent pas sortir, prévoyez une [solution souveraine ou locale](/ia-locale-souveraine/).
+
+## Questions fréquentes
+
+**Quel est le meilleur assistant d'IA pour une entreprise ?** Il n'y en a pas un seul. Claude est souvent préféré pour la rédaction longue, l'analyse de documents et le code ; ChatGPT pour sa polyvalence et son écosystème ; Gemini et Copilot pour leur intégration à Google Workspace et à Microsoft 365 ; Mistral pour la souveraineté européenne. Beaucoup d'entreprises en combinent deux.
+
+**Mes données servent-elles à entraîner les modèles ?** Pas avec les offres professionnelles, qui s'engagent à ne pas entraîner leurs modèles sur vos échanges. Avec les versions gratuites ou personnelles, c'est souvent le cas par défaut. Vérifiez l'offre souscrite et ses réglages avant d'y mettre des données de l'entreprise.
+
+**Existe-t-il une alternative française ?** Oui : Mistral AI, dont l'assistant s'appelle Le Chat. Ses modèles peuvent être hébergés en Europe, et certains sont ouverts, c'est-à-dire installables sur vos propres serveurs. Voir IA locale et souveraine.
+
+**Et Perplexity ?** Perplexity est un moteur de réponse : il cherche sur le web et cite ses sources. Il complète un assistant généraliste pour la veille et la recherche d'information, sans le remplacer pour rédiger ou analyser vos documents.
+
+**Faut-il former les équipes à un outil précis ?** Aux principes d'abord, qui valent pour tous les assistants : formuler une demande, fournir le contexte, vérifier. Puis à l'outil retenu, pour en exploiter les fonctions propres. C'est l'objet de la formation Claude et de nos ateliers.
+
+---
+
+# Formations au marketing digital
+URL : https://3h33.com/formations-au-marketing-digital/
+
+> Réseaux sociaux, contenus, référencement, données : le socle du marketing numérique, désormais éclairé par l'intelligence artificielle.
+
+Le marketing digital n'a pas disparu avec l'IA : il a changé d'outils. Nos formations partent du socle et montrent ce que l'IA y change.
+
+## Le socle
+
+Depuis 2010, nous formons au marketing numérique : présence en ligne, réseaux sociaux, contenus, référencement naturel, publicité, analyse d'audience. Ce socle reste nécessaire.
+
+Ce qui a changé, c'est la façon de produire et d'analyser. Un article se rédige autrement, une campagne se décline en dix versions, une audience se comprend en interrogeant ses données en langage courant.
+
+## Les thèmes
+
+- **Contenus et référencement** — écrire pour être lu et pour être trouvé, avec l'aide de l'IA.
+- **Réseaux sociaux** — présence, ligne éditoriale, production régulière sans y passer ses journées.
+- **Données et mesure** — savoir ce qui marche, et le dire simplement à sa direction.
+- **Publicité en ligne** — les principes, les pièges, ce que l'automatisation décide à votre place.
+
+## Formats
+
+Les formations se donnent en une ou deux journées, en présentiel ou à distance, pour des équipes marketing, des dirigeants ou des étudiants. Nous intervenons aussi en école et en université.
+
+Pour l'IA seule, voyez plutôt la [masterclass](/masterclass-ia/) et les [ateliers](/ateliers-formation/). Les pages de nos anciennes formations restent consultables dans les [archives](/archives/).
+
+---
+
+# IA locale et souveraine : faire tourner l'IA chez soi
+URL : https://3h33.com/ia-locale-souveraine/
+
+> Garder ses données en Europe, ou ne rien laisser sortir : modèles européens, cloud souverain, IA installée sur vos serveurs. Ce qui est possible, à quel prix.
+
+Contrats, dossiers patients, données RH, secrets de fabrication : certaines informations ne doivent pas quitter l'entreprise. Bonne nouvelle, l'IA peut venir à elles plutôt que l'inverse.
+
+## Trois niveaux de maîtrise
+
+**1. Le cloud, avec des garanties.** Les offres professionnelles des grands fournisseurs s'engagent à ne pas entraîner leurs modèles sur vos échanges, et certaines proposent un hébergement des données en Europe. C'est le plus simple, et souvent suffisant pour des données non sensibles.
+
+**2. L'IA souveraine.** Des modèles européens, comme ceux de Mistral AI, et des clouds soumis au droit européen, comme Scaleway ou OVHcloud. Les données restent dans l'Union européenne, chez un fournisseur européen.
+
+**3. L'IA locale.** Des modèles ouverts, Mistral, Llama, Qwen ou Gemma, installés sur vos propres serveurs avec des outils comme Ollama ou vLLM. Rien ne sort. C'est la solution des données les plus sensibles : santé, défense, juridique, R&D.
+
+## Ce que nous faisons nous-mêmes
+
+Nous ne le recommandons pas sans le pratiquer. Nous faisons tourner des modèles ouverts sur nos propres serveurs, et nos applications d'entraînement vocal, [NegoVox](https://negovox.com/) et [Media Training Vox](https://media-training-vox.com/), sont hébergées en France, avec des données stockées dans l'Union européenne.
+
+## Pourquoi la question est devenue stratégique
+
+La souveraineté numérique n'est pas qu'une affaire de conformité. Quand les meilleurs outils sont réservés, retardés ou plus chers pour les Européens, c'est la capacité d'innover qui est en jeu.
+
+Vidéo : Les frontières virtuelles érigées par l'IA américaine étouffent l'innovation européenne — The Artificial Intelligence Society — https://www.youtube.com/watch?v=ZvGXtysj_Is
+
+Vidéo : IA et protection des données personnelles — The Artificial Intelligence Society — https://www.youtube.com/watch?v=0vLHBF4vkMs
+
+## Par où commencer
+
+Commencez par classer vos données : ce qui peut aller dans le cloud, ce qui doit rester en Europe, ce qui ne doit pas sortir. Le choix de l'outil en découle. Une [session Forge](/forge/) permet ensuite de construire un premier assistant sur vos documents, au niveau de maîtrise que vous aurez choisi.
+
+## Questions fréquentes
+
+**Qu'est-ce qu'une IA locale ?** Un modèle d'IA qui tourne sur vos propres machines, un serveur de l'entreprise ou même un ordinateur puissant, sans envoyer de données à un service extérieur. On utilise pour cela des modèles dits ouverts, dont les poids sont publiés et peuvent être installés librement.
+
+**Une IA locale est-elle aussi performante que ChatGPT ?** Un peu moins sur les tâches les plus complexes, mais largement suffisante pour résumer, classer, extraire des informations, rédiger ou répondre à partir de documents internes. L'écart se réduit à chaque génération de modèles ouverts.
+
+**Quel matériel faut-il ?** Pour un usage individuel, un ordinateur récent doté d'une carte graphique ou d'une puce Apple suffit à faire tourner un petit modèle. Pour une équipe, un serveur avec une ou plusieurs cartes graphiques. On dimensionne selon le nombre d'utilisateurs et la taille du modèle.
+
+**Qu'est-ce qu'une IA souveraine ?** Une IA dont vous maîtrisez la juridiction : modèle européen, hébergement dans l'Union européenne, fournisseur soumis au droit européen. C'est un intermédiaire entre le cloud américain et l'installation sur site.
+
+**L'IA locale règle-t-elle la question du RGPD ?** Elle en simplifie une grande partie, puisque les données ne sortent pas. Il reste à définir les finalités, les accès et la durée de conservation, comme pour tout traitement de données personnelles.
+
+---
+
+# No-code, low-code ou vibe coding : lequel choisir ?
+URL : https://3h33.com/no-code/
+
+> Bubble, Airtable, Zapier, Power Apps ou une IA qui écrit le code : ce que chaque approche permet, ce qu'elle coûte à terme, et comment choisir pour votre entreprise.
+
+En 2022, nous accompagnions les entreprises dans le no-code. Depuis, l'IA écrit du vrai code à partir d'une simple description. Le no-code n'a pas disparu, mais il n'est plus la seule réponse à « je voudrais un outil sans attendre six mois ».
+
+## Trois façons d'obtenir un outil sans projet informatique
+
+Pendant longtemps, un outil sur mesure voulait dire un cahier des charges, un prestataire, et plusieurs mois. Trois approches ont successivement raccourci ce chemin.
+
+| | No-code | Low-code | Vibe coding |
+|---|---|---|---|
+| **Principe** | Assembler des briques visuelles | Briques visuelles et un peu de code | Décrire en français, l'IA écrit le code |
+| **Pour qui** | Équipes métier | Équipes informatiques | Équipes métier, accompagnées |
+| **Exemples** | Bubble, Glide, Airtable, Webflow | Power Apps, OutSystems, Retool | Claude Code, Cursor, Lovable, Bolt |
+| **Limite de forme** | Celle de la plateforme | Celle de la plateforme, repoussée | Aucune |
+| **Propriété** | L'application vit chez l'éditeur | L'application vit chez l'éditeur | Le code est à vous |
+| **Coût à terme** | Abonnement, souvent par utilisateur | Licences, souvent élevées | Hébergement seul |
+
+## Ce que le no-code a apporté
+
+Le no-code a démontré une chose essentielle : les gens qui connaissent le métier sont les mieux placés pour concevoir leurs outils. Gestion commerciale, catalogues, suivi de fournisseurs, organisation d'événements, outils de veille : en 2022, nous aidions déjà des PME à les construire elles-mêmes, sans attendre un service informatique débordé.
+
+## Ce que le vibe coding change
+
+L'IA générative a fait sauter la dernière barrière. On n'assemble plus des briques prévues par quelqu'un d'autre : on décrit ce qu'on veut, et une IA écrit le programme. On regarde, on corrige à la voix ou au clavier, on recommence. Le résultat est du vrai code, qu'on peut relire, héberger où l'on veut et faire évoluer sans demander la permission à une plateforme.
+
+C'est ainsi que nous construisons depuis deux ans les sites et les applications de la [galaxie 3h33](/galaxie/) : des outils de veille, de négociation, d'écriture, de formation, qui tournent tous les jours.
+
+## Comment choisir
+
+- **Un besoin simple, standard, et peu d'utilisateurs** : le no-code reste imbattable en rapidité.
+- **Une automatisation entre logiciels existants** : un outil comme n8n ou Make, éventuellement complété par quelques lignes écrites par l'IA.
+- **Un outil qui colle à votre métier, que vous voulez posséder** : le vibe coding.
+- **Une application no-code devenue trop chère ou trop étroite** : la reconstruire en vibe coding, à partir de ce qu'elle fait déjà.
+
+Dans tous les cas, la question n'est plus « savez-vous programmer ? » mais « savez-vous décrire précisément ce dont vous avez besoin ? ». C'est ce que nous apprenons aux équipes en [atelier](/ateliers-formation/) et en [session Forge](/forge/), en construisant leur premier outil avec elles.
+
+## Questions fréquentes
+
+**Quelle différence entre no-code et low-code ?** Le no-code permet de construire une application uniquement par assemblage visuel, sans écrire une ligne : Bubble, Glide, Airtable, Webflow. Le low-code ajoute la possibilité d'écrire un peu de code pour aller plus loin, et vise plutôt les équipes informatiques : Power Apps, OutSystems, Retool.
+
+**Quelle différence entre no-code et vibe coding ?** Le no-code assemble des briques prévues par une plateforme, et l'application vit chez cette plateforme. En vibe coding, on décrit ce qu'on veut à une IA qui écrit du vrai code : l'application vous appartient, sans limite de forme ni abonnement imposé. Voir le vibe coding en entreprise.
+
+**Le no-code est-il dépassé ?** Non, il a trouvé sa place. Pour un site vitrine, une base de données partagée, un formulaire ou une automatisation entre deux logiciels, il reste rapide et sûr. Il montre ses limites quand l'outil grandit, quand il faut des règles métier fines, ou quand les coûts d'abonnement suivent le nombre d'utilisateurs.
+
+**Quels outils no-code restent utiles en entreprise ?** Pour automatiser : Zapier, Make ou n8n, ce dernier pouvant être installé sur vos propres serveurs. Pour organiser l'information : Notion ou Airtable. Pour un site : Webflow ou WordPress. Ils se combinent très bien avec des outils écrits en vibe coding.
+
+**Peut-on passer d'une application no-code à du vrai code ?** Oui, et c'est souvent le bon moment de le faire : quand l'application no-code fonctionne mais coûte trop cher ou bloque. L'IA aide à reconstruire l'outil à partir de son fonctionnement et de ses données, sans repartir d'une page blanche.
+
+**Faut-il un développeur pour faire du vibe coding ?** Pas pour décrire le besoin ni pour obtenir une première version. Il faut en revanche quelqu'un qui sache relire, tester et sécuriser avant la mise en ligne. C'est ce que nous faisons pendant et après une session Forge.
+
+---
+
+# Podcasts
+URL : https://3h33.com/podcasts/
+
+> Choucroute Citron, le premier podcast augmenté par des IA en direct, et Les Voix de l'IA, les portraits de celles et ceux qui font l'intelligence artificielle.
+
+Deux émissions. L'une fait dialoguer des invités avec des IA en direct, l'autre dresse le portrait de ceux qui construisent cette technologie.
+
+## Choucroute Citron
+
+Le premier podcast augmenté par des intelligences artificielles en direct.
+
+Le principe tient en une phrase : Alexandre Stopnicki reçoit un invité au parcours remarquable, entrepreneur, artiste ou sportif, et des **IA-nimatrices** s'invitent dans la conversation. Elles posent leurs propres questions, relancent, contredisent parfois. L'invité ne parle donc pas seulement à un journaliste : il se retrouve face à des intelligences artificielles qui écoutent et réagissent en direct.
+
+D'où le nom. La choucroute et le citron ne vont pas ensemble, les humains et les IA non plus, et c'est justement ce mélange qui donne le goût de l'émission. Une blague sérieuse, comme il est dit sur le site.
+
+C'est un laboratoire vivant autant qu'une émission : on y observe comment les IA dialoguent avec les humains, ce qu'elles comprennent, ce qui leur échappe et ce qu'elles font dire aux gens.
+
+À écouter sur [choucroute-citron.com](https://choucroute-citron.com), Apple Podcasts, Spotify et Deezer.
+
+## Les Voix de l'IA
+
+Des portraits de celles et ceux qui font l'intelligence artificielle aujourd'hui : les fondateurs, les chercheurs, les dirigeants dont les décisions façonnent ce que nous utiliserons demain.
+
+À découvrir sur [la page dédiée](/podcast-voix-de-lia/).
+
+---
+
+# Dix ans d'agents conversationnels, de LècheBot à NegoVox
+URL : https://3h33.com/realisations-chatbots-agents/
+
+> De LècheBot en 2017 aux simulateurs vocaux NegoVox et Media Training Vox : les chatbots et agents conversationnels construits par 3h33, et ce qu'ils ont appris.
+
+Nous faisons converser des marques avec leurs clients depuis 1997, et nous construisons des chatbots depuis 2017, cinq ans avant ChatGPT. Ce qui a changé en route : ils ne suivent plus un arbre de réponses, ils comprennent, cherchent, et aujourd'hui ils parlent.
+
+## 1997 : des avatars vendeurs dans le premier métavers français
+
+Avant les chatbots, il y a eu les vendeurs virtuels. En 1997, dans le [Deuxième Monde](/deuxieme-monde/), le Paris en 3D de Canal+, la régie Numériland d'Alexandre Stopnicki ouvre des boutiques de marques en trois dimensions, dont celle de **Peugeot**, où des avatars accueillent les visiteurs comme des vendeurs. L'idée qui traverse toute cette page est déjà là : une marque qui converse avec ses clients dans un monde numérique.
+
+## 2017 : LècheBot, le chatbot le plus flatteur du web
+
+Tout commence par une blague sérieuse. LècheBot a une seule mission : vous dire du bien. Il vous complimente, commente la photo que vous lui envoyez, vous souffle une idée pour passer une bonne journée. Derrière la plaisanterie, une vraie question de conception : comment donner une personnalité cohérente à une machine qui converse ?
+
+Vidéo : LècheBot, le chatbot le plus flatteur de la planète numérique — The Artificial Intelligence Society — https://www.youtube.com/watch?v=GdteLri1cZU
+
+## 2018 et 2019 : des bots qui enseignent
+
+En 2019, trois ans avant ChatGPT, nous créons **BotMoiLeQi**, un chatbot capable de former, de coacher et d'accompagner des étudiants dans un parcours pédagogique. Il pose des questions, relance, encourage, et vérifie l'acquisition des compétences. L'engagement des apprenants est nettement supérieur à celui d'un cours en ligne classique.
+
+La même année naît toute une série de démonstrateurs, chacun explorant un usage : **StoryBot** qui raconte des histoires, **ProfBot** qui interroge l'élève, un bot qui explique les acronymes, un bot de prise de rendez-vous, et déjà **EpiVoiceBot**, un premier essai de bot à la voix.
+
+## 2020 et 2021 : chercher pour vous
+
+En 2020, **CVBot** aide à préparer un CV en dialoguant. En 2021, l'**assistant de recherche** BotMoiLeQi change d'échelle : on tape un mot clé, et l'assistant cherche, trie et présente les résultats sous forme de conversation. C'est l'ancêtre direct de nos [assistants documentaires](/assistant-de-recherche/), qui retrouvent le passage exact dans vos documents et citent leur source.
+
+## 2023 à 2025 : des agents qui comprennent
+
+L'arrivée des grands modèles de langage change la nature du travail. On n'écrit plus les réponses : on donne à l'agent des documents, des règles et un périmètre. Ce sont les agents de support interne, d'orientation et d'évaluation que nous construisons en [session Forge](/forge/), et la plateforme d'apprentissage agentique, le [LMA](/lma-learning-management-agentique/), où des agents expliquent et interrogent l'apprenant.
+
+## 2026 : des agents qui parlent
+
+La boucle se referme sur la voix. **[NegoVox](https://negovox.com/)** fait jouer à une IA vos prospects types : le commercial négocie à voix haute, puis reçoit une note et le détail de douze compétences de vente. **[Media Training Vox](https://media-training-vox.com/)** fait de même pour la prise de parole : la journaliste de la matinale, le comité de direction, l'assemblée générale. Le vendeur interactif que nous imaginions dès [1997 dans le Deuxième Monde](/deuxieme-monde/) existe enfin.
+
+## Ce que dix ans nous ont appris
+
+- **Un agent sans périmètre invente.** Les meilleurs agents savent dire « je ne sais pas ».
+- **La personnalité compte.** LècheBot l'a montré en riant : on parle plus volontiers à quelqu'un qu'à un formulaire.
+- **On apprend mieux en conversant.** BotMoiLeQi en 2019, NegoVox aujourd'hui : la répétition dialoguée fait progresser plus vite que la lecture.
+
+## Questions fréquentes
+
+**Depuis quand 3h33 construit-elle des chatbots ?** Depuis 2017, avec LècheBot, puis une série d'agents pédagogiques et de démonstration en 2018 et 2019, dont BotMoiLeQi, conçu pour former et accompagner des étudiants, bien avant l'arrivée de ChatGPT.
+
+**Quelle différence entre les chatbots de 2019 et les agents d'aujourd'hui ?** Les premiers suivaient des scénarios écrits à l'avance : chaque question possible avait sa réponse. Un agent d'aujourd'hui comprend une demande formulée librement, va chercher l'information dans vos documents, enchaîne plusieurs étapes, et peut tenir une conversation à voix haute.
+
+**Qu'est-ce qu'un agent vocal d'entraînement ?** Une IA qui joue un rôle à voix haute, un client, un journaliste, un administrateur, pour qu'on s'entraîne avant la situation réelle, puis qui rend un débrief noté. C'est le principe de NegoVox pour la vente et de Media Training Vox pour la prise de parole.
+
+**Peut-on faire construire un agent pour son entreprise ?** Oui. Selon le besoin, en une session Forge d'une demi-journée pour un agent de support interne ou d'orientation, ou en projet sur mesure. Voir chatbots et agents.
+
+---
+
+# Rendez-vous IA Talent
+URL : https://3h33.com/rendez-vous-ia-talent/
+
+> Des points réguliers en visioconférence pour suivre les évolutions de l'intelligence artificielle et adapter vos usages, sans y passer vos journées.
+
+Une équipe formée en janvier travaille en juin avec des outils qui ont changé trois fois. Une heure par mois suffit à ne pas décrocher.
+
+## Le problème que ça résout
+
+Une équipe formée en janvier travaille en juin avec des outils qui ont changé trois fois. Les modèles progressent, les usages se déplacent, et ce qui était impossible devient courant en quelques semaines.
+
+Personne n'a le temps de suivre ça. C'est notre métier, alors nous le faisons pour vous.
+
+## Ce qui se passe pendant l'heure
+
+- **Ce qui a changé** depuis le dernier rendez-vous, filtré pour votre secteur.
+- **Une démonstration** de ce qui est nouveau et réellement utile.
+- **Vos questions**, sur vos usages en cours et ce qui coince.
+- **Ce qu'on adapte** chez vous, concrètement, d'ici le prochain point.
+
+## Pour qui
+
+Pour les équipes déjà formées, qui utilisent l'IA au quotidien et veulent rester à niveau. Et pour les référents internes, qui doivent répondre aux questions de leurs collègues.
+
+Les rendez-vous complètent naturellement les [ateliers de formation](/ateliers-formation/) et la [masterclass](/masterclass-ia/).
+
+## Questions fréquentes
+
+**À quel rythme ont lieu les rendez-vous ?** Un rendez-vous par mois, en visioconférence, d'une heure environ.
+
+**Faut-il avoir suivi une formation avant ?** Non, mais les rendez-vous prennent tout leur sens après une masterclass ou un atelier.
+
+---
+
+# Vidéos IA
+URL : https://3h33.com/studio/videos/
+
+> Films, clips et expérimentations visuelles réalisés avec des intelligences artificielles par le studio 3h33 et Alexandre Stopnicki.
+
+Une vingtaine de films courts, clips et essais visuels produits avec des IA génératives. Certains sont des commandes, d'autres des recherches de forme.
+
+## Ce que vous allez voir
+
+Ces vidéos ont été produites entre 2024 et 2026, au fil des outils. Elles servent deux choses : montrer ce qu'on sait faire, et chercher ce que la technique permet quand on la pousse.
+
+- **Les Grandes Statues** — quand l'IA sculpte notre destin.
+- **Le clip du podcast Choucroute Citron** — le générique animé de l'émission.
+- **A Night of Animal Concerts** — un concert impossible, filmé comme un vrai.
+- **Le programme de l'amour** — court métrage.
+- **Between Man & Beast** — voyage visuel.
+- **The Ocean's Melody** — film expérimental sur l'océan.
+- **De mémoire d'objets** — les objets racontent leur histoire.
+- **Cas d'or IA 2024** — la réalisation primée.
+
+La galerie complète, avec les vidéos, vit sur [alexandre.ai/videos](https://alexandre.ai/videos/), le site personnel d'Alexandre Stopnicki.
+
+---
+
+# Le studio
+URL : https://3h33.com/studio/
+
+> Films, clips, musiques originales, vidéos IA et univers visuels produits par le studio 3h33. Galerie de réalisations et prestations créatives.
+
+Un film, un clip, une musique, une image : ce que nous produisons avec l'IA, et ce que vous pouvez voir dès maintenant.
+
+## Dans la salle de montage
+
+Le travail ne s'arrête pas au tournage. C'est au montage que le rythme se décide, que les plans trouvent leur durée, et qu'un film devient regardable.
+
+---
+
+# Comédiens virtuels et vidéos incarnées
+URL : https://3h33.com/synthetic-content/
+
+> Transformez un texte en vidéo incarnée par un acteur ou une actrice de synthèse, dans plusieurs langues, sans studio ni tournage. Réalisations et limites.
+
+Corriger une phrase ne coûtait rien. Corriger une phrase dans une vidéo coûtait une journée de tournage. C'est fini.
+
+## L'idée
+
+Une vidéo de présentation demandait un comédien, un studio, une équipe et une journée de tournage. La moindre correction de script coûtait une nouvelle séance.
+
+Les comédiens virtuels changent l'équation : le texte devient une vidéo incarnée en quelques minutes. Corriger une phrase ne coûte plus qu'une phrase.
+
+## Les usages qui marchent
+
+- **Formation interne.** Des modules mis à jour sans refaire tourner personne.
+- **Communication multilingue.** Le même message, la même personne, dans six langues.
+- **Présentation de produit.** Une démonstration incarnée plutôt qu'un texte sur une page.
+- **Accueil et information.** Des messages courts, réguliers, produits à la chaîne.
+
+## Ce qu'il faut savoir avant
+
+La ressemblance n'est pas parfaite et l'œil s'en aperçoit sur les plans longs. Ces vidéos fonctionnent mieux en formats courts, avec un texte bien écrit et un rythme travaillé.
+
+Il faut aussi être clair vis-à-vis du public : nous recommandons de dire qu'il s'agit d'une voix et d'un visage de synthèse. C'est une exigence de l'AI Act pour beaucoup de cas, et c'est surtout une question de confiance.
+
+## Et si vous voulez le vrai savoir-faire d'image
+
+Pour un film, un clip ou une identité visuelle complète, le [studio créatif](/studios-creatifs-multi-services/) va bien plus loin que la vidéo incarnée : écriture, direction artistique, personnages cohérents, musique originale et montage.
+
+---
+
+# Assistant de recherche documentaire
+URL : https://3h33.com/assistant-de-recherche/
+
+> Un agent qui cherche dans vos documents, retrouve le passage exact, cite sa source et dit quand il ne sait pas. Conçu sur mesure pour votre corpus.
+
+Vos réponses sont déjà dans vos documents. Le problème, c'est de les retrouver. Un assistant de recherche s'en charge, et cite d'où vient l'information.
+
+## Le besoin
+
+Toutes les organisations accumulent : procédures, comptes rendus, contrats, rapports, heures de réunions filmées. Personne ne relit. L'information existe et n'est pas accessible.
+
+Un assistant de recherche renverse le problème : on pose la question en français, il va chercher, il répond, et il montre le passage exact d'où vient sa réponse.
+
+## Ce qui le rend fiable
+
+- **Il cite ses sources.** Chaque réponse renvoie au document et au passage utilisé, à la page ou à la seconde près.
+- **Il reste dans son périmètre.** Il ne répond que sur votre corpus, pas sur ses souvenirs d'entraînement.
+- **Il sait dire non.** Quand l'information n'est pas dans les documents, il le dit au lieu d'inventer.
+- **Il respecte les droits.** Chacun ne voit que ce qu'il a le droit de voir.
+
+## Sur quoi il peut travailler
+
+Documents écrits, mais aussi audio et vidéo : nous transcrivons et indexons les enregistrements, ce qui rend consultables des centaines d'heures de contenus jusque-là dormants. C'est le principe du [LMA](/lma-learning-management-agentique/) appliqué à la formation.
+
+Pour construire le vôtre, tout part d'une [session Forge](/forge/).
+
+---
+
+# Le blog
+URL : https://3h33.com/blog/
+
+> Le carnet de bord de 3h33 : ce qu'on construit avec l'IA, ce qu'on apprend en le faisant, et quelques archives qui ont bien vieilli.
+
+Un truc à dire. Ce qu'on construit, ce qu'on apprend en le construisant, et de temps en temps une idée qui tient.
+
+## Ce que vous trouverez ici
+
+Ce blog est le carnet de bord du [vibe coding](/vibe-coding/) : un billet par outil construit, par expérience tentée, par erreur payée. On y explique ce qu'on ne montre pas ailleurs, et on y raconte ce qui a raté aussi bien que ce qui a marché.
+
+Il porte le nom d'*Un truc à dire*, l'ancienne lettre de l'agence.
+
+## Les articles
+
+- **[Le Deuxième Monde, le métavers de Canal+ dès 1997](/deuxieme-monde/)** · 1997, raconté en 2022 — Un Paris en 3D peuplé d'avatars, avec boutiques de marques et panneaux flottants. Alexandre Stopnicki en tenait la régie publicitaire.
+- **[L'IA au service de Notion](/blog/lia-au-service-de-notion/)** · 2024 — Comment une IA installée dans son espace de travail change la façon de prendre des notes, de rédiger et de retrouver.
+- **[Voulez-vous connaître l'avenir ?](/blog/connaitre-l-avenir/)** · 2024 — Une sélection d'interventions où des chercheurs et des entrepreneurs décrivent ce qui vient. Beaucoup de leurs prédictions se sont réalisées depuis.
+- **[Écrire un article en moins d'une heure](/blog/how-to-write-a-blog-post-in-under-an-hour-thanks-to-synthetic-content/)** · 2023 — Un article écrit avec l'IA, qui explique en même temps comment il a été écrit. Une démonstration en boucle.
+- **[33 conseils dont vous pourriez vous inspirer](/blog/33-conseils-dont-vous-pourriez-vous-inspirer-en-2022/)** · 2022 — Trente-trois habitudes de travail, à prendre ou à laisser.
+- **[Tout comprendre sur Pokémon GO](/blog/comprendre-pokemon-go/)** · 2016 — Le jeu qui a fait sortir des millions de gens dans la rue. À relire aujourd'hui, c'est la réalité augmentée qui arrivait dix ans avant l'IA.
+
+## Plus ancien
+
+Les publications d'avant 2016, du marketing digital aux réseaux sociaux, sont rangées dans les [archives](/archives/).
+
+---
+
+# Le Deuxième Monde : le métavers de Canal+, dès 1997
+URL : https://3h33.com/deuxieme-monde/
+
+> En 1997, Canal+, Cryo et Numériland ouvraient un Paris en 3D peuplé d'avatars, avec boutiques et panneaux publicitaires. Récit d'un pionnier du métavers.
+
+Bien avant qu'on parle de métavers, de web3 ou d'agents, il y avait un Paris en trois dimensions où des milliers d'internautes se promenaient sous les traits d'un avatar. Alexandre Stopnicki, fondateur de 3h33, en assurait la régie publicitaire.
+
+## Un Paris en 3D, en 1997
+
+Le Deuxième Monde ouvre en 1997. C'est une reconstitution en trois dimensions de Paris, où l'on entre sous les traits d'un avatar qu'on a dessiné soi-même : sexe, âge, visage, couleur de peau, vêtements. Pour l'époque, c'est une création d'avatar remarquablement poussée, et l'un des premiers jeux à la proposer.
+
+On s'y déplace d'un monument à l'autre, de l'Opéra à Notre-Dame, on y croise d'autres internautes et on discute avec eux en temps réel. Plusieurs milliers d'entre eux y vivent régulièrement entre 1997 et 2000. Ils se donnent un nom : **les Bimondiens**.
+
+Pour y entrer, il faut un modem et un lecteur de CD-ROM. Le disque contient les images de la ville, que les connexions de l'époque, terriblement lentes, n'auraient jamais pu transmettre à temps.
+
+![L'écran du Deuxième Monde : la tour Eiffel, l'Opéra, le Sacré-Cœur, Notre-Dame et l'Arc de triomphe, avec l'index des boutiques à droite (3 Suisses, Adecco, Banque Populaire, IBM, Kodak, Mattel, Peugeot, Printemps, Société Générale, Virgin Megastore…)](/medias/deuxieme-monde/ECRAN.png)
+
+## Qui l'a fait
+
+Le Deuxième Monde est créé par **Canal+ Multimédia**, la branche numérique du groupe Canal+, avec **Cryo**, l'un des éditeurs de jeux vidéo français les plus en vue de l'époque. Les technologies sont celles du moment : le VRML, langage de description de scènes 3D, et des développements propriétaires.
+
+La régie publicitaire est confiée en exclusivité à **Numériland**, la société fondée par Alexandre Stopnicki. C'est elle qui invente la façon dont les marques habitent ce monde.
+
+## Des marques dans un monde virtuel
+
+Numériland commercialise des dizaines de **boutiques en 3D**, où l'on entre comme dans un magasin de la rue. Dans celle de **Peugeot**, des avatars accueillent les visiteurs et jouent le rôle de vendeurs : une marque qui reçoit ses clients dans un monde virtuel, près de trente ans avant qu'on parle de métavers. L'index de l'époque en garde la trace : 3 Suisses, Adecco, Banque Populaire, IBM, Kodak, Mattel, Peugeot, Printemps, Société Générale, Virgin Megastore, Cap Gemini, Europe 2.
+
+Elle imagine aussi des **panneaux d'affichage flottants** au format 4/3, des vendeurs interactifs, et propose aux annonceurs les premiers outils de suivi de la relation client pensés pour la 3D. Le réseau d'affichage est ensuite cédé à Avenir, qui devient ainsi le premier afficheur dans un monde virtuel.
+
+![Un panneau d'affichage Mattel flottant au-dessus d'une avenue du Deuxième Monde, avec le plan du quartier de la tour Eiffel à droite](/medias/deuxieme-monde/4X3.png)
+
+## Ce que le Deuxième Monde annonçait
+
+Vingt-cinq ans plus tard, en 2022, le mot « métavers » revient à la une, et *Le Monde* consacre un long récit au Deuxième Monde, [pionnier français du métavers](https://www.lemonde.fr/pixels/visuel/2022/06/10/le-deuxieme-monde-de-canal-des-1997-le-pionnier-francais-du-metavers_6129767_4408996.html). Le même journal avait raconté, dès mars 1997, les [premiers pas dans le Deuxième Monde](https://www.lemonde.fr/archives/article/1997/03/02/premiers-pas-dans-le-deuxieme-monde_3766440_1819218.html). *La Dépêche* revient elle aussi sur [l'époque où Canal+ était un pionnier du genre](https://www.ladepeche.fr/2021/10/21/metavers-quand-canal-etait-un-pionnier-du-genre-9882659.php).
+
+Ce qui frappe, à relire ces articles, c'est que presque toutes les idées du Deuxième Monde sont revenues, sous d'autres noms :
+
+- **L'avatar** est devenu le comédien virtuel, capable de dire n'importe quel texte dans n'importe quelle langue. Voir [nos comédiens virtuels](/synthetic-content/).
+- **Le vendeur interactif** est devenu l'agent conversationnel, qui répond vraiment, à partir des documents de la marque. Voir [chatbots et agents](/chatbots/).
+- **La boutique en 3D** est devenue l'expérience de marque construite sur mesure, en quelques jours, en [vibe coding](/vibe-coding/).
+
+Ne pas confondre, enfin, le Deuxième Monde avec Second Life, apparu six ans plus tard.
+
+![Carte postale « Souvenirs du 2ème Monde », avec Notre-Dame en 3D et un avatar dans un timbre](/medias/deuxieme-monde/SOUVCARTE-POSTALE.jpg)
+
+## Et 3h33 dans tout ça
+
+L'histoire de 3h33 commence là : vendre à des marques un territoire qui n'existe pas encore, et inventer au passage la façon de l'habiter. Trente ans plus tard, le territoire s'appelle l'intelligence artificielle, et le métier est le même : [former les équipes](/formations/), construire avec elles les outils, et montrer avant d'expliquer.
+
+Pour en savoir plus sur le Deuxième Monde lui-même, sa [page Wikipédia](https://fr.wikipedia.org/wiki/Le_Deuxi%C3%A8me_Monde) en retrace l'histoire.
+
+## Questions fréquentes
+
+**Qu'est-ce que le Deuxième Monde ?** Une ville virtuelle en trois dimensions, reconstitution de Paris, lancée en 1997 par Canal+ Multimédia avec l'éditeur de jeux Cryo. Les internautes s'y créaient un avatar, s'y promenaient, discutaient en temps réel et visitaient des boutiques de marques.
+
+**Qui a créé le Deuxième Monde ?** Canal+ Multimédia, filiale du groupe Canal+, avec Cryo pour le développement. Numériland, la société d'Alexandre Stopnicki, en assurait la régie publicitaire exclusive : boutiques en 3D, panneaux d'affichage flottants, vendeurs interactifs.
+
+**Le Deuxième Monde est-il le premier métavers ?** C'est le premier métavers français, et l'un des tout premiers au monde. Quelques mondes virtuels l'avaient précédé, comme Habitat (1986) ou Active Worlds (1995), mais le Deuxième Monde fut parmi les premiers à y faire vivre des marques : boutiques en 3D, avatars vendeurs, affichage publicitaire.
+
+**Quelle différence avec Second Life ?** Second Life, de Linden Lab, n'est arrivé qu'en 2003, six ans plus tard. Le Deuxième Monde fonctionnait alors avec un modem et un CD-ROM, qui chargeait les images que les connexions de l'époque n'auraient jamais pu transmettre.
+
+**Que reste-t-il du Deuxième Monde aujourd'hui ?** Une communauté qui s'appelait elle-même « les Bimondiens », des captures d'écran, et des idées qui reviennent régulièrement sous d'autres noms : l'avatar, la publicité dans un monde virtuel, le vendeur interactif. Ce dernier s'appelle aujourd'hui un agent conversationnel.
+
+---
+
+# 33 conseils dont vous pourriez vous inspirer
+URL : https://3h33.com/blog/33-conseils-dont-vous-pourriez-vous-inspirer-en-2022/
+
+> Trente-trois habitudes de travail, à prendre ou à laisser, rassemblées pour bien commencer une année.
+
+Écrit pour l'année 2022, et relu depuis sans qu'on ait eu à en retirer beaucoup.
+
+Vous démarrez l’année 2021 avec de bonnes résolutions pour votre famille et votre travail. Vous souhaiteriez bien que cette nouvelle année soit un succès pour votre carrière. La solution est peut-être parmi les 33 conseils dont vous pourriez vous inspirer en 2021 qui se trouvent ci-dessous. Le succès des grands CEO provient d’un savant mélange de techniques, de charisme, de chance, d’innovation, de persévérance, de créativité… Nous pouvons nous inspirer des plus grands CEO du monde pour améliorer notre vie personnelle et professionnelle.
+## Pour provoquer nos succès, voici 33 conseils dont vous pourriez vous inspirer.
+Pour commencer la nouvelle année avec de bonnes ambitions, arrêtez d’écouter tout le monde, croyez en vos projets, vous êtes les seuls à convaincre d’autres personnes. Si vous ne croyez pas en vos projets, inutile de continuer, personne ne vous suivra.
+Ne craignez pas l’échec : pensez américain ! Les startupers de la Silicon Valley résument très bien leurs échecs : « Fail, but fail fast ». Ils expliquent qu’il faut croire en vos projets, vos idées, même les plus farfelues. S’ils ne fonctionnent pas, arrêtez tout et recommencez, en apprenant de vos échecs, et en vous posant les bonnes questions. « Pourquoi mon projet n’a pas abouti ? » « Pourquoi les personnes n’ont pas accroché ? » « Où sont les problèmes ? ». Ainsi, vous pourrez améliorer votre projet, apprendre pourquoi n’a-t-il pas fonctionné, ou en créer un autre.
+Ces remises en questions vous feront gagner beaucoup de temps et de terrain par rapport à de potentiels futurs concurrents.
+! !! id= » »] ! id= » »] !!!!!!!!!!!!!!!!!!!  !  ! id= » »]       !!
+
+---
+
+# Tout comprendre sur Pokémon GO
+URL : https://3h33.com/blog/comprendre-pokemon-go/
+
+> Le jeu qui a fait sortir des millions de gens dans la rue, expliqué : règles, mécanique, et ce qu'il annonçait.
+
+Écrit en 2016. À relire aujourd'hui, c'est la réalité augmentée qui arrivait dix ans avant l'IA.
+
+## En quoi consiste ce jeu ?
+
+Il se base vraiment sur l’histoire et les jeux Pokémons :
+
+- Attraper des pokémons dans le monde réel
+
+- Les entraîner et les faire combattre contre d’autres pokémons
+
+- S’allier avec d’autres entraîneurs et s’affronter contre d’autres équipes
+
+###### [Action Nintendo 14380¥ → 31770¥](https://www.google.fr/?__hstc=210143562.71406ffcdd6da108da2932e6e76e3904.1469809557848.1469809557848.1469809557848.1&__hssc=210143562.11.1469809557848&__hsfp=696208150#safe=off&q=nintendo+share)
+
+!
+
+L’action a doublé depuis le 06 juillet. Nintendo dépasse Sony en valeur.
+
+La baisse de mercredi (-12%) s’explique par le retard de la sortie du jeu au Japon.
+
+## 23 millions d’utilisateurs quotidiens aux USA
+
+## 30 millions de téléchargements dans le monde
+
+### Taux de rétention : 70% VS 30%
+
+70% des gens ayant testé Pokémon Go y rejoue le lendemain, contre 30% en moyenne dans ce secteur.  !  !
+
+## En moyenne, Pokemon Go gagne $0,25 à chaque connection.
+
+## En moyenne, les joueurs y passent 33 minutes chaque jour. (+ que Facebook, Snapchat, Twitter)
+
+! ![
+
+##
+
+## Si ce temps est utilisé à marcher, les femmes brûlent 2500 calorieset les hommes 2800 par semaine.
+
+POKÉMON GO semble être le régime le plus fun de l’été !
+
+- Certains utilisent l’option ‘leurre’ pour attirer les pokémons et donc les joueurs dans leur commerce et les faire consommer. Un growth hacking très efficace.
+
+- Des champs de mines non explosées en Bosnie, des commissariats ou des lieux de mémoire sont envahis par les joueurs, inquiétant les autorités.
+
+- Le ‘Pokédrone’ est en développement, il permettra aux joueurs d’attraper les pokémons très facilement (voir Gif)
+
+- Plusieurs applications frauduleuses ont dû être retirées du Play Store. Elles promettaient aux joueurs de les aider mais contenaient des virus ou des arnaques.
+
+- Le 11 juillet, les Pokémons ont reçu un renouvellement de leur Fatwa de 15 ans de la part de chefs religieux Saoudiens.
+
+Il y a différents Pokémons
+
+Les 6 pokémons les plus originaux (uniques, étonnants, extra-ordinaires)
+
+! !
+
+Arceus est le pokémon dieu qui a créé les autres pokémons.
+
+Mewtwo est l’un des pokémons les plus puissants, qui attaque grâce à son esprit et à ses capacités psychiques. Il aurait été créé par des scientifiques en laboratoires. Il est même plus puissant que Arceus, le pokémon Dieu !
+
+! ![
+
+Shuckle est un pokémon apparemment anodin mais il a les capacités d’attaque et de défense les plus élevées du jeu.
+
+Zarbi est un pokémon plat avec un oeil au milieu. Il vient d’une dimension parallèle. Ce Gif montre son attaque dans Super Smash Bros Mélée.
+
+! !
+
+Le seul pouvoir de Ditto est de se transformer à l’identique de son adversaire pour utiliser ses attaques contre lui.
+
+Sylvéon est le pokémon de l’amour. Il séduit et embrasse ses adversaires pour leur prendre leur énergie, ce qui le rend très dangereux.
+
+!
+
+## Les 6 pokémons les plus rares du jeu :
+
+!
+
+##
+
+## Mew
+
+##
+
+## Mewtwo
+
+!  !
+
+##
+
+## Moltres, Zapdos, & Articuno
+
+##
+
+## Ditto
+
+!
+
+## 6 astuces pour jouer comme un pro :
+
+- Activer l’option ‘leurre’ dans un café ou un parc et attendre les Pokémons en se relaxant. Il devrait en arriver un tous les 5 minutes pendant une demi heure.
+
+- Explorer les parkings qui ont souvent beaucoup de Pokémons.
+
+- Utiliser le bracelet-radar pour trouver des Pokémons autour de vous.
+
+- Chasser en groupe.
+
+- Chasser de nuit pour attraper des Pokémons différents.
+
+- Visitez des parcs, en ville, avec un point d’eau et plusieurs Pokéstops. Bonne collecte garantie.
+
+##
+
+!
+
+## Les pokémons apparaissent en réalité augmentée grâce à la caméra du smartphone.
+
+## Comment fonctionne la réalité augmentée ?
+
+- L’application utilise la caméra pour trouver dans l’environement le marqueur où placer l’objet.
+
+- Une fois trouvé, elle l’affiche en 3D et l’on peut tourner autour grâce aux capteurs de mouvements et de position du téléphone. On voit cet objet sous tous les angles.
+
+L’app Pokémons Go fonctionne plus simplement car elle utilise simplement les coordonnées GPS du téléphone et place approximativement les Pokémons, en utilisant quelques astuces pour qu’ils apparaissent en perspective. L’app consomme moins de batterie et de forfait.
+
+### Le marché de la Réalité Augmentée (bleu foncé) devrait atteindre $90 milliards dès 2020.
+
+##
+
+##
+
+## Qui a créé ce jeu ?
+
+.
+
+- Son nom vient d’un voilier qui accoste en Californie pour chercher de l’or.
+
+- Startup créée chez Google en 2010 par le créateur de Google Earth.
+
+- Devient indépendante en 2015.
+
+- Spécialiste de la création de jeux fonctionnant grâce à la géo-localisation et à la réalité augmentée.
+
+- Précédent jeux : Field Trip et Ingress.
+
+- Ingress est similaire à Pokémon Go, et très populaire.
+
+- The Pokémon Company & Nintendo entrent au capital du studio en août 2015.
+
+- Sortie de Pokémon Go le 6 juillet 2015.
+
+Ci-dessous, l’interview de Mathieu de Fayet de Niantic à Vivatech :
+
+[Les signes qui prouvent que tu es accro a pokemongo.](http://www.topito.com/top-signe-accro-pokemon-go-lache-ce-telephone)
+
+---
+
+# Voulez-vous connaître l'avenir ?
+URL : https://3h33.com/blog/connaitre-l-avenir/
+
+> Une sélection d'interventions où des chercheurs et des entrepreneurs décrivent ce qui vient. Beaucoup se sont réalisées depuis.
+
+Écrit en 2024. L'exercice est cruel : on peut vérifier aujourd'hui ce qui s'est réalisé.
+
+## Si vous souhaitez connaitre l’avenir des technologies, je vous recommande d’écouter attentivement ces vidéos car il semblerait que de nombreuses pistes soient parfaitement identifiables.
+
+Voici le futur et les explications des visionnaires de l’innovation et des technologies. Écoutez bien (sans jugement de valeur, simplement les faits énoncés) et vous découvrirez vraiment ce que les prochaines années nous réservent.
+
+## Le futur vu par Larry Page (fondateur de Google)
+
+L’Intelligence artificielle va révolutionner l’informatique et le monde digital, tout le monde pourra se connecter à internet, La vie privée est un droit fondamental pour la démocratie et nos données doivent rester privées, les moyens de transports seront automatiques et plus intelligents et en bonus le Google « vélo lib » sera gratuit dans le monde entier.
+
+## Le futur vu par Ray Kurzweil
+
+L’évolution de notre cerveau bouleversera le monde dans un avenir proche. Les « NanoBots » ces puces seront-elles l’avenir du monde digital ? Des puces installées directement dans notre Neocortex qui lèveront les barrières physiques et produiront un mélange d’intelligence artificielle très humaine.
+
+## Le futur vu par Guy Hoffman
+
+Intelligence et improvisation les prochains mots pour changer le monde de la robotique ?
+
+Vous pensez que les objets connectés seront la prochaine révolution ? Sans émotions les objets ne seront pas véritablement connectés à notre environnement. L’émotion l’avenir de nos objet et de l’intelligence artificielle ? L’âme des objets la clé de la connexion.
+
+Une lampe qui vous suit et dirige sa lumière la et quand vous en avez besoin, un robot musicien qui compose en live avec vous pour vous accompagner et détecte parfaitement vos mouvements pour être votre complice en musique.
+
+Un robot rappeur et un autre qui aime la musique et qui le partage avec vous…
+
+## Le futur vu par Hugh Herr et par Aimee Mullins
+
+La technologie est déjà présente pour que certains handicaps physiques ne soient plus de mise. La transformation du corps humain deviendra certainement une mode (comme les tatouages, les piercing et les implants), le corps enrichi est prêt a relever tous les défis y compris jusqu’à « redonner l’usage de la danse ». Les exosquelettes nous permettrons de changer radicalement les limites du corps humain.
+
+---
+
+# Écrire un article en moins d'une heure grâce au contenu synthétique
+URL : https://3h33.com/blog/how-to-write-a-blog-post-in-under-an-hour-thanks-to-synthetic-content/
+
+> Un article écrit avec l'IA, qui explique en même temps comment il a été écrit. La démonstration est le sujet.
+
+Écrit en 2023, à l'époque où produire un texte avec l'IA était encore une prouesse.
+
+## # How to Write a Blog Post in Under an Hour ?
+Thanks to synthetic content
+
+ Cette vidéo et le texte ci-dessous ont été réalisé à l’aide d’intelligence artificielle, par l’agence 3h33.com spécialiste du synthetic content.
+Si vous souhaitez en savoir plus sur nos avatars : [Cliquez-ici](https://www.shop.3h33.com/synthetic-content/)
+Et si vous souhaitez nous contactez pour en discuter : [Cliquez-ici](https://3h33.com/rdv)
+
+ A synthetic content, a content which is made purely through AI and machine-generation. First of all, not every synthetic content is a fake news and vice versa. Secondly, it is almost impossible to determine whether a given piece of content is synthetic, especially if it was generated in a narrow knowledge domain. Hence a basic criterion for evaluating a piece of content should be its quality and whether it’s true or not.
+
+ ## What is synthetic content?
+
+ Synthetic content is content produced by a machine and not by a human (although humans might be involved in the design, production, and publishing of the content, they are not the driving force behind its production). A relatively new development in the world of content creation, synthetic content consists of two types: Fake news : content which is fabricated based on knowledge and belief to mislead the public. – content which is fabricated based on knowledge and belief to mislead the public. Artificial intelligence-generated content: content which is made completely by AI and has no human role at all. It includes not only news articles, but also content that is normally generated by humans such as photos, advertisements, etc. Tin-foil hat time!
+
+ ## Different types of synthetic content
+
+ Suspicious content Suspicious content is what Google started to filter out in the early days of the previous algorithm update. It includes fake and misleading news, as well as accounts and content which were identified as likely to be bots or “inauthentic” by third-party services. Facebook implemented a similar filter in late 2017, and while some commentators have described this as an attempt to suppress populist news, it is not clear that the filter is even achieving this result. Unprofessional Unprofessional content usually refers to content with spelling or grammar errors, content which was produced using unusual writing styles or vocabulary, or content which looks or smells suspiciously like something created by a bot (for instance, with obvious automation).
+
+ ## Synthetic content in the marketing industry
+
+ The content we have been discussing so far has been limited to creating content in limited domains. That means a self-employed and creative marketing person (a writer or copywriter) might create content in these limited domains without realizing its structure and applicability. This is where artificial intelligence in particular can potentially benefit. There are many useful algorithms that can help an SME marketer manage their content. One such algorithm is [Textio.com](http://Textio.com), which is aimed to generate natural language summaries of all available content in their chosen domain.
+
+ ## Quality is more important than quantity
+
+ In the world of words, there is a very well known heuristic that the quality of a word and its derivatives is overrated: “If you think that the word is sufficiently strong, then you should put more emphasis on it.” This maxim means that it is usually more important to build strong, original content than to publish large amounts of spammy content, each one of them covering the same topics. We recommend choosing one or two strong, valuable topics and go for them with unlimited energy. This way your content will be highly distinctive and unique and will become a fundamental part of your online presence, giving it a chance to become a reference point for your industry. It is less important that a post is popular and gets a lot of comments, likes and shares on social networks.
+
+ ## Conclusion
+
+ The key to maintaining quality and not losing your integrity in the face of an ever-expanding artificial intelligence system’s ability to analyze and understand language, which is still in its infancy, is to be committed to your own analysis, and be aware of your value proposition and the uniqueness of your content. Be aware that the more you ‘curate’ content, the less likely you will get it right and it will become harder for you to determine whether it is true or not. Content that requires human judgement is not enough.
+
+---
+
+# L'IA au service de Notion
+URL : https://3h33.com/blog/lia-au-service-de-notion/
+
+> Une IA installée dans l'espace de travail : ce qu'elle change à la prise de notes, à la rédaction et à la recherche dans ses propres documents.
+
+Écrit en 2024, quand les IA se sont installées dans les outils qu'on utilisait déjà.
+
+## L'IA de notion.so révolutionne la productivité.
+
+L’IA au service de Notion ?
+
+[Notion.so](https://notion.so) est une plateforme de travail collaboratif qui permet aux équipes de travailler efficacement ensemble. Avec l’essor de l’Intelligence Artificielle (IA), Notion a commencé à explorer les possibilités offertes par cette technologie pour améliorer encore davantage l’expérience des utilisateurs.
+
+L’IA peut être utilisée pour automatiser des tâches répétitives et fastidieuses, pour fournir des recommandations intelligentes et pour aider les équipes à mieux travailler ensemble. Voici quelques exemples de fonctionnalités alimentées par l’IA que Notion pourrait offrir :
+
+## Système de gestion des tâches
+
+Notion pourrait utiliser l’IA pour attribuer automatiquement des tâches aux membres de l’équipe en fonction de leurs compétences et de leur disponibilité. Cela permettrait de mieux répartir la charge de travail et de s’assurer que chaque membre de l’équipe travaille sur des tâches qui correspondent à ses compétences. Un tel système permettrait également d’optimiser le temps de travail de chaque membre de l’équipe, en s’assurant que les tâches sont attribuées en fonction de leurs horaires de travail et de leurs disponibilités.
+
+## Chatbot pour les questions fréquemment posées
+
+Notion pourrait également utiliser l’IA pour mettre en place un chatbot qui peut répondre aux questions fréquemment posées et fournir des orientations aux employés concernant les politiques et procédures de l’entreprise. Cela permettrait de réduire la charge de travail des équipes de support client et de fournir des réponses rapides et précises aux employés. Un chatbot alimenté par l’IA pourrait également apprendre au fil du temps en analysant les questions posées et en fournissant des réponses plus précises et plus pertinentes.
+
+## Système de recommandation de contenu
+
+Notion pourrait utiliser l’IA pour suggérer des articles, des documents et des ressources pertinents aux employés en fonction de leurs rôles et intérêts professionnels. Cela permettrait de fournir aux employés un accès rapide et facile aux informations dont ils ont besoin pour accomplir leur travail plus efficacement. Ce système permettrait également de réduire les pertes de temps et les erreurs dues à la recherche d’informations inutiles qui ne correspondent pas aux besoins de l’utilisateur.
+
+## Système de feedback alimenté par l’IA
+
+Notion pourrait utiliser l’IA pour analyser les commentaires et les sentiments des employés en temps réel, et proposer des améliorations à la direction pour améliorer l’engagement et la satisfaction des employés. Cela permettrait à l’entreprise de mieux comprendre les besoins de ses employés et de prendre des mesures pour améliorer leur expérience de travail. En utilisant l’IA pour analyser les commentaires des employés, l’entreprise pourrait également identifier rapidement les problèmes et les préoccupations des employés, ce qui permettrait de résoudre les problèmes avant qu’ils ne deviennent des problèmes majeurs.
+
+## Système de planification intelligente
+
+Notion utiliserait l’IA pour développer un système de planification intelligente qui peut automatiquement planifier des réunions en fonction de la disponibilité de tous les participants et de leurs préférences. Cela réduirait les pertes de temps dues à la planification des réunions, ce qui est souvent fastidieux et prend beaucoup de temps. Un tel système réduirait aussi les conflits d’horaires et d’optimiser le temps de travail de chaque participant.
+
+## Système de gestion de projet alimenté par l’IA
+
+Notion utiliserait l’IA pour construire un système de gestion de projet alimenté par l’IA au sein de Notion qui peut suivre la progression des projets, identifier les risques potentiels et fournir des recommandations pour améliorer les résultats du projet. Un tel système permettrait également de réduire les coûts liés à la gestion de projet, en réduisant les erreurs et les retards, et en permettant aux équipes de travailler plus efficacement ensemble.
+
+## Outil d’analyse de données alimenté par l’IA
+
+Notion utiliserait l’IA pour mettre en place un outil d’analyse de données alimenté par l’IA au sein de Notion qui peut analyser de grandes quantités de données et fournir des informations pour aider les employés à prendre des décisions fondées sur les données. Un tel outil permettrait aux employés de mieux comprendre les données et les tendances, ce qui leur permettrait de prendre des décisions plus éclairées et plus précises.
+
+## Système de recrutement alimenté par l’IA
+
+Notion utiliserait potentiellement l’IA pour développer un système de recrutement alimenté par l’IA au sein de Notion qui peut automatiquement filtrer les CV, planifier des entretiens et recommander les meilleurs candidats pour le poste. Cela permettrait de réduire les coûts liés au recrutement, en réduisant le temps et l’argent consacrés à la recherche de candidats, et en permettant aux équipes de recrutement de travailler plus efficacement ensemble.
+
+## Système de gestion de la performance alimenté par l’IA
+
+Notion pourrait utiliser l’IA pour créer un système de gestion de la performance alimenté par l’IA au sein de Notion qui peut suivre la performance des employés, identifier les domaines d’amélioration et fournir des commentaires et un coaching personnalisés. Un tel système autoriserait aux employés de mieux comprendre leur performance et de recevoir des commentaires constructifs pour améliorer leur travail.
+
+## Système de gestion des connaissances alimenté par l’IA
+
+Notion utiliserait l’IA pour construire un système de gestion des connaissances alimenté par l’IA au sein de Notion qui peut automatiquement classer et marquer les documents, et fournir un accès rapide aux informations pertinentes pour les employés. Un tel système permettrait aux employés de trouver rapidement les informations dont ils ont besoin pour accomplir leur travail plus efficacement, ce qui réduirait également les erreurs et les pertes de temps liées à la recherche d’informations inutiles.
+
+## Conclusion
+
+L’Intelligence Artificielle offre de nombreuses possibilités pour améliorer l’expérience des utilisateurs de Notion. Grâce à l’IA pour automatiser des tâches répétitives, fournir des recommandations intelligentes et aider les équipes à mieux collaborer, Notion peut aider les entreprises à être plus efficaces et à mieux répondre aux besoins de leurs employés. Avec l’essor de l’IA, Notion est bien positionnée pour proposer des fonctionnalités de pointe qui permettront aux équipes de travailler plus efficacement ensemble et de réaliser leurs objectifs plus rapidement et plus facilement.
+
+ Gagner du temps et améliorer votre productivité ?
+
+ Si vous souhaitez améliorer votre productivité et gagner du temps grâce à Notion ou avec une IA contactez l'agence 3h33.com
+
+ [Contactez-nous](https://3h33.com/contactez-lagence-3h33-com/)
+
+---

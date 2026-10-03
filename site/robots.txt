@@ -1,6 +1,7 @@
 # 3h33.com — tout est ouvert, aux moteurs de recherche comme aux assistants d'IA.
 # Les robots d'IA sont nommés un par un : c'est explicite, et ça le reste si la règle
 # générale change un jour. Résumé du site pour les assistants : /llms.txt
+# Texte complet du site en un seul fichier : /llms-full.txt
 User-agent: *
 Allow: /
 

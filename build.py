@@ -293,6 +293,9 @@ def construire(verifie=False):
     ecrites = 0
     for meta, corps, titre_seo in pages:
         url = meta["url"]
+        if meta.get("gabarit") == "accueil":
+            ecrire(meta["url"], page_accueil(meta, titre_seo)); ecrites += 1
+            continue
         page = GABARIT.replace('href="/style.css"', f'href="/style.css?v={VERSION_STYLE}"')
         page = page.replace("{{titre_seo}}", esc(titre_seo))
         page = page.replace("{{description}}", esc(meta["description"]))
@@ -330,6 +333,7 @@ def construire(verifie=False):
     sitemap(pages)
     plan(pages)
     llms(pages)
+    llms_complet(pages)
     print(f"  ✓ {ecrites} pages écrites, sitemap, plan du site et llms.txt à jour")
 
 def llms(pages):
@@ -354,7 +358,8 @@ def llms(pages):
               "automatisations, tableaux de bord, méthode Forge en une demi-journée) et produit "
               "des contenus avec son studio créatif.", "",
               "Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes sur "
-              "l'IA en entreprise sont rassemblées sur https://3h33.com/ia-en-entreprise/.", ""]
+              "l'IA en entreprise sont rassemblées sur https://3h33.com/ia-en-entreprise/. Le texte "
+              "complet du site, en un seul fichier : https://3h33.com/llms-full.txt", ""]
     for nom, items in groupes.items():
         if items:
             lignes += [f"## {nom}", ""] + items + [""]
@@ -367,6 +372,120 @@ def llms(pages):
                "- [NegoVox](https://negovox.com/): simulateur d'entraînement vocal par IA pour les commerciaux ; un client joué par l'IA, puis un débrief noté sur douze compétences de vente.",
                "- [Media Training Vox](https://media-training-vox.com/): entraînement par IA vocale aux prises de parole des dirigeants, face aux médias, au comité de direction, au conseil ou aux actionnaires.", ""]
     (SITE / "llms.txt").write_text("\n".join(lignes), encoding="utf-8")
+
+def ecrire(url, page):
+    dest = SITE / url.strip("/") / "index.html" if url != "/" else SITE / "index.html"
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(page, encoding="utf-8")
+
+def page_accueil(meta, titre_seo):
+    """La page d'accueil : gabarit à part (gabarits/accueil.html), FAQ et données
+    structurées tirées de contenu/accueil.md. La FAQ affichée et celle du JSON-LD
+    viennent de la même liste : elles ne peuvent plus diverger (l'ancienne page
+    affichait cinq questions et n'en déclarait que quatre)."""
+    page = (RACINE / "gabarits" / "accueil.html").read_text(encoding="utf-8")
+    faq = "\n".join(f'        <details><summary>{esc(q.split("|",1)[0].strip())}</summary>'
+                     f'<p>{enligne(esc(q.split("|",1)[1].strip()))}</p></details>' for q in meta["faq"])
+    for cle, val in (("{{titre_seo}}", esc(titre_seo)), ("{{description}}", esc(meta["description"])),
+                     ("{{url}}", meta["url"]), ("{{faq}}", faq), ("{{jsonld}}", jsonld_accueil(meta)),
+                     ("{{robots}}", '<meta name="robots" content="noindex, nofollow">'
+                                    if meta.get("indexer") == "non" else "")):
+        page = page.replace(cle, val)
+    return page
+
+def jsonld_accueil(meta):
+    org, pers = SITE_URL + "/#organisation", SITE_URL + "/#alexandre"
+    services = [("Masterclass IA", "/masterclass-ia/"), ("Ateliers de formation à l'IA", "/ateliers-formation/"),
+                ("Formation Claude", "/formation-claude/"), ("Méthode Forge", "/forge/"),
+                ("Vibe coding : outils sur mesure", "/vibe-coding/"), ("Chatbots et agents IA", "/chatbots/"),
+                ("Coaching IA des dirigeants", "/coaching-ia-dirigeants/"), ("Studio créatif IA", "/studio/")]
+    graphe = [
+        {"@type": ["Organization", "EducationalOrganization"], "@id": org, "name": "3h33",
+         "alternateName": ["3h33, l'agence de l'IA", "3H33"], "url": SITE_URL + "/",
+         "logo": SITE_URL + "/medias/partage.jpg", "image": SITE_URL + "/medias/partage.jpg",
+         "description": "Agence et organisme de formation français spécialisés dans les usages de "
+                        "l'intelligence artificielle générative en entreprise : formations, outils sur "
+                        "mesure en vibe coding, agents conversationnels et studio créatif.",
+         "slogan": "On apprend l'IA en construisant.", "foundingDate": "2010",
+         "founder": {"@id": pers}, "email": "info@3h33.fr", "areaServed": "FR",
+         "contactPoint": {"@type": "ContactPoint", "contactType": "commercial",
+                          "url": SITE_URL + "/contact/", "availableLanguage": ["fr", "en"]},
+         "knowsAbout": ["Intelligence artificielle générative", "Formation à l'intelligence artificielle",
+                        "Vibe coding", "Agents conversationnels", "AI Act", "IA souveraine",
+                        "Learning Management Agentique", "Production audiovisuelle par IA"],
+         "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": n,
+                         "url": SITE_URL + u, "provider": {"@id": org}}} for n, u in services],
+         "sameAs": ["https://alexandrestopnicki.com", "https://fr.linkedin.com/in/alexandrestopnicki",
+                    "https://twitter.com/alexandre3h33", "https://www.facebook.com/3h33.FORMATIONS",
+                    "https://instagram.com/alexandre3h33", "https://choucroute-citron.com",
+                    "https://negovox.com", "https://media-training-vox.com"]},
+        {"@type": "Person", "@id": pers, "name": "Alexandre Stopnicki",
+         "jobTitle": "Fondateur de 3h33, formateur et conférencier en intelligence artificielle",
+         "description": "Fondateur de 3h33. Dans le numérique depuis trente ans : en 1997, sa société "
+                        "Numériland tenait la régie publicitaire du Deuxième Monde, le métavers de Canal+. "
+                        "Construit des chatbots depuis 2017 ; chroniqueur de l'émission The Artificial "
+                        "Intelligence Society.",
+         "url": "https://alexandrestopnicki.com", "image": SITE_URL + "/medias/alexandre-stopnicki.jpg",
+         "worksFor": {"@id": org},
+         "knowsAbout": ["Intelligence artificielle générative", "Vibe coding", "Pédagogie",
+                        "Agents conversationnels", "Métavers"],
+         "sameAs": ["https://fr.linkedin.com/in/alexandrestopnicki", "https://alexandre.ai",
+                    "https://alexandrestopnicki.com"]},
+        {"@type": "WebSite", "@id": SITE_URL + "/#site", "url": SITE_URL + "/", "name": "3h33",
+         "inLanguage": "fr-FR", "publisher": {"@id": org}},
+        {"@type": "WebPage", "@id": SITE_URL + "/#accueil", "url": SITE_URL + "/",
+         "name": meta["titre"], "description": meta["description"], "inLanguage": "fr-FR",
+         "isPartOf": {"@id": SITE_URL + "/#site"}, "about": {"@id": org},
+         "primaryImageOfPage": SITE_URL + "/medias/partage.jpg"},
+        {"@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q.split("|", 1)[0].strip(),
+             "acceptedAnswer": {"@type": "Answer", "text": texte_brut(q.split("|", 1)[1])}}
+            for q in meta["faq"]]},
+    ]
+    return json.dumps({"@context": "https://schema.org", "@graph": graphe},
+                      ensure_ascii=False, separators=(",", ":"))
+
+def llms_complet(pages):
+    """/llms-full.txt : le texte entier des pages utiles, en Markdown propre, pour les
+    assistants d'IA qui préfèrent lire un seul fichier que parcourir le site. Le HTML
+    brut (SVG, blocs de mise en page) est retiré ; une vidéo devient une ligne de lien."""
+    retenues = []
+    for meta, corps, _ in pages:
+        u = meta["url"]
+        accueil = meta.get("gabarit") == "accueil"
+        if not accueil and (meta.get("indexer") == "non" or u.startswith("/archives/")
+                            or u == "/plan-du-site/" or float(meta.get("priorite", "0.7")) <= 0.3):
+            continue
+        retenues.append((0 if accueil else 1, -float(meta.get("priorite", "0.7")), meta, corps))
+    blocs = ["# 3h33 — texte complet du site", "",
+             "> 3h33 est une agence et un organisme de formation français, créé en 2010 par "
+             "Alexandre Stopnicki, spécialisé dans les usages de l'intelligence artificielle "
+             "générative en entreprise. Résumé court : " + SITE_URL + "/llms.txt", ""]
+    for _, _, meta, corps in sorted(retenues, key=lambda r: (r[0], r[1])):
+        url = SITE_URL + ("/" if meta.get("gabarit") == "accueil" else meta["url"])
+        texte = []
+        if meta.get("gabarit") != "accueil":
+            dans_svg = False
+            for l in corps.split("\n"):
+                if l.lstrip().startswith("<svg"): dans_svg = True
+                if dans_svg:
+                    if "</svg>" in l: dans_svg = False
+                    continue
+                if l.lstrip().startswith("<"): continue
+                m = re.match(r"^@youtube\s+([\w-]{11})\s*\|\s*(.+)$", l)
+                texte.append(f"Vidéo : {m.group(2).strip()} — https://www.youtube.com/watch?v={m.group(1)}" if m else l)
+        blocs += [f"# {meta['titre']}", f"URL : {url}", "", f"> {meta['description']}", ""]
+        if meta.get("chapo"):
+            blocs += [texte_brut(meta["chapo"]), ""]
+        if texte:
+            blocs += [re.sub(r"\n{3,}", "\n\n", "\n".join(texte)).strip(), ""]
+        if meta.get("faq"):
+            blocs += ["## Questions fréquentes", ""]
+            for q in meta["faq"]:
+                question, reponse = q.split("|", 1)
+                blocs += [f"**{question.strip()}** {texte_brut(reponse)}", ""]
+        blocs += ["---", ""]
+    (SITE / "llms-full.txt").write_text("\n".join(blocs), encoding="utf-8")
 
 def sitemap(pages):
     lignes = ['<?xml version="1.0" encoding="UTF-8"?>',

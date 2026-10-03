@@ -87,6 +87,7 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 - [IA locale et souveraine : faire tourner l'IA chez soi](/ia-locale-souveraine/) — Garder ses données en Europe, ou ne rien laisser sortir : modèles européens, cloud souvera
 
 ## Le site
+- [3h33, l'agence de l'IA](/) — Agence et organisme de formation en IA générative depuis 2010 : formations, outils sur mes
 - [Archives](/archives/) — Les pages historiques de 3h33 : formations au marketing digital, réseaux sociaux, réalité 
 - [Conditions générales](/conditions-generales/) — Les conditions générales de vente et d'utilisation des services et formations proposés par
 - [Confidentialité](/politique-de-confidentialite/) — Ce que 3h33.com collecte, pourquoi, combien de temps, et comment exercer vos droits. Site 

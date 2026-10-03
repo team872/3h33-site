@@ -2,7 +2,7 @@
 
 > 3h33 est une agence et un organisme de formation français spécialisés dans les usages de l'intelligence artificielle générative en entreprise, fondés par Alexandre Stopnicki. 3h33 forme les équipes (masterclass, ateliers, formation Claude), construit avec elles des outils d'IA en vibe coding (agents, automatisations, tableaux de bord, méthode Forge en une demi-journée) et produit des contenus avec son studio créatif.
 
-Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes sur l'IA en entreprise sont rassemblées sur https://3h33.com/ia-en-entreprise/.
+Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes sur l'IA en entreprise sont rassemblées sur https://3h33.com/ia-en-entreprise/. Le texte complet du site, en un seul fichier : https://3h33.com/llms-full.txt
 
 ## Offres
 
