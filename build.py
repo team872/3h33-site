@@ -25,6 +25,10 @@ SITE = RACINE / "site"
 GABARIT = (RACINE / "gabarits" / "page.html").read_text(encoding="utf-8")
 SITE_URL = "https://3h33.com"
 AUJOURD_HUI = datetime.date.today().isoformat()
+# nginx sert style.css avec sept jours de cache : sans cette empreinte dans l'adresse,
+# un visiteur garde l'ancienne feuille une semaine après chaque retouche (constaté le
+# 03/10/2026 : vidéos à 304 px et FAQ sans mise en forme chez qui était déjà passé).
+VERSION_STYLE = __import__("hashlib").md5((RACINE / "site" / "style.css").read_bytes()).hexdigest()[:8]
 
 def date_git(chemin):
     """Date du dernier commit qui a touché ce fichier. Sans dépôt, sa date sur le disque.
@@ -289,7 +293,7 @@ def construire(verifie=False):
     ecrites = 0
     for meta, corps, titre_seo in pages:
         url = meta["url"]
-        page = GABARIT
+        page = GABARIT.replace('href="/style.css"', f'href="/style.css?v={VERSION_STYLE}"')
         page = page.replace("{{titre_seo}}", esc(titre_seo))
         page = page.replace("{{description}}", esc(meta["description"]))
         page = page.replace("{{url}}", url)
