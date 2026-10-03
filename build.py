@@ -366,6 +366,7 @@ def construire(verifie=False):
         dest.write_text(page, encoding="utf-8")
         ecrites += 1
 
+    episodes_secours()
     sitemap(pages)
     plan(pages)
     llms(pages)
@@ -481,6 +482,17 @@ def jsonld_accueil(meta):
     return json.dumps({"@context": "https://schema.org", "@graph": graphe},
                       ensure_ascii=False, separators=(",", ":"))
 
+def episodes_secours():
+    """site/inclus/choucroute-defaut.html : la liste servie quand le serveur n'a pas
+    (encore) écrit la sienne. Flux injoignable au moment de construire : on garde
+    la liste précédente plutôt que d'en écrire une vide."""
+    sys.path.insert(0, str(RACINE / "services" / "podcast"))
+    try:
+        import choucroute
+        choucroute.ecrire(SITE / "inclus" / "choucroute-defaut.html", choucroute.fragment())
+    except Exception as e:
+        print(f"  ! épisodes Choucroute Citron non rafraîchis ({e}) : liste précédente gardée")
+
 def llms_complet(pages):
     """/llms-full.txt : le texte entier des pages utiles, en Markdown propre, pour les
     assistants d'IA qui préfèrent lire un seul fichier que parcourir le site. Le HTML
@@ -506,6 +518,12 @@ def llms_complet(pages):
                 if l.lstrip().startswith("<svg"): dans_svg = True
                 if dans_svg:
                     if "</svg>" in l: dans_svg = False
+                    continue
+                if "/inclus/choucroute.html" in l:
+                    secours = SITE / "inclus" / "choucroute-defaut.html"
+                    if secours.exists():
+                        for a in re.finditer(r'<a href="([^"]+)">(.*?)</a> · ([^<]+)', secours.read_text(encoding="utf-8")):
+                            texte.append(f"- {html.unescape(a.group(2))} ({a.group(3)}) : {a.group(1)}")
                     continue
                 if l.lstrip().startswith("<"): continue
                 if l.startswith("@video "):

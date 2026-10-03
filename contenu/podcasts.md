@@ -21,15 +21,7 @@ Alexandre Stopnicki reçoit un invité au parcours remarquable, et des **IA-nima
 
 Plus de trente épisodes depuis 2025, et des invités comme Richard Orlinski, Christian Etchebest ou un ancien instructeur du RAID.
 
-**Les derniers épisodes**
-
-- [Dr Anne Benhamou : « On me disait qu'une femme avec un bistouri devait être à la cuisine »](https://podcast.ausha.co/choucroute-citron/on-me-disait-qu-une-femme-avec-un-bistouri-devait-etre-a-la-cuisine) · juin 2026
-- [Éric Lewin : à 23 ans, il a refusé un dîner avec Bernard Arnault](https://choucroute-citron.com/episodes/eric-lewin-a-23-ans-j-ai-refuse-un-diner-avec-bernard-arnault/) · avril 2026
-- [Armand Paranque : à 3 ans il a su, à 86 ans elle l'a convaincu](https://choucroute-citron.com/episodes/armand-paranque-a-3-ans-j-ai-su-a-86-ans-elle-m-a-convaincu/) · avril 2026
-- [Gaspard Meier-Chaurand : un acteur et réalisateur fait passer un casting à une IA](https://choucroute-citron.com/episodes/gaspard-meier-chaurand-acteur-et-realisateur-il-fait-passer-un-casting-a-une-ia/) · mars 2026
-- [Ariel Fuchs : l'avenir de l'humanité se joue entre l'océan et l'espace](https://choucroute-citron.com/episodes/ariel-fuchs-pourquoi-l-avenir-de-l-humanite-se-joue-entre-l-ocean-et-l-espace/) · mars 2026
-- [Christian Etchebest : une IA a essayé de lui apprendre à cuisiner](https://podcast.ausha.co/choucroute-citron/christian-etchebest-une-ia-a-essaye-de-lui-apprendre-a-cuisiner-il-l-a-remise-a-sa-place) · février 2026
-- [Richard Orlinski : ce que le public ignore](https://podcast.ausha.co/choucroute-citron/richard-orlinski-ce-que-le-public-ignore) · janvier 2026
+<!--# include virtual="/inclus/choucroute.html" -->
 
 Tous les épisodes sur [choucroute-citron.com](https://choucroute-citron.com/episodes/), et sur [Apple Podcasts](https://podcasts.apple.com/fr/podcast/choucroute-citron/id1812305442), [Spotify](https://open.spotify.com/search/choucroute%20citron/shows), [Deezer](https://www.deezer.com/search/Choucroute%20Citron/show) et [Ausha](https://podcast.ausha.co/show/9peJafn6W6DR).
 
