@@ -14,7 +14,7 @@ chapo: "Bien avant qu'on parle de métavers, de web3 ou d'agents, il y avait un 
 faq:
   - Qu'est-ce que le Deuxième Monde ?|Une ville virtuelle en trois dimensions, reconstitution de Paris, lancée en 1997 par Canal+ Multimédia avec l'éditeur de jeux Cryo. Les internautes s'y créaient un avatar, s'y promenaient, discutaient en temps réel et visitaient des boutiques de marques.
   - Qui a créé le Deuxième Monde ?|Canal+ Multimédia, filiale du groupe Canal+, avec Cryo pour le développement. Numériland, la société d'Alexandre Stopnicki, en assurait la régie publicitaire exclusive : boutiques en 3D, panneaux d'affichage flottants, vendeurs interactifs.
-  - Le Deuxième Monde est-il le premier métavers ?|L'un des tout premiers, et le pionnier français. D'autres mondes virtuels l'avaient précédé, comme Habitat (1986) ou Active Worlds (1995), mais le Deuxième Monde fut parmi les premiers à y faire vivre une économie de marques, avec boutiques et affichage publicitaire.
+  - Le Deuxième Monde est-il le premier métavers ?|C'est le premier métavers français, et l'un des tout premiers au monde. Quelques mondes virtuels l'avaient précédé, comme Habitat (1986) ou Active Worlds (1995), mais le Deuxième Monde fut parmi les premiers à y faire vivre des marques : boutiques en 3D, avatars vendeurs, affichage publicitaire.
   - Quelle différence avec Second Life ?|Second Life, de Linden Lab, n'est arrivé qu'en 2003, six ans plus tard. Le Deuxième Monde fonctionnait alors avec un modem et un CD-ROM, qui chargeait les images que les connexions de l'époque n'auraient jamais pu transmettre.
   - Que reste-t-il du Deuxième Monde aujourd'hui ?|Une communauté qui s'appelait elle-même « les Bimondiens », des captures d'écran, et des idées qui reviennent régulièrement sous d'autres noms : l'avatar, la publicité dans un monde virtuel, le vendeur interactif. Ce dernier s'appelle aujourd'hui un agent conversationnel.
 ---
@@ -37,7 +37,7 @@ La régie publicitaire est confiée en exclusivité à **Numériland**, la soci�
 
 ## Des marques dans un monde virtuel
 
-Numériland commercialise des dizaines de **boutiques en 3D**, où l'on entre comme dans un magasin de la rue. L'index de l'époque en garde la trace : 3 Suisses, Adecco, Banque Populaire, IBM, Kodak, Mattel, Peugeot, Printemps, Société Générale, Virgin Megastore, Cap Gemini, Europe 2.
+Numériland commercialise des dizaines de **boutiques en 3D**, où l'on entre comme dans un magasin de la rue. Dans celle de **Peugeot**, des avatars accueillent les visiteurs et jouent le rôle de vendeurs : une marque qui reçoit ses clients dans un monde virtuel, près de trente ans avant qu'on parle de métavers. L'index de l'époque en garde la trace : 3 Suisses, Adecco, Banque Populaire, IBM, Kodak, Mattel, Peugeot, Printemps, Société Générale, Virgin Megastore, Cap Gemini, Europe 2.
 
 Elle imagine aussi des **panneaux d'affichage flottants** au format 4/3, des vendeurs interactifs, et propose aux annonceurs les premiers outils de suivi de la relation client pensés pour la 3D. Le réseau d'affichage est ensuite cédé à Avenir, qui devient ainsi le premier afficheur dans un monde virtuel.
 
