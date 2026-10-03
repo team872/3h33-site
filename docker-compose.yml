@@ -14,6 +14,12 @@ services:
       - "traefik.http.routers.h3h33.tls=true"
       - "traefik.http.routers.h3h33.tls.certresolver=letsencrypt"
       - "traefik.http.services.h3h33.loadbalancer.server.port=80"
+      # L'ancien WordPress, consultable après la bascule (voir nginx.conf).
+      - "traefik.http.routers.h3h33-old.rule=Host(`old.3h33.com`)"
+      - "traefik.http.routers.h3h33-old.entrypoints=websecure"
+      - "traefik.http.routers.h3h33-old.tls=true"
+      - "traefik.http.routers.h3h33-old.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.h3h33-old.service=h3h33"
       # ---- Bascule de 3h33.com : à décommenter le jour où le DNS pointe ici.
       # Deux routeurs séparés : si Let's Encrypt échoue sur un nom, l'autre garde
       # son certificat. www est renvoyé vers le nom nu.
