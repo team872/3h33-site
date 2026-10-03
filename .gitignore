@@ -8,3 +8,7 @@
 
 # secrets des services
 services/*/.env
+
+# liste des épisodes écrite par le cron du VPS (la liste de secours, elle, est versionnée)
+site/inclus/choucroute.html
+site/inclus/*.tmp
