@@ -65,6 +65,7 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 ## Blog
 - [33 conseils dont vous pourriez vous inspirer](/blog/33-conseils-dont-vous-pourriez-vous-inspirer-en-2022/) — Trente-trois habitudes de travail, à prendre ou à laisser, rassemblées pour bien commencer
 - [L'IA au service de Notion](/blog/lia-au-service-de-notion/) — Une IA installée dans l'espace de travail : ce qu'elle change à la prise de notes, à la ré
+- [Le Deuxième Monde : le métavers de Canal+, dès 1997](/deuxieme-monde/) — En 1997, Canal+, Cryo et Numériland ouvraient un Paris en 3D peuplé d'avatars, avec boutiq
 - [Tout comprendre sur Pokémon GO](/blog/comprendre-pokemon-go/) — Le jeu qui a fait sortir des millions de gens dans la rue, expliqué : règles, mécanique, e
 - [Voulez-vous connaître l'avenir ?](/blog/connaitre-l-avenir/) — Une sélection d'interventions où des chercheurs et des entrepreneurs décrivent ce qui vien
 - [Écrire un article en moins d'une heure grâce au contenu synthétique](/blog/how-to-write-a-blog-post-in-under-an-hour-thanks-to-synthetic-content/) — Un article écrit avec l'IA, qui explique en même temps comment il a été écrit. La démonstr
@@ -96,6 +97,7 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 
 ## Vibe coding
 - [LMA : le Learning Management Agentique](/lma-learning-management-agentique/) — Le LMA, Learning Management Agentique, succède au LMS : une plateforme où des agents retro
+- [No-code, low-code ou vibe coding : lequel choisir ?](/no-code/) — Bubble, Airtable, Zapier, Power Apps ou une IA qui écrit le code : ce que chaque approche 
 - [Vibe coding : construire des outils en dialoguant avec l'IA](/vibe-coding/) — Le vibe coding consiste à fabriquer un logiciel en dialoguant avec une IA. Ce que ça chang
 
 ## Sites et outils

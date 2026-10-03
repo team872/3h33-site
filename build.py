@@ -89,6 +89,20 @@ def md(texte):
             continue
         if l.lstrip().startswith("<"):
             ferme(); out.append(l); i += 1; continue
+        # tableau : lignes « | a | b | », la deuxième étant le séparateur « |---| ».
+        # Enveloppé dans un bloc qui défile en largeur : sur téléphone, un tableau
+        # de quatre colonnes ferait sinon déborder toute la page.
+        if l.startswith("|") and i + 1 < len(lignes) and re.match(r"^\|[\s:|-]+\|\s*$", lignes[i + 1]):
+            ferme()
+            cellules = lambda x: [c.strip() for c in x.strip().strip("|").split("|")]
+            tete = cellules(l); i += 2
+            out.append('<div class="tableau"><table><thead><tr>'
+                       + "".join(f"<th>{enligne(c)}</th>" for c in tete) + "</tr></thead><tbody>")
+            while i < len(lignes) and lignes[i].startswith("|"):
+                out.append("<tr>" + "".join(f"<td>{enligne(c)}</td>" for c in cellules(lignes[i])) + "</tr>")
+                i += 1
+            out.append("</tbody></table></div>")
+            continue
         if not l.strip():
             ferme(); i += 1; continue
         m = re.match(r"^(#{2,4})\s+(.*)$", l)
