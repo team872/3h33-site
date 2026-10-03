@@ -444,6 +444,8 @@ html.calme .mots .m>span{transform:none;opacity:1}
   .nav.ouvert{display:flex;position:fixed;top:70px;left:12px;right:12px;flex-direction:column;gap:0;background:#fff;padding:6px 20px 12px;border:1px solid var(--trait);border-radius:18px;box-shadow:var(--ombre)}
   .nav.ouvert a{padding:13px 0;border-bottom:1px solid var(--trait);font-size:17px;border-radius:0}
   .nav.ouvert a:last-child{border-bottom:0}}
+.nav__contact{display:none}
+@media (max-width:400px){.entete .btn--petit{display:none}.nav.ouvert .nav__contact{display:block;color:var(--acc);font-weight:800}}
 @media (max-width:560px){.bouton-calme{display:none}
   .outil{display:grid;grid-template-columns:112px 1fr;grid-template-rows:auto 1fr;gap:0}
   .outil img{grid-row:1/3;height:100%;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--trait)}
@@ -469,6 +471,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
       <a href="/vibe-coding/">Vibe coding</a>
       <a href="/studio/">Studio</a>
       <a href="/blog/">Blog</a>
+      <a class="nav__contact" href="/contact/">Nous contacter</a>
     </nav>
     <div class="entete__actions">
       <button class="bouton-calme" type="button" id="btn-calme" aria-pressed="false" title="Figer les animations">
@@ -487,12 +490,12 @@ html.calme .mots .m>span{transform:none;opacity:1}
     <div class="plan plan--milieu" data-rate="0.26" data-souris="12"><svg id="svg-milieu" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
     <div class="hero__contenu">
       <div class="hero__texte">
-        <span class="chip"><span class="dot"></span>3h33 · l'agence de l'IA, depuis 2010</span>
-        <h1 class="mots" data-mots>Formez vos équipes à l'IA en construisant avec elles.</h1>
+        <span class="chip"><span class="dot"></span>Agence et formation en IA · depuis 2010</span>
+        <h1 class="mots" data-mots>Vos équipes apprennent l'IA et repartent avec un outil qui marche.</h1>
         <p class="sous">3h33 est une agence et un organisme de formation spécialisés dans l'intelligence artificielle générative. Formations, outils sur mesure en vibe coding, agents conversationnels, studio créatif : vous repartez avec quelque chose qui marche, pas avec des notes.</p>
         <div class="hero__actions">
           <a class="btn" href="/contact/">Réserver un échange de 20 min <span class="fl">→</span></a>
-          <a class="lien lien--hero" href="#portes">Ce que nous faisons</a>
+          <a class="lien lien--hero" href="#portes">Voir nos offres</a>
         </div>
         <ul class="hero__preuves">
           <li><b>2010</b><span>l'année de création de l'agence</span></li>
@@ -507,13 +510,13 @@ html.calme .mots .m>span{transform:none;opacity:1}
 
   <section class="bloc section" id="portes" aria-labelledby="portes-titre">
     <div class="entree">
-      <span class="eyebrow">Ce que nous faisons</span>
-      <h2 id="portes-titre">Quatre façons de mettre l'IA au travail.</h2>
+      <span class="eyebrow">Nos offres</span>
+      <h2 id="portes-titre">Ce que 3h33 fait pour vous, concrètement</h2>
     </div>
     <div class="portes">
       <article class="porte">
         <span class="porte__n">01</span>
-        <h3>Former</h3>
+        <h3>Former vos équipes</h3>
         <p>Une masterclass de deux heures pour toute l'organisation, des ateliers d'un à deux jours sur les vrais dossiers de chaque métier, une formation à Claude pour aller plus loin.</p>
         <ul>
           <li><a href="/masterclass-ia/">Masterclass IA</a></li>
@@ -524,7 +527,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
       </article>
       <article class="porte">
         <span class="porte__n">02</span>
-        <h3>Construire</h3>
+        <h3>Construire vos outils</h3>
         <p>En une demi-journée, nous fabriquons avec vos équipes un agent, une automatisation ou un tableau de bord. Le code est à vous, documenté, prêt le lendemain.</p>
         <ul>
           <li><a href="/forge/">Méthode Forge</a></li>
@@ -535,7 +538,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
       </article>
       <article class="porte">
         <span class="porte__n">03</span>
-        <h3>S'entraîner</h3>
+        <h3>Préparer vos rendez-vous</h3>
         <p>Négocier, convaincre un comité, répondre à une journaliste : une IA vocale joue votre interlocuteur, vous coupe, relance, puis vous rend un débrief noté.</p>
         <ul>
           <li><a href="/coaching-ia-dirigeants/">Coaching des dirigeants</a></li>
@@ -545,7 +548,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
       </article>
       <article class="porte">
         <span class="porte__n">04</span>
-        <h3>Créer</h3>
+        <h3>Produire vos vidéos</h3>
         <p>Le studio écrit, tourne, compose et monte avec l'IA : films, vidéos de marque, musiques originales, comédiens virtuels qui parlent toutes les langues.</p>
         <ul>
           <li><a href="/studio/">Le studio</a></li>
@@ -563,8 +566,8 @@ html.calme .mots .m>span{transform:none;opacity:1}
         <figcaption><b>Alexandre Stopnicki</b>fondateur de 3h33</figcaption>
       </figure>
       <div>
-        <span class="eyebrow">Qui nous sommes</span>
-        <h2 id="qui-titre">On ne vous explique pas l'IA. On la met entre vos mains.</h2>
+        <span class="eyebrow">Le fondateur</span>
+        <h2 id="qui-titre">Qui est derrière 3h33 ?</h2>
         <p>Alexandre Stopnicki travaille dans le numérique depuis trente ans : dès 1997, sa société Numériland tenait la régie publicitaire du <a href="/deuxieme-monde/">Deuxième Monde</a>, le Paris en 3D de Canal+. Il fonde 3h33 en 2010. Il construit des chatbots depuis 2017, cinq ans avant ChatGPT, et commente l'actualité de l'IA dans l'émission <i>The Artificial Intelligence Society</i>.</p>
         <p>Entreprises, écoles et mairies : il construit lui-même tout ce qu'il enseigne, et vos équipes n'ont besoin d'aucune compétence technique. <a href="/a-propos/">En savoir plus sur 3h33</a></p>
       </div>
@@ -580,9 +583,9 @@ html.calme .mots .m>span{transform:none;opacity:1}
 
   <section class="bloc section" aria-labelledby="outils-titre">
     <div class="entree">
-      <span class="eyebrow">En service aujourd'hui</span>
-      <h2 id="outils-titre">Ce que nous construisons tourne déjà.</h2>
-      <p>Cinq de nos applications, construites en vibe coding et utilisées tous les jours. <a href="/galaxie/">Les 38 sites de la galaxie 3h33 →</a></p>
+      <span class="eyebrow">Applications</span>
+      <h2 id="outils-titre">Cinq applications que nous avons construites, à essayer en ligne</h2>
+      <p>Toutes fabriquées en vibe coding, toutes utilisées chaque jour. <a href="/galaxie/">Les 38 sites de la galaxie 3h33 →</a></p>
     </div>
     <div class="outils">
       <a class="outil" href="https://negovox.com/"><img src="/vignettes/negovox.jpg" alt="NegoVox, simulateur d'entraînement vocal pour commerciaux" width="800" height="500" loading="lazy"><b>NegoVox</b><span>Le commercial négocie à voix haute face à un client joué par l'IA, puis reçoit un débrief sur douze compétences.</span></a>
@@ -596,8 +599,8 @@ html.calme .mots .m>span{transform:none;opacity:1}
   <section class="bloc section" id="questions" aria-labelledby="faq-titre">
     <div class="faq-accueil">
       <div class="entree">
-        <span class="eyebrow">Questions fréquentes</span>
-        <h2 id="faq-titre">Ce qu'on nous demande le plus souvent.</h2>
+        <span class="eyebrow">FAQ</span>
+        <h2 id="faq-titre">Les questions qu'on nous pose avant de commencer</h2>
         <p>Et toutes nos réponses sur <a href="/ia-en-entreprise/">l'IA en entreprise</a> : usages, données, coûts, choix des modèles.</p>
       </div>
       <div class="faq-liste">
@@ -609,7 +612,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
   <section class="bloc section" aria-labelledby="guides-titre">
     <div class="entree">
       <span class="eyebrow">Guides</span>
-      <h2 id="guides-titre">Pour décider en connaissance de cause.</h2>
+      <h2 id="guides-titre">Nos guides pour comprendre l'IA en entreprise</h2>
     </div>
     <div class="guides">
       <a class="guide" href="/ia-en-entreprise/"><b>L'IA en entreprise</b><span>Dix-huit questions de dirigeants, et nos réponses.</span></a>
@@ -626,8 +629,8 @@ html.calme .mots .m>span{transform:none;opacity:1}
     <div class="plan plan--devant" data-rate="0.36"><svg id="svg-final-devant" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
     <div class="bloc">
       <div class="capture">
-        <span class="eyebrow">Et chez vous ?</span>
-        <h2>Dites-nous ce qui vous prend du temps.</h2>
+        <span class="eyebrow">Contact</span>
+        <h2>Une tâche vous prend trop de temps ? Parlons-en 20 minutes.</h2>
         <p class="capture__p">Trois lignes suffisent. Nous répondons sous un jour ouvré, souvent par une démonstration plutôt que par une réunion. Le premier échange de vingt minutes est gratuit et sans engagement.</p>
         <a class="btn btn--or" href="/contact/">Nous contacter</a>
       </div>
