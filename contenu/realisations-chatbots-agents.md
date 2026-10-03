@@ -7,14 +7,18 @@ type: page
 rubrique: "Chatbots et agents|/chatbots/"
 fil: "Dix ans de réalisations"
 priorite: 0.8
-eyebrow: "Réalisations · 2017 → 2026"
-chapo: "Nous construisons des agents conversationnels depuis 2017, cinq ans avant ChatGPT. Ce qui a changé en route : ils ne suivent plus un arbre de réponses, ils comprennent, cherchent, et aujourd'hui ils parlent."
+eyebrow: "Réalisations · 1997 → 2026"
+chapo: "Nous faisons converser des marques avec leurs clients depuis 1997, et nous construisons des chatbots depuis 2017, cinq ans avant ChatGPT. Ce qui a changé en route : ils ne suivent plus un arbre de réponses, ils comprennent, cherchent, et aujourd'hui ils parlent."
 faq:
   - Depuis quand 3h33 construit-elle des chatbots ?|Depuis 2017, avec LècheBot, puis une série d'agents pédagogiques et de démonstration en 2018 et 2019, dont BotMoiLeQi, conçu pour former et accompagner des étudiants, bien avant l'arrivée de ChatGPT.
   - Quelle différence entre les chatbots de 2019 et les agents d'aujourd'hui ?|Les premiers suivaient des scénarios écrits à l'avance : chaque question possible avait sa réponse. Un agent d'aujourd'hui comprend une demande formulée librement, va chercher l'information dans vos documents, enchaîne plusieurs étapes, et peut tenir une conversation à voix haute.
   - Qu'est-ce qu'un agent vocal d'entraînement ?|Une IA qui joue un rôle à voix haute, un client, un journaliste, un administrateur, pour qu'on s'entraîne avant la situation réelle, puis qui rend un débrief noté. C'est le principe de [NegoVox](https://negovox.com/) pour la vente et de [Media Training Vox](https://media-training-vox.com/) pour la prise de parole.
   - Peut-on faire construire un agent pour son entreprise ?|Oui. Selon le besoin, en une [session Forge](/forge/) d'une demi-journée pour un agent de support interne ou d'orientation, ou en projet sur mesure. Voir [chatbots et agents](/chatbots/).
 ---
+
+## 1997 : des avatars vendeurs dans le premier métavers français
+
+Avant les chatbots, il y a eu les vendeurs virtuels. En 1997, dans le [Deuxième Monde](/deuxieme-monde/), le Paris en 3D de Canal+, la régie Numériland d'Alexandre Stopnicki ouvre des boutiques de marques en trois dimensions, dont celle de **Peugeot**, où des avatars accueillent les visiteurs comme des vendeurs. L'idée qui traverse toute cette page est déjà là : une marque qui converse avec ses clients dans un monde numérique.
 
 ## 2017 : LècheBot, le chatbot le plus flatteur du web
 
@@ -26,7 +30,7 @@ Tout commence par une blague sérieuse. LècheBot a une seule mission : vous dir
 
 En 2019, trois ans avant ChatGPT, nous créons **BotMoiLeQi**, un chatbot capable de former, de coacher et d'accompagner des étudiants dans un parcours pédagogique. Il pose des questions, relance, encourage, et vérifie l'acquisition des compétences. L'engagement des apprenants est nettement supérieur à celui d'un cours en ligne classique.
 
-La même année naît toute une série de démonstrateurs, chacun explorant un usage : un bot de marque pour Peugeot, **StoryBot** qui raconte des histoires, **ProfBot** qui interroge l'élève, un bot qui explique les acronymes, un bot de prise de rendez-vous, et déjà **EpiVoiceBot**, un premier essai de bot à la voix.
+La même année naît toute une série de démonstrateurs, chacun explorant un usage : **StoryBot** qui raconte des histoires, **ProfBot** qui interroge l'élève, un bot qui explique les acronymes, un bot de prise de rendez-vous, et déjà **EpiVoiceBot**, un premier essai de bot à la voix.
 
 ## 2020 et 2021 : chercher pour vous
 
