@@ -1,7 +1,7 @@
 ---
 titre: "Les vidéos IA d'Alexandre Stopnicki"
 titre_seo: "Vidéos IA : films, clips et courts métrages · 3h33"
-description: "Vingt films, clips et courts métrages réalisés avec l'IA par Alexandre Stopnicki et le studio 3h33, de 2024 à 2026. À regarder directement sur la page."
+description: "Vingt et un films, clips et courts métrages réalisés avec l'IA par Alexandre Stopnicki et le studio 3h33, de 2024 à 2026. À regarder directement sur la page."
 url: /studio/videos/
 type: page
 rubrique: "Studio|/studio/"
@@ -17,6 +17,7 @@ faq:
 
 ## Bandes démo
 
+@video 6_cOEGE9Ruo | Bande démo du studio, version 3 | 2026-04-02 | 5:08 | La plus complète : des personnages de science-fiction aux portraits réalistes dans les rues de Paris, portés par la musique.
 @video KfcYw3yPQNQ | Bande démo 2026, version longue | 2026-04-21 | 4:06 | Un tour d'horizon de nos réalisations vidéo en IA.
 @video yG6cVrpI_WA | Bande démo 2026, version courte | 2026-04-20 | 3:38 | Le même parcours, en plus resserré.
 

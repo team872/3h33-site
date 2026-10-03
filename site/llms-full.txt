@@ -981,12 +981,13 @@ Les rendez-vous complètent naturellement les [ateliers de formation](/ateliers-
 # Les vidéos IA d'Alexandre Stopnicki
 URL : https://3h33.com/studio/videos/
 
-> Vingt films, clips et courts métrages réalisés avec l'IA par Alexandre Stopnicki et le studio 3h33, de 2024 à 2026. À regarder directement sur la page.
+> Vingt et un films, clips et courts métrages réalisés avec l'IA par Alexandre Stopnicki et le studio 3h33, de 2024 à 2026. À regarder directement sur la page.
 
 Courts métrages, clips, films musicaux : tout est écrit, filmé, mis en musique et monté avec des IA génératives. Cliquez sur une image pour lancer la vidéo.
 
 ## Bandes démo
 
+- Vidéo « Bande démo du studio, version 3 » (2026, 5:08) : La plus complète : des personnages de science-fiction aux portraits réalistes dans les rues de Paris, portés par la musique. — https://www.youtube.com/watch?v=6_cOEGE9Ruo
 - Vidéo « Bande démo 2026, version longue » (2026, 4:06) : Un tour d'horizon de nos réalisations vidéo en IA. — https://www.youtube.com/watch?v=KfcYw3yPQNQ
 - Vidéo « Bande démo 2026, version courte » (2026, 3:38) : Le même parcours, en plus resserré. — https://www.youtube.com/watch?v=yG6cVrpI_WA
 
@@ -1047,7 +1048,7 @@ Depuis 2024, Alexandre Stopnicki écrit, filme, met en musique et monte avec des
 - Vidéo « Le programme de l'amour » (2025, 3:51) : Une IA découvre l'humanité, et ce que veut dire aimer. — https://www.youtube.com/watch?v=HLUH1fxOFZo
 - Vidéo « Le clip du podcast Choucroute Citron » (2025, 3:18) : Alex, ses invités et les IA-nimatrices, entièrement en images IA. — https://www.youtube.com/watch?v=qoEDtP7cRVg
 
-[Les vingt vidéos →](/studio/videos/)
+[Les vingt et une vidéos →](/studio/videos/)
 
 ## Deux podcasts
 

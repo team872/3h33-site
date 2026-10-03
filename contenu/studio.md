@@ -18,7 +18,7 @@ chapo: "Depuis 2024, Alexandre Stopnicki écrit, filme, met en musique et monte 
 @video HLUH1fxOFZo | Le programme de l'amour | 2025-06-15 | 3:51 | Une IA découvre l'humanité, et ce que veut dire aimer.
 @video qoEDtP7cRVg | Le clip du podcast Choucroute Citron | 2025-09-01 | 3:18 | Alex, ses invités et les IA-nimatrices, entièrement en images IA.
 
-[Les vingt vidéos →](/studio/videos/)
+[Les vingt et une vidéos →](/studio/videos/)
 
 ## Deux podcasts
 
