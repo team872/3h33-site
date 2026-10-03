@@ -41,7 +41,6 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 - [Formation pro du digital – Agence 3h33](/archives/formation-content-marketing/) — Formation pro du digital – Agence 3h33 — archive de l'agence 3h33, conservée telle qu'elle
 - [Formation réseaux sociaux](/archives/formations-e-marketing/formation-reseaux-sociaux/) — Formation aux médias sociaux par la pratique : Facebook, Twitter, LinkedIn, blogs et vidéo
 - [Formation « Comment communiquer sur internet ? »](/archives/formations-e-marketing/formation-comment-communiquer-sur-internet/) — Une formation pour choisir sa stratégie de communication sur internet : site, blog, réseau
-- [Formations 3h33](/archives/les-formations-chez-3h33/) — CHOISISSEZ VOTRE PROFIL Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmo
 - [Formations E-Marketing Digital – Toutes les formations innovantes de 3](/archives/formations-e-marketing/) — Toutes les formations innovantes en Marketing Digital de 3h33 3h33 est une société spécial
 - [Formations Marketing Digital et E-Pédagogie](/archives/3h33-e-pedagogie-formations-marketing-digital/) — 3H33 AGENCE & FORMATIONS AU MARKETING DIGITAL 3h33 est un organisme de formation spécialis
 - [Formations au Marketing Digital & Agence 2.0](/archives/3h33-formations-e-marketing-et-conseil-en-strategie-digitale/) — vc_row vc_column width= »1/1″ rev_slider_vc alias= »main_slider » tricker /rev_slider_vc /
