@@ -102,7 +102,7 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 ## Studio
 - [Le studio : films, clips et podcasts faits avec l'IA](/studio/) — Courts métrages, clips, podcasts et comédiens virtuels : ce que le studio 3h33 et Alexandr
 - [Les podcasts d'Alexandre Stopnicki](/podcasts/) — Choucroute Citron, le podcast où des IA interviewent des invités en direct, et Les Voix de
-- [Les vidéos IA d'Alexandre Stopnicki](/studio/videos/) — Vingt films, clips et courts métrages réalisés avec l'IA par Alexandre Stopnicki et le stu
+- [Les vidéos IA d'Alexandre Stopnicki](/studio/videos/) — Vingt et un films, clips et courts métrages réalisés avec l'IA par Alexandre Stopnicki et 
 - [Studio créatif](/studios-creatifs-multi-services/) — Le studio 3h33 écrit, produit et monte avec l'IA : films entiers, vidéos de marque, musiqu
 
 ## Vibe coding
