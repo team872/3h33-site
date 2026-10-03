@@ -22,9 +22,11 @@ Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes 
 
 - [L'IA en entreprise : les réponses aux questions qu'on nous pose](https://3h33.com/ia-en-entreprise/): Par où commencer, quels usages, quels modèles, que faire des données, ce que demande l'AI Act, ce que change le vibe coding : nos réponses aux entreprises.
 - [LMA : le Learning Management Agentique](https://3h33.com/lma-learning-management-agentique/): Le LMA, Learning Management Agentique, succède au LMS : une plateforme où des agents retrouvent, expliquent et interrogent l'apprenant.
+- [No-code, low-code ou vibe coding : lequel choisir ?](https://3h33.com/no-code/): Bubble, Airtable, Zapier, Power Apps ou une IA qui écrit le code : ce que chaque approche permet, ce qu'elle coûte à terme, et comment choisir pour votre entreprise.
 
 ## Articles
 
+- [Le Deuxième Monde : le métavers de Canal+, dès 1997](https://3h33.com/deuxieme-monde/): En 1997, Canal+, Cryo et Numériland ouvraient un Paris en 3D peuplé d'avatars, avec boutiques et panneaux publicitaires. Récit d'un pionnier du métavers.
 - [33 conseils dont vous pourriez vous inspirer](https://3h33.com/blog/33-conseils-dont-vous-pourriez-vous-inspirer-en-2022/): Trente-trois habitudes de travail, à prendre ou à laisser, rassemblées pour bien commencer une année.
 - [Tout comprendre sur Pokémon GO](https://3h33.com/blog/comprendre-pokemon-go/): Le jeu qui a fait sortir des millions de gens dans la rue, expliqué : règles, mécanique, et ce qu'il annonçait.
 - [Voulez-vous connaître l'avenir ?](https://3h33.com/blog/connaitre-l-avenir/): Une sélection d'interventions où des chercheurs et des entrepreneurs décrivent ce qui vient. Beaucoup se sont réalisées depuis.

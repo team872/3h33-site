@@ -19,6 +19,7 @@ Il porte le nom d'*Un truc à dire*, l'ancienne lettre de l'agence.
 
 ## Les articles
 
+- **[Le Deuxième Monde, le métavers de Canal+ dès 1997](/deuxieme-monde/)** · 1997, raconté en 2022 — Un Paris en 3D peuplé d'avatars, avec boutiques de marques et panneaux flottants. Alexandre Stopnicki en tenait la régie publicitaire.
 - **[L'IA au service de Notion](/blog/lia-au-service-de-notion/)** · 2024 — Comment une IA installée dans son espace de travail change la façon de prendre des notes, de rédiger et de retrouver.
 - **[Voulez-vous connaître l'avenir ?](/blog/connaitre-l-avenir/)** · 2024 — Une sélection d'interventions où des chercheurs et des entrepreneurs décrivent ce qui vient. Beaucoup de leurs prédictions se sont réalisées depuis.
 - **[Écrire un article en moins d'une heure](/blog/how-to-write-a-blog-post-in-under-an-hour-thanks-to-synthetic-content/)** · 2023 — Un article écrit avec l'IA, qui explique en même temps comment il a été écrit. Une démonstration en boucle.

@@ -47,7 +47,7 @@ Le vibe coding ne dispense pas de savoir ce qu'on veut. Il ne dispense pas non p
 
 Beaucoup d'entreprises sont arrivées à ces questions par le no-code, ces plateformes où l'on assemble des briques sans écrire une ligne. Le no-code reste utile pour des besoins simples et bien cadrés.
 
-Le vibe coding va plus loin : pas de brique imposée, pas de limite de forme, pas de dépendance à un éditeur. Si vous êtes venu chercher du no-code, regardez d'abord ce que la [méthode Forge](/forge/) produit en une demi-journée.
+Le vibe coding va plus loin : pas de brique imposée, pas de limite de forme, pas de dépendance à un éditeur. Si vous êtes venu chercher du no-code, lisez notre [comparatif no-code, low-code et vibe coding](/no-code/), puis regardez ce que la [méthode Forge](/forge/) produit en une demi-journée.
 
 ## Comment on travaille
 
