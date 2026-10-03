@@ -3,18 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>3h33, l'agence de l'IA : masterclass, ateliers et sessions Forge</title>
-<meta name="description" content="3h33 forme vos équipes à l'IA en construisant avec elles des outils qui tournent le lendemain : masterclass, ateliers, sessions Forge, studio créatif. Vibe coding, pour de vrai.">
+<title>3h33, l'agence de l'IA : formation, vibe coding et agents IA</title>
+<meta name="description" content="Agence et organisme de formation en IA générative depuis 2010 : formations, outils sur mesure en vibe coding, agents conversationnels et studio créatif.">
 <link rel="canonical" href="https://3h33.com/">
-<meta property="og:title" content="3h33, l'agence de l'IA">
-<meta property="og:description" content="À l'heure de l'IA, on ne présente plus des idées, on les construit.">
+
+<meta property="og:title" content="3h33, l'agence de l'IA : formation, vibe coding et agents IA">
+<meta property="og:description" content="Agence et organisme de formation en IA générative depuis 2010 : formations, outils sur mesure en vibe coding, agents conversationnels et studio créatif.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://3h33.com/">
 <meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="3h33">
 <meta property="og:image" content="https://3h33.com/medias/partage.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@alexandre3h33">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="3h33 résumé pour les assistants d'IA">
 <link rel="stylesheet" href="/polices/polices.css">
 <style>
 :root{
@@ -388,59 +391,116 @@ html.calme .mots .m>span{transform:none;opacity:1}
   .hero__preuves span{font-size:11.5px}
   .hero .plan--sablier{width:156px;right:8px;top:70px}
 }
+
+/* ================================================================ accueil, refonte du 04/10/2026
+   Moins d'écrans, moins d'effets : la page dit qui est 3h33 et ce qu'elle fait,
+   en texte clair, pour un lecteur pressé comme pour un robot d'IA. */
+.evitement{position:absolute;left:-9999px;top:8px;z-index:100;background:#fff;padding:10px 16px;border-radius:10px}
+.evitement:focus{left:12px}
+.section{padding:96px 28px 0}
+.entree{max-width:760px;margin:0 0 36px}
+.entree h2{margin:12px 0 0}
+.entree p{color:var(--ink-2);font-size:18px;margin:16px 0 0}
+.portes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.porte{background:#fff;border:1px solid var(--trait);border-radius:var(--radius-s);padding:26px 24px;box-shadow:var(--ombre);display:flex;flex-direction:column}
+.porte__n{font-family:var(--mono);font-size:12px;color:var(--acc);font-weight:700;letter-spacing:.1em}
+.porte h3{margin:10px 0 10px;font-size:26px}
+.porte p{color:var(--ink-2);font-size:15.5px;margin:0 0 16px}
+.porte ul{list-style:none;margin:auto 0 0;padding:14px 0 0;border-top:1px solid var(--trait);display:flex;flex-direction:column;gap:8px}
+.porte li a{font-weight:700;font-size:15px;text-decoration:none}
+.porte li a:hover{text-decoration:underline}
+.qui__grille{display:grid;grid-template-columns:280px 1fr;gap:56px;align-items:center;max-width:1040px}
+.qui__photo{margin:0;border-radius:22px;overflow:hidden;border:1px solid var(--trait);box-shadow:0 30px 70px -30px rgba(15,21,36,.35);background:#fff}
+.qui__photo img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+.qui__photo figcaption{padding:12px 16px;font-size:14px;color:var(--ink-2)}
+.qui__photo figcaption b{display:block;color:var(--ink)}
+.qui h2{margin:12px 0 18px;font-size:clamp(28px,3.4vw,44px)}
+.qui p{color:var(--ink-2);font-size:17.5px}
+.confiance{padding-top:96px}
+.refs{max-width:860px;text-align:center;color:var(--ink-2);font-size:16px;margin-top:28px}
+.outils{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.outil{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--trait);border-radius:var(--radius-s);overflow:hidden;box-shadow:var(--ombre);transition:transform .3s var(--ease)}
+.outil:hover{transform:translateY(-3px)}
+.outil img{display:block;width:100%;height:auto;aspect-ratio:8/5;object-fit:cover;border-bottom:1px solid var(--trait)}
+.outil b{padding:10px 16px 0;font-size:17px}
+.outil span{padding:0 16px 16px;font-size:14px;color:var(--ink-2);line-height:1.45}
+.faq-accueil{display:grid;grid-template-columns:1fr 1.5fr;gap:48px;align-items:start}
+.faq-liste details{border-top:1px solid var(--trait);padding:18px 0}
+.faq-liste details:last-child{border-bottom:1px solid var(--trait)}
+.faq-liste summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font-weight:700;font-size:17.5px;line-height:1.35}
+.faq-liste summary::-webkit-details-marker{display:none}
+.faq-liste summary::after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--trait);display:grid;place-items:center;transition:transform .3s var(--ease),background .3s}
+.faq-liste details[open] summary::after{transform:rotate(45deg);background:var(--or);border-color:var(--or)}
+.faq-liste details p{color:var(--ink-2);font-size:16px;margin:12px 0 0;max-width:62ch}
+.guides{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.guide{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:var(--ink);padding:22px 24px;border-radius:var(--radius-s);border:1px solid var(--trait);background:var(--ground-2);transition:background .3s,border-color .3s}
+.guide:hover{background:#fff;border-color:var(--acc)}
+.guide b{font-size:18px}
+.guide span{color:var(--ink-2);font-size:15px}
+.final{margin-top:110px}
+.burger-accueil{display:none;font:inherit;font-size:22px;line-height:1;background:#fff;border:1px solid var(--trait);border-radius:999px;width:42px;height:42px;cursor:pointer;color:var(--ink)}
+.final .espace{height:240px}
+@media (max-width:980px){.burger-accueil{display:inline-grid;place-items:center}
+  .nav.ouvert{display:flex;position:fixed;top:70px;left:12px;right:12px;flex-direction:column;gap:0;background:#fff;padding:6px 20px 12px;border:1px solid var(--trait);border-radius:18px;box-shadow:var(--ombre)}
+  .nav.ouvert a{padding:13px 0;border-bottom:1px solid var(--trait);font-size:17px;border-radius:0}
+  .nav.ouvert a:last-child{border-bottom:0}}
+.nav__contact{display:none}
+@media (max-width:400px){.entete .btn--petit{display:none}.nav.ouvert .nav__contact{display:block;color:var(--acc);font-weight:800}}
+@media (max-width:560px){.bouton-calme{display:none}
+  .outil{display:grid;grid-template-columns:112px 1fr;grid-template-rows:auto 1fr;gap:0}
+  .outil img{grid-row:1/3;height:100%;aspect-ratio:auto;border-bottom:0;border-right:1px solid var(--trait)}
+  .outil b{padding:12px 14px 0}.outil span{padding:4px 14px 12px;font-size:13.5px}}
+@media (max-width:1100px){.portes{grid-template-columns:repeat(2,minmax(0,1fr))}.outils{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:860px){.qui__grille,.faq-accueil{grid-template-columns:1fr;gap:28px}.qui__photo{max-width:260px}.guides{grid-template-columns:1fr 1fr}.section{padding-top:72px}}
+@media (max-width:560px){.portes,.outils,.guides{grid-template-columns:1fr}.section{padding-left:20px;padding-right:20px}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://3h33.com/#organisation","name":"3h33","alternateName":"3h33, l'agence de l'IA","url":"https://3h33.com/","logo":"https://3h33.com/medias/partage.jpg","description":"Agence et organisme de formation spécialisés dans les usages de l'intelligence artificielle générative : masterclass, ateliers, sessions Forge, studio créatif.","foundingDate":"2010","email":"info@3h33.fr","areaServed":"FR","founder":{"@type":"Person","@id":"https://3h33.com/#alexandre"},"sameAs":["https://alexandrestopnicki.com","https://fr.linkedin.com/in/alexandrestopnicki","https://twitter.com/alexandre3h33","https://www.facebook.com/3h33.FORMATIONS","https://instagram.com/alexandre3h33","https://choucroute-citron.com"],"knowsAbout":["Intelligence artificielle générative","Vibe coding","Formation professionnelle","Agents conversationnels","Learning Management Agentique","Production audiovisuelle par IA"]},{"@type":"Person","@id":"https://3h33.com/#alexandre","name":"Alexandre Stopnicki","jobTitle":"Fondateur de 3h33, formateur et conférencier en intelligence artificielle","url":"https://alexandrestopnicki.com","image":"https://3h33.com/medias/alexandre-stopnicki.jpg","worksFor":{"@id":"https://3h33.com/#organisation"},"sameAs":["https://fr.linkedin.com/in/alexandrestopnicki","https://alexandre.ai"]},{"@type":"WebSite","@id":"https://3h33.com/#site","url":"https://3h33.com/","name":"3h33","inLanguage":"fr-FR","publisher":{"@id":"https://3h33.com/#organisation"}},{"@type":"WebPage","@id":"https://3h33.com/#accueil","url":"https://3h33.com/","name":"3h33, l'agence de l'IA","isPartOf":{"@id":"https://3h33.com/#site"},"about":{"@id":"https://3h33.com/#organisation"},"description":"3h33 forme vos équipes à l'IA en construisant avec elles des outils qui tournent le lendemain."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Faut-il une équipe technique pour travailler avec 3h33 ?","acceptedAnswer":{"@type":"Answer","text":"Non. Les ateliers et la Forge sont faits pour des équipes métier. Ce qui est construit vous est livré documenté, et l'on vous apprend à le faire vivre."}},{"@type":"Question","name":"Que se passe-t-il pendant une session Forge ?","acceptedAnswer":{"@type":"Answer","text":"Une demi-journée en visioconférence : on part d'un besoin réel, on construit en direct l'agent, l'automatisation ou le tableau de bord, puis une phase de consolidation le rend propre et documenté."}},{"@type":"Question","name":"Nos données restent-elles chez nous ?","acceptedAnswer":{"@type":"Answer","text":"Oui quand c'est nécessaire : nous savons travailler avec des modèles hébergés en Europe ou installés chez vous. La question est posée dès le premier échange."}},{"@type":"Question","name":"Travaillez-vous avec les collectivités ?","acceptedAnswer":{"@type":"Answer","text":"Oui, formation des agents et construction d'outils pour plusieurs communes, dont la mairie de Laxou. Le point d'entrée dédié est mairie.ai."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","EducationalOrganization"],"@id":"https://3h33.com/#organisation","name":"3h33","alternateName":["3h33, l'agence de l'IA","3H33"],"url":"https://3h33.com/","logo":"https://3h33.com/medias/partage.jpg","image":"https://3h33.com/medias/partage.jpg","description":"Agence et organisme de formation français spécialisés dans les usages de l'intelligence artificielle générative en entreprise : formations, outils sur mesure en vibe coding, agents conversationnels et studio créatif.","slogan":"On apprend l'IA en construisant.","foundingDate":"2010","founder":{"@id":"https://3h33.com/#alexandre"},"email":"info@3h33.fr","areaServed":"FR","contactPoint":{"@type":"ContactPoint","contactType":"commercial","url":"https://3h33.com/contact/","availableLanguage":["fr","en"]},"knowsAbout":["Intelligence artificielle générative","Formation à l'intelligence artificielle","Vibe coding","Agents conversationnels","AI Act","IA souveraine","Learning Management Agentique","Production audiovisuelle par IA"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Masterclass IA","url":"https://3h33.com/masterclass-ia/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ateliers de formation à l'IA","url":"https://3h33.com/ateliers-formation/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Formation Claude","url":"https://3h33.com/formation-claude/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Méthode Forge","url":"https://3h33.com/forge/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Vibe coding : outils sur mesure","url":"https://3h33.com/vibe-coding/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Chatbots et agents IA","url":"https://3h33.com/chatbots/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Coaching IA des dirigeants","url":"https://3h33.com/coaching-ia-dirigeants/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Studio créatif IA","url":"https://3h33.com/studio/","provider":{"@id":"https://3h33.com/#organisation"}}}],"sameAs":["https://alexandrestopnicki.com","https://fr.linkedin.com/in/alexandrestopnicki","https://twitter.com/alexandre3h33","https://www.facebook.com/3h33.FORMATIONS","https://instagram.com/alexandre3h33","https://choucroute-citron.com","https://negovox.com","https://media-training-vox.com"]},{"@type":"Person","@id":"https://3h33.com/#alexandre","name":"Alexandre Stopnicki","jobTitle":"Fondateur de 3h33, formateur et conférencier en intelligence artificielle","description":"Fondateur de 3h33. Dans le numérique depuis trente ans : en 1997, sa société Numériland tenait la régie publicitaire du Deuxième Monde, le métavers de Canal+. Construit des chatbots depuis 2017 ; chroniqueur de l'émission The Artificial Intelligence Society.","url":"https://alexandrestopnicki.com","image":"https://3h33.com/medias/alexandre-stopnicki.jpg","worksFor":{"@id":"https://3h33.com/#organisation"},"knowsAbout":["Intelligence artificielle générative","Vibe coding","Pédagogie","Agents conversationnels","Métavers"],"sameAs":["https://fr.linkedin.com/in/alexandrestopnicki","https://alexandre.ai","https://alexandrestopnicki.com"]},{"@type":"WebSite","@id":"https://3h33.com/#site","url":"https://3h33.com/","name":"3h33","inLanguage":"fr-FR","publisher":{"@id":"https://3h33.com/#organisation"}},{"@type":"WebPage","@id":"https://3h33.com/#accueil","url":"https://3h33.com/","name":"3h33, l'agence de l'IA","description":"Agence et organisme de formation en IA générative depuis 2010 : formations, outils sur mesure en vibe coding, agents conversationnels et studio créatif.","inLanguage":"fr-FR","isPartOf":{"@id":"https://3h33.com/#site"},"about":{"@id":"https://3h33.com/#organisation"},"primaryImageOfPage":"https://3h33.com/medias/partage.jpg"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qu'est-ce que 3h33 ?","acceptedAnswer":{"@type":"Answer","text":"3h33 est une agence et un organisme de formation français, créé en 2010 par Alexandre Stopnicki, spécialisé dans les usages de l'intelligence artificielle générative en entreprise. Elle forme les équipes, construit avec elles des outils d'IA en vibe coding et des agents conversationnels, et produit des contenus avec son studio créatif."}},{"@type":"Question","name":"Qui est Alexandre Stopnicki ?","acceptedAnswer":{"@type":"Answer","text":"Le fondateur de 3h33, formateur et conférencier en intelligence artificielle. Il travaille dans le numérique depuis trente ans : en 1997, sa société Numériland tenait la régie publicitaire du Deuxième Monde, le métavers de Canal+. Il construit des chatbots depuis 2017 et commente l'actualité de l'IA dans l'émission The Artificial Intelligence Society."}},{"@type":"Question","name":"Quelles formations à l'IA propose 3h33 ?","acceptedAnswer":{"@type":"Answer","text":"Une masterclass de deux heures pour acculturer jusqu'à cent personnes, des ateliers d'un à deux jours où six à quinze participants pratiquent sur leurs propres dossiers, une formation Claude d'un ou deux jours, et des rendez-vous de veille réguliers. Toutes partent des métiers et des cas réels."}},{"@type":"Question","name":"Qu'est-ce que la méthode Forge ?","acceptedAnswer":{"@type":"Answer","text":"Une session Forge est une demi-journée de co-construction en visioconférence, préparée en amont et consolidée après. On y fabrique avec vos équipes un agent, une automatisation ou un tableau de bord, documenté et utilisable dès le lendemain. L'objectif est de vous rendre autonomes, pas dépendants."}},{"@type":"Question","name":"Qu'est-ce que le vibe coding ?","acceptedAnswer":{"@type":"Answer","text":"Fabriquer un logiciel en décrivant en français ce qu'on veut, pendant qu'une IA écrit le code. 3h33 construit ainsi ses propres applications depuis 2024, et les outils de ses clients, dont le code leur appartient. Voir le vibe coding en entreprise."}},{"@type":"Question","name":"La formation à l'IA est-elle obligatoire ?","acceptedAnswer":{"@type":"Answer","text":"L'article 4 de l'AI Act demande aux entreprises qui utilisent l'IA de prendre des mesures pour développer la maîtrise de l'IA de leurs équipes. Depuis l'omnibus numérique de juillet 2026, c'est une obligation de moyens et non de résultat. Le détail."}},{"@type":"Question","name":"Faut-il une équipe technique pour travailler avec 3h33 ?","acceptedAnswer":{"@type":"Answer","text":"Non. Formations, ateliers et sessions Forge sont conçus pour des équipes métier. Ce qui est construit est livré documenté, et l'on vous apprend à le faire vivre."}},{"@type":"Question","name":"Nos données restent-elles chez nous ?","acceptedAnswer":{"@type":"Answer","text":"Oui quand c'est nécessaire : nous travaillons avec des modèles hébergés en Europe ou installés sur vos propres serveurs, et la question est posée dès le premier échange. Voir IA locale et souveraine."}},{"@type":"Question","name":"Travaillez-vous avec les collectivités ?","acceptedAnswer":{"@type":"Answer","text":"Oui : formation des agents et construction d'outils pour plusieurs communes, dont la mairie de Laxou. Le point d'entrée dédié est mairie.ai."}},{"@type":"Question","name":"Combien ça coûte ?","acceptedAnswer":{"@type":"Answer","text":"Masterclass, ateliers et sessions Forge ont chacun un tarif fixe, annoncé avant tout engagement, et le devis tient sur une page. Nous intervenons à distance comme en présentiel, et le premier échange de vingt minutes est gratuit."}}]}]}</script>
 <script defer src="https://stats.3h33.com/script.js" data-website-id="9456f661-e1ea-4c9d-90bc-dec50970f3b4" data-domains="3h33.com,nouveau.3h33.com"></script>
 </head>
 <body>
-<canvas id="verre" aria-hidden="true"></canvas>
-<div class="progress" aria-hidden="true"></div>
-<div class="curseur" id="curseur" aria-hidden="true"></div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
 <header class="entete" id="entete">
   <div class="entete__in">
     <a class="marque" href="/" aria-label="3h33, accueil">
       <span class="logo">3h</span><span class="marque__nom">3h33</span>
       <span class="heure">il est <b id="heure">3h33</b></span>
     </a>
-    <nav class="nav" aria-label="Navigation principale">
+    <nav class="nav" id="nav-principale" aria-label="Navigation principale">
       <a href="/formations/">Formations</a>
       <a href="/agence/">Agence</a>
       <a href="/vibe-coding/">Vibe coding</a>
       <a href="/studio/">Studio</a>
       <a href="/blog/">Blog</a>
+      <a class="nav__contact" href="/contact/">Nous contacter</a>
     </nav>
     <div class="entete__actions">
       <button class="bouton-calme" type="button" id="btn-calme" aria-pressed="false" title="Figer les animations">
         <span class="bouton-calme__t">Calmer</span> <span class="etat">off</span>
       </button>
       <a class="btn btn--petit" href="/contact/">Nous contacter</a>
+      <button class="burger-accueil" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-principale">☰</button>
     </div>
   </div>
 </header>
 
-<main>
+<main id="contenu">
   <section class="hero" id="haut">
     <div class="plan plan--sablier" data-rate="0.05" aria-hidden="true"><div class="boite"><canvas data-sablier data-duree="28" data-debit="52"></canvas></div></div>
-    <div class="oiseaux" aria-hidden="true">
-      <div class="oiseau" style="--d:34s;--t:10px"><svg viewBox="0 0 34 14"><path d="M1 12 Q 9 2 17 10 Q 25 2 33 12"/></svg></div>
-      <div class="oiseau" style="--d:41s;--t:60px;animation-delay:-14s;transform:scale(.7)"><svg viewBox="0 0 34 14"><path d="M1 12 Q 9 2 17 10 Q 25 2 33 12"/></svg></div>
-      <div class="oiseau" style="--d:29s;--t:120px;animation-delay:-22s;transform:scale(.55)"><svg viewBox="0 0 34 14"><path d="M1 12 Q 9 2 17 10 Q 25 2 33 12"/></svg></div>
-    </div>
     <div class="plan plan--loin" data-rate="0.12" data-souris="6"><svg id="svg-loin" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
     <div class="plan plan--milieu" data-rate="0.26" data-souris="12"><svg id="svg-milieu" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
     <div class="hero__contenu">
       <div class="hero__texte">
-        <span class="chip"><span class="dot"></span>3h33 · l'agence de l'IA</span>
-        <h1 class="mots" data-mots>À l'heure de l'IA, on ne présente plus des idées, on les construit.</h1>
-        <p class="sous">Vos équipes apprennent l'IA en fabriquant. Masterclass, ateliers, sessions Forge : on repart avec un outil, pas avec des notes.</p>
+        <span class="chip"><span class="dot"></span>Agence et formation en IA · depuis 2010</span>
+        <h1 class="mots" data-mots>Formez vos équipes à l'IA et créez vos propres outils</h1>
+        <p class="sous">3h33 est une agence et un organisme de formation spécialisés dans l'intelligence artificielle générative. Formations, outils sur mesure en vibe coding, agents conversationnels, studio créatif : vous repartez avec quelque chose qui fonctionne, pas avec des notes.</p>
         <div class="hero__actions">
-          <a class="btn" href="#demontrer" data-aimant>Voir les cinq outils <span class="fl">→</span></a>
-          <a class="lien lien--hero" href="/contact/">Nous écrire</a>
+          <a class="btn" href="/contact/">Réserver un échange de 20 min <span class="fl">→</span></a>
+          <a class="lien lien--hero" href="#portes">Voir nos offres</a>
         </div>
         <ul class="hero__preuves">
-          <li><b>34</b><span>sites et outils<br>en ligne</span></li>
-          <li><b>16</b><span>ans d'agence</span></li>
-          <li><b>½</b><span>journée<br>pour livrer</span></li>
+          <li><b>2010</b><span>l'année de création de l'agence</span></li>
+          <li><b>38</b><span>sites et applications en ligne</span></li>
+          <li><b>½</b><span>journée pour un premier outil</span></li>
         </ul>
       </div>
     </div>
@@ -448,168 +508,140 @@ html.calme .mots .m>span{transform:none;opacity:1}
     <div class="hero__sol"></div>
   </section>
 
-  <section class="intro bloc">
-    <div class="intro__grille">
-      <div>
-        <p class="intro__p" data-intro>La plupart des agences vous expliqueront l'IA. Nous, on la met entre vos mains, et on construit avec vous quelque chose qui servira dès le lendemain.</p>
-        <p class="intro__p" data-intro>Une conférence sur l'IA laisse une salle impressionnée et un lundi matin inchangé. Nous partons d'un besoin réel, nous construisons devant vous, nous documentons, nous livrons. C'est ce qu'on appelle le vibe coding, et ce n'est pas un slogan.</p>
-        <p class="intro__p" data-intro>Vous n'avez besoin d'aucune équipe technique. Alexandre Stopnicki accompagne entreprises, écoles et mairies depuis seize ans, et construit lui-même tout ce qu'il enseigne.</p>
-      </div>
-      <div class="portrait reveal"><div class="carte-photo" data-tilt><img src="/medias/alexandre-stopnicki.jpg" alt="Alexandre Stopnicki, fondateur de 3h33" width="560" height="560" width="600" height="600"><div class="legende"><b>Alexandre Stopnicki</b>fondateur de 3h33, formateur et constructeur</div></div></div>
+  <section class="bloc section" id="portes" aria-labelledby="portes-titre">
+    <div class="entree">
+      <span class="eyebrow">Nos offres</span>
+      <h2 id="portes-titre">Ce que 3h33 fait pour vous</h2>
+    </div>
+    <div class="portes">
+      <article class="porte">
+        <span class="porte__n">01</span>
+        <h3>Former</h3>
+        <p>Une masterclass de deux heures pour toute l'organisation, des ateliers d'un à deux jours sur les vrais dossiers de chaque métier, une formation à Claude pour aller plus loin.</p>
+        <ul>
+          <li><a href="/masterclass-ia/">Masterclass IA</a></li>
+          <li><a href="/ateliers-formation/">Ateliers de formation</a></li>
+          <li><a href="/formation-claude/">Formation Claude</a></li>
+          <li><a href="/formation-ia-obligatoire-ai-act/">AI Act et formation</a></li>
+        </ul>
+      </article>
+      <article class="porte">
+        <span class="porte__n">02</span>
+        <h3>Construire</h3>
+        <p>En une demi-journée, nous fabriquons avec vos équipes un agent, une automatisation ou un tableau de bord. Le code est à vous, documenté, prêt le lendemain.</p>
+        <ul>
+          <li><a href="/forge/">Méthode Forge</a></li>
+          <li><a href="/vibe-coding/">Vibe coding</a></li>
+          <li><a href="/chatbots/">Chatbots et agents IA</a></li>
+          <li><a href="/ia-locale-souveraine/">IA locale et souveraine</a></li>
+        </ul>
+      </article>
+      <article class="porte">
+        <span class="porte__n">03</span>
+        <h3>S'entraîner</h3>
+        <p>Négocier, convaincre un comité, répondre à une journaliste : une IA vocale joue votre interlocuteur, vous coupe, relance, puis vous rend un débrief noté.</p>
+        <ul>
+          <li><a href="/coaching-ia-dirigeants/">Coaching des dirigeants</a></li>
+          <li><a href="https://negovox.com/">NegoVox, pour la vente</a></li>
+          <li><a href="https://media-training-vox.com/">Media Training Vox</a></li>
+        </ul>
+      </article>
+      <article class="porte">
+        <span class="porte__n">04</span>
+        <h3>Créer avec de l'IA</h3>
+        <p>Le studio écrit, tourne, compose et monte avec l'IA : films, vidéos de marque, musiques originales, comédiens virtuels qui parlent toutes les langues.</p>
+        <ul>
+          <li><a href="/studio/">Le studio</a></li>
+          <li><a href="/studio/videos/">Vidéos IA</a></li>
+          <li><a href="/synthetic-content/">Comédiens virtuels</a></li>
+        </ul>
+      </article>
     </div>
   </section>
 
-  <section class="confiance">
-    <div class="titre-conf"><span class="chip"><span class="dot"></span>Ils nous font confiance</span></div>
+  <section class="bloc section qui" aria-labelledby="qui-titre">
+    <div class="qui__grille">
+      <figure class="qui__photo">
+        <img src="/medias/alexandre-stopnicki.jpg" alt="Alexandre Stopnicki, fondateur de 3h33" width="560" height="560" loading="lazy">
+        <figcaption><b>Alexandre Stopnicki</b>fondateur de 3h33</figcaption>
+      </figure>
+      <div>
+        <span class="eyebrow">Le fondateur</span>
+        <h2 id="qui-titre">Qui est derrière 3h33 ?</h2>
+        <p>Alexandre Stopnicki travaille dans le numérique depuis trente ans : dès 1997, sa société Numériland tenait la régie publicitaire du <a href="/deuxieme-monde/">Deuxième Monde</a>, le Paris en 3D de Canal+. Il fonde 3h33 en 2010. Il construit des chatbots depuis 2017, cinq ans avant ChatGPT, et commente l'actualité de l'IA dans l'émission <i>The Artificial Intelligence Society</i>.</p>
+        <p>Entreprises, écoles et mairies : il construit lui-même tout ce qu'il enseigne, et vos équipes n'ont besoin d'aucune compétence technique. <a href="/a-propos/">En savoir plus sur 3h33</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="confiance" aria-labelledby="conf-titre">
+    <div class="titre-conf"><span class="chip" id="conf-titre"><span class="dot"></span>Ils nous font confiance</span></div>
     <div class="defile" id="defile-1"></div>
     <div class="defile deux" id="defile-2"></div>
+    <p class="refs bloc">Et des collectivités, comme la <b>mairie de Laxou</b>, dont les agents ont leur outil construit en séance (<a href="https://mairie.ai/">mairie.ai</a>), des plateformes comme <a href="https://sator.fr">Sator</a>, devenue un <a href="/lma-learning-management-agentique/">LMA</a> qui retrouve la bonne seconde dans des centaines d'heures de cours, ou <a href="https://subsidium.world">Subsidium</a>, notre plus grande plateforme. <a href="/realisations-chatbots-agents/">Dix ans de réalisations →</a></p>
   </section>
 
-  <section class="chap bloc" id="demontrer">
-    <div class="tete reveal">
-      <div><span class="chip"><span class="dot"></span>Démontrer</span><h2 class="mots" data-mots>Cinq outils. Tout est en ligne.</h2></div>
-      <p class="desc">Construits en vibe coding, en service aujourd'hui. Cliquez sur une vignette, vous êtes dessus. La méthode, on la pratique ensemble en session Forge.</p>
+  <section class="bloc section" aria-labelledby="outils-titre">
+    <div class="entree">
+      <span class="eyebrow">Applications</span>
+      <h2 id="outils-titre">Cinq applications que nous avons construites</h2>
+      <p>Toutes fabriquées en vibe coding, toutes utilisées chaque jour. <a href="/galaxie/">Les 38 sites de la galaxie 3h33 →</a></p>
     </div>
-    <div class="reveal">
-      <div class="onglets" role="tablist" aria-label="Démonstrations">
-        <button role="tab" aria-selected="true" data-d="0">NegoVox</button>
-        <button role="tab" aria-selected="false" data-d="1">chapitre.ai</button>
-        <button role="tab" aria-selected="false" data-d="2">BotMoiLeQi</button>
-        <button role="tab" aria-selected="false" data-d="3">ListenEngine</button>
-        <button role="tab" aria-selected="false" data-d="4">IA Conforme</button>
-      </div>
-      <div class="scene spot" id="scene" data-spot>
-        <div class="diapo on" data-legende="NegoVox · s'entraîner cent fois avant le vrai rendez-vous">
-          <div><span class="tag">voix · 2 minutes</span><h3 style="margin-top:14px">Le rendez-vous décisif se joue avant le rendez-vous.</h3><p class="texte">Votre commercial affronte cent fois le client le plus difficile, à voix haute, face à quelqu'un qui résiste vraiment. Débrief immédiat sur douze compétences, et il recommence jusqu'à ce que ça passe. Le vrai entretien n'est plus le premier essai.</p><a class="vignette vignette--demo" href="https://negovox.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>negovox.com</em></span><img src="/vignettes/negovox.jpg" alt="La page d'accueil de NegoVox" loading="lazy" width="760" height="412"></a></div>
-          <div class="visuel"><div class="ondes" aria-hidden="true"><span style="animation-delay:0s"></span><span style="animation-delay:.1s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:.15s"></span><span style="animation-delay:.05s"></span><span style="animation-delay:.25s"></span><span style="animation-delay:.35s"></span><span style="animation-delay:.2s"></span><span style="animation-delay:.1s"></span><span style="animation-delay:.3s"></span><span style="animation-delay:0s"></span></div><div class="repl"><b>Vous :</b> « Cette pièce est à 4 200 €. »</div><div class="repl"><b>La cliente IA :</b> « Je l'ai vue à 3 600 rue Saint-Honoré. Qu'est-ce qui justifie 600 € de plus ? »</div></div>
-        </div>
-        <div class="diapo" data-legende="chapitre.ai · l'IA-biographe qui recueille une vie">
-          <div><span class="tag">voix → livre</span><h3 style="margin-top:14px">Vos parents ont une histoire. Personne ne l'a écrite.</h3><p class="texte">Une IA-biographe les interroge à la voix, patiemment, séance après séance, et en fait un livre. Ils corrigent en parlant, sans jamais toucher un clavier. Leurs souvenirs restent privés, hébergés en France.</p><a class="vignette vignette--demo" href="https://chapitre.ai" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>chapitre.ai</em></span><img src="/vignettes/chapitre.jpg" alt="La page d'accueil de chapitre.ai" loading="lazy" width="760" height="412"></a></div>
-          <div class="visuel"><div class="repl"><b>Vous :</b> « Ma grand-mère tenait l'épicerie de la rue des Carmes… »</div><div class="page-livre"><div class="chapitre">Chapitre 3</div><div class="titre-livre">La rue des Carmes</div><p>On entrait par la cour. L'épicerie sentait le café moulu et le savon de Marseille, et la cloche de la porte sonnait deux fois, comme si elle hésitait.</p></div></div>
-        </div>
-        <div class="diapo" data-legende="BotMoiLeQi · le fait du jour, en 90 secondes">
-          <div><span class="tag">90 secondes</span><h3 style="margin-top:14px">Un fait surprenant, chaque matin</h3><p class="texte">Quatre-vingt-dix secondes, à lire ou à écouter. Trouvé, vérifié, sourcé, mis en voix, publié : la chaîne entière tourne seule, tous les jours depuis des mois.</p><a class="vignette vignette--demo" href="https://botmoileqi.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>botmoileqi.com</em></span><img src="/vignettes/botmoileqi.jpg" alt="La page d'accueil de BotMoiLeQi" loading="lazy" width="760" height="412"></a></div>
-          <div class="visuel"><div class="repl"><b>Ce matin :</b> « Les fourmis n'ont pas de poumons. L'air entre par des orifices minuscules répartis le long de leur corps. »</div><div class="audio"><span class="pt"></span><span>À écouter</span><span class="d">1 min 30</span></div></div>
-        </div>
-        </div>
-        <div class="diapo" data-legende="ListenEngine · capitalisez pour de vrai sur votre veille">
-          <div><span class="tag">veille · bientôt en code ouvert</span><h3 style="margin-top:14px">Votre veille devient un cours, des slides, un article.</h3><p class="texte">Newsletters, articles, vidéos, enregistrements : tout arrive au même endroit et plus rien ne se perd. Vous retrouvez ce que vous aviez lu il y a six mois, et vous en fabriquez un contenu qui compte, sourcé.</p><a class="vignette vignette--demo" href="https://listen-engine.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>listen-engine.com</em></span><img src="/vignettes/listen-engine.jpg" alt="La page d'accueil de ListenEngine" loading="lazy" width="760" height="412"></a></div>
-          <div class="visuel"><div class="audio"><span class="pt"></span><span>Ce mois-ci : 34 articles, 9 newsletters, 3 conférences</span><span class="d">tout gardé</span></div><p class="mention" style="margin:0 0 10px">Et voilà ce qu'on en tire, en un clic :</p><ul class="essentiel"><li>Un module de formation de quarante minutes, avec ses sources.</li><li>Un jeu de slides pour le comité de direction.</li><li>Un article de blog, sourcé ligne à ligne.</li></ul></div>
-        </div>
-        <div class="diapo" data-legende="IA Conforme · le RGPD et l'AI Act, expliqués">
-          <div><span class="tag">conformité</span><h3 style="margin-top:14px">Le RGPD et l'AI Act, en clair</h3><p class="texte">Un diagnostic express, un simulateur de risques et un assistant qui cite les textes officiels. Vous savez ce que vous devez faire, et dans quel ordre.</p><a class="vignette vignette--demo" href="https://ia-conforme.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>ia-conforme.com</em></span><img src="/vignettes/ia-conforme.jpg" alt="La page d'accueil d'IA Conforme" loading="lazy" width="760" height="412"></a></div>
-          <div class="visuel"><ul class="etapes"><li><span class="c">✓</span>Usage décrit<span class="r">fait</span></li><li><span class="c">✓</span>Niveau de risque identifié<span class="r">fait</span></li><li class="afaire"><span class="c">!</span>Information des utilisateurs<span class="r">à faire</span></li><li class="afaire"><span class="c">!</span>Registre et documentation<span class="r">à faire</span></li></ul><div class="repl"><b>Prochaine étape :</b> rédiger la mention de transparence, modèle fourni.</div></div>
-        </div>
-      </div>
-      <div class="barre-scene"><button type="button" id="prec" aria-label="Démo précédente">←</button><div class="legende" id="legende"></div><button type="button" id="suiv" aria-label="Démo suivante">→</button></div>
-    </div>
-    <div class="utiles reveal"><span class="eyebrow">Outils utiles, en accès libre</span><a class="util" href="https://3h33.com/verif-nom/">Un nom est-il libre ?<small>14 bases, 3 secondes</small></a><a class="util" href="https://prompts.3h33.org/">Bibliothèque de prompts<small>gratuite</small></a></div>
-  </section>
-
-  <section class="chap bloc" id="creer">
-    <div class="tete reveal">
-      <div><span class="chip"><span class="dot"></span>Créer</span><h2 class="mots" data-mots>Un film, un clip, une musique : dites ce que vous voulez faire ressentir.</h2></div>
-      <p class="desc">Le studio 3h33 écrit, tourne, compose et monte avec l'IA. Des films entiers, des vidéos de marque, des musiques originales, des personnages cohérents d'un plan à l'autre.</p>
-    </div>
-    <div class="flottantes reveal">
-      <div class="carte carte--dessin" data-tilt><img class="carte__img" src="/dessins/flux-studio.jpg" alt="WAWW, le film, croquis au crayon" loading="lazy" width="1400" height="933"><span class="t">FILM · ELFE</span><b>WAWW, le film</b><span>écrit et produit dans le studio ELFE</span></div>
-      <div class="carte carte--dessin" data-tilt><img class="carte__img" src="/dessins/flux-podcast.jpg" alt="Canta Dream, croquis au crayon" loading="lazy" width="1400" height="933"><span class="t">MUSIQUE</span><b>Canta Dream</b><span>compositions originales, voix, arrangements</span></div>
-      <div class="carte carte--dessin" data-tilt><img class="carte__img" src="/dessins/flux-contenus.jpg" alt="alexandre.ai, croquis au crayon" loading="lazy" width="1400" height="933"><span class="t">VIDÉOS</span><b>alexandre.ai</b><span>galerie de vidéos IA, du plan à la séquence</span></div>
-      <div class="carte carte--dessin" data-tilt><img class="carte__img" src="/dessins/flux-agents.jpg" alt="alexandre.photos, croquis au crayon" loading="lazy" width="1400" height="933"><span class="t">IMAGES</span><b>alexandre.photos</b><span>portraits, décors, personnages cohérents</span></div>
-    </div>
-    <h3 style="margin-bottom:14px">Ce qu'on a fait pour un client, raconté officiellement</h3>
-    <div class="preuves">
-      <div class="preuve spot reveal" data-spot><div class="secteur">Sator · formation en ligne</div><dl><dt>Besoin</dt><dd>rendre des centaines d'heures de cours vidéo réellement consultables</dd><dt>Livré</dt><dd>une plateforme qui retrouve la bonne seconde et interroge l'apprenant</dd><dt>Voir</dt><dd><a href="https://sator.fr">sator.fr</a></dd></dl></div>
+    <div class="outils">
+      <a class="outil" href="https://negovox.com/"><img src="/vignettes/negovox.jpg" alt="NegoVox, simulateur d'entraînement vocal pour commerciaux" width="800" height="500" loading="lazy"><b>NegoVox</b><span>Le commercial négocie à voix haute face à un client joué par l'IA, puis reçoit un débrief sur douze compétences.</span></a>
+      <a class="outil" href="https://chapitre.ai/"><img src="/vignettes/chapitre.jpg" alt="chapitre.ai, l'IA-biographe" width="800" height="500" loading="lazy"><b>chapitre.ai</b><span>Une IA-biographe interroge vos parents à la voix, séance après séance, et en fait un livre.</span></a>
+      <a class="outil" href="https://listen-engine.com/"><img src="/vignettes/listen-engine.jpg" alt="ListenEngine, la veille qui devient des contenus" width="800" height="500" loading="lazy"><b>ListenEngine</b><span>Votre veille arrive au même endroit et devient un cours, des diapositives ou un article.</span></a>
+      <a class="outil" href="https://ia-conforme.com/"><img src="/vignettes/ia-conforme.jpg" alt="IA Conforme, le RGPD et l'AI Act expliqués" width="800" height="500" loading="lazy"><b>IA Conforme</b><span>Le RGPD et l'AI Act en clair : diagnostic express et assistant qui cite les textes officiels.</span></a>
+      <a class="outil" href="https://botmoileqi.com/"><img src="/vignettes/botmoileqi.jpg" alt="BotMoiLeQi, le fait du jour en 90 secondes" width="800" height="500" loading="lazy"><b>BotMoiLeQi</b><span>Un fait surprenant chaque matin, trouvé, vérifié, sourcé et mis en voix par une chaîne entièrement automatique.</span></a>
     </div>
   </section>
 
-  <div class="bandeau" aria-hidden="true"><div class="ligne" id="bandeau"><span>Masterclass</span><b>·</b><span>Ateliers</span><b>·</b><span>Forge</span><b>·</b><span>Studio</span><b>·</b><span>Mairies</span><b>·</b><span>Vibe coding</span><b>·</b><span>Masterclass</span><b>·</b><span>Ateliers</span><b>·</b><span>Forge</span><b>·</b><span>Studio</span><b>·</b><span>Mairies</span><b>·</b><span>Vibe coding</span><b>·</b></div></div>
-
-  <section class="chap bloc" id="expliquer" style="padding-top:60px">
-    <div class="tete reveal">
-      <div><span class="chip"><span class="dot"></span>Expliquer</span><h2 class="mots" data-mots>Trois façons d'entrer. Une seule promesse.</h2></div>
-      <p class="desc">Des chiffres calculés, jamais déclarés. Puis trois formats, du plus léger au plus engagé, et la même promesse dans les trois : vous repartez avec quelque chose qui marche.</p>
-    </div>
-    <div class="chiffres">
-      <div class="chiffre reveal"><div class="n" data-cible="34">0</div><div class="l">sites et outils en ligne, construits depuis 2024</div><div class="src">source : galaxie 3h33, vérifié le 02/09/2026</div></div>
-      <div class="chiffre reveal"><div class="n" data-cible="16"><span>0</span><small> ans</small></div><div class="l">d'agence, du marketing digital à l'IA</div><div class="src">source : 2010 → 2026</div></div>
-      <div class="chiffre reveal"><div class="n" data-cible="0.5"><span>0</span><small> journée</small></div><div class="l">de co-construction en visio pour livrer un outil qui tourne</div><div class="src">source : méthode Forge, un module</div></div>
-    </div>
-    <div class="piles" id="piles">
-      <div class="pile spot" data-pile data-spot>
-        <div class="pile__texte"><span class="pile__label">◆ Masterclass · 2 heures</span><div class="pile__titre">Deux heures pour savoir par où commencer.</div><p class="pile__p">On démontre en direct, sur vos propres cas, sans une ligne de jargon. Vos équipes repartent en sachant ce qui les concerne et ce qui ne les concerne pas.</p><div class="pile__pied"><a class="lien" href="/masterclass-ia/">Voir la masterclass</a></div></div>
-        <div class="pile__media pile__media--dessin"><img src="/dessins/flux-masterclass.jpg" alt="Une masterclass devant un petit groupe, croquis au crayon" loading="lazy" width="1400" height="933"></div></div>
+  <section class="bloc section" id="questions" aria-labelledby="faq-titre">
+    <div class="faq-accueil">
+      <div class="entree">
+        <span class="eyebrow">FAQ</span>
+        <h2 id="faq-titre">Ce qu'on nous demande souvent</h2>
+        <p>Et toutes nos réponses sur <a href="/ia-en-entreprise/">l'IA en entreprise</a> : usages, données, coûts, choix des modèles.</p>
       </div>
-      <div class="pile spot" data-pile data-spot>
-        <div class="pile__texte"><span class="pile__label">◆ Ateliers · 1 à 2 jours</span><div class="pile__titre">Vos équipes pratiquent sur leurs vrais dossiers.</div><p class="pile__p">Contenus, données, automatisations : chacun travaille sur ce qui lui prend du temps, avec les outils qu'il gardera. À la fin de la journée, l'usage est installé.</p><div class="pile__pied"><a class="lien" href="/ateliers-formation/">Voir les ateliers</a></div></div>
-        <div class="pile__media pile__media--dessin"><img src="/dessins/flux-atelier.jpg" alt="Deux collègues en atelier sur un ordinateur, croquis au crayon" loading="lazy" width="1400" height="933"></div></div>
+      <div class="faq-liste">
+        <details><summary>Qu'est-ce que 3h33 ?</summary><p>3h33 est une agence et un organisme de formation français, créé en 2010 par Alexandre Stopnicki, spécialisé dans les usages de l'intelligence artificielle générative en entreprise. Elle forme les équipes, construit avec elles des outils d'IA en vibe coding et des agents conversationnels, et produit des contenus avec son studio créatif.</p></details>
+        <details><summary>Qui est Alexandre Stopnicki ?</summary><p>Le fondateur de 3h33, formateur et conférencier en intelligence artificielle. Il travaille dans le numérique depuis trente ans : en 1997, sa société Numériland tenait la régie publicitaire du <a href="/deuxieme-monde/">Deuxième Monde</a>, le métavers de Canal+. Il construit des chatbots depuis 2017 et commente l'actualité de l'IA dans l'émission The Artificial Intelligence Society.</p></details>
+        <details><summary>Quelles formations à l'IA propose 3h33 ?</summary><p>Une <a href="/masterclass-ia/">masterclass</a> de deux heures pour acculturer jusqu'à cent personnes, des <a href="/ateliers-formation/">ateliers</a> d'un à deux jours où six à quinze participants pratiquent sur leurs propres dossiers, une <a href="/formation-claude/">formation Claude</a> d'un ou deux jours, et des <a href="/rendez-vous-ia-talent/">rendez-vous de veille</a> réguliers. Toutes partent des métiers et des cas réels.</p></details>
+        <details><summary>Qu'est-ce que la méthode Forge ?</summary><p>Une session <a href="/forge/">Forge</a> est une demi-journée de co-construction en visioconférence, préparée en amont et consolidée après. On y fabrique avec vos équipes un agent, une automatisation ou un tableau de bord, documenté et utilisable dès le lendemain. L'objectif est de vous rendre autonomes, pas dépendants.</p></details>
+        <details><summary>Qu'est-ce que le vibe coding ?</summary><p>Fabriquer un logiciel en décrivant en français ce qu'on veut, pendant qu'une IA écrit le code. 3h33 construit ainsi ses propres applications depuis 2024, et les outils de ses clients, dont le code leur appartient. Voir <a href="/vibe-coding/">le vibe coding en entreprise</a>.</p></details>
+        <details><summary>La formation à l'IA est-elle obligatoire ?</summary><p>L'article 4 de l'AI Act demande aux entreprises qui utilisent l'IA de prendre des mesures pour développer la maîtrise de l'IA de leurs équipes. Depuis l'omnibus numérique de juillet 2026, c'est une obligation de moyens et non de résultat. <a href="/formation-ia-obligatoire-ai-act/">Le détail</a>.</p></details>
+        <details><summary>Faut-il une équipe technique pour travailler avec 3h33 ?</summary><p>Non. Formations, ateliers et sessions Forge sont conçus pour des équipes métier. Ce qui est construit est livré documenté, et l'on vous apprend à le faire vivre.</p></details>
+        <details><summary>Nos données restent-elles chez nous ?</summary><p>Oui quand c'est nécessaire : nous travaillons avec des modèles hébergés en Europe ou installés sur vos propres serveurs, et la question est posée dès le premier échange. Voir <a href="/ia-locale-souveraine/">IA locale et souveraine</a>.</p></details>
+        <details><summary>Travaillez-vous avec les collectivités ?</summary><p>Oui : formation des agents et construction d'outils pour plusieurs communes, dont la mairie de Laxou. Le point d'entrée dédié est mairie.ai.</p></details>
+        <details><summary>Combien ça coûte ?</summary><p>Masterclass, ateliers et sessions Forge ont chacun un tarif fixe, annoncé avant tout engagement, et le devis tient sur une page. Nous intervenons à distance comme en présentiel, et le premier échange de vingt minutes est gratuit.</p></details>
       </div>
-      <div class="pile spot" data-pile data-spot>
-        <div class="pile__texte"><span class="pile__label">◆ Forge · ½ journée + consolidation</span><div class="pile__titre">Une demi-journée avec vos équipes. Un outil qui tourne le lendemain.</div><p class="pile__p">Un agent, une automatisation, un tableau de bord. On le fabrique avec vous pendant la séance, on le documente, on le met en ligne. Le code est à vous.</p><div class="pile__pied"><a class="lien" href="/forge/">Voir la Forge</a></div></div>
-        <div class="pile__media pile__media--dessin"><img src="/dessins/flux-vibecoding.jpg" alt="Des mains au clavier et une structure qui s'assemble, croquis au crayon" loading="lazy" width="1400" height="933"></div></div>
-      </div>
-    </div>
-    <div class="ecran__intro reveal" id="deroule">
-      <h3>Heure par heure, une séance réelle</h3>
-      <p>Une session Forge menée avec une mairie, du premier échange à la mise en ligne. Rien n'est préparé à l'avance, et personne ne repart avec des notes.</p>
-    </div>
-    <div class="ecran reveal">
-      <div class="fenetre" id="fenetre">
-        <div class="barre"><i></i><i></i><i></i><span>session forge · mairie · 14:02 → 17:30</span></div>
-        <div class="corps">
-          <div class="gauche"><span class="tag">forge · ½ journée</span><h3>Un besoin le matin, un outil le soir</h3><p style="color:var(--ink-2);font-size:15px;margin:0">Besoin exprimé le matin par une mairie : répondre aux courriers des administrés en deux minutes, sans rien perdre du ton.</p><div class="jauge"><div class="jauge__fill" id="jauge"></div></div><div class="jauge__l" id="jauge-l">14:02 · on commence</div></div>
-          <div class="droite"><ul class="chantier" id="chantier">
-            <li data-h="14:02"><span><b>Besoin décrit</b> avec l'équipe, sur trois courriers réels</span></li>
-            <li data-h="14:20"><span><b>Premier prototype</b> : brouillon de réponse généré, ton de la mairie respecté</span></li>
-            <li data-h="15:45"><span><b>Testé par les agents</b> sur douze courriers, deux corrections</span></li>
-            <li data-h="17:10"><span><b>Documenté</b> : qui fait quoi, avec quelles données, en douze pages</span></li>
-            <li data-h="17:30"><span><b>En ligne</b>, utilisé dès le lendemain matin</span></li>
-          </ul></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bandes">
-      <div class="bande reveal"><div class="eyebrow">Collectivités</div><h3>Mairies et administrations</h3><p>Marchés publics, données des administrés, cadre juridique : une commune n'a pas les contraintes d'une entreprise. Les agents se forment sur leurs propres dossiers, et plusieurs communes, dont <b>la mairie de Laxou</b>, ont déjà leur outil construit en séance. Le point d'entrée : <a href="https://mairie.ai/">mairie.ai</a>.</p></div>
-      <div class="bande reveal"><div class="eyebrow">Les grands chantiers</div><h3>Ce qu'on construit de plus gros</h3><p><b><a href="/lma-learning-management-agentique/">Sator</a></b>, une plateforme devenue agentique : un LMA, qui retrouve la bonne seconde dans des centaines d'heures de cours. <b>Atelier LMS</b>, l'éditeur avec lequel on fabrique des LMS. <b><a href="https://subsidium.world">Subsidium</a></b>, notre plus grande plateforme : agir là où vous vivez, avec des IA qui préparent le travail sans décider à votre place.</p></div>
     </div>
   </section>
 
-  <section class="chap bloc" id="suggerer">
-    <div class="tete reveal">
-      <div><span class="chip"><span class="dot"></span>Suggérer</span><h2 class="mots" data-mots>La forge tourne.</h2></div>
-      <p class="desc">Chaque semaine, quelque chose part en ligne. On ne déroule pas le catalogue : on laisse simplement voir que ça avance.</p>
+  <section class="bloc section" aria-labelledby="guides-titre">
+    <div class="entree">
+      <span class="eyebrow">Guides</span>
+      <h2 id="guides-titre">Nos guides pour comprendre l'IA en entreprise</h2>
     </div>
-    <div class="forge">
-      <div class="reveal"><div class="ticker" aria-label="Activité récente de la forge (exemple)"><ul id="flux"></ul></div><p class="mention">Exemple de flux. En production, ces lignes viendront des dépôts publics, mises à jour toutes les heures.</p></div>
-      <div class="reveal"><div class="compteur"><span class="pt"></span><span><b>34</b> sites et outils en ligne, vérifiés toutes les heures.</span></div><p style="color:var(--ink-2);margin-top:18px">Rien n'est écrit sur la façon de faire. Ceux qui veulent comprendre viennent en session ; ceux qui veulent voir plus loin trouvent <a href="/galaxie/">la galaxie</a> en bas de page.</p></div>
-    </div>
-  </section>
-
-  <section class="chap bloc" id="questions">
-    <div class="faq">
-      <div class="reveal"><span class="chip"><span class="dot"></span>Questions</span><h2 class="mots" data-mots style="margin-top:14px">Les questions qui reviennent le plus.</h2><p class="desc" style="color:var(--ink-2);margin-top:14px">Comment ça se passe, ce que ça coûte, ce qu'il faut préparer.</p></div>
-      <div class="reveal" id="faq">
-        <div class="qa"><button type="button" aria-expanded="false">Faut-il une équipe technique pour travailler avec 3h33 ?<span class="chev">+</span></button><div class="rep"><div><p>Non. Les ateliers et la Forge sont faits pour des équipes métier. Ce qui est construit vous est livré documenté, et l'on vous apprend à le faire vivre.</p></div></div></div>
-        <div class="qa"><button type="button" aria-expanded="false">Que se passe-t-il pendant une session Forge ?<span class="chev">+</span></button><div class="rep"><div><p>Une demi-journée en visio : on part d'un besoin réel, on construit en direct l'agent, l'automatisation ou le tableau de bord, puis une phase de consolidation le rend propre et documenté.</p></div></div></div>
-        <div class="qa"><button type="button" aria-expanded="false">Nos données restent-elles chez nous ?<span class="chev">+</span></button><div class="rep"><div><p>Oui quand c'est nécessaire : on sait travailler avec des modèles hébergés en Europe ou installés chez vous. La question est posée dès le premier échange.</p></div></div></div>
-        <div class="qa"><button type="button" aria-expanded="false">Travaillez-vous avec les collectivités ?<span class="chev">+</span></button><div class="rep"><div><p>Oui, formation des agents et construction d'outils pour plusieurs communes. Le point d'entrée dédié est mairie.ai.</p></div></div></div>
-        <div class="qa"><button type="button" aria-expanded="false">Combien ça coûte ?<span class="chev">+</span></button><div class="rep"><div><p>Une masterclass, un atelier et une session Forge ont chacun un tarif fixe, annoncé avant tout engagement. Le devis tient sur une page.</p></div></div></div>
-        <p style="margin-top:22px"><a href="/ia-en-entreprise/">Toutes nos réponses sur l'IA en entreprise : usages, données, coûts, AI Act, vibe coding →</a></p>
-      </div>
+    <div class="guides">
+      <a class="guide" href="/ia-en-entreprise/"><b>L'IA en entreprise</b><span>Dix-huit questions de dirigeants, et nos réponses.</span></a>
+      <a class="guide" href="/formation-ia-obligatoire-ai-act/"><b>Formation IA et AI Act</b><span>Ce que l'article 4 demande vraiment depuis 2026.</span></a>
+      <a class="guide" href="/chatgpt-claude-mistral-gemini/"><b>ChatGPT, Claude, Mistral ou Gemini</b><span>Lequel pour votre entreprise, et pourquoi ne pas choisir pour toujours.</span></a>
+      <a class="guide" href="/ia-locale-souveraine/"><b>IA locale et souveraine</b><span>Garder ses données en Europe, ou chez soi.</span></a>
+      <a class="guide" href="/no-code/"><b>No-code, low-code ou vibe coding</b><span>Trois façons d'obtenir un outil, comparées.</span></a>
+      <a class="guide" href="/realisations-chatbots-agents/"><b>Dix ans d'agents conversationnels</b><span>De 1997 à NegoVox, ce que nous avons construit.</span></a>
     </div>
   </section>
 
   <section class="final" id="capture">
-    
     <div class="plan plan--milieu" data-rate="0.18"><svg id="svg-final-milieu" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
     <div class="plan plan--devant" data-rate="0.36"><svg id="svg-final-devant" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
     <div class="bloc">
-      <div class="capture reveal">
-        <span class="eyebrow">Et chez vous ?</span>
-        <h2>Deux minutes, un outil construit, et la question : chez vous, ça donnerait quoi ?</h2>
-        <p class="capture__p">Dites-nous en trois lignes ce qui vous prend du temps. On répond sous un jour ouvré, souvent par une démonstration plutôt que par une réunion.</p>
-        <a class="btn btn--or" href="/contact/" data-aimant>Nous contacter</a>
+      <div class="capture">
+        <span class="eyebrow">Contact</span>
+        <h2>Dites-nous ce qui vous prend du temps</h2>
+        <p class="capture__p">Trois lignes suffisent. Nous répondons sous un jour ouvré, souvent par une démonstration plutôt que par une réunion. Le premier échange de vingt minutes est gratuit et sans engagement.</p>
+        <a class="btn btn--or" href="/contact/">Nous contacter</a>
       </div>
     </div>
     <div class="espace"></div>
@@ -618,7 +650,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
   <div class="pied-cols">
     <div>
       <a class="marque" href="/" style="margin-bottom:12px"><span class="logo">3h</span>3h33</a>
-      <p>L'agence de l'IA. On apprend en construisant : masterclass, ateliers, sessions Forge, studio créatif.</p>
+      <p>L'agence de l'IA, depuis 2010. On apprend en construisant : formations, vibe coding, agents conversationnels, studio créatif.</p>
     </div>
     <div><h3>Formations</h3><ul>
       <li><a href="/masterclass-ia/">Masterclass IA</a></li>
@@ -626,6 +658,8 @@ html.calme .mots .m>span{transform:none;opacity:1}
       <li><a href="/rendez-vous-ia-talent/">Rendez-vous IA Talent</a></li>
       <li><a href="/formation-claude/">Formation Claude</a></li>
       <li><a href="/forge/">Méthode Forge</a></li>
+      <li><a href="/coaching-ia-dirigeants/">Coaching des dirigeants</a></li>
+      <li><a href="/formation-ia-obligatoire-ai-act/">AI Act et formation</a></li>
       <li><a href="/formations-au-marketing-digital/">Marketing digital</a></li>
     </ul></div>
     <div><h3>Agence</h3><ul>
@@ -635,6 +669,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
       <li><a href="/chatgpt/">Contenus avec l'IA</a></li>
       <li><a href="/synthetic-content/">Comédiens virtuels</a></li>
       <li><a href="/agence-conseil-marketing-digital/">Conseil et stratégie</a></li>
+      <li><a href="/ia-en-entreprise/">L'IA en entreprise, en questions</a></li>
     </ul></div>
     <div><h3>Voir et écouter</h3><ul>
       <li><a href="/studio/videos/">Vidéos IA</a></li>
@@ -651,167 +686,45 @@ html.calme .mots .m>span{transform:none;opacity:1}
   </div>
 </div></footer>
 </main>
-
 <script>
 const LOGOS=[{"alt": "Le Cnam", "src": "/medias/logo-le-cnam.jpg"}, {"alt": "Esmod", "src": "/medias/logo-esmod.jpg"}, {"alt": "Casino", "src": "/medias/logo-casino.jpg"}, {"alt": "Maria Schools", "src": "/medias/logo-maria-schools.jpg"}, {"alt": "Criteo", "src": "/medias/logo-criteo.jpg"}, {"alt": "Saint-Gobain", "src": "/medias/logo-saint-gobain.jpg"}, {"alt": "Air Liquide", "src": "/medias/logo-air-liquide.jpg"}, {"alt": "Dentsply Sirona", "src": "/medias/logo-dentsply-sirona.jpg"}, {"alt": "Bolton Group", "src": "/medias/logo-bolton-group.jpg"}, {"alt": "Robert Half", "src": "/medias/logo-robert-half.jpg"}, {"alt": "De Vinci Executive Education", "src": "/medias/logo-de-vinci-executive-education.jpg"}, {"alt": "ETS", "src": "/medias/logo-ets.jpg"}, {"alt": "Giropharm", "src": "/medias/logo-giropharm.jpg"}, {"alt": "Institut français", "src": "/medias/logo-institut-francais.jpg"}, {"alt": "Les Acteurs de la Compétence", "src": "/medias/logo-les-acteurs-de-la-competence.jpg"}, {"alt": "Acorus Ingénierie", "src": "/medias/logo-acorus-ingenierie.jpg"}];
-/* ---------- ?fin : saute à l'état final (vérification par capture) ---------- */
-if(location.search.includes("fin")){addEventListener("load",()=>{setTimeout(()=>{document.getAnimations().forEach(a=>{try{a.finish()}catch(e){}})},300)})}
 /* ---------- calme (bouton, ?calme, mouvement réduit) ---------- */
 const html=document.documentElement, btn=document.getElementById("btn-calme");
 let calme=false; try{calme=localStorage.getItem("3h33-calme")==="1"}catch(e){}
 if(location.search.includes("calme"))calme=true;
 const reduit=matchMedia("(prefers-reduced-motion: reduce)").matches;
-function appliquerCalme(){html.classList.toggle("calme",calme);btn.setAttribute("aria-pressed",String(calme));btn.querySelector(".etat").textContent=calme?"on":"off";try{localStorage.setItem("3h33-calme",calme?"1":"0")}catch(e){}}
-btn.addEventListener("click",()=>{calme=!calme;appliquerCalme();if(!calme)boucle();else rendre(scrollY)}); appliquerCalme();
 const immobile=()=>calme||reduit;
-
-/* ---------- mots révélés ---------- */
-document.querySelectorAll("[data-mots]").forEach(el=>{const mots=el.textContent.trim().split(/\s+/);el.innerHTML=mots.map((m,i)=>`<span class="m"><span style="--i:${i}">${m}</span></span>`).join(" ")});
-const ioMots=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");ioMots.unobserve(en.target)}}),{threshold:.3});
-document.querySelectorAll(".mots").forEach(el=>{if(immobile()||el.closest(".hero"))el.classList.add("in");else ioMots.observe(el)});
-
+function appliquerCalme(){html.classList.toggle("calme",calme);btn.setAttribute("aria-pressed",String(calme));btn.querySelector(".etat").textContent=calme?"on":"off";try{localStorage.setItem("3h33-calme",calme?"1":"0")}catch(e){}}
+btn.addEventListener("click",()=>{calme=!calme;appliquerCalme();rendre(scrollY)}); appliquerCalme();
+/* ---------- titre révélé mot à mot ---------- */
+document.querySelectorAll("[data-mots]").forEach(el=>{const mots=el.textContent.trim().split(/\s+/);el.innerHTML=mots.map((m,i)=>`<span class="m"><span style="--i:${i}">${m}</span></span>`).join(" ");el.classList.add("in")});
 /* ---------- logos ---------- */
 function remplir(id,liste){const d=document.getElementById(id);d.innerHTML=[...liste,...liste].map(l=>`<div class="logo-c"><img src="${l.src}" alt="${l.alt}" loading="lazy"></div>`).join("")}
 remplir("defile-1",LOGOS.slice(0,8));remplir("defile-2",LOGOS.slice(8));
-
 /* ---------- paysage en plans (SVG généré) ---------- */
 function alea(seed){return()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646}}
-function crete(seed,base,amp,n,couleur,arbres){
-  const r=alea(seed),W=1600,H=420;let pts=[];
-  for(let i=0;i<=n;i++){pts.push([i*W/n,base-amp*(0.35+0.65*r())])}
-  let d=`M0 ${H} L0 ${pts[0][1].toFixed(1)}`;
-  for(let i=0;i<n;i++){const [x0,y0]=pts[i],[x1,y1]=pts[i+1];const cx=(x0+x1)/2;d+=` C ${cx.toFixed(1)} ${y0.toFixed(1)}, ${cx.toFixed(1)} ${y1.toFixed(1)}, ${x1.toFixed(1)} ${y1.toFixed(1)}`}
-  d+=` L${W} ${H} Z`;
-  let s=`<path d="${d}" fill="${couleur}"/>`;
-  for(let i=0;i<arbres;i++){const x=r()*W;const seg=Math.min(n-1,Math.floor(x/(W/n)));const t=(x-seg*W/n)/(W/n);const y=pts[seg][1]*(1-t)+pts[seg+1][1]*t+6;const h=14+r()*26,w=h*0.55;
-    s+=`<path d="M${(x-w).toFixed(1)} ${y.toFixed(1)} L${x.toFixed(1)} ${(y-h).toFixed(1)} L${(x+w).toFixed(1)} ${y.toFixed(1)} Z" fill="#3d5f9c"/>`}
-  return s;
-}
+function crete(seed,base,amp,n,couleur,arbres){const r=alea(seed),W=1600,H=420;let pts=[];for(let i=0;i<=n;i++){pts.push([i*W/n,base-amp*(0.35+0.65*r())])}
+  let d=`M0 ${H} L0 ${pts[0][1].toFixed(1)}`;for(let i=0;i<n;i++){const [x0,y0]=pts[i],[x1,y1]=pts[i+1];const cx=(x0+x1)/2;d+=` C ${cx.toFixed(1)} ${y0.toFixed(1)}, ${cx.toFixed(1)} ${y1.toFixed(1)}, ${x1.toFixed(1)} ${y1.toFixed(1)}`}
+  d+=` L${W} ${H} Z`;let s=`<path d="${d}" fill="${couleur}"/>`;
+  for(let i=0;i<arbres;i++){const x=r()*W;const seg=Math.min(n-1,Math.floor(x/(W/n)));const t=(x-seg*W/n)/(W/n);const y=pts[seg][1]*(1-t)+pts[seg+1][1]*t+6;const h=14+r()*26,w=h*0.55;s+=`<path d="M${(x-w).toFixed(1)} ${y.toFixed(1)} L${x.toFixed(1)} ${(y-h).toFixed(1)} L${(x+w).toFixed(1)} ${y.toFixed(1)} Z" fill="#3d5f9c"/>`}
+  return s}
 document.getElementById("svg-loin").innerHTML=crete(11,300,150,9,"#dbe8fb",0);
 document.getElementById("svg-milieu").innerHTML=crete(23,330,120,12,"#b9d1f5",0);
 document.getElementById("svg-devant").innerHTML=crete(37,360,90,16,"#6e8fc4",70);
 document.getElementById("svg-final-milieu").innerHTML=crete(41,330,110,10,"#cfe0fb",0);
 document.getElementById("svg-final-devant").innerHTML=crete(53,360,80,14,"#9fbcee",40);
-
-/* ---------- rendu au défilement : une seule valeur, lissée ---------- */
-const plans=[...document.querySelectorAll(".hero .plan")].map(el=>({el,rate:parseFloat(el.dataset.rate||"0"),souris:parseFloat(el.dataset.souris||"0")}));
-const finaux=[...document.querySelectorAll(".final .plan")].map(el=>({el,rate:parseFloat(el.dataset.rate||"0"),sec:el.closest(".final")}));
-const intros=[...document.querySelectorAll("[data-intro]")], piles=[...document.querySelectorAll("[data-pile]")];
-const heure=document.getElementById("heure"), bandeau=document.getElementById("bandeau"), defiles=[document.getElementById("defile-1"),document.getElementById("defile-2")];
-let cible=scrollY,cour=scrollY,anim=false,vitesse=0,dernierY=scrollY,bx=0,dx1=0,dx2=0,mx=0,my=0;
-function rendre(y){
-  const vh=innerHeight, calm=immobile();
-  const p=Math.max(0,Math.min(1,y/Math.max(1,document.documentElement.scrollHeight-vh)));
-  heure.textContent="3h"+String(33+Math.round(p*27)).padStart(2,"0");
-  if(calm){plans.forEach(q=>q.el.style.transform=q.el.classList.contains("plan")&&!q.el.classList.contains("plan--sablier")?"translateX(-50%)":"");intros.forEach(q=>q.classList.add("on"));piles.forEach(q=>{q.style.transform="";q.style.filter=""});return}
-  plans.forEach(q=>{const t=Math.min(y,1400)*q.rate;const sx=(mx*q.souris).toFixed(1),sy=(my*q.souris*0.5).toFixed(1);
-    if(q.el.classList.contains("plan--sablier")){q.el.style.transform=`translate(${(-mx*8).toFixed(1)}px,${(t*0.8-my*4).toFixed(1)}px)`}
-    else{q.el.style.transform=`translateX(calc(-50% + ${sx}px)) translateY(${(t*0.6+parseFloat(sy)).toFixed(1)}px)`}});
-  finaux.forEach(q=>{const r=q.sec.getBoundingClientRect();const d=Math.max(0,vh-r.top);q.el.style.transform=`translateX(-50%) translateY(${(-(d*q.rate)+120).toFixed(1)}px)`});
-  let best=null,bd=1e9;intros.forEach(q=>{const r=q.getBoundingClientRect();const d=Math.abs(r.top+r.height/2-vh/2);if(d<bd){bd=d;best=q}});intros.forEach(q=>q.classList.toggle("on",q===best));
-  piles.forEach((q,i)=>{const n=piles[i+1];if(!n){q.style.transform="";q.style.filter="";return}const r=n.getBoundingClientRect();const debut=110+560,fin=110;const t=Math.min(1,Math.max(0,(debut-r.top)/(debut-fin)));q.style.transform=`scale(${(1-0.06*t).toFixed(3)}) translateY(${(-24*t).toFixed(1)}px) rotate(${(-1.2*t).toFixed(2)}deg)`;q.style.filter=`brightness(${(1-0.12*t).toFixed(3)})`});
-}
-function boucle(){if(anim)return;anim=true;(function pas(){cour+=(cible-cour)*0.14;if(Math.abs(cible-cour)<0.3){cour=cible;rendre(cour);anim=false;return}rendre(cour);requestAnimationFrame(pas)})()}
-addEventListener("scroll",()=>{cible=scrollY;boucle()},{passive:true});
-const entete=document.getElementById("entete");
-addEventListener("scroll",()=>{entete.classList.toggle("pose",scrollY>40)},{passive:true});
-addEventListener("resize",()=>rendre(cour));
-addEventListener("pointermove",e=>{mx=(e.clientX/innerWidth-.5);my=(e.clientY/innerHeight-.5);if(scrollY<1400&&!anim)rendre(cour)},{passive:true});
+/* ---------- défilement : heure, paysage, en-tête, logos ---------- */
+const plans=[...document.querySelectorAll(".hero .plan")].map(el=>({el,rate:parseFloat(el.dataset.rate||"0")}));
+const heure=document.getElementById("heure"),entete=document.getElementById("entete"),defiles=[document.getElementById("defile-1"),document.getElementById("defile-2")];
+function rendre(y){const p=Math.max(0,Math.min(1,y/Math.max(1,document.documentElement.scrollHeight-innerHeight)));heure.textContent="3h"+String(33+Math.round(p*27)).padStart(2,"0");
+  plans.forEach(q=>{const sab=q.el.classList.contains("plan--sablier");if(immobile()){q.el.style.transform=sab?"":"translateX(-50%)";return}const t=Math.min(y,1400)*q.rate;q.el.style.transform=sab?`translateY(${(t*0.8).toFixed(1)}px)`:`translateX(-50%) translateY(${(t*0.6).toFixed(1)}px)`})}
+let attente=false;addEventListener("scroll",()=>{entete.classList.toggle("pose",scrollY>40);if(!attente){attente=true;requestAnimationFrame(()=>{attente=false;rendre(scrollY)})}},{passive:true});
 rendre(scrollY);
-
-/* ---------- bandeau cinétique + logos : vitesse liée au défilement ---------- */
-(function tourne(){const v=scrollY-dernierY;dernierY=scrollY;vitesse+= (v-vitesse)*0.1;
-  if(!immobile()&&!document.hidden){const base=0.9;bx-=base+Math.min(24,Math.abs(vitesse)*0.6);const w=bandeau.scrollWidth/2;if(-bx>w)bx+=w;bandeau.style.transform=`translateX(${bx.toFixed(1)}px)`;
-    dx1-=0.5+Math.abs(vitesse)*0.15;dx2+=0.4+Math.abs(vitesse)*0.12;const w1=defiles[0].scrollWidth/2,w2=defiles[1].scrollWidth/2;if(-dx1>w1)dx1+=w1;if(dx2>0)dx2-=w2;defiles[0].style.transform=`translateX(${dx1.toFixed(1)}px)`;defiles[1].style.transform=`translateX(${dx2.toFixed(1)}px)`}
-  requestAnimationFrame(tourne)})();
-
-/* ---------- chantier forge dans la fenêtre du haut ---------- */
-(function(){const li=[...document.querySelectorAll("#chantier li")],j=document.getElementById("jauge"),l=document.getElementById("jauge-l");if(!li.length)return;let i=0;
-  function etape(){if(immobile()){li.forEach(x=>x.classList.add("on"));j.style.width="100%";l.textContent="17:30 · en ligne";return}
-    li.forEach((x,k)=>x.classList.toggle("on",k<=i));j.style.width=((i+1)/li.length*100).toFixed(0)+"%";l.textContent=li[i].dataset.h+" · "+li[i].querySelector("b").textContent.toLowerCase();
-    i=(i+1)%li.length;setTimeout(etape,i===0?3600:1500)}
-  var vu=false;
-  new IntersectionObserver(function(e,o){ if(e[0].isIntersecting && !vu){ vu=true; o.disconnect(); setTimeout(etape,400); } },{threshold:.35}).observe(document.getElementById("chantier"));
-})();
-/* ---------- scène à onglets ---------- */
-const onglets=[...document.querySelectorAll(".onglets [role=tab]")],diapos=[...document.querySelectorAll(".scene .diapo")],legende=document.getElementById("legende");let cur=0;
-function aller(i){cur=(i+diapos.length)%diapos.length;onglets.forEach((o,k)=>o.setAttribute("aria-selected",String(k===cur)));diapos.forEach((d,k)=>d.classList.toggle("on",k===cur));legende.textContent=diapos[cur].dataset.legende}
-onglets.forEach((o,i)=>o.addEventListener("click",()=>aller(i)));document.getElementById("prec").addEventListener("click",()=>aller(cur-1));document.getElementById("suiv").addEventListener("click",()=>aller(cur+1));aller(0);
-
-/* ---------- cartes 3D, projecteur, aimants, curseur ---------- */
-document.querySelectorAll("[data-tilt]").forEach(c=>{c.addEventListener("pointermove",e=>{if(immobile())return;const r=c.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`rotateY(${(x*14).toFixed(2)}deg) rotateX(${(-y*14).toFixed(2)}deg) translateZ(18px)`});c.addEventListener("pointerleave",()=>{c.style.transform=""})});
-document.querySelectorAll("[data-spot]").forEach(s=>s.addEventListener("pointermove",e=>{const r=s.getBoundingClientRect();s.style.setProperty("--sx",((e.clientX-r.left)/r.width*100).toFixed(1)+"%");s.style.setProperty("--sy",((e.clientY-r.top)/r.height*100).toFixed(1)+"%")}));
-document.querySelectorAll("[data-aimant]").forEach(b=>{b.addEventListener("pointermove",e=>{if(immobile())return;const r=b.getBoundingClientRect();const x=e.clientX-(r.left+r.width/2),y=e.clientY-(r.top+r.height/2);b.style.transform=`translate(${(x*0.18).toFixed(1)}px,${(y*0.25).toFixed(1)}px)`});b.addEventListener("pointerleave",()=>{b.style.transform=""})});
-const curseur=document.getElementById("curseur");let cx=-100,cy=-100,tx=-100,ty=-100;
-addEventListener("pointermove",e=>{tx=e.clientX;ty=e.clientY;curseur.classList.add("on");curseur.classList.toggle("gros",!!e.target.closest("a,button,[data-tilt],[role=tab]"))},{passive:true});
-addEventListener("pointerleave",()=>curseur.classList.remove("on"));
-(function suit(){cx+=(tx-cx)*0.22;cy+=(ty-cy)*0.22;curseur.style.left=cx.toFixed(1)+"px";curseur.style.top=cy.toFixed(1)+"px";requestAnimationFrame(suit)})();
-
-/* ---------- compteurs ---------- */
-const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;const el=en.target,cibleN=parseFloat(el.dataset.cible),span=el.querySelector("span")||el;const d0=performance.now(),dur=1400;
-  function pas(n){const p=Math.min((n-d0)/dur,1),v=cibleN*(1-Math.pow(1-p,3));span.textContent=(cibleN%1?v.toFixed(1).replace(".",","):Math.round(v));if(p<1)requestAnimationFrame(pas)}
-  if(immobile()){span.textContent=(cibleN%1?String(cibleN).replace(".",","):cibleN)}else requestAnimationFrame(pas);io.unobserve(el)}),{threshold:.5});
-document.querySelectorAll(".chiffre .n").forEach(n=>io.observe(n));
-
-/* ---------- faq ---------- */
-document.querySelectorAll(".qa button").forEach(b=>b.addEventListener("click",()=>{const qa=b.parentElement,o=!qa.classList.contains("open");document.querySelectorAll(".qa").forEach(q=>{q.classList.remove("open");q.querySelector("button").setAttribute("aria-expanded","false")});if(o){qa.classList.add("open");b.setAttribute("aria-expanded","true")}}));
-
-/* ---------- flux + formulaire ---------- */
-const FLUX=[["09:12","science-marine","nouvelle page « Le plancton respire »"],["08:40","prompts.3h33","1 240 prompts indexés, recherche par usage"],["07:55","verif-nom","INPI brevets ajouté, 14 bases"],["hier","ia-conforme","questionnaire AI Act, version 3"],["hier","chapitre.ai","export du livre en ePub"],["hier","listen-engine","résumés audio en 3 langues"],["lun.","negovox","scénario « achat de licences »"],["lun.","mairie.ai","modèle de délibération assisté"],["dim.","science-marine","carte des courants en WebGL"],["sam.","voix-de-l-ia","épisode 12 en ligne"]];
-document.getElementById("flux").innerHTML=[...FLUX,...FLUX].map(f=>`<li><span class="h">${f[0]}</span><span class="p">${f[1]}</span><span>${f[2]}</span></li>`).join("");
-
-/* ---------- verre cannelé (WebGL) ---------- */
-(function(){
-  const cv=document.getElementById("verre");const gl=cv.getContext("webgl",{alpha:true,antialias:false,premultipliedAlpha:false});
-  if(!gl){cv.style.background="radial-gradient(60% 50% at 20% 20%,#e6f0ff,transparent),radial-gradient(50% 40% at 80% 70%,#fff3dc,transparent)";return}
-  const vs=`attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}`;
-  const fs=`precision mediump float;uniform vec2 R;uniform float T;
-  float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
-  float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
-  void main(){vec2 uv=gl_FragCoord.xy/R;float t=T*0.06;
-    float fl=sin(uv.x*R.x/22.0)*0.5+0.5;
-    vec2 q=uv;q.x+=(fl-0.5)*0.035;
-    float a=n(q*2.2+vec2(t*0.7,t*0.3))*0.6+n(q*5.0-vec2(t*0.4,t*0.9))*0.4;
-    vec3 blanc=vec3(1.0),bleu=vec3(0.80,0.88,1.0),sable=vec3(1.0,0.95,0.86);
-    vec3 col=mix(blanc,bleu,smoothstep(0.35,0.85,a));
-    col=mix(col,sable,smoothstep(0.75,1.0,n(q*1.4+vec2(-t*0.5,t*0.2)))*0.7);
-    col+=(fl-0.5)*0.035;
-    float vig=smoothstep(0.0,0.6,uv.y);col=mix(col,blanc,vig*0.35);
-    gl_FragColor=vec4(col,1.0);}`;
-  function sh(t,s){const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);return o}
-  const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
-  const buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
-  const lp=gl.getAttribLocation(pr,"p");gl.enableVertexAttribArray(lp);gl.vertexAttribPointer(lp,2,gl.FLOAT,false,0,0);
-  const uR=gl.getUniformLocation(pr,"R"),uT=gl.getUniformLocation(pr,"T");
-  function taille(){const s=0.5;cv.width=Math.floor(innerWidth*s);cv.height=Math.floor(innerHeight*s);gl.viewport(0,0,cv.width,cv.height)}
-  taille();addEventListener("resize",taille);
-  let fige=false;
-  function frame(t){gl.uniform2f(uR,cv.width,cv.height);gl.uniform1f(uT,t/1000);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);if(!immobile()&&!document.hidden){requestAnimationFrame(frame)}else{fige=true}}
-  requestAnimationFrame(frame);
-  document.addEventListener("visibilitychange",()=>{if(!document.hidden&&fige&&!immobile()){fige=false;requestAnimationFrame(frame)}});
-  btn.addEventListener("click",()=>{if(!immobile()&&fige){fige=false;requestAnimationFrame(frame)}});
-})();
-</script>
-<script>
-/* trace-accueil : les dessins des offres et du studio se revelent en montant */
-(function(){
-  var imgs=[].slice.call(document.querySelectorAll(".pile__media--dessin img,.carte__img"));
-  if(!imgs.length) return;
-  if(document.documentElement.classList.contains("calme")||matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  var att=false;
-  function place(){
-    att=false; var h=innerHeight;
-    imgs.forEach(function(i){
-      var r=i.getBoundingClientRect(); if(r.bottom<0||r.top>h) return;
-      var p=Math.max(0,Math.min(1,(h-r.top)/(h*0.8)));
-      var f=(p*106).toFixed(1);
-      i.style.webkitMaskImage="linear-gradient(100deg,#000 0%,#000 "+f+"%,transparent "+(+f+6)+"%,transparent 100%)";
-      i.style.maskImage=i.style.webkitMaskImage;
-    });
-  }
-  addEventListener("scroll",function(){if(!att){att=true;requestAnimationFrame(place);}},{passive:true});
-  addEventListener("resize",place); place();
-})();
+/* ---------- menu sur petit écran ---------- */
+const burger=document.querySelector(".burger-accueil"),nav=document.getElementById("nav-principale");
+burger.addEventListener("click",()=>{const o=nav.classList.toggle("ouvert");burger.setAttribute("aria-expanded",String(o));burger.textContent=o?"✕":"☰"});
+nav.addEventListener("click",e=>{if(e.target.closest("a")){nav.classList.remove("ouvert");burger.setAttribute("aria-expanded","false");burger.textContent="☰"}});
+let dx1=0,dx2=0;(function tourne(){if(!immobile()&&!document.hidden){dx1-=0.4;dx2+=0.32;const w1=defiles[0].scrollWidth/2,w2=defiles[1].scrollWidth/2;if(-dx1>w1)dx1+=w1;if(dx2>0)dx2-=w2;defiles[0].style.transform=`translateX(${dx1.toFixed(1)}px)`;defiles[1].style.transform=`translateX(${dx2.toFixed(1)}px)`}requestAnimationFrame(tourne)})();
 </script>
 <script defer src="/sablier.js"></script>
 </body>

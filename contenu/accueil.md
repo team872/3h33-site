@@ -2,8 +2,7 @@
 titre: "3h33, l'agence de l'IA"
 titre_seo: "3h33, l'agence de l'IA : formation, vibe coding et agents IA"
 description: "Agence et organisme de formation en IA générative depuis 2010 : formations, outils sur mesure en vibe coding, agents conversationnels et studio créatif."
-url: /apercu-accueil/
-indexer: non
+url: /
 gabarit: accueil
 faq:
   - Qu'est-ce que 3h33 ?|3h33 est une agence et un organisme de formation français, créé en 2010 par Alexandre Stopnicki, spécialisé dans les usages de l'intelligence artificielle générative en entreprise. Elle forme les équipes, construit avec elles des outils d'IA en vibe coding et des agents conversationnels, et produit des contenus avec son studio créatif.
