@@ -87,6 +87,19 @@ def md(texte):
                 if "</svg>" in lignes[i]: i += 1; break
                 i += 1
             continue
+        # vidéo YouTube : « @youtube <identifiant> | <titre> ». Lecteur youtube-nocookie,
+        # chargé paresseusement : aucun cookie déposé tant qu'on ne lance pas la vidéo,
+        # donc pas de bandeau de consentement à ajouter pour une simple page.
+        m = re.match(r"^@youtube\s+([\w-]{11})\s*\|\s*(.+)$", l)
+        if m:
+            ferme()
+            vid, titre = m.group(1), esc(m.group(2).strip())
+            out.append(f'<figure class="video"><div class="video__cadre"><iframe '
+                       f'src="https://www.youtube-nocookie.com/embed/{vid}?rel=0" title="{titre}" '
+                       f'loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" '
+                       f'allowfullscreen></iframe></div><figcaption>{titre} · '
+                       f'<a href="https://www.youtube.com/watch?v={vid}">voir sur YouTube</a></figcaption></figure>')
+            i += 1; continue
         if l.lstrip().startswith("<"):
             ferme(); out.append(l); i += 1; continue
         # tableau : lignes « | a | b | », la deuxième étant le séparateur « |---| ».
@@ -345,7 +358,10 @@ def llms(pages):
                f"- [Méthode Forge]({SITE_URL}/forge/): des solutions IA (agent, automatisation, tableau de bord) co-construites avec vos équipes en une demi-journée.",
                f"- [Formation Claude]({SITE_URL}/formation-claude/): formation à Claude (Anthropic) pour salariés et managers, un ou deux jours.",
                f"- [La galaxie 3h33]({SITE_URL}/galaxie/): l'annuaire des sites et applications de l'écosystème 3h33.",
-               f"- [Cartographie mondiale des usages de l'IA]({SITE_URL}/cartographie-mondiale-des-usages-de-l-ia/)", ""]
+               f"- [Cartographie mondiale des usages de l'IA]({SITE_URL}/cartographie-mondiale-des-usages-de-l-ia/)", "",
+               "## Applications éditées par 3h33", "",
+               "- [NegoVox](https://negovox.com/): simulateur d'entraînement vocal par IA pour les commerciaux ; un client joué par l'IA, puis un débrief noté sur douze compétences de vente.",
+               "- [Media Training Vox](https://media-training-vox.com/): entraînement par IA vocale aux prises de parole des dirigeants, face aux médias, au comité de direction, au conseil ou aux actionnaires.", ""]
     (SITE / "llms.txt").write_text("\n".join(lignes), encoding="utf-8")
 
 def sitemap(pages):
