@@ -28,7 +28,7 @@ Tout commence par une blague sérieuse. LècheBot a une seule mission : vous dir
 
 ## 2018 et 2019 : des bots qui enseignent
 
-En 2019, trois ans avant ChatGPT, nous créons **BotMoiLeQi**, un chatbot capable de former, de coacher et d'accompagner des étudiants dans un parcours pédagogique. Il pose des questions, relance, encourage, et vérifie l'acquisition des compétences. L'engagement des apprenants est nettement supérieur à celui d'un cours en ligne classique.
+Bien avant ChatGPT naît **BotMoiLeQi**, un chatbot capable de former, de coacher et d'accompagner des étudiants dans un parcours pédagogique. Il pose des questions, relance, encourage, et vérifie l'acquisition des compétences. L'engagement des apprenants est nettement supérieur à celui d'un cours en ligne classique. BotMoiLeQi reçoit le prix de l'innovation du Grand Prix du Social Media 2018.
 
 La même année naît toute une série de démonstrateurs, chacun explorant un usage : **StoryBot** qui raconte des histoires, **ProfBot** qui interroge l'élève, un bot qui explique les acronymes, un bot de prise de rendez-vous, et déjà **EpiVoiceBot**, un premier essai de bot à la voix.
 
@@ -39,6 +39,10 @@ En 2020, **CVBot** aide à préparer un CV en dialoguant. En 2021, l'**assistant
 ## 2023 à 2025 : des agents qui comprennent
 
 L'arrivée des grands modèles de langage change la nature du travail. On n'écrit plus les réponses : on donne à l'agent des documents, des règles et un périmètre. Ce sont les agents de support interne, d'orientation et d'évaluation que nous construisons en [session Forge](/forge/), et la plateforme d'apprentissage agentique, le [LMA](/lma-learning-management-agentique/), où des agents expliquent et interrogent l'apprenant.
+
+## Aujourd'hui : BotMoiLeQi et Le savez-vous ?
+
+Le chatbot pédagogique de 2018 est devenu un écosystème : [BotMoiLeQi](https://botmoileqi.com) équipe les organismes de formation d'un agent qui accompagne chaque apprenant jusqu'à la certification, avec [BotMoiLeQi LMA](https://lma.botmoileqi.com) pour héberger les formations et [BotMoiLeQi Slide](https://slide.botmoileqi.com) pour les présentations interactives. Le fait du jour, lui, a pris son indépendance : [Le savez-vous ?](https://le-savez-vous.com) publie chaque matin une histoire vraie, vérifiée et mise en voix.
 
 ## 2026 : des agents qui parlent
 

@@ -60,3 +60,5 @@ Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes 
 
 - [NegoVox](https://negovox.com/): simulateur d'entraînement vocal par IA pour les commerciaux ; un client joué par l'IA, puis un débrief noté sur douze compétences de vente.
 - [Media Training Vox](https://media-training-vox.com/): entraînement par IA vocale aux prises de parole des dirigeants, face aux médias, au comité de direction, au conseil ou aux actionnaires.
+- [BotMoiLeQi](https://botmoileqi.com/): le learning agentique pour les organismes de formation ; un agent IA et ses outils (BotMoiLeQi LMA, BotMoiLeQi Slide) accompagnent chaque apprenant jusqu'à la certification. Marque de 3h33.
+- [Le savez-vous ?](https://le-savez-vous.com/): chaque matin, un fait surprenant et sourcé à lire ou écouter en 90 secondes.

@@ -417,7 +417,9 @@ def llms(pages):
                f"- [Cartographie mondiale des usages de l'IA]({SITE_URL}/cartographie-mondiale-des-usages-de-l-ia/)", "",
                "## Applications éditées par 3h33", "",
                "- [NegoVox](https://negovox.com/): simulateur d'entraînement vocal par IA pour les commerciaux ; un client joué par l'IA, puis un débrief noté sur douze compétences de vente.",
-               "- [Media Training Vox](https://media-training-vox.com/): entraînement par IA vocale aux prises de parole des dirigeants, face aux médias, au comité de direction, au conseil ou aux actionnaires.", ""]
+               "- [Media Training Vox](https://media-training-vox.com/): entraînement par IA vocale aux prises de parole des dirigeants, face aux médias, au comité de direction, au conseil ou aux actionnaires.",
+               "- [BotMoiLeQi](https://botmoileqi.com/): le learning agentique pour les organismes de formation ; un agent IA et ses outils (BotMoiLeQi LMA, BotMoiLeQi Slide) accompagnent chaque apprenant jusqu'à la certification. Marque de 3h33.",
+               "- [Le savez-vous ?](https://le-savez-vous.com/): chaque matin, un fait surprenant et sourcé à lire ou écouter en 90 secondes.", ""]
     (SITE / "llms.txt").write_text("\n".join(lignes), encoding="utf-8")
 
 def ecrire(url, page):
@@ -464,8 +466,11 @@ def jsonld_accueil(meta):
                          "url": SITE_URL + u, "provider": {"@id": org}}} for n, u in services],
          "sameAs": ["https://alexandrestopnicki.com", "https://fr.linkedin.com/in/alexandrestopnicki",
                     "https://twitter.com/alexandre3h33", "https://www.facebook.com/3h33.FORMATIONS",
-                    "https://instagram.com/alexandre3h33", "https://choucroute-citron.com",
-                    "https://negovox.com", "https://media-training-vox.com"]},
+                    "https://instagram.com/alexandre3h33", "https://choucroute-citron.com"],
+         "brand": [{"@type": "Brand", "name": n, "url": u} for n, u in (
+             ("BotMoiLeQi", "https://botmoileqi.com"), ("NegoVox", "https://negovox.com"),
+             ("Media Training Vox", "https://media-training-vox.com"),
+             ("Le savez-vous ?", "https://le-savez-vous.com"))]},
         {"@type": "Person", "@id": pers, "name": "Alexandre Stopnicki",
          "jobTitle": "Fondateur de 3h33, formateur et conférencier en intelligence artificielle",
          "description": "Fondateur de 3h33. Dans le numérique depuis trente ans : en 1997, sa société "

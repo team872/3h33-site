@@ -96,13 +96,19 @@ Trente-quatre sites et outils sont en ligne aujourd'hui, tous fabriqués de cett
 
 Ce n'est pas un chatbot déguisé : c'est un produit complet, avec un parcours d'entretien, une fabrication de livre et des options de bande dessinée ou de film.
 
-<a class="vignette" href="https://chapitre.ai" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>chapitre.ai</em></span><img src="/vignettes/chapitre.jpg" alt="La page d'accueil de chapitre.ai" loading="lazy" width="760" height="412"></a>
+<a class="vignette" href="https://chapitre.ai" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>chapitre.ai</em></span><img src="/vignettes/chapitre.jpg" alt="La page d'accueil de chapitre.ai" loading="lazy" width="800" height="500"></a>
 
-### BotMoiLeQi — un rituel quotidien
+### Le savez-vous ? — un rituel quotidien
 
-[botmoileqi.com](https://botmoileqi.com) publie chaque matin un fait surprenant et sourcé, à lire ou à écouter en quatre-vingt-dix secondes. Un objet simple en apparence, mais qui suppose une chaîne complète : trouver, vérifier, sourcer, rédiger, mettre en voix, publier, tous les jours.
+[le-savez-vous.com](https://le-savez-vous.com) publie chaque matin un fait surprenant et sourcé, à lire ou à écouter en quatre-vingt-dix secondes. Un objet simple en apparence, mais qui suppose une chaîne complète : trouver, vérifier, sourcer, rédiger, mettre en voix, publier, tous les jours.
 
-<a class="vignette" href="https://botmoileqi.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>botmoileqi.com</em></span><img src="/vignettes/botmoileqi.jpg" alt="La page d'accueil de BotMoiLeQi" loading="lazy" width="760" height="412"></a>
+<a class="vignette" href="https://le-savez-vous.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>le-savez-vous.com</em></span><img src="/vignettes/le-savez-vous.jpg" alt="La page d'accueil de Le savez-vous ?" loading="lazy" width="800" height="500"></a>
+
+### BotMoiLeQi — le learning agentique pour la formation
+
+[botmoileqi.com](https://botmoileqi.com) équipe les organismes de formation, les écoles et les directions de la formation : un agent accompagne chaque apprenant, répond à partir des cours, fait pratiquer, relance au bon moment et rend compte au formateur. Autour de lui, des outils construits de la même façon : [BotMoiLeQi LMA](https://lma.botmoileqi.com), la plateforme où vivent les formations, et [BotMoiLeQi Slide](https://slide.botmoileqi.com), des présentations interactives où l'IA intervient en séance.
+
+<a class="vignette" href="https://botmoileqi.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>botmoileqi.com</em></span><img src="/vignettes/botmoileqi-formation.jpg" alt="La page d'accueil de BotMoiLeQi" loading="lazy" width="800" height="500"></a>
 
 ### Subsidium — agir là où vous vivez
 

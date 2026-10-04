@@ -16,6 +16,9 @@ faq:
   - Faut-il jeter son LMS pour passer au LMA ?|Non. On part du corpus existant, cours, vidéos, documents, et on ajoute la couche agentique par-dessus. C'est ce que nous avons fait pour Sator.
 ---
 
+Notre LMA existe : c'est [BotMoiLeQi LMA](https://lma.botmoileqi.com), de la famille [BotMoiLeQi](https://botmoileqi.com). Les apprenants y sont accompagnés par un tuteur qui répond à partir des cours, les formateurs voient où ça bloque, et les preuves Qualiopi se constituent au fil de l'eau.
+
+
 ## D'où vient le mot
 
 Depuis vingt ans, la formation en ligne s'organise autour du LMS, le Learning Management System. Un LMS range des cours, inscrit des apprenants, suit des progressions et délivre des attestations. C'est un classeur, très bien fait, mais un classeur.
