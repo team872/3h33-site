@@ -81,9 +81,13 @@ Trente-quatre sites et outils sont en ligne aujourd'hui, tous fabriqués de cett
 
 Ce n'est pas un chatbot déguisé : c'est un produit complet, avec un parcours d'entretien, une fabrication de livre et des options de bande dessinée ou de film.
 
-### BotMoiLeQi — un rituel quotidien
+### Le savez-vous ? — un rituel quotidien
 
-[botmoileqi.com](https://botmoileqi.com) publie chaque matin un fait surprenant et sourcé, à lire ou à écouter en quatre-vingt-dix secondes. Un objet simple en apparence, mais qui suppose une chaîne complète : trouver, vérifier, sourcer, rédiger, mettre en voix, publier, tous les jours.
+[le-savez-vous.com](https://le-savez-vous.com) publie chaque matin un fait surprenant et sourcé, à lire ou à écouter en quatre-vingt-dix secondes. Un objet simple en apparence, mais qui suppose une chaîne complète : trouver, vérifier, sourcer, rédiger, mettre en voix, publier, tous les jours.
+
+### BotMoiLeQi — le learning agentique pour la formation
+
+[botmoileqi.com](https://botmoileqi.com) équipe les organismes de formation, les écoles et les directions de la formation : un agent accompagne chaque apprenant, répond à partir des cours, fait pratiquer, relance au bon moment et rend compte au formateur. Autour de lui, des outils construits de la même façon : [BotMoiLeQi LMA](https://lma.botmoileqi.com), la plateforme où vivent les formations, et [BotMoiLeQi Slide](https://slide.botmoileqi.com), des présentations interactives où l'IA intervient en séance.
 
 ### Subsidium — agir là où vous vivez
 
@@ -193,7 +197,8 @@ Les agents d'aujourd'hui comprennent une question formulée librement, cherchent
 
 - **Des agents nourris de vos documents.** Ils répondent à partir de votre base, citent le passage utilisé et ne brodent pas.
 - **Des agents vocaux.** On leur parle, ils répondent, ils relancent. C'est le principe de nos simulateurs d'entraînement.
-- **Des agents éditoriaux.** [BotMoiLeQi](https://botmoileqi.com) publie chaque matin un fait surprenant et sourcé, à lire ou écouter en quatre-vingt-dix secondes.
+- **Des agents pédagogiques.** [BotMoiLeQi](https://botmoileqi.com) accompagne chaque apprenant d'un organisme de formation, de l'inscription à la certification : il répond à partir des cours, fait pratiquer et relance.
+- **Des agents éditoriaux.** [Le savez-vous ?](https://le-savez-vous.com) publie chaque matin un fait surprenant et sourcé, à lire ou écouter en quatre-vingt-dix secondes.
 - **Des agents internes.** Pour vos équipes : retrouver une procédure, préparer une réponse, vérifier un dossier.
 
 ## Ce qui fait un agent utile
@@ -206,7 +211,7 @@ D'abord un périmètre clair : un agent qui prétend tout savoir se trompe parto
 
 Dix ans d'agents conversationnels, de LècheBot en 2017 aux simulateurs vocaux d'aujourd'hui : [voir l'historique complet](/realisations-chatbots-agents/).
 
-[BotMoiLeQi](https://botmoileqi.com), qui trouve, vérifie et met en voix un fait chaque matin, et l'[assistant de recherche](/assistant-de-recherche/) qui explore un corpus documentaire. Plusieurs agents métier tournent aujourd'hui chez nos clients, dont un assistant de rédaction des délibérations pour une commune.
+Nous avons aussi construit [BotMoiLeQi](https://botmoileqi.com), le learning agentique pour les organismes de formation, [Le savez-vous ?](https://le-savez-vous.com), qui trouve, vérifie et met en voix un fait chaque matin, et l'[assistant de recherche](/assistant-de-recherche/) qui explore un corpus documentaire. Plusieurs agents métier tournent aujourd'hui chez nos clients, dont un assistant de rédaction des délibérations pour une commune.
 
 Pour construire le vôtre, tout commence par une [session Forge](/forge/) d'une demi-journée.
 
@@ -499,6 +504,8 @@ URL : https://3h33.com/lma-learning-management-agentique/
 > Le LMA, Learning Management Agentique, succède au LMS : une plateforme où des agents retrouvent, expliquent et interrogent l'apprenant.
 
 Un LMS range des cours. Un LMA les fait travailler : il retrouve, explique, interroge et s'adapte. Nous appelons ça le Learning Management Agentique.
+
+Notre LMA existe : c'est [BotMoiLeQi LMA](https://lma.botmoileqi.com), de la famille [BotMoiLeQi](https://botmoileqi.com). Les apprenants y sont accompagnés par un tuteur qui répond à partir des cours, les formateurs voient où ça bloque, et les preuves Qualiopi se constituent au fil de l'eau.
 
 ## D'où vient le mot
 
@@ -910,7 +917,7 @@ Vidéo : LècheBot, le chatbot le plus flatteur de la planète numérique — Th
 
 ## 2018 et 2019 : des bots qui enseignent
 
-En 2019, trois ans avant ChatGPT, nous créons **BotMoiLeQi**, un chatbot capable de former, de coacher et d'accompagner des étudiants dans un parcours pédagogique. Il pose des questions, relance, encourage, et vérifie l'acquisition des compétences. L'engagement des apprenants est nettement supérieur à celui d'un cours en ligne classique.
+Bien avant ChatGPT naît **BotMoiLeQi**, un chatbot capable de former, de coacher et d'accompagner des étudiants dans un parcours pédagogique. Il pose des questions, relance, encourage, et vérifie l'acquisition des compétences. L'engagement des apprenants est nettement supérieur à celui d'un cours en ligne classique. BotMoiLeQi reçoit le prix de l'innovation du Grand Prix du Social Media 2018.
 
 La même année naît toute une série de démonstrateurs, chacun explorant un usage : **StoryBot** qui raconte des histoires, **ProfBot** qui interroge l'élève, un bot qui explique les acronymes, un bot de prise de rendez-vous, et déjà **EpiVoiceBot**, un premier essai de bot à la voix.
 
@@ -921,6 +928,10 @@ En 2020, **CVBot** aide à préparer un CV en dialoguant. En 2021, l'**assistant
 ## 2023 à 2025 : des agents qui comprennent
 
 L'arrivée des grands modèles de langage change la nature du travail. On n'écrit plus les réponses : on donne à l'agent des documents, des règles et un périmètre. Ce sont les agents de support interne, d'orientation et d'évaluation que nous construisons en [session Forge](/forge/), et la plateforme d'apprentissage agentique, le [LMA](/lma-learning-management-agentique/), où des agents expliquent et interrogent l'apprenant.
+
+## Aujourd'hui : BotMoiLeQi et Le savez-vous ?
+
+Le chatbot pédagogique de 2018 est devenu un écosystème : [BotMoiLeQi](https://botmoileqi.com) équipe les organismes de formation d'un agent qui accompagne chaque apprenant jusqu'à la certification, avec [BotMoiLeQi LMA](https://lma.botmoileqi.com) pour héberger les formations et [BotMoiLeQi Slide](https://slide.botmoileqi.com) pour les présentations interactives. Le fait du jour, lui, a pris son indépendance : [Le savez-vous ?](https://le-savez-vous.com) publie chaque matin une histoire vraie, vérifiée et mise en voix.
 
 ## 2026 : des agents qui parlent
 

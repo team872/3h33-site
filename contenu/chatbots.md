@@ -27,7 +27,8 @@ Les agents d'aujourd'hui comprennent une question formulée librement, cherchent
 
 - **Des agents nourris de vos documents.** Ils répondent à partir de votre base, citent le passage utilisé et ne brodent pas.
 - **Des agents vocaux.** On leur parle, ils répondent, ils relancent. C'est le principe de nos simulateurs d'entraînement.
-- **Des agents éditoriaux.** [BotMoiLeQi](https://botmoileqi.com) publie chaque matin un fait surprenant et sourcé, à lire ou écouter en quatre-vingt-dix secondes.
+- **Des agents pédagogiques.** [BotMoiLeQi](https://botmoileqi.com) accompagne chaque apprenant d'un organisme de formation, de l'inscription à la certification : il répond à partir des cours, fait pratiquer et relance.
+- **Des agents éditoriaux.** [Le savez-vous ?](https://le-savez-vous.com) publie chaque matin un fait surprenant et sourcé, à lire ou écouter en quatre-vingt-dix secondes.
 - **Des agents internes.** Pour vos équipes : retrouver une procédure, préparer une réponse, vérifier un dossier.
 
 ## Ce qui fait un agent utile
@@ -40,6 +41,6 @@ D'abord un périmètre clair : un agent qui prétend tout savoir se trompe parto
 
 Dix ans d'agents conversationnels, de LècheBot en 2017 aux simulateurs vocaux d'aujourd'hui : [voir l'historique complet](/realisations-chatbots-agents/).
 
-[BotMoiLeQi](https://botmoileqi.com), qui trouve, vérifie et met en voix un fait chaque matin, et l'[assistant de recherche](/assistant-de-recherche/) qui explore un corpus documentaire. Plusieurs agents métier tournent aujourd'hui chez nos clients, dont un assistant de rédaction des délibérations pour une commune.
+Nous avons aussi construit [BotMoiLeQi](https://botmoileqi.com), le learning agentique pour les organismes de formation, [Le savez-vous ?](https://le-savez-vous.com), qui trouve, vérifie et met en voix un fait chaque matin, et l'[assistant de recherche](/assistant-de-recherche/) qui explore un corpus documentaire. Plusieurs agents métier tournent aujourd'hui chez nos clients, dont un assistant de rédaction des délibérations pour une commune.
 
 Pour construire le vôtre, tout commence par une [session Forge](/forge/) d'une demi-journée.
