@@ -96,7 +96,7 @@ Trente-quatre sites et outils sont en ligne aujourd'hui, tous fabriqués de cett
 
 Ce n'est pas un chatbot déguisé : c'est un produit complet, avec un parcours d'entretien, une fabrication de livre et des options de bande dessinée ou de film.
 
-<a class="vignette" href="https://chapitre.ai" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>chapitre.ai</em></span><img src="/vignettes/chapitre.jpg" alt="La page d'accueil de chapitre.ai" loading="lazy" width="800" height="500"></a>
+<a class="vignette" href="https://chapitre.ai" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>chapitre.ai</em></span><img src="/vignettes/chapitre.jpg?v=20261004" alt="La page d'accueil de chapitre.ai" loading="lazy" width="800" height="500"></a>
 
 ### Le savez-vous ? — un rituel quotidien
 
