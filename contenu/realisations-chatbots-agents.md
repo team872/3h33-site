@@ -26,9 +26,9 @@ Tout commence par une blague sérieuse. LècheBot a une seule mission : vous dir
 
 @youtube GdteLri1cZU | LècheBot, le chatbot le plus flatteur de la planète numérique — The Artificial Intelligence Society
 
-## 2018 et 2019 : des bots qui enseignent
+## 2017 à 2019 : des bots qui enseignent
 
-Bien avant ChatGPT naît **BotMoiLeQi**, un chatbot capable de former, de coacher et d'accompagner des étudiants dans un parcours pédagogique. Il pose des questions, relance, encourage, et vérifie l'acquisition des compétences. L'engagement des apprenants est nettement supérieur à celui d'un cours en ligne classique. BotMoiLeQi reçoit le prix de l'innovation du Grand Prix du Social Media 2018.
+Dès 2017, bien avant ChatGPT, naît **BotMoiLeQi**, un chatbot capable de former, de coacher et d'accompagner des étudiants dans un parcours pédagogique. Il pose des questions, relance, encourage, et vérifie l'acquisition des compétences. L'engagement des apprenants est nettement supérieur à celui d'un cours en ligne classique. BotMoiLeQi reçoit le prix de l'innovation du Grand Prix du Social Media 2018.
 
 La même année naît toute une série de démonstrateurs, chacun explorant un usage : **StoryBot** qui raconte des histoires, **ProfBot** qui interroge l'élève, un bot qui explique les acronymes, un bot de prise de rendez-vous, et déjà **EpiVoiceBot**, un premier essai de bot à la voix.
 
