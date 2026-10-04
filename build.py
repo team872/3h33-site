@@ -95,6 +95,15 @@ def md(texte):
         # Miniature d'abord, lecteur au clic (une page de vingt lecteurs YouTube chargés
         # d'avance pèserait plusieurs mégaoctets) ; les mêmes lignes nourrissent les
         # VideoObject du JSON-LD (videos_de).
+        if l.startswith("@vedette "):
+            ferme()
+            v = video("@video " + l[len("@vedette "):])
+            out.append(f'<figure class="vcarte vcarte--vedette"><button type="button" class="vcarte__lire" data-video="{v["id"]}" '
+                       f'aria-label="Lire la vidéo : {esc(v["titre"])}"><img src="https://i.ytimg.com/vi/{v["id"]}/maxresdefault.jpg" '
+                       f'alt="" loading="lazy" width="1280" height="720"><span class="vcarte__play" aria-hidden="true">▶</span></button>'
+                       f'<figcaption><b>{esc(v["titre"])}</b><span class="vcarte__meta">{v["annee"]} · {v["duree"]}</span>'
+                       f'<span class="vcarte__texte">{enligne(esc(v["texte"]))}</span></figcaption></figure>')
+            i += 1; continue
         if l.startswith("@video "):
             ferme()
             out.append('<div class="videos">')
@@ -181,7 +190,8 @@ def video(ligne):
             "iso": f"PT{int(m)}M{int(sec)}S", "texte": texte}
 
 def videos_de(corps):
-    return [video(l) for l in corps.split("\n") if l.startswith("@video ")]
+    return [video("@video " + l.split(" ", 1)[1]) for l in corps.split("\n")
+            if l.startswith("@video ") or l.startswith("@vedette ")]
 
 def enligne(t):
     t = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", r'<img src="\2" alt="\1" loading="lazy">', t)
@@ -526,8 +536,8 @@ def llms_complet(pages):
                             texte.append(f"- {html.unescape(a.group(2))} ({a.group(3)}) : {a.group(1)}")
                     continue
                 if l.lstrip().startswith("<"): continue
-                if l.startswith("@video "):
-                    v = video(l)
+                if l.startswith("@video ") or l.startswith("@vedette "):
+                    v = video("@video " + l.split(" ", 1)[1])
                     texte.append(f"- Vidéo « {v['titre']} » ({v['annee']}, {v['duree']}) : {texte_brut(v['texte'])} — https://www.youtube.com/watch?v={v['id']}")
                     continue
                 m = re.match(r"^@youtube\s+([\w-]{11})\s*\|\s*(.+)$", l)

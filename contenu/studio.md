@@ -12,6 +12,10 @@ eyebrow: "Studio"
 chapo: "Depuis 2024, Alexandre Stopnicki écrit, filme, met en musique et monte avec des IA génératives. Voici ce qu'on peut regarder et écouter dès maintenant, et ce que le studio peut faire pour vous."
 ---
 
+## Notre bande démo
+
+@vedette 6_cOEGE9Ruo | Bande démo du studio, version 3 | 2026-04-02 | 5:08 | Cinq minutes pour voir ce que fait le studio : personnages de science-fiction, portraits réalistes dans les rues de Paris, portés par la musique.
+
 ## Trois films à voir
 
 @video 4B2qV8A2kb0 | Les Grandes Statues | 2024-08-16 | 3:33 | Thriller de science-fiction : un monde où d'anciennes IA dominent l'humanité.
