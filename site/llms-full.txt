@@ -1071,6 +1071,10 @@ Depuis 2024, Alexandre Stopnicki écrit, filme, met en musique et monte avec des
 
 **[Les Voix de l'IA](/podcast-voix-de-lia/)** : en cinq à huit minutes, le portrait des dirigeants qui façonnent l'IA, de Sam Altman à Jensen Huang.
 
+## Des œuvres vivantes
+
+**[Listen to my art — Musée à la maison](https://listen-to-my-art.com/)** : un QR code posé à côté d'une œuvre ; on le flashe, et sur le téléphone l'œuvre s'anime, raconte son histoire et répond.
+
 ## Ce que le studio fait pour vous
 
 ## Dans la salle de montage

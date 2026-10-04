@@ -478,7 +478,10 @@ def jsonld_accueil(meta):
                         "Construit des chatbots depuis 2017 ; chroniqueur de l'émission The Artificial "
                         "Intelligence Society.",
          "url": "https://alexandrestopnicki.com", "image": SITE_URL + "/medias/alexandre-stopnicki.jpg",
-         "worksFor": {"@id": org},
+         "worksFor": [{"@id": org},
+                      {"@type": "Organization", "@id": "https://listen-to-my-art.com/#organisation",
+                       "name": "Listen to my art", "alternateName": "Musée à la maison",
+                       "url": "https://listen-to-my-art.com/"}],
          "knowsAbout": ["Intelligence artificielle générative", "Vibe coding", "Pédagogie",
                         "Agents conversationnels", "Métavers"],
          "sameAs": ["https://fr.linkedin.com/in/alexandrestopnicki", "https://alexandre.ai",
