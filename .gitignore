@@ -12,3 +12,7 @@ services/*/.env
 # liste des épisodes écrite par le cron du VPS (la liste de secours, elle, est versionnée)
 site/inclus/choucroute.html
 site/inclus/*.tmp
+
+# MP3 des Voix de l'IA : trop lourds pour git, copiés à part sur le serveur (rsync), voir
+# podcast-engine/site/README.md. Le reste de la page est construit par podcast-engine (site/construire.mjs --3h33).
+site/podcast-voix-de-lia/audio/

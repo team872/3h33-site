@@ -21,3 +21,4 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://3h33.com/sitemap.xml
+Sitemap: https://3h33.com/podcast-voix-de-lia/sitemap.xml

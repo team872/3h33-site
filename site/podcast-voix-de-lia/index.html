@@ -2,932 +2,440 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Les Voix de l'IA, le podcast des leaders · 3h33</title>
-
-<!-- SEO META -->
-<meta name="description" content="Découvrez les portraits audio des plus grands leaders de l'IA : Sam Altman, Dario Amodei, Jensen Huang, Satya Nadella, Sundar Pichai et bien d'autres. Dialogues exclusifs basés sur des recherches approfondies. Par Alexandre Stopnicki.">
-<meta name="keywords" content="podcast IA, intelligence artificielle, leaders tech, Sam Altman, Dario Amodei, Jensen Huang, Satya Nadella, OpenAI, Anthropic, NVIDIA, Google DeepMind, Midjourney, Perplexity AI, Apple, Microsoft, Alexandre Stopnicki, ia-talent, ia-magique">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Les Voix de l&#39;IA — portraits audio des figures de l&#39;IA · Choucroute Citron</title>
+<meta name="description" content="Portraits audio des figures qui font l&#39;IA : Arthur Mensch, Daniela Amodei, Elon Musk, Fei-Fei Li, Lisa Su… Sources publiques recoupées, une dizaine de minutes. Une série Choucroute Citron.">
 <meta name="author" content="Alexandre Stopnicki">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="generator" content="Podcast Engine — site/construire.mjs">
 <link rel="canonical" href="https://3h33.com/podcast-voix-de-lia/">
-
-<!-- OPEN GRAPH -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Les Voix de l'IA">
-<meta property="og:title" content="Les Voix de l'IA — Portraits des leaders de l'intelligence artificielle">
-<meta property="og:description" content="Qui sont les visionnaires derrière l'IA ? Sam Altman, Dario Amodei, Jensen Huang, Satya Nadella… Dialogues exclusifs et recherches approfondies sur les figures qui façonnent le monde. Par Alexandre Stopnicki.">
+<meta property="og:site_name" content="Les Voix de l'IA · Choucroute Citron">
+<meta property="og:title" content="Les Voix de l&#39;IA — portraits audio des figures de l&#39;IA · Choucroute Citron">
+<meta property="og:description" content="Portraits audio des figures qui font l&#39;IA : Arthur Mensch, Daniela Amodei, Elon Musk, Fei-Fei Li, Lisa Su… Sources publiques recoupées, une dizaine de minutes. Une série Choucroute Citron.">
 <meta property="og:url" content="https://3h33.com/podcast-voix-de-lia/">
-<meta property="og:image" content="https://3h33.com/podcast-voix-de-lia/og-voix-de-lia.png">
+<meta property="og:image" content="https://3h33.com/podcast-voix-de-lia/images/partage.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Les Voix de l'IA — Podcast sur les leaders de l'intelligence artificielle par Alexandre Stopnicki">
+<meta property="og:image:alt" content="Les Voix de l&#39;IA, une série Choucroute Citron">
 <meta property="og:locale" content="fr_FR">
-
-<!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Les Voix de l'IA — Portraits des leaders de l'IA">
-<meta name="twitter:description" content="Sam Altman, Dario Amodei, Jensen Huang, Satya Nadella… Les portraits audio des plus grands leaders de l'intelligence artificielle. Par Alexandre Stopnicki.">
-<meta name="twitter:image" content="https://3h33.com/podcast-voix-de-lia/og-voix-de-lia.png">
-<meta name="twitter:image:alt" content="Les Voix de l'IA — Podcast AI Leaders">
-
-<!-- THEME / FAVICON -->
+<meta name="twitter:title" content="Les Voix de l&#39;IA — portraits audio des figures de l&#39;IA · Choucroute Citron">
+<meta name="twitter:description" content="Portraits audio des figures qui font l&#39;IA : Arthur Mensch, Daniela Amodei, Elon Musk, Fei-Fei Li, Lisa Su… Sources publiques recoupées, une dizaine de minutes. Une série Choucroute Citron.">
+<meta name="twitter:image" content="https://3h33.com/podcast-voix-de-lia/images/partage.jpg">
 <meta name="theme-color" content="#0a0a0c">
-<meta name="msapplication-TileColor" content="#0a0a0c">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
-
-<!-- Preconnect pour perf mobile -->
-<link rel="preconnect" href="https://open.spotify.com">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/podcast-voix-de-lia/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/podcast-voix-de-lia/favicon.svg">
+<link rel="apple-touch-icon" href="/podcast-voix-de-lia/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Les Voix de l'IA (flux RSS du podcast)" href="https://3h33.com/podcast-voix-de-lia/flux.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- JSON-LD STRUCTURED DATA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "PodcastSeries",
-  "name": "Les Voix de l'IA — AI Leaders",
-  "description": "Portraits audio des plus grands leaders de l'intelligence artificielle. Dialogues exclusifs basés sur des recherches approfondies sur les figures qui façonnent le monde de l'IA.",
-  "url": "https://3h33.com/podcast-voix-de-lia/",
-  "author": {
-    "@type": "Person",
-    "name": "Alexandre Stopnicki",
-    "url": "https://ia-magique.com"
-  },
-  "inLanguage": "fr",
-  "genre": "Technology",
-  "webFeed": "https://open.spotify.com/playlist/055C8B7DfO5NjjAhkchrzh",
-  "image": "https://3h33.com/podcast-voix-de-lia/og-voix-de-lia.png",
-  "numberOfEpisodes": 11,
-  "episode": [
-    {"@type":"PodcastEpisode","name":"Sam Altman — OpenAI / ChatGPT","description":"Du succès de Loopt et Y Combinator à la co-fondation d'OpenAI, il est le créateur de ChatGPT. Sa vision pour une IA bénéfique façonne l'avenir.","url":"https://open.spotify.com/episode/3kddcoeSMWKQYXnsDDGG2v","duration":"PT6M38S","episodeNumber":1},
-    {"@type":"PodcastEpisode","name":"Dario Amodei — Anthropic / Claude","description":"Physicien devenu architecte de l'IA sûre. Il cofonde Anthropic pour bâtir une IA éthique avec Claude et l'IA constitutionnelle.","url":"https://open.spotify.com/episode/56TBNl4ZyUtUDbWAT93Ugz","duration":"PT6M33S","episodeNumber":2},
-    {"@type":"PodcastEpisode","name":"Jensen Huang — NVIDIA","description":"Cofondateur de Nvidia, de la quasi-faillite à un géant mondial de l'IA. Son leadership a façonné la révolution technologique.","url":"https://open.spotify.com/episode/3r2VCCLnpNqvbdGNkw5D47","duration":"PT6M47S","episodeNumber":3},
-    {"@type":"PodcastEpisode","name":"Satya Nadella — Microsoft","description":"L'homme qui a réinventé Microsoft. Leader empathique, artisan de Copilot, il voit l'IA comme un partenaire humain.","url":"https://open.spotify.com/episode/7CINcGx9mBKzDFgAFwRJ94","duration":"PT5M38S","episodeNumber":4},
-    {"@type":"PodcastEpisode","name":"Sundar Pichai — Google & Alphabet","description":"Au cœur de la révolution IA, il pousse Google à investir 75 milliards dans l'intelligence artificielle.","url":"https://open.spotify.com/episode/3LJvTSJHpGTcwRDZOp7NeS","duration":"PT6M3S","episodeNumber":5},
-    {"@type":"PodcastEpisode","name":"Demis Hassabis — Google DeepMind","description":"Prodige des échecs et neuroscientifique. Derrière AlphaGo et AlphaFold, il voit l'IA guérir les maladies.","url":"https://open.spotify.com/episode/019EFviWnUtRzap7aOTAbX","duration":"PT7M8S","episodeNumber":6},
-    {"@type":"PodcastEpisode","name":"David Holz — Midjourney","description":"Le visionnaire discret derrière Midjourney. De la NASA à un moteur pour l'imagination démocratique.","url":"https://open.spotify.com/episode/6lAm3AxaoLmFwjRXGpdQ7x","duration":"PT5M47S","episodeNumber":7},
-    {"@type":"PodcastEpisode","name":"Tim Cook — Apple","description":"Le discret PDG d'Apple. Sa vision : Apple Intelligence au cœur de tous les produits.","url":"https://open.spotify.com/episode/6pmdP2gk2hdcqByfQIWC98","duration":"PT5M57S","episodeNumber":8},
-    {"@type":"PodcastEpisode","name":"Aravind Srinivas — Perplexity AI","description":"Ex-Google et OpenAI, il réinvente la recherche avec des réponses directes, sourcées, en temps réel.","url":"https://open.spotify.com/episode/7J5onJcGfiOoIEVGJRJbkM","duration":"PT6M8S","episodeNumber":9}
-  ]
-}
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#0a0a0c;
-  --bg-card:#111114;
-  --bg-card-hover:#18181c;
-  --text:#f5f4f1;
-  --text-dim:#b8b5ad;
-  --accent:#c4a265;
-  --accent-glow:#c4a26540;
-  --accent2:#5b8a72;
-  --spotify:#1DB954;
-  --border:#222226;
-  --player-bg:#0d0d10;
-  --wave:#c4a265;
-  --ff-display:'Playfair Display',Georgia,serif;
-  --ff-mono:'JetBrains Mono',monospace;
-  --ff-body:'DM Sans',system-ui,sans-serif;
-  --safe-bottom:env(safe-area-inset-bottom, 0px);
-}
-html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--ff-body);
-  min-height:100vh;
-  overflow-x:hidden;
-}
-
-/* GRAIN OVERLAY */
-body::after{
-  content:'';position:fixed;inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events:none;z-index:9999;opacity:.5;
-}
-
-/* HERO */
-.hero{
-  min-height:100vh;display:flex;flex-direction:column;
-  justify-content:center;align-items:center;
-  position:relative;text-align:center;
-  padding:2rem;
-}
-.hero::before{
-  content:'';position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 60% 50% at 50% 40%, #c4a26510 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 20% 80%, #5b8a7208 0%, transparent 60%),
-    radial-gradient(ellipse 50% 40% at 80% 20%, #c4a26508 0%, transparent 60%);
-  pointer-events:none;
-}
-.hero-label{
-  font-family:var(--ff-mono);font-size:.7rem;letter-spacing:.35em;
-  text-transform:uppercase;color:var(--accent);
-  margin-bottom:1.5rem;
-  opacity:0;animation:fadeUp .8s .3s forwards;
-}
-.hero h1{
-  font-family:var(--ff-display);font-weight:900;
-  font-size:clamp(3rem,8vw,7rem);line-height:.95;
-  letter-spacing:-.03em;
-  opacity:0;animation:fadeUp .8s .5s forwards;
-}
-.hero h1 span.accent{color:var(--accent)}
-.hero h1 span.italic{font-style:italic;font-weight:400}
-.hero-sub{
-  font-size:clamp(1rem,2vw,1.3rem);
-  color:var(--text-dim);max-width:600px;
-  margin-top:1.5rem;line-height:1.6;font-weight:300;
-  opacity:0;animation:fadeUp .8s .7s forwards;
-}
-.hero-cta{
-  margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;
-  opacity:0;animation:fadeUp .8s .9s forwards;
-}
-.btn{
-  display:inline-flex;align-items:center;gap:.5rem;
-  padding:.9rem 2rem;border-radius:0;font-family:var(--ff-mono);
-  font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;
-  text-decoration:none;transition:all .3s;cursor:pointer;border:none;
-}
-.btn-primary{
-  background:var(--accent);color:var(--bg);
-}
-.btn-primary:hover{background:#d4b275;transform:translateY(-2px);box-shadow:0 8px 30px var(--accent-glow)}
-.btn-ghost{
-  background:transparent;color:var(--text);border:1px solid var(--border);
-}
-.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
-.btn-spotify{
-  background:var(--spotify);color:#fff;
-}
-.btn-spotify:hover{background:#1ed760;transform:translateY(-2px);box-shadow:0 8px 30px #1db95440}
-
-.scroll-indicator{
-  position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:.5rem;
-  opacity:0;animation:fadeUp .8s 1.2s forwards;
-}
-.scroll-indicator span{
-  font-family:var(--ff-mono);font-size:.6rem;letter-spacing:.3em;
-  text-transform:uppercase;color:var(--text-dim);
-}
-.scroll-line{
-  width:1px;height:40px;background:linear-gradient(var(--accent),transparent);
-  animation:scrollPulse 2s infinite;
-}
-
-/* SECTION COMMON */
-section{padding:6rem 2rem;max-width:1200px;margin:0 auto}
-.section-label{
-  font-family:var(--ff-mono);font-size:.65rem;letter-spacing:.4em;
-  text-transform:uppercase;color:var(--accent);margin-bottom:1rem;
-}
-.section-title{
-  font-family:var(--ff-display);font-size:clamp(2rem,4vw,3.5rem);
-  font-weight:700;line-height:1.1;margin-bottom:1rem;
-}
-.section-desc{
-  color:var(--text-dim);font-size:1rem;line-height:1.7;
-  max-width:600px;font-weight:300;margin-bottom:3rem;
-}
-
-/* STATS BAR */
-.stats{
-  display:flex;gap:3rem;flex-wrap:wrap;
-  padding:3rem 0;border-top:1px solid var(--border);
-  border-bottom:1px solid var(--border);
-  margin:0 auto;max-width:1200px;
-  justify-content:center;
-}
-.stat{text-align:center}
-.stat-num{
-  font-family:var(--ff-display);font-size:2.5rem;font-weight:900;
-  color:var(--accent);
-}
-.stat-label{
-  font-family:var(--ff-mono);font-size:.65rem;letter-spacing:.25em;
-  text-transform:uppercase;color:var(--text-dim);margin-top:.3rem;
-}
-
-/* EPISODE GRID */
-.episodes-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
-  gap:1.5rem;
-}
-.episode-card{
-  background:var(--bg-card);border:1px solid var(--border);
-  padding:0;overflow:hidden;cursor:pointer;
-  transition:all .4s cubic-bezier(.16,1,.3,1);
-  position:relative;display:flex;flex-direction:column;
-}
-.episode-card:hover{
-  background:var(--bg-card-hover);
-  border-color:var(--accent);
-  transform:translateY(-4px);
-  box-shadow:0 20px 60px #00000060;
-}
-.episode-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  transform:scaleX(0);transition:transform .4s;transform-origin:left;z-index:2;
-}
-.episode-card:hover::before{transform:scaleX(1)}
-
-/* COVER IMAGE */
-.card-cover{
-  position:relative;width:100%;aspect-ratio:1/1;overflow:hidden;
-  background:linear-gradient(135deg,#1a1a1e 0%,#0d0d10 100%);
-}
-.card-cover img{
-  width:100%;height:100%;object-fit:cover;display:block;
-  transition:transform .7s cubic-bezier(.16,1,.3,1);
-}
-.episode-card:hover .card-cover img{transform:scale(1.06)}
-.card-cover::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to bottom,transparent 55%,rgba(10,10,12,.85) 100%);
-  pointer-events:none;
-}
-.card-cover-placeholder{
-  position:absolute;inset:0;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  font-family:var(--ff-display);color:var(--accent);
-  background:
-    radial-gradient(ellipse at center, #c4a26520 0%, transparent 70%),
-    linear-gradient(135deg,#1a1a1e 0%,#0d0d10 100%);
-  text-align:center;padding:1rem;
-}
-.card-cover-placeholder .ep{
-  font-family:var(--ff-mono);font-size:.65rem;letter-spacing:.3em;
-  color:var(--accent);margin-bottom:.8rem;opacity:.8;
-}
-.card-cover-placeholder .title{
-  font-family:var(--ff-display);font-size:1.8rem;font-weight:700;
-  color:var(--text);line-height:1.1;font-style:italic;
-}
-.card-cover-badge{
-  position:absolute;top:1rem;left:1rem;z-index:2;
-  background:rgba(10,10,12,.75);backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
-  padding:.3rem .7rem;
-  font-family:var(--ff-mono);font-size:.55rem;letter-spacing:.25em;
-  color:var(--accent);text-transform:uppercase;
-  border:1px solid #c4a26540;
-}
-.card-cover-play{
-  position:absolute;bottom:1rem;right:1rem;z-index:2;
-  width:52px;height:52px;border-radius:50%;
-  background:var(--accent);
-  display:flex;align-items:center;justify-content:center;
-  transition:all .3s;border:none;cursor:pointer;
-  box-shadow:0 4px 20px rgba(0,0,0,.4);
-  -webkit-tap-highlight-color:transparent;
-  opacity:0;transform:translateY(8px);
-}
-.episode-card:hover .card-cover-play,
-.card-cover-play:focus{opacity:1;transform:translateY(0);outline:none}
-.card-cover-play:hover{transform:scale(1.1);box-shadow:0 0 30px var(--accent-glow)}
-.card-cover-play:active{transform:scale(.95)}
-.card-cover-play svg{width:18px;height:18px;fill:var(--bg);margin-left:3px}
-@media(hover:none){
-  .card-cover-play{opacity:1;transform:translateY(0)}
-}
-
-.card-inner{padding:1.5rem 1.8rem 1.8rem;flex:1;display:flex;flex-direction:column}
-.card-number{
-  font-family:var(--ff-mono);font-size:.6rem;letter-spacing:.3em;
-  color:var(--accent);text-transform:uppercase;margin-bottom:.8rem;
-  display:flex;align-items:center;gap:.5rem;
-}
-.card-number::after{
-  content:'';flex:1;height:1px;background:var(--border);
-}
-.card-footer{margin-top:auto}
-.card-name{
-  font-family:var(--ff-display);font-size:1.5rem;font-weight:700;
-  line-height:1.2;margin-bottom:.3rem;
-}
-.card-role{
-  font-family:var(--ff-mono);font-size:.7rem;letter-spacing:.1em;
-  color:var(--accent);margin-bottom:1rem;
-}
-.card-desc{
-  font-size:.85rem;line-height:1.6;color:var(--text-dim);font-weight:300;
-  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
-}
-.card-footer{
-  display:flex;justify-content:space-between;align-items:center;
-  margin-top:1.2rem;padding-top:1rem;border-top:1px solid var(--border);
-}
-.card-duration{
-  font-family:var(--ff-mono);font-size:.7rem;color:var(--text-dim);
-}
-.card-play{
-  width:40px;height:40px;border-radius:50%;
-  background:var(--accent);display:flex;align-items:center;justify-content:center;
-  transition:all .3s;border:none;cursor:pointer;
-  -webkit-tap-highlight-color:transparent;
-}
-.card-play:hover,.card-play:focus{transform:scale(1.15);box-shadow:0 0 20px var(--accent-glow);outline:none}
-.card-play:active{transform:scale(.95)}
-.card-play svg{width:14px;height:14px;fill:var(--bg);margin-left:2px}
-
-/* STICKY PLAYER — SPOTIFY EMBED */
-.player{
-  position:fixed;bottom:0;left:0;right:0;
-  background:var(--player-bg);
-  border-top:1px solid var(--border);
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-  z-index:1000;
-  transform:translateY(110%);
-  transition:transform .5s cubic-bezier(.16,1,.3,1);
-  padding-bottom:var(--safe-bottom);
-}
-.player.active{transform:translateY(0)}
-.player-embed-inner{
-  max-width:1200px;margin:0 auto;
-  padding:.8rem 1.5rem;
-}
-.player-embed-info{
-  display:flex;align-items:center;justify-content:space-between;
-  margin-bottom:.6rem;flex-wrap:wrap;gap:.75rem;
-}
-.player-cover{
-  width:48px;height:48px;border-radius:6px;overflow:hidden;flex-shrink:0;
-  background:linear-gradient(135deg,#1a1a1e 0%,#0d0d10 100%);
-  border:1px solid var(--border);
-}
-.player-cover img{width:100%;height:100%;object-fit:cover;display:block}
-.player-titles{display:flex;align-items:baseline;flex-wrap:wrap;min-width:0;flex:1}
-.player-embed-info .player-name{
-  font-family:var(--ff-display);font-size:1rem;font-weight:700;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;
-}
-.player-embed-info .player-role{
-  font-family:var(--ff-mono);font-size:.6rem;letter-spacing:.15em;
-  color:var(--accent);text-transform:uppercase;margin-left:.8rem;
-}
-.player-nav-btns{
-  display:flex;align-items:center;gap:.4rem;margin-left:auto;
-}
-.player-btn{
-  background:none;border:none;cursor:pointer;color:var(--text-dim);
-  transition:color .2s,background .2s;display:flex;align-items:center;justify-content:center;
-  padding:8px;border-radius:50%;min-width:36px;min-height:36px;
-  -webkit-tap-highlight-color:transparent;
-}
-.player-btn:hover,.player-btn:focus{color:var(--text);background:#ffffff08;outline:none}
-.player-btn svg{width:20px;height:20px}
-.player-btn.spotify-direct{color:var(--spotify)}
-.player-btn.spotify-direct:hover{background:#1db95420}
-.player-embed-frame{
-  border-radius:12px;overflow:hidden;
-  height:152px;
-  transition:opacity .3s;
-  background:#191414;
-  position:relative;
-}
-.player-embed-frame iframe{
-  width:100%;height:152px;border:none;border-radius:12px;display:block;
-}
-.player-embed-frame::before{
-  content:'Chargement du lecteur…';
-  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-  font-family:var(--ff-mono);font-size:.7rem;letter-spacing:.15em;
-  color:var(--text-dim);text-transform:uppercase;
-  opacity:1;transition:opacity .3s;pointer-events:none;
-}
-.player-embed-frame.loaded::before{opacity:0}
-
-/* Tip mobile audio */
-.mobile-audio-tip{
-  display:none;
-  margin-top:.5rem;
-  font-family:var(--ff-mono);font-size:.6rem;letter-spacing:.05em;
-  color:var(--text-dim);text-align:center;line-height:1.5;
-}
-.mobile-audio-tip a{color:var(--spotify);text-decoration:none;font-weight:500}
-.mobile-audio-tip a:hover{text-decoration:underline}
-@media(max-width:768px){
-  .mobile-audio-tip{display:block}
-}
-
-/* ABOUT SECTION */
-.about-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;
-}
-.about-quote{
-  font-family:var(--ff-display);font-size:1.6rem;font-style:italic;
-  line-height:1.5;color:var(--text);position:relative;
-  padding-left:2rem;margin-top:1rem;
-}
-.about-quote::before{
-  content:'"';position:absolute;left:-.5rem;top:-.5rem;
-  font-size:5rem;color:var(--accent);opacity:.3;
-  font-family:var(--ff-display);line-height:1;
-}
-.about-details{
-  display:flex;flex-direction:column;gap:1.5rem;
-}
-.about-detail{
-  padding:1.2rem 1.5rem;border-left:2px solid var(--border);
-  transition:border-color .3s;
-}
-.about-detail:hover{border-color:var(--accent)}
-.about-detail h4{
-  font-family:var(--ff-mono);font-size:.7rem;letter-spacing:.25em;
-  text-transform:uppercase;color:var(--accent);margin-bottom:.4rem;
-}
-.about-detail p{font-size:.9rem;color:var(--text-dim);line-height:1.5;font-weight:300}
-
-/* WAVEFORM CANVAS */
-.waveform-container{
-  position:absolute;bottom:0;left:0;right:0;height:60px;
-  opacity:.15;pointer-events:none;
-}
-
-/* FOOTER */
-footer{
-  border-top:1px solid var(--border);
-  padding:3rem 2rem;text-align:center;
-  margin-top:4rem;
-  padding-bottom:calc(3rem + var(--safe-bottom));
-}
-footer p{font-family:var(--ff-mono);font-size:.65rem;color:var(--text-dim);letter-spacing:.2em}
-footer a{color:var(--accent);text-decoration:none}
-footer a:hover{text-decoration:underline}
-
-/* ANIMATIONS */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
-}
-@keyframes scrollPulse{
-  0%,100%{opacity:.3}50%{opacity:1}
-}
-
-/* Prefer reduced motion */
-@media (prefers-reduced-motion: reduce){
-  *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
-  .hero-label,.hero h1,.hero-sub,.hero-cta,.scroll-indicator{opacity:1 !important;animation:none !important}
-  .reveal{opacity:1 !important;transform:none !important}
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  section{padding:4rem 1.25rem}
-  .hero{padding:1.5rem}
-  .about-grid{grid-template-columns:1fr;gap:2rem}
-  .episodes-grid{grid-template-columns:1fr}
-  .player-embed-inner{padding:.6rem 1rem}
-  /* On conserve 152px — hauteur minimale du player compact Spotify
-     c'est cette compression à 80px qui cassait l'audio mobile */
-  .player-embed-frame,
-  .player-embed-frame iframe{height:152px}
-  .stats{gap:1.5rem;padding:2rem 1rem}
-  .stat-num{font-size:1.8rem}
-  body{padding-bottom:230px}
-  .hero-cta{flex-direction:column;width:100%}
-  .hero-cta .btn{justify-content:center;width:100%;max-width:320px;margin:0 auto}
-  .player-embed-info .player-role{display:none}
-  .player-embed-info .player-name{font-size:.9rem}
-}
-
-/* SCROLL REVEAL */
-.reveal{opacity:0;transform:translateY(30px);transition:all .8s cubic-bezier(.16,1,.3,1)}
-.reveal.visible{opacity:1;transform:translateY(0)}
-
-/* SPOTIFY EMBED LINK */
-.spotify-link{
-  display:inline-flex;align-items:center;gap:.5rem;
-  color:var(--accent);font-family:var(--ff-mono);font-size:.7rem;
-  letter-spacing:.15em;text-decoration:none;
-  transition:color .3s;margin-top:1rem;
-}
-.spotify-link:hover{color:#1DB954}
-.spotify-link svg{width:18px;height:18px}
-
-/* LISTEN PLATFORMS */
-.platforms{
-  display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;
-}
-.platform-badge{
-  display:flex;align-items:center;gap:.5rem;
-  padding:.6rem 1.2rem;border:1px solid var(--border);
-  font-family:var(--ff-mono);font-size:.65rem;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--text-dim);
-  text-decoration:none;transition:all .3s;
-}
-.platform-badge:hover{border-color:var(--accent);color:var(--accent)}
-
-/* Keyboard focus visible */
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-</style>
-<script defer src="https://stats.3h33.com/script.js" data-website-id="9456f661-e1ea-4c9d-90bc-dec50970f3b4" data-domains="3h33.com,nouveau.3h33.com"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="/podcast-voix-de-lia/style.css?v=db1d29c0">
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"PodcastSeries","@id":"https://3h33.com/podcast-voix-de-lia/#serie","name":"Les Voix de l'IA","alternateName":"Choucroute Citron : Les Voix de l'IA","description":"Portraits audio des figures qui font l'IA : Arthur Mensch, Daniela Amodei, Elon Musk, Fei-Fei Li, Lisa Su… Sources publiques recoupées, une dizaine de minutes. Une série Choucroute Citron.","url":"https://3h33.com/podcast-voix-de-lia/","webFeed":"https://3h33.com/podcast-voix-de-lia/flux.xml","inLanguage":"fr-FR","image":"https://3h33.com/podcast-voix-de-lia/images/partage.jpg","genre":["Technologie","Intelligence artificielle","Biographies"],"author":{"@type":"Person","name":"Alexandre Stopnicki"},"publisher":{"@type":"Organization","name":"Choucroute Citron","url":"https://choucroute-citron.com"},"episode":[{"@type":"PodcastEpisode","name":"Arthur Mensch : refusé une première fois au CNRS, devenu patron de Mistral AI","url":"https://3h33.com/podcast-voix-de-lia/arthur-mensch/","about":{"@type":"Person","name":"Arthur Mensch"}},{"@type":"PodcastEpisode","name":"Daniela Amodei : la littéraire qui préside Anthropic","url":"https://3h33.com/podcast-voix-de-lia/daniela-amodei/","about":{"@type":"Person","name":"Daniela Amodei"}},{"@type":"PodcastEpisode","name":"Elon Musk, l'IA qui fait peur et celle qu'il construit","url":"https://3h33.com/podcast-voix-de-lia/elon-musk/","about":{"@type":"Person","name":"Elon Musk"}},{"@type":"PodcastEpisode","name":"Fei-Fei Li : du pressing familial aux machines qui voient","url":"https://3h33.com/podcast-voix-de-lia/fei-fei-li/","about":{"@type":"Person","name":"Fei-Fei Li"}},{"@type":"PodcastEpisode","name":"Lisa Su : recalée à Juilliard, reine des puces au MIT et chez AMD","url":"https://3h33.com/podcast-voix-de-lia/lisa-su/","about":{"@type":"Person","name":"Lisa Su"}},{"@type":"PodcastEpisode","name":"Mark Zuckerberg : du réseau maison à la superintelligence","url":"https://3h33.com/podcast-voix-de-lia/mark-zuckerberg/","about":{"@type":"Person","name":"Mark Zuckerberg"}},{"@type":"PodcastEpisode","name":"Mati Staniszewski : le Polonais qui a donné une voix à l'IA","url":"https://3h33.com/podcast-voix-de-lia/mati-staniszewski/","about":{"@type":"Person","name":"Mati Staniszewski"}},{"@type":"PodcastEpisode","name":"Mira Murati : de Vlorë à une IA que chacun peut façonner","url":"https://3h33.com/podcast-voix-de-lia/mira-murati/","about":{"@type":"Person","name":"Mira Murati"}},{"@type":"PodcastEpisode","name":"Yann LeCun : de HAL 9000 aux modèles du monde","url":"https://3h33.com/podcast-voix-de-lia/yann-lecun/","about":{"@type":"Person","name":"Yann LeCun"}},{"@type":"PodcastEpisode","name":"Introduction : qui sont les leaders de l'IA ?","url":"https://open.spotify.com/episode/1vfhahrUkcrDUgBaf4cu7F","datePublished":"2025-05-11"},{"@type":"PodcastEpisode","name":"Sam Altman (OpenAI)","url":"https://open.spotify.com/episode/3kddcoeSMWKQYXnsDDGG2v","datePublished":"2025-05-04"},{"@type":"PodcastEpisode","name":"Dario Amodei (Anthropic)","url":"https://open.spotify.com/episode/56TBNl4ZyUtUDbWAT93Ugz","datePublished":"2025-05-30"},{"@type":"PodcastEpisode","name":"Jensen Huang (Nvidia)","url":"https://open.spotify.com/episode/3r2VCCLnpNqvbdGNkw5D47","datePublished":"2025-05-04"},{"@type":"PodcastEpisode","name":"Satya Nadella (Microsoft)","url":"https://open.spotify.com/episode/7CINcGx9mBKzDFgAFwRJ94","datePublished":"2025-05-11"},{"@type":"PodcastEpisode","name":"Sundar Pichai (Google)","url":"https://open.spotify.com/episode/3LJvTSJHpGTcwRDZOp7NeS","datePublished":"2025-05-04"},{"@type":"PodcastEpisode","name":"Demis Hassabis (Google DeepMind)","url":"https://open.spotify.com/episode/019EFviWnUtRzap7aOTAbX","datePublished":"2025-05-15"},{"@type":"PodcastEpisode","name":"David Holz (Midjourney)","url":"https://open.spotify.com/episode/6lAm3AxaoLmFwjRXGpdQ7x","datePublished":"2025-05-12"},{"@type":"PodcastEpisode","name":"Tim Cook (Apple)","url":"https://open.spotify.com/episode/6pmdP2gk2hdcqByfQIWC98","datePublished":"2025-05-13"},{"@type":"PodcastEpisode","name":"Aravind Srinivas (Perplexity)","url":"https://open.spotify.com/episode/7J5onJcGfiOoIEVGJRJbkM","datePublished":"2025-06-01"},{"@type":"PodcastEpisode","name":"IA : secrets, dangers et vous","url":"https://open.spotify.com/episode/6gEBWX6HydjstKWJEaj7VH","datePublished":"2025-05-20"}]}]}</script>
 </head>
 <body>
-
-<!-- HERO -->
+<a class="saut" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="/podcast-voix-de-lia/" aria-label="Les Voix de l'IA, accueil de l'émission"><img src="/podcast-voix-de-lia/choucroute-icone.png" alt="" width="64" height="48"><span>Les Voix <em>de l'IA</em></span></a>
+  <nav aria-label="Navigation principale"><a class="etroit" href="#portraits">Portraits</a><a class="facultatif" href="#saison-1">Saison 1</a><a class="facultatif" href="#projet">Le projet</a><a class="facultatif" href="#ce-qui-arrive">La suite</a><a href="#abonnement">S'abonner</a></nav>
+</header>
+<main id="contenu">
 <section class="hero">
-  <div class="hero-label">Podcast · AI Leaders · Par Alexandre Stopnicki</div>
-  <h1>
-    <span class="italic">Les</span> <span class="accent">Voix</span><br>
-    de l'IA
-  </h1>
-  <p class="hero-sub">
-    Portraits intimes des visionnaires qui façonnent l'intelligence artificielle.
-    Dialogues exclusifs, recherches approfondies, les leaders comme vous ne les avez jamais entendus.
-  </p>
+  <div class="hero-label"><img src="/podcast-voix-de-lia/choucroute-icone.png" alt="" width="64" height="48"> Podcast · Une série Choucroute Citron</div>
+  <h1><span class="italic">Les</span> <span class="accent">Voix</span><br>de l'IA</h1>
+  <p class="hero-sub">Les portraits des femmes et des hommes qui façonnent l&#39;intelligence artificielle, racontés par Ada, Alan et Lia. Des parcours, des idées, des anecdotes et des zones d'ombre, en une dizaine de minutes.</p>
+  <p class="hero-mention">Sources publiques recoupées · Voix générées par IA</p>
   <div class="hero-cta">
-    <a href="#episodes" class="btn btn-primary">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
-      Écouter
-    </a>
-    <a href="https://open.spotify.com/playlist/055C8B7DfO5NjjAhkchrzh" target="_blank" rel="noopener" class="btn btn-spotify">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-      Ouvrir sur Spotify
-    </a>
-    <a href="#about" class="btn btn-ghost">Découvrir le projet</a>
+    <a href="#portraits" class="btn btn-primary"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg> Écouter</a>
+    <a href="#abonnement" class="btn btn-ghost">S'abonner</a>
+    <a href="#projet" class="btn btn-ghost">Découvrir le projet</a>
   </div>
-  <div class="scroll-indicator">
-    <span>Explorer</span>
-    <div class="scroll-line"></div>
-  </div>
+  <a class="scroll-indicator" href="#portraits" aria-label="Voir les portraits"><span>Explorer</span><div class="scroll-line"></div></a>
   <canvas class="waveform-container" id="heroWave" aria-hidden="true"></canvas>
 </section>
 
-<!-- STATS -->
-<div class="stats reveal">
-  <div class="stat">
-    <div class="stat-num" id="countEpisodes">11</div>
-    <div class="stat-label">Épisodes</div>
+<section id="abonnement" class="section-abonnement" aria-labelledby="abonnement-titre">
+  <div class="abonnement-grille">
+    <div class="abonnement abonnement-principal reveal">
+      <div class="abonnement-tete">
+        <img class="pochette" src="/podcast-voix-de-lia/images/pochette-400.jpg" srcset="/podcast-voix-de-lia/images/pochette-400.jpg 400w, /podcast-voix-de-lia/images/pochette-800.jpg 800w" sizes="132px" alt="Pochette des Voix de l'IA, par Choucroute Citron" width="400" height="400" loading="lazy" decoding="async">
+        <div>
+          <div class="section-label"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 17a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 10.5v2.6a7.9 7.9 0 0 1 7.9 7.9h2.6A10.5 10.5 0 0 0 3 10.5zM3 3.5v2.6A14.9 14.9 0 0 1 17.9 21h2.6A17.5 17.5 0 0 0 3 3.5z"/></svg> S'abonner · flux RSS</div>
+          <h2 class="section-title" id="abonnement-titre">Recevez chaque <em>nouveau portrait</em></h2>
+        </div>
+      </div>
+      <p>Ajoutez ce flux à votre application de podcast : chaque nouveau portrait y arrivera tout seul. 9 épisodes à écouter dès maintenant. <strong>Bientôt sur Apple Podcasts et Spotify.</strong></p>
+      <p class="flux-libelle">Adresse du flux des Voix de l'IA</p>
+      <div class="flux-ligne">
+        <code id="adresse-flux" class="flux-adresse" aria-label="adresse du flux des Voix de l&#39;IA">https://3h33.com/podcast-voix-de-lia/flux.xml</code>
+        <button type="button" class="btn btn-primary copier" data-copier="https://3h33.com/podcast-voix-de-lia/flux.xml" aria-label="Copier l&#39;adresse : adresse du flux des Voix de l&#39;IA"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M5 15V5.5A1.5 1.5 0 0 1 6.5 4H15"/></svg><span>Copier l&#39;adresse</span></button>
+      </div>
+      <ul class="applis">
+        <li><span class="appli">Apple Podcasts</span><span>iPhone : Bibliothèque › « ⋯ » › Suivre une émission via une URL. Mac : Fichier › Suivre un podcast via une URL. Puis collez l'adresse.</span></li>
+        <li><a class="appli" href="pktc://subscribe/3h33.com/podcast-voix-de-lia/flux.xml">Pocket Casts <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span>Ouvre directement l'application, si elle est installée sur cet appareil.</span></li>
+        <li><a class="appli" href="overcast://x-callback-url/add?url=https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2Fflux.xml">Overcast <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span>Sur iPhone, ouvre directement l'application si elle est installée.</span></li>
+        <li><span class="appli">Podcast Addict</span><span>Sur Android : bouton +, puis « Flux RSS », et collez l'adresse.</span></li>
+        <li><span class="appli">Tout lecteur RSS</span><span>AntennaPod, Castro, Podverse ou un lecteur de flux : collez l'adresse copiée.</span></li>
+      </ul>
+      <p class="note-flux"><a href="https://3h33.com/podcast-voix-de-lia/flux.xml">Voir le flux</a> · chaque épisode y renvoie à sa page : transcription, citations et sources.</p>
+    </div>
+    <div class="abonnement abonnement-cc reveal">
+      <a href="https://choucroute-citron.com" rel="noopener" class="logo-cc"><img src="/podcast-voix-de-lia/choucroute-logo.png" alt="Choucroute Citron" width="112" height="106" loading="lazy"></a>
+      <div class="section-label">Et aussi</div>
+      <h3>Choucroute Citron</h3>
+      <p>Le podcast d'Alexandre Stopnicki, où les IA-nimatrices interrogent en direct des invités au parcours remarquable : entrepreneurs, artistes, chercheurs, sportifs. On y retrouve aussi la saison 1 des Voix de l'IA.</p>
+      <div class="platforms">
+        <a class="platform-badge" href="https://open.spotify.com/show/3Wg6LgVP21PQRiJy6wM8VB" rel="noopener" target="_blank">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <a class="platform-badge" href="https://podcasts.apple.com/fr/podcast/choucroute-citron/id1812305442" rel="noopener" target="_blank">Apple Podcasts <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <a class="platform-badge" href="https://www.deezer.com/fr/show/1001855651" rel="noopener" target="_blank">Deezer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <a class="platform-badge" href="https://podcast.ausha.co/show/9peJafn6W6DR" rel="noopener" target="_blank">Ausha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <a class="platform-badge" href="https://choucroute-citron.com/" rel="noopener" target="_blank">choucroute-citron.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      </div>
+      <p class="flux-libelle">Son flux RSS</p>
+      <div class="flux-ligne">
+        <code id="adresse-flux-cc" class="flux-adresse" aria-label="adresse du flux de Choucroute Citron">https://feed.ausha.co/9peJafn6W6DR</code>
+        <button type="button" class="btn btn-ghost copier" data-copier="https://feed.ausha.co/9peJafn6W6DR" aria-label="Copier : adresse du flux de Choucroute Citron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M5 15V5.5A1.5 1.5 0 0 1 6.5 4H15"/></svg><span>Copier</span></button>
+      </div>
+    </div>
   </div>
-  <div class="stat">
-    <div class="stat-num">12+</div>
-    <div class="stat-label">Leaders portraitisés</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num" id="totalDuration">1h07</div>
-    <div class="stat-label">D'écoute</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num">∞</div>
-    <div class="stat-label">Recherches</div>
-  </div>
-</div>
-
-<!-- EPISODES -->
-<section id="episodes">
-  <div class="section-label reveal">Portraits</div>
-  <h2 class="section-title reveal">Les épisodes</h2>
-  <p class="section-desc reveal">
-    Chaque épisode est le fruit de recherches approfondies sur les parcours, les visions
-    et les stratégies des figures les plus influentes de l'IA mondiale.
-  </p>
-
-  <div class="episodes-grid" id="episodesGrid"></div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
+<div class="stats" role="list">
+  <div class="stat reveal" role="listitem"><div class="stat-num">18</div><div class="stat-label">Portraits</div></div>
+  <div class="stat reveal" role="listitem"><div class="stat-num">2h32</div><div class="stat-label">D'écoute</div></div>
+  <div class="stat reveal" role="listitem"><div class="stat-num">673</div><div class="stat-label">Sources recoupées</div></div>
+  <div class="stat reveal" role="listitem"><div class="stat-num">3</div><div class="stat-label">Voix : Ada, Alan, Lia</div></div>
+</div>
+
+<section id="portraits">
+  <span id="episodes" class="ancre" aria-hidden="true"></span>
+  <div class="section-label reveal">Saison 2 · 2026</div>
+  <h2 class="section-title reveal">Les nouveaux <em>portraits</em></h2>
+  <p class="section-desc reveal">Chaque portrait part d'un dossier de recherche vérifié : des dizaines de sources publiques, des citations datées, des faits recoupés. Ada et Alan racontent, Lia ose une prédiction. Sur chaque page : l'épisode, la conversation complète, les citations et toutes les sources.</p>
+  <div class="episodes-grid">
+    <article class="episode-card reveal" data-id="arthur-mensch">
+    <a class="lien-carte" href="/podcast-voix-de-lia/arthur-mensch/" aria-label="Arthur Mensch : Refusé une première fois au CNRS, devenu patron de Mistral AI"></a>
+    <div class="card-cover"><div class="card-cover-badge nouveau">Nouveau</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/arthur-mensch-400.webp 400w, /podcast-voix-de-lia/images/arthur-mensch-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/arthur-mensch-400.jpg" srcset="/podcast-voix-de-lia/images/arthur-mensch-400.jpg 400w, /podcast-voix-de-lia/images/arthur-mensch-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette d&#39;Arthur Mensch" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span><button class="card-cover-play" data-jouer="arthur-mensch" aria-label="Écouter le portrait d&#39;Arthur Mensch"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 2 · Portrait</div>
+      <h3 class="card-name">Arthur Mensch</h3>
+      <div class="card-role">Directeur général · Mistral AI</div>
+      <p class="card-desc">Refusé une première fois au CNRS, devenu patron de Mistral AI. De l&#39;IRM du cerveau aux modèles géants : Ada et Alan racontent Arthur Mensch, cofondateur de Mistral AI, avec la complicité de Lia.</p>
+      <div class="card-footer"><span class="card-duration">9 min 35</span><button class="card-play" data-jouer="arthur-mensch" aria-label="Écouter le portrait d&#39;Arthur Mensch"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="daniela-amodei">
+    <a class="lien-carte" href="/podcast-voix-de-lia/daniela-amodei/" aria-label="Daniela Amodei : La littéraire qui préside Anthropic"></a>
+    <div class="card-cover"><div class="card-cover-badge nouveau">Nouveau</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/daniela-amodei-400.webp 400w, /podcast-voix-de-lia/images/daniela-amodei-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/daniela-amodei-400.jpg" srcset="/podcast-voix-de-lia/images/daniela-amodei-400.jpg 400w, /podcast-voix-de-lia/images/daniela-amodei-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Daniela Amodei" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span><button class="card-cover-play" data-jouer="daniela-amodei" aria-label="Écouter le portrait de Daniela Amodei"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 2 · Portrait</div>
+      <h3 class="card-name">Daniela Amodei</h3>
+      <div class="card-role">Présidente · Anthropic</div>
+      <p class="card-desc">La littéraire qui préside Anthropic. Bourse de flûte, licence de littérature, campagne politique, puis Stripe et OpenAI : Ada et Alan racontent le parcours de Daniela Amodei, cofondatrice et présidente d&#39;Anthropic, l&#39;entreprise qui fait Claude.</p>
+      <div class="card-footer"><span class="card-duration">9 min 16</span><button class="card-play" data-jouer="daniela-amodei" aria-label="Écouter le portrait de Daniela Amodei"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="elon-musk">
+    <a class="lien-carte" href="/podcast-voix-de-lia/elon-musk/" aria-label="Elon Musk : L&#39;IA qui fait peur et celle qu&#39;il construit"></a>
+    <div class="card-cover"><div class="card-cover-badge nouveau">Nouveau</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/elon-musk-400.webp 400w, /podcast-voix-de-lia/images/elon-musk-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/elon-musk-400.jpg" srcset="/podcast-voix-de-lia/images/elon-musk-400.jpg 400w, /podcast-voix-de-lia/images/elon-musk-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette d&#39;Elon Musk" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span><button class="card-cover-play" data-jouer="elon-musk" aria-label="Écouter le portrait d&#39;Elon Musk"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 2 · Portrait</div>
+      <h3 class="card-name">Elon Musk</h3>
+      <div class="card-role">Tesla · SpaceX</div>
+      <p class="card-desc">L&#39;IA qui fait peur et celle qu&#39;il construit. Un enfant de Pretoria qui vend son premier jeu vidéo à douze ans et qui, en octobre 2026, dirigeait Tesla et SpaceX. Ada et Alan racontent Elon Musk, de 2008, sa pire année, à ses mises en garde sur l&#39;IA.</p>
+      <div class="card-footer"><span class="card-duration">8 min 55</span><button class="card-play" data-jouer="elon-musk" aria-label="Écouter le portrait d&#39;Elon Musk"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="fei-fei-li">
+    <a class="lien-carte" href="/podcast-voix-de-lia/fei-fei-li/" aria-label="Fei-Fei Li : Du pressing familial aux machines qui voient"></a>
+    <div class="card-cover"><div class="card-cover-badge nouveau">Nouveau</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/fei-fei-li-400.webp 400w, /podcast-voix-de-lia/images/fei-fei-li-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/fei-fei-li-400.jpg" srcset="/podcast-voix-de-lia/images/fei-fei-li-400.jpg 400w, /podcast-voix-de-lia/images/fei-fei-li-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Fei-Fei Li" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span><button class="card-cover-play" data-jouer="fei-fei-li" aria-label="Écouter le portrait de Fei-Fei Li"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 2 · Portrait</div>
+      <h3 class="card-name">Fei-Fei Li</h3>
+      <div class="card-role">Fondatrice · World Labs</div>
+      <p class="card-desc">Du pressing familial aux machines qui voient. À quinze ans, elle arrive avec sa famille dans le New Jersey ; ils ont moins de vingt dollars. Fei-Fei Li a lancé, avec son équipe, ImageNet, la base d&#39;images qui a contribué à faire décoller l&#39;apprentissage profond : Ada et Alan racontent son parcours, ses idées et ses controverses, avec Lia en invitée.</p>
+      <div class="card-footer"><span class="card-duration">9 min 24</span><button class="card-play" data-jouer="fei-fei-li" aria-label="Écouter le portrait de Fei-Fei Li"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="lisa-su">
+    <a class="lien-carte" href="/podcast-voix-de-lia/lisa-su/" aria-label="Lisa Su : Recalée à Juilliard, reine des puces au MIT et chez AMD"></a>
+    <div class="card-cover"><div class="card-cover-badge nouveau">Nouveau</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/lisa-su-400.webp 400w, /podcast-voix-de-lia/images/lisa-su-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/lisa-su-400.jpg" srcset="/podcast-voix-de-lia/images/lisa-su-400.jpg 400w, /podcast-voix-de-lia/images/lisa-su-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Lisa Su" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span><button class="card-cover-play" data-jouer="lisa-su" aria-label="Écouter le portrait de Lisa Su"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 2 · Portrait</div>
+      <h3 class="card-name">Lisa Su</h3>
+      <div class="card-role">PDG · AMD</div>
+      <p class="card-desc">Recalée à Juilliard, reine des puces au MIT et chez AMD. Elle rêvait d&#39;être pianiste, elle est devenue ingénieure au MIT puis a fait d&#39;AMD, une entreprise en perdition, le grand challenger de Nvidia dans les puces pour l&#39;IA : portrait de Lisa Su.</p>
+      <div class="card-footer"><span class="card-duration">9 min 02</span><button class="card-play" data-jouer="lisa-su" aria-label="Écouter le portrait de Lisa Su"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="mark-zuckerberg">
+    <a class="lien-carte" href="/podcast-voix-de-lia/mark-zuckerberg/" aria-label="Mark Zuckerberg : Du réseau maison à la superintelligence"></a>
+    <div class="card-cover"><div class="card-cover-badge nouveau">Nouveau</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/mark-zuckerberg-400.webp 400w, /podcast-voix-de-lia/images/mark-zuckerberg-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/mark-zuckerberg-400.jpg" srcset="/podcast-voix-de-lia/images/mark-zuckerberg-400.jpg 400w, /podcast-voix-de-lia/images/mark-zuckerberg-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Mark Zuckerberg" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span><button class="card-cover-play" data-jouer="mark-zuckerberg" aria-label="Écouter le portrait de Mark Zuckerberg"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 2 · Portrait</div>
+      <h3 class="card-name">Mark Zuckerberg</h3>
+      <div class="card-role">PDG · Meta</div>
+      <p class="card-desc">Du réseau maison à la superintelligence. Un réseau bricolé à onze ans, une rencontre dans une file d&#39;attente, un empire de plus de trois milliards d&#39;utilisateurs et, en octobre 2026, un film, The Social Reckoning, qui le remet sur le devant de la scène : Ada et Alan racontent Mark Zuckerberg, avec Lia en invitée.</p>
+      <div class="card-footer"><span class="card-duration">9 min 31</span><button class="card-play" data-jouer="mark-zuckerberg" aria-label="Écouter le portrait de Mark Zuckerberg"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="mati-staniszewski">
+    <a class="lien-carte" href="/podcast-voix-de-lia/mati-staniszewski/" aria-label="Mati Staniszewski : Le Polonais qui a donné une voix à l&#39;IA"></a>
+    <div class="card-cover"><div class="card-cover-badge nouveau">Nouveau</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/mati-staniszewski-400.webp 400w, /podcast-voix-de-lia/images/mati-staniszewski-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/mati-staniszewski-400.jpg" srcset="/podcast-voix-de-lia/images/mati-staniszewski-400.jpg 400w, /podcast-voix-de-lia/images/mati-staniszewski-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Mati Staniszewski" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span><button class="card-cover-play" data-jouer="mati-staniszewski" aria-label="Écouter le portrait de Mati Staniszewski"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 2 · Portrait</div>
+      <h3 class="card-name">Mati Staniszewski</h3>
+      <div class="card-role">Directeur général · ElevenLabs</div>
+      <p class="card-desc">Le Polonais qui a donné une voix à l&#39;IA. Comment un amateur de « maths excentriques », marqué par les films lus d&#39;une seule voix monocorde en Pologne, a cofondé ElevenLabs, l&#39;entreprise d&#39;IA vocale valorisée vingt-deux milliards de dollars en septembre 2026.</p>
+      <div class="card-footer"><span class="card-duration">9 min 18</span><button class="card-play" data-jouer="mati-staniszewski" aria-label="Écouter le portrait de Mati Staniszewski"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="mira-murati">
+    <a class="lien-carte" href="/podcast-voix-de-lia/mira-murati/" aria-label="Mira Murati : De Vlorë à une IA que chacun peut façonner"></a>
+    <div class="card-cover"><div class="card-cover-badge nouveau">Nouveau</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/mira-murati-400.webp 400w, /podcast-voix-de-lia/images/mira-murati-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/mira-murati-400.jpg" srcset="/podcast-voix-de-lia/images/mira-murati-400.jpg 400w, /podcast-voix-de-lia/images/mira-murati-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Mira Murati" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span><button class="card-cover-play" data-jouer="mira-murati" aria-label="Écouter le portrait de Mira Murati"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 2 · Portrait</div>
+      <h3 class="card-name">Mira Murati</h3>
+      <div class="card-role">Directrice générale · Thinking Machines Lab</div>
+      <p class="card-desc">De Vlorë à une IA que chacun peut façonner. Fille de professeurs de littérature passionnée de maths, ingénieure chez Tesla, directrice technique d&#39;OpenAI puis fondatrice de Thinking Machines Lab : le portrait de Mira Murati, ses idées et ses controverses.</p>
+      <div class="card-footer"><span class="card-duration">9 min 32</span><button class="card-play" data-jouer="mira-murati" aria-label="Écouter le portrait de Mira Murati"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="yann-lecun">
+    <a class="lien-carte" href="/podcast-voix-de-lia/yann-lecun/" aria-label="Yann LeCun : De HAL 9000 aux modèles du monde"></a>
+    <div class="card-cover"><div class="card-cover-badge nouveau">Nouveau</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/yann-lecun-400.webp 400w, /podcast-voix-de-lia/images/yann-lecun-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/yann-lecun-400.jpg" srcset="/podcast-voix-de-lia/images/yann-lecun-400.jpg 400w, /podcast-voix-de-lia/images/yann-lecun-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette d&#39;Yann LeCun" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span><button class="card-cover-play" data-jouer="yann-lecun" aria-label="Écouter le portrait d&#39;Yann LeCun"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 2 · Portrait</div>
+      <h3 class="card-name">Yann LeCun</h3>
+      <div class="card-role">Président exécutif · AMI Labs</div>
+      <p class="card-desc">De HAL 9000 aux modèles du monde. Du bricoleur de synthétiseurs du Val-d&#39;Oise au prix Turing, puis à AMI Labs : le portrait de Yann LeCun, qui parie sur des IA capables de comprendre le monde physique.</p>
+      <div class="card-footer"><span class="card-duration">9 min 46</span><button class="card-play" data-jouer="yann-lecun" aria-label="Écouter le portrait d&#39;Yann LeCun"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    </div>
+  </article>
+  </div>
+</section>
+
+<section id="saison-1">
+  <div class="section-label reveal">Saison 1 · 2025</div>
+  <h2 class="section-title reveal">Les premiers <em>portraits</em></h2>
+  <p class="section-desc reveal">Là où tout a commencé : onze épisodes enregistrés au printemps 2025, à écouter ici ou sur Spotify.</p>
+  <div class="episodes-grid">
+    <article class="episode-card reveal" data-id="s1-00">
+    <button class="lien-carte" data-jouer="s1-00" aria-label="Écouter Introduction : qui sont les leaders de l&#39;IA ? (lecteur Spotify)"></button>
+    <div class="card-cover"><div class="card-cover-badge">Épisode 00</div><div class="monogramme" role="img" aria-label="Monogramme de Qui sont les leaders de l&#39;IA ?"><img class="pastille" src="/podcast-voix-de-lia/choucroute-icone.png" alt="" width="64" height="48"><span class="initiales">?</span><span class="serie">Les Voix de l'IA</span><span class="nom">Qui sont les leaders de l&#39;IA ?</span></div><span class="reflet"></span>
+      <button class="card-cover-play" data-jouer="s1-00" aria-label="Écouter Introduction : qui sont les leaders de l&#39;IA ?"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 1 · 11 mai 2025</div>
+      <h3 class="card-name">Qui sont les leaders de l&#39;IA ?</h3>
+      <div class="card-role">Introduction</div>
+      <p class="card-desc">Venez découvrir l&#39;univers des Voix de l&#39;IA et apprenez qui se cache derrière les grands noms de la technologie : ceux qui façonnent le monde de l&#39;intelligence artificielle.</p>
+      <div class="card-footer"><span class="card-duration">2:27</span>
+        <a class="card-lire" href="https://open.spotify.com/episode/1vfhahrUkcrDUgBaf4cu7F" rel="noopener" target="_blank">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="s1-01">
+    <button class="lien-carte" data-jouer="s1-01" aria-label="Écouter Sam Altman (OpenAI) (lecteur Spotify)"></button>
+    <div class="card-cover"><div class="card-cover-badge">Épisode 01</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/s1-01-sam-altman-400.webp 400w, /podcast-voix-de-lia/images/s1-01-sam-altman-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/s1-01-sam-altman-400.jpg" srcset="/podcast-voix-de-lia/images/s1-01-sam-altman-400.jpg 400w, /podcast-voix-de-lia/images/s1-01-sam-altman-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Sam Altman, Les Voix de l&#39;IA, saison 1" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span>
+      <button class="card-cover-play" data-jouer="s1-01" aria-label="Écouter Sam Altman (OpenAI)"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 1 · 4 mai 2025</div>
+      <h3 class="card-name">Sam Altman</h3>
+      <div class="card-role">Directeur général · OpenAI</div>
+      <p class="card-desc">Du succès de Loopt et de Y Combinator à la cofondation d&#39;OpenAI, il est le visage de ChatGPT et un acteur clé de la crise de novembre 2023.</p>
+      <div class="card-footer"><span class="card-duration">6:38</span>
+        <a class="card-lire" href="https://open.spotify.com/episode/3kddcoeSMWKQYXnsDDGG2v" rel="noopener" target="_blank">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="s1-02">
+    <button class="lien-carte" data-jouer="s1-02" aria-label="Écouter Dario Amodei (Anthropic) (lecteur Spotify)"></button>
+    <div class="card-cover"><div class="card-cover-badge">Épisode 02</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/s1-02-dario-amodei-400.webp 400w, /podcast-voix-de-lia/images/s1-02-dario-amodei-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/s1-02-dario-amodei-400.jpg" srcset="/podcast-voix-de-lia/images/s1-02-dario-amodei-400.jpg 400w, /podcast-voix-de-lia/images/s1-02-dario-amodei-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Dario Amodei, Les Voix de l&#39;IA, saison 1" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span>
+      <button class="card-cover-play" data-jouer="s1-02" aria-label="Écouter Dario Amodei (Anthropic)"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 1 · 30 mai 2025</div>
+      <h3 class="card-name">Dario Amodei</h3>
+      <div class="card-role">Directeur général · Anthropic</div>
+      <p class="card-desc">Physicien devenu architecte d&#39;une IA plus sûre. Après avoir dirigé la recherche sur GPT chez OpenAI, il cofonde Anthropic, qui crée Claude et l&#39;« IA constitutionnelle ».</p>
+      <div class="card-footer"><span class="card-duration">6:33</span>
+        <a class="card-lire" href="https://open.spotify.com/episode/56TBNl4ZyUtUDbWAT93Ugz" rel="noopener" target="_blank">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="s1-03">
+    <button class="lien-carte" data-jouer="s1-03" aria-label="Écouter Jensen Huang (Nvidia) (lecteur Spotify)"></button>
+    <div class="card-cover"><div class="card-cover-badge">Épisode 03</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/s1-03-jensen-huang-400.webp 400w, /podcast-voix-de-lia/images/s1-03-jensen-huang-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/s1-03-jensen-huang-400.jpg" srcset="/podcast-voix-de-lia/images/s1-03-jensen-huang-400.jpg 400w, /podcast-voix-de-lia/images/s1-03-jensen-huang-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Jensen Huang, Les Voix de l&#39;IA, saison 1" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span>
+      <button class="card-cover-play" data-jouer="s1-03" aria-label="Écouter Jensen Huang (Nvidia)"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 1 · 4 mai 2025</div>
+      <h3 class="card-name">Jensen Huang</h3>
+      <div class="card-role">Directeur général · Nvidia</div>
+      <p class="card-desc">Né à Taïwan, il cofonde Nvidia dans un Denny&#39;s. De la quasi-faillite à un géant mondial de l&#39;IA, son leadership exigeant et sa veste en cuir sont devenus légendaires.</p>
+      <div class="card-footer"><span class="card-duration">6:47</span>
+        <a class="card-lire" href="https://open.spotify.com/episode/3r2VCCLnpNqvbdGNkw5D47" rel="noopener" target="_blank">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="s1-04">
+    <button class="lien-carte" data-jouer="s1-04" aria-label="Écouter Satya Nadella (Microsoft) (lecteur Spotify)"></button>
+    <div class="card-cover"><div class="card-cover-badge">Épisode 04</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/s1-04-satya-nadella-400.webp 400w, /podcast-voix-de-lia/images/s1-04-satya-nadella-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/s1-04-satya-nadella-400.jpg" srcset="/podcast-voix-de-lia/images/s1-04-satya-nadella-400.jpg 400w, /podcast-voix-de-lia/images/s1-04-satya-nadella-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Satya Nadella, Les Voix de l&#39;IA, saison 1" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span>
+      <button class="card-cover-play" data-jouer="s1-04" aria-label="Écouter Satya Nadella (Microsoft)"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 1 · 11 mai 2025</div>
+      <h3 class="card-name">Satya Nadella</h3>
+      <div class="card-role">Directeur général · Microsoft</div>
+      <p class="card-desc">L&#39;homme qui a réinventé Microsoft. Stratège à l&#39;écoute, il a mené l&#39;entreprise vers le cloud puis vers l&#39;IA avec Copilot, qu&#39;il voit comme un partenaire de l&#39;humain.</p>
+      <div class="card-footer"><span class="card-duration">5:38</span>
+        <a class="card-lire" href="https://open.spotify.com/episode/7CINcGx9mBKzDFgAFwRJ94" rel="noopener" target="_blank">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="s1-05">
+    <button class="lien-carte" data-jouer="s1-05" aria-label="Écouter Sundar Pichai (Google) (lecteur Spotify)"></button>
+    <div class="card-cover"><div class="card-cover-badge">Épisode 05</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/s1-05-sundar-pichai-400.webp 400w, /podcast-voix-de-lia/images/s1-05-sundar-pichai-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/s1-05-sundar-pichai-400.jpg" srcset="/podcast-voix-de-lia/images/s1-05-sundar-pichai-400.jpg 400w, /podcast-voix-de-lia/images/s1-05-sundar-pichai-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Sundar Pichai, Les Voix de l&#39;IA, saison 1" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span>
+      <button class="card-cover-play" data-jouer="s1-05" aria-label="Écouter Sundar Pichai (Google)"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 1 · 4 mai 2025</div>
+      <h3 class="card-name">Sundar Pichai</h3>
+      <div class="card-role">Directeur général · Google et Alphabet</div>
+      <p class="card-desc">Au cœur de la révolution de l&#39;IA, il pousse Google à investir 75 milliards de dollars en 2025. De l&#39;Inde à la tête d&#39;Alphabet, sa vision transforme la recherche en ligne.</p>
+      <div class="card-footer"><span class="card-duration">6:03</span>
+        <a class="card-lire" href="https://open.spotify.com/episode/3LJvTSJHpGTcwRDZOp7NeS" rel="noopener" target="_blank">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="s1-06">
+    <button class="lien-carte" data-jouer="s1-06" aria-label="Écouter Demis Hassabis (Google DeepMind) (lecteur Spotify)"></button>
+    <div class="card-cover"><div class="card-cover-badge">Épisode 06</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/s1-06-demis-hassabis-400.webp 400w, /podcast-voix-de-lia/images/s1-06-demis-hassabis-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/s1-06-demis-hassabis-400.jpg" srcset="/podcast-voix-de-lia/images/s1-06-demis-hassabis-400.jpg 400w, /podcast-voix-de-lia/images/s1-06-demis-hassabis-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Demis Hassabis, Les Voix de l&#39;IA, saison 1" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span>
+      <button class="card-cover-play" data-jouer="s1-06" aria-label="Écouter Demis Hassabis (Google DeepMind)"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 1 · 15 mai 2025</div>
+      <h3 class="card-name">Demis Hassabis</h3>
+      <div class="card-role">Directeur général · Google DeepMind</div>
+      <p class="card-desc">Prodige des échecs et neuroscientifique, cofondateur de DeepMind. Derrière AlphaGo et AlphaFold (prix Nobel de chimie), il voit l&#39;IA aider à guérir les maladies.</p>
+      <div class="card-footer"><span class="card-duration">7:08</span>
+        <a class="card-lire" href="https://open.spotify.com/episode/019EFviWnUtRzap7aOTAbX" rel="noopener" target="_blank">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="s1-07">
+    <button class="lien-carte" data-jouer="s1-07" aria-label="Écouter David Holz (Midjourney) (lecteur Spotify)"></button>
+    <div class="card-cover"><div class="card-cover-badge">Épisode 07</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/s1-07-david-holz-400.webp 400w, /podcast-voix-de-lia/images/s1-07-david-holz-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/s1-07-david-holz-400.jpg" srcset="/podcast-voix-de-lia/images/s1-07-david-holz-400.jpg 400w, /podcast-voix-de-lia/images/s1-07-david-holz-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de David Holz, Les Voix de l&#39;IA, saison 1" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span>
+      <button class="card-cover-play" data-jouer="s1-07" aria-label="Écouter David Holz (Midjourney)"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 1 · 12 mai 2025</div>
+      <h3 class="card-name">David Holz</h3>
+      <div class="card-role">Fondateur · Midjourney</div>
+      <p class="card-desc">Le visionnaire discret derrière Midjourney. De la NASA à Leap Motion, il a créé un « moteur pour l&#39;imagination » avec une petite équipe autofinancée.</p>
+      <div class="card-footer"><span class="card-duration">5:47</span>
+        <a class="card-lire" href="https://open.spotify.com/episode/6lAm3AxaoLmFwjRXGpdQ7x" rel="noopener" target="_blank">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="s1-08">
+    <button class="lien-carte" data-jouer="s1-08" aria-label="Écouter Tim Cook (Apple) (lecteur Spotify)"></button>
+    <div class="card-cover"><div class="card-cover-badge">Épisode 08</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/s1-08-tim-cook-400.webp 400w, /podcast-voix-de-lia/images/s1-08-tim-cook-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/s1-08-tim-cook-400.jpg" srcset="/podcast-voix-de-lia/images/s1-08-tim-cook-400.jpg 400w, /podcast-voix-de-lia/images/s1-08-tim-cook-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette de Tim Cook, Les Voix de l&#39;IA, saison 1" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span>
+      <button class="card-cover-play" data-jouer="s1-08" aria-label="Écouter Tim Cook (Apple)"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 1 · 13 mai 2025</div>
+      <h3 class="card-name">Tim Cook</h3>
+      <div class="card-role">Directeur général · Apple</div>
+      <p class="card-desc">Le discret patron d&#39;Apple. Après Steve Jobs, il mène l&#39;entreprise vers de nouveaux sommets ; en 2025, il place « Apple Intelligence » au cœur de ses produits.</p>
+      <div class="card-footer"><span class="card-duration">5:57</span>
+        <a class="card-lire" href="https://open.spotify.com/episode/6pmdP2gk2hdcqByfQIWC98" rel="noopener" target="_blank">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="s1-09">
+    <button class="lien-carte" data-jouer="s1-09" aria-label="Écouter Aravind Srinivas (Perplexity) (lecteur Spotify)"></button>
+    <div class="card-cover"><div class="card-cover-badge">Épisode 09</div><picture><source type="image/webp" srcset="/podcast-voix-de-lia/images/s1-09-aravind-srinivas-400.webp 400w, /podcast-voix-de-lia/images/s1-09-aravind-srinivas-800.webp 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px"><img src="/podcast-voix-de-lia/images/s1-09-aravind-srinivas-400.jpg" srcset="/podcast-voix-de-lia/images/s1-09-aravind-srinivas-400.jpg 400w, /podcast-voix-de-lia/images/s1-09-aravind-srinivas-800.jpg 800w" sizes="(max-width:620px) 100vw, (max-width:1000px) 50vw, 400px" alt="Vignette d&#39;Aravind Srinivas, Les Voix de l&#39;IA, saison 1" width="400" height="400" loading="lazy" decoding="async"></picture><span class="reflet"></span>
+      <button class="card-cover-play" data-jouer="s1-09" aria-label="Écouter Aravind Srinivas (Perplexity)"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 1 · 1er juin 2025</div>
+      <h3 class="card-name">Aravind Srinivas</h3>
+      <div class="card-role">Directeur général · Perplexity</div>
+      <p class="card-desc">Passé par Google et OpenAI, il réinvente la recherche en ligne : des réponses directes, avec leurs sources, en temps réel.</p>
+      <div class="card-footer"><span class="card-duration">6:08</span>
+        <a class="card-lire" href="https://open.spotify.com/episode/7J5onJcGfiOoIEVGJRJbkM" rel="noopener" target="_blank">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </article>
+    <article class="episode-card reveal" data-id="s1-bonus">
+    <button class="lien-carte" data-jouer="s1-bonus" aria-label="Écouter IA : secrets, dangers et vous (lecteur Spotify)"></button>
+    <div class="card-cover"><div class="card-cover-badge">Épisode Bonus</div><div class="monogramme" role="img" aria-label="Monogramme d&#39;IA : secrets et dangers"><img class="pastille" src="/podcast-voix-de-lia/choucroute-icone.png" alt="" width="64" height="48"><span class="initiales">IA</span><span class="serie">Les Voix de l'IA</span><span class="nom">IA : secrets et dangers</span></div><span class="reflet"></span>
+      <button class="card-cover-play" data-jouer="s1-bonus" aria-label="Écouter IA : secrets, dangers et vous"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button></div>
+    <div class="card-inner">
+      <div class="card-number">Saison 1 · 20 mai 2025</div>
+      <h3 class="card-name">IA : secrets et dangers</h3>
+      <div class="card-role">Ne dites jamais ça à une IA !</div>
+      <p class="card-desc">Vous discutez avec une IA et pensez que c&#39;est privé ? Pourquoi la confidentialité n&#39;est jamais garantie, et les risques concrets de ce que l&#39;on partage.</p>
+      <div class="card-footer"><span class="card-duration">8:17</span>
+        <a class="card-lire" href="https://open.spotify.com/episode/6gEBWX6HydjstKWJEaj7VH" rel="noopener" target="_blank">Spotify <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+    </div>
+  </article>
+  </div>
+  <p class="reveal" style="margin-top:2rem"><a class="btn btn-ghost" href="https://open.spotify.com/playlist/055C8B7DfO5NjjAhkchrzh" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg> La saison 1 sur Spotify</a></p>
+</section>
+
+<section id="projet">
+  <span id="about" class="ancre" aria-hidden="true"></span>
   <div class="about-grid">
     <div class="reveal">
       <div class="section-label">Le projet</div>
       <h2 class="section-title">Comprendre ceux qui<br>créent l'avenir</h2>
-      <div class="about-quote">
-        Qui sont les leaders de l'IA ? Quelles visions, quels parcours, quelles obsessions
-        se cachent derrière les plus grandes avancées technologiques de notre époque ?
-      </div>
-      <a href="https://ia-magique.com" target="_blank" rel="noopener" class="spotify-link">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-        ia-magique.com
-      </a>
-      <div class="platforms">
-        <a href="https://open.spotify.com/playlist/055C8B7DfO5NjjAhkchrzh" target="_blank" rel="noopener" class="platform-badge" aria-label="Écouter sur Spotify">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-          Spotify
-        </a>
-      </div>
+      <div class="about-quote">Qui sont les femmes et les hommes qui façonnent l'intelligence artificielle ? Quels parcours, quelles idées, quelles zones d'ombre se cachent derrière les grandes avancées de notre époque ?</div>
+      <a class="lien-marque" href="https://choucroute-citron.com" rel="noopener"><img src="/podcast-voix-de-lia/choucroute-icone.png" alt="" width="64" height="48"> Une série Choucroute Citron · choucroute-citron.com</a>
     </div>
     <div class="about-details reveal">
-      <div class="about-detail">
-        <h4>Format</h4>
-        <p>Un dialogue homme-femme captivant, explorant chaque leader à travers un récit structuré et accessible. 5 à 8 minutes par portrait.</p>
-      </div>
-      <div class="about-detail">
-        <h4>Recherche</h4>
-        <p>Chaque épisode est basé sur des recherches avancées : interviews, articles, biographies, conférences et analyses stratégiques.</p>
-      </div>
-      <div class="about-detail">
-        <h4>Objectif</h4>
-        <p>Rendre accessibles les parcours, les visions et les stratégies des personnalités qui transforment le monde avec l'IA.</p>
-      </div>
-      <div class="about-detail">
-        <h4>Par Alexandre Stopnicki</h4>
-        <p>Consultant IA, formateur et créateur de contenu. Fondateur de ia-magique.com et du podcast Choucroute Citron.</p>
-      </div>
+      <div class="about-detail"><h3>Comment sont faits ces portraits</h3><p>Chaque portrait est construit à partir de sources publiques (articles, interviews, biographies, conférences) que nous avons analysées et recoupées. Les citations sont datées et renvoient à leur source. Le but est uniquement pédagogique : comprendre qui sont ces personnes, sans jamais parler à leur place.</p></div>
+      <div class="about-detail"><h3>Les voix</h3><p>Les voix sont générées par intelligence artificielle. Ada et Alan racontent ; Lia, l'IA-nimatrice de Choucroute Citron, joue les devins le temps d'une prédiction. Aucune voix n'imite celle des personnes dont on parle.</p>
+        <div class="voix-trio"><span><i style="background:var(--accent)"></i>Ada</span><span><i style="background:var(--accent2-clair)"></i>Alan</span><span><i style="background:var(--lia)"></i>Lia</span></div></div>
+      <div class="about-detail"><h3>Le format</h3><p>Une dizaine de minutes, en dix temps : une énigme, le vrai profil, les débuts, le tournant, les anecdotes, la vision, la part d'ombre, les questions qu'on aurait aimé poser, la boule de cristal de Lia, et ce qu'on en retient.</p></div>
+      <div class="about-detail"><h3>Une série Choucroute Citron</h3><p>Imaginée par Alexandre Stopnicki, créateur du podcast <a href="https://choucroute-citron.com" rel="noopener">Choucroute Citron</a> et de ses IA-nimatrices.</p></div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
+<section id="ce-qui-arrive" aria-labelledby="a-venir-titre">
+  <div class="section-label reveal">La suite</div>
+  <h2 class="section-title reveal" id="a-venir-titre">Ce qui <em>arrive</em></h2>
+  <p class="section-desc reveal">Les Voix de l'IA sont le premier chantier d'un atelier de podcasts que nous construisons : de l'enquête à la diffusion, puis tout ce qu'on peut tirer de chaque épisode. Voici ce qui se prépare.</p>
+  <div class="a-venir">
+    <article class="a-venir-carte reveal"><span class="a-venir-etat fait">Déjà là</span><h3>Des portraits enquêtés, puis vérifiés</h3><p>Plusieurs IA de recherche enquêtent en parallèle sur chaque personne. Une autre vérifie chaque fait, point par point, contre ses sources : ce qui n&#39;est pas vérifié sort du texte. Puis vient la conférence de rédaction : Alexandre tranche, relit et donne son bon à diffuser. Rien ne passe en voix sans lui.</p></article>
+    <article class="a-venir-carte reveal"><span class="a-venir-etat">En cours</span><h3>D&#39;autres portraits</h3><p>D&#39;autres figures de l&#39;IA sont en cours d&#39;enquête : pionniers de la recherche, grands fondateurs, créateurs d&#39;agents IA, figures de l&#39;IA chinoise. Les onze portraits de la saison 1 rejoindront aussi le flux, avec leurs titres corrigés.</p></article>
+    <article class="a-venir-carte reveal"><span class="a-venir-etat">Prévu</span><h3>Des épisodes vivants</h3><p>Pour chaque portrait, on tient la liste des faits qui peuvent changer. Quand l&#39;un d&#39;eux bouge, une note de mise à jour s&#39;ajoute sous l&#39;épisode, ou une nouvelle version sort. Et un rendez-vous régulier reprendra les nouvelles déclarations des fondateurs, datées et sourcées.</p></article>
+    <article class="a-venir-carte reveal"><span class="a-venir-etat">Bientôt en ligne</span><h3>La table ronde : parler avec tout le podcast</h3><p>Une question posée à tous les épisodes à la fois, Voix de l&#39;IA et Choucroute Citron : « Qui parle de HAL ? », « Qui a raté un concours avant de réussir ? ». La réponse cite l&#39;épisode et le passage. Elle tourne déjà chez nous ; elle arrivera en ligne, à l&#39;écrit puis à la voix, avec les IA-nimatrices.</p></article>
+    <article class="a-venir-carte reveal"><span class="a-venir-etat">Bientôt en ligne</span><h3>Quiz, mini-cours et « Le savez-vous ? »</h3><p>Tirés des épisodes et de leurs sources vérifiées. Puis des vidéos courtes qui reprennent de vraies phrases des personnalités, datées et sourcées, lues par Ada ou Alan.</p></article>
+    <article class="a-venir-carte reveal"><span class="a-venir-etat">Prévu</span><h3>Des débats tirés de l&#39;actualité</h3><p>À partir des articles repérés par notre veille, deux voix débattent, chacune défend un angle, et Lia vient y mettre son grain de sel. Alexandre peut y glisser ses propres réactions, avec sa vraie voix.</p></article>
+    <article class="a-venir-carte reveal"><span class="a-venir-etat">Prévu</span><h3>Choucroute Citron, avec de vrais invités</h3><p>Le podcast enregistré d&#39;Alexandre, avec ses invités et ses IA-nimatrices, passe par le même atelier : son nettoyé, transcription, chapitres, meilleurs moments en extraits, et la conversation avec les IA-nimatrices sur choucroute-citron.com.</p></article>
+    <article class="a-venir-carte reveal"><span class="a-venir-etat">Prévu</span><h3>Vos questions</h3><p>Sur chaque portrait : « Et vous, quelle question aimeriez-vous lui poser ? ». Lia imaginera des réponses à partir des déclarations publiques, toujours présentées comme des hypothèses d&#39;IA, jamais comme les propos de la personne. Et si l&#39;audience suit, on enverra les questions à la personne : si elle répond, on comparera.</p></article>
+    <article class="a-venir-carte reveal"><span class="a-venir-etat fait">Toujours</span><h3>La transparence</h3><p>Les voix sont générées par intelligence artificielle, et on le dit. Chaque portrait publie sa transcription complète, ses citations datées et toutes ses sources. On ne fait jamais parler une personne réelle : on cite ce qu&#39;elle a dit en public, avec la date et le lien, et on ne clone jamais sa voix.</p></article>
+  </div>
+</section>
+</main>
 <footer>
-  <p>Les Voix de l'IA — AI Leaders · Par <a href="https://ia-magique.com" target="_blank" rel="noopener">Alexandre Stopnicki</a> · © 2025</p>
+  <a href="https://choucroute-citron.com" rel="noopener"><img src="/podcast-voix-de-lia/choucroute-logo.png" alt="Choucroute Citron" width="112" height="106" loading="lazy"></a>
+  <p>Les Voix de l&#39;IA · Une série <a href="https://choucroute-citron.com" rel="noopener">Choucroute Citron</a>, imaginée par Alexandre Stopnicki · 2025-2026</p>
+  <p class="mention-ia">Portraits construits à partir de sources publiques analysées et recoupées, dans un but pédagogique. Voix générées par intelligence artificielle : Ada, Alan et Lia. Podcast indépendant, sans lien avec les entreprises citées.</p>
+  <p class="pied-liens"><a href="https://3h33.com/podcast-voix-de-lia/flux.xml"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 17a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 10.5v2.6a7.9 7.9 0 0 1 7.9 7.9h2.6A10.5 10.5 0 0 0 3 10.5zM3 3.5v2.6A14.9 14.9 0 0 1 17.9 21h2.6A17.5 17.5 0 0 0 3 3.5z"/></svg> Flux RSS</a><a href="https://3h33.com/">3h33.com</a><a href="https://3h33.com/podcasts/">Tous les podcasts de 3h33</a></p>
 </footer>
 
-<!-- SPOTIFY EMBED PLAYER -->
-<div class="player" id="player" aria-label="Lecteur audio" role="region">
+<div class="player" id="player" role="region" aria-label="Lecteur audio" data-mode="audio">
   <div class="player-embed-inner">
     <div class="player-embed-info">
       <div class="player-cover" id="playerCover" aria-hidden="true"></div>
-      <div class="player-titles">
-        <div class="player-name" id="playerName">—</div>
-        <div class="player-role" id="playerRole">—</div>
-      </div>
+      <div class="player-titles"><div class="player-name" id="playerName">—</div><div class="player-role" id="playerRole"></div></div>
       <div class="player-nav-btns">
-        <a class="player-btn spotify-direct" id="openSpotifyBtn" href="#" target="_blank" rel="noopener" title="Ouvrir dans Spotify" aria-label="Ouvrir cet épisode dans Spotify">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-        </a>
-        <button class="player-btn" id="prevBtn" title="Épisode précédent" aria-label="Épisode précédent">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
-        </button>
-        <button class="player-btn" id="nextBtn" title="Épisode suivant" aria-label="Épisode suivant">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
-        </button>
-        <button class="player-btn" id="closeBtn" title="Fermer le lecteur" aria-label="Fermer le lecteur">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
+        <a class="player-btn lien-page" href="#" title="Ouvrir la page du portrait" aria-label="Ouvrir la page du portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="player-btn spotify-direct" id="openSpotifyBtn" href="#" target="_blank" rel="noopener" aria-label="Ouvrir cet épisode dans Spotify"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg></a>
+        <button class="player-btn" id="prevBtn" aria-label="Épisode précédent"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
+        <button class="player-btn" id="nextBtn" aria-label="Épisode suivant"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
+        <button class="player-btn" id="closeBtn" aria-label="Fermer le lecteur"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg></button>
       </div>
+    </div>
+    <div class="player-audio">
+      <button class="bouton-lecture" aria-label="Écouter"><svg class="i-lecture" viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg></button>
+      <div class="piste"><input class="curseur" type="range" min="0" max="100" step="0.1" value="0" aria-label="Position dans l'épisode"><div class="temps"><span class="temps-courant">0:00</span><span class="temps-total">0:00</span></div></div>
+      <audio preload="none"></audio>
     </div>
     <div class="player-embed-frame" id="playerFrame"></div>
-    <div class="mobile-audio-tip">
-      Pas de son ? Vérifiez que votre téléphone n'est pas en mode silencieux (switch latéral sur iPhone), puis
-      <a id="openSpotifyBtnMobile" href="#" target="_blank" rel="noopener">ouvrez l'épisode dans Spotify</a>.
-    </div>
+    <div class="mobile-audio-tip">Pas de son ? Vérifiez que le téléphone n'est pas en mode silencieux, puis <a id="openSpotifyBtnMobile" href="#" target="_blank" rel="noopener">ouvrez l'épisode dans Spotify</a>.</div>
   </div>
 </div>
-
-<script>
-// ===== EPISODES DATA =====
-const episodes = [
-  {num:"00",name:"Introduction",role:"Qui sont les leaders de l'IA ?",desc:"Venez découvrir l'univers des Voix de l'IA et apprenez qui se cache derrière les grands noms de la technologie. Rencontrez ceux qui façonnent le monde de l'intelligence artificielle.",duration:"2:27",spotify:"https://open.spotify.com/episode/1vfhahrUkcrDUgBaf4cu7F",img:null,color:"#c4a265"},
-  {num:"01",name:"Sam Altman",role:"CEO · OpenAI / ChatGPT",desc:"Du succès de Loopt et Y Combinator à la co-fondation d'OpenAI, il est le créateur de ChatGPT et un acteur clé de la crise de novembre 2023. Sa vision pour une IA bénéfique façonne l'avenir.",duration:"6:38",spotify:"https://open.spotify.com/episode/3kddcoeSMWKQYXnsDDGG2v",img:"images/01-sam-altman",color:"#c4a265"},
-  {num:"02",name:"Dario Amodei",role:"CEO · Anthropic / Claude",desc:"Physicien devenu architecte de l'IA sûre. Après avoir dirigé GPT chez OpenAI, il cofonde Anthropic pour bâtir une IA éthique avec Claude et l'IA constitutionnelle. Pionnier de l'alignement.",duration:"6:33",spotify:"https://open.spotify.com/episode/56TBNl4ZyUtUDbWAT93Ugz",img:"images/02-dario-amodei",color:"#d4956b"},
-  {num:"03",name:"Jensen Huang",role:"CEO · NVIDIA",desc:"Né à Taïwan, cofondateur de Nvidia dans un Denny's. De la quasi-faillite à un géant mondial de l'IA. Son leadership exigeant et sa veste en cuir iconique ont façonné la révolution technologique.",duration:"6:47",spotify:"https://open.spotify.com/episode/3r2VCCLnpNqvbdGNkw5D47",img:"images/03-jensen-huang",color:"#76b947"},
-  {num:"04",name:"Satya Nadella",role:"CEO · Microsoft",desc:"L'homme qui a réinventé Microsoft. Leader empathique et stratège, il a propulsé l'entreprise vers le Cloud et l'IA. Artisan de Copilot, il voit l'IA comme un partenaire humain.",duration:"5:38",spotify:"https://open.spotify.com/episode/7CINcGx9mBKzDFgAFwRJ94",img:"images/04-satya-nadella",color:"#00a4ef"},
-  {num:"05",name:"Sundar Pichai",role:"CEO · Google & Alphabet",desc:"Au cœur de la révolution IA, il pousse Google à investir 75 milliards dans l'intelligence artificielle. De l'Inde à la tête d'Alphabet, sa vision stratégique transforme la recherche.",duration:"6:03",spotify:"https://open.spotify.com/episode/3LJvTSJHpGTcwRDZOp7NeS",img:"images/05-sundar-pichai",color:"#4285f4"},
-  {num:"06",name:"Demis Hassabis",role:"CEO · Google DeepMind",desc:"Prodige des échecs et neuroscientifique, co-fondateur de DeepMind. Derrière AlphaGo et AlphaFold (Nobel de Chimie), il voit l'IA guérir les maladies et résoudre le climat.",duration:"7:08",spotify:"https://open.spotify.com/episode/019EFviWnUtRzap7aOTAbX",img:"images/06-demis-hassabis",color:"#5b8a72"},
-  {num:"07",name:"David Holz",role:"Fondateur · Midjourney",desc:"Le visionnaire discret derrière Midjourney. De la NASA à Leap Motion, il a créé un « moteur pour l'imagination » rendant l'art numérique démocratique. Une équipe autofinancée au succès exceptionnel.",duration:"5:47",spotify:"https://open.spotify.com/episode/6lAm3AxaoLmFwjRXGpdQ7x",img:"images/07-david-holz",color:"#e8527a"},
-  {num:"08",name:"Tim Cook",role:"CEO · Apple",desc:"Le discret mais puissant PDG d'Apple. Après Steve Jobs, il mène l'entreprise vers des sommets. Sa vision de l'IA : « Apple Intelligence » au cœur de tous les produits.",duration:"5:57",spotify:"https://open.spotify.com/episode/6pmdP2gk2hdcqByfQIWC98",img:"images/08-tim-cook",color:"#a2aaad"},
-  {num:"09",name:"Aravind Srinivas",role:"CEO · Perplexity AI",desc:"Ex-Google et OpenAI, il change la recherche. Pas de pub, des réponses directes, sourcées, en temps réel. Un moteur de réponse qui bat ChatGPT sur la fiabilité.",duration:"6:08",spotify:"https://open.spotify.com/episode/7J5onJcGfiOoIEVGJRJbkM",img:"images/09-aravind-srinivas",color:"#20b2aa"},
-  {num:"Bonus",name:"IA : Secrets & Dangers",role:"Ne dites jamais ça à une IA !",desc:"L'illusion de la confidentialité. Vous discutez avec une IA ? Vous pensez que c'est privé ? Détrompez-vous ! Pourquoi la confidentialité n'est jamais garantie et les risques concrets du partage.",duration:"8:17",spotify:"https://open.spotify.com/episode/6gEBWX6HydjstKWJEaj7VH",img:null,color:"#e74c3c"}
-];
-
-// ===== Auto-calcul de la durée totale =====
-(function(){
-  let totalSec = 0;
-  episodes.forEach(e=>{
-    const [m,s] = e.duration.split(':').map(Number);
-    totalSec += m*60 + s;
-  });
-  const h = Math.floor(totalSec/3600);
-  const m = Math.floor((totalSec%3600)/60);
-  const label = h > 0 ? `${h}h${String(m).padStart(2,'0')}` : `${m}min`;
-  const el = document.getElementById('totalDuration');
-  if (el) el.textContent = label;
-  const c = document.getElementById('countEpisodes');
-  if (c) c.textContent = episodes.length;
-})();
-
-// ===== RENDER EPISODES =====
-const grid = document.getElementById('episodesGrid');
-function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-
-episodes.forEach((ep, i) => {
-  const card = document.createElement('div');
-  card.className = 'episode-card reveal';
-  card.style.transitionDelay = `${i * .07}s`;
-
-  // Cover: image si dispo, sinon placeholder stylisé
-  let coverHTML;
-  if (ep.img) {
-    const alt = `Portrait ${ep.name} — ${ep.role} — Les Voix de l'IA`;
-    coverHTML = `
-      <div class="card-cover">
-        <div class="card-cover-badge">Épisode ${escapeHtml(ep.num)}</div>
-        <img
-          src="${ep.img}@400.jpg"
-          srcset="${ep.img}@400.jpg 400w, ${ep.img}.jpg 800w"
-          sizes="(max-width:768px) 100vw, 400px"
-          alt="${escapeHtml(alt)}"
-          loading="lazy"
-          decoding="async"
-          width="400" height="400">
-        <button class="card-cover-play" data-index="${i}" title="Écouter ${escapeHtml(ep.name)}" aria-label="Écouter ${escapeHtml(ep.name)}">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
-        </button>
-      </div>`;
-  } else {
-    coverHTML = `
-      <div class="card-cover">
-        <div class="card-cover-badge">Épisode ${escapeHtml(ep.num)}</div>
-        <div class="card-cover-placeholder">
-          <div class="ep">Les Voix de l'IA</div>
-          <div class="title">${escapeHtml(ep.name)}</div>
-        </div>
-        <button class="card-cover-play" data-index="${i}" title="Écouter ${escapeHtml(ep.name)}" aria-label="Écouter ${escapeHtml(ep.name)}">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
-        </button>
-      </div>`;
-  }
-
-  card.innerHTML = `
-    ${coverHTML}
-    <div class="card-inner">
-      <div class="card-number">Épisode ${escapeHtml(ep.num)}</div>
-      <div class="card-name">${escapeHtml(ep.name)}</div>
-      <div class="card-role">${escapeHtml(ep.role)}</div>
-      <div class="card-desc">${escapeHtml(ep.desc)}</div>
-      <div class="card-footer">
-        <span class="card-duration">${escapeHtml(ep.duration)}</span>
-        <button class="card-play" data-index="${i}" title="Écouter ${escapeHtml(ep.name)}" aria-label="Écouter ${escapeHtml(ep.name)}">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg>
-        </button>
-      </div>
-    </div>
-  `;
-  card.addEventListener('click', (e) => {
-    if (!e.target.closest('.card-play') && !e.target.closest('.card-cover-play')) {
-      loadEpisode(i);
-    }
-  });
-  grid.appendChild(card);
-});
-
-// ===== PLAYER LOGIC — SPOTIFY EMBED =====
-let currentEpisode = null;
-
-const player = document.getElementById('player');
-const playerName = document.getElementById('playerName');
-const playerRole = document.getElementById('playerRole');
-const playerFrame = document.getElementById('playerFrame');
-const playerCover = document.getElementById('playerCover');
-const openSpotifyBtn = document.getElementById('openSpotifyBtn');
-const openSpotifyBtnMobile = document.getElementById('openSpotifyBtnMobile');
-
-function getSpotifyId(url) {
-  const match = url.match(/episode\/([a-zA-Z0-9]+)/);
-  return match ? match[1] : null;
-}
-
-function loadEpisode(index) {
-  currentEpisode = index;
-  const ep = episodes[index];
-  playerName.textContent = ep.name;
-  playerRole.textContent = ep.role;
-
-  // Pochette dans le lecteur
-  if (ep.img) {
-    playerCover.innerHTML = `<img src="${ep.img}@400.jpg" alt="" loading="eager" decoding="async" width="48" height="48">`;
-  } else {
-    playerCover.innerHTML = `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--ff-display);font-style:italic;color:var(--accent);font-size:1.2rem">V</div>`;
-  }
-
-  const spotifyId = getSpotifyId(ep.spotify);
-  if (spotifyId) {
-    // Reset + recréation de l'iframe pour forcer le rechargement et le user-gesture
-    playerFrame.classList.remove('loaded');
-    playerFrame.innerHTML = '';
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://open.spotify.com/embed/episode/${spotifyId}?utm_source=generator&theme=0`;
-    iframe.title = `Lecteur Spotify — ${ep.name}`;
-    iframe.setAttribute('allow', 'autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture');
-    iframe.setAttribute('allowfullscreen', '');
-    iframe.setAttribute('frameborder', '0');
-    iframe.style.cssText = 'width:100%;height:152px;border:none;border-radius:12px;';
-    iframe.addEventListener('load', () => playerFrame.classList.add('loaded'));
-    playerFrame.appendChild(iframe);
-
-    // Liens directs vers Spotify (app ou web)
-    openSpotifyBtn.href = ep.spotify;
-    openSpotifyBtnMobile.href = ep.spotify;
-  }
-
-  player.classList.add('active');
-
-  // Highlight active card
-  document.querySelectorAll('.episode-card').forEach((c, i) => {
-    c.style.borderColor = i === index ? 'var(--accent)' : '';
-  });
-  // Pas de scrollIntoView : inutile (lecteur sticky) et peut interrompre
-  // le user-gesture transféré à l'iframe sur mobile.
-}
-
-document.getElementById('prevBtn').addEventListener('click', () => {
-  if (currentEpisode === null) return;
-  loadEpisode((currentEpisode - 1 + episodes.length) % episodes.length);
-});
-
-document.getElementById('nextBtn').addEventListener('click', () => {
-  if (currentEpisode === null) return;
-  loadEpisode((currentEpisode + 1) % episodes.length);
-});
-
-document.getElementById('closeBtn').addEventListener('click', () => {
-  player.classList.remove('active');
-  // On vide l'iframe après la fin de la transition pour couper le son
-  setTimeout(() => { playerFrame.innerHTML = ''; }, 500);
-  document.querySelectorAll('.episode-card').forEach(c => c.style.borderColor = '');
-  currentEpisode = null;
-});
-
-// Play buttons on cards (bouton dans le footer + bouton overlay sur la cover)
-document.querySelectorAll('.card-play, .card-cover-play').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    e.preventDefault();
-    const idx = parseInt(btn.dataset.index, 10);
-    loadEpisode(idx);
-  });
-});
-
-// Raccourcis clavier
-document.addEventListener('keydown', (e) => {
-  if (!player.classList.contains('active')) return;
-  if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
-  if (e.key === 'ArrowRight') document.getElementById('nextBtn').click();
-  else if (e.key === 'ArrowLeft') document.getElementById('prevBtn').click();
-  else if (e.key === 'Escape') document.getElementById('closeBtn').click();
-});
-
-// ===== HERO WAVEFORM =====
-const canvas = document.getElementById('heroWave');
-const ctx = canvas.getContext('2d');
-const dpr = Math.min(window.devicePixelRatio || 1, 2);
-function resizeCanvas() {
-  canvas.width = window.innerWidth * dpr;
-  canvas.height = 60 * dpr;
-  canvas.style.width = window.innerWidth + 'px';
-  canvas.style.height = '60px';
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-let wavePhase = 0;
-let rafId = null;
-function drawWave() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.strokeStyle = '#c4a26530';
-  ctx.lineWidth = 1;
-  const W = window.innerWidth;
-  for (let w = 0; w < 3; w++) {
-    ctx.beginPath();
-    for (let x = 0; x < W; x++) {
-      const y = 30 +
-        Math.sin((x * 0.008) + wavePhase + w * 1.2) * (8 + w * 4) +
-        Math.sin((x * 0.015) + wavePhase * 1.5) * 3;
-      x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
-    }
-    ctx.stroke();
-  }
-  wavePhase += 0.015;
-  rafId = requestAnimationFrame(drawWave);
-}
-// Respect reduced motion
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  drawWave();
-}
-// Pause l'animation quand l'onglet n'est pas visible (éco batterie mobile)
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) { if (rafId) cancelAnimationFrame(rafId); rafId = null; }
-  else if (!rafId && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) { drawWave(); }
-});
-
-// ===== SCROLL REVEAL =====
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
+<script type="application/json" id="donnees-lecteur">[{"id":"arthur-mensch","type":"audio","nom":"Arthur Mensch","role":"Directeur général · Mistral AI","image":"/podcast-voix-de-lia/images/arthur-mensch-400.jpg","initiales":"AM","src":"/podcast-voix-de-lia/audio/arthur-mensch.mp3?v=0463e158","duree":575,"page":"/podcast-voix-de-lia/arthur-mensch/"},{"id":"daniela-amodei","type":"audio","nom":"Daniela Amodei","role":"Présidente · Anthropic","image":"/podcast-voix-de-lia/images/daniela-amodei-400.jpg","initiales":"DA","src":"/podcast-voix-de-lia/audio/daniela-amodei.mp3?v=5fb300b7","duree":556,"page":"/podcast-voix-de-lia/daniela-amodei/"},{"id":"elon-musk","type":"audio","nom":"Elon Musk","role":"Tesla · SpaceX","image":"/podcast-voix-de-lia/images/elon-musk-400.jpg","initiales":"EM","src":"/podcast-voix-de-lia/audio/elon-musk.mp3?v=c8b57dbb","duree":535,"page":"/podcast-voix-de-lia/elon-musk/"},{"id":"fei-fei-li","type":"audio","nom":"Fei-Fei Li","role":"Fondatrice · World Labs","image":"/podcast-voix-de-lia/images/fei-fei-li-400.jpg","initiales":"FL","src":"/podcast-voix-de-lia/audio/fei-fei-li.mp3?v=a332a3c1","duree":564,"page":"/podcast-voix-de-lia/fei-fei-li/"},{"id":"lisa-su","type":"audio","nom":"Lisa Su","role":"PDG · AMD","image":"/podcast-voix-de-lia/images/lisa-su-400.jpg","initiales":"LS","src":"/podcast-voix-de-lia/audio/lisa-su.mp3?v=eb10b39d","duree":542,"page":"/podcast-voix-de-lia/lisa-su/"},{"id":"mark-zuckerberg","type":"audio","nom":"Mark Zuckerberg","role":"PDG · Meta","image":"/podcast-voix-de-lia/images/mark-zuckerberg-400.jpg","initiales":"MZ","src":"/podcast-voix-de-lia/audio/mark-zuckerberg.mp3?v=90f02509","duree":571,"page":"/podcast-voix-de-lia/mark-zuckerberg/"},{"id":"mati-staniszewski","type":"audio","nom":"Mati Staniszewski","role":"Directeur général · ElevenLabs","image":"/podcast-voix-de-lia/images/mati-staniszewski-400.jpg","initiales":"MS","src":"/podcast-voix-de-lia/audio/mati-staniszewski.mp3?v=ade1aa74","duree":558,"page":"/podcast-voix-de-lia/mati-staniszewski/"},{"id":"mira-murati","type":"audio","nom":"Mira Murati","role":"Directrice générale · Thinking Machines Lab","image":"/podcast-voix-de-lia/images/mira-murati-400.jpg","initiales":"MM","src":"/podcast-voix-de-lia/audio/mira-murati.mp3?v=cc9b49b8","duree":572,"page":"/podcast-voix-de-lia/mira-murati/"},{"id":"yann-lecun","type":"audio","nom":"Yann LeCun","role":"Président exécutif · AMI Labs","image":"/podcast-voix-de-lia/images/yann-lecun-400.jpg","initiales":"YL","src":"/podcast-voix-de-lia/audio/yann-lecun.mp3?v=e01fd558","duree":586,"page":"/podcast-voix-de-lia/yann-lecun/"},{"id":"s1-00","type":"spotify","nom":"Introduction : qui sont les leaders de l'IA ?","role":"Introduction","image":null,"initiales":"?","spotify":"https://open.spotify.com/episode/1vfhahrUkcrDUgBaf4cu7F","spotifyId":"1vfhahrUkcrDUgBaf4cu7F"},{"id":"s1-01","type":"spotify","nom":"Sam Altman (OpenAI)","role":"Directeur général · OpenAI","image":"/podcast-voix-de-lia/images/s1-01-sam-altman-400.jpg","initiales":"SA","spotify":"https://open.spotify.com/episode/3kddcoeSMWKQYXnsDDGG2v","spotifyId":"3kddcoeSMWKQYXnsDDGG2v"},{"id":"s1-02","type":"spotify","nom":"Dario Amodei (Anthropic)","role":"Directeur général · Anthropic","image":"/podcast-voix-de-lia/images/s1-02-dario-amodei-400.jpg","initiales":"DA","spotify":"https://open.spotify.com/episode/56TBNl4ZyUtUDbWAT93Ugz","spotifyId":"56TBNl4ZyUtUDbWAT93Ugz"},{"id":"s1-03","type":"spotify","nom":"Jensen Huang (Nvidia)","role":"Directeur général · Nvidia","image":"/podcast-voix-de-lia/images/s1-03-jensen-huang-400.jpg","initiales":"JH","spotify":"https://open.spotify.com/episode/3r2VCCLnpNqvbdGNkw5D47","spotifyId":"3r2VCCLnpNqvbdGNkw5D47"},{"id":"s1-04","type":"spotify","nom":"Satya Nadella (Microsoft)","role":"Directeur général · Microsoft","image":"/podcast-voix-de-lia/images/s1-04-satya-nadella-400.jpg","initiales":"SN","spotify":"https://open.spotify.com/episode/7CINcGx9mBKzDFgAFwRJ94","spotifyId":"7CINcGx9mBKzDFgAFwRJ94"},{"id":"s1-05","type":"spotify","nom":"Sundar Pichai (Google)","role":"Directeur général · Google et Alphabet","image":"/podcast-voix-de-lia/images/s1-05-sundar-pichai-400.jpg","initiales":"SP","spotify":"https://open.spotify.com/episode/3LJvTSJHpGTcwRDZOp7NeS","spotifyId":"3LJvTSJHpGTcwRDZOp7NeS"},{"id":"s1-06","type":"spotify","nom":"Demis Hassabis (Google DeepMind)","role":"Directeur général · Google DeepMind","image":"/podcast-voix-de-lia/images/s1-06-demis-hassabis-400.jpg","initiales":"DH","spotify":"https://open.spotify.com/episode/019EFviWnUtRzap7aOTAbX","spotifyId":"019EFviWnUtRzap7aOTAbX"},{"id":"s1-07","type":"spotify","nom":"David Holz (Midjourney)","role":"Fondateur · Midjourney","image":"/podcast-voix-de-lia/images/s1-07-david-holz-400.jpg","initiales":"DH","spotify":"https://open.spotify.com/episode/6lAm3AxaoLmFwjRXGpdQ7x","spotifyId":"6lAm3AxaoLmFwjRXGpdQ7x"},{"id":"s1-08","type":"spotify","nom":"Tim Cook (Apple)","role":"Directeur général · Apple","image":"/podcast-voix-de-lia/images/s1-08-tim-cook-400.jpg","initiales":"TC","spotify":"https://open.spotify.com/episode/6pmdP2gk2hdcqByfQIWC98","spotifyId":"6pmdP2gk2hdcqByfQIWC98"},{"id":"s1-09","type":"spotify","nom":"Aravind Srinivas (Perplexity)","role":"Directeur général · Perplexity","image":"/podcast-voix-de-lia/images/s1-09-aravind-srinivas-400.jpg","initiales":"AS","spotify":"https://open.spotify.com/episode/7J5onJcGfiOoIEVGJRJbkM","spotifyId":"7J5onJcGfiOoIEVGJRJbkM"},{"id":"s1-bonus","type":"spotify","nom":"IA : secrets, dangers et vous","role":"Ne dites jamais ça à une IA !","image":null,"initiales":"IA","spotify":"https://open.spotify.com/episode/6gEBWX6HydjstKWJEaj7VH","spotifyId":"6gEBWX6HydjstKWJEaj7VH"}]</script>
+<script src="/podcast-voix-de-lia/site.js?v=db1d29c0" defer></script>
 </body>
 </html>

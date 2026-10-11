@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Les Voix de l'IA</title>
+    <link>https://3h33.com/podcast-voix-de-lia/</link>
+    <atom:link href="https://3h33.com/podcast-voix-de-lia/flux.xml" rel="self" type="application/rss+xml"/>
+    <description>Les portraits des femmes et des hommes qui façonnent l'intelligence artificielle, racontés par Ada, Alan et Lia, l'IA-nimatrice de Choucroute Citron. Des parcours, des idées, des anecdotes et des zones d'ombre, en une dizaine de minutes. Chaque portrait part de sources publiques recoupées ; la transcription complète, les citations et toutes les sources sont publiées sur le site. Une série Choucroute Citron imaginée par Alexandre Stopnicki. Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
+    <language>fr</language>
+    <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
+    <generator>Podcast Engine (site/construire.mjs)</generator>
+    <lastBuildDate>Sun, 11 Oct 2026 18:40:13 GMT</lastBuildDate>
+    <image>
+      <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
+      <title>Les Voix de l'IA</title>
+      <link>https://3h33.com/podcast-voix-de-lia/</link>
+    </image>
+    <itunes:author>Alexandre Stopnicki</itunes:author>
+    <itunes:owner>
+      <itunes:name>Alexandre Stopnicki</itunes:name>
+      <itunes:email>voixdelia@3h33.fr</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://3h33.com/podcast-voix-de-lia/pochette.jpg"/>
+    <itunes:category text="Technology"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
+    <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
+    <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Mira Murati : de Vlorë à une IA que chacun peut façonner</title>
+      <itunes:title>Mira Murati : de Vlorë à une IA que chacun peut façonner</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/mira-murati/</link>
+      <guid isPermaLink="false">voix-de-lia-mira-murati</guid>
+      <pubDate>Sun, 11 Oct 2026 18:40:13 GMT</pubDate>
+      <description>Fille de professeurs de littérature passionnée de maths, ingénieure chez Tesla, directrice technique d'OpenAI puis fondatrice de Thinking Machines Lab : le portrait de Mira Murati, ses idées et ses controverses.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/mira-murati/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Fille de professeurs de littérature passionnée de maths, ingénieure chez Tesla, directrice technique d&#39;OpenAI puis fondatrice de Thinking Machines Lab : le portrait de Mira Murati, ses idées et ses controverses.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/mira-murati/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/mira-murati.mp3?v=cc9b49b8" length="13817619" type="audio/mpeg"/>
+      <itunes:duration>572</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/mira-murati-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/mira-murati/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Fei-Fei Li : du pressing familial aux machines qui voient</title>
+      <itunes:title>Fei-Fei Li : du pressing familial aux machines qui voient</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/fei-fei-li/</link>
+      <guid isPermaLink="false">voix-de-lia-fei-fei-li</guid>
+      <pubDate>Sun, 11 Oct 2026 18:06:36 GMT</pubDate>
+      <description>À quinze ans, elle arrive avec sa famille dans le New Jersey ; ils ont moins de vingt dollars. Fei-Fei Li a lancé, avec son équipe, ImageNet, la base d'images qui a contribué à faire décoller l'apprentissage profond : Ada et Alan racontent son parcours, ses idées et ses controverses, avec Lia en invitée.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/fei-fei-li/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>À quinze ans, elle arrive avec sa famille dans le New Jersey ; ils ont moins de vingt dollars. Fei-Fei Li a lancé, avec son équipe, ImageNet, la base d&#39;images qui a contribué à faire décoller l&#39;apprentissage profond : Ada et Alan racontent son parcours, ses idées et ses controverses, avec Lia en invitée.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/fei-fei-li/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/fei-fei-li.mp3?v=a332a3c1" length="13620746" type="audio/mpeg"/>
+      <itunes:duration>564</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/fei-fei-li-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/fei-fei-li/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Mati Staniszewski : le Polonais qui a donné une voix à l'IA</title>
+      <itunes:title>Mati Staniszewski : le Polonais qui a donné une voix à l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/mati-staniszewski/</link>
+      <guid isPermaLink="false">voix-de-lia-mati-staniszewski</guid>
+      <pubDate>Sun, 11 Oct 2026 18:06:01 GMT</pubDate>
+      <description>Comment un amateur de « maths excentriques », marqué par les films lus d'une seule voix monocorde en Pologne, a cofondé ElevenLabs, l'entreprise d'IA vocale valorisée vingt-deux milliards de dollars en septembre 2026.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/mati-staniszewski/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Comment un amateur de « maths excentriques », marqué par les films lus d&#39;une seule voix monocorde en Pologne, a cofondé ElevenLabs, l&#39;entreprise d&#39;IA vocale valorisée vingt-deux milliards de dollars en septembre 2026.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/mati-staniszewski/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/mati-staniszewski.mp3?v=ade1aa74" length="13485064" type="audio/mpeg"/>
+      <itunes:duration>558</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/mati-staniszewski-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/mati-staniszewski/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Daniela Amodei : la littéraire qui préside Anthropic</title>
+      <itunes:title>Daniela Amodei : la littéraire qui préside Anthropic</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/daniela-amodei/</link>
+      <guid isPermaLink="false">voix-de-lia-daniela-amodei</guid>
+      <pubDate>Sun, 11 Oct 2026 18:05:26 GMT</pubDate>
+      <description>Bourse de flûte, licence de littérature, campagne politique, puis Stripe et OpenAI : Ada et Alan racontent le parcours de Daniela Amodei, cofondatrice et présidente d'Anthropic, l'entreprise qui fait Claude.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/daniela-amodei/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Bourse de flûte, licence de littérature, campagne politique, puis Stripe et OpenAI : Ada et Alan racontent le parcours de Daniela Amodei, cofondatrice et présidente d&#39;Anthropic, l&#39;entreprise qui fait Claude.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/daniela-amodei/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/daniela-amodei.mp3?v=5fb300b7" length="13439862" type="audio/mpeg"/>
+      <itunes:duration>556</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/daniela-amodei-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/daniela-amodei/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Lisa Su : recalée à Juilliard, reine des puces au MIT et chez AMD</title>
+      <itunes:title>Lisa Su : recalée à Juilliard, reine des puces au MIT et chez AMD</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/lisa-su/</link>
+      <guid isPermaLink="false">voix-de-lia-lisa-su</guid>
+      <pubDate>Sun, 11 Oct 2026 18:04:52 GMT</pubDate>
+      <description>Elle rêvait d'être pianiste, elle est devenue ingénieure au MIT puis a fait d'AMD, une entreprise en perdition, le grand challenger de Nvidia dans les puces pour l'IA : portrait de Lisa Su.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/lisa-su/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Elle rêvait d&#39;être pianiste, elle est devenue ingénieure au MIT puis a fait d&#39;AMD, une entreprise en perdition, le grand challenger de Nvidia dans les puces pour l&#39;IA : portrait de Lisa Su.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/lisa-su/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/lisa-su.mp3?v=eb10b39d" length="13087663" type="audio/mpeg"/>
+      <itunes:duration>542</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/lisa-su-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/lisa-su/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Yann LeCun : de HAL 9000 aux modèles du monde</title>
+      <itunes:title>Yann LeCun : de HAL 9000 aux modèles du monde</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/yann-lecun/</link>
+      <guid isPermaLink="false">voix-de-lia-yann-lecun</guid>
+      <pubDate>Sun, 11 Oct 2026 18:04:19 GMT</pubDate>
+      <description>Du bricoleur de synthétiseurs du Val-d'Oise au prix Turing, puis à AMI Labs : le portrait de Yann LeCun, qui parie sur des IA capables de comprendre le monde physique.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/yann-lecun/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Du bricoleur de synthétiseurs du Val-d&#39;Oise au prix Turing, puis à AMI Labs : le portrait de Yann LeCun, qui parie sur des IA capables de comprendre le monde physique.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/yann-lecun/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/yann-lecun.mp3?v=e01fd558" length="14149207" type="audio/mpeg"/>
+      <itunes:duration>586</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/yann-lecun-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/yann-lecun/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Mark Zuckerberg : du réseau maison à la superintelligence</title>
+      <itunes:title>Mark Zuckerberg : du réseau maison à la superintelligence</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/mark-zuckerberg/</link>
+      <guid isPermaLink="false">voix-de-lia-mark-zuckerberg</guid>
+      <pubDate>Sun, 11 Oct 2026 18:00:20 GMT</pubDate>
+      <description>Un réseau bricolé à onze ans, une rencontre dans une file d'attente, un empire de plus de trois milliards d'utilisateurs et, en octobre 2026, un film, The Social Reckoning, qui le remet sur le devant de la scène : Ada et Alan racontent Mark Zuckerberg, avec Lia en invitée.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/mark-zuckerberg/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Un réseau bricolé à onze ans, une rencontre dans une file d&#39;attente, un empire de plus de trois milliards d&#39;utilisateurs et, en octobre 2026, un film, The Social Reckoning, qui le remet sur le devant de la scène : Ada et Alan racontent Mark Zuckerberg, avec Lia en invitée.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/mark-zuckerberg/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/mark-zuckerberg.mp3?v=90f02509" length="13783183" type="audio/mpeg"/>
+      <itunes:duration>571</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/mark-zuckerberg-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/mark-zuckerberg/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Elon Musk, l'IA qui fait peur et celle qu'il construit</title>
+      <itunes:title>Elon Musk, l'IA qui fait peur et celle qu'il construit</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/elon-musk/</link>
+      <guid isPermaLink="false">voix-de-lia-elon-musk</guid>
+      <pubDate>Sun, 11 Oct 2026 17:57:38 GMT</pubDate>
+      <description>Un enfant de Pretoria qui vend son premier jeu vidéo à douze ans et qui, en octobre 2026, dirigeait Tesla et SpaceX. Ada et Alan racontent Elon Musk, de 2008, sa pire année, à ses mises en garde sur l'IA.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/elon-musk/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Un enfant de Pretoria qui vend son premier jeu vidéo à douze ans et qui, en octobre 2026, dirigeait Tesla et SpaceX. Ada et Alan racontent Elon Musk, de 2008, sa pire année, à ses mises en garde sur l&#39;IA.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/elon-musk/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/elon-musk.mp3?v=c8b57dbb" length="12910454" type="audio/mpeg"/>
+      <itunes:duration>535</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/elon-musk-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/elon-musk/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Arthur Mensch : refusé une première fois au CNRS, devenu patron de Mistral AI</title>
+      <itunes:title>Arthur Mensch : refusé une première fois au CNRS, devenu patron de Mistral AI</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/arthur-mensch/</link>
+      <guid isPermaLink="false">voix-de-lia-arthur-mensch</guid>
+      <pubDate>Sun, 11 Oct 2026 17:47:21 GMT</pubDate>
+      <description>De l'IRM du cerveau aux modèles géants : Ada et Alan racontent Arthur Mensch, cofondateur de Mistral AI, avec la complicité de Lia.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/arthur-mensch/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>De l&#39;IRM du cerveau aux modèles géants : Ada et Alan racontent Arthur Mensch, cofondateur de Mistral AI, avec la complicité de Lia.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/arthur-mensch/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/arthur-mensch.mp3?v=0463e158" length="13878353" type="audio/mpeg"/>
+      <itunes:duration>575</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/arthur-mensch-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/arthur-mensch/transcription.html" type="text/html" language="fr"/>
+    </item>
+  </channel>
+</rss>
