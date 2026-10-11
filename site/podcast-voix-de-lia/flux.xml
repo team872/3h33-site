@@ -8,7 +8,7 @@
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Sun, 11 Oct 2026 19:28:20 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 21:10:33 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -27,64 +27,697 @@
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
     <item>
-      <title>Bret Taylor : de Google Maps à la gouvernance d'OpenAI</title>
-      <itunes:title>Bret Taylor : de Google Maps à la gouvernance d'OpenAI</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/bret-taylor/</link>
-      <guid isPermaLink="false">voix-de-lia-bret-taylor</guid>
-      <pubDate>Sun, 11 Oct 2026 19:28:20 GMT</pubDate>
-      <description>Co-créateur de Google Maps, pionnier du bouton Like, puis, en octobre 2026, patron de Sierra et président du conseil de l'OpenAI Foundation : le parcours étonnant de Bret Taylor, raconté par Ada et Alan.
+      <title>Dario Amodei, le bâtisseur d'IA qui demande de ralentir</title>
+      <itunes:title>Dario Amodei, le bâtisseur d'IA qui demande de ralentir</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/dario-amodei/</link>
+      <guid isPermaLink="false">voix-de-lia-dario-amodei</guid>
+      <pubDate>Sun, 11 Oct 2026 21:10:33 GMT</pubDate>
+      <description>De l'enfant à la calculatrice au patron d'Anthropic qui demande à toute l'industrie de ralentir : le portrait de Dario Amodei, cofondateur de l'entreprise des modèles Claude.
 
-Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/bret-taylor/
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/dario-amodei/
 
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Co-créateur de Google Maps, pionnier du bouton Like, puis, en octobre 2026, patron de Sierra et président du conseil de l&#39;OpenAI Foundation : le parcours étonnant de Bret Taylor, raconté par Ada et Alan.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/bret-taylor/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/bret-taylor.mp3?v=0fe7f9e9" length="13177087" type="audio/mpeg"/>
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>De l&#39;enfant à la calculatrice au patron d&#39;Anthropic qui demande à toute l&#39;industrie de ralentir : le portrait de Dario Amodei, cofondateur de l&#39;entreprise des modèles Claude.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/dario-amodei/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/dario-amodei.mp3?v=6f3621b0" length="13515660" type="audio/mpeg"/>
+      <itunes:duration>560</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/dario-amodei-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/dario-amodei/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Zhilin Yang : le batteur de rock derrière Kimi et Moonshot AI</title>
+      <itunes:title>Zhilin Yang : le batteur de rock derrière Kimi et Moonshot AI</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/zhilin-yang/</link>
+      <guid isPermaLink="false">voix-de-lia-zhilin-yang</guid>
+      <pubDate>Sun, 11 Oct 2026 20:44:28 GMT</pubDate>
+      <description>Ancien batteur de rock devenu chercheur star, il a fondé Moonshot AI le jour des cinquante ans d'un album de Pink Floyd. Portrait de l'homme derrière Kimi.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/zhilin-yang/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Ancien batteur de rock devenu chercheur star, il a fondé Moonshot AI le jour des cinquante ans d&#39;un album de Pink Floyd. Portrait de l&#39;homme derrière Kimi.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/zhilin-yang/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/zhilin-yang.mp3?v=636cab9d" length="13547557" type="audio/mpeg"/>
+      <itunes:duration>561</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/zhilin-yang-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/zhilin-yang/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Aravind Srinivas : du centième de point à Perplexity</title>
+      <itunes:title>Aravind Srinivas : du centième de point à Perplexity</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/aravind-srinivas/</link>
+      <guid isPermaLink="false">voix-de-lia-aravind-srinivas</guid>
+      <pubDate>Sun, 11 Oct 2026 20:43:54 GMT</pubDate>
+      <description>Il connaissait toutes les capitales en CE1 et a raté l'informatique pour un centième de point : le portrait d'Aravind Srinivas, chercheur devenu patron de Perplexity, le moteur qui répond en citant ses sources.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/aravind-srinivas/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il connaissait toutes les capitales en CE1 et a raté l&#39;informatique pour un centième de point : le portrait d&#39;Aravind Srinivas, chercheur devenu patron de Perplexity, le moteur qui répond en citant ses sources.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/aravind-srinivas/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/aravind-srinivas.mp3?v=1782c85d" length="13032458" type="audio/mpeg"/>
+      <itunes:duration>540</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/aravind-srinivas-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/aravind-srinivas/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Tim Cook : l'homme des stocks qui a succédé à Steve Jobs</title>
+      <itunes:title>Tim Cook : l'homme des stocks qui a succédé à Steve Jobs</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/tim-cook/</link>
+      <guid isPermaLink="false">voix-de-lia-tim-cook</guid>
+      <pubDate>Sun, 11 Oct 2026 20:43:20 GMT</pubDate>
+      <description>D'un lycée d'Alabama à la succession de Steve Jobs, Ada et Alan racontent Tim Cook, l'ingénieur discret qui a dirigé Apple de 2011 à 2026, avec Lia en invitée pour avancer quelques hypothèses.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/tim-cook/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>D&#39;un lycée d&#39;Alabama à la succession de Steve Jobs, Ada et Alan racontent Tim Cook, l&#39;ingénieur discret qui a dirigé Apple de 2011 à 2026, avec Lia en invitée pour avancer quelques hypothèses.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/tim-cook/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/tim-cook.mp3?v=dc62196b" length="13257840" type="audio/mpeg"/>
       <itunes:duration>549</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:season>2</itunes:season>
       <itunes:explicit>false</itunes:explicit>
       <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/tim-cook-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/tim-cook/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>David Holz : de l'argile virtuelle à Midjourney</title>
+      <itunes:title>David Holz : de l'argile virtuelle à Midjourney</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/david-holz/</link>
+      <guid isPermaLink="false">voix-de-lia-david-holz</guid>
+      <pubDate>Sun, 11 Oct 2026 20:42:46 GMT</pubDate>
+      <description>Fils d'un dentiste qui soignait sur un voilier, pionnier du suivi des mains puis fondateur d'un Midjourney qui se présente comme sans investisseurs : le portrait de David Holz.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/david-holz/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Fils d&#39;un dentiste qui soignait sur un voilier, pionnier du suivi des mains puis fondateur d&#39;un Midjourney qui se présente comme sans investisseurs : le portrait de David Holz.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/david-holz/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/david-holz.mp3?v=2a4c6e2f" length="13750190" type="audio/mpeg"/>
+      <itunes:duration>570</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/david-holz-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/david-holz/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Demis Hassabis : de l'échiquier au prix Nobel</title>
+      <itunes:title>Demis Hassabis : de l'échiquier au prix Nobel</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/demis-hassabis/</link>
+      <guid isPermaLink="false">voix-de-lia-demis-hassabis</guid>
+      <pubDate>Sun, 11 Oct 2026 20:42:11 GMT</pubDate>
+      <description>Enfant prodige des échecs, concepteur de jeux vidéo à 17 ans, neuroscientifique puis cofondateur de DeepMind : Ada et Alan racontent le parcours de Demis Hassabis, prix Nobel de chimie 2024 pour AlphaFold.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/demis-hassabis/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Enfant prodige des échecs, concepteur de jeux vidéo à 17 ans, neuroscientifique puis cofondateur de DeepMind : Ada et Alan racontent le parcours de Demis Hassabis, prix Nobel de chimie 2024 pour AlphaFold.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/demis-hassabis/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/demis-hassabis.mp3?v=db544a08" length="13808983" type="audio/mpeg"/>
+      <itunes:duration>572</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/demis-hassabis-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/demis-hassabis/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Sam Altman : du scorbut à ChatGPT, le patron renvoyé puis rappelé</title>
+      <itunes:title>Sam Altman : du scorbut à ChatGPT, le patron renvoyé puis rappelé</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/sam-altman/</link>
+      <guid isPermaLink="false">voix-de-lia-sam-altman</guid>
+      <pubDate>Sun, 11 Oct 2026 20:41:36 GMT</pubDate>
+      <description>Du lycéen qui a changé son école au patron d'OpenAI renvoyé en visioconférence puis rappelé au cinquième jour : le portrait de Sam Altman, à partir de faits vérifiés et datés.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/sam-altman/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Du lycéen qui a changé son école au patron d&#39;OpenAI renvoyé en visioconférence puis rappelé au cinquième jour : le portrait de Sam Altman, à partir de faits vérifiés et datés.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/sam-altman/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/sam-altman.mp3?v=0de70eef" length="12659153" type="audio/mpeg"/>
+      <itunes:duration>524</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/sam-altman-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/sam-altman/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Sundar Pichai : du téléphone attendu cinq ans à la tête de Google</title>
+      <itunes:title>Sundar Pichai : du téléphone attendu cinq ans à la tête de Google</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/sundar-pichai/</link>
+      <guid isPermaLink="false">voix-de-lia-sundar-pichai</guid>
+      <pubDate>Sun, 11 Oct 2026 20:19:18 GMT</pubDate>
+      <description>Un enfant de Chennai qui retenait les numéros de téléphone par cœur, un entretien chez Google qu'il prend pour un poisson d'avril, un navigateur qualifié d'« erreur d'arrondi » : Ada, Alan et Lia racontent Sundar Pichai, patron de Google et d'Alphabet.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/sundar-pichai/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Un enfant de Chennai qui retenait les numéros de téléphone par cœur, un entretien chez Google qu&#39;il prend pour un poisson d&#39;avril, un navigateur qualifié d&#39;« erreur d&#39;arrondi » : Ada, Alan et Lia racontent Sundar Pichai, patron de Google et d&#39;Alphabet.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/sundar-pichai/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/sundar-pichai.mp3?v=d6984160" length="13022462" type="audio/mpeg"/>
+      <itunes:duration>539</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/sundar-pichai-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/sundar-pichai/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Michael Truell : remplacer le code par quelque chose de mieux</title>
+      <itunes:title>Michael Truell : remplacer le code par quelque chose de mieux</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/michael-truell/</link>
+      <guid isPermaLink="false">voix-de-lia-michael-truell</guid>
+      <pubDate>Sun, 11 Oct 2026 20:18:35 GMT</pubDate>
+      <description>Il code depuis ses onze ans, a reçu un prix de l'ACM dès le lycée et a cofondé Cursor, l'éditeur de code piloté par l'IA qui a rejoint SpaceX en 2026 : portrait de Michael Truell, un cofondateur discret.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/michael-truell/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il code depuis ses onze ans, a reçu un prix de l&#39;ACM dès le lycée et a cofondé Cursor, l&#39;éditeur de code piloté par l&#39;IA qui a rejoint SpaceX en 2026 : portrait de Michael Truell, un cofondateur discret.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/michael-truell/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/michael-truell.mp3?v=5295ba1e" length="13092717" type="audio/mpeg"/>
+      <itunes:duration>542</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/michael-truell-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/michael-truell/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Clément Delangue : de La Bassée à l'émoji qui fait un câlin à l'IA</title>
+      <itunes:title>Clément Delangue : de La Bassée à l'émoji qui fait un câlin à l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/clement-delangue/</link>
+      <guid isPermaLink="false">voix-de-lia-clement-delangue</guid>
+      <pubDate>Sun, 11 Oct 2026 20:18:02 GMT</pubDate>
+      <description>Fils d'une infirmière et d'un marchand de tondeuses du Nord, Clément Delangue a fait d'une appli de chatbot pour ados la grande plateforme de l'IA ouverte, Hugging Face : portrait d'un entrepreneur qui a fait du partage des modèles le cœur de sa stratégie.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/clement-delangue/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Fils d&#39;une infirmière et d&#39;un marchand de tondeuses du Nord, Clément Delangue a fait d&#39;une appli de chatbot pour ados la grande plateforme de l&#39;IA ouverte, Hugging Face : portrait d&#39;un entrepreneur qui a fait du partage des modèles le cœur de sa stratégie.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/clement-delangue/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/clement-delangue.mp3?v=c451ba6c" length="12901709" type="audio/mpeg"/>
+      <itunes:duration>534</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/clement-delangue-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/clement-delangue/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Bill Gates : du jeu de morpion à l'alarme sur l'IA</title>
+      <itunes:title>Bill Gates : du jeu de morpion à l'alarme sur l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/bill-gates/</link>
+      <guid isPermaLink="false">voix-de-lia-bill-gates</guid>
+      <pubDate>Sun, 11 Oct 2026 20:17:30 GMT</pubDate>
+      <description>Du terminal financé par une vente de charité au lycée jusqu'à ses mises en garde sur l'IA, le portrait de Bill Gates, cofondateur de Microsoft devenu philanthrope.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/bill-gates/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Du terminal financé par une vente de charité au lycée jusqu&#39;à ses mises en garde sur l&#39;IA, le portrait de Bill Gates, cofondateur de Microsoft devenu philanthrope.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/bill-gates/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/bill-gates.mp3?v=b3d8df24" length="13405569" type="audio/mpeg"/>
+      <itunes:duration>555</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/bill-gates-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/bill-gates/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Pony Ma : du télescope d'enfant à l'empire WeChat</title>
+      <itunes:title>Pony Ma : du télescope d'enfant à l'empire WeChat</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/pony-ma/</link>
+      <guid isPermaLink="false">voix-de-lia-pony-ma</guid>
+      <pubDate>Sun, 11 Oct 2026 20:16:56 GMT</pubDate>
+      <description>Il rêvait d'être astronome, il a cofondé Tencent et WeChat : portrait de Pony Ma, ingénieur discret qui a reconnu publiquement le retard de son groupe dans l'IA.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/pony-ma/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il rêvait d&#39;être astronome, il a cofondé Tencent et WeChat : portrait de Pony Ma, ingénieur discret qui a reconnu publiquement le retard de son groupe dans l&#39;IA.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/pony-ma/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/pony-ma.mp3?v=126901ab" length="13385934" type="audio/mpeg"/>
+      <itunes:duration>554</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/pony-ma-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/pony-ma/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Wang Xingxing : du robot à 200 yuans à la Bourse de Shanghai</title>
+      <itunes:title>Wang Xingxing : du robot à 200 yuans à la Bourse de Shanghai</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/wang-xingxing/</link>
+      <guid isPermaLink="false">voix-de-lia-wang-xingxing</guid>
+      <pubDate>Sun, 11 Oct 2026 20:16:22 GMT</pubDate>
+      <description>Écarté du master de l'Université du Zhejiang en raison de son niveau d'anglais, il a fait d'Unitree un fabricant chinois majeur de robots à pattes et d'humanoïdes : portrait de Wang Xingxing, de ses bricolages d'enfant à l'entrée en Bourse de Shanghai.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/wang-xingxing/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Écarté du master de l&#39;Université du Zhejiang en raison de son niveau d&#39;anglais, il a fait d&#39;Unitree un fabricant chinois majeur de robots à pattes et d&#39;humanoïdes : portrait de Wang Xingxing, de ses bricolages d&#39;enfant à l&#39;entrée en Bourse de Shanghai.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/wang-xingxing/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/wang-xingxing.mp3?v=91b8c94c" length="12593442" type="audio/mpeg"/>
+      <itunes:duration>521</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/wang-xingxing-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/wang-xingxing/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Yan Junjie : le fondateur de MiniMax qui a renoncé à son salaire</title>
+      <itunes:title>Yan Junjie : le fondateur de MiniMax qui a renoncé à son salaire</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/yan-junjie/</link>
+      <guid isPermaLink="false">voix-de-lia-yan-junjie</guid>
+      <pubDate>Sun, 11 Oct 2026 20:15:51 GMT</pubDate>
+      <description>Il est né en 1989 dans une petite ville du Henan et a été vice-président de SenseTime. Il a fondé MiniMax, une entreprise d'IA cotée à Hong Kong, après une visite à son grand-père. Portrait de Yan Junjie, l'un des patrons les plus discrets de l'IA chinoise.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/yan-junjie/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il est né en 1989 dans une petite ville du Henan et a été vice-président de SenseTime. Il a fondé MiniMax, une entreprise d&#39;IA cotée à Hong Kong, après une visite à son grand-père. Portrait de Yan Junjie, l&#39;un des patrons les plus discrets de l&#39;IA chinoise.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/yan-junjie/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/yan-junjie.mp3?v=df52ddde" length="12771112" type="audio/mpeg"/>
+      <itunes:duration>529</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/yan-junjie-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/yan-junjie/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Kai-Fu Lee : l'enfant qui reculait les horloges</title>
+      <itunes:title>Kai-Fu Lee : l'enfant qui reculait les horloges</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/kai-fu-lee/</link>
+      <guid isPermaLink="false">voix-de-lia-kai-fu-lee</guid>
+      <pubDate>Sun, 11 Oct 2026 20:15:18 GMT</pubDate>
+      <description>Il est arrivé au Tennessee à 11 ans sans parler anglais, a dirigé Google Chine et fondé 01.AI : Ada et Alan racontent Kai-Fu Lee, pionnier de la reconnaissance vocale, avec Lia en invitée.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/kai-fu-lee/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il est arrivé au Tennessee à 11 ans sans parler anglais, a dirigé Google Chine et fondé 01.AI : Ada et Alan racontent Kai-Fu Lee, pionnier de la reconnaissance vocale, avec Lia en invitée.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/kai-fu-lee/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/kai-fu-lee.mp3?v=a9241e1a" length="12899290" type="audio/mpeg"/>
+      <itunes:duration>534</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/kai-fu-lee-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/kai-fu-lee/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Zhang Yiming : l'ingénieur qui a fait chercher l'algorithme à sa place</title>
+      <itunes:title>Zhang Yiming : l'ingénieur qui a fait chercher l'algorithme à sa place</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/zhang-yiming/</link>
+      <guid isPermaLink="false">voix-de-lia-zhang-yiming</guid>
+      <pubDate>Sun, 11 Oct 2026 20:14:46 GMT</pubDate>
+      <description>Un étudiant qui choisit son université selon la neige et les fruits de mer, un ingénieur qui s'ennuie chez Microsoft, puis un fondateur qui inverse la recherche en ligne : portrait de Zhang Yiming, fondateur de ByteDance, à l'origine de Douyin et du succès mondial de TikTok.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/zhang-yiming/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Un étudiant qui choisit son université selon la neige et les fruits de mer, un ingénieur qui s&#39;ennuie chez Microsoft, puis un fondateur qui inverse la recherche en ligne : portrait de Zhang Yiming, fondateur de ByteDance, à l&#39;origine de Douyin et du succès mondial de TikTok.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/zhang-yiming/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/zhang-yiming.mp3?v=52a23c5b" length="12830542" type="audio/mpeg"/>
+      <itunes:duration>531</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/zhang-yiming-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/zhang-yiming/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Robin Li : de la troupe d'opéra à Baidu, le pari de l'IA</title>
+      <itunes:title>Robin Li : de la troupe d'opéra à Baidu, le pari de l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/robin-li/</link>
+      <guid isPermaLink="false">voix-de-lia-robin-li</guid>
+      <pubDate>Sun, 11 Oct 2026 20:14:14 GMT</pubDate>
+      <description>Fils d'ouvriers, recruté enfant par une troupe d'opéra, découragé de faire de l'IA par son professeur : Ada et Alan racontent Robin Li, fondateur de Baidu, avec Lia en invitée.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/robin-li/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Fils d&#39;ouvriers, recruté enfant par une troupe d&#39;opéra, découragé de faire de l&#39;IA par son professeur : Ada et Alan racontent Robin Li, fondateur de Baidu, avec Lia en invitée.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/robin-li/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/robin-li.mp3?v=2e354a9c" length="12715471" type="audio/mpeg"/>
+      <itunes:duration>526</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/robin-li-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/robin-li/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Xiao Hong : l'agent d'IA pris entre Pékin et Meta</title>
+      <itunes:title>Xiao Hong : l'agent d'IA pris entre Pékin et Meta</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/xiao-hong/</link>
+      <guid isPermaLink="false">voix-de-lia-xiao-hong</guid>
+      <pubDate>Sun, 11 Oct 2026 20:13:42 GMT</pubDate>
+      <description>Il recrutait ses camarades autour d'un restaurant du Nord-Est. Plus tard, son agent d'IA Manus a été racheté par Meta, puis Pékin a fait annuler l'opération : portrait de Xiao Hong, dit « Red ».
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/xiao-hong/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il recrutait ses camarades autour d&#39;un restaurant du Nord-Est. Plus tard, son agent d&#39;IA Manus a été racheté par Meta, puis Pékin a fait annuler l&#39;opération : portrait de Xiao Hong, dit « Red ».</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/xiao-hong/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/xiao-hong.mp3?v=11b9db6b" length="12998050" type="audio/mpeg"/>
+      <itunes:duration>538</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/xiao-hong-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/xiao-hong/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Bret Taylor : de Google Maps à la gouvernance d'OpenAI</title>
+      <itunes:title>Bret Taylor : de Google Maps à la gouvernance d'OpenAI</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/bret-taylor/</link>
+      <guid isPermaLink="false">voix-de-lia-bret-taylor</guid>
+      <pubDate>Sun, 11 Oct 2026 20:13:08 GMT</pubDate>
+      <description>Co-créateur de Google Maps, pionnier du bouton Like, puis, en octobre 2026, patron de Sierra et président du conseil de l'OpenAI Foundation : le parcours étonnant de Bret Taylor, raconté par Ada et Alan.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/bret-taylor/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Co-créateur de Google Maps, pionnier du bouton Like, puis, en octobre 2026, patron de Sierra et président du conseil de l&#39;OpenAI Foundation : le parcours étonnant de Bret Taylor, raconté par Ada et Alan.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/bret-taylor/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/bret-taylor.mp3?v=dc4461ae" length="13262481" type="audio/mpeg"/>
+      <itunes:duration>549</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/bret-taylor-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/bret-taylor/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Harrison Chase : du sport dans Excel à la licorne LangChain</title>
+      <itunes:title>Harrison Chase : du sport dans Excel à la licorne LangChain</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/harrison-chase/</link>
+      <guid isPermaLink="false">voix-de-lia-harrison-chase</guid>
+      <pubDate>Sun, 11 Oct 2026 20:12:34 GMT</pubDate>
+      <description>De l'analyse sportive à Harvard à LangChain, un projet perso d'environ 800 lignes devenu licorne : le portrait de Harrison Chase, CEO qui assume ses erreurs et reconstruit.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/harrison-chase/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>De l&#39;analyse sportive à Harvard à LangChain, un projet perso d&#39;environ 800 lignes devenu licorne : le portrait de Harrison Chase, CEO qui assume ses erreurs et reconstruit.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/harrison-chase/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/harrison-chase.mp3?v=3706e20b" length="13234113" type="audio/mpeg"/>
+      <itunes:duration>548</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/harrison-chase-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/harrison-chase/transcription.html" type="text/html" language="fr"/>
     </item>
     <item>
       <title>Anton Osika, le physicien qui veut rendre le code facultatif</title>
       <itunes:title>Anton Osika, le physicien qui veut rendre le code facultatif</itunes:title>
       <link>https://3h33.com/podcast-voix-de-lia/anton-osika/</link>
       <guid isPermaLink="false">voix-de-lia-anton-osika</guid>
-      <pubDate>Sun, 11 Oct 2026 19:26:13 GMT</pubDate>
+      <pubDate>Sun, 11 Oct 2026 20:12:01 GMT</pubDate>
       <description>Ancien du CERN, enfant d'une famille qui touchait l'aide sociale, Anton Osika a fondé Lovable, la start-up suédoise qui transforme une simple description en logiciel.
 
 Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/anton-osika/
 
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Ancien du CERN, enfant d&#39;une famille qui touchait l&#39;aide sociale, Anton Osika a fondé Lovable, la start-up suédoise qui transforme une simple description en logiciel.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/anton-osika/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/anton-osika.mp3?v=963b562f" length="12916155" type="audio/mpeg"/>
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Ancien du CERN, enfant d&#39;une famille qui touchait l&#39;aide sociale, Anton Osika a fondé Lovable, la start-up suédoise qui transforme une simple description en logiciel.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/anton-osika/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/anton-osika.mp3?v=144179ea" length="12998331" type="audio/mpeg"/>
       <itunes:duration>538</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:season>2</itunes:season>
       <itunes:explicit>false</itunes:explicit>
       <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/anton-osika-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/anton-osika/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Amjad Masad : de l'IBM PC d'Amman à Replit, valorisée 9 milliards</title>
+      <itunes:title>Amjad Masad : de l'IBM PC d'Amman à Replit, valorisée 9 milliards</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/amjad-masad/</link>
+      <guid isPermaLink="false">voix-de-lia-amjad-masad</guid>
+      <pubDate>Sun, 11 Oct 2026 20:11:27 GMT</pubDate>
+      <description>Fils de réfugiés grandi à Amman, il a reconnu son propre code dans le lancement de Codecademy, puis a fait de Replit un outil pour créer des applications sans savoir coder : portrait d'Amjad Masad.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/amjad-masad/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Fils de réfugiés grandi à Amman, il a reconnu son propre code dans le lancement de Codecademy, puis a fait de Replit un outil pour créer des applications sans savoir coder : portrait d&#39;Amjad Masad.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/amjad-masad/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/amjad-masad.mp3?v=09dc235a" length="13205037" type="audio/mpeg"/>
+      <itunes:duration>546</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/amjad-masad-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/amjad-masad/transcription.html" type="text/html" language="fr"/>
     </item>
     <item>
       <title>Scott Wu : du champion de maths à Devin, l'agent de programmation de Cognition</title>
       <itunes:title>Scott Wu : du champion de maths à Devin, l'agent de programmation de Cognition</itunes:title>
       <link>https://3h33.com/podcast-voix-de-lia/scott-wu/</link>
       <guid isPermaLink="false">voix-de-lia-scott-wu</guid>
-      <pubDate>Sun, 11 Oct 2026 19:24:23 GMT</pubDate>
+      <pubDate>Sun, 11 Oct 2026 20:10:53 GMT</pubDate>
       <description>Champion national de maths à quatorze ans, score parfait aux Olympiades d'informatique, puis cofondateur de Cognition, qui développe l'agent de programmation Devin : le portrait de Scott Wu, compétiteur dans l'âme.
 
 Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/scott-wu/
 
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Champion national de maths à quatorze ans, score parfait aux Olympiades d&#39;informatique, puis cofondateur de Cognition, qui développe l&#39;agent de programmation Devin : le portrait de Scott Wu, compétiteur dans l&#39;âme.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/scott-wu/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/scott-wu.mp3?v=c21649b4" length="12861180" type="audio/mpeg"/>
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Champion national de maths à quatorze ans, score parfait aux Olympiades d&#39;informatique, puis cofondateur de Cognition, qui développe l&#39;agent de programmation Devin : le portrait de Scott Wu, compétiteur dans l&#39;âme.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/scott-wu/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/scott-wu.mp3?v=43a26f16" length="12942130" type="audio/mpeg"/>
       <itunes:duration>536</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:season>2</itunes:season>
       <itunes:explicit>false</itunes:explicit>
       <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/scott-wu-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/scott-wu/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Larry Ellison : le fondateur d'Oracle qui a tout misé sur l'IA</title>
+      <itunes:title>Larry Ellison : le fondateur d'Oracle qui a tout misé sur l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/larry-ellison/</link>
+      <guid isPermaLink="false">voix-de-lia-larry-ellison</guid>
+      <pubDate>Sun, 11 Oct 2026 20:10:20 GMT</pubDate>
+      <description>Adopté à neuf mois, sans diplôme, il a fondé Oracle avec deux mille dollars puis a misé l'entreprise sur les centres de données pour l'IA : voici le portrait de Larry Ellison.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/larry-ellison/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Adopté à neuf mois, sans diplôme, il a fondé Oracle avec deux mille dollars puis a misé l&#39;entreprise sur les centres de données pour l&#39;IA : voici le portrait de Larry Ellison.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/larry-ellison/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/larry-ellison.mp3?v=3a51a72e" length="13312566" type="audio/mpeg"/>
+      <itunes:duration>551</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/larry-ellison-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/larry-ellison/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Masayoshi Son : le parieur qui se dit né pour la superintelligence</title>
+      <itunes:title>Masayoshi Son : le parieur qui se dit né pour la superintelligence</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/masayoshi-son/</link>
+      <guid isPermaLink="false">voix-de-lia-masayoshi-son</guid>
+      <pubDate>Sun, 11 Oct 2026 20:09:46 GMT</pubDate>
+      <description>D'un adolescent qui relance soixante fois le patron de McDonald's Japon au fondateur de SoftBank qui mise des dizaines de milliards sur OpenAI, Ada et Alan racontent Masayoshi Son, l'investisseur qui se dit né pour réaliser la superintelligence.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/masayoshi-son/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>D&#39;un adolescent qui relance soixante fois le patron de McDonald&#39;s Japon au fondateur de SoftBank qui mise des dizaines de milliards sur OpenAI, Ada et Alan racontent Masayoshi Son, l&#39;investisseur qui se dit né pour réaliser la superintelligence.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/masayoshi-son/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/masayoshi-son.mp3?v=ec42937d" length="13647717" type="audio/mpeg"/>
+      <itunes:duration>565</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/masayoshi-son-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/masayoshi-son/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Sergey Brin : de Moscou à Gemini, le cofondateur qui revient</title>
+      <itunes:title>Sergey Brin : de Moscou à Gemini, le cofondateur qui revient</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/sergey-brin/</link>
+      <guid isPermaLink="false">voix-de-lia-sergey-brin</guid>
+      <pubDate>Sun, 11 Oct 2026 20:09:12 GMT</pubDate>
+      <description>Arrivé de Moscou à six ans, cofondateur de Google, revenu de sa retraite pour travailler sur Gemini : le portrait de Sergey Brin, fait par fait, date par date.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/sergey-brin/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Arrivé de Moscou à six ans, cofondateur de Google, revenu de sa retraite pour travailler sur Gemini : le portrait de Sergey Brin, fait par fait, date par date.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/sergey-brin/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/sergey-brin.mp3?v=bbd13993" length="13067394" type="audio/mpeg"/>
+      <itunes:duration>541</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/sergey-brin-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/sergey-brin/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Larry Page : le rêve d'une nuit qui a classé tout le Web</title>
+      <itunes:title>Larry Page : le rêve d'une nuit qui a classé tout le Web</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/larry-page/</link>
+      <guid isPermaLink="false">voix-de-lia-larry-page</guid>
+      <pubDate>Sun, 11 Oct 2026 20:08:38 GMT</pubDate>
+      <description>Une imprimante en Lego, un rêve noté en pleine nuit et un garage loué mille sept cents dollars par mois : Ada et Alan racontent Larry Page, le cofondateur de Google, avec Lia, l'IA-nimatrice de Choucroute Citron.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/larry-page/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Une imprimante en Lego, un rêve noté en pleine nuit et un garage loué mille sept cents dollars par mois : Ada et Alan racontent Larry Page, le cofondateur de Google, avec Lia, l&#39;IA-nimatrice de Choucroute Citron.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/larry-page/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/larry-page.mp3?v=52b7d028" length="13634757" type="audio/mpeg"/>
+      <itunes:duration>565</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/larry-page-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/larry-page/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Jeff Bezos : du ranch texan au pari de l'ingénieur artificiel</title>
+      <itunes:title>Jeff Bezos : du ranch texan au pari de l'ingénieur artificiel</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/jeff-bezos/</link>
+      <guid isPermaLink="false">voix-de-lia-jeff-bezos</guid>
+      <pubDate>Sun, 11 Oct 2026 20:08:04 GMT</pubDate>
+      <description>Inventeur de garage, fils adoptif d'un réfugié cubain, fondateur d'Amazon et de Blue Origin : Ada et Alan racontent Jeff Bezos, avec Lia en invitée espiègle.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/jeff-bezos/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Inventeur de garage, fils adoptif d&#39;un réfugié cubain, fondateur d&#39;Amazon et de Blue Origin : Ada et Alan racontent Jeff Bezos, avec Lia en invitée espiègle.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/jeff-bezos/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/jeff-bezos.mp3?v=a3441e50" length="12483901" type="audio/mpeg"/>
+      <itunes:duration>516</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/jeff-bezos-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/jeff-bezos/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Mustafa Suleyman : des milk-shakes à la superintelligence</title>
+      <itunes:title>Mustafa Suleyman : des milk-shakes à la superintelligence</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/mustafa-suleyman/</link>
+      <guid isPermaLink="false">voix-de-lia-mustafa-suleyman</guid>
+      <pubDate>Sun, 11 Oct 2026 20:07:33 GMT</pubDate>
+      <description>Fils d'un chauffeur de taxi syrien et d'une infirmière anglaise, il a quitté Oxford pour une ligne d'écoute, cofondé DeepMind, puis pris la tête de Microsoft AI : portrait de Mustafa Suleyman.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/mustafa-suleyman/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Fils d&#39;un chauffeur de taxi syrien et d&#39;une infirmière anglaise, il a quitté Oxford pour une ligne d&#39;écoute, cofondé DeepMind, puis pris la tête de Microsoft AI : portrait de Mustafa Suleyman.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/mustafa-suleyman/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/mustafa-suleyman.mp3?v=eab8500c" length="13286564" type="audio/mpeg"/>
+      <itunes:duration>550</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/mustafa-suleyman-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/mustafa-suleyman/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Liang Wenfeng : le discret de DeepSeek qui a secoué la tech</title>
+      <itunes:title>Liang Wenfeng : le discret de DeepSeek qui a secoué la tech</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/liang-wenfeng/</link>
+      <guid isPermaLink="false">voix-de-lia-liang-wenfeng</guid>
+      <pubDate>Sun, 11 Oct 2026 20:06:59 GMT</pubDate>
+      <description>Fils d'instituteur, passionné de maths, fondateur d'un fonds quantitatif puis de DeepSeek : le portrait de Liang Wenfeng, l'homme qui parle très peu mais dont le modèle R1 a bousculé les marchés en janvier 2025. En octobre 2026, sa société négociait une levée d'au moins 12 milliards de dollars.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/liang-wenfeng/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Fils d&#39;instituteur, passionné de maths, fondateur d&#39;un fonds quantitatif puis de DeepSeek : le portrait de Liang Wenfeng, l&#39;homme qui parle très peu mais dont le modèle R1 a bousculé les marchés en janvier 2025. En octobre 2026, sa société négociait une levée d&#39;au moins 12 milliards de dollars.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/liang-wenfeng/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/liang-wenfeng.mp3?v=016efcba" length="13589850" type="audio/mpeg"/>
+      <itunes:duration>563</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/liang-wenfeng-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/liang-wenfeng/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Ilya Sutskever, l'homme le plus secret de l'IA</title>
+      <itunes:title>Ilya Sutskever, l'homme le plus secret de l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/ilya-sutskever/</link>
+      <guid isPermaLink="false">voix-de-lia-ilya-sutskever</guid>
+      <pubDate>Sun, 11 Oct 2026 20:06:25 GMT</pubDate>
+      <description>Il a contribué à lancer le boom de l'IA en 2012, cofondé OpenAI, voté le renvoi de Sam Altman, puis créé un laboratoire qui n'a encore rien montré : portrait d'Ilya Sutskever.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/ilya-sutskever/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il a contribué à lancer le boom de l&#39;IA en 2012, cofondé OpenAI, voté le renvoi de Sam Altman, puis créé un laboratoire qui n&#39;a encore rien montré : portrait d&#39;Ilya Sutskever.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/ilya-sutskever/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/ilya-sutskever.mp3?v=f186626b" length="13368924" type="audio/mpeg"/>
+      <itunes:duration>553</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/ilya-sutskever-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/ilya-sutskever/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Geoffrey Hinton : le parrain de l'IA qui ne s'assoit plus</title>
+      <itunes:title>Geoffrey Hinton : le parrain de l'IA qui ne s'assoit plus</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/geoffrey-hinton/</link>
+      <guid isPermaLink="false">voix-de-lia-geoffrey-hinton</guid>
+      <pubDate>Sun, 11 Oct 2026 20:05:52 GMT</pubDate>
+      <description>Descendant de George Boole, menuisier d'un an, prix Nobel de physique : Ada et Alan racontent Geoffrey Hinton, le pionnier des réseaux de neurones devenu une voix d'alerte sur l'IA.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/geoffrey-hinton/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Descendant de George Boole, menuisier d&#39;un an, prix Nobel de physique : Ada et Alan racontent Geoffrey Hinton, le pionnier des réseaux de neurones devenu une voix d&#39;alerte sur l&#39;IA.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/geoffrey-hinton/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/geoffrey-hinton.mp3?v=4e238d9b" length="12358590" type="audio/mpeg"/>
+      <itunes:duration>511</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/geoffrey-hinton-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/geoffrey-hinton/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Andrej Karpathy : du Rubik's Cube au vibe coding</title>
+      <itunes:title>Andrej Karpathy : du Rubik's Cube au vibe coding</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/andrej-karpathy/</link>
+      <guid isPermaLink="false">voix-de-lia-andrej-karpathy</guid>
+      <pubDate>Sun, 11 Oct 2026 20:05:21 GMT</pubDate>
+      <description>Speedcubeur sur YouTube, membre fondateur d'OpenAI, patron de l'IA de Tesla, inventeur du « vibe coding » : le portrait d'Andrej Karpathy, chercheur et pédagogue.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/andrej-karpathy/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Speedcubeur sur YouTube, membre fondateur d&#39;OpenAI, patron de l&#39;IA de Tesla, inventeur du « vibe coding » : le portrait d&#39;Andrej Karpathy, chercheur et pédagogue.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/andrej-karpathy/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/andrej-karpathy.mp3?v=5355864a" length="13372507" type="audio/mpeg"/>
+      <itunes:duration>554</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/andrej-karpathy-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/andrej-karpathy/transcription.html" type="text/html" language="fr"/>
     </item>
     <item>
       <title>Mati Staniszewski : le Polonais qui a donné une voix à l'IA</title>
@@ -106,26 +739,6 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/mati-staniszewski-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/mati-staniszewski/transcription.html" type="text/html" language="fr"/>
-    </item>
-    <item>
-      <title>Amjad Masad : de l'IBM PC d'Amman à Replit, valorisée 9 milliards</title>
-      <itunes:title>Amjad Masad : de l'IBM PC d'Amman à Replit, valorisée 9 milliards</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/amjad-masad/</link>
-      <guid isPermaLink="false">voix-de-lia-amjad-masad</guid>
-      <pubDate>Sun, 11 Oct 2026 19:23:33 GMT</pubDate>
-      <description>Fils de réfugiés grandi à Amman, il a reconnu son propre code dans le lancement de Codecademy, puis a fait de Replit un outil pour créer des applications sans savoir coder : portrait d'Amjad Masad.
-
-Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/amjad-masad/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Fils de réfugiés grandi à Amman, il a reconnu son propre code dans le lancement de Codecademy, puis a fait de Replit un outil pour créer des applications sans savoir coder : portrait d&#39;Amjad Masad.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/amjad-masad/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/amjad-masad.mp3?v=5ecd2d08" length="13116284" type="audio/mpeg"/>
-      <itunes:duration>546</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/amjad-masad/transcription.html" type="text/html" language="fr"/>
     </item>
     <item>
       <title>Mark Zuckerberg : du réseau maison à la superintelligence</title>
@@ -191,26 +804,6 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/fei-fei-li/transcription.html" type="text/html" language="fr"/>
     </item>
     <item>
-      <title>Masayoshi Son : le parieur qui se dit né pour la superintelligence</title>
-      <itunes:title>Masayoshi Son : le parieur qui se dit né pour la superintelligence</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/masayoshi-son/</link>
-      <guid isPermaLink="false">voix-de-lia-masayoshi-son</guid>
-      <pubDate>Sun, 11 Oct 2026 19:21:51 GMT</pubDate>
-      <description>D'un adolescent qui relance soixante fois le patron de McDonald's Japon au fondateur de SoftBank qui mise des dizaines de milliards sur OpenAI, Ada et Alan racontent Masayoshi Son, l'investisseur qui se dit né pour réaliser la superintelligence.
-
-Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/masayoshi-son/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>D&#39;un adolescent qui relance soixante fois le patron de McDonald&#39;s Japon au fondateur de SoftBank qui mise des dizaines de milliards sur OpenAI, Ada et Alan racontent Masayoshi Son, l&#39;investisseur qui se dit né pour réaliser la superintelligence.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/masayoshi-son/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/masayoshi-son.mp3?v=d591eab3" length="13561508" type="audio/mpeg"/>
-      <itunes:duration>565</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/masayoshi-son/transcription.html" type="text/html" language="fr"/>
-    </item>
-    <item>
       <title>Elon Musk, l'IA qui fait peur et celle qu'il construit</title>
       <itunes:title>Elon Musk, l'IA qui fait peur et celle qu'il construit</itunes:title>
       <link>https://3h33.com/podcast-voix-de-lia/elon-musk/</link>
@@ -230,26 +823,6 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/elon-musk-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/elon-musk/transcription.html" type="text/html" language="fr"/>
-    </item>
-    <item>
-      <title>Larry Ellison : le fondateur d'Oracle qui a tout misé sur l'IA</title>
-      <itunes:title>Larry Ellison : le fondateur d'Oracle qui a tout misé sur l'IA</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/larry-ellison/</link>
-      <guid isPermaLink="false">voix-de-lia-larry-ellison</guid>
-      <pubDate>Sun, 11 Oct 2026 19:21:08 GMT</pubDate>
-      <description>Adopté à neuf mois, sans diplôme, il a fondé Oracle avec deux mille dollars puis a misé l'entreprise sur les centres de données pour l'IA : voici le portrait de Larry Ellison.
-
-Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/larry-ellison/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Adopté à neuf mois, sans diplôme, il a fondé Oracle avec deux mille dollars puis a misé l&#39;entreprise sur les centres de données pour l&#39;IA : voici le portrait de Larry Ellison.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/larry-ellison/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/larry-ellison.mp3?v=878e5122" length="13227202" type="audio/mpeg"/>
-      <itunes:duration>551</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/larry-ellison/transcription.html" type="text/html" language="fr"/>
     </item>
     <item>
       <title>Daniela Amodei : la littéraire qui préside Anthropic</title>
@@ -292,166 +865,6 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/arthur-mensch-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/arthur-mensch/transcription.html" type="text/html" language="fr"/>
-    </item>
-    <item>
-      <title>Liang Wenfeng : le discret de DeepSeek qui a secoué la tech</title>
-      <itunes:title>Liang Wenfeng : le discret de DeepSeek qui a secoué la tech</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/liang-wenfeng/</link>
-      <guid isPermaLink="false">voix-de-lia-liang-wenfeng</guid>
-      <pubDate>Sun, 11 Oct 2026 19:19:42 GMT</pubDate>
-      <description>Fils d'instituteur, passionné de maths, fondateur d'un fonds quantitatif puis de DeepSeek : le portrait de Liang Wenfeng, l'homme qui parle très peu mais dont le modèle R1 a bousculé les marchés en janvier 2025. En octobre 2026, sa société négociait une levée d'au moins 12 milliards de dollars.
-
-Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/liang-wenfeng/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Fils d&#39;instituteur, passionné de maths, fondateur d&#39;un fonds quantitatif puis de DeepSeek : le portrait de Liang Wenfeng, l&#39;homme qui parle très peu mais dont le modèle R1 a bousculé les marchés en janvier 2025. En octobre 2026, sa société négociait une levée d&#39;au moins 12 milliards de dollars.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/liang-wenfeng/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/liang-wenfeng.mp3?v=6bbfe659" length="13504543" type="audio/mpeg"/>
-      <itunes:duration>563</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/liang-wenfeng/transcription.html" type="text/html" language="fr"/>
-    </item>
-    <item>
-      <title>Ilya Sutskever, l'homme le plus secret de l'IA</title>
-      <itunes:title>Ilya Sutskever, l'homme le plus secret de l'IA</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/ilya-sutskever/</link>
-      <guid isPermaLink="false">voix-de-lia-ilya-sutskever</guid>
-      <pubDate>Sun, 11 Oct 2026 19:19:07 GMT</pubDate>
-      <description>Il a contribué à lancer le boom de l'IA en 2012, cofondé OpenAI, voté le renvoi de Sam Altman, puis créé un laboratoire qui n'a encore rien montré : portrait d'Ilya Sutskever.
-
-Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/ilya-sutskever/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Il a contribué à lancer le boom de l&#39;IA en 2012, cofondé OpenAI, voté le renvoi de Sam Altman, puis créé un laboratoire qui n&#39;a encore rien montré : portrait d&#39;Ilya Sutskever.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/ilya-sutskever/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/ilya-sutskever.mp3?v=545e3dce" length="13277276" type="audio/mpeg"/>
-      <itunes:duration>553</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/ilya-sutskever/transcription.html" type="text/html" language="fr"/>
-    </item>
-    <item>
-      <title>Sergey Brin : de Moscou à Gemini, le cofondateur qui revient</title>
-      <itunes:title>Sergey Brin : de Moscou à Gemini, le cofondateur qui revient</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/sergey-brin/</link>
-      <guid isPermaLink="false">voix-de-lia-sergey-brin</guid>
-      <pubDate>Sun, 11 Oct 2026 19:18:27 GMT</pubDate>
-      <description>Arrivé de Moscou à six ans, cofondateur de Google, revenu de sa retraite pour travailler sur Gemini : le portrait de Sergey Brin, fait par fait, date par date.
-
-Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/sergey-brin/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Arrivé de Moscou à six ans, cofondateur de Google, revenu de sa retraite pour travailler sur Gemini : le portrait de Sergey Brin, fait par fait, date par date.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/sergey-brin/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/sergey-brin.mp3?v=2c3572a5" length="12985795" type="audio/mpeg"/>
-      <itunes:duration>541</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/sergey-brin/transcription.html" type="text/html" language="fr"/>
-    </item>
-    <item>
-      <title>Larry Page : le rêve d'une nuit qui a classé tout le Web</title>
-      <itunes:title>Larry Page : le rêve d'une nuit qui a classé tout le Web</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/larry-page/</link>
-      <guid isPermaLink="false">voix-de-lia-larry-page</guid>
-      <pubDate>Sun, 11 Oct 2026 19:16:25 GMT</pubDate>
-      <description>Une imprimante en Lego, un rêve noté en pleine nuit et un garage loué mille sept cents dollars par mois : Ada et Alan racontent Larry Page, le cofondateur de Google, avec Lia, l'IA-nimatrice de Choucroute Citron.
-
-Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/larry-page/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Une imprimante en Lego, un rêve noté en pleine nuit et un garage loué mille sept cents dollars par mois : Ada et Alan racontent Larry Page, le cofondateur de Google, avec Lia, l&#39;IA-nimatrice de Choucroute Citron.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/larry-page/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/larry-page.mp3?v=fb8e3706" length="13550764" type="audio/mpeg"/>
-      <itunes:duration>565</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/larry-page/transcription.html" type="text/html" language="fr"/>
-    </item>
-    <item>
-      <title>Jeff Bezos : du ranch texan au pari de l'ingénieur artificiel</title>
-      <itunes:title>Jeff Bezos : du ranch texan au pari de l'ingénieur artificiel</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/jeff-bezos/</link>
-      <guid isPermaLink="false">voix-de-lia-jeff-bezos</guid>
-      <pubDate>Sun, 11 Oct 2026 19:15:31 GMT</pubDate>
-      <description>Inventeur de garage, fils adoptif d'un réfugié cubain, fondateur d'Amazon et de Blue Origin : Ada et Alan racontent Jeff Bezos, avec Lia en invitée espiègle.
-
-Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/jeff-bezos/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Inventeur de garage, fils adoptif d&#39;un réfugié cubain, fondateur d&#39;Amazon et de Blue Origin : Ada et Alan racontent Jeff Bezos, avec Lia en invitée espiègle.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/jeff-bezos/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/jeff-bezos.mp3?v=4909e574" length="12397724" type="audio/mpeg"/>
-      <itunes:duration>516</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/jeff-bezos/transcription.html" type="text/html" language="fr"/>
-    </item>
-    <item>
-      <title>Mustafa Suleyman : des milk-shakes à la superintelligence</title>
-      <itunes:title>Mustafa Suleyman : des milk-shakes à la superintelligence</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/mustafa-suleyman/</link>
-      <guid isPermaLink="false">voix-de-lia-mustafa-suleyman</guid>
-      <pubDate>Sun, 11 Oct 2026 19:13:00 GMT</pubDate>
-      <description>Fils d'un chauffeur de taxi syrien et d'une infirmière anglaise, il a quitté Oxford pour une ligne d'écoute, cofondé DeepMind, puis pris la tête de Microsoft AI : portrait de Mustafa Suleyman.
-
-Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/mustafa-suleyman/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Fils d&#39;un chauffeur de taxi syrien et d&#39;une infirmière anglaise, il a quitté Oxford pour une ligne d&#39;écoute, cofondé DeepMind, puis pris la tête de Microsoft AI : portrait de Mustafa Suleyman.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/mustafa-suleyman/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/mustafa-suleyman.mp3?v=580144ca" length="13199014" type="audio/mpeg"/>
-      <itunes:duration>550</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/mustafa-suleyman/transcription.html" type="text/html" language="fr"/>
-    </item>
-    <item>
-      <title>Andrej Karpathy : du Rubik's Cube au vibe coding</title>
-      <itunes:title>Andrej Karpathy : du Rubik's Cube au vibe coding</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/andrej-karpathy/</link>
-      <guid isPermaLink="false">voix-de-lia-andrej-karpathy</guid>
-      <pubDate>Sun, 11 Oct 2026 19:09:10 GMT</pubDate>
-      <description>Speedcubeur sur YouTube, membre fondateur d'OpenAI, patron de l'IA de Tesla, inventeur du « vibe coding » : le portrait d'Andrej Karpathy, chercheur et pédagogue.
-
-Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/andrej-karpathy/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Speedcubeur sur YouTube, membre fondateur d&#39;OpenAI, patron de l&#39;IA de Tesla, inventeur du « vibe coding » : le portrait d&#39;Andrej Karpathy, chercheur et pédagogue.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/andrej-karpathy/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/andrej-karpathy.mp3?v=7728d085" length="13286656" type="audio/mpeg"/>
-      <itunes:duration>554</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/andrej-karpathy/transcription.html" type="text/html" language="fr"/>
-    </item>
-    <item>
-      <title>Geoffrey Hinton : le parrain de l'IA qui ne s'assoit plus</title>
-      <itunes:title>Geoffrey Hinton : le parrain de l'IA qui ne s'assoit plus</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/geoffrey-hinton/</link>
-      <guid isPermaLink="false">voix-de-lia-geoffrey-hinton</guid>
-      <pubDate>Sun, 11 Oct 2026 19:08:27 GMT</pubDate>
-      <description>Descendant de George Boole, menuisier d'un an, prix Nobel de physique : Ada et Alan racontent Geoffrey Hinton, le pionnier des réseaux de neurones devenu une voix d'alerte sur l'IA.
-
-Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/geoffrey-hinton/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
-      <content:encoded><![CDATA[<p>Descendant de George Boole, menuisier d&#39;un an, prix Nobel de physique : Ada et Alan racontent Geoffrey Hinton, le pionnier des réseaux de neurones devenu une voix d&#39;alerte sur l&#39;IA.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/geoffrey-hinton/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/geoffrey-hinton.mp3?v=1780d385" length="12271689" type="audio/mpeg"/>
-      <itunes:duration>511</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/geoffrey-hinton/transcription.html" type="text/html" language="fr"/>
     </item>
     <item>
       <title>Mira Murati : de Vlorë à une IA que chacun peut façonner</title>

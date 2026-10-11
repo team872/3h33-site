@@ -1,6 +1,7 @@
 /* Les Voix de l'IA — comportements du site (sans bibliothèque).
-   Apparitions au défilement, onde du héros, lecteur collant (Spotify ou MP3), lecteur des portraits
-   avec onde cliquable et mini-lecteur, chapitres suivis à la lecture, partage. */
+   Apparitions au défilement, barre du haut (rubrique en cours), bouton « remonter », mur de vignettes du bandeau,
+   « Lia vous présente l'émission », lecteur collant (Spotify ou MP3), lecteur des portraits avec onde cliquable
+   et mini-lecteur, chapitres suivis à la lecture, partage. Un seul son à la fois. */
 (function () {
   "use strict";
   var doc = document.documentElement;
@@ -17,12 +18,49 @@
     return m + ":" + (r < 10 ? "0" : "") + r;
   }
 
-  /* ------------------------------------------------ barre du haut qui se densifie au défilement */
+  /* ------------------------------------------------ barre du haut qui se densifie au défilement, bouton « remonter » */
   var barre = $(".barre");
-  if (barre) {
-    var majBarre = function () { barre.classList.toggle("defile", window.scrollY > 40); };
-    majBarre();
-    window.addEventListener("scroll", majBarre, { passive: true });
+  var haut = $(".remonter");
+  var liensNav = $$(".barre nav a[href^='#']");
+  var majDefile = function () {
+    var y = window.scrollY;
+    if (barre) barre.classList.toggle("defile", y > 40);
+    if (haut) haut.classList.toggle("visible", y > Math.max(640, window.innerHeight * 0.85));
+    if (y < 120) liensNav.forEach(function (a) { a.classList.remove("actif"); a.removeAttribute("aria-current"); });
+  };
+  majDefile();
+  window.addEventListener("scroll", majDefile, { passive: true });
+  if (haut) haut.addEventListener("click", function (ev) {
+    ev.preventDefault();
+    window.scrollTo({ top: 0, behavior: calme ? "auto" : "smooth" });
+    var m = $(".marque");
+    if (m) try { m.focus({ preventScroll: true }); } catch (e) { m.focus(); }
+  });
+
+  /* ------------------------------------------------ rubrique en cours, soulignée dans la barre du haut */
+  if (liensNav.length && "IntersectionObserver" in window) {
+    var parCible = {};
+    liensNav.forEach(function (a) { var id = a.getAttribute("href").slice(1); if (id && document.getElementById(id)) parCible[id] = a; });
+    var obsNav = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (e) {
+        if (!e.isIntersecting || window.scrollY < 120) return;
+        liensNav.forEach(function (a) { a.classList.remove("actif"); a.removeAttribute("aria-current"); });
+        parCible[e.target.id].classList.add("actif");
+        parCible[e.target.id].setAttribute("aria-current", "location");
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    Object.keys(parCible).forEach(function (id) { obsNav.observe(document.getElementById(id)); });
+  }
+
+  /* ------------------------------------------------ un seul son à la fois (Lia, lecteur collant, lecteur du portrait) */
+  document.addEventListener("play", function (ev) {
+    $$("audio").forEach(function (a) { if (a !== ev.target && !a.paused) a.pause(); });
+  }, true);
+
+  /* ------------------------------------------------ bandeau : le mur de vignettes s'arrête quand on ne le voit plus */
+  var mur = $(".mur");
+  if (mur && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { mur.classList.toggle("arret", !e[0].isIntersecting); }).observe(mur);
   }
 
   /* ------------------------------------------------ apparitions au défilement (en cascade) */
@@ -40,40 +78,6 @@
     $$(".reveal").forEach(function (el) { vus.observe(el); });
   } else {
     $$(".reveal").forEach(function (el) { el.classList.add("visible"); });
-  }
-
-  /* ------------------------------------------------ onde du héros (page de l'émission) */
-  var toile = $("#heroWave");
-  if (toile && toile.getContext && !calme) {
-    var ctx = toile.getContext("2d");
-    var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    var phase = 0, raf = null;
-    var taille = function () {
-      toile.width = toile.clientWidth * dpr; toile.height = 60 * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    };
-    var dessiner = function () {
-      var W = toile.clientWidth;
-      ctx.clearRect(0, 0, W, 60);
-      for (var w = 0; w < 3; w++) {
-        ctx.strokeStyle = w === 1 ? "rgba(91,138,114,.35)" : "rgba(196,162,101,.32)";
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        for (var x = 0; x <= W; x += 2) {
-          var y = 30 + Math.sin(x * 0.008 + phase + w * 1.2) * (8 + w * 4) + Math.sin(x * 0.015 + phase * 1.5) * 3;
-          if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-        }
-        ctx.stroke();
-      }
-      phase += 0.015;
-      raf = requestAnimationFrame(dessiner);
-    };
-    taille();
-    window.addEventListener("resize", taille);
-    dessiner();
-    document.addEventListener("visibilitychange", function () {
-      if (document.hidden) { cancelAnimationFrame(raf); raf = null; } else if (!raf) dessiner();
-    });
   }
 
   /* ------------------------------------------------ outils communs du lecteur MP3 */
@@ -139,6 +143,59 @@
     });
     ["play", "pause", "ended"].forEach(function (e) { audio.addEventListener(e, etat); });
     etat();
+  }
+
+  /* ------------------------------------------------ bandeau : « Lia vous présente l'émission » */
+  var lia = $(".lia-carte");
+  if (lia) {
+    var liaAudio = $("audio", lia);
+    var liaBouton = $(".lia-bouton", lia);
+    var liaTemps = $(".lia-temps", lia);
+    var liaPiste = $(".lia-piste", lia);
+    var morceaux = $$(".lia-citation [data-t]", lia);
+    var citation = $(".lia-citation", lia);
+    var tempsDepart = liaTemps ? liaTemps.textContent : "";
+    // le texte, replié sur téléphone : « Lire tout » le déplie (il se déplie aussi pendant l'écoute)
+    if (citation) {
+      var lire = document.createElement("button");
+      lire.type = "button";
+      lire.className = "lia-lire";
+      lire.textContent = "Lire tout";
+      lire.setAttribute("aria-expanded", "false");
+      citation.parentNode.insertBefore(lire, citation.nextSibling);
+      var texteLia = $("p", citation) || citation;
+      var majLire = function () { lire.hidden = lia.classList.contains("deplie") || texteLia.scrollHeight <= texteLia.clientHeight + 2; };
+      lire.addEventListener("click", function () { lia.classList.add("deplie"); lire.setAttribute("aria-expanded", "true"); majLire(); });
+      majLire();
+      window.addEventListener("resize", majLire);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(majLire);
+    }
+    if (liaAudio && liaBouton) {
+      relierBouton(liaAudio, liaBouton, "Lia qui vous présente l'émission");
+      var courantLia = -1;
+      var majLia = function () {
+        var d = liaAudio.duration || Number(liaAudio.dataset.duree) || 0;
+        var t = liaAudio.currentTime;
+        if (liaPiste) liaPiste.style.setProperty("--p", d ? Math.min(1, t / d) : 0);
+        if (liaTemps) liaTemps.textContent = (t > 0 && !liaAudio.ended) ? "· " + duree(t) + " / " + duree(d) : tempsDepart;
+        var k = -1;
+        if (!liaAudio.paused || t > 0) morceaux.forEach(function (m, i) { if (t >= Number(m.getAttribute("data-t"))) k = i; });
+        if (liaAudio.ended) k = -1;
+        if (k !== courantLia) {
+          courantLia = k;
+          morceaux.forEach(function (m, i) { m.classList.toggle("dit", i === k); m.classList.toggle("deja", i < k); });
+        }
+      };
+      ["timeupdate", "seeked", "loadedmetadata", "ended"].forEach(function (e) { liaAudio.addEventListener(e, majLia); });
+      ["play", "pause", "ended"].forEach(function (e) {
+        liaAudio.addEventListener(e, function () {
+          var joue = !liaAudio.paused && !liaAudio.ended;
+          lia.classList.toggle("joue", joue);
+          if (joue) lia.classList.add("ecoute");
+          if (liaAudio.ended) { lia.classList.remove("ecoute"); liaAudio.currentTime = 0; majLia(); }
+        });
+      });
+    }
   }
 
   /* ------------------------------------------------ page portrait : le lecteur */
@@ -253,6 +310,53 @@
       };
       if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(texte).then(fini, secours);
       else secours();
+    });
+  });
+
+  /* ------------------------------------------------ abonnement par e-mail (double confirmation)
+     Le service répond toujours de la même façon, que l'adresse soit nouvelle ou déjà inscrite. */
+  $$("form[data-abonnement]").forEach(function (form) {
+    if (!window.fetch || !window.JSON) return;               // ancien navigateur : le formulaire poste normalement
+    var debut = Date.now();
+    var champ = $("input[type=email]", form);
+    var bouton = $("button[type=submit]", form);
+    var etat = $(".abo-email-etat", form);
+    var dire = function (texte, genre) { etat.textContent = texte; etat.className = "abo-email-etat" + (genre ? " " + genre : ""); };
+    var rendre = function () { bouton.disabled = false; form.classList.remove("en-cours"); };
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var email = (champ.value || "").trim();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email)) { dire("Cette adresse e-mail semble incorrecte.", "erreur"); champ.focus(); return; }
+      bouton.disabled = true;
+      form.classList.add("en-cours");
+      dire("Envoi en cours…");
+      fetch(form.getAttribute("action"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: email,
+          liste: form.elements.liste.value,
+          site: form.elements.site.value,                    // champ piège, invisible pour un humain
+          instant: debut,
+          ecoule: Date.now() - debut,
+          page: location.pathname
+        })
+      }).then(function (r) {
+        return r.json().catch(function () { return {}; }).then(function (j) { return { statut: r.status, j: j }; });
+      }).then(function (x) {
+        if (x.statut === 200 && x.j.ok && !x.j.envoi) {
+          form.classList.add("envoye");
+          dire("Vérifiez votre boîte : un e-mail de confirmation vient de partir.", "ok");
+        } else if (x.statut === 200 && x.j.ok) {
+          dire("Votre demande est notée, mais l'envoi des e-mails n'est pas encore en service. Réessayez dans quelques jours.", "erreur");
+        } else {
+          dire((x.j.erreurs && x.j.erreurs[0]) || "L'inscription n'a pas abouti. Réessayez dans un moment.", "erreur");
+        }
+        rendre();
+      }, function () {
+        dire("Impossible de joindre le serveur. Vérifiez votre connexion et réessayez.", "erreur");
+        rendre();
+      });
     });
   });
 
