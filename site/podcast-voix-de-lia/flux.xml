@@ -8,7 +8,7 @@
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Sun, 11 Oct 2026 19:23:48 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 11 Oct 2026 19:28:20 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -26,6 +26,66 @@
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Bret Taylor : de Google Maps à la gouvernance d'OpenAI</title>
+      <itunes:title>Bret Taylor : de Google Maps à la gouvernance d'OpenAI</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/bret-taylor/</link>
+      <guid isPermaLink="false">voix-de-lia-bret-taylor</guid>
+      <pubDate>Sun, 11 Oct 2026 19:28:20 GMT</pubDate>
+      <description>Co-créateur de Google Maps, pionnier du bouton Like, puis, en octobre 2026, patron de Sierra et président du conseil de l'OpenAI Foundation : le parcours étonnant de Bret Taylor, raconté par Ada et Alan.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/bret-taylor/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
+      <content:encoded><![CDATA[<p>Co-créateur de Google Maps, pionnier du bouton Like, puis, en octobre 2026, patron de Sierra et président du conseil de l&#39;OpenAI Foundation : le parcours étonnant de Bret Taylor, raconté par Ada et Alan.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/bret-taylor/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/bret-taylor.mp3?v=0fe7f9e9" length="13177087" type="audio/mpeg"/>
+      <itunes:duration>549</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/bret-taylor/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Anton Osika, le physicien qui veut rendre le code facultatif</title>
+      <itunes:title>Anton Osika, le physicien qui veut rendre le code facultatif</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/anton-osika/</link>
+      <guid isPermaLink="false">voix-de-lia-anton-osika</guid>
+      <pubDate>Sun, 11 Oct 2026 19:26:13 GMT</pubDate>
+      <description>Ancien du CERN, enfant d'une famille qui touchait l'aide sociale, Anton Osika a fondé Lovable, la start-up suédoise qui transforme une simple description en logiciel.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/anton-osika/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
+      <content:encoded><![CDATA[<p>Ancien du CERN, enfant d&#39;une famille qui touchait l&#39;aide sociale, Anton Osika a fondé Lovable, la start-up suédoise qui transforme une simple description en logiciel.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/anton-osika/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/anton-osika.mp3?v=963b562f" length="12916155" type="audio/mpeg"/>
+      <itunes:duration>538</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/anton-osika/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Scott Wu : du champion de maths à Devin, l'agent de programmation de Cognition</title>
+      <itunes:title>Scott Wu : du champion de maths à Devin, l'agent de programmation de Cognition</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/scott-wu/</link>
+      <guid isPermaLink="false">voix-de-lia-scott-wu</guid>
+      <pubDate>Sun, 11 Oct 2026 19:24:23 GMT</pubDate>
+      <description>Champion national de maths à quatorze ans, score parfait aux Olympiades d'informatique, puis cofondateur de Cognition, qui développe l'agent de programmation Devin : le portrait de Scott Wu, compétiteur dans l'âme.
+
+Épisode enregistré le 11 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/scott-wu/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</description>
+      <content:encoded><![CDATA[<p>Champion national de maths à quatorze ans, score parfait aux Olympiades d&#39;informatique, puis cofondateur de Cognition, qui développe l&#39;agent de programmation Devin : le portrait de Scott Wu, compétiteur dans l&#39;âme.</p><p>Épisode enregistré le 11 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/scott-wu/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/scott-wu.mp3?v=c21649b4" length="12861180" type="audio/mpeg"/>
+      <itunes:duration>536</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/scott-wu/transcription.html" type="text/html" language="fr"/>
+    </item>
     <item>
       <title>Mati Staniszewski : le Polonais qui a donné une voix à l'IA</title>
       <itunes:title>Mati Staniszewski : le Polonais qui a donné une voix à l'IA</itunes:title>
