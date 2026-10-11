@@ -1,0 +1,34 @@
+# Abonnement par e-mail des Voix de l'IA (3h33.com/podcast-voix-de-lia/).
+# Même modèle que services/contact. La clé Resend et le secret des liens sont en .env,
+# jamais dans le dépôt. Sur le VPS : /opt/3h33-abonnements, docker compose up -d --build
+services:
+  abonnements:
+    build: .
+    container_name: h3h33_abonnements
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - donnees:/donnees
+    labels:
+      - "traefik.enable=true"
+      # Adresse de test, comme le formulaire de contact.
+      - "traefik.http.routers.h3h33abo.rule=Host(`nouveau.3h33.com`) && PathPrefix(`/api/abonnement`)"
+      - "traefik.http.routers.h3h33abo.entrypoints=websecure"
+      - "traefik.http.routers.h3h33abo.tls=true"
+      - "traefik.http.routers.h3h33abo.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.h3h33abo.priority=100"
+      - "traefik.http.services.h3h33abo.loadbalancer.server.port=3030"
+      # 3h33.com (en service depuis le 03/10/2026). Priorité 100 : passe avant le site statique.
+      - "traefik.http.routers.h3h33abo-prod.rule=Host(`3h33.com`) && PathPrefix(`/api/abonnement`)"
+      - "traefik.http.routers.h3h33abo-prod.entrypoints=websecure"
+      - "traefik.http.routers.h3h33abo-prod.tls=true"
+      - "traefik.http.routers.h3h33abo-prod.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.h3h33abo-prod.priority=100"
+      - "traefik.http.routers.h3h33abo-prod.service=h3h33abo"
+    healthcheck:
+      test: ["CMD-SHELL","wget -qO- http://127.0.0.1:3030/sante >/dev/null || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+volumes:
+  donnees:
