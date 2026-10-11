@@ -46,6 +46,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/dario-amodei-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/dario-amodei/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/dario-amodei/chapitres.json?v=425fd452" type="application/json+chapters"/>
     </item>
     <item>
       <title>Zhilin Yang : le batteur de rock derrière Kimi et Moonshot AI</title>
@@ -67,6 +68,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/zhilin-yang-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/zhilin-yang/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/zhilin-yang/chapitres.json?v=fbe99806" type="application/json+chapters"/>
     </item>
     <item>
       <title>Aravind Srinivas : du centième de point à Perplexity</title>
@@ -88,6 +90,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/aravind-srinivas-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/aravind-srinivas/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/aravind-srinivas/chapitres.json?v=909291d1" type="application/json+chapters"/>
     </item>
     <item>
       <title>Tim Cook : l'homme des stocks qui a succédé à Steve Jobs</title>
@@ -109,6 +112,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/tim-cook-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/tim-cook/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/tim-cook/chapitres.json?v=5296c29e" type="application/json+chapters"/>
     </item>
     <item>
       <title>David Holz : de l'argile virtuelle à Midjourney</title>
@@ -130,6 +134,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/david-holz-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/david-holz/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/david-holz/chapitres.json?v=38bcb964" type="application/json+chapters"/>
     </item>
     <item>
       <title>Demis Hassabis : de l'échiquier au prix Nobel</title>
@@ -151,6 +156,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/demis-hassabis-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/demis-hassabis/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/demis-hassabis/chapitres.json?v=2833ed4a" type="application/json+chapters"/>
     </item>
     <item>
       <title>Sam Altman : du scorbut à ChatGPT, le patron renvoyé puis rappelé</title>
@@ -172,6 +178,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/sam-altman-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/sam-altman/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/sam-altman/chapitres.json?v=bce9eee0" type="application/json+chapters"/>
     </item>
     <item>
       <title>Sundar Pichai : du téléphone attendu cinq ans à la tête de Google</title>
@@ -193,6 +200,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/sundar-pichai-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/sundar-pichai/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/sundar-pichai/chapitres.json?v=875d1311" type="application/json+chapters"/>
     </item>
     <item>
       <title>Michael Truell : remplacer le code par quelque chose de mieux</title>
@@ -214,6 +222,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/michael-truell-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/michael-truell/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/michael-truell/chapitres.json?v=126de1c2" type="application/json+chapters"/>
     </item>
     <item>
       <title>Clément Delangue : de La Bassée à l'émoji qui fait un câlin à l'IA</title>
@@ -235,6 +244,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/clement-delangue-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/clement-delangue/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/clement-delangue/chapitres.json?v=f5dbb60d" type="application/json+chapters"/>
     </item>
     <item>
       <title>Bill Gates : du jeu de morpion à l'alarme sur l'IA</title>
@@ -256,6 +266,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/bill-gates-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/bill-gates/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/bill-gates/chapitres.json?v=5bd57bd4" type="application/json+chapters"/>
     </item>
     <item>
       <title>Pony Ma : du télescope d'enfant à l'empire WeChat</title>
@@ -277,6 +288,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/pony-ma-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/pony-ma/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/pony-ma/chapitres.json?v=9919e0f9" type="application/json+chapters"/>
     </item>
     <item>
       <title>Wang Xingxing : du robot à 200 yuans à la Bourse de Shanghai</title>
@@ -298,6 +310,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/wang-xingxing-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/wang-xingxing/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/wang-xingxing/chapitres.json?v=e16c61f2" type="application/json+chapters"/>
     </item>
     <item>
       <title>Yan Junjie : le fondateur de MiniMax qui a renoncé à son salaire</title>
@@ -319,6 +332,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/yan-junjie-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/yan-junjie/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/yan-junjie/chapitres.json?v=569eb785" type="application/json+chapters"/>
     </item>
     <item>
       <title>Kai-Fu Lee : l'enfant qui reculait les horloges</title>
@@ -340,6 +354,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/kai-fu-lee-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/kai-fu-lee/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/kai-fu-lee/chapitres.json?v=92a8e32b" type="application/json+chapters"/>
     </item>
     <item>
       <title>Zhang Yiming : l'ingénieur qui a fait chercher l'algorithme à sa place</title>
@@ -361,6 +376,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/zhang-yiming-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/zhang-yiming/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/zhang-yiming/chapitres.json?v=f6653fd1" type="application/json+chapters"/>
     </item>
     <item>
       <title>Robin Li : de la troupe d'opéra à Baidu, le pari de l'IA</title>
@@ -382,6 +398,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/robin-li-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/robin-li/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/robin-li/chapitres.json?v=5a866e54" type="application/json+chapters"/>
     </item>
     <item>
       <title>Xiao Hong : l'agent d'IA pris entre Pékin et Meta</title>
@@ -403,6 +420,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/xiao-hong-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/xiao-hong/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/xiao-hong/chapitres.json?v=8a91bf71" type="application/json+chapters"/>
     </item>
     <item>
       <title>Bret Taylor : de Google Maps à la gouvernance d'OpenAI</title>
@@ -424,6 +442,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/bret-taylor-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/bret-taylor/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/bret-taylor/chapitres.json?v=186420b5" type="application/json+chapters"/>
     </item>
     <item>
       <title>Harrison Chase : du sport dans Excel à la licorne LangChain</title>
@@ -445,6 +464,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/harrison-chase-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/harrison-chase/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/harrison-chase/chapitres.json?v=08103003" type="application/json+chapters"/>
     </item>
     <item>
       <title>Anton Osika, le physicien qui veut rendre le code facultatif</title>
@@ -466,6 +486,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/anton-osika-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/anton-osika/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/anton-osika/chapitres.json?v=b3400fdc" type="application/json+chapters"/>
     </item>
     <item>
       <title>Amjad Masad : de l'IBM PC d'Amman à Replit, valorisée 9 milliards</title>
@@ -487,6 +508,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/amjad-masad-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/amjad-masad/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/amjad-masad/chapitres.json?v=1d24d789" type="application/json+chapters"/>
     </item>
     <item>
       <title>Scott Wu : du champion de maths à Devin, l'agent de programmation de Cognition</title>
@@ -508,6 +530,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/scott-wu-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/scott-wu/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/scott-wu/chapitres.json?v=82d3207b" type="application/json+chapters"/>
     </item>
     <item>
       <title>Larry Ellison : le fondateur d'Oracle qui a tout misé sur l'IA</title>
@@ -529,6 +552,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/larry-ellison-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/larry-ellison/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/larry-ellison/chapitres.json?v=f5fb55f4" type="application/json+chapters"/>
     </item>
     <item>
       <title>Masayoshi Son : le parieur qui se dit né pour la superintelligence</title>
@@ -550,6 +574,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/masayoshi-son-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/masayoshi-son/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/masayoshi-son/chapitres.json?v=32eecf4d" type="application/json+chapters"/>
     </item>
     <item>
       <title>Sergey Brin : de Moscou à Gemini, le cofondateur qui revient</title>
@@ -571,6 +596,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/sergey-brin-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/sergey-brin/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/sergey-brin/chapitres.json?v=dd4e54ea" type="application/json+chapters"/>
     </item>
     <item>
       <title>Larry Page : le rêve d'une nuit qui a classé tout le Web</title>
@@ -592,6 +618,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/larry-page-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/larry-page/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/larry-page/chapitres.json?v=5d4a8664" type="application/json+chapters"/>
     </item>
     <item>
       <title>Jeff Bezos : du ranch texan au pari de l'ingénieur artificiel</title>
@@ -613,6 +640,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/jeff-bezos-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/jeff-bezos/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/jeff-bezos/chapitres.json?v=f359812e" type="application/json+chapters"/>
     </item>
     <item>
       <title>Mustafa Suleyman : des milk-shakes à la superintelligence</title>
@@ -634,6 +662,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/mustafa-suleyman-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/mustafa-suleyman/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/mustafa-suleyman/chapitres.json?v=089c126c" type="application/json+chapters"/>
     </item>
     <item>
       <title>Liang Wenfeng : le discret de DeepSeek qui a secoué la tech</title>
@@ -655,6 +684,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/liang-wenfeng-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/liang-wenfeng/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/liang-wenfeng/chapitres.json?v=f29aaa17" type="application/json+chapters"/>
     </item>
     <item>
       <title>Ilya Sutskever, l'homme le plus secret de l'IA</title>
@@ -676,6 +706,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/ilya-sutskever-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/ilya-sutskever/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/ilya-sutskever/chapitres.json?v=61d26c70" type="application/json+chapters"/>
     </item>
     <item>
       <title>Geoffrey Hinton : le parrain de l'IA qui ne s'assoit plus</title>
@@ -697,6 +728,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/geoffrey-hinton-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/geoffrey-hinton/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/geoffrey-hinton/chapitres.json?v=4758bce8" type="application/json+chapters"/>
     </item>
     <item>
       <title>Andrej Karpathy : du Rubik's Cube au vibe coding</title>
@@ -718,6 +750,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/andrej-karpathy-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/andrej-karpathy/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/andrej-karpathy/chapitres.json?v=e110a7ff" type="application/json+chapters"/>
     </item>
     <item>
       <title>Mati Staniszewski : le Polonais qui a donné une voix à l'IA</title>
@@ -739,6 +772,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/mati-staniszewski-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/mati-staniszewski/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/mati-staniszewski/chapitres.json?v=fb44fc8f" type="application/json+chapters"/>
     </item>
     <item>
       <title>Mark Zuckerberg : du réseau maison à la superintelligence</title>
@@ -760,6 +794,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/mark-zuckerberg-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/mark-zuckerberg/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/mark-zuckerberg/chapitres.json?v=c31268e9" type="application/json+chapters"/>
     </item>
     <item>
       <title>Lisa Su : recalée à Juilliard, reine des puces au MIT et chez AMD</title>
@@ -781,6 +816,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/lisa-su-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/lisa-su/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/lisa-su/chapitres.json?v=43da7578" type="application/json+chapters"/>
     </item>
     <item>
       <title>Fei-Fei Li : du pressing familial aux machines qui voient</title>
@@ -802,6 +838,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/fei-fei-li-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/fei-fei-li/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/fei-fei-li/chapitres.json?v=8731e8d9" type="application/json+chapters"/>
     </item>
     <item>
       <title>Elon Musk, l'IA qui fait peur et celle qu'il construit</title>
@@ -823,6 +860,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/elon-musk-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/elon-musk/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/elon-musk/chapitres.json?v=dc625498" type="application/json+chapters"/>
     </item>
     <item>
       <title>Daniela Amodei : la littéraire qui préside Anthropic</title>
@@ -844,6 +882,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/daniela-amodei-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/daniela-amodei/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/daniela-amodei/chapitres.json?v=cad8dab4" type="application/json+chapters"/>
     </item>
     <item>
       <title>Arthur Mensch : refusé une première fois au CNRS, devenu patron de Mistral AI</title>
@@ -865,6 +904,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/arthur-mensch-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/arthur-mensch/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/arthur-mensch/chapitres.json?v=03e13858" type="application/json+chapters"/>
     </item>
     <item>
       <title>Mira Murati : de Vlorë à une IA que chacun peut façonner</title>
@@ -886,6 +926,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/mira-murati-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/mira-murati/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/mira-murati/chapitres.json?v=b6fb852c" type="application/json+chapters"/>
     </item>
     <item>
       <title>Yann LeCun : de HAL 9000 aux modèles du monde</title>
@@ -907,6 +948,7 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/yann-lecun-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/yann-lecun/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/yann-lecun/chapitres.json?v=bb8f7334" type="application/json+chapters"/>
     </item>
   </channel>
 </rss>

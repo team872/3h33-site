@@ -193,27 +193,30 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 .lia-carte::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 70% at 0% 0%,#c4a26522,transparent 60%),radial-gradient(ellipse 50% 60% at 100% 100%,#c99ab814,transparent 60%)}
 @media(min-width:960px){.lia-carte{margin:0 0 0 auto;padding:1.25rem 1.35rem 1.15rem}}
 .lia-bouton{position:relative;display:flex;align-items:center;gap:.85rem;width:100%;padding:0;background:none;border:0;cursor:pointer;text-align:left;color:var(--text);-webkit-tap-highlight-color:transparent}
-.lia-avatar{
-  position:relative;width:50px;height:50px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;
-  background:radial-gradient(circle at 32% 28%,#f6e2b5 0%,#c4a265 46%,#7d5f2e 100%);color:#1c140a;
-  box-shadow:0 0 0 3px #0c0c0f,0 0 0 4px #c4a26599,0 0 30px #c4a26555;transition:transform .4s var(--ease),box-shadow .4s;
+/* Le bouton de lecture de Lia : grand rond doré (comme ceux des portraits), halo qui pulse doucement tant qu'on ne
+   l'a pas encore écoutée (demande d'Alexandre, 12/10/2026 : « on ne voit pas assez le bouton ») ; toute la ligne
+   est cliquable (c'est un seul bouton). Pendant l'écoute : pause, et l'onde des boutons de lecture. */
+.lia-rond{
+  position:relative;width:64px;height:64px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+  background:var(--accent);color:var(--bg);box-shadow:0 0 0 0 #c4a26500,0 8px 24px #0008;
+  transition:transform .3s var(--ease),box-shadow .3s,background .3s;
 }
-.lia-avatar::before,.lia-avatar::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px solid var(--accent);opacity:0}
-.lia-carte:not(.joue) .lia-avatar::before{animation:appel 3.2s 1.6s var(--ease) infinite}
-.lia-carte.joue .lia-avatar::before{animation:onde 1.8s var(--ease) infinite}
-.lia-carte.joue .lia-avatar::after{animation:onde 1.8s .9s var(--ease) infinite}
-.lia-bouton:hover .lia-avatar{transform:scale(1.06);box-shadow:0 0 0 3px #0c0c0f,0 0 0 4px var(--accent),0 0 40px #c4a26588}
-.lia-initiales{font-family:var(--ff-display);font-style:italic;font-weight:700;font-size:1.25rem;letter-spacing:-.02em}
-.lia-jouer{position:absolute;right:-5px;bottom:-5px;width:24px;height:24px;border-radius:50%;background:var(--bg);border:1px solid var(--accent);color:var(--accent);display:flex;align-items:center;justify-content:center}
-.lia-jouer svg{width:10px;height:10px;fill:currentColor}
-.lia-jouer .i-pause{display:none}
-.lia-bouton.joue .lia-jouer .i-lecture{display:none}
-.lia-bouton.joue .lia-jouer .i-pause{display:block}
-.lia-bouton:not(.joue) .lia-jouer .i-lecture{margin-left:2px}
+.lia-rond svg{width:24px;height:24px;fill:currentColor}
+.lia-rond .i-pause{display:none}
+.lia-bouton.joue .lia-rond .i-lecture{display:none}
+.lia-bouton.joue .lia-rond .i-pause{display:block}
+.lia-bouton:not(.joue) .lia-rond .i-lecture{margin-left:4px}
+.lia-rond::before,.lia-rond::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--accent);opacity:0;pointer-events:none}
+.lia-carte:not(.ecoutee) .lia-rond{animation:lia-halo 2.6s ease-in-out infinite}
+.lia-carte:not(.ecoutee) .lia-rond::before{animation:appel 2.6s var(--ease) infinite}
+.lia-carte.joue .lia-rond::before{animation:onde 1.8s var(--ease) infinite}
+.lia-carte.joue .lia-rond::after{animation:onde 1.8s .9s var(--ease) infinite}
+.lia-bouton:hover .lia-rond{transform:scale(1.06);background:var(--accent-clair);box-shadow:0 0 30px var(--accent-glow),0 8px 24px #0008}
+.lia-bouton:active .lia-rond{transform:scale(.95)}
+@keyframes lia-halo{0%,100%{box-shadow:0 0 0 0 #c4a26500,0 0 18px #c4a26533,0 8px 24px #0008}50%{box-shadow:0 0 0 6px #c4a26524,0 0 34px #c4a26566,0 8px 24px #0008}}
 .lia-textes{min-width:0;flex:1;line-height:1.25}
 .lia-titre{font-family:var(--ff-display);font-weight:700;font-size:1.06rem;color:var(--text);transition:color .3s}
 .lia-bouton:hover .lia-titre{color:var(--accent-clair)}
-.lia-triangle{color:var(--accent);font-size:.75em;margin-right:.1rem;vertical-align:.08em}
 .lia-temps{font-family:var(--ff-mono);font-size:.68rem;letter-spacing:.08em;color:var(--accent);white-space:nowrap;font-variant-numeric:tabular-nums}
 .lia-piste{position:relative;display:block;height:2px;margin:.8rem 0 0;background:#ffffff14;overflow:hidden}
 .lia-piste i{position:absolute;inset:0;transform-origin:left;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--accent),#f3dcaa);transition:transform .25s linear}
@@ -254,8 +257,8 @@ html:not(.anime) .lia-bouton,html:not(.anime) .lia-piste{display:none}
   .hero-label img,.hero-label .hl-serie{display:none}
   .hero h1{margin-top:.2rem;font-size:clamp(2rem,8.6vw,3.4rem)}
   .lia-carte{padding:.7rem .85rem .7rem}
-  .lia-avatar{width:44px;height:44px}
-  .lia-initiales{font-size:1.1rem}
+  .lia-rond{width:56px;height:56px}
+  .lia-rond svg{width:21px;height:21px}
   .lia-titre{font-size:1rem}
   .lia-piste{margin-top:.55rem}
   .lia-texte{margin-top:.5rem;column-gap:.6rem}
@@ -548,7 +551,6 @@ a.platform-badge:hover{border-color:var(--accent);color:var(--accent)}
 .remonter:hover svg{transform:translateY(-2px)}
 body.lecteur-ouvert .remonter{bottom:calc(150px + var(--safe-bottom))}
 body.lecteur-ouvert:not(.mode-audio) .remonter{bottom:calc(250px + var(--safe-bottom))}
-.mini.visible~.remonter{bottom:calc(4.6rem + var(--safe-bottom))}
 
 /* pied de page */
 footer{border-top:1px solid var(--border);padding:3rem var(--gouttiere);text-align:center;margin-top:3rem;padding-bottom:calc(3rem + var(--safe-bottom))}
@@ -686,27 +688,55 @@ html:not(.anime) .lecteur .onde,html:not(.anime) .lecteur-outils,html:not(.anime
 .lecteur.bientot strong{color:var(--accent);font-family:var(--ff-mono);font-size:.68rem;letter-spacing:.25em;text-transform:uppercase;font-weight:500;display:block;margin-bottom:.4rem}
 .lecteur.bientot .onde i{animation:barre-lente 3s ease-in-out infinite alternate;animation-delay:calc(var(--k) * -110ms)}
 
-/* mini-lecteur qui suit la lecture quand on descend dans la page */
+/* mini-lecteur fixe sous la barre du haut : il apparaît dès que le grand lecteur est passé au-dessus de l'écran et
+   reste là pendant toute la lecture de la page (site.js) ; --haut-barre est mesuré par site.js */
 .mini{
-  position:fixed;left:0;right:0;bottom:0;z-index:950;background:var(--player-bg);border-top:1px solid var(--border);
-  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding:.55rem var(--gouttiere) calc(.55rem + var(--safe-bottom));
-  display:flex;align-items:center;gap:.8rem;transform:translateY(120%);transition:transform .5s var(--ease)
+  position:fixed;left:0;right:0;top:var(--haut-barre,3.4rem);z-index:890;
+  background:#0b0b0eeb;backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);
+  border-bottom:1px solid var(--border);box-shadow:0 18px 30px -22px #000;
+  opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-10px);
+  transition:transform .45s var(--ease),opacity .3s,visibility 0s .45s;
 }
-.mini.visible{transform:none}
-.mini .bouton-lecture{width:42px;height:42px}
-.mini .bouton-lecture svg{width:16px;height:16px}
-.mini .mini-titre{min-width:0;flex:1}
-.mini .mini-titre strong{display:block;font-family:var(--ff-display);font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.mini .mini-titre span{font-family:var(--ff-mono);font-size:.6rem;color:var(--text-dim);font-variant-numeric:tabular-nums}
-.mini .mini-barre{position:absolute;top:0;left:0;height:2px;background:var(--accent);width:var(--progression,0%);transition:width .25s linear}
-.mini a{font-family:var(--ff-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;white-space:nowrap}
+.mini.visible{opacity:1;visibility:visible;pointer-events:auto;transform:none;transition:transform .45s var(--ease),opacity .3s,visibility 0s}
+.mini-dedans{max-width:var(--large);margin:0 auto;padding:.4rem var(--gouttiere);display:flex;align-items:center;gap:.4rem}
+.mini .bouton-lecture{width:40px;height:40px}
+.mini .bouton-lecture svg{width:15px;height:15px}
+.mini .bouton-lecture:not(.joue) .i-lecture{margin-left:2px}
+.mini .bouton-lecture.joue::after{inset:-3px}
+.mini-saut{flex-shrink:0;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:0;border-radius:50%;background:none;color:var(--text-dim);cursor:pointer;transition:color .2s,background .2s}
+.mini-saut:hover{color:var(--accent);background:#ffffff0d}
+.mini-saut svg{width:20px;height:20px}
+.mini-centre{flex:1;min-width:0;display:flex;flex-direction:column;gap:.15rem;padding:0 .35rem}
+.mini-ligne{display:flex;align-items:baseline;justify-content:space-between;gap:.7rem;min-width:0}
+.mini-aller{min-width:0;display:flex;align-items:baseline;gap:.5rem;padding:0;border:0;background:none;color:var(--text);cursor:pointer;text-align:left}
+.mini-n{flex-shrink:0;font-family:var(--ff-mono);font-size:.6rem;letter-spacing:.12em;color:var(--accent)}
+.mini-n:empty{display:none}
+.mini-chapitre{min-width:0;font-family:var(--ff-display);font-size:.92rem;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color .25s}
+.mini-aller:hover .mini-chapitre{color:var(--accent-clair)}
+.mini-temps{flex-shrink:0;font-family:var(--ff-mono);font-size:.62rem;color:var(--text-dim);font-variant-numeric:tabular-nums;white-space:nowrap}
+.mini-piste{position:relative;height:16px;display:flex;align-items:center;cursor:pointer;touch-action:none;-webkit-tap-highlight-color:transparent;user-select:none}
+.mini-fond{position:relative;display:block;width:100%;height:3px;border-radius:3px;background:#ffffff1f;transition:height .2s}
+.mini-piste:hover .mini-fond{height:5px}
+.mini-jouee{position:absolute;left:0;top:0;bottom:0;width:var(--progression,0%);border-radius:3px;background:linear-gradient(90deg,var(--accent),#f3dcaa);transition:width .25s linear}
+.mini-jouee::after{content:'';position:absolute;right:-5px;top:50%;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:var(--text);box-shadow:0 0 0 3px #c4a26540;opacity:0;transition:opacity .2s}
+.mini-piste:hover .mini-jouee::after,.mini-piste:focus-visible .mini-jouee::after,html.en-ecoute .mini-jouee::after{opacity:1}
+.mini-piste:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* repères : une fine coupure au début de chaque partie */
+.mini-fond b{position:absolute;top:-1px;bottom:-1px;width:2px;margin-left:-1px;background:#0b0b0e}
+@media(max-width:520px){
+  .mini-dedans{gap:.15rem;padding-left:.75rem;padding-right:.6rem}
+  .mini-sep,.mini-total{display:none}
+  .mini-chapitre{font-size:.86rem}
+  .mini-saut{width:34px;height:34px}
+}
+@media(min-width:980px){html.mini-ouvert .chapitres{top:calc(var(--haut-barre,3.4rem) + var(--haut-mini,3.3rem) + 1.25rem)}}
 
 /* corps de la page portrait : chapitres à côté de la conversation */
 .portrait-corps{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;padding-top:2rem}
 .portrait-corps>*{min-width:0}
 @media(min-width:980px){.portrait-corps{grid-template-columns:260px minmax(0,1fr);gap:3.5rem;align-items:start}}
 .chapitres{position:relative}
-@media(min-width:980px){.chapitres{position:sticky;top:5.5rem}}
+@media(min-width:980px){.chapitres{position:sticky;top:5.5rem;transition:top .45s var(--ease)}}
 .chapitres h2{font-family:var(--ff-mono);font-size:.65rem;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;font-weight:500}
 .chapitres ol{list-style:none;counter-reset:ch;display:flex;flex-direction:column;gap:.15rem}
 @media(max-width:979px){
@@ -726,6 +756,19 @@ html:not(.anime) .lecteur .onde,html:not(.anime) .lecteur-outils,html:not(.anime
 .chapitres a.courant::before{background:var(--accent)}
 .chapitres a.courant .n{color:var(--accent)}
 .chapitres .note{font-size:.72rem;color:var(--text-faible);margin-top:1rem;line-height:1.5;font-weight:300}
+/* instants des chapitres (épisodes minutés), et la partie qu'on entend pendant l'écoute */
+.chapitres a .titre-ch{flex:1;min-width:0}
+.chapitres a .t{flex-shrink:0;margin-left:auto;padding-left:.4rem;font-family:var(--ff-mono);font-size:.58rem;color:var(--text-faible);font-variant-numeric:tabular-nums;transition:color .3s;display:inline-flex;align-items:center;gap:.35rem}
+.chapitres a[data-debut]:hover .t{color:var(--accent)}
+.chapitres a.ecoute{color:var(--text)}
+.chapitres a.ecoute .t,.chapitres a.ecoute .n{color:var(--accent)}
+.chapitres a.ecoute::before{background:var(--accent)}
+html.en-ecoute .chapitres a.ecoute .t::before{
+  content:'';width:9px;height:9px;flex-shrink:0;
+  background:linear-gradient(var(--accent),var(--accent)) 0 100%/2px 45% no-repeat,linear-gradient(var(--accent),var(--accent)) 3.5px 100%/2px 100% no-repeat,linear-gradient(var(--accent),var(--accent)) 7px 100%/2px 65% no-repeat;
+  animation:egaliseur .9s ease-in-out infinite alternate
+}
+@keyframes egaliseur{0%{background-size:2px 45%,2px 100%,2px 65%}50%{background-size:2px 100%,2px 40%,2px 85%}100%{background-size:2px 60%,2px 75%,2px 30%}}
 @media(max-width:979px){.chapitres .note{display:none}}
 
 /* la conversation */
@@ -756,6 +799,27 @@ html:not(.anime) .lecteur .onde,html:not(.anime) .lecteur-outils,html:not(.anime
 .replique.lia .avatar{background:radial-gradient(circle at 30% 30%,#c99ab855,transparent 70%)}
 .replique.lia .qui::after{content:' · l’IA-nimatrice';letter-spacing:.12em;opacity:.7}
 .replique.generique .bulle{color:var(--text-dim);font-style:italic}
+/* répliques cliquables (épisodes minutés) : un clic lance l'écoute au début de la réplique ; celle qu'on entend
+   s'éclaire (couleur, liseré, halo), sans rien changer à la mise en page : la page ne saute jamais */
+.ecouter-ici{
+  display:inline-flex;align-items:center;gap:.3rem;margin-left:.55rem;padding:.12rem .45rem .12rem .38rem;vertical-align:1px;
+  border:1px solid transparent;border-radius:999px;background:none;color:var(--text-faible);cursor:pointer;
+  font-family:var(--ff-mono);font-size:.58rem;letter-spacing:.06em;font-variant-numeric:tabular-nums;transition:color .25s,border-color .25s,background .25s
+}
+.ecouter-ici svg{width:7px;height:7px;fill:currentColor}
+.ecouter-ici:hover,.ecouter-ici:focus-visible{color:currentColor;border-color:currentColor}
+.replique .ecouter-ici:hover,.replique .ecouter-ici:focus-visible{color:inherit}
+.chapitre-titre .ecouter-ici{order:1;margin-left:0;color:var(--text-faible);letter-spacing:.06em}
+.chapitre-titre .ecouter-ici:hover{color:var(--accent);border-color:#c4a26566}
+.conversation.minutee .replique .bulle{cursor:pointer;transition:color .35s,border-color .35s,box-shadow .35s}
+.conversation.minutee .replique:hover .bulle{box-shadow:0 0 0 1px #ffffff12}
+.conversation.minutee .replique:hover .ecouter-ici{color:inherit}
+.replique.ada{--voix:var(--accent)}
+.replique.alan{--voix:var(--accent2-clair)}
+.replique.lia{--voix:var(--lia)}
+.replique.en-cours .bulle{color:#fffaf0;border-color:var(--voix,var(--accent));box-shadow:0 0 0 1px var(--voix,var(--accent)),0 0 34px -10px var(--voix,var(--accent))}
+.replique.en-cours .ecouter-ici{color:inherit;border-color:currentColor}
+.replique.en-cours .avatar{box-shadow:0 0 0 3px var(--bg),0 0 0 4px var(--voix,var(--accent)),0 0 18px var(--voix,var(--accent))}
 html.anime .replique.reveal{transform:translateY(16px);transition-duration:.6s}
 html.anime .replique.ada.reveal{transform:translateX(-18px)}
 html.anime .replique.alan.reveal{transform:translateX(18px)}
@@ -855,7 +919,7 @@ html.anime .reveal.visible{opacity:1;transform:none}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-delay:0s!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   html{scroll-behavior:auto}
   .hero-label,.hero h1,.hero-compte,.hero-mention,.hero-cta,.lia-carte,.portrait-visuel,.portrait-texte>*{opacity:1!important;animation:none!important}
-  .mur-col,.tuile::after,.lia-avatar::before,.lia-avatar::after,.hero::after{animation:none!important}
+  .mur-col,.tuile::after,.lia-rond,.lia-rond::before,.lia-rond::after,.hero::after{animation:none!important}
   html.anime .reveal{opacity:1!important;transform:none!important}
   .lecteur.joue .onde i,.lecteur.bientot .onde i{animation:none!important}
   .hero h1 .accent{animation:none!important}

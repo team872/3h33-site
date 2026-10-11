@@ -191,14 +191,47 @@
         liaAudio.addEventListener(e, function () {
           var joue = !liaAudio.paused && !liaAudio.ended;
           lia.classList.toggle("joue", joue);
-          if (joue) lia.classList.add("ecoute");
+          if (joue) lia.classList.add("ecoute", "ecoutee");
           if (liaAudio.ended) { lia.classList.remove("ecoute"); liaAudio.currentTime = 0; majLia(); }
         });
       });
     }
   }
 
-  /* ------------------------------------------------ page portrait : le lecteur */
+  /* ------------------------------------------------ chapitres : celui qu'on lit est mis en avant (pendant l'écoute,
+     celui qu'on entend : voir le lecteur ci-dessous) */
+  var liensCh = $$(".chapitres a[href^='#']");
+  var parId = {};
+  liensCh.forEach(function (a) { parId[a.getAttribute("href").slice(1)] = a; });
+  var courantCh = null;
+  var suiviParAudio = function () { return false; };
+  var marquerCh = function (id) {
+    if (courantCh === id || !parId[id]) return;
+    courantCh = id;
+    liensCh.forEach(function (a) { a.classList.remove("courant"); a.removeAttribute("aria-current"); });
+    parId[id].classList.add("courant");
+    parId[id].setAttribute("aria-current", "true");
+    // sur téléphone, la liste défile de côté : on amène le chapitre en vue, sans bouger la page
+    var liste = parId[id].closest("ol");
+    if (liste && liste.scrollWidth > liste.clientWidth) {
+      var li = parId[id].parentNode;
+      liste.scrollTo({ left: li.offsetLeft - 20, behavior: calme ? "auto" : "smooth" });
+    }
+  };
+  if (liensCh.length && "IntersectionObserver" in window) {
+    var obsCh = new IntersectionObserver(function (entrees) {
+      if (suiviParAudio()) return;
+      entrees.forEach(function (e) { if (e.isIntersecting) marquerCh(e.target.id); });
+    }, { rootMargin: "-15% 0px -70% 0px" });
+    Object.keys(parId).forEach(function (id) {
+      var t = document.getElementById(id);
+      if (t) obsCh.observe(t);
+    });
+  }
+
+  /* ------------------------------------------------ page portrait : le lecteur, le mini-lecteur, les instants
+     Chapitres et répliques portent data-debut (secondes, minutage.json) : un clic lance l'écoute à cet instant ;
+     pendant l'écoute, la réplique entendue et son chapitre s'éclairent, sans jamais faire défiler la page. */
   var lecteur = $(".lecteur[data-audio]");
   if (lecteur) {
     var audio = $("audio", lecteur);
@@ -206,15 +239,12 @@
     var mini = $(".mini");
     var boutons = $$(".bouton-lecture", lecteur).concat(mini ? $$(".bouton-lecture", mini) : []);
     boutons.forEach(function (b) { relierBouton(audio, b, nom); });
-    relierCurseur(audio, null, $(".temps-courant", lecteur), $(".temps-total", lecteur), $(".onde", lecteur), mini ? [mini] : []);
-    if (mini) {
-      var tm = $(".mini-temps", mini);
-      audio.addEventListener("timeupdate", function () { tm.textContent = duree(audio.currentTime) + " / " + duree(audio.duration || Number(audio.dataset.duree)); });
-    }
+    relierCurseur(audio, null, $(".temps-courant", lecteur), $(".temps-total", lecteur), $(".onde", lecteur));
+    if (mini) relierCurseur(audio, null, $(".mini-courant", mini), $(".mini-total", mini), $(".mini-piste", mini));
     ["play", "pause", "ended"].forEach(function (e) {
       audio.addEventListener(e, function () { lecteur.classList.toggle("joue", !audio.paused && !audio.ended); });
     });
-    $$("[data-saut]", lecteur).forEach(function (b) {
+    $$("[data-saut]", lecteur).concat(mini ? $$("[data-saut]", mini) : []).forEach(function (b) {
       b.addEventListener("click", function () { audio.currentTime = Math.max(0, audio.currentTime + Number(b.getAttribute("data-saut"))); });
     });
     var vitesses = [1, 1.25, 1.5, 0.85], iv = 0;
@@ -225,41 +255,104 @@
       bv.textContent = String(vitesses[iv]).replace(".", ",") + "×";
       bv.setAttribute("aria-label", "Vitesse de lecture : " + bv.textContent);
     });
-    // le mini-lecteur apparaît quand le grand lecteur sort de l'écran et que l'écoute a commencé
-    if (mini && "IntersectionObserver" in window) {
-      var horsVue = false;
-      var majMini = function () { mini.classList.toggle("visible", horsVue && (audio.currentTime > 0 || !audio.paused)); };
-      new IntersectionObserver(function (e) { horsVue = !e[0].isIntersecting; majMini(); }, { threshold: 0 }).observe(lecteur);
-      audio.addEventListener("play", majMini);
-      audio.addEventListener("pause", majMini);
-    }
-  }
 
-  /* ------------------------------------------------ chapitres : celui qu'on lit est mis en avant */
-  var liensCh = $$(".chapitres a[href^='#']");
-  if (liensCh.length && "IntersectionObserver" in window) {
-    var parId = {};
-    liensCh.forEach(function (a) { parId[a.getAttribute("href").slice(1)] = a; });
-    var courant = null;
-    var marquer = function (id) {
-      if (courant === id || !parId[id]) return;
-      courant = id;
-      liensCh.forEach(function (a) { a.classList.remove("courant"); a.removeAttribute("aria-current"); });
-      parId[id].classList.add("courant");
-      parId[id].setAttribute("aria-current", "true");
-      var liste = parId[id].closest("ol");
-      if (liste && liste.scrollWidth > liste.clientWidth) {
-        var li = parId[id].parentNode;
-        liste.scrollTo({ left: li.offsetLeft - 20, behavior: calme ? "auto" : "smooth" });
-      }
+    // écouter à partir d'un instant (un souffle avant le premier mot)
+    var ecouterA = function (t) {
+      t = Math.max(0, t - 0.2);
+      var aller = function () { audio.currentTime = t; };
+      if (audio.readyState >= 1) aller(); else audio.addEventListener("loadedmetadata", aller, { once: true });
+      if (audio.paused) audio.play().catch(function () {});
     };
-    var obsCh = new IntersectionObserver(function (entrees) {
-      entrees.forEach(function (e) { if (e.isIntersecting) marquer(e.target.id); });
-    }, { rootMargin: "-15% 0px -70% 0px" });
-    Object.keys(parId).forEach(function (id) {
-      var t = document.getElementById(id);
-      if (t) obsCh.observe(t);
+    var commence = function () { return !audio.paused || (audio.currentTime > 0 && !audio.ended); };
+    suiviParAudio = function () { return !audio.paused && !audio.ended; };
+
+    var repliques = $$(".replique[data-debut]");
+    var debuts = repliques.map(function (r) { return Number(r.getAttribute("data-debut")); });
+    var titres = $$(".chapitre-titre[data-debut]");
+    var debutsCh = titres.map(function (h) { return Number(h.getAttribute("data-debut")); });
+    var dernierAvant = function (liste, t) { // plus grand k tel que liste[k] <= t (liste croissante), sinon -1
+      var a = 0, b = liste.length - 1, k = -1;
+      while (a <= b) { var m = (a + b) >> 1; if (liste[m] <= t) { k = m; a = m + 1; } else b = m - 1; }
+      return k;
+    };
+    var kRep = -2, kCh = -2;
+    var miniN = mini && $(".mini-n", mini), miniCh = mini && $(".mini-chapitre", mini);
+    var majInstants = function () {
+      var t = audio.currentTime;
+      var actif = commence();
+      var k = actif && repliques.length ? dernierAvant(debuts, t + 0.25) : -1;
+      if (k !== kRep) {
+        if (kRep >= 0 && repliques[kRep]) repliques[kRep].classList.remove("en-cours");
+        if (k >= 0) repliques[k].classList.add("en-cours");
+        kRep = k;
+      }
+      var c = actif && titres.length ? Math.max(0, dernierAvant(debutsCh, t + 0.35)) : -1;
+      if (c !== kCh) {
+        kCh = c;
+        var h = titres[c];
+        liensCh.forEach(function (a) { a.classList.toggle("ecoute", !!h && a.getAttribute("href") === "#" + h.id); });
+        if (mini) {
+          var titre = h ? h.getAttribute("data-titre") : nom;
+          var num = /^(\d+) · (.*)$/.exec(titre); // « 03 · Le début de sa vie » : le numéro à part, en or
+          miniN.textContent = num ? num[1] : "";
+          miniCh.textContent = num ? num[2] : titre;
+          mini.classList.toggle("avec-chapitre", !!h);
+        }
+      }
+      if (titres[c] && suiviParAudio()) marquerCh(titres[c].id);
+    };
+    ["timeupdate", "seeked", "play", "pause", "loadedmetadata"].forEach(function (e) { audio.addEventListener(e, majInstants); });
+    audio.addEventListener("ended", function () {
+      if (kRep >= 0 && repliques[kRep]) repliques[kRep].classList.remove("en-cours");
+      kRep = -1;
     });
+    var majEcoute = function () { doc.classList.toggle("en-ecoute", !audio.paused && !audio.ended); };
+    ["play", "pause", "ended"].forEach(function (e) { audio.addEventListener(e, majEcoute); });
+
+    // un clic sur un chapitre : l'écoute part à son instant, et la page descend à son texte (lien normal)
+    liensCh.forEach(function (a) {
+      if (!a.hasAttribute("data-debut")) return;
+      a.addEventListener("click", function () { ecouterA(Number(a.getAttribute("data-debut"))); });
+    });
+    // un clic sur une réplique (ou sur son instant, ou sur celui d'une partie) : l'écoute part au début de la réplique
+    var conv = $(".conversation.minutee");
+    if (conv) conv.addEventListener("click", function (ev) {
+      var ici = ev.target.closest(".ecouter-ici");
+      if (ici) { ev.preventDefault(); ecouterA(Number(ici.getAttribute("data-debut"))); return; }
+      var r = ev.target.closest(".replique[data-debut]");
+      if (!r || ev.target.closest("a")) return;
+      if (window.getSelection && String(window.getSelection())) return; // on sélectionne du texte : on ne lance rien
+      ecouterA(Number(r.getAttribute("data-debut")));
+    });
+
+    // le mini-lecteur, sous la barre du haut : visible dès que le grand lecteur est passé au-dessus de l'écran,
+    // et toute la suite de la page ; un clic sur le chapitre ramène au passage entendu
+    if (mini) {
+      var hautBarre = 56;
+      var mesurer = function () {
+        hautBarre = barre ? Math.round(barre.getBoundingClientRect().height) : 0;
+        doc.style.setProperty("--haut-barre", hautBarre + "px");
+        doc.style.setProperty("--haut-mini", Math.round(mini.getBoundingClientRect().height) + "px");
+      };
+      var visible = null;
+      var majMini = function () { // un seul getBoundingClientRect : assez léger pour chaque événement de défilement
+        var v = lecteur.getBoundingClientRect().bottom < hautBarre + 8;
+        if (v === visible) return;
+        visible = v;
+        mini.classList.toggle("visible", v);
+        doc.classList.toggle("mini-ouvert", v);
+        mini.setAttribute("aria-hidden", v ? "false" : "true");
+      };
+      mesurer();
+      majMini();
+      window.addEventListener("scroll", majMini, { passive: true });
+      window.addEventListener("resize", function () { mesurer(); majMini(); });
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(mesurer);
+      $(".mini-aller", mini).addEventListener("click", function () {
+        var cible = kRep >= 0 ? repliques[kRep] : (kCh >= 0 && titres[kCh]) || lecteur;
+        cible.scrollIntoView({ block: cible === lecteur ? "start" : "center", behavior: calme ? "auto" : "smooth" });
+      });
+    }
   }
 
   /* ------------------------------------------------ partage */
