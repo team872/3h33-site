@@ -8,7 +8,7 @@
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Mon, 12 Oct 2026 22:28:18 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 22:56:00 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -26,6 +26,72 @@
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Whitney Wolfe Herd : de Tinder à la fin du swipe</title>
+      <itunes:title>Whitney Wolfe Herd : de Tinder à la fin du swipe</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/whitney-wolfe-herd/</link>
+      <guid isPermaLink="false">voix-de-lia-whitney-wolfe-herd</guid>
+      <pubDate>Mon, 12 Oct 2026 22:56:00 GMT</pubDate>
+      <description>Des sacs en bambou à la cloche du Nasdaq, de Tinder à un assistant IA pour les rencontres : le parcours de Whitney Wolfe Herd, fondatrice de Bumble.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/whitney-wolfe-herd/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Des sacs en bambou à la cloche du Nasdaq, de Tinder à un assistant IA pour les rencontres : le parcours de Whitney Wolfe Herd, fondatrice de Bumble.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/whitney-wolfe-herd/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/whitney-wolfe-herd.mp3?v=0981fa31" length="11823185" type="audio/mpeg"/>
+      <itunes:duration>489</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/whitney-wolfe-herd-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/whitney-wolfe-herd/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/whitney-wolfe-herd/chapitres.json?v=0be8b0a2" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Jack Clark : le littéraire qui a vu venir le tsunami de l'IA</title>
+      <itunes:title>Jack Clark : le littéraire qui a vu venir le tsunami de l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/jack-clark/</link>
+      <guid isPermaLink="false">voix-de-lia-jack-clark</guid>
+      <pubDate>Mon, 12 Oct 2026 22:54:51 GMT</pubDate>
+      <description>Ancien journaliste de Brighton, diplômé de lettres, cofondateur d'Anthropic : Ada et Alan racontent le parcours de Jack Clark, ses images marquantes, ses paris datés et les critiques qu'il suscite.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/jack-clark/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Ancien journaliste de Brighton, diplômé de lettres, cofondateur d&#39;Anthropic : Ada et Alan racontent le parcours de Jack Clark, ses images marquantes, ses paris datés et les critiques qu&#39;il suscite.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/jack-clark/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/jack-clark.mp3?v=290439bc" length="13171059" type="audio/mpeg"/>
+      <itunes:duration>545</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/jack-clark-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/jack-clark/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/jack-clark/chapitres.json?v=fd00a76d" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Marc Andreessen : de Mosaic au combat pour accélérer l'IA</title>
+      <itunes:title>Marc Andreessen : de Mosaic au combat pour accélérer l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/marc-andreessen/</link>
+      <guid isPermaLink="false">voix-de-lia-marc-andreessen</guid>
+      <pubDate>Mon, 12 Oct 2026 22:54:50 GMT</pubDate>
+      <description>Il a coécrit le navigateur qui a affiché les images au milieu du texte sur le web, puis cofondé l'un des plus gros fonds de capital-risque du monde : portrait de Marc Andreessen, techno-optimiste revendiqué.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/marc-andreessen/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il a coécrit le navigateur qui a affiché les images au milieu du texte sur le web, puis cofondé l&#39;un des plus gros fonds de capital-risque du monde : portrait de Marc Andreessen, techno-optimiste revendiqué.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/marc-andreessen/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/marc-andreessen.mp3?v=24333168" length="14018122" type="audio/mpeg"/>
+      <itunes:duration>579</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/marc-andreessen-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/marc-andreessen/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/marc-andreessen/chapitres.json?v=df623575" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Aidan Gomez : le « T » de ChatGPT à 20 ans, puis Cohere</title>
       <itunes:title>Aidan Gomez : le « T » de ChatGPT à 20 ans, puis Cohere</itunes:title>
@@ -201,28 +267,6 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/lei-jun-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/lei-jun/transcription.html" type="text/html" language="fr"/>
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/lei-jun/chapitres.json?v=40302d43" type="application/json+chapters"/>
-    </item>
-    <item>
-      <title>Jack Clark : le littéraire qui a vu venir le tsunami de l'IA</title>
-      <itunes:title>Jack Clark : le littéraire qui a vu venir le tsunami de l'IA</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/jack-clark/</link>
-      <guid isPermaLink="false">voix-de-lia-jack-clark</guid>
-      <pubDate>Mon, 12 Oct 2026 21:44:05 GMT</pubDate>
-      <description>Ancien journaliste de Brighton, diplômé de lettres, cofondateur d'Anthropic : Ada et Alan racontent le parcours de Jack Clark, ses images marquantes, ses paris datés et les critiques qu'il suscite.
-
-Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/jack-clark/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Ancien journaliste de Brighton, diplômé de lettres, cofondateur d&#39;Anthropic : Ada et Alan racontent le parcours de Jack Clark, ses images marquantes, ses paris datés et les critiques qu&#39;il suscite.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/jack-clark/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/jack-clark.mp3?v=e61c5516" length="13153662" type="audio/mpeg"/>
-      <itunes:duration>545</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/jack-clark-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/jack-clark/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/jack-clark/chapitres.json?v=fd00a76d" type="application/json+chapters"/>
     </item>
     <item>
       <title>Jakub Pachocki, le sceptique devenu directeur scientifique d'OpenAI</title>
@@ -465,28 +509,6 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/joelle-barral-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/joelle-barral/transcription.html" type="text/html" language="fr"/>
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/joelle-barral/chapitres.json?v=9330e2f6" type="application/json+chapters"/>
-    </item>
-    <item>
-      <title>Whitney Wolfe Herd : de Tinder à la fin du swipe</title>
-      <itunes:title>Whitney Wolfe Herd : de Tinder à la fin du swipe</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/whitney-wolfe-herd/</link>
-      <guid isPermaLink="false">voix-de-lia-whitney-wolfe-herd</guid>
-      <pubDate>Mon, 12 Oct 2026 21:17:35 GMT</pubDate>
-      <description>Des sacs en bambou à la cloche du Nasdaq, de Tinder à un assistant IA pour les rencontres : le parcours de Whitney Wolfe Herd, fondatrice de Bumble.
-
-Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/whitney-wolfe-herd/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Des sacs en bambou à la cloche du Nasdaq, de Tinder à un assistant IA pour les rencontres : le parcours de Whitney Wolfe Herd, fondatrice de Bumble.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/whitney-wolfe-herd/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/whitney-wolfe-herd.mp3?v=d201a10a" length="12376145" type="audio/mpeg"/>
-      <itunes:duration>512</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/whitney-wolfe-herd-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/whitney-wolfe-herd/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/whitney-wolfe-herd/chapitres.json?v=6b01ca32" type="application/json+chapters"/>
     </item>
     <item>
       <title>Lucie Basch : du croissant de la veille à la perceuse du voisin</title>
@@ -795,28 +817,6 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/john-jumper-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/john-jumper/transcription.html" type="text/html" language="fr"/>
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/john-jumper/chapitres.json?v=2ab40172" type="application/json+chapters"/>
-    </item>
-    <item>
-      <title>Marc Andreessen : de Mosaic au combat pour accélérer l'IA</title>
-      <itunes:title>Marc Andreessen : de Mosaic au combat pour accélérer l'IA</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/marc-andreessen/</link>
-      <guid isPermaLink="false">voix-de-lia-marc-andreessen</guid>
-      <pubDate>Mon, 12 Oct 2026 20:58:37 GMT</pubDate>
-      <description>Il a coécrit le navigateur qui a affiché les images au milieu du texte sur le web, puis cofondé l'un des plus gros fonds de capital-risque du monde : portrait de Marc Andreessen, techno-optimiste revendiqué.
-
-Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/marc-andreessen/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Il a coécrit le navigateur qui a affiché les images au milieu du texte sur le web, puis cofondé l&#39;un des plus gros fonds de capital-risque du monde : portrait de Marc Andreessen, techno-optimiste revendiqué.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/marc-andreessen/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/marc-andreessen.mp3?v=658714ac" length="13985436" type="audio/mpeg"/>
-      <itunes:duration>579</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/marc-andreessen-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/marc-andreessen/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/marc-andreessen/chapitres.json?v=df623575" type="application/json+chapters"/>
     </item>
     <item>
       <title>Stanislas Niox-Chateau : Doctolib, le Covid et le pari de l'IA</title>
