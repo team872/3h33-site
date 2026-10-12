@@ -8,7 +8,7 @@
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Mon, 12 Oct 2026 19:56:10 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 20:24:39 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -26,6 +26,72 @@
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Alexandre Lebrun, l'homme des machines qui parlent</title>
+      <itunes:title>Alexandre Lebrun, l'homme des machines qui parlent</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/alexandre-lebrun/</link>
+      <guid isPermaLink="false">voix-de-lia-alexandre-lebrun</guid>
+      <pubDate>Mon, 12 Oct 2026 20:24:39 GMT</pubDate>
+      <description>Polytechnicien, créateur de VirtuOz et de Wit.ai, père de l'assistant M de Facebook puis de Nabla : Ada et Alan racontent Alexandre Lebrun, devenu directeur général d'AMI Labs, la start-up des modèles du monde dont Yann LeCun est président exécutif.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/alexandre-lebrun/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Polytechnicien, créateur de VirtuOz et de Wit.ai, père de l&#39;assistant M de Facebook puis de Nabla : Ada et Alan racontent Alexandre Lebrun, devenu directeur général d&#39;AMI Labs, la start-up des modèles du monde dont Yann LeCun est président exécutif.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/alexandre-lebrun/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/alexandre-lebrun.mp3?v=00c935fc" length="13412051" type="audio/mpeg"/>
+      <itunes:duration>555</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/alexandre-lebrun-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/alexandre-lebrun/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/alexandre-lebrun/chapitres.json?v=32428681" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Octave Klaba : de Nowa Ruda au cloud européen</title>
+      <itunes:title>Octave Klaba : de Nowa Ruda au cloud européen</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/octave-klaba/</link>
+      <guid isPermaLink="false">voix-de-lia-octave-klaba</guid>
+      <pubDate>Mon, 12 Oct 2026 20:23:43 GMT</pubDate>
+      <description>Arrivé de Pologne à seize ans sans parler français, Octave Klaba a fondé OVHcloud, l'un des principaux fournisseurs européens de cloud, et a annoncé en juin 2026 un projet de modèles d'IA « de frontière ».
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/octave-klaba/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Arrivé de Pologne à seize ans sans parler français, Octave Klaba a fondé OVHcloud, l&#39;un des principaux fournisseurs européens de cloud, et a annoncé en juin 2026 un projet de modèles d&#39;IA « de frontière ».</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/octave-klaba/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/octave-klaba.mp3?v=9443f177" length="12957503" type="audio/mpeg"/>
+      <itunes:duration>536</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/octave-klaba-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/octave-klaba/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/octave-klaba/chapitres.json?v=fc4b5b42" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Aurélie Jean : derrière les algorithmes, les humains</title>
+      <itunes:title>Aurélie Jean : derrière les algorithmes, les humains</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/aurelie-jean/</link>
+      <guid isPermaLink="false">voix-de-lia-aurelie-jean</guid>
+      <pubDate>Mon, 12 Oct 2026 20:22:25 GMT</pubDate>
+      <description>Elle a appris à coder à vingt et un ans, a refusé deux postes de professeure aux États-Unis et répète depuis 2019 que derrière chaque algorithme, il y a des humains : portrait d'Aurélie Jean.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/aurelie-jean/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Elle a appris à coder à vingt et un ans, a refusé deux postes de professeure aux États-Unis et répète depuis 2019 que derrière chaque algorithme, il y a des humains : portrait d&#39;Aurélie Jean.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/aurelie-jean/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/aurelie-jean.mp3?v=3bebcaa6" length="14406904" type="audio/mpeg"/>
+      <itunes:duration>596</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/aurelie-jean-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/aurelie-jean/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/aurelie-jean/chapitres.json?v=6cd20d00" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Patrick Robin : du Minitel à la French Tech, sans diplôme supérieur</title>
       <itunes:title>Patrick Robin : du Minitel à la French Tech, sans diplôme supérieur</itunes:title>
