@@ -8,7 +8,7 @@
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Mon, 12 Oct 2026 20:24:39 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 20:30:34 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -26,6 +26,48 @@
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Patrick Robin : du Minitel à la French Tech, sans diplôme supérieur</title>
+      <itunes:title>Patrick Robin : du Minitel à la French Tech, sans diplôme supérieur</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/patrick-robin/</link>
+      <guid isPermaLink="false">voix-de-lia-patrick-robin</guid>
+      <pubDate>Mon, 12 Oct 2026 20:30:34 GMT</pubDate>
+      <description>Éditeur d'art, pionnier de l'accès à Internet en France, business angel et co-initiateur du manifeste des entrepreneurs de 2012 : Ada et Alan racontent Patrick Robin, un entrepreneur qui parle de ses échecs sans détour.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/patrick-robin/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Éditeur d&#39;art, pionnier de l&#39;accès à Internet en France, business angel et co-initiateur du manifeste des entrepreneurs de 2012 : Ada et Alan racontent Patrick Robin, un entrepreneur qui parle de ses échecs sans détour.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/patrick-robin/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/patrick-robin.mp3?v=5f86c2cb" length="13160108" type="audio/mpeg"/>
+      <itunes:duration>545</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/patrick-robin-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/patrick-robin/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley</title>
+      <itunes:title>Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/carlos-diaz/</link>
+      <guid isPermaLink="false">voix-de-lia-carlos-diaz</guid>
+      <pubDate>Mon, 12 Oct 2026 20:30:34 GMT</pubDate>
+      <description>Ancien professeur, diplômé de lettres, l'un des initiateurs des « Pigeons », puis voix de Silicon Carne depuis San Francisco : le portrait de Carlos Diaz, l'entrepreneur qui raconte la course à l'IA en français.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/carlos-diaz/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Ancien professeur, diplômé de lettres, l&#39;un des initiateurs des « Pigeons », puis voix de Silicon Carne depuis San Francisco : le portrait de Carlos Diaz, l&#39;entrepreneur qui raconte la course à l&#39;IA en français.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/carlos-diaz/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/carlos-diaz.mp3?v=3c488cd1" length="12769420" type="audio/mpeg"/>
+      <itunes:duration>528</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/carlos-diaz-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/carlos-diaz/transcription.html" type="text/html" language="fr"/>
+    </item>
     <item>
       <title>Alexandre Lebrun, l'homme des machines qui parlent</title>
       <itunes:title>Alexandre Lebrun, l'homme des machines qui parlent</itunes:title>
@@ -91,50 +133,6 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/aurelie-jean-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/aurelie-jean/transcription.html" type="text/html" language="fr"/>
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/aurelie-jean/chapitres.json?v=6cd20d00" type="application/json+chapters"/>
-    </item>
-    <item>
-      <title>Patrick Robin : du Minitel à la French Tech, sans diplôme supérieur</title>
-      <itunes:title>Patrick Robin : du Minitel à la French Tech, sans diplôme supérieur</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/patrick-robin/</link>
-      <guid isPermaLink="false">voix-de-lia-patrick-robin</guid>
-      <pubDate>Mon, 12 Oct 2026 19:56:10 GMT</pubDate>
-      <description>Éditeur d'art, pionnier de l'accès à Internet en France, business angel et co-initiateur du manifeste des entrepreneurs de 2012 : Ada et Alan racontent Patrick Robin, un entrepreneur qui parle de ses échecs sans détour.
-
-Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/patrick-robin/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Éditeur d&#39;art, pionnier de l&#39;accès à Internet en France, business angel et co-initiateur du manifeste des entrepreneurs de 2012 : Ada et Alan racontent Patrick Robin, un entrepreneur qui parle de ses échecs sans détour.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/patrick-robin/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/patrick-robin.mp3?v=af8be3e4" length="13159266" type="audio/mpeg"/>
-      <itunes:duration>545</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/patrick-robin-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/patrick-robin/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/patrick-robin/chapitres.json?v=d5540bd7" type="application/json+chapters"/>
-    </item>
-    <item>
-      <title>Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley</title>
-      <itunes:title>Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/carlos-diaz/</link>
-      <guid isPermaLink="false">voix-de-lia-carlos-diaz</guid>
-      <pubDate>Mon, 12 Oct 2026 19:53:17 GMT</pubDate>
-      <description>Ancien professeur, diplômé de lettres, l'un des initiateurs des « Pigeons », puis voix de Silicon Carne depuis San Francisco : le portrait de Carlos Diaz, l'entrepreneur qui raconte la course à l'IA en français.
-
-Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/carlos-diaz/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Ancien professeur, diplômé de lettres, l&#39;un des initiateurs des « Pigeons », puis voix de Silicon Carne depuis San Francisco : le portrait de Carlos Diaz, l&#39;entrepreneur qui raconte la course à l&#39;IA en français.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/carlos-diaz/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/carlos-diaz.mp3?v=0c24cf24" length="12771805" type="audio/mpeg"/>
-      <itunes:duration>528</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/carlos-diaz-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/carlos-diaz/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/carlos-diaz/chapitres.json?v=36630a26" type="application/json+chapters"/>
     </item>
     <item>
       <title>Brett Adcock : du maïs de l'Illinois à Figure, valorisée 39 milliards</title>
