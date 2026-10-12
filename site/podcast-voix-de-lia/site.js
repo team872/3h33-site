@@ -761,6 +761,94 @@
       return total;
     }
 
+    /* Orthographe proche (v6, 12/10/2026) : quand rien n'est trouvé, « Huwaei » → « Huawei », « Zuckerburg » →
+       « Zuckerberg ». Le vocabulaire vient de recherche.json (noms, entreprises et rôles d'abord, puis tout le texte),
+       fabriqué une seule fois, au premier échec. Un mot de 4 lettres ou plus qui n'existe nulle part (ni en entier, ni
+       comme début d'un mot) est remplacé par le mot le plus proche (une faute pour 4 à 6 lettres, deux au-delà ; une
+       inversion de deux lettres compte pour une ; un mot de 3 lettres, seulement vers un nom : « Lisa Sue » → « Lisa Su ») ;
+       la suggestion n'est proposée que si elle trouve vraiment quelque chose. */
+    var MOT_ORIGINE = /[A-Za-z0-9À-ɏ぀-鿿]+/g;
+    function vocabulaire(index) {
+      if (index.vocab) return index.vocab;
+      var parN = {}, liste = [];
+      var ajouter = function (texte, poids) {
+        (String(texte || "").match(MOT_ORIGINE) || []).forEach(function (forme) {
+          var n = norm(forme);
+          if (VIDES[n] || n.length < 2 || (n.length < 3 && poids < 6)) return; // deux lettres : seulement les noms (« Su », « Li »)
+          var x = parN[n];
+          if (!x) { x = parN[n] = { n: n, forme: forme, poids: 0 }; liste.push(x); }
+          x.poids += poids;
+          if (poids >= 6) x.champ = true; // vient d'un nom, d'une entreprise ou d'un rôle
+        });
+      };
+      index.portraits.forEach(function (P) { var b = P.brut; ajouter([b.n, b.e, b.r, b.fo].join(" "), 6); });
+      index.portraits.forEach(function (P) { P.passages.forEach(function (s) { ajouter(s.texte, 1); }); });
+      return (index.vocab = { parN: parN, liste: liste });
+    }
+    // distance entre deux mots (lettre ajoutée, retirée, changée, ou deux lettres inversées) ; au-delà de max : max + 1
+    function distance(a, b, max) {
+      var la = a.length, lb = b.length, i, j;
+      if (Math.abs(la - lb) > max) return max + 1;
+      var d = [];
+      for (i = 0; i <= la; i++) d.push([i]);
+      for (j = 1; j <= lb; j++) d[0][j] = j;
+      for (i = 1; i <= la; i++) {
+        var minLigne = Infinity;
+        for (j = 1; j <= lb; j++) {
+          var v = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a.charAt(i - 1) === b.charAt(j - 1) ? 0 : 1));
+          if (i > 1 && j > 1 && a.charAt(i - 1) === b.charAt(j - 2) && a.charAt(i - 2) === b.charAt(j - 1)) v = Math.min(v, d[i - 2][j - 2] + 1);
+          d[i][j] = v;
+          if (v < minLigne) minLigne = v;
+        }
+        if (minLigne > max) return max + 1;
+      }
+      return d[la][lb];
+    }
+    // { texte, n } : la recherche corrigée et le nombre de portraits qu'elle trouve ; null s'il n'y a rien à proposer
+    function suggestion(index, requete) {
+      var mots = motsDe(requete);
+      if (!mots.length) return null;
+      var V = vocabulaire(index), formes = {}, change = false;
+      (String(requete).match(MOT_ORIGINE) || []).forEach(function (f) { formes[norm(f)] = f; });
+      var sortie = mots.map(function (m) {
+        var garder = formes[m] || m;
+        if (m.length < 3 || V.liste.some(function (x) { return x.n.indexOf(m) === 0; })) return garder;
+        var max = m.length >= 7 ? 2 : 1, meilleur = null, note = Infinity;
+        V.liste.forEach(function (x) {
+          if (m.length === 3 && !x.champ) return; // trois lettres (« Sue ») : seulement vers un nom, une entreprise, un rôle
+          var d = distance(m, x.n, max);
+          // un mot en cours de frappe : proche du début d'un mot plus long (« huwae » → « huawei »)
+          if (d > max && m.length >= 5 && x.n.length > m.length && distance(m, x.n.slice(0, m.length), 1) <= 1) d = 1.5;
+          if (d > max && d !== 1.5) return;
+          var s = d * 100 - Math.min(x.poids, 99);
+          if (s < note) { note = s; meilleur = x; }
+        });
+        if (!meilleur) return garder;
+        change = true;
+        return meilleur.forme;
+      });
+      if (!change) {
+        // tous les mots existent, mais pas ensemble (« Lisa Sue ») : un mot à une faute d'un nom, d'une entreprise ou d'un rôle
+        for (var k = 0; k < mots.length; k++) {
+          var m = mots[k];
+          if (m.length < 3) continue;
+          var proches = V.liste.filter(function (x) { return x.champ && x.n !== m && distance(m, x.n, 1) <= 1; }).sort(function (a, b) { return b.poids - a.poids; });
+          for (var c = 0; c < proches.length && c < 5; c++) {
+            var essai = sortie.slice();
+            essai[k] = proches[c].forme;
+            var r2 = chercher(index, essai.join(" "));
+            var n2 = r2 ? Object.keys(r2.res).length : 0;
+            if (n2) return { texte: essai.join(" "), n: n2 };
+          }
+        }
+        return null;
+      }
+      var texte = sortie.join(" ");
+      var r = chercher(index, texte);
+      var n = r ? Object.keys(r.res).length : 0;
+      return n ? { texte: texte, n: n } : null;
+    }
+
     var VOIX_NOM = { a: "Ada", n: "Alan", l: "Lia" };
     // où le passage a été trouvé, et l'adresse qui y mène
     function lieuDe(index, P, r, requete) {
@@ -826,10 +914,22 @@
       });
     });
 
-    /* ------------------------------------------------ page de l'émission : recherche et familles sur la grille */
+    /* ------------------------------------------------ page de l'émission : recherche et familles sur la grille
+       v6 (12/10/2026), retour d'Alexandre : « on voit assez mal les résultats ; il faut mettre en valeur le résultat
+       obtenu ». Dès qu'on tape ou qu'on choisit une famille, la page passe en « mode résultats » (classe en-filtre sur
+       <html>) :
+       - le champ remonte juste sous la barre si les résultats ne sont pas à l'écran (défilement doux, puis il ne bouge
+         plus pendant la frappe ; sur téléphone, le haut de l'écran reste visible au-dessus du clavier) ;
+       - la ligne du compteur devient un grand titre doré (« 2 portraits pour « Huawei » ») avec « Effacer » ;
+       - les portraits trouvés suivent juste dessous, avec un liseré doré ; pendant une recherche par mots
+         (en-recherche), ils passent en liste : vignette, nom, entreprise, passage trouvé bien surligné, « Écouter » ;
+       - le reste de la page (saison 1, S'abonner, le projet, la suite) est rangé jusqu'à l'effacement, et
+         « Connaissez-vous… ? » s'estompe ; un lien de la barre vers une partie rangée efface d'abord la recherche ;
+       - rien trouvé : orthographe proche (« Vouliez-vous dire… »), familles et exemples à la place. */
     var outils = $(".outils[data-recherche]");
     var grille = $("#grille-portraits");
     if (outils && grille) {
+      var section = grille.parentNode;
       var urlIndex = outils.getAttribute("data-recherche");
       var cartes = $$(".episode-card", grille);
       var ordre = cartes.slice();
@@ -837,16 +937,25 @@
       var effacer = $(".cherche-effacer", outils);
       var puces = $$(".puce[data-famille]", outils);
       var compte = $(".compte", outils);
+      var ligneCompte = $(".compte-ligne", outils);
       var toutVoirHaut = $(".tout-voir", outils);
+      var aide = $(".resultats-aide", outils);
       var aucun = $(".aucun");
+      var pistes = $(".aucun-pistes");
+      var fin = $(".fin-resultats");
       var exemples = $(".exemples", outils);
+      var listeExemples = $$("[data-exemple]", outils).map(function (b) { return b.getAttribute("data-exemple"); });
       aideCourte(champ);
-      var famillesDe = {}, nomsFamilles = {};
+      var famillesDe = {}, nomsFamilles = {}, totalFamille = {};
       cartes.forEach(function (c) { famillesDe[c.getAttribute("data-id")] = (c.getAttribute("data-familles") || "").split(" ").filter(Boolean); });
-      puces.forEach(function (b) { nomsFamilles[b.getAttribute("data-famille")] = $(".puce-nom", b).textContent; });
+      puces.forEach(function (b) {
+        var f = b.getAttribute("data-famille");
+        nomsFamilles[f] = $(".puce-nom", b).textContent;
+        totalFamille[f] = cartes.filter(function (c) { return famillesDe[c.getAttribute("data-id")].indexOf(f) >= 0; }).length;
+      });
       var total = cartes.length;
       var etat = { q: "", familles: [] };
-      var index = null, chargement = false, echec = false, resultat = null;
+      var index = null, chargement = false, echec = false, resultat = null, suggere = null, premierePuce = null;
       // ce que chaque carte affiche d'origine (rendu tel quel quand la recherche s'efface)
       cartes.forEach(function (c) {
         var l = $(".lien-carte", c);
@@ -860,7 +969,7 @@
         chargement = true;
         chargerIndex(urlIndex).then(function (x) {
           index = x; chargement = false; echec = false;
-          if (etat.q) rechercher();
+          if (etat.q) { rechercher(); amener(); }
         }, function () { chargement = false; echec = true; appliquer(); });
       };
       var rechercher = function () {
@@ -886,7 +995,7 @@
         if (!r || !index) { l.setAttribute("href", c._lien.href); l.setAttribute("aria-label", c._lien.label); return; }
         var P = index.parId[id];
         r.mots = resultat.mots;
-        var ex = blocExtrait(index, P, r, etat.q, "card-extrait", 150);
+        var ex = blocExtrait(index, P, r, etat.q, "card-extrait", 180);
         l.setAttribute("href", ex.url);
         l.setAttribute("aria-label", c._nom + (ex.bloc ? " : passage trouvé" + (ex.libelle ? " (" + ex.libelle + ")" : "") : ""));
         if (ex.bloc) {
@@ -895,15 +1004,23 @@
           c.classList.add("avec-extrait");
         }
       };
-      var guillemets = function (q) { return "\u00ab\u00a0" + q.trim() + "\u00a0\u00bb"; };
+      var guillemets = function (q) { return "« " + q.trim() + " »"; };
+      var ajouterTexte = function (el, t) { el.appendChild(document.createTextNode(t)); };
+      var morceau = function (classe, t) { var s = document.createElement("span"); s.className = classe; s.textContent = t; return s; };
+      var nombre = function (el, n) { var f = document.createElement("strong"); f.textContent = String(n); el.appendChild(f); };
+
       var appliquer = function () {
-        var res = resultat && resultat.res, actif = etat.familles.length || (etat.q.trim() && (resultat || !index));
+        var q = etat.q.trim();
+        var qUtile = motsDe(q).length > 0;
+        var attente = qUtile && !index && !echec; // l'index arrive : on n'affiche pas encore tous les portraits
+        var res = resultat && resultat.res;
+        var filtre = !!(etat.familles.length || qUtile);
         var n = 0;
         cartes.forEach(function (c) {
-          var id = c.getAttribute("data-id"), ok = passe(id);
+          var id = c.getAttribute("data-id"), ok = !attente && passe(id);
           c.hidden = !ok;
           if (ok) n++;
-          if (actif) c.classList.add("visible");
+          if (filtre) c.classList.add("visible");
           majCarte(c, ok && res ? res[id] : null);
         });
         var liste = ordre.slice();
@@ -925,28 +1042,131 @@
           pn.textContent = String(k);
           pn.setAttribute("aria-label", k + (k > 1 ? " portraits" : " portrait"));
         });
-        // compteur
-        var q = etat.q.trim();
+        // le titre des résultats (lu par les lecteurs d'écran : role="status")
+        suggere = !attente && filtre && n === 0 && qUtile && index ? suggestion(index, q) : null;
         compte.textContent = "";
-        if (q && !index && !echec) compte.appendChild(document.createTextNode("Recherche…"));
-        else if (q && echec) compte.appendChild(document.createTextNode("La recherche n'a pas pu se charger. Vérifiez la connexion, puis réessayez."));
-        else {
-          var fort = document.createElement("strong");
-          fort.textContent = String(n);
-          compte.appendChild(fort);
-          var suite = " portrait" + (n > 1 ? "s" : "");
-          if (n !== total) suite += " sur " + total;
-          if (q && resultat) suite += " pour " + guillemets(q);
-          if (etat.familles.length) suite += " · " + etat.familles.map(function (f) { return nomsFamilles[f]; }).join(" + ");
-          compte.appendChild(document.createTextNode(suite));
+        if (attente) ajouterTexte(compte, "Recherche…");
+        else if (qUtile && echec) ajouterTexte(compte, "La recherche n'a pas pu se charger. Vérifiez la connexion, puis réessayez.");
+        else if (!filtre) {
+          nombre(compte, n);
+          ajouterTexte(compte, " portrait" + (n > 1 ? "s" : "") + (q ? " · tapez au moins deux lettres" : ""));
+        } else {
+          if (n) { nombre(compte, n); ajouterTexte(compte, " portrait" + (n > 1 ? "s" : "")); }
+          else ajouterTexte(compte, "Aucun portrait");
+          if (qUtile && resultat) { ajouterTexte(compte, " pour "); compte.appendChild(morceau("compte-q", guillemets(q))); }
+          if (etat.familles.length) {
+            ajouterTexte(compte, " dans ");
+            etat.familles.forEach(function (f, k) {
+              if (k) ajouterTexte(compte, " + ");
+              compte.appendChild(morceau("compte-f", guillemets(nomsFamilles[f])));
+            });
+          }
+          if (suggere) compte.appendChild(morceau("visuellement-cache", ". Vouliez-vous dire : " + suggere.texte + " ?"));
         }
-        var filtre = !!(etat.familles.length || q);
+        doc.classList.toggle("en-filtre", filtre);
+        doc.classList.toggle("en-recherche", filtre && qUtile && !!resultat && n > 0);
+        outils.classList.toggle("filtre", filtre);
         toutVoirHaut.hidden = !filtre;
         if (exemples) exemples.hidden = filtre;
+        if (aide) aide.hidden = !(qUtile && resultat && n > 0);
         effacer.hidden = !champ.value;
-        aucun.hidden = !(filtre && n === 0 && (!q || resultat || !index));
-        if (!aucun.hidden) $(".aucun-quoi", aucun).textContent = q ? " à " + guillemets(q) + (etat.familles.length > 1 ? " dans ces familles" : etat.familles.length ? " dans cette famille" : "") : " à toutes ces familles à la fois";
-        outils.classList.toggle("filtre", filtre);
+        aucun.hidden = !(filtre && n === 0 && !attente && !(qUtile && echec));
+        if (!aucun.hidden) remplirPistes(q, qUtile);
+        if (fin) fin.hidden = !(filtre && n > 0);
+        // téléphone : les familles défilent de côté ; pendant une recherche, on amène en vue la première qui a des résultats
+        // (et on revient au début quand on efface), seulement quand elle change
+        var rang = $(".puces", outils);
+        if (rang && rang.scrollWidth > rang.clientWidth + 4 && !etat.familles.length) {
+          var premiere = qUtile && !attente ? puces.filter(function (b) { return !b.disabled; })[0] || null : null;
+          if (premiere !== premierePuce) {
+            premierePuce = premiere;
+            var gauche = premiere ? rang.scrollLeft + premiere.getBoundingClientRect().left - rang.getBoundingClientRect().left - 20 : 0;
+            try { rang.scrollTo({ left: Math.max(0, gauche), behavior: calme ? "auto" : "smooth" }); } catch (e) { rang.scrollLeft = Math.max(0, gauche); }
+          }
+        }
+        // assez de place sous le champ pour toujours pouvoir l'amener sous la barre, même avec un seul résultat
+        if (filtre) section.style.setProperty("--avant-outils", Math.max(0, Math.round(outils.getBoundingClientRect().top - section.getBoundingClientRect().top)) + "px");
+      };
+
+      // rien trouvé : des pistes (orthographe proche, hors des familles choisies, familles, exemples)
+      var remplirPistes = function (q, qUtile) {
+        pistes.textContent = "";
+        var ligne = function (classe) { var p = document.createElement("p"); p.className = "aucun-ligne " + classe; pistes.appendChild(p); return p; };
+        var bouton = function (classe, contenu, action) {
+          var b = document.createElement("button");
+          b.type = "button";
+          if (classe) b.className = classe;
+          if (typeof contenu === "string") b.textContent = contenu; else b.appendChild(contenu);
+          b.addEventListener("click", action);
+          return b;
+        };
+        if (suggere) {
+          var corrige = suggere.texte, l1 = ligne("aucun-orthographe");
+          ajouterTexte(l1, "Vouliez-vous dire ");
+          l1.appendChild(bouton("aucun-mot", corrige, function () { chercherTexte(corrige); }));
+          ajouterTexte(l1, " ?");
+        }
+        if (qUtile && resultat && etat.familles.length) {
+          var k = Object.keys(resultat.res).length;
+          if (k) {
+            var l2 = ligne("aucun-hors");
+            ajouterTexte(l2, "Hors des familles choisies, " + guillemets(q) + " donne " + k + " portrait" + (k > 1 ? "s" : "") + ". ");
+            l2.appendChild(bouton("aucun-lien", "Chercher dans tous les portraits", function () { etat.familles = []; appliquer(); ecrireAdresse(); amener(); }));
+          }
+        }
+        if (!qUtile && etat.familles.length > 1) ajouterTexte(ligne("aucun-hors"), "Aucun portrait n'est dans toutes ces familles à la fois : retirez-en une.");
+        if (qUtile) {
+          var l3 = ligne("aucun-familles");
+          l3.appendChild(morceau("aucun-libelle", suggere ? "Ou parcourez une famille :" : "Parcourez plutôt une famille :"));
+          puces.map(function (b) { return b.getAttribute("data-famille"); }).filter(function (f) { return totalFamille[f] > 0; }).slice(0, 6).forEach(function (f) {
+            var contenu = document.createDocumentFragment();
+            contenu.appendChild(morceau("puce-nom", nomsFamilles[f]));
+            ajouterTexte(contenu, " ");
+            contenu.appendChild(morceau("puce-n", String(totalFamille[f])));
+            var b = bouton("puce", contenu, function () {
+              champ.value = ""; etat.q = ""; resultat = null; etat.familles = [f];
+              appliquer(); ecrireAdresse(); amener(); montrerPuces();
+            });
+            b.setAttribute("aria-label", nomsFamilles[f] + ", " + totalFamille[f] + " portraits");
+            l3.appendChild(b);
+          });
+        }
+        if (listeExemples.length) {
+          var l4 = ligne("aucun-exemples");
+          ajouterTexte(l4, qUtile ? "Ou essayez : " : "Essayez : ");
+          listeExemples.forEach(function (x, k) {
+            if (k) ajouterTexte(l4, ", ");
+            l4.appendChild(bouton("", x, function () { chercherTexte(x); }));
+          });
+        }
+      };
+
+      // amène le champ juste sous la barre du haut, seulement si le titre des résultats n'est pas déjà dans le haut de
+      // l'écran (sur téléphone, la partie au-dessus du clavier : visualViewport)
+      var sousLaBarre = function () { var b = $(".barre"); return (b ? b.getBoundingClientRect().bottom : 0) + 10; };
+      var dernierDefilement = 0;
+      var defiler = function (dy, doux) {
+        if (Math.abs(dy) < 3) return;
+        dernierDefilement = Date.now();
+        if (doux && !calme) { window.scrollBy({ top: dy, behavior: "smooth" }); return; }
+        var avant = doc.style.scrollBehavior;
+        doc.style.scrollBehavior = "auto";
+        window.scrollBy(0, dy);
+        doc.style.scrollBehavior = avant;
+      };
+      // pendant un défilement doux déjà lancé, on revérifie juste après (la page a pu changer de hauteur entre-temps),
+      // sauf si la personne fait défiler elle-même
+      var minuteurAmener = null;
+      ["wheel", "touchstart"].forEach(function (e) { window.addEventListener(e, function () { clearTimeout(minuteurAmener); }, { passive: true }); });
+      var amener = function () {
+        if (!doc.classList.contains("en-filtre")) return;
+        var reste = 700 - (Date.now() - dernierDefilement);
+        clearTimeout(minuteurAmener);
+        if (reste > 0) { minuteurAmener = setTimeout(amener, reste + 40); return; }
+        var vh = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+        var haut = outils.getBoundingClientRect().top, cible = sousLaBarre();
+        if (haut >= cible - 6 && ligneCompte.getBoundingClientRect().bottom <= vh * 0.62) return; // déjà en vue
+        defiler(haut - cible, true);
       };
 
       // l'adresse garde l'état (#famille=chine,robots&q=huawei) : on peut la partager
@@ -957,6 +1177,8 @@
           var h = [];
           if (etat.familles.length) h.push("famille=" + etat.familles.map(encodeURIComponent).join(","));
           if (etat.q.trim()) h.push("q=" + encodeURIComponent(etat.q.trim()));
+          // une autre ancre (#abonnement, après un clic dans la barre) : on n'y touche pas
+          if (!h.length && location.hash && !/[#&](famille|q)=/.test(location.hash)) return;
           var cible = h.length ? "#" + h.join("&") : location.pathname + location.search;
           if ((h.length ? "#" + h.join("&") : "") === location.hash) return;
           try { history.replaceState(null, "", cible); } catch (e) {}
@@ -974,6 +1196,13 @@
         return true;
       };
 
+      var chercherTexte = function (t) {
+        champ.value = t; etat.q = t;
+        chargerRecherche();
+        rechercher();
+        ecrireAdresse();
+        amener();
+      };
       var minuteur = null;
       // « input » à chaque lettre ; « change » et « search » aussi (saisie dictée, remplissage automatique, croix du champ)
       var surSaisie = function () {
@@ -982,7 +1211,7 @@
         effacer.hidden = !champ.value;
         chargerRecherche();
         clearTimeout(minuteur);
-        minuteur = setTimeout(rechercher, index ? 90 : 0);
+        minuteur = setTimeout(function () { rechercher(); amener(); }, index ? 90 : 0);
         ecrireAdresse();
       };
       ["input", "change", "search"].forEach(function (e) { champ.addEventListener(e, surSaisie); });
@@ -990,17 +1219,28 @@
       // sur téléphone, le clavier cache la moitié de l'écran : le champ remonte sous la barre, les résultats juste dessous
       champ.addEventListener("focus", function () {
         if (window.innerWidth < 700 && outils.getBoundingClientRect().top > window.innerHeight * 0.3) {
-          setTimeout(function () { outils.scrollIntoView({ block: "start", behavior: calme ? "auto" : "smooth" }); }, 250);
+          setTimeout(function () { defiler(outils.getBoundingClientRect().top - sousLaBarre(), true); }, 250);
         }
       });
       champ.addEventListener("keydown", function (ev) {
-        if (ev.key === "Escape" && champ.value) { ev.preventDefault(); vider(true); }
+        if (ev.key === "Escape" && (champ.value || etat.familles.length)) { ev.preventDefault(); vider(!!champ.value); }
         if (ev.key === "Enter") {
           ev.preventDefault();
           clearTimeout(minuteur);
           rechercher();
+          amener();
           if (window.matchMedia("(pointer:coarse)").matches) champ.blur(); // range le clavier : on voit les résultats
         }
+      });
+      // Échap ailleurs dans les résultats (une puce, une carte) : tout effacer et revenir au champ
+      [outils, grille, aucun, fin].forEach(function (zone) {
+        if (zone) zone.addEventListener("keydown", function (ev) {
+          if (ev.key !== "Escape" || ev.target === champ || !doc.classList.contains("en-filtre")) return;
+          ev.preventDefault();
+          vider(false);
+          try { champ.focus({ preventScroll: true }); } catch (e) { champ.focus(); }
+          defiler(outils.getBoundingClientRect().top - sousLaBarre(), true);
+        });
       });
       var vider = function (garderFamilles) {
         champ.value = ""; etat.q = "";
@@ -1011,7 +1251,13 @@
       };
       effacer.addEventListener("click", function () { vider(true); champ.focus(); });
       $$(".tout-voir").forEach(function (b) {
-        b.addEventListener("click", function () { vider(false); champ.focus({ preventScroll: true }); });
+        b.addEventListener("click", function () {
+          var dehors = !outils.contains(b);
+          vider(false);
+          // depuis le bas des résultats : on revient au champ, au-dessus de tous les portraits
+          if (dehors) defiler(outils.getBoundingClientRect().top - sousLaBarre(), true);
+          if (!window.matchMedia("(pointer:coarse)").matches) try { champ.focus({ preventScroll: true }); } catch (e) { champ.focus(); }
+        });
       });
       puces.forEach(function (b) {
         b.addEventListener("click", function () {
@@ -1019,31 +1265,45 @@
           if (i >= 0) etat.familles.splice(i, 1); else etat.familles.push(f);
           appliquer();
           ecrireAdresse();
+          amener();
         });
       });
       $$("[data-exemple]", outils).forEach(function (b) {
-        b.addEventListener("click", function () {
-          champ.value = b.getAttribute("data-exemple");
-          etat.q = champ.value;
-          chargerRecherche();
-          rechercher();
-          ecrireAdresse();
-        });
+        b.addEventListener("click", function () { chercherTexte(b.getAttribute("data-exemple")); });
       });
+      // un lien vers une partie rangée pendant la recherche (« Saison 1 », « S'abonner »…) : on efface d'abord, pour
+      // qu'elle réapparaisse et que le navigateur puisse y aller
+      document.addEventListener("click", function (ev) {
+        if (!doc.classList.contains("en-filtre") || !ev.target.closest) return;
+        var a = ev.target.closest("a[href^='#']"), el = null;
+        if (a) try { el = document.getElementById(decodeURIComponent(a.getAttribute("href").slice(1))); } catch (e) {}
+        if (el && !el.getClientRects().length) vider(false);
+      }, true);
       // sur téléphone, les puces défilent de côté : on amène la première famille choisie en vue
       var montrerPuces = function () {
         var rang = $(".puces", outils), on = $(".puce[aria-pressed=\"true\"]", outils);
         if (on && rang.scrollWidth > rang.clientWidth) rang.scrollLeft += on.getBoundingClientRect().left - rang.getBoundingClientRect().left - 20;
       };
-      var arriver = function () { aller(outils, "start"); montrerPuces(); };
+      // (scrollIntoView ajouterait la marge de défilement de la page à celle du bloc : le champ resterait 150 px plus bas)
+      var arriver = function () { defiler(outils.getBoundingClientRect().top - sousLaBarre(), false); montrerPuces(); };
       window.addEventListener("hashchange", function () { if (lireAdresse()) arriver(); });
       ouvrirRecherche = function () {
         try { champ.focus({ preventScroll: true }); } catch (e) { champ.focus(); }
-        outils.scrollIntoView({ block: "start", behavior: calme ? "auto" : "smooth" }); // après le focus, qui couperait le défilement
+        defiler(outils.getBoundingClientRect().top - sousLaBarre(), true); // après le focus, qui couperait le défilement
         chargerRecherche();
       };
-      // arrivée avec un état dans l'adresse (lien partagé) : on l'applique et on amène la grille à l'écran
-      if (lireAdresse()) setTimeout(arriver, 30);
+      // arrivée avec un état dans l'adresse (lien partagé) : on l'applique et on amène le champ sous la barre, puis on
+      // recale quand les polices, les images et l'index sont là (ils font bouger ce qui est au-dessus), sauf si la
+      // personne a déjà fait défiler la page
+      if (lireAdresse()) {
+        var aBougeArrivee = false;
+        ["wheel", "touchstart", "keydown"].forEach(function (e) { window.addEventListener(e, function () { aBougeArrivee = true; }, { once: true, passive: true }); });
+        var placer = function () { if (!aBougeArrivee) arriver(); };
+        setTimeout(placer, 30);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { setTimeout(placer, 60); });
+        window.addEventListener("load", function () { setTimeout(placer, 60); });
+        if (etat.q) chargerIndex(urlIndex).then(function () { setTimeout(placer, 60); }, function () {});
+      }
     }
 
     /* ------------------------------------------------ pages des portraits : la recherche dans une fenêtre */
@@ -1067,6 +1327,16 @@
         if (!r) { rfEtat.textContent = "Tapez au moins deux lettres."; return; }
         var ids = Object.keys(r.res).sort(function (a, b) { return r.res[b].score - r.res[a].score; });
         rfEtat.textContent = ids.length ? ids.length + (ids.length > 1 ? " portraits trouvés" : " portrait trouvé") + " pour \u00ab\u00a0" + q.trim() + "\u00a0\u00bb" : "Aucun portrait ne correspond à \u00ab\u00a0" + q.trim() + "\u00a0\u00bb.";
+        var corrige = ids.length ? null : suggestion(rfIndex, q); // orthographe proche (v6)
+        if (corrige) {
+          var bc = document.createElement("button");
+          bc.type = "button";
+          bc.textContent = corrige.texte;
+          bc.addEventListener("click", function () { rfChamp.value = corrige.texte; rfAfficher(); rfChamp.focus(); });
+          rfEtat.appendChild(document.createTextNode(" Vouliez-vous dire "));
+          rfEtat.appendChild(bc);
+          rfEtat.appendChild(document.createTextNode(" ?"));
+        }
         ids.slice(0, 40).forEach(function (id) {
           var P = rfIndex.parId[id], res = r.res[id];
           res.mots = r.mots;
