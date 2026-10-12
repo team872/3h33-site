@@ -69,12 +69,15 @@
       var k = 0;
       entrees.forEach(function (e) {
         if (!e.isIntersecting) return;
+        // un bloc plus haut que l'écran (la liste des 164 sources de Dario Amodei sur téléphone : 10 000 px) n'atteint
+        // jamais 12 % visibles : il apparaît dès qu'il entre à l'écran, sinon il resterait invisible pour toujours
+        if (e.intersectionRatio < 0.12 && e.boundingClientRect.height < window.innerHeight * 0.8) return;
         var el = e.target;
         if (!el.style.getPropertyValue("--d")) el.style.setProperty("--d", Math.min(k++ * 0.07, 0.42) + "s");
         el.classList.add("visible");
         vus.unobserve(el);
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    }, { threshold: [0, 0.12], rootMargin: "0px 0px -6% 0px" });
     $$(".reveal").forEach(function (el) { vus.observe(el); });
   } else {
     $$(".reveal").forEach(function (el) { el.classList.add("visible"); });
@@ -276,7 +279,7 @@
       return k;
     };
     var kRep = -2, kCh = -2;
-    var miniN = mini && $(".mini-n", mini), miniCh = mini && $(".mini-chapitre", mini);
+    var miniN = mini && $(".mini-n", mini), miniCh = mini && $(".mini-chapitre", mini), miniAller = mini && $(".mini-aller", mini);
     var majInstants = function () {
       var t = audio.currentTime;
       var actif = commence();
@@ -287,16 +290,20 @@
         kRep = k;
       }
       var c = actif && titres.length ? Math.max(0, dernierAvant(debutsCh, t + 0.35)) : -1;
-      if (c !== kCh) {
-        kCh = c;
+      var cle = actif ? c : -9; // -9 : pas encore écouté (sans chapitres minutés, c reste à -1 pendant l'écoute)
+      if (cle !== kCh) {
+        kCh = cle;
         var h = titres[c];
         liensCh.forEach(function (a) { a.classList.toggle("ecoute", !!h && a.getAttribute("href") === "#" + h.id); });
         if (mini) {
-          var titre = h ? h.getAttribute("data-titre") : nom;
+          // avant la première écoute (et après la fin) : « Écouter le portrait » et la durée totale
+          var titre = h ? h.getAttribute("data-titre") : actif ? nom : "Écouter le portrait";
           var num = /^(\d+) · (.*)$/.exec(titre); // « 03 · Le début de sa vie » : le numéro à part, en or
           miniN.textContent = num ? num[1] : "";
           miniCh.textContent = num ? num[2] : titre;
           mini.classList.toggle("avec-chapitre", !!h);
+          mini.classList.toggle("attente", !actif);
+          miniAller.setAttribute("aria-label", actif ? "Aller au passage en cours dans la conversation" : "Écouter " + nom);
         }
       }
       if (titres[c] && suiviParAudio()) marquerCh(titres[c].id);
@@ -325,8 +332,9 @@
       ecouterA(Number(r.getAttribute("data-debut")));
     });
 
-    // le mini-lecteur, sous la barre du haut : visible dès que le grand lecteur est passé au-dessus de l'écran,
-    // et toute la suite de la page ; un clic sur le chapitre ramène au passage entendu
+    // le mini-lecteur, sous la barre du haut : visible dès que le grand lecteur n'est pas à l'écran (passé au-dessus,
+    // ou encore plus bas : sur téléphone, dès l'arrivée) ; avant la première écoute il dit « Écouter le portrait » et
+    // un toucher sur ce libellé lance l'écoute ; ensuite, un clic sur le chapitre ramène au passage entendu
     if (mini) {
       var hautBarre = 56;
       var mesurer = function () {
@@ -336,7 +344,10 @@
       };
       var visible = null;
       var majMini = function () { // un seul getBoundingClientRect : assez léger pour chaque événement de défilement
-        var v = lecteur.getBoundingClientRect().bottom < hautBarre + 8;
+        // visible aussi quand le grand lecteur est encore plus bas que l'écran (téléphone : la vignette prend
+        // tout le premier écran) ; caché seulement quand le grand lecteur lui-même est à l'écran
+        var r = lecteur.getBoundingClientRect();
+        var v = r.bottom < hautBarre + 8 || r.top > window.innerHeight - 24;
         if (v === visible) return;
         visible = v;
         mini.classList.toggle("visible", v);
@@ -348,7 +359,8 @@
       window.addEventListener("scroll", majMini, { passive: true });
       window.addEventListener("resize", function () { mesurer(); majMini(); });
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(mesurer);
-      $(".mini-aller", mini).addEventListener("click", function () {
+      miniAller.addEventListener("click", function () {
+        if (!commence()) { audio.play().catch(function () {}); return; } // « Écouter le portrait » : on écoute
         var cible = kRep >= 0 ? repliques[kRep] : (kCh >= 0 && titres[kCh]) || lecteur;
         cible.scrollIntoView({ block: cible === lecteur ? "start" : "center", behavior: calme ? "auto" : "smooth" });
       });
