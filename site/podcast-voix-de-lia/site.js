@@ -392,6 +392,24 @@
     });
   }
 
+  /* ------------------------------------------------ « Signaler une erreur ou une info » (12/10/2026)
+     L'adresse n'est jamais écrite en clair dans la page (robots) : elle est assemblée au clic, avec un objet
+     (« Les Voix de l'IA — <portrait> ») et un corps préremplis. Si aucune messagerie ne s'ouvre, l'adresse s'affiche. */
+  $$("[data-signaler]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var adresse = b.getAttribute("data-u") + "@" + b.getAttribute("data-d");
+      var nom = b.getAttribute("data-nom");
+      var objet = "Les Voix de l'IA" + (nom ? " — " + nom : "");
+      var corps = "Passage concerné : …\r\nCe qui est inexact ou ce que je sais : …\r\nSource (lien) : …\r\n\r\nPage : " + (b.getAttribute("data-page") || location.href.split(/[?#]/)[0]);
+      location.href = "mailto:" + adresse + "?subject=" + encodeURIComponent(objet) + "&body=" + encodeURIComponent(corps);
+      var etat = b.parentNode && $(".signaler-etat", b.closest(".signaler") || b.closest("section") || document);
+      if (etat) {
+        etat.textContent = "Votre messagerie ne s'ouvre pas ? Écrivez à " + adresse + (nom ? ", en précisant le portrait " + (/^[aeiouyàâéèêîôûœ]/i.test(nom) ? "d'" : "de ") + nom : "") + ".";
+        etat.classList.add("visible");
+      }
+    });
+  });
+
   /* ------------------------------------------------ boutons « Copier l'adresse » (flux RSS) */
   $$("[data-copier]").forEach(function (bouton) {
     bouton.addEventListener("click", function () {
@@ -957,14 +975,17 @@
       };
 
       var minuteur = null;
-      champ.addEventListener("input", function () {
+      // « input » à chaque lettre ; « change » et « search » aussi (saisie dictée, remplissage automatique, croix du champ)
+      var surSaisie = function () {
+        if (champ.value === etat.q && (resultat || !champ.value)) return;
         etat.q = champ.value;
         effacer.hidden = !champ.value;
         chargerRecherche();
         clearTimeout(minuteur);
         minuteur = setTimeout(rechercher, index ? 90 : 0);
         ecrireAdresse();
-      });
+      };
+      ["input", "change", "search"].forEach(function (e) { champ.addEventListener(e, surSaisie); });
       ["focus", "pointerenter"].forEach(function (e) { champ.addEventListener(e, chargerRecherche); });
       // sur téléphone, le clavier cache la moitié de l'écran : le champ remonte sous la barre, les résultats juste dessous
       champ.addEventListener("focus", function () {
@@ -1079,10 +1100,12 @@
       var rfCharger = function () {
         chargerIndex(rfUrl).then(function (x) { rfIndex = x; rfAfficher(); }, function () { rfEtat.textContent = "La recherche n'a pas pu se charger. Vérifiez la connexion, puis réessayez."; });
       };
-      rfChamp.addEventListener("input", function () {
-        clearTimeout(rfMinuteur);
-        rfMinuteur = setTimeout(rfAfficher, rfIndex ? 90 : 0);
-        if (!rfIndex) rfCharger();
+      ["input", "change", "search"].forEach(function (e) {
+        rfChamp.addEventListener(e, function () {
+          clearTimeout(rfMinuteur);
+          rfMinuteur = setTimeout(rfAfficher, rfIndex ? 90 : 0);
+          if (!rfIndex) rfCharger();
+        });
       });
       rfChamp.addEventListener("keydown", function (ev) {
         if (ev.key === "Enter") {
