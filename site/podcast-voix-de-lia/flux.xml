@@ -8,7 +8,7 @@
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Mon, 12 Oct 2026 07:56:33 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 17:25:48 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -26,6 +26,94 @@
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Brett Adcock : du maïs de l'Illinois à Figure, valorisée 39 milliards</title>
+      <itunes:title>Brett Adcock : du maïs de l'Illinois à Figure, valorisée 39 milliards</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/brett-adcock/</link>
+      <guid isPermaLink="false">voix-de-lia-brett-adcock</guid>
+      <pubDate>Mon, 12 Oct 2026 17:25:48 GMT</pubDate>
+      <description>Fils d'agriculteurs de l'Illinois, Brett Adcock a vendu une start-up de recrutement, fait entrer en Bourse des taxis volants, puis fait grimper la valorisation de son entreprise de robots humanoïdes Figure jusqu'à trente-neuf milliards de dollars : Ada, Alan et Lia racontent ce parcours, de ses débuts à ses controverses.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/brett-adcock/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Fils d&#39;agriculteurs de l&#39;Illinois, Brett Adcock a vendu une start-up de recrutement, fait entrer en Bourse des taxis volants, puis fait grimper la valorisation de son entreprise de robots humanoïdes Figure jusqu&#39;à trente-neuf milliards de dollars : Ada, Alan et Lia racontent ce parcours, de ses débuts à ses controverses.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/brett-adcock/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/brett-adcock.mp3?v=98cbafd2" length="13199940" type="audio/mpeg"/>
+      <itunes:duration>546</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/brett-adcock-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/brett-adcock/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/brett-adcock/chapitres.json?v=342b3757" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Ali Ghodsi : du Commodore 64 cassé à Databricks, valorisée 190 milliards</title>
+      <itunes:title>Ali Ghodsi : du Commodore 64 cassé à Databricks, valorisée 190 milliards</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/ali-ghodsi/</link>
+      <guid isPermaLink="false">voix-de-lia-ali-ghodsi</guid>
+      <pubDate>Mon, 12 Oct 2026 17:10:07 GMT</pubDate>
+      <description>Réfugié en Suède à cinq ans, programmeur par la grâce d'un ordinateur en panne, Ali Ghodsi a fait de Databricks l'une des entreprises privées les plus chères d'Amérique : Ada, Alan et Lia racontent son parcours.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/ali-ghodsi/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Réfugié en Suède à cinq ans, programmeur par la grâce d&#39;un ordinateur en panne, Ali Ghodsi a fait de Databricks l&#39;une des entreprises privées les plus chères d&#39;Amérique : Ada, Alan et Lia racontent son parcours.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/ali-ghodsi/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/ali-ghodsi.mp3?v=7553a8ae" length="12631098" type="audio/mpeg"/>
+      <itunes:duration>523</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/ali-ghodsi-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/ali-ghodsi/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/ali-ghodsi/chapitres.json?v=b134592d" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Jan Koum : des bons alimentaires aux milliards de WhatsApp</title>
+      <itunes:title>Jan Koum : des bons alimentaires aux milliards de WhatsApp</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/jan-koum/</link>
+      <guid isPermaLink="false">voix-de-lia-jan-koum</guid>
+      <pubDate>Mon, 12 Oct 2026 17:04:32 GMT</pubDate>
+      <description>Arrivé d'Ukraine à seize ans, Jan Koum a cofondé WhatsApp, l'a vendue à Facebook pour près de vingt-deux milliards de dollars, puis s'est fait discret : Ada, Alan et Lia racontent un parcours hors norme.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/jan-koum/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Arrivé d&#39;Ukraine à seize ans, Jan Koum a cofondé WhatsApp, l&#39;a vendue à Facebook pour près de vingt-deux milliards de dollars, puis s&#39;est fait discret : Ada, Alan et Lia racontent un parcours hors norme.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/jan-koum/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/jan-koum.mp3?v=db096e96" length="12860349" type="audio/mpeg"/>
+      <itunes:duration>532</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/jan-koum-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/jan-koum/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/jan-koum/chapitres.json?v=a9038735" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Assaf Rappaport : il a dit non à Google… avant 32 milliards</title>
+      <itunes:title>Assaf Rappaport : il a dit non à Google… avant 32 milliards</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/assaf-rappaport/</link>
+      <guid isPermaLink="false">voix-de-lia-assaf-rappaport</guid>
+      <pubDate>Mon, 12 Oct 2026 16:55:06 GMT</pubDate>
+      <description>Il a refusé environ vingt-trois milliards de dollars avant de vendre Wiz à Google pour trente-deux : portrait d'Assaf Rappaport, le cofondateur qui veut protéger le développement de l'IA partout.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/assaf-rappaport/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il a refusé environ vingt-trois milliards de dollars avant de vendre Wiz à Google pour trente-deux : portrait d&#39;Assaf Rappaport, le cofondateur qui veut protéger le développement de l&#39;IA partout.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/assaf-rappaport/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/assaf-rappaport.mp3?v=b933b8ea" length="13232810" type="audio/mpeg"/>
+      <itunes:duration>548</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/assaf-rappaport-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/assaf-rappaport/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/assaf-rappaport/chapitres.json?v=c89369cd" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Palmer Luckey : du casque Oculus aux drones de guerre</title>
       <itunes:title>Palmer Luckey : du casque Oculus aux drones de guerre</itunes:title>
