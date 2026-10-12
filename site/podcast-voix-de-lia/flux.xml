@@ -8,7 +8,7 @@
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Sun, 11 Oct 2026 21:10:33 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 07:56:33 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -26,6 +26,402 @@
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Palmer Luckey : du casque Oculus aux drones de guerre</title>
+      <itunes:title>Palmer Luckey : du casque Oculus aux drones de guerre</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/palmer-luckey/</link>
+      <guid isPermaLink="false">voix-de-lia-palmer-luckey</guid>
+      <pubDate>Mon, 12 Oct 2026 07:56:33 GMT</pubDate>
+      <description>Enfant, il réparait des iPhone pour s'acheter des lasers. À 21 ans, il vend Oculus à Facebook, puis fonde Anduril, l'entreprise de défense qui mise sur l'IA militaire : le portrait de Palmer Luckey.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/palmer-luckey/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Enfant, il réparait des iPhone pour s&#39;acheter des lasers. À 21 ans, il vend Oculus à Facebook, puis fonde Anduril, l&#39;entreprise de défense qui mise sur l&#39;IA militaire : le portrait de Palmer Luckey.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/palmer-luckey/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/palmer-luckey.mp3?v=6af3a70c" length="12989557" type="audio/mpeg"/>
+      <itunes:duration>538</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/palmer-luckey-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/palmer-luckey/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/palmer-luckey/chapitres.json?v=b1bc9034" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Varun Mohan : deux pivots et un week-end à 2,4 milliards selon Bloomberg</title>
+      <itunes:title>Varun Mohan : deux pivots et un week-end à 2,4 milliards selon Bloomberg</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/varun-mohan/</link>
+      <guid isPermaLink="false">voix-de-lia-varun-mohan</guid>
+      <pubDate>Mon, 12 Oct 2026 07:50:05 GMT</pubDate>
+      <description>Médaille officieuse au Mexique, deux pivots radicaux et un week-end de juillet 2025 qui a secoué la Silicon Valley : Ada et Alan racontent Varun Mohan, de Windsurf à Google DeepMind.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/varun-mohan/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Médaille officieuse au Mexique, deux pivots radicaux et un week-end de juillet 2025 qui a secoué la Silicon Valley : Ada et Alan racontent Varun Mohan, de Windsurf à Google DeepMind.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/varun-mohan/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/varun-mohan.mp3?v=2dd3f372" length="13746176" type="audio/mpeg"/>
+      <itunes:duration>569</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/varun-mohan-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/varun-mohan/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/varun-mohan/chapitres.json?v=72011934" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Timnit Gebru, la chercheuse derrière les « perroquets stochastiques »</title>
+      <itunes:title>Timnit Gebru, la chercheuse derrière les « perroquets stochastiques »</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/timnit-gebru/</link>
+      <guid isPermaLink="false">voix-de-lia-timnit-gebru</guid>
+      <pubDate>Mon, 12 Oct 2026 07:34:37 GMT</pubDate>
+      <description>Réfugiée devenue ingénieure chez Apple, chercheuse chez Google puis fondatrice de son propre institut, Timnit Gebru a appris à l'IA à se regarder dans le miroir. Portrait d'une scientifique qui pose toujours la même question : quel problème essaie-t-on de résoudre ?
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/timnit-gebru/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Réfugiée devenue ingénieure chez Apple, chercheuse chez Google puis fondatrice de son propre institut, Timnit Gebru a appris à l&#39;IA à se regarder dans le miroir. Portrait d&#39;une scientifique qui pose toujours la même question : quel problème essaie-t-on de résoudre ?</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/timnit-gebru/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/timnit-gebru.mp3?v=fb29a90e" length="15455288" type="audio/mpeg"/>
+      <itunes:duration>640</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/timnit-gebru-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/timnit-gebru/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/timnit-gebru/chapitres.json?v=c979bdc1" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Meredith Whittaker : du service client de Google à la présidence de Signal</title>
+      <itunes:title>Meredith Whittaker : du service client de Google à la présidence de Signal</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/meredith-whittaker/</link>
+      <guid isPermaLink="false">voix-de-lia-meredith-whittaker</guid>
+      <pubDate>Mon, 12 Oct 2026 07:24:47 GMT</pubDate>
+      <description>Entrée chez Google au service client, elle a coorganisé la grève mondiale de 2018 avant de prendre la tête de Signal : portrait de Meredith Whittaker, l'une des critiques les plus en vue de l'industrie de l'IA.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/meredith-whittaker/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Entrée chez Google au service client, elle a coorganisé la grève mondiale de 2018 avant de prendre la tête de Signal : portrait de Meredith Whittaker, l&#39;une des critiques les plus en vue de l&#39;industrie de l&#39;IA.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/meredith-whittaker/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/meredith-whittaker.mp3?v=7c1a393a" length="11821964" type="audio/mpeg"/>
+      <itunes:duration>489</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/meredith-whittaker-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/meredith-whittaker/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/meredith-whittaker/chapitres.json?v=7ee1c438" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Joëlle Pineau : de l'alto à l'IA transparente</title>
+      <itunes:title>Joëlle Pineau : de l'alto à l'IA transparente</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/joelle-pineau/</link>
+      <guid isPermaLink="false">voix-de-lia-joelle-pineau</guid>
+      <pubDate>Mon, 12 Oct 2026 07:19:31 GMT</pubDate>
+      <description>Altiste devenue roboticienne, ancienne patronne de la recherche fondamentale de Meta et nommée directrice de l'IA de Cohere en 2025 : Ada et Alan racontent Joëlle Pineau, figure canadienne des modèles ouverts et de la reproductibilité en IA.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/joelle-pineau/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Altiste devenue roboticienne, ancienne patronne de la recherche fondamentale de Meta et nommée directrice de l&#39;IA de Cohere en 2025 : Ada et Alan racontent Joëlle Pineau, figure canadienne des modèles ouverts et de la reproductibilité en IA.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/joelle-pineau/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/joelle-pineau.mp3?v=405673d0" length="13221295" type="audio/mpeg"/>
+      <itunes:duration>547</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/joelle-pineau-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/joelle-pineau/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/joelle-pineau/chapitres.json?v=f4ae52f3" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Daphne Koller : de Coursera aux médicaments, sans baguette magique</title>
+      <itunes:title>Daphne Koller : de Coursera aux médicaments, sans baguette magique</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/daphne-koller/</link>
+      <guid isPermaLink="false">voix-de-lia-daphne-koller</guid>
+      <pubDate>Mon, 12 Oct 2026 07:09:49 GMT</pubDate>
+      <description>Titulaire d'une licence à dix-sept ans, cofondatrice de Coursera puis fondatrice de la biotech insitro, Daphne Koller met l'IA au service de la découverte de médicaments tout en mettant en garde contre les promesses trop belles.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/daphne-koller/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Titulaire d&#39;une licence à dix-sept ans, cofondatrice de Coursera puis fondatrice de la biotech insitro, Daphne Koller met l&#39;IA au service de la découverte de médicaments tout en mettant en garde contre les promesses trop belles.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/daphne-koller/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/daphne-koller.mp3?v=1d88a2d3" length="13607766" type="audio/mpeg"/>
+      <itunes:duration>563</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/daphne-koller-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/daphne-koller/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/daphne-koller/chapitres.json?v=ac49337b" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Ren Zhengfei : du rêve d'un petit pain à l'empire Huawei</title>
+      <itunes:title>Ren Zhengfei : du rêve d'un petit pain à l'empire Huawei</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/ren-zhengfei/</link>
+      <guid isPermaLink="false">voix-de-lia-ren-zhengfei</guid>
+      <pubDate>Mon, 12 Oct 2026 07:04:09 GMT</pubDate>
+      <description>Enfant de la Grande Famine, ingénieur militaire sans grade, fondateur de Huawei avec 21 000 yuans : Ada, Alan et leur invitée Lia racontent Ren Zhengfei, l'homme derrière les puces d'IA chinoises Ascend.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/ren-zhengfei/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Enfant de la Grande Famine, ingénieur militaire sans grade, fondateur de Huawei avec 21 000 yuans : Ada, Alan et leur invitée Lia racontent Ren Zhengfei, l&#39;homme derrière les puces d&#39;IA chinoises Ascend.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/ren-zhengfei/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/ren-zhengfei.mp3?v=5b66c78e" length="12733326" type="audio/mpeg"/>
+      <itunes:duration>527</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/ren-zhengfei-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/ren-zhengfei/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/ren-zhengfei/chapitres.json?v=69fd3642" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Alexandr Wang, de Los Alamos à la superintelligence de Meta</title>
+      <itunes:title>Alexandr Wang, de Los Alamos à la superintelligence de Meta</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/alexandr-wang/</link>
+      <guid isPermaLink="false">voix-de-lia-alexandr-wang</guid>
+      <pubDate>Mon, 12 Oct 2026 06:57:41 GMT</pubDate>
+      <description>Fils de physiciens de Los Alamos, fondateur de Scale AI à dix-neuf ans, nommé directeur de l'IA de Meta en juin 2025 : Ada, Alan et Lia racontent le parcours d'Alexandr Wang, l'homme des données.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/alexandr-wang/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Fils de physiciens de Los Alamos, fondateur de Scale AI à dix-neuf ans, nommé directeur de l&#39;IA de Meta en juin 2025 : Ada, Alan et Lia racontent le parcours d&#39;Alexandr Wang, l&#39;homme des données.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/alexandr-wang/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/alexandr-wang.mp3?v=63b4dcbc" length="13931391" type="audio/mpeg"/>
+      <itunes:duration>577</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/alexandr-wang-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/alexandr-wang/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/alexandr-wang/chapitres.json?v=fab10815" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Greg Brockman : de la ferme du Dakota au bâtisseur d'OpenAI</title>
+      <itunes:title>Greg Brockman : de la ferme du Dakota au bâtisseur d'OpenAI</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/greg-brockman/</link>
+      <guid isPermaLink="false">voix-de-lia-greg-brockman</guid>
+      <pubDate>Mon, 12 Oct 2026 06:52:02 GMT</pubDate>
+      <description>Il trayait les vaches dans le Dakota du Nord, il a été le premier CTO de Stripe, puis il a cofondé OpenAI dans son salon : Ada et Alan racontent Greg Brockman.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/greg-brockman/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il trayait les vaches dans le Dakota du Nord, il a été le premier CTO de Stripe, puis il a cofondé OpenAI dans son salon : Ada et Alan racontent Greg Brockman.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/greg-brockman/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/greg-brockman.mp3?v=bd5b8ae3" length="12096115" type="audio/mpeg"/>
+      <itunes:duration>500</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/greg-brockman-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/greg-brockman/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/greg-brockman/chapitres.json?v=2f790e50" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Thomas Wolf : le premier de la classe qui voulait des IA rebelles</title>
+      <itunes:title>Thomas Wolf : le premier de la classe qui voulait des IA rebelles</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/thomas-wolf/</link>
+      <guid isPermaLink="false">voix-de-lia-thomas-wolf</guid>
+      <pubDate>Mon, 12 Oct 2026 06:43:39 GMT</pubDate>
+      <description>Physicien, conseil en brevets, puis cofondateur de Hugging Face : le parcours de Thomas Wolf, l'homme qui rêve d'IA capables de poser les bonnes questions.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/thomas-wolf/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Physicien, conseil en brevets, puis cofondateur de Hugging Face : le parcours de Thomas Wolf, l&#39;homme qui rêve d&#39;IA capables de poser les bonnes questions.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/thomas-wolf/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/thomas-wolf.mp3?v=47499489" length="13107455" type="audio/mpeg"/>
+      <itunes:duration>542</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/thomas-wolf-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/thomas-wolf/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/thomas-wolf/chapitres.json?v=36dd8ec7" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Guillaume Lample, le chercheur discret au cœur de Mistral AI</title>
+      <itunes:title>Guillaume Lample, le chercheur discret au cœur de Mistral AI</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/guillaume-lample/</link>
+      <guid isPermaLink="false">voix-de-lia-guillaume-lample</guid>
+      <pubDate>Mon, 12 Oct 2026 06:37:33 GMT</pubDate>
+      <description>Polytechnicien, chercheur chez Meta puis cofondateur de Mistral AI, Guillaume Lample parle très peu : Ada et Alan racontent son parcours à travers ses travaux, des traductions sans dictionnaire jusqu'aux mathématiques.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/guillaume-lample/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Polytechnicien, chercheur chez Meta puis cofondateur de Mistral AI, Guillaume Lample parle très peu : Ada et Alan racontent son parcours à travers ses travaux, des traductions sans dictionnaire jusqu&#39;aux mathématiques.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/guillaume-lample/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/guillaume-lample.mp3?v=df7ba33c" length="13441212" type="audio/mpeg"/>
+      <itunes:duration>556</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/guillaume-lample-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/guillaume-lample/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/guillaume-lample/chapitres.json?v=1c9a9851" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Fidji Simo : de la famille de pêcheurs de Sète au sommet d'OpenAI</title>
+      <itunes:title>Fidji Simo : de la famille de pêcheurs de Sète au sommet d'OpenAI</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/fidji-simo/</link>
+      <guid isPermaLink="false">voix-de-lia-fidji-simo</guid>
+      <pubDate>Mon, 12 Oct 2026 06:32:13 GMT</pubDate>
+      <description>Née à Sète dans une famille de pêcheurs, Fidji Simo a lancé Facebook Live, dirigé Instacart puis est devenue la numéro deux d'OpenAI : portrait d'une dirigeante dont l'expérience de la maladie chronique a nourri l'engagement pour la santé et finalement interrompu son passage à la tête des activités commerciales d'OpenAI.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/fidji-simo/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Née à Sète dans une famille de pêcheurs, Fidji Simo a lancé Facebook Live, dirigé Instacart puis est devenue la numéro deux d&#39;OpenAI : portrait d&#39;une dirigeante dont l&#39;expérience de la maladie chronique a nourri l&#39;engagement pour la santé et finalement interrompu son passage à la tête des activités commerciales d&#39;OpenAI.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/fidji-simo/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/fidji-simo.mp3?v=fe1993c4" length="13436405" type="audio/mpeg"/>
+      <itunes:duration>556</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/fidji-simo-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/fidji-simo/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/fidji-simo/chapitres.json?v=9a22fe5e" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Noam Shazeer, l'ingénieur discret derrière le Transformer</title>
+      <itunes:title>Noam Shazeer, l'ingénieur discret derrière le Transformer</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/noam-shazeer/</link>
+      <guid isPermaLink="false">voix-de-lia-noam-shazeer</guid>
+      <pubDate>Mon, 12 Oct 2026 06:26:06 GMT</pubDate>
+      <description>Médaille d'or aux Olympiades de mathématiques, coauteur du Transformer, fondateur de Character.AI, puis recruté par OpenAI : Ada et Alan dressent le portrait de Noam Shazeer, l'un des inventeurs les plus discrets de l'IA moderne.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/noam-shazeer/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Médaille d&#39;or aux Olympiades de mathématiques, coauteur du Transformer, fondateur de Character.AI, puis recruté par OpenAI : Ada et Alan dressent le portrait de Noam Shazeer, l&#39;un des inventeurs les plus discrets de l&#39;IA moderne.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/noam-shazeer/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/noam-shazeer.mp3?v=b354b921" length="13581969" type="audio/mpeg"/>
+      <itunes:duration>562</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/noam-shazeer-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/noam-shazeer/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/noam-shazeer/chapitres.json?v=fd89e5c8" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Yoshua Bengio : le parrain de l'IA qui a changé d'avis</title>
+      <itunes:title>Yoshua Bengio : le parrain de l'IA qui a changé d'avis</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/yoshua-bengio/</link>
+      <guid isPermaLink="false">voix-de-lia-yoshua-bengio</guid>
+      <pubDate>Mon, 12 Oct 2026 06:12:10 GMT</pubDate>
+      <description>Il croyait aux réseaux de neurones quand presque personne n'y croyait. Il est devenu l'un des parrains de l'apprentissage profond, puis l'une des voix les plus écoutées sur les risques de l'IA : portrait de Yoshua Bengio.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/yoshua-bengio/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il croyait aux réseaux de neurones quand presque personne n&#39;y croyait. Il est devenu l&#39;un des parrains de l&#39;apprentissage profond, puis l&#39;une des voix les plus écoutées sur les risques de l&#39;IA : portrait de Yoshua Bengio.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/yoshua-bengio/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/yoshua-bengio.mp3?v=4cf35220" length="13483853" type="audio/mpeg"/>
+      <itunes:duration>558</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/yoshua-bengio-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/yoshua-bengio/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/yoshua-bengio/chapitres.json?v=b18586ed" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Andrew Ng : le prof de l'IA qui relativise la peur des robots tueurs</title>
+      <itunes:title>Andrew Ng : le prof de l'IA qui relativise la peur des robots tueurs</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/andrew-ng/</link>
+      <guid isPermaLink="false">voix-de-lia-andrew-ng</guid>
+      <pubDate>Mon, 12 Oct 2026 06:11:12 GMT</pubDate>
+      <description>De l'ordinateur offert par son père au neurone qui reconnaît les chats, portrait d'Andrew Ng, cofondateur de Google Brain et de Coursera, voix centrale du débat sur les risques de l'IA.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/andrew-ng/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>De l&#39;ordinateur offert par son père au neurone qui reconnaît les chats, portrait d&#39;Andrew Ng, cofondateur de Google Brain et de Coursera, voix centrale du débat sur les risques de l&#39;IA.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/andrew-ng/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/andrew-ng.mp3?v=c64aa66c" length="12864185" type="audio/mpeg"/>
+      <itunes:duration>532</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/andrew-ng-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/andrew-ng/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/andrew-ng/chapitres.json?v=e85b8b54" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Peter Steinberger : le père d'OpenClaw, l'IA qui agit</title>
+      <itunes:title>Peter Steinberger : le père d'OpenClaw, l'IA qui agit</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/peter-steinberger/</link>
+      <guid isPermaLink="false">voix-de-lia-peter-steinberger</guid>
+      <pubDate>Mon, 12 Oct 2026 06:10:23 GMT</pubDate>
+      <description>Un développeur autrichien, un visa qui n'arrive pas, une première entreprise et une sortie à neuf chiffres selon lui, un grand vide, puis un projet de week-end devenu OpenClaw : le portrait de Peter Steinberger, recruté par OpenAI en février 2026.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/peter-steinberger/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Un développeur autrichien, un visa qui n&#39;arrive pas, une première entreprise et une sortie à neuf chiffres selon lui, un grand vide, puis un projet de week-end devenu OpenClaw : le portrait de Peter Steinberger, recruté par OpenAI en février 2026.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/peter-steinberger/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/peter-steinberger.mp3?v=6ce394a5" length="13142209" type="audio/mpeg"/>
+      <itunes:duration>544</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/peter-steinberger-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/peter-steinberger/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/peter-steinberger/chapitres.json?v=8e046008" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Satya Nadella : du cricket au cloud, le patron qui apprend tout</title>
+      <itunes:title>Satya Nadella : du cricket au cloud, le patron qui apprend tout</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/satya-nadella/</link>
+      <guid isPermaLink="false">voix-de-lia-satya-nadella</guid>
+      <pubDate>Mon, 12 Oct 2026 05:53:33 GMT</pubDate>
+      <description>Un élève fou de cricket qui rate son grand concours, un père bouleversé par la naissance de son fils, puis le patron qui a fait passer Microsoft de Windows au cloud et à l'IA : le portrait de Satya Nadella.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/satya-nadella/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Un élève fou de cricket qui rate son grand concours, un père bouleversé par la naissance de son fils, puis le patron qui a fait passer Microsoft de Windows au cloud et à l&#39;IA : le portrait de Satya Nadella.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/satya-nadella/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/satya-nadella.mp3?v=9dba008e" length="12551838" type="audio/mpeg"/>
+      <itunes:duration>520</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/satya-nadella-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/satya-nadella/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/satya-nadella/chapitres.json?v=4ad26d0d" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Jensen Huang : de la plonge chez Denny's aux puces de l'IA</title>
+      <itunes:title>Jensen Huang : de la plonge chez Denny's aux puces de l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/jensen-huang/</link>
+      <guid isPermaLink="false">voix-de-lia-jensen-huang</guid>
+      <pubDate>Mon, 12 Oct 2026 05:52:43 GMT</pubDate>
+      <description>Pensionnat du Kentucky, plonge chez Denny's, paris fous sur des puces : Ada et Alan racontent Jensen Huang, cofondateur de NVIDIA, avec Lia de Choucroute Citron en invitée.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/jensen-huang/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Pensionnat du Kentucky, plonge chez Denny&#39;s, paris fous sur des puces : Ada et Alan racontent Jensen Huang, cofondateur de NVIDIA, avec Lia de Choucroute Citron en invitée.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/jensen-huang/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/jensen-huang.mp3?v=7d253e5d" length="13823834" type="audio/mpeg"/>
+      <itunes:duration>572</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/jensen-huang-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/jensen-huang/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/jensen-huang/chapitres.json?v=95bc317e" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Dario Amodei, le bâtisseur d'IA qui demande de ralentir</title>
       <itunes:title>Dario Amodei, le bâtisseur d'IA qui demande de ralentir</itunes:title>
