@@ -8,7 +8,7 @@
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Mon, 12 Oct 2026 21:57:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2026 22:28:18 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -26,6 +26,50 @@
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Aidan Gomez : le « T » de ChatGPT à 20 ans, puis Cohere</title>
+      <itunes:title>Aidan Gomez : le « T » de ChatGPT à 20 ans, puis Cohere</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/aidan-gomez/</link>
+      <guid isPermaLink="false">voix-de-lia-aidan-gomez</guid>
+      <pubDate>Mon, 12 Oct 2026 22:28:18 GMT</pubDate>
+      <description>À vingt ans, stagiaire chez Google Brain, il cosigne l'article qui invente le Transformer. Il fonde ensuite Cohere à Toronto. Ada, Alan et Lia racontent le parcours d'Aidan Gomez.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/aidan-gomez/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>À vingt ans, stagiaire chez Google Brain, il cosigne l&#39;article qui invente le Transformer. Il fonde ensuite Cohere à Toronto. Ada, Alan et Lia racontent le parcours d&#39;Aidan Gomez.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/aidan-gomez/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/aidan-gomez.mp3?v=40ffc999" length="13447406" type="audio/mpeg"/>
+      <itunes:duration>557</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/aidan-gomez-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/aidan-gomez/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/aidan-gomez/chapitres.json?v=e6fc73d7" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Jonathan Cherki : des légumes secs marseillais à la licorne du clic</title>
+      <itunes:title>Jonathan Cherki : des légumes secs marseillais à la licorne du clic</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/jonathan-cherki/</link>
+      <guid isPermaLink="false">voix-de-lia-jonathan-cherki</guid>
+      <pubDate>Mon, 12 Oct 2026 22:18:00 GMT</pubDate>
+      <description>Petit-fils d'un importateur marseillais de légumes secs, il dit n'avoir jamais écrit lui-même une ligne de code chez Contentsquare, et a pourtant bâti une licorne qui analyse nos gestes sur les sites web : portrait de Jonathan Cherki.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/jonathan-cherki/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Petit-fils d&#39;un importateur marseillais de légumes secs, il dit n&#39;avoir jamais écrit lui-même une ligne de code chez Contentsquare, et a pourtant bâti une licorne qui analyse nos gestes sur les sites web : portrait de Jonathan Cherki.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/jonathan-cherki/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/jonathan-cherki.mp3?v=0a243832" length="13101895" type="audio/mpeg"/>
+      <itunes:duration>542</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/jonathan-cherki-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/jonathan-cherki/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/jonathan-cherki/chapitres.json?v=962c76ed" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Winston Weinberg : 86 sur 100, le test qui a fait naître Harvey</title>
       <itunes:title>Winston Weinberg : 86 sur 100, le test qui a fait naître Harvey</itunes:title>
@@ -377,28 +421,6 @@ Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendan
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/edwin-chen-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/edwin-chen/transcription.html" type="text/html" language="fr"/>
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/edwin-chen/chapitres.json?v=2bbcc97d" type="application/json+chapters"/>
-    </item>
-    <item>
-      <title>Jonathan Cherki : des légumes secs marseillais à la licorne du clic</title>
-      <itunes:title>Jonathan Cherki : des légumes secs marseillais à la licorne du clic</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/jonathan-cherki/</link>
-      <guid isPermaLink="false">voix-de-lia-jonathan-cherki</guid>
-      <pubDate>Mon, 12 Oct 2026 21:31:09 GMT</pubDate>
-      <description>Petit-fils d'un importateur marseillais de légumes secs, il dit n'avoir jamais écrit lui-même une ligne de code chez Contentsquare, et a pourtant bâti une licorne qui analyse nos gestes sur les sites web : portrait de Jonathan Cherki.
-
-Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/jonathan-cherki/
-
-Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Petit-fils d&#39;un importateur marseillais de légumes secs, il dit n&#39;avoir jamais écrit lui-même une ligne de code chez Contentsquare, et a pourtant bâti une licorne qui analyse nos gestes sur les sites web : portrait de Jonathan Cherki.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/jonathan-cherki/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/jonathan-cherki.mp3?v=1e3ddcf7" length="13094853" type="audio/mpeg"/>
-      <itunes:duration>542</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/jonathan-cherki-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/jonathan-cherki/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/jonathan-cherki/chapitres.json?v=962c76ed" type="application/json+chapters"/>
     </item>
     <item>
       <title>Dylan Field : de la bourse Thiel au milliard d'Adobe</title>
