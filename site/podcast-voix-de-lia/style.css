@@ -1598,3 +1598,4 @@ html.en-recherche #grille-portraits .card-ouvrir .co-long{display:inline}html.en
 .enquete-liens a svg{width:14px;height:14px}
 .enquete-liens a:hover{border-color:var(--accent)}
 .portrait-actions .pa-btn.pa-partager{margin-left:0}
+.enquete .enquete-ia{margin:-.3rem 0 1rem;padding-left:.8rem;border-left:2px solid var(--accent);color:var(--text);font-weight:400}
