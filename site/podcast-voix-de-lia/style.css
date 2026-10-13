@@ -1473,3 +1473,22 @@ html.anime .lia-carte:not(.deplie):not(.ecoute) .cc-encart p{display:none}
 .outils.familles-ouvertes .fb-fleche{transform:rotate(180deg)}
 html.anime .outils:not(.familles-ouvertes) .puces{display:none}
 html:not(.anime) .vues,html:not(.anime) .familles-bouton{display:none}
+
+/* « À écouter maintenant » dans le bandeau (13/10/2026) : des épisodes dès l'arrivée, avant toute explication */
+.a-la-une{grid-area:une;margin-top:.6rem;text-align:left}
+.une-titre{margin:0 0 .7rem;font-family:var(--ff-mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.une-liste{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.9rem}
+.une-carte{min-width:0}
+.une-jouer{position:relative;display:block;width:100%;padding:0;border:1px solid #c4a26540;border-radius:12px;overflow:hidden;background:#0c0c0f;cursor:pointer;aspect-ratio:1}
+.une-jouer img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.une-jouer:hover img{transform:scale(1.05)}
+.une-rond{position:absolute;right:.5rem;bottom:.5rem;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--bg);box-shadow:0 4px 14px #0008}
+.une-rond svg{width:16px;height:16px;margin-left:2px}
+.une-jouer.joue .une-rond,.une-jouer:hover .une-rond{background:var(--accent-clair)}
+.une-nom{display:block;margin-top:.5rem;color:var(--text);font-family:var(--ff-display);font-size:1rem;line-height:1.2;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.une-nom:hover{color:var(--accent-clair)}
+.une-role{display:block;color:var(--text-dim);font-size:.75rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hero-dedans{grid-template-areas:"texte" "lia" "actions" "une"}
+@media(min-width:900px){.hero-dedans{grid-template-areas:"texte lia" "actions lia" "une une"}}
+@media(max-width:899px){.une-liste{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.7rem;padding-bottom:.4rem;scrollbar-width:none}.une-liste::-webkit-scrollbar{display:none}.une-carte{flex:0 0 38%;scroll-snap-align:start}}
+@media(max-width:899px){.une-rond{width:34px;height:34px;right:.4rem;bottom:.4rem}.une-rond svg{width:13px;height:13px}}
