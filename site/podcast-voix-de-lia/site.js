@@ -19,6 +19,45 @@
     return m + ":" + (r < 10 ? "0" : "") + r;
   }
 
+  /* ------------------------------------------------ affichage « Essentiel » / « Tout afficher » (page d'un portrait, 13/10/2026)
+     Essentiel par défaut : le reste est rangé dans des tiroirs. « Tout afficher » les ouvre tous et la page s'en
+     souvient. Un lien vers un passage rangé (#sources…) ouvre son tiroir. Une astuce, une seule fois : toucher une réplique. */
+  (function () {
+    var boutons = $$("[data-affichage]");
+    if (!boutons.length) return;
+    var lire = function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } };
+    var ecrire = function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} };
+    var choisir = function (v, sauver) {
+      var complet = v === "complet";
+      doc.classList.toggle("complet", complet);
+      boutons.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-affichage") === v ? "true" : "false"); });
+      $$("details[data-tiroir]").forEach(function (t) { t.open = complet; });
+      if (sauver) ecrire("vdia-affichage", v);
+    };
+    choisir(lire("vdia-affichage") === "complet" ? "complet" : "simple", false);
+    boutons.forEach(function (b) { b.addEventListener("click", function () { choisir(b.getAttribute("data-affichage"), true); }); });
+    var ouvrirCible = function () {
+      var id = location.hash.slice(1), el = null;
+      if (!id) return;
+      try { el = document.getElementById(decodeURIComponent(id)); } catch (e) {}
+      var t = el && el.closest ? el.closest("details[data-tiroir]") : null;
+      if (t && !t.open) { t.open = true; el.scrollIntoView(); }
+    };
+    window.addEventListener("hashchange", ouvrirCible);
+    ouvrirCible();
+    var astuce = $(".astuce");
+    if (astuce && !lire("vdia-astuce")) {
+      astuce.hidden = false;
+      var vu = function (ev) {
+        if (!ev.target.closest || !ev.target.closest(".replique")) return;
+        astuce.hidden = true;
+        ecrire("vdia-astuce", "1");
+        document.removeEventListener("click", vu, true);
+      };
+      document.addEventListener("click", vu, true);
+    }
+  })();
+
   /* ------------------------------------------------ barre du haut qui se densifie au défilement, bouton « remonter » */
   var barre = $(".barre");
   var haut = $(".remonter");
@@ -164,11 +203,11 @@
       var lire = document.createElement("button");
       lire.type = "button";
       lire.className = "lia-lire";
-      lire.textContent = "Lire tout";
+      lire.textContent = "Lire le texte";
       lire.setAttribute("aria-expanded", "false");
       citation.parentNode.insertBefore(lire, citation.nextSibling);
       var texteLia = $("p", citation) || citation;
-      var majLire = function () { lire.hidden = lia.classList.contains("deplie") || texteLia.scrollHeight <= texteLia.clientHeight + 2; };
+      var majLire = function () { lire.hidden = lia.classList.contains("deplie"); };
       lire.addEventListener("click", function () { lia.classList.add("deplie"); lire.setAttribute("aria-expanded", "true"); majLire(); });
       majLire();
       window.addEventListener("resize", majLire);
@@ -645,6 +684,11 @@
       actuel = null; marquerCartes();
     });
     pAudio.addEventListener("ended", function () { voisin(1); });
+    // « La conversation » : la page du portrait reprend au moment écouté (même clé que sa reprise, 13/10/2026)
+    $(".lien-page", player).addEventListener("click", function () {
+      if (!actuel || actuel.type !== "audio" || !(pAudio.currentTime > 2)) return;
+      try { localStorage.setItem("vdia-position:" + new URL(actuel.page, location.href).pathname, String(Math.floor(pAudio.currentTime))); } catch (e) {}
+    });
     document.addEventListener("keydown", function (e) {
       if (!player.classList.contains("active") || e.target.closest("input,textarea,dialog")) return;
       if (e.key === "Escape") $("#closeBtn").click();
@@ -1026,7 +1070,13 @@
         totalFamille[f] = cartes.filter(function (c) { return famillesDe[c.getAttribute("data-id")].indexOf(f) >= 0; }).length;
       });
       var total = cartes.length;
-      var etat = { q: "", familles: [] };
+      var boutonsVue = $$("[data-vue]", outils);
+      var boutonFamilles = $(".familles-bouton", outils);
+      var celebreDe = {};
+      cartes.forEach(function (c) { celebreDe[c.getAttribute("data-id")] = c.getAttribute("data-celebre") === "1"; });
+      // vue « Les plus célèbres » par défaut (13/10/2026) ; une recherche ou une famille cherche dans tous les portraits
+      var etat = { q: "", familles: [], vue: boutonsVue.length ? "celebres" : "tous" };
+      var vueActive = function () { return etat.vue === "celebres" && !motsDe(etat.q.trim()).length && !etat.familles.length; };
       var index = null, chargement = false, echec = false, resultat = null, suggere = null, premierePuce = null;
       // ce que chaque carte affiche d'origine (rendu tel quel quand la recherche s'efface)
       cartes.forEach(function (c) {
@@ -1048,7 +1098,8 @@
         resultat = index && etat.q ? chercher(index, etat.q) : null;
         appliquer();
       };
-      var passe = function (id) {
+      var passe = function (id, sansVue) {
+        if (!sansVue && vueActive() && !celebreDe[id]) return false;
         var f = famillesDe[id] || [];
         for (var i = 0; i < etat.familles.length; i++) if (f.indexOf(etat.familles[i]) < 0) return false;
         return !resultat || !!resultat.res[id];
@@ -1106,7 +1157,7 @@
         // chaque puce dit combien de portraits on verrait en l'ajoutant (0 : elle s'éteint)
         puces.forEach(function (b) {
           var f = b.getAttribute("data-famille"), on = etat.familles.indexOf(f) >= 0;
-          var k = on ? n : cartes.filter(function (c) { var id = c.getAttribute("data-id"); return famillesDe[id].indexOf(f) >= 0 && passe(id); }).length;
+          var k = on ? n : cartes.filter(function (c) { var id = c.getAttribute("data-id"); return famillesDe[id].indexOf(f) >= 0 && passe(id, true); }).length;
           b.setAttribute("aria-pressed", on ? "true" : "false");
           b.classList.toggle("vide", !on && k === 0);
           b.disabled = !on && k === 0;
@@ -1121,7 +1172,7 @@
         else if (qUtile && echec) ajouterTexte(compte, "La recherche n'a pas pu se charger. Vérifiez la connexion, puis réessayez.");
         else if (!filtre) {
           nombre(compte, n);
-          ajouterTexte(compte, " portrait" + (n > 1 ? "s" : "") + (q ? " · tapez au moins deux lettres" : ""));
+          ajouterTexte(compte, " portrait" + (n > 1 ? "s" : "") + (vueActive() ? " parmi les plus célèbres" : "") + (q ? " · tapez au moins deux lettres" : ""));
         } else {
           if (n) { nombre(compte, n); ajouterTexte(compte, " portrait" + (n > 1 ? "s" : "")); }
           else ajouterTexte(compte, "Aucun portrait");
@@ -1135,6 +1186,9 @@
           }
           if (suggere) compte.appendChild(morceau("visuellement-cache", ". Vouliez-vous dire : " + suggere.texte + " ?"));
         }
+        boutonsVue.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-vue") === etat.vue ? "true" : "false"); });
+        if (etat.familles.length) outils.classList.add("familles-ouvertes");
+        if (boutonFamilles) boutonFamilles.setAttribute("aria-expanded", outils.classList.contains("familles-ouvertes") ? "true" : "false");
         doc.classList.toggle("en-filtre", filtre);
         doc.classList.toggle("en-recherche", filtre && qUtile && !!resultat && n > 0);
         outils.classList.toggle("filtre", filtre);
@@ -1249,16 +1303,18 @@
           var h = [];
           if (etat.familles.length) h.push("famille=" + etat.familles.map(encodeURIComponent).join(","));
           if (etat.q.trim()) h.push("q=" + encodeURIComponent(etat.q.trim()));
+          if (boutonsVue.length && etat.vue === "tous") h.push("vue=tous");
           // une autre ancre (#abonnement, après un clic dans la barre) : on n'y touche pas
-          if (!h.length && location.hash && !/[#&](famille|q)=/.test(location.hash)) return;
+          if (!h.length && location.hash && !/[#&](famille|q|vue)=/.test(location.hash)) return;
           var cible = h.length ? "#" + h.join("&") : location.pathname + location.search;
           if ((h.length ? "#" + h.join("&") : "") === location.hash) return;
           try { history.replaceState(null, "", cible); } catch (e) {}
         }, 350);
       };
       var lireAdresse = function () {
-        var h = location.hash, mf = /[#&]famille=([^&]*)/.exec(h), mq = /[#&]q=([^&]*)/.exec(h);
-        if (!mf && !mq) return false;
+        var h = location.hash, mf = /[#&]famille=([^&]*)/.exec(h), mq = /[#&]q=([^&]*)/.exec(h), mv = /[#&]vue=tous/.test(h);
+        if (!mf && !mq && !mv) return false;
+        if (boutonsVue.length) etat.vue = mv ? "tous" : "celebres";
         var dec = function (s) { try { return decodeURIComponent(s.replace(/\+/g, " ")); } catch (e) { return ""; } };
         etat.familles = mf ? dec(mf[1]).split(",").filter(function (f) { return nomsFamilles[f]; }) : [];
         etat.q = mq ? dec(mq[1]).slice(0, 80) : "";
@@ -1331,6 +1387,13 @@
           if (!window.matchMedia("(pointer:coarse)").matches) try { champ.focus({ preventScroll: true }); } catch (e) { champ.focus(); }
         });
       });
+      boutonsVue.forEach(function (b) {
+        b.addEventListener("click", function () { etat.vue = b.getAttribute("data-vue"); appliquer(); ecrireAdresse(); });
+      });
+      if (boutonFamilles) boutonFamilles.addEventListener("click", function () {
+        outils.classList.toggle("familles-ouvertes");
+        boutonFamilles.setAttribute("aria-expanded", outils.classList.contains("familles-ouvertes") ? "true" : "false");
+      });
       puces.forEach(function (b) {
         b.addEventListener("click", function () {
           var f = b.getAttribute("data-famille"), i = etat.familles.indexOf(f);
@@ -1375,7 +1438,7 @@
         if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { setTimeout(placer, 60); });
         window.addEventListener("load", function () { setTimeout(placer, 60); });
         if (etat.q) chargerIndex(urlIndex).then(function () { setTimeout(placer, 60); }, function () {});
-      }
+      } else if (boutonsVue.length) appliquer(); // vue « Les plus célèbres » dès l'arrivée
     }
 
     /* ------------------------------------------------ pages des portraits : la recherche dans une fenêtre */

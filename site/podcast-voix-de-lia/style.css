@@ -1402,6 +1402,74 @@ html.en-pause .replique.en-cours .bulle{animation:respire-bulle 1.6s ease-in-out
 .conversation.minutee .replique[data-debut] .bulle{cursor:pointer}
 html.en-ecoute .replique.en-cours .bulle:hover{box-shadow:0 0 0 1px var(--voix,var(--accent)),0 0 44px -6px var(--voix,var(--accent))}
 
+/* affichage « Essentiel » / « Tout afficher » (13/10/2026) : sans JavaScript, tout reste affiché comme avant */
+.affichage{display:inline-flex;margin-top:1.2rem;padding:3px;border:1px solid var(--border-2);border-radius:999px;background:#0c0c0f}
+html:not(.anime) .affichage{display:none}
+.affichage button{min-height:36px;padding:.4rem 1rem;border:0;border-radius:999px;background:none;color:var(--text-dim);font-family:var(--ff-body);font-size:.84rem;cursor:pointer;transition:background .25s,color .25s}
+.affichage button:hover{color:var(--text)}
+.affichage button[aria-pressed="true"]{background:var(--accent);color:var(--bg);font-weight:500}
+html.anime:not(.complet) .complet-seul{display:none!important}
+html.complet .simple-seul{display:none!important}
+html.anime:not(.complet) .portrait-corps{grid-template-columns:minmax(0,1fr);max-width:820px;margin-inline:auto}
+.plus-loin{margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border-2)}
+.tiroir{margin-top:.7rem;border:1px solid var(--border-2);border-radius:14px;background:#0c0c0f;transition:border-color .25s}
+.tiroir[open]{border-color:#c4a26566}
+.tiroir>summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:56px;padding:.9rem 1.2rem;list-style:none;cursor:pointer;font-family:var(--ff-body);font-size:1rem;color:var(--text)}
+.tiroir>summary::-webkit-details-marker{display:none}
+.tiroir>summary::after{content:"+";flex:none;color:var(--accent);font-size:1.5rem;line-height:1;transition:transform .3s var(--ease)}
+.tiroir[open]>summary::after{transform:rotate(45deg)}
+.tiroir>summary:hover{color:var(--accent-clair)}
+.tiroir-dedans{padding:0 1.2rem 1.4rem}
+.tiroir .reveal{opacity:1!important;transform:none!important}
+.tiroir .bloc,.tiroir .signaler,.tiroir .lia-encart,.tiroir .partage{margin-top:0}
+.tiroir .bloc>.section-label,.tiroir .bloc>h2{display:none}
+.tiroir .familles-portrait{margin-top:0}
+.astuce{display:inline-flex;align-items:center;gap:.5rem;margin:-1rem 0 1.6rem;padding:.55rem 1rem;border-radius:999px;background:#c4a2651f;border:1px solid #c4a26566;color:var(--accent-clair);font-size:.9rem}
+.astuce[hidden]{display:none}
+
+/* « Comment on fabrique un portrait » (13/10/2026) */
+.methode-bande{max-width:1180px;margin:0 auto;padding:4.5rem 1.5rem 1rem}
+.etapes{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
+.etapes li{position:relative;padding:1.4rem 1.3rem 1.3rem;border:1px solid var(--border-2);border-radius:16px;background:linear-gradient(180deg,#15120d,#0c0c0f)}
+.etape-n{display:inline-grid;place-items:center;width:30px;height:30px;margin-bottom:.8rem;border-radius:50%;background:var(--accent);color:var(--bg);font-family:var(--ff-mono);font-size:.8rem;font-weight:600}
+.etapes strong{display:block;font-family:var(--ff-display);font-size:1.25rem;font-weight:500;color:var(--text);margin-bottom:.4rem}
+.etapes p{margin:0;color:var(--text-dim);font-size:.93rem;line-height:1.55}
+.methode-pied{margin-top:1.4rem;color:var(--text-dim);font-size:.93rem}
+.methode-pied a{color:var(--accent-clair);white-space:nowrap}
+.methode-pied a svg{width:14px;height:14px;vertical-align:-2px}
+@media(max-width:699px){.methode-bande{padding:3rem 1rem .5rem}.methode-pied a{white-space:normal}}
+/* cartes : on voit qu'on peut ouvrir la page (conversation, sources) et pas seulement écouter */
+.card-ouvrir{display:inline-flex;align-items:center;gap:.35rem;margin-top:.7rem;color:var(--accent-clair);font-family:var(--ff-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase}
+.card-ouvrir svg{width:13px;height:13px}
+.episode-card:hover .card-ouvrir{color:var(--accent)}
+/* lecteur collant : « La conversation » écrit en toutes lettres */
+.player .lien-page{display:inline-flex;align-items:center;gap:.4rem;width:auto;padding:0 .8rem;border-radius:999px;border:1px solid #c4a26566;color:var(--accent-clair);font-size:.78rem;white-space:nowrap}
+.player .lien-page svg{width:14px;height:14px}
+@media(max-width:560px){.player .lien-page .lp-mot{display:none}.player .lien-page{padding:0;width:40px;justify-content:center}}
+
+/* Bandeau plus court (13/10/2026, Alexandre : « le bandeau prend trop de place ») : la carte de Lia ne montre qu'une
+   accroche ; le texte entier s'ouvre quand on l'écoute ou quand on touche « Lire » (site.js, classe deplie). */
+.lia-accroche{margin:.7rem 0 0;color:var(--text-dim);font-size:.95rem;line-height:1.5}
+html.anime .lia-carte.deplie .lia-accroche,html.anime .lia-carte.ecoute .lia-accroche{display:none}
+html:not(.anime) .lia-accroche{display:none}
+html.anime .lia-carte:not(.deplie):not(.ecoute) .lia-citation,html.anime .lia-carte:not(.deplie):not(.ecoute) .lia-texte figcaption{display:none}
+html.anime .lia-carte:not(.deplie):not(.ecoute) .lia-texte{margin-top:.2rem;justify-content:flex-start}
+html.anime .lia-carte:not(.deplie):not(.ecoute) .cc-encart p{display:none}
+.hero{padding-top:4rem;padding-bottom:1.2rem}
 /* « Écoutez sur » Apple Podcasts / Spotify dans le bloc S'abonner (13/10/2026) */
 .platforms-vdia{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:.4rem 0 1.2rem}
 .platforms-titre{font-family:var(--ff-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);margin-right:.3rem}
+
+/* Vue « Les plus célèbres » / « Tous » et familles derrière un bouton (13/10/2026) */
+.vues{display:inline-flex;margin-bottom:.9rem;padding:3px;border:1px solid var(--border-2);border-radius:999px;background:#0c0c0f}
+.vue{min-height:40px;padding:.45rem 1.1rem;border:0;border-radius:999px;background:none;color:var(--text-dim);font-family:var(--ff-body);font-size:.9rem;cursor:pointer;transition:background .25s,color .25s}
+.vue:hover{color:var(--text)}
+.vue[aria-pressed="true"]{background:var(--accent);color:var(--bg);font-weight:500}
+.vue .vue-n{font-family:var(--ff-mono);font-size:.66rem;opacity:.75;margin-left:.25rem}
+.familles-bouton{display:inline-flex;align-items:center;gap:.35rem;min-height:40px;margin-top:.8rem;padding:.45rem 1rem;border:1px solid var(--border-2);border-radius:999px;background:#0c0c0f;color:var(--text-dim);font-family:var(--ff-body);font-size:.86rem;cursor:pointer}
+.familles-bouton:hover{color:var(--text);border-color:#c4a26599}
+.familles-bouton .vue-n{font-family:var(--ff-mono);font-size:.62rem;color:var(--text-faible)}
+.fb-fleche{transition:transform .25s}
+.outils.familles-ouvertes .fb-fleche{transform:rotate(180deg)}
+html.anime .outils:not(.familles-ouvertes) .puces{display:none}
+html:not(.anime) .vues,html:not(.anime) .familles-bouton{display:none}
