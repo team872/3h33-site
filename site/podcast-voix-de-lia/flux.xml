@@ -8,7 +8,7 @@
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Mon, 12 Oct 2026 22:56:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 08:12:16 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -26,6 +26,292 @@
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Mike Krieger : la première photo d'Instagram, puis Anthropic Labs</title>
+      <itunes:title>Mike Krieger : la première photo d'Instagram, puis Anthropic Labs</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/mike-krieger/</link>
+      <guid isPermaLink="false">voix-de-lia-mike-krieger</guid>
+      <pubDate>Tue, 13 Oct 2026 08:12:16 GMT</pubDate>
+      <description>Né à São Paulo, il a publié la toute première photo d'Instagram en 2010, connu l'échec avec Artifact, puis rejoint Anthropic, dont il quitte la direction des produits en janvier 2026 pour rejoindre Labs : portrait de Mike Krieger.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/mike-krieger/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Né à São Paulo, il a publié la toute première photo d&#39;Instagram en 2010, connu l&#39;échec avec Artifact, puis rejoint Anthropic, dont il quitte la direction des produits en janvier 2026 pour rejoindre Labs : portrait de Mike Krieger.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/mike-krieger/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/mike-krieger.mp3?v=6536cc07" length="12921204" type="audio/mpeg"/>
+      <itunes:duration>535</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/mike-krieger-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/mike-krieger/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/mike-krieger/chapitres.json?v=045803b0" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Arvind Jain, le chèque en blanc et la recherche « pas cool »</title>
+      <itunes:title>Arvind Jain, le chèque en blanc et la recherche « pas cool »</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/arvind-jain/</link>
+      <guid isPermaLink="false">voix-de-lia-arvind-jain</guid>
+      <pubDate>Tue, 13 Oct 2026 08:10:43 GMT</pubDate>
+      <description>En 2013, il répondait « Je ne suis pas un entrepreneur » ; il a pourtant cofondé Rubrik, puis Glean, le moteur de recherche d'entreprise valorisé 7,2 milliards de dollars en juin 2025 : portrait d'Arvind Jain.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/arvind-jain/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>En 2013, il répondait « Je ne suis pas un entrepreneur » ; il a pourtant cofondé Rubrik, puis Glean, le moteur de recherche d&#39;entreprise valorisé 7,2 milliards de dollars en juin 2025 : portrait d&#39;Arvind Jain.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/arvind-jain/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/arvind-jain.mp3?v=30072b80" length="12632782" type="audio/mpeg"/>
+      <itunes:duration>523</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/arvind-jain-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/arvind-jain/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/arvind-jain/chapitres.json?v=bf17170c" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Matthieu Rouif : du lasso de GoPro aux images qui font vendre</title>
+      <itunes:title>Matthieu Rouif : du lasso de GoPro aux images qui font vendre</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/matthieu-rouif/</link>
+      <guid isPermaLink="false">voix-de-lia-matthieu-rouif</guid>
+      <pubDate>Tue, 13 Oct 2026 08:09:55 GMT</pubDate>
+      <description>Des heures à détourer une image au lasso chez GoPro, une appli codée en deux semaines, puis Photoroom, valorisée cinq cents millions de dollars en 2024 : portrait de Matthieu Rouif.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/matthieu-rouif/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Des heures à détourer une image au lasso chez GoPro, une appli codée en deux semaines, puis Photoroom, valorisée cinq cents millions de dollars en 2024 : portrait de Matthieu Rouif.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/matthieu-rouif/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/matthieu-rouif.mp3?v=44e1a4bf" length="13078604" type="audio/mpeg"/>
+      <itunes:duration>541</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/matthieu-rouif-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/matthieu-rouif/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/matthieu-rouif/chapitres.json?v=ee629939" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Eiso Kant : trop tôt sur l'IA du code, puis Poolside</title>
+      <itunes:title>Eiso Kant : trop tôt sur l'IA du code, puis Poolside</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/eiso-kant/</link>
+      <guid isPermaLink="false">voix-de-lia-eiso-kant</guid>
+      <pubDate>Tue, 13 Oct 2026 08:09:10 GMT</pubDate>
+      <description>Il a parié sur l'IA appliquée au code dès 2015, a connu ce qu'il appelle le plus grand échec de sa carrière, puis a cofondé Poolside en 2023, avant d'en devenir co-PDG en juillet 2025 : portrait d'Eiso Kant, entrepreneur néerlandais.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/eiso-kant/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il a parié sur l&#39;IA appliquée au code dès 2015, a connu ce qu&#39;il appelle le plus grand échec de sa carrière, puis a cofondé Poolside en 2023, avant d&#39;en devenir co-PDG en juillet 2025 : portrait d&#39;Eiso Kant, entrepreneur néerlandais.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/eiso-kant/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/eiso-kant.mp3?v=b4697516" length="12957207" type="audio/mpeg"/>
+      <itunes:duration>536</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/eiso-kant-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/eiso-kant/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/eiso-kant/chapitres.json?v=3f7ca907" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Charles Kantor : 220 millions avant le premier produit</title>
+      <itunes:title>Charles Kantor : 220 millions avant le premier produit</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/charles-kantor/</link>
+      <guid isPermaLink="false">voix-de-lia-charles-kantor</guid>
+      <pubDate>Tue, 13 Oct 2026 08:08:51 GMT</pubDate>
+      <description>Il a réuni quatre anciens de DeepMind et 220 millions de dollars avant même un premier produit, puis il est revenu en septembre 2026 avec Blackfuel : portrait de Charles Kantor, cofondateur de la start-up française H.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/charles-kantor/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il a réuni quatre anciens de DeepMind et 220 millions de dollars avant même un premier produit, puis il est revenu en septembre 2026 avec Blackfuel : portrait de Charles Kantor, cofondateur de la start-up française H.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/charles-kantor/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/charles-kantor.mp3?v=26194619" length="13467390" type="audio/mpeg"/>
+      <itunes:duration>557</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/charles-kantor-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/charles-kantor/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/charles-kantor/chapitres.json?v=9a086cdc" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Daniel Ek : de la banlieue de Stockholm à Spotify</title>
+      <itunes:title>Daniel Ek : de la banlieue de Stockholm à Spotify</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/daniel-ek/</link>
+      <guid isPermaLink="false">voix-de-lia-daniel-ek</guid>
+      <pubDate>Tue, 13 Oct 2026 08:07:40 GMT</pubDate>
+      <description>Élevé par sa mère dans une banlieue de Stockholm, Daniel Ek a cofondé Spotify en 2006 et l'a dirigé jusqu'à fin 2025. En 2026, il est aussi cofondateur de Neko Health et président de Helsing : portrait d'un entrepreneur suédois.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/daniel-ek/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Élevé par sa mère dans une banlieue de Stockholm, Daniel Ek a cofondé Spotify en 2006 et l&#39;a dirigé jusqu&#39;à fin 2025. En 2026, il est aussi cofondateur de Neko Health et président de Helsing : portrait d&#39;un entrepreneur suédois.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/daniel-ek/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/daniel-ek.mp3?v=38bb9088" length="12988542" type="audio/mpeg"/>
+      <itunes:duration>537</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/daniel-ek-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/daniel-ek/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/daniel-ek/chapitres.json?v=e066c505" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Patrick Collison : de Limerick aux paiements de l'IA</title>
+      <itunes:title>Patrick Collison : de Limerick aux paiements de l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/patrick-collison/</link>
+      <guid isPermaLink="false">voix-de-lia-patrick-collison</guid>
+      <pubDate>Tue, 13 Oct 2026 08:06:38 GMT</pubDate>
+      <description>À seize ans, il gagnait un concours scientifique irlandais avec un langage de programmation ; en 2025, Stripe, l'entreprise cofondée avec son frère John, a traité mille neuf cents milliards de dollars de paiements : portrait de Patrick Collison.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/patrick-collison/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>À seize ans, il gagnait un concours scientifique irlandais avec un langage de programmation ; en 2025, Stripe, l&#39;entreprise cofondée avec son frère John, a traité mille neuf cents milliards de dollars de paiements : portrait de Patrick Collison.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/patrick-collison/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/patrick-collison.mp3?v=e7ee7044" length="12939502" type="audio/mpeg"/>
+      <itunes:duration>536</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/patrick-collison-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/patrick-collison/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/patrick-collison/chapitres.json?v=2b0b9de6" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Thomas Plantenga : venu cinq semaines chez Vinted, jamais reparti</title>
+      <itunes:title>Thomas Plantenga : venu cinq semaines chez Vinted, jamais reparti</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/thomas-plantenga/</link>
+      <guid isPermaLink="false">voix-de-lia-thomas-plantenga</guid>
+      <pubDate>Tue, 13 Oct 2026 08:05:31 GMT</pubDate>
+      <description>Venu en 2016 pour une mission de cinq semaines dans une start-up lituanienne promise à la faillite, le Néerlandais Thomas Plantenga n'est jamais reparti : il a piloté le redressement de Vinted jusqu'au premier bénéfice annuel en 2023, à 1,1 milliard d'euros de chiffre d'affaires en 2025 et à une valorisation de huit milliards d'euros en avril 2026.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/thomas-plantenga/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Venu en 2016 pour une mission de cinq semaines dans une start-up lituanienne promise à la faillite, le Néerlandais Thomas Plantenga n&#39;est jamais reparti : il a piloté le redressement de Vinted jusqu&#39;au premier bénéfice annuel en 2023, à 1,1 milliard d&#39;euros de chiffre d&#39;affaires en 2025 et à une valorisation de huit milliards d&#39;euros en avril 2026.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/thomas-plantenga/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/thomas-plantenga.mp3?v=d9422caf" length="12678470" type="audio/mpeg"/>
+      <itunes:duration>524</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/thomas-plantenga-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/thomas-plantenga/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/thomas-plantenga/chapitres.json?v=477f395f" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Brian Chesky : des matelas gonflables au pari de l'IA</title>
+      <itunes:title>Brian Chesky : des matelas gonflables au pari de l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/brian-chesky/</link>
+      <guid isPermaLink="false">voix-de-lia-brian-chesky</guid>
+      <pubDate>Tue, 13 Oct 2026 07:41:58 GMT</pubDate>
+      <description>Un enfant qui dormait en tenue de hockey, des Pop-Tarts pas grillées, des céréales électorales et un ami nommé Sam Altman : le portrait de Brian Chesky, cofondateur d'Airbnb.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/brian-chesky/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Un enfant qui dormait en tenue de hockey, des Pop-Tarts pas grillées, des céréales électorales et un ami nommé Sam Altman : le portrait de Brian Chesky, cofondateur d&#39;Airbnb.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/brian-chesky/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/brian-chesky.mp3?v=fbf38990" length="13088022" type="audio/mpeg"/>
+      <itunes:duration>542</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/brian-chesky-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/brian-chesky/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/brian-chesky/chapitres.json?v=b370e80e" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Kevin Systrom : d'un appareil en plastique à Instagram</title>
+      <itunes:title>Kevin Systrom : d'un appareil en plastique à Instagram</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/kevin-systrom/</link>
+      <guid isPermaLink="false">voix-de-lia-kevin-systrom</guid>
+      <pubDate>Tue, 13 Oct 2026 07:40:12 GMT</pubDate>
+      <description>Un disquaire harcelé, un professeur qui confisque un appareil photo, un chien devant un stand de tacos : Ada et Alan racontent Kevin Systrom, cofondateur d'Instagram puis d'Artifact, avec Lia en invitée surprise.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/kevin-systrom/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Un disquaire harcelé, un professeur qui confisque un appareil photo, un chien devant un stand de tacos : Ada et Alan racontent Kevin Systrom, cofondateur d&#39;Instagram puis d&#39;Artifact, avec Lia en invitée surprise.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/kevin-systrom/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/kevin-systrom.mp3?v=0ee1184c" length="12533670" type="audio/mpeg"/>
+      <itunes:duration>519</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/kevin-systrom-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/kevin-systrom/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/kevin-systrom/chapitres.json?v=a10d3409" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Tony Fadell : dix ans d'échecs, puis l'iPod et le thermostat Nest</title>
+      <itunes:title>Tony Fadell : dix ans d'échecs, puis l'iPod et le thermostat Nest</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/tony-fadell/</link>
+      <guid isPermaLink="false">voix-de-lia-tony-fadell</guid>
+      <pubDate>Tue, 13 Oct 2026 07:39:36 GMT</pubDate>
+      <description>Douze écoles en quinze ans, dix ans d'échecs, une maquette en polystyrène montrée à Steve Jobs : le portrait de Tony Fadell, l'un des pères de l'iPod et le cofondateur de Nest.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/tony-fadell/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Douze écoles en quinze ans, dix ans d&#39;échecs, une maquette en polystyrène montrée à Steve Jobs : le portrait de Tony Fadell, l&#39;un des pères de l&#39;iPod et le cofondateur de Nest.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/tony-fadell/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/tony-fadell.mp3?v=bf333baa" length="12815774" type="audio/mpeg"/>
+      <itunes:duration>530</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/tony-fadell-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/tony-fadell/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/tony-fadell/chapitres.json?v=a43bddf1" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Stewart Butterfield : deux jeux ratés, Flickr et Slack</title>
+      <itunes:title>Stewart Butterfield : deux jeux ratés, Flickr et Slack</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/stewart-butterfield/</link>
+      <guid isPermaLink="false">voix-de-lia-stewart-butterfield</guid>
+      <pubDate>Tue, 13 Oct 2026 07:37:30 GMT</pubDate>
+      <description>Né Dharma dans une cabane en rondins, diplômé de philosophie, Stewart Butterfield a raté deux fois le même jeu vidéo et en a tiré Flickr puis Slack : Ada et Alan racontent le roi du pivot.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/stewart-butterfield/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Né Dharma dans une cabane en rondins, diplômé de philosophie, Stewart Butterfield a raté deux fois le même jeu vidéo et en a tiré Flickr puis Slack : Ada et Alan racontent le roi du pivot.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/stewart-butterfield/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/stewart-butterfield.mp3?v=d795c745" length="13070800" type="audio/mpeg"/>
+      <itunes:duration>540</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/stewart-butterfield-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/stewart-butterfield/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/stewart-butterfield/chapitres.json?v=f6f464e9" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Niklas Zennström : de Kazaa à Skype, puis l'IA européenne</title>
+      <itunes:title>Niklas Zennström : de Kazaa à Skype, puis l'IA européenne</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/niklas-zennstrom/</link>
+      <guid isPermaLink="false">voix-de-lia-niklas-zennstrom</guid>
+      <pubDate>Tue, 13 Oct 2026 07:37:00 GMT</pubDate>
+      <description>De Kazaa aux procès, de Skype à Atomico : le portrait d'un Suédois discret qui a appris de ses échecs et investit dans l'IA européenne.
+
+Épisode enregistré le 13 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/niklas-zennstrom/
+
+Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>De Kazaa aux procès, de Skype à Atomico : le portrait d&#39;un Suédois discret qui a appris de ses échecs et investit dans l&#39;IA européenne.</p><p>Épisode enregistré le 13 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/niklas-zennstrom/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par intelligence artificielle (ElevenLabs). Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/niklas-zennstrom.mp3?v=94add18e" length="12898579" type="audio/mpeg"/>
+      <itunes:duration>534</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/niklas-zennstrom-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/niklas-zennstrom/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/niklas-zennstrom/chapitres.json?v=25e08a67" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Whitney Wolfe Herd : de Tinder à la fin du swipe</title>
       <itunes:title>Whitney Wolfe Herd : de Tinder à la fin du swipe</itunes:title>
