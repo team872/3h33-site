@@ -1401,3 +1401,7 @@ html.en-pause .replique.en-cours .bulle{animation:respire-bulle 1.6s ease-in-out
 /* la réplique entendue se met en pause d'un clic : on le montre au survol */
 .conversation.minutee .replique[data-debut] .bulle{cursor:pointer}
 html.en-ecoute .replique.en-cours .bulle:hover{box-shadow:0 0 0 1px var(--voix,var(--accent)),0 0 44px -6px var(--voix,var(--accent))}
+
+/* « Écoutez sur » Apple Podcasts / Spotify dans le bloc S'abonner (13/10/2026) */
+.platforms-vdia{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:.4rem 0 1.2rem}
+.platforms-titre{font-family:var(--ff-mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim);margin-right:.3rem}
