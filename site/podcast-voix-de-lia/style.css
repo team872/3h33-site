@@ -162,28 +162,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
   .hero h1{font-size:clamp(3rem,5.2vw,5.6rem)}
 }
 
-/* le mur de vignettes */
-.mur{position:absolute;inset:0;z-index:-2;overflow:hidden;pointer-events:none;--tuile:clamp(84px,10.4vw,176px);--ecart:clamp(8px,.85vw,13px)}
-.mur-plan{
-  position:absolute;left:50%;top:50%;height:calc(6 * (var(--tuile) + var(--ecart)));display:flex;gap:var(--ecart);
-  transform:translate(-50%,-50%) perspective(1600px) rotateX(16deg) rotate(-9deg);
-}
-.mur-col{flex:0 0 var(--tuile);display:flex;flex-direction:column;gap:var(--ecart);animation:mur-monte var(--v,90s) linear infinite;animation-delay:var(--d,0s);will-change:transform}
-.mur-col.descend{animation-name:mur-descend}
-.mur.arret .mur-col,.mur.arret .tuile::after{animation-play-state:paused}
-.tuile{position:relative;flex:0 0 auto;width:var(--tuile);height:var(--tuile);overflow:hidden;background:radial-gradient(ellipse 70% 60% at 50% 38%,#4a3826 0%,#1d150e 62%,#120d09 100%);box-shadow:0 0 0 1px #c4a26524}
-.tuile img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) brightness(.78)}
-/* quelques facettes accrochent la lumière : liseré doré et reflet qui passe */
-.tuile.eclat{box-shadow:0 0 0 1px #c4a26599,0 0 28px #c4a26533}
-.tuile.eclat img{filter:saturate(.9) brightness(.9)}
-.tuile.eclat::after{content:'';position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,#f3dcaa55 50%,transparent 65%);transform:translateX(-130%);animation:eclat 9s ease-in-out infinite}
-.mur-col:nth-child(3n) .tuile.eclat::after{animation-delay:-3s}
-.mur-col:nth-child(3n+1) .tuile.eclat::after{animation-delay:-6s}
-@media(max-width:700px){.mur-col:nth-child(n+9){display:none}}
-@keyframes mur-monte{from{transform:translateY(0)}to{transform:translateY(calc(-50% - var(--ecart) / 2))}}
-@keyframes mur-descend{from{transform:translateY(calc(-50% - var(--ecart) / 2))}to{transform:translateY(0)}}
-@keyframes eclat{0%,62%{transform:translateX(-130%)}82%,100%{transform:translateX(130%)}}
-
 /* Lia vous présente l'émission : lecteur, texte en citation, encart Choucroute Citron */
 .lia-carte{
   grid-area:lia;position:relative;text-align:left;width:100%;max-width:520px;margin:0 auto;padding:.95rem 1rem 1rem;
@@ -920,7 +898,7 @@ html.anime .reveal.visible{opacity:1;transform:none}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;animation-delay:0s!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   html{scroll-behavior:auto}
   .hero-label,.hero h1,.hero-compte,.hero-mention,.hero-cta,.lia-carte,.portrait-visuel,.portrait-texte>*{opacity:1!important;animation:none!important}
-  .mur-col,.tuile::after,.lia-rond,.lia-rond::before,.lia-rond::after,.hero::after{animation:none!important}
+  .lia-rond,.lia-rond::before,.lia-rond::after,.hero::after{animation:none!important}
   html.anime .reveal{opacity:1!important;transform:none!important}
   .lecteur.joue .onde i,.lecteur.bientot .onde i{animation:none!important}
   .hero h1 .accent{animation:none!important}
@@ -1472,25 +1450,6 @@ html.anime .lia-carte:not(.deplie):not(.ecoute) .cc-encart p{display:none}
 html.anime .outils:not(.familles-ouvertes) .puces{display:none}
 html:not(.anime) .vues,html:not(.anime) .familles-bouton{display:none}
 
-/* « À écouter maintenant » dans le bandeau (13/10/2026) : des épisodes dès l'arrivée, avant toute explication */
-.a-la-une{grid-area:une;margin-top:.6rem;text-align:left}
-.une-titre{margin:0 0 .7rem;font-family:var(--ff-mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.une-liste{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.9rem}
-.une-carte{min-width:0}
-.une-jouer{position:relative;display:block;width:100%;padding:0;border:1px solid #c4a26540;border-radius:12px;overflow:hidden;background:#0c0c0f;cursor:pointer;aspect-ratio:1}
-.une-jouer img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
-.une-jouer:hover img{transform:scale(1.05)}
-.une-rond{position:absolute;right:.5rem;bottom:.5rem;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--accent);color:var(--bg);box-shadow:0 4px 14px #0008}
-.une-rond svg{width:16px;height:16px;margin-left:2px}
-.une-jouer.joue .une-rond,.une-jouer:hover .une-rond{background:var(--accent-clair)}
-.une-nom{display:block;margin-top:.5rem;color:var(--text);font-family:var(--ff-display);font-size:1rem;line-height:1.2;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.une-nom:hover{color:var(--accent-clair)}
-.une-role{display:block;color:var(--text-dim);font-size:.75rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.hero-dedans{grid-template-areas:"texte" "lia" "actions" "une"}
-@media(min-width:900px){.hero-dedans{grid-template-areas:"texte lia" "actions lia" "une une"}}
-@media(max-width:899px){.une-liste{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.7rem;padding-bottom:.4rem;scrollbar-width:none}.une-liste::-webkit-scrollbar{display:none}.une-carte{flex:0 0 38%;scroll-snap-align:start}}
-@media(max-width:899px){.une-rond{width:34px;height:34px;right:.4rem;bottom:.4rem}.une-rond svg{width:13px;height:13px}}
-
 /* Cartes : « La conversation, les sources » en vrai bouton et « Partager » (13/10/2026, Alexandre : « on doit mieux
    voir ces boutons et il manque le partage ») ; au-dessus du lien qui couvre la carte */
 .card-actions{position:relative;z-index:2;display:flex;align-items:center;gap:.5rem;margin-top:.9rem}
@@ -1527,3 +1486,97 @@ html.en-recherche #grille-portraits .card-ouvrir .co-long{display:inline}html.en
 @media(max-width:600px){.abonner-bloc{padding:1.3rem 1.1rem}.btn-abonner{width:100%;justify-content:center}}
 .abonner-bloc .section-label{display:flex;align-items:center;gap:.4rem}.abonner-bloc .section-label svg{width:14px;height:14px;flex:none}
 .card-actions{flex-wrap:wrap}.card-ouvrir{flex:0 1 auto}.card-partager{margin-left:0}
+
+/* Bandeau sobre (14/10/2026, Alexandre : « beaucoup trop chargé », « quelque chose de beaucoup plus sombre », « sobre »).
+   Fond noir uni et une lueur dorée à peine visible ; à gauche le titre, une phrase, Lia en une ligne, deux boutons ;
+   à droite un seul portrait, le dernier paru, en grand. */
+.hero{padding:6rem var(--gouttiere) 3rem;text-align:left;background:var(--bg)}
+.hero::before{background:radial-gradient(ellipse 60% 55% at 78% 45%,#c4a26510 0%,transparent 70%)}
+.hero::after{background:none;animation:none}
+.hero-dedans{max-width:1180px;grid-template-columns:minmax(0,1fr);grid-template-areas:"texte" "jour";gap:2.2rem;align-items:center}
+.hero-label,.hero-cta{justify-content:flex-start}
+.hero-label a{color:inherit;text-decoration:none;border-bottom:1px solid #c4a26555}
+.hero-label a:hover{border-color:var(--accent)}
+.hero h1{text-shadow:none}
+.hero-phrase{max-width:34rem;margin:1.1rem 0 0;color:var(--text-dim);font-size:1.05rem;line-height:1.65;font-weight:300;opacity:0;animation:fadeUp .8s .45s forwards}
+.hero-cta{margin-top:1.4rem}
+.hero-mention{margin-top:1.1rem}
+.hero-mention strong{color:var(--accent);font-weight:500}
+/* Lia : une ligne discrète, plus une carte */
+.hero .lia-carte{max-width:34rem;margin:1.3rem 0 0;padding:0;border:0;background:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.hero .lia-carte::before{display:none}
+.hero .lia-rond{width:42px;height:42px;background:none;border:1px solid #c4a26599;color:var(--accent);box-shadow:none}
+.hero .lia-rond svg{width:15px;height:15px}
+.hero .lia-carte:not(.ecoutee) .lia-rond,.hero .lia-carte:not(.ecoutee) .lia-rond::before{animation:none}
+.hero .lia-bouton:hover .lia-rond{background:var(--accent);color:var(--bg);box-shadow:none}
+.hero .lia-titre{font-family:var(--ff-body);font-weight:400;font-size:.95rem;color:var(--text-dim)}
+.hero .lia-piste{max-width:20rem;margin-left:calc(42px + .85rem)}
+.hero .lia-texte{margin-left:calc(42px + .85rem)}
+.hero .cc-encart{display:none}
+/* le portrait du jour */
+.du-jour{grid-area:jour;display:grid;grid-template-columns:minmax(0,1fr);gap:1.2rem;max-width:30rem;opacity:0;animation:fadeUp .9s .55s forwards}
+.dj-image{position:relative;display:block;width:100%;padding:0;border:1px solid #c4a26540;background:#0c0c0f;cursor:pointer;aspect-ratio:1;overflow:hidden;box-shadow:0 30px 80px #000c}
+.dj-image img,.dj-image .monogramme{display:block;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.dj-image:hover img{transform:scale(1.03)}
+.dj-rond{position:absolute;right:1rem;bottom:1rem;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:var(--accent);color:var(--bg);box-shadow:0 6px 20px #000a;transition:transform .3s var(--ease),background .3s}
+.dj-rond svg{width:20px;height:20px;margin-left:3px;fill:currentColor}
+.dj-image:hover .dj-rond{transform:scale(1.07);background:var(--accent-clair)}
+.dj-etiquette{font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-faible)}
+.dj-etiquette .dj-quand{color:var(--accent)}
+.dj-nom{margin:.45rem 0 0;font-family:var(--ff-display);font-weight:700;font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.1}
+.dj-nom a{color:var(--text);text-decoration:none}
+.dj-nom a:hover{color:var(--accent-clair)}
+.dj-role{margin-top:.35rem;font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim)}
+.dj-angle{margin-top:.7rem;font-family:var(--ff-display);font-style:italic;font-size:1.1rem;line-height:1.4;color:var(--accent)}
+.dj-boutons{display:flex;flex-wrap:wrap;align-items:center;gap:.55rem;margin-top:1.1rem}
+.dj-boutons .card-partager{margin-left:0}
+@media(min-width:960px){
+  .hero{padding:7rem var(--gouttiere) 4.5rem}
+  .hero-dedans{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"texte jour";column-gap:5rem}
+  .du-jour{justify-self:end}
+}
+@media(max-width:700px){
+  .hero{padding:4.6rem var(--gouttiere) 2rem}
+  .hero-label .hl-serie{display:inline}
+  .hero-phrase{font-size:.95rem;margin-top:.8rem}
+  .hero .lia-carte{margin-top:1rem}
+  .du-jour{grid-template-columns:38% minmax(0,1fr);gap:1rem;align-items:start}
+  .dj-rond{width:40px;height:40px;right:.5rem;bottom:.5rem}
+  .dj-rond svg{width:14px;height:14px}
+  .dj-nom{font-size:1.4rem;margin-top:.3rem}
+  .dj-angle{font-size:.95rem;margin-top:.45rem}
+  .dj-etiquette{font-size:.54rem;letter-spacing:.1em}
+  .dj-boutons{grid-column:1 / -1;margin-top:.2rem}
+  .dj-boutons .btn{flex:1 1 100%;justify-content:center}
+}
+
+/* Page portrait : S'abonner et Partager juste sous le lecteur (14/10/2026) */
+.portrait-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-top:1rem}
+.pa-titre{font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-dim);margin-right:.2rem}
+.pa-btn{display:inline-flex;align-items:center;gap:.45rem;min-height:40px;padding:.45rem .95rem;border:1px solid var(--border-2);border-radius:999px;background:none;color:var(--text);font-family:var(--ff-body);font-size:.86rem;text-decoration:none;cursor:pointer;transition:border-color .25s,color .25s,background .25s}
+.pa-btn svg{width:16px;height:16px;flex:none}
+.pa-btn:hover,.pa-btn:focus-visible{border-color:var(--accent);color:var(--accent-clair)}
+.pa-btn.pa-partager{margin-left:auto;border-color:#c4a26599;color:var(--accent-clair)}
+.pa-btn.pa-partager:hover{background:var(--accent);color:var(--bg)}
+@media(max-width:520px){.pa-titre{flex:1 1 100%}.pa-btn.pa-partager{margin-left:0}}
+@media(min-width:960px){
+  .hero{padding:5.6rem var(--gouttiere) 3.5rem}
+  .du-jour{max-width:23rem}
+  .dj-boutons{gap:.45rem}
+}
+/* téléphone : le portrait du jour juste sous le titre, avant la présentation */
+@media(max-width:700px){
+  .hero-dedans{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .hero-texte{display:contents}
+  .hero-label{order:1}
+  .hero h1{order:2}
+  .du-jour{order:3;margin:1.1rem 0 1.4rem;max-width:none}
+  .hero-phrase{order:4;margin-top:0}
+  .hero .lia-carte{order:5}
+  .hero-cta{order:6}
+  .hero-mention{order:7}
+  .dj-boutons{grid-column:1 / -1;margin-top:0}
+  .dj-boutons .btn{flex:1 1 100%}
+  .dj-boutons .card-ouvrir,.dj-boutons .card-partager{flex:1 1 0;justify-content:center}
+}
+@media(max-width:700px){.hero-label{justify-content:flex-start}.hero h1{text-align:left}.hero-cta{justify-content:flex-start}}

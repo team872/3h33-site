@@ -97,10 +97,14 @@
     $$("audio").forEach(function (a) { if (a !== ev.target && !a.paused) a.pause(); });
   }, true);
 
-  /* ------------------------------------------------ bandeau : le mur de vignettes s'arrête quand on ne le voit plus */
-  var mur = $(".mur");
-  if (mur && "IntersectionObserver" in window) {
-    new IntersectionObserver(function (e) { mur.classList.toggle("arret", !e[0].isIntersecting); }).observe(mur);
+  /* ------------------------------------------------ bandeau : « Le portrait du jour » s'il est paru aujourd'hui */
+  var djEtiquette = $(".dj-etiquette");
+  if (djEtiquette) {
+    var auj = new Date(), deux = function (n) { return (n < 10 ? "0" : "") + n; };
+    if (djEtiquette.getAttribute("data-publie") === auj.getFullYear() + "-" + deux(auj.getMonth() + 1) + "-" + deux(auj.getDate())) {
+      $(".dj-quand", djEtiquette).textContent = "Le portrait du jour";
+      djEtiquette.classList.add("aujourdhui");
+    }
   }
 
   /* ------------------------------------------------ apparitions au défilement (en cascade) */
