@@ -251,13 +251,76 @@
     $$("[data-saut]", lecteur).concat(mini ? $$("[data-saut]", mini) : []).forEach(function (b) {
       b.addEventListener("click", function () { audio.currentTime = Math.max(0, audio.currentTime + Number(b.getAttribute("data-saut"))); });
     });
-    var vitesses = [1, 1.25, 1.5, 0.85], iv = 0;
-    var bv = $("[data-vitesse]", lecteur);
-    if (bv) bv.addEventListener("click", function () {
-      iv = (iv + 1) % vitesses.length;
-      audio.playbackRate = vitesses[iv];
-      bv.textContent = String(vitesses[iv]).replace(".", ",") + "×";
-      bv.setAttribute("aria-label", "Vitesse de lecture : " + bv.textContent);
+    // vitesse : un bouton dans le grand lecteur et un dans le mini-lecteur, toujours d'accord entre eux
+    var vitesses = [1, 1.25, 1.5, 2, 0.85], iv = 0;
+    var bvs = $$("[data-vitesse]", lecteur).concat(mini ? $$("[data-vitesse]", mini) : []);
+    bvs.forEach(function (bv) {
+      bv.addEventListener("click", function () {
+        iv = (iv + 1) % vitesses.length;
+        audio.playbackRate = vitesses[iv];
+        var txt = String(vitesses[iv]).replace(".", ",") + "×";
+        bvs.forEach(function (b) {
+          b.textContent = txt;
+          b.setAttribute("aria-label", "Vitesse de lecture : " + txt);
+          b.classList.toggle("change", vitesses[iv] !== 1);
+        });
+      });
+    });
+
+    // reprise (13/10/2026) : la position est gardée dans ce navigateur ; la prochaine écoute reprend là
+    var clePos = "vdia-position:" + location.pathname, reprise = 0;
+    try { reprise = Number(localStorage.getItem(clePos)) || 0; } catch (e) {}
+    var dernierEnreg = 0;
+    var enregistrer = function (force) {
+      var now = Date.now();
+      if (!force && now - dernierEnreg < 4000) return;
+      dernierEnreg = now;
+      try {
+        var d = audio.duration || 0;
+        if (audio.ended || (d && audio.currentTime > d - 20)) localStorage.removeItem(clePos);
+        else if (audio.currentTime > 15) localStorage.setItem(clePos, String(Math.floor(audio.currentTime)));
+      } catch (e) {}
+    };
+    audio.addEventListener("timeupdate", function () { enregistrer(false); });
+    audio.addEventListener("pause", function () { enregistrer(true); });
+    audio.addEventListener("ended", function () { reprise = 0; enregistrer(true); });
+    audio.addEventListener("play", function () {
+      if (reprise > 15 && audio.currentTime < 1) audio.currentTime = reprise;
+      reprise = 0;
+    }, { once: false });
+
+    // commandes du téléphone (écran verrouillé, écouteurs, touches multimédia du clavier)
+    if ("mediaSession" in navigator) {
+      try {
+        var og = document.querySelector('meta[property="og:image"]');
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: nom, artist: "Les Voix de l'IA", album: "3h33",
+          artwork: og ? [{ src: og.getAttribute("content"), sizes: "1200x630", type: "image/jpeg" }] : []
+        });
+        var ms = navigator.mediaSession;
+        ms.setActionHandler("play", function () { audio.play().catch(function () {}); });
+        ms.setActionHandler("pause", function () { audio.pause(); });
+        ms.setActionHandler("seekbackward", function () { audio.currentTime = Math.max(0, audio.currentTime - 15); });
+        ms.setActionHandler("seekforward", function () { audio.currentTime = audio.currentTime + 15; });
+        ms.setActionHandler("seekto", function (d) { if (d && d.seekTime != null) audio.currentTime = d.seekTime; });
+      } catch (e) {}
+    }
+
+    // clavier : espace = lecture / pause, flèches gauche et droite = 15 secondes (hors champs de saisie et curseurs)
+    document.addEventListener("keydown", function (ev) {
+      if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+      var t = ev.target, tag = t && t.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || (t && t.isContentEditable)) return;
+      if (t && t.getAttribute && t.getAttribute("role") === "slider") return;
+      if (ev.key === " " || ev.key === "k") {
+        if (tag === "BUTTON" || tag === "A") return; // l'espace sur un bouton ou un lien garde son sens
+        ev.preventDefault();
+        if (audio.paused) audio.play().catch(function () {}); else audio.pause();
+      } else if (ev.key === "ArrowLeft" || ev.key === "j") {
+        if (!commence()) return; ev.preventDefault(); audio.currentTime = Math.max(0, audio.currentTime - 15);
+      } else if (ev.key === "ArrowRight" || ev.key === "l") {
+        if (!commence()) return; ev.preventDefault(); audio.currentTime = audio.currentTime + 15;
+      }
     });
 
     // écouter à partir d'un instant (un souffle avant le premier mot)
@@ -298,7 +361,7 @@
         liensCh.forEach(function (a) { a.classList.toggle("ecoute", !!h && a.getAttribute("href") === "#" + h.id); });
         if (mini) {
           // avant la première écoute (et après la fin) : « Écouter le portrait » et la durée totale
-          var titre = h ? h.getAttribute("data-titre") : actif ? nom : "Écouter le portrait";
+          var titre = h ? h.getAttribute("data-titre") : actif ? nom : reprise > 15 ? "Reprendre à " + duree(reprise) : "Écouter le portrait";
           var num = /^(\d+) · (.*)$/.exec(titre); // « 03 · Le début de sa vie » : le numéro à part, en or
           miniN.textContent = num ? num[1] : "";
           miniCh.textContent = num ? num[2] : titre;
@@ -314,7 +377,11 @@
       if (kRep >= 0 && repliques[kRep]) repliques[kRep].classList.remove("en-cours");
       kRep = -1;
     });
-    var majEcoute = function () { doc.classList.toggle("en-ecoute", !audio.paused && !audio.ended); };
+    var majEcoute = function () {
+      doc.classList.toggle("en-ecoute", !audio.paused && !audio.ended);
+      doc.classList.toggle("en-pause", audio.paused && commence());
+      if (kRep >= 0 && repliques[kRep]) repliques[kRep].setAttribute("title", audio.paused ? "Cliquer pour reprendre" : "Cliquer pour mettre en pause");
+    };
     ["play", "pause", "ended"].forEach(function (e) { audio.addEventListener(e, majEcoute); });
 
     // un clic sur un chapitre : l'écoute part à son instant, et la page descend à son texte (lien normal)
@@ -330,6 +397,11 @@
       var r = ev.target.closest(".replique[data-debut]");
       if (!r || ev.target.closest("a")) return;
       if (window.getSelection && String(window.getSelection())) return; // on sélectionne du texte : on ne lance rien
+      // la réplique en cours : un clic met en pause, un autre reprend (demande d'Alexandre, 13/10/2026)
+      if (r.classList.contains("en-cours")) {
+        if (audio.paused) audio.play().catch(function () {}); else audio.pause();
+        return;
+      }
       ecouterA(Number(r.getAttribute("data-debut")));
     });
 
