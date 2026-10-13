@@ -479,6 +479,62 @@
     }
   }
 
+  /* ------------------------------------------------ partager une carte (13/10/2026) : le partage du téléphone s'il
+     existe, sinon un petit menu LinkedIn, X, Facebook, WhatsApp, e-mail, copier le lien */
+  var popPartage = null;
+  var fermerPartage = function () {
+    if (!popPartage) return;
+    var b = popPartage._bouton;
+    popPartage.parentNode.removeChild(popPartage);
+    popPartage = null;
+    if (b) b.setAttribute("aria-expanded", "false");
+  };
+  document.addEventListener("click", function (ev) {
+    var b = ev.target.closest && ev.target.closest(".card-partager");
+    if (!b) { if (popPartage && !popPartage.contains(ev.target)) fermerPartage(); return; }
+    ev.preventDefault(); ev.stopPropagation();
+    var url = b.getAttribute("data-partager-url"), titre = b.getAttribute("data-partager-titre");
+    if (navigator.share && window.matchMedia("(pointer:coarse)").matches) { navigator.share({ title: titre, text: titre, url: url }).catch(function () {}); return; }
+    if (popPartage && popPartage._bouton === b) return fermerPartage();
+    fermerPartage();
+    var u = encodeURIComponent(url), t = encodeURIComponent(titre);
+    var liens = [
+      ["LinkedIn", "https://www.linkedin.com/sharing/share-offsite/?url=" + u],
+      ["X", "https://x.com/intent/tweet?text=" + t + "&url=" + u],
+      ["Facebook", "https://www.facebook.com/sharer/sharer.php?u=" + u],
+      ["WhatsApp", "https://wa.me/?text=" + encodeURIComponent(titre + " " + url)],
+      ["E-mail", "mailto:?subject=" + t + "&body=" + encodeURIComponent(titre + "\n" + url)]
+    ];
+    popPartage = document.createElement("div");
+    popPartage.className = "partage-pop";
+    popPartage.setAttribute("role", "menu");
+    liens.forEach(function (l) {
+      var a = document.createElement("a");
+      a.href = l[1]; a.textContent = l[0]; a.setAttribute("role", "menuitem");
+      if (l[0] !== "E-mail") { a.target = "_blank"; a.rel = "noopener"; }
+      popPartage.appendChild(a);
+    });
+    var copier = document.createElement("button");
+    copier.type = "button"; copier.textContent = "Copier le lien"; copier.setAttribute("role", "menuitem");
+    copier.addEventListener("click", function () {
+      var ok = function () { copier.textContent = "Lien copié ✓"; setTimeout(fermerPartage, 1200); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(ok, function () { window.prompt("Copiez ce lien :", url); });
+      else window.prompt("Copiez ce lien :", url);
+    });
+    popPartage.appendChild(copier);
+    popPartage._bouton = b;
+    b.setAttribute("aria-expanded", "true");
+    document.body.appendChild(popPartage);
+    // posé au-dessus du bouton (ou dessous s'il n'y a pas la place), dans la page et pas dans la carte qui le couperait
+    var r = b.getBoundingClientRect(), h = popPartage.offsetHeight, w = popPartage.offsetWidth;
+    var haut = r.top - h - 8 > 8 ? r.top - h - 8 : r.bottom + 8;
+    popPartage.style.top = Math.round(haut + window.scrollY) + "px";
+    popPartage.style.left = Math.round(Math.max(8, Math.min(r.right - w, document.documentElement.clientWidth - w - 8)) + window.scrollX) + "px";
+    var premier = popPartage.querySelector("a");
+    if (premier) try { premier.focus({ preventScroll: true }); } catch (e) {}
+  });
+  document.addEventListener("keydown", function (ev) { if (ev.key === "Escape" && popPartage) { var b = popPartage._bouton; fermerPartage(); if (b) b.focus(); } });
+
   /* ------------------------------------------------ partage */
   var partage = $(".partage");
   if (partage) {

@@ -1439,9 +1439,7 @@ html.anime:not(.complet) .portrait-corps{grid-template-columns:minmax(0,1fr);max
 .methode-pied a svg{width:14px;height:14px;vertical-align:-2px}
 @media(max-width:699px){.methode-bande{padding:3rem 1rem .5rem}.methode-pied a{white-space:normal}}
 /* cartes : on voit qu'on peut ouvrir la page (conversation, sources) et pas seulement écouter */
-.card-ouvrir{display:inline-flex;align-items:center;gap:.35rem;margin-top:.7rem;color:var(--accent-clair);font-family:var(--ff-mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase}
-.card-ouvrir svg{width:13px;height:13px}
-.episode-card:hover .card-ouvrir{color:var(--accent)}
+
 /* lecteur collant : « La conversation » écrit en toutes lettres */
 .player .lien-page{display:inline-flex;align-items:center;gap:.4rem;width:auto;padding:0 .8rem;border-radius:999px;border:1px solid #c4a26566;color:var(--accent-clair);font-size:.78rem;white-space:nowrap}
 .player .lien-page svg{width:14px;height:14px}
@@ -1492,3 +1490,23 @@ html:not(.anime) .vues,html:not(.anime) .familles-bouton{display:none}
 @media(min-width:900px){.hero-dedans{grid-template-areas:"texte lia" "actions lia" "une une"}}
 @media(max-width:899px){.une-liste{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:.7rem;padding-bottom:.4rem;scrollbar-width:none}.une-liste::-webkit-scrollbar{display:none}.une-carte{flex:0 0 38%;scroll-snap-align:start}}
 @media(max-width:899px){.une-rond{width:34px;height:34px;right:.4rem;bottom:.4rem}.une-rond svg{width:13px;height:13px}}
+
+/* Cartes : « La conversation, les sources » en vrai bouton et « Partager » (13/10/2026, Alexandre : « on doit mieux
+   voir ces boutons et il manque le partage ») ; au-dessus du lien qui couvre la carte */
+.card-actions{position:relative;z-index:2;display:flex;align-items:center;gap:.5rem;margin-top:.9rem}
+.card-ouvrir{display:inline-flex;align-items:center;gap:.45rem;min-height:40px;padding:.45rem .9rem;border:1px solid #c4a26599;border-radius:999px;color:var(--accent-clair);font-family:var(--ff-body);font-size:.84rem;font-weight:500;text-decoration:none;white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
+.card-ouvrir svg{width:15px;height:15px;flex:none}
+.card-ouvrir:hover,.card-ouvrir:focus-visible{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.card-partager{display:grid;place-items:center;flex:none;width:40px;height:40px;margin-left:auto;padding:0;border:1px solid #c4a26599;border-radius:50%;background:none;color:var(--accent-clair);cursor:pointer;transition:background .25s,color .25s}
+.card-partager svg{width:17px;height:17px;fill:currentColor}
+.card-partager:hover,.card-partager[aria-expanded="true"]{background:var(--accent);color:var(--bg)}
+.partage-pop{position:absolute;z-index:60;display:flex;flex-direction:column;min-width:190px;padding:.4rem;border:1px solid #c4a26566;border-radius:12px;background:#15120d;box-shadow:0 12px 30px #000c}
+.partage-pop a,.partage-pop button{display:block;width:100%;padding:.55rem .8rem;border:0;border-radius:8px;background:none;color:var(--text);font-family:var(--ff-body);font-size:.9rem;text-align:left;text-decoration:none;cursor:pointer}
+.partage-pop a:hover,.partage-pop button:hover,.partage-pop a:focus-visible{background:#c4a26526;color:var(--accent-clair)}
+html.en-recherche #grille-portraits .episode-card .card-actions{grid-column:2;margin-top:.4rem}
+
+.co-court{display:none}
+.card-ouvrir{min-width:0}
+@media(max-width:600px){.co-long{display:none}.co-court{display:inline}.card-ouvrir{padding:.4rem .75rem;font-size:.8rem}.card-partager{width:36px;height:36px}.card-actions{gap:.4rem}}
+html.en-recherche #grille-portraits .card-ouvrir .co-long{display:inline}html.en-recherche #grille-portraits .card-ouvrir .co-court{display:none}
+@media(max-width:600px){html.en-recherche #grille-portraits .card-ouvrir .co-long{display:none}html.en-recherche #grille-portraits .card-ouvrir .co-court{display:inline}}
