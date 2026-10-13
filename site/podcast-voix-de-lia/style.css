@@ -1361,26 +1361,43 @@ html:not(.js) [data-signaler]{display:none}
 @media(max-width:700px),(pointer:coarse){.signaler-lien{position:relative}.signaler-lien::before{content:'';position:absolute;inset:-12px -4px}}
 @media(max-width:520px){.signaler-bouton{letter-spacing:.07em;padding:.95rem .9rem;font-size:.68rem}}
 
-/* mini-lecteur plus visible (13/10/2026, Alexandre : « tout est discret… pas assez visible ») : liseré or, bouton plus
-   grand avec halo, piste plus épaisse, vitesse à portée ; en pause après une écoute, le bouton respire doucement */
-.mini{background:linear-gradient(180deg,#17140ff2,#0b0b0ef0);border-bottom:1px solid #c4a26566;box-shadow:0 1px 0 #c4a26522,0 18px 34px -18px #000}
-.mini::before{content:'';position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.55}
+/* mini-lecteur bien visible (13/10/2026, deux passes ; Alexandre : « pas assez visible ») : fond chaud doré, liseré or,
+   photo de la personne, gros bouton ; en pause après une écoute, le bouton ET la réplique entendue respirent
+   (anneau qui gonfle : transform et opacity, fiables sur téléphone ; en « mouvement réduit », seulement l'opacité) */
+.mini{background:linear-gradient(180deg,#2b2216f7,#16120df7);border-bottom:2px solid var(--accent);box-shadow:0 10px 30px -8px #000,0 1px 24px -6px var(--accent-glow)}
+.mini::before{content:'';position:absolute;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,transparent,var(--accent-clair),transparent);opacity:.6}
 html.en-ecoute .mini::before{opacity:1}
-.mini-dedans{padding-top:.55rem;padding-bottom:.55rem;gap:.55rem}
-.mini .bouton-lecture{width:50px;height:50px;box-shadow:0 0 0 4px #c4a26526,0 0 26px -4px var(--accent-glow)}
-.mini .bouton-lecture svg{width:18px;height:18px}
-html.en-pause .mini .bouton-lecture{animation:respire 2.2s ease-in-out infinite}
-@keyframes respire{0%,100%{box-shadow:0 0 0 4px #c4a26526,0 0 18px -6px var(--accent-glow)}50%{box-shadow:0 0 0 8px #c4a26533,0 0 34px 0 var(--accent-glow)}}
-.mini-fond{height:5px;background:#ffffff26}
-.mini-piste:hover .mini-fond{height:7px}
-.mini-jouee::after{opacity:1}
-.mini-chapitre{font-size:1rem}
-.mini-temps{font-size:.7rem;color:var(--text)}
-.mini-vitesse{flex-shrink:0;min-width:44px;height:30px;padding:0 .5rem;border:1px solid #c4a26559;border-radius:15px;background:none;color:var(--text-dim);font-family:var(--ff-mono);font-size:.68rem;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
-.mini-vitesse:hover,.mini-vitesse.change{color:var(--accent);border-color:var(--accent);background:#c4a2651a}
-@media(max-width:560px){.mini-vitesse{min-width:38px;height:28px;padding:0 .35rem}.mini .bouton-lecture{width:46px;height:46px}}
-@media(prefers-reduced-motion:reduce){html.en-pause .mini .bouton-lecture{animation:none}}
+.mini-dedans{padding-top:.6rem;padding-bottom:.6rem;gap:.6rem}
+.mini .bouton-lecture{width:56px;height:56px;box-shadow:0 0 0 4px #c4a26533,0 0 30px -2px var(--accent-glow)}
+.mini .bouton-lecture svg{width:20px;height:20px}
+.mini-photo{width:44px;height:44px;flex-shrink:0;border-radius:50%;object-fit:cover;border:2px solid var(--accent);box-shadow:0 0 14px -4px var(--accent-glow)}
+.mini-qui{font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mini-qui i{font-style:normal;color:var(--text-dim)}
+.mini-fond{height:6px;background:#ffffff2e}
+.mini-piste:hover .mini-fond{height:8px}
+.mini-jouee::after{opacity:1;width:12px;height:12px;margin-top:-6px;right:-6px}
+.mini-chapitre{font-size:1.05rem;color:#fffaf0}
+.mini-temps{font-size:.74rem;color:var(--text)}
+.mini-saut{color:var(--text)}
+.mini-vitesse{flex-shrink:0;min-width:46px;height:32px;padding:0 .5rem;border:1px solid var(--accent);border-radius:16px;background:#c4a2651a;color:var(--accent);font-family:var(--ff-mono);font-size:.7rem;cursor:pointer;transition:color .2s,background .2s}
+.mini-vitesse:hover,.mini-vitesse.change{color:var(--bg);background:var(--accent)}
+.mini .bouton-lecture::before{content:'';position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--accent-clair);opacity:0;pointer-events:none}
+html.en-pause .mini .bouton-lecture::before{animation:respire-anneau 1.6s ease-in-out infinite}
+html.en-pause .mini .bouton-lecture{animation:respire-bouton 1.6s ease-in-out infinite}
+@keyframes respire-anneau{0%,100%{transform:scale(.9);opacity:.15}50%{transform:scale(1.18);opacity:1}}
+@keyframes respire-bouton{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+html.en-pause .replique.en-cours .bulle{animation:respire-bulle 1.6s ease-in-out infinite}
+@keyframes respire-bulle{0%,100%{box-shadow:0 0 0 1px var(--voix,var(--accent)),0 0 10px -10px var(--voix,var(--accent))}50%{box-shadow:0 0 0 2px var(--voix,var(--accent)),0 0 40px -4px var(--voix,var(--accent))}}
+@media(prefers-reduced-motion:reduce){
+  html.en-pause .mini .bouton-lecture{animation:none}
+  @keyframes respire-anneau{0%,100%{transform:none;opacity:.15}50%{transform:none;opacity:1}}
+}
+@media(max-width:560px){
+  .mini-dedans{gap:.3rem}
+  .mini .bouton-lecture{width:50px;height:50px}
+  .mini-photo{display:none}
+  .mini-vitesse{min-width:38px;height:28px;padding:0 .3rem}
+}
 /* la réplique entendue se met en pause d'un clic : on le montre au survol */
 .conversation.minutee .replique[data-debut] .bulle{cursor:pointer}
 html.en-ecoute .replique.en-cours .bulle:hover{box-shadow:0 0 0 1px var(--voix,var(--accent)),0 0 44px -6px var(--voix,var(--accent))}
-.mini-saut{color:var(--text)}
