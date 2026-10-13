@@ -1497,7 +1497,7 @@ html:not(.anime) .vues,html:not(.anime) .familles-bouton{display:none}
 .card-ouvrir{display:inline-flex;align-items:center;gap:.45rem;min-height:40px;padding:.45rem .9rem;border:1px solid #c4a26599;border-radius:999px;color:var(--accent-clair);font-family:var(--ff-body);font-size:.84rem;font-weight:500;text-decoration:none;white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
 .card-ouvrir svg{width:15px;height:15px;flex:none}
 .card-ouvrir:hover,.card-ouvrir:focus-visible{background:var(--accent);border-color:var(--accent);color:var(--bg)}
-.card-partager{display:grid;place-items:center;flex:none;width:40px;height:40px;margin-left:auto;padding:0;border:1px solid #c4a26599;border-radius:50%;background:none;color:var(--accent-clair);cursor:pointer;transition:background .25s,color .25s}
+.card-partager{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;flex:none;min-height:40px;margin-left:auto;padding:.45rem .85rem;border:1px solid #c4a26599;border-radius:999px;font-family:var(--ff-body);font-size:.84rem;font-weight:500;background:none;color:var(--accent-clair);cursor:pointer;transition:background .25s,color .25s}
 .card-partager svg{width:17px;height:17px;fill:currentColor}
 .card-partager:hover,.card-partager[aria-expanded="true"]{background:var(--accent);color:var(--bg)}
 .partage-pop{position:absolute;z-index:60;display:flex;flex-direction:column;min-width:190px;padding:.4rem;border:1px solid #c4a26566;border-radius:12px;background:#15120d;box-shadow:0 12px 30px #000c}
@@ -1506,7 +1506,24 @@ html:not(.anime) .vues,html:not(.anime) .familles-bouton{display:none}
 html.en-recherche #grille-portraits .episode-card .card-actions{grid-column:2;margin-top:.4rem}
 
 .co-court{display:none}
-.card-ouvrir{min-width:0}
-@media(max-width:600px){.co-long{display:none}.co-court{display:inline}.card-ouvrir{padding:.4rem .75rem;font-size:.8rem}.card-partager{width:36px;height:36px}.card-actions{gap:.4rem}}
+
+@media(max-width:600px){.co-long{display:none}.co-court{display:inline}.card-ouvrir{padding:.4rem .75rem;font-size:.8rem}.card-actions{flex-direction:column;align-items:stretch}.card-ouvrir,.card-partager{justify-content:center;margin-left:0;width:100%}.card-actions{gap:.4rem}}
 html.en-recherche #grille-portraits .card-ouvrir .co-long{display:inline}html.en-recherche #grille-portraits .card-ouvrir .co-court{display:none}
 @media(max-width:600px){html.en-recherche #grille-portraits .card-ouvrir .co-long{display:none}html.en-recherche #grille-portraits .card-ouvrir .co-court{display:inline}}
+
+/* Bloc « Abonnez-vous » sous la conversation (14/10/2026) */
+.abonner-bloc{margin-top:3rem;padding:1.6rem 1.5rem;border:1px solid #c4a26566;border-radius:18px;background:linear-gradient(160deg,#1c170f,#0c0c0f)}
+.abonner-bloc h2{margin:.4rem 0 .5rem;font-family:var(--ff-display);font-size:clamp(1.5rem,3vw,2rem);font-weight:500}
+.abonner-bloc h2 em{color:var(--accent);font-style:italic}
+.abonner-bloc>p{margin:0 0 1.1rem;color:var(--text-dim)}
+.abonner-boutons{display:flex;flex-wrap:wrap;gap:.6rem}
+.btn-abonner{display:inline-flex;align-items:center;gap:.55rem;min-height:46px;padding:.6rem 1.1rem;border:1px solid #c4a26599;border-radius:999px;background:#0c0c0f;color:var(--text);font-family:var(--ff-body);font-size:.95rem;font-weight:500;text-decoration:none;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.btn-abonner svg{width:20px;height:20px;flex:none;color:var(--accent)}
+.btn-abonner:hover{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+.btn-abonner:hover svg{color:var(--bg)}
+.btn-flux{color:var(--text-dim);font-weight:400}
+.abonner-email{margin:1rem 0 0}
+.abonner-email a{color:var(--accent-clair)}
+@media(max-width:600px){.abonner-bloc{padding:1.3rem 1.1rem}.btn-abonner{width:100%;justify-content:center}}
+.abonner-bloc .section-label{display:flex;align-items:center;gap:.4rem}.abonner-bloc .section-label svg{width:14px;height:14px;flex:none}
+.card-actions{flex-wrap:wrap}.card-ouvrir{flex:0 1 auto}.card-partager{margin-left:0}

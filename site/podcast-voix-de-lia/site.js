@@ -497,11 +497,12 @@
     if (navigator.share && window.matchMedia("(pointer:coarse)").matches) { navigator.share({ title: titre, text: titre, url: url }).catch(function () {}); return; }
     if (popPartage && popPartage._bouton === b) return fermerPartage();
     fermerPartage();
-    var u = encodeURIComponent(url), t = encodeURIComponent(titre);
+    // ?via=… : chaque réseau reçoit une adresse qu'il n'a pas encore en cache, donc il relit l'aperçu (image comprise)
+    var u = encodeURIComponent(url), t = encodeURIComponent(titre), via = function (r) { return encodeURIComponent(url + "?via=" + r); };
     var liens = [
-      ["LinkedIn", "https://www.linkedin.com/sharing/share-offsite/?url=" + u],
-      ["X", "https://x.com/intent/tweet?text=" + t + "&url=" + u],
-      ["Facebook", "https://www.facebook.com/sharer/sharer.php?u=" + u],
+      ["LinkedIn", "https://www.linkedin.com/sharing/share-offsite/?url=" + via("linkedin")],
+      ["X", "https://x.com/intent/tweet?text=" + t + "&url=" + via("x")],
+      ["Facebook", "https://www.facebook.com/sharer/sharer.php?u=" + via("facebook")],
       ["WhatsApp", "https://wa.me/?text=" + encodeURIComponent(titre + " " + url)],
       ["E-mail", "mailto:?subject=" + t + "&body=" + encodeURIComponent(titre + "\n" + url)]
     ];
@@ -534,6 +535,16 @@
     if (premier) try { premier.focus({ preventScroll: true }); } catch (e) {}
   });
   document.addEventListener("keydown", function (ev) { if (ev.key === "Escape" && popPartage) { var b = popPartage._bouton; fermerPartage(); if (b) b.focus(); } });
+
+  /* ------------------------------------------------ « copier le flux RSS » (bloc Abonnez-vous, 14/10/2026) */
+  document.addEventListener("click", function (ev) {
+    var b = ev.target.closest && ev.target.closest("[data-copier]");
+    if (!b) return;
+    var url = b.getAttribute("data-copier"), mot = $("span", b) || b, avant = mot.textContent;
+    var ok = function () { mot.textContent = "Adresse du flux copiée ✓ — collez-la dans votre application"; setTimeout(function () { mot.textContent = avant; }, 3500); };
+    if (navigator.clipboard) navigator.clipboard.writeText(url).then(ok, function () { window.prompt("Copiez l'adresse du flux :", url); });
+    else window.prompt("Copiez l'adresse du flux :", url);
+  });
 
   /* ------------------------------------------------ partage */
   var partage = $(".partage");
