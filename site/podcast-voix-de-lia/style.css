@@ -1763,3 +1763,9 @@ html.anime .hero .lia-carte:not(.ecoute) .lia-piste{display:none}
   .du-jour{max-width:38rem;grid-template-columns:250px minmax(0,1fr)}
   .dj-nom{font-size:2.2rem}
 }
+/* familles sur deux lignes au plus sur grand écran (14/10/2026, Alexandre) : puces plus compactes */
+@media(min-width:960px){
+  .hero .outils .puces{gap:.35rem}
+  .hero .outils .puce{min-height:32px;padding:.28rem .62rem;font-size:.78rem;gap:.3rem}
+  .hero .outils .puce-n{font-size:.56rem}
+}
