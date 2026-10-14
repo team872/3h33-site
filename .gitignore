@@ -16,3 +16,6 @@ site/inclus/*.tmp
 # MP3 des Voix de l'IA : trop lourds pour git, copiés à part sur le serveur (rsync), voir
 # podcast-engine/site/README.md. Le reste de la page est construit par podcast-engine (site/construire.mjs --3h33).
 site/podcast-voix-de-lia/audio/
+
+# Teasers des kits personnels (podcast-engine/site/kits-en-ligne.sh) : copiés à part sur le serveur (rsync)
+site/pour/*/*.mp3
