@@ -1776,3 +1776,6 @@ html.anime .hero .lia-carte:not(.ecoute) .lia-piste{display:none}
 .hero .cherche-champ{height:54px}
 html:not(.en-filtre) .hero .outils .compte-ligne{display:none}
 .hero .outils .exemples{display:none}
+/* lien discret vers les sources (14/10/2026) : petit, gris, au-dessus du lien qui couvre la carte */
+.card-sources,.dj-sources{position:relative;z-index:2;display:inline-block;margin-top:.45rem;font-family:var(--ff-mono);font-size:.6rem;letter-spacing:.08em;color:var(--text-faible);text-decoration:none;border-bottom:1px dotted #ffffff26;transition:color .2s,border-color .2s}
+.card-sources:hover,.dj-sources:hover,.card-sources:focus-visible,.dj-sources:focus-visible{color:var(--accent);border-color:#c4a26599}

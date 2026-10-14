@@ -123,6 +123,8 @@
         var nom = $(".dj-nom a", dj); nom.href = x.chemin; nom.firstChild.nodeValue = x.nom + " ";
         $(".dj-role", dj).textContent = x.role;
         $(".dj-angle", dj).textContent = x.angle;
+        var djs = $(".dj-sources", dj);
+        if (djs) { if (x.sources) { djs.href = x.chemin + "#sources"; djs.textContent = x.sources + " sources vérifiées ↓"; } else djs.hidden = true; }
         $(".dj-duree", dj).textContent = x.duree;
         $(".dj-ouvrir", dj).href = x.chemin;
         var pt = $(".card-partager", dj);
