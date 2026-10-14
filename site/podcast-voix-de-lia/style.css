@@ -1743,3 +1743,23 @@ html.anime .hero .lia-carte:not(.ecoute) .lia-piste{display:none}
 .bandeau-actions .pa-btn svg,.bandeau-actions .card-partager svg{width:13px;height:13px}
 .bandeau-actions .pa-titre{font-size:.56rem}
 .bandeau-actions .pa-discret::after{margin-left:.25rem}
+
+/* Le portrait du jour d'abord (14/10/2026, Alexandre : « on ne sait plus quoi lire, il faut mettre en valeur
+   l'épisode ») : sur grand écran, tant qu'on n'a pas fait défiler la page, la présentation, Lia, les boutons et la
+   recherche sont atténués ; ils se rallument au survol, au clavier, pendant une recherche, ou dès qu'on descend. */
+.hero-mention{display:none}
+@media(min-width:960px) and (hover:hover){
+  .hero-phrase,.hero .lia-carte,.bandeau-actions,.hero .outils,.hero-label{transition:opacity .5s var(--ease),filter .5s var(--ease)}
+  html.anime:not(.a-defile):not(.en-filtre) .hero-phrase,
+  html.anime:not(.a-defile):not(.en-filtre) .hero .lia-carte,
+  html.anime:not(.a-defile):not(.en-filtre) .bandeau-actions,
+  html.anime:not(.a-defile):not(.en-filtre) .hero-label{opacity:.42!important;filter:saturate(.6)}
+  html.anime:not(.a-defile):not(.en-filtre) .hero .outils{opacity:.5;filter:saturate(.6)}
+  html.anime .hero-texte:hover .hero-phrase,html.anime .hero-texte:hover .lia-carte,html.anime .hero-texte:hover .bandeau-actions,html.anime .hero-texte:hover .hero-label,
+  html.anime .hero-texte:focus-within .hero-phrase,html.anime .hero-texte:focus-within .lia-carte,html.anime .hero-texte:focus-within .bandeau-actions,html.anime .hero-texte:focus-within .hero-label,
+  html.anime .hero .outils:hover,html.anime .hero .outils:focus-within,
+  html.anime .lia-carte.joue{opacity:1!important;filter:none}
+  /* le portrait du jour, plus grand */
+  .du-jour{max-width:38rem;grid-template-columns:250px minmax(0,1fr)}
+  .dj-nom{font-size:2.2rem}
+}

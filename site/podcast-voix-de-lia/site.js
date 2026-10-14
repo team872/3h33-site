@@ -65,6 +65,7 @@
   var majDefile = function () {
     var y = window.scrollY;
     if (barre) barre.classList.toggle("defile", y > 40);
+    doc.classList.toggle("a-defile", y > 60); // bandeau : les zones atténuées se rallument dès qu'on descend (14/10/2026)
     if (haut) haut.classList.toggle("visible", y > Math.max(640, window.innerHeight * 0.85));
     if (y < 120) liensNav.forEach(function (a) { a.classList.remove("actif"); a.removeAttribute("aria-current"); });
   };
