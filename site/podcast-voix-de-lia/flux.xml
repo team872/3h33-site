@@ -1335,28 +1335,6 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/eric-larcheveque/chapitres.json?v=872c0bc2" type="application/json+chapters"/>
     </item>
     <item>
-      <title>Patrick Robin : du Minitel à la French Tech, sans diplôme supérieur</title>
-      <itunes:title>Patrick Robin : du Minitel à la French Tech, sans diplôme supérieur</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/patrick-robin/</link>
-      <guid isPermaLink="false">voix-de-lia-patrick-robin</guid>
-      <pubDate>Mon, 12 Oct 2026 20:30:34 GMT</pubDate>
-      <description>Éditeur d'art, pionnier de l'accès à Internet en France, business angel et co-initiateur du manifeste des entrepreneurs de 2012 : Ada et Alan racontent Patrick Robin, un entrepreneur qui parle de ses échecs sans détour.
-
-Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/patrick-robin/
-
-Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Éditeur d&#39;art, pionnier de l&#39;accès à Internet en France, business angel et co-initiateur du manifeste des entrepreneurs de 2012 : Ada et Alan racontent Patrick Robin, un entrepreneur qui parle de ses échecs sans détour.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/patrick-robin/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/patrick-robin.mp3?v=5f86c2cb" length="13160108" type="audio/mpeg"/>
-      <itunes:duration>545</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/patrick-robin-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/patrick-robin/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/patrick-robin/chapitres.json?v=d5540bd7" type="application/json+chapters"/>
-    </item>
-    <item>
       <title>Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley</title>
       <itunes:title>Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley</itunes:title>
       <link>https://3h33.com/podcast-voix-de-lia/carlos-diaz/</link>
@@ -1377,6 +1355,28 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/carlos-diaz-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/carlos-diaz/transcription.html" type="text/html" language="fr"/>
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/carlos-diaz/chapitres.json?v=36630a26" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Patrick Robin : du Minitel à la French Tech, sans diplôme supérieur</title>
+      <itunes:title>Patrick Robin : du Minitel à la French Tech, sans diplôme supérieur</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/patrick-robin/</link>
+      <guid isPermaLink="false">voix-de-lia-patrick-robin</guid>
+      <pubDate>Mon, 12 Oct 2026 20:30:34 GMT</pubDate>
+      <description>Éditeur d'art, pionnier de l'accès à Internet en France, business angel et co-initiateur du manifeste des entrepreneurs de 2012 : Ada et Alan racontent Patrick Robin, un entrepreneur qui parle de ses échecs sans détour.
+
+Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/patrick-robin/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Éditeur d&#39;art, pionnier de l&#39;accès à Internet en France, business angel et co-initiateur du manifeste des entrepreneurs de 2012 : Ada et Alan racontent Patrick Robin, un entrepreneur qui parle de ses échecs sans détour.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/patrick-robin/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/patrick-robin.mp3?v=a0c5dfb1" length="13227817" type="audio/mpeg"/>
+      <itunes:duration>545</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/patrick-robin-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/patrick-robin/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/patrick-robin/chapitres.json?v=20199ca7" type="application/json+chapters"/>
     </item>
     <item>
       <title>Alexandre Lebrun, l'homme des machines qui parlent</title>

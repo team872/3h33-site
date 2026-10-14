@@ -867,9 +867,11 @@
     function aideCourte(champ) { if (champ && champ.clientWidth && champ.clientWidth < 270) champ.placeholder = "Nom, entreprise, mot…"; }
     function regexMot(m, g) { return new RegExp(BORD + echapper(m) + (m.length < 3 ? "(?![" + LETTRE + "])" : ""), g || ""); }
     // les mots utiles d'une recherche (sans « de », « la »…), sans doublon ; aucun mot utile : pas de recherche
+    // une seule lettre, mais un vrai nom : « X » (ex-Twitter). Complété par les mots-clés d'une lettre de recherche.json.
+    var MOTS_UNE_LETTRE = { x: 1 };
     function motsDe(requete) {
       var tous = norm(requete).split(new RegExp("[^" + LETTRE + "]+")).filter(Boolean);
-      var utiles = tous.filter(function (m) { return !VIDES[m] && (m.length > 1 || /\d/.test(m)); });
+      var utiles = tous.filter(function (m) { return !VIDES[m] && (m.length > 1 || /\d/.test(m) || MOTS_UNE_LETTRE[m]); });
       var vus = {};
       return utiles.filter(function (m) { if (vus[m]) return false; vus[m] = 1; return true; }).slice(0, 8);
     }
@@ -889,6 +891,7 @@
       (x.familles || []).forEach(function (f) { nomsFam[f[0]] = f[1]; });
       var parId = {};
       var portraits = (x.portraits || []).map(function (p) {
+        (p.k || []).forEach(function (k) { var nk = norm(k); if (nk.length === 1) MOTS_UNE_LETTRE[nk] = 1; });
         var passages = [];
         if (p.a) passages.push({ type: "titre", texte: p.a });
         if (p.ac) passages.push({ type: "accroche", texte: p.ac });
@@ -904,7 +907,8 @@
           champs: [
             { poids: 12, n: norm(p.n) },
             { poids: 7, n: norm([p.e, p.r, p.fo].join(" · ")) },
-            { poids: 4, n: norm((p.f || []).map(function (f) { return nomsFam[f] || ""; }).join(" · ")) }
+            { poids: 4, n: norm((p.f || []).map(function (f) { return nomsFam[f] || ""; }).join(" · ")) },
+            { poids: 9, n: norm((p.k || []).join(" · ")) }
           ],
           passages: passages
         };

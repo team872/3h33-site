@@ -1715,3 +1715,20 @@ html.en-filtre .bandeau-actions{display:none}
 .dj-image:hover{box-shadow:0 30px 80px #000c,0 0 0 2px var(--accent)}
 /* tout ce qui se clique a l'air cliquable : familles et vues qui s'allument, cartes qui réagissent */
 .hero .puce:hover{border-color:var(--accent);color:var(--accent-clair)}
+/* S'abonner, plus discret (14/10/2026, Alexandre : « trop visibles », un seul bouton doit appeler le clic : Écouter).
+   Contour doré, texte clair, sur une seule ligne ; l'or plein reste réservé à « Écouter ». */
+.ba-abonner{flex-wrap:nowrap;gap:.4rem}
+.ba-abonner .pa-titre{min-width:0;margin-right:.3rem;color:var(--text-dim)}
+.ba-abonner .pa-btn{background:none;border-color:#c4a26580;color:var(--text);font-weight:400;padding:.35rem .75rem;white-space:nowrap}
+.ba-abonner .pa-btn svg{color:var(--accent)}
+.ba-abonner .pa-btn:hover,.ba-abonner .pa-btn:focus-visible{background:#c4a2651f;border-color:var(--accent);color:var(--accent-clair);transform:none}
+@media(max-width:520px){.ba-abonner{flex-wrap:wrap}}
+/* bloc de Lia resserré (14/10/2026) : la barre de progression n'apparaît que pendant l'écoute, « Lire le texte » juste
+   sous le titre, alignés sur le texte ; les lignes suivantes partent du même bord gauche que le médaillon */
+html.anime .hero .lia-carte:not(.ecoute) .lia-piste{display:none}
+.hero .lia-bouton{align-items:center}
+.hero .lia-texte{margin-top:-1.9rem;margin-bottom:.4rem;min-height:1.2rem}
+.hero .lia-carte.ecoute .lia-texte,.hero .lia-carte.deplie .lia-texte{margin-top:.6rem}
+.hero .lia-lire{margin:0}
+.bandeau-actions{margin-top:1.1rem}
+@media(max-width:700px){.hero .lia-texte{margin-top:-1.4rem}}
