@@ -1737,3 +1737,9 @@ html.anime .hero .lia-carte:not(.ecoute) .lia-piste{display:none}
   .hero-dedans{grid-template-areas:"jour texte" "outils outils"}
   .du-jour{justify-self:start}
 }
+/* boutons du bandeau plus petits que « Lia vous explique le concept » (14/10/2026, Alexandre) */
+.bandeau-actions{gap:.45rem}
+.bandeau-actions .pa-btn,.ba-abonner .pa-btn,.bandeau-actions .card-partager{min-height:32px;padding:.22rem .7rem;font-size:.76rem;gap:.35rem}
+.bandeau-actions .pa-btn svg,.bandeau-actions .card-partager svg{width:13px;height:13px}
+.bandeau-actions .pa-titre{font-size:.56rem}
+.bandeau-actions .pa-discret::after{margin-left:.25rem}
