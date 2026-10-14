@@ -1599,3 +1599,72 @@ html.en-recherche #grille-portraits .card-ouvrir .co-long{display:inline}html.en
 .enquete-liens a:hover{border-color:var(--accent)}
 .portrait-actions .pa-btn.pa-partager{margin-left:0}
 .enquete .enquete-ia{margin:-.3rem 0 1rem;padding-left:.8rem;border-left:2px solid var(--accent);color:var(--text);font-weight:400}
+
+/* Recherche et filtres dans le bandeau (14/10/2026, Alexandre : « il y a beaucoup de place là-haut », « le moteur de
+   recherche, les filtres, qu'on les voie mieux »). Les deux colonnes partent du haut : à gauche le titre, la phrase,
+   Lia, puis la recherche ; à droite le portrait du jour. Pendant une recherche, le bandeau se réduit au titre et au
+   champ : les résultats suivent juste dessous. */
+.hero .outils{margin-top:1.6rem;scroll-margin-top:5rem}
+.hero .outils .vues{margin-bottom:.8rem}
+.hero .outils .cherche{max-width:none}
+@media(min-width:960px){
+  .hero-dedans{align-items:start}
+  .hero{padding-top:6.2rem}
+}
+@media(max-width:700px){
+  .hero .outils{order:4;margin-top:0;margin-bottom:1.4rem}
+  .hero-phrase{order:5}
+  .hero .lia-carte{order:6}
+  .hero-mention{order:8}
+}
+html.en-filtre .hero .du-jour,html.en-filtre .hero-phrase,html.en-filtre .hero .lia-carte,html.en-filtre .hero-mention,html.en-filtre .hero-label{display:none}
+html.en-filtre .hero{padding-bottom:0;border-bottom:0}
+html.en-filtre .hero-dedans{grid-template-columns:minmax(0,1fr);grid-template-areas:"texte"}
+html.en-filtre .section-portraits{padding-top:.5rem}
+html.en-filtre .section-portraits .portraits-titre{display:none}
+@media(min-width:960px){.hero-texte{align-self:start}.hero .outils .cherche{width:100%}}
+html.en-filtre .section-portraits .connaissez{display:none}
+/* le moteur de recherche du bandeau, bien visible (14/10/2026) */
+.hero .outils{margin-top:1.8rem;padding:1.3rem 1.3rem 1.1rem;border:1px solid #c4a26559;border-radius:16px;background:linear-gradient(160deg,#17130d,#0d0d10)}
+.cherche-titre{margin:0 0 .7rem;font-family:var(--ff-display);font-size:1.35rem;font-weight:700;color:var(--text)}
+.cherche-titre span{display:block;margin-top:.15rem;font-family:var(--ff-body);font-size:.85rem;font-weight:300;color:var(--text-dim)}
+.hero .cherche-champ{height:60px;font-size:1.08rem;border:1px solid var(--accent);border-radius:12px;background:#08080a;box-shadow:0 0 0 4px #c4a2651a}
+.hero .cherche-champ:focus{box-shadow:0 0 0 4px #c4a26540;outline:none}
+.hero .cherche>svg{width:20px;height:20px;left:1.05rem}
+.filtres-titre{margin:1.1rem 0 .55rem;font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-dim)}
+.hero .outils .vues{margin-bottom:0}
+.hero .familles-bouton{display:none}
+html.anime .hero .outils .puces{display:flex}
+.hero .outils .puces{margin-top:.6rem}
+html.en-filtre .cherche-titre span,html.en-filtre .filtres-titre{display:none}
+@media(max-width:700px){.hero .outils{padding:1rem .9rem .9rem;margin-left:calc(var(--gouttiere) * -.25);margin-right:calc(var(--gouttiere) * -.25)}.cherche-titre{font-size:1.15rem}.hero .cherche-champ{height:54px;font-size:1rem}}
+/* bandeau en deux rangées (14/10/2026) : titre | portrait du jour, puis la recherche sur toute la largeur */
+.hero .outils{grid-area:outils}
+@media(min-width:960px){
+  .hero{padding:5.6rem var(--gouttiere) 2.6rem}
+  .hero-dedans{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"texte jour" "outils outils";row-gap:2rem;align-items:center}
+  .hero-texte{align-self:center}
+  .du-jour{max-width:34rem;grid-template-columns:200px minmax(0,1fr);column-gap:1.4rem;align-items:start}
+  .dj-boutons{grid-column:1 / -1}
+  .dj-rond{width:46px;height:46px;right:.6rem;bottom:.6rem}
+  .dj-nom{font-size:1.9rem}
+  .hero .outils{margin-top:0;padding:1.5rem 1.6rem 1.3rem;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);column-gap:2rem;align-items:start}
+  .hero .outils>*{grid-column:1 / -1}
+  .hero .outils .cherche-titre{grid-column:1}
+  .hero .outils .cherche{grid-column:1}
+  .hero .outils .filtres-titre{grid-column:2;grid-row:1;margin-top:.3rem}
+  .hero .outils .vues{grid-column:2;grid-row:2;align-self:center}
+}
+html.en-filtre .hero-dedans{grid-template-areas:"texte" "outils";grid-template-columns:minmax(0,1fr)}
+/* boutons pratiques du bandeau (14/10/2026) */
+.bandeau-actions{margin-top:1.2rem;display:flex;flex-direction:column;gap:.55rem;opacity:0;animation:fadeUp .8s .6s forwards}
+.ba-ligne{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem}
+.bandeau-actions .pa-btn{min-height:38px;padding:.38rem .85rem;font-size:.82rem}
+.bandeau-actions .pa-titre{min-width:5.2rem}
+.pa-btn.pa-discret{border-color:transparent;color:var(--text-dim);padding-left:.55rem;padding-right:.55rem}
+.pa-btn.pa-discret:hover{border-color:var(--border-2);color:var(--accent-clair)}
+.bandeau-actions .card-partager{margin-left:0;min-height:38px;font-size:.82rem}
+@media(max-width:700px){.bandeau-actions{order:7;margin-bottom:.4rem}.bandeau-actions .pa-titre{flex:1 1 100%}}
+html.en-filtre .bandeau-actions{display:none}
+@media(min-width:960px){.hero .outils .filtres-titre{display:none}.hero .outils .vues{grid-row:2}}
+@media(max-width:700px){.hero .outils .vue{font-size:.8rem;padding-left:.7rem;padding-right:.7rem;white-space:nowrap}.hero .outils .vues{display:flex;width:100%}.hero .outils .vue{flex:1 1 0;justify-content:center}}

@@ -459,11 +459,13 @@
         doc.style.setProperty("--haut-mini", Math.round(mini.getBoundingClientRect().height) + "px");
       };
       var visible = null;
+      var telephone = window.matchMedia("(max-width:700px)");
       var majMini = function () { // un seul getBoundingClientRect : assez léger pour chaque événement de défilement
         // visible aussi quand le grand lecteur est encore plus bas que l'écran (téléphone : la vignette prend
         // tout le premier écran) ; caché seulement quand le grand lecteur lui-même est à l'écran
+        // téléphone (14/10/2026, Alexandre : il apparaissait et disparaissait au défilement) : toujours là, fixe en haut
         var r = lecteur.getBoundingClientRect();
-        var v = r.bottom < hautBarre + 8 || r.top > window.innerHeight - 24;
+        var v = telephone.matches || r.bottom < hautBarre + 8 || r.top > window.innerHeight - 24;
         if (v === visible) return;
         visible = v;
         mini.classList.toggle("visible", v);
