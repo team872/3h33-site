@@ -1769,3 +1769,10 @@ html.anime .hero .lia-carte:not(.ecoute) .lia-piste{display:none}
   .hero .outils .puce{min-height:32px;padding:.28rem .62rem;font-size:.78rem;gap:.3rem}
   .hero .outils .puce-n{font-size:.56rem}
 }
+/* moteur de recherche compact (14/10/2026, Alexandre) : ni titre ni sous-titre (il est dans le champ), pas de ligne
+   « compteur / Essayez » tant qu'on ne cherche pas ; pendant une recherche, le compteur revient en titre des résultats */
+.hero .outils{padding:1rem 1.1rem}
+@media(min-width:960px){.hero .outils{padding:1.1rem 1.3rem;row-gap:.2rem}.hero .outils .vues{grid-row:1}.hero .outils .cherche{grid-row:1}}
+.hero .cherche-champ{height:54px}
+html:not(.en-filtre) .hero .outils .compte-ligne{display:none}
+.hero .outils .exemples{display:none}
