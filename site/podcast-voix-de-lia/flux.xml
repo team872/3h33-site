@@ -18,7 +18,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Tue, 13 Oct 2026 08:12:16 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 17:36:03 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -36,6 +36,28 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Pierre Gilbert : le semeur de Sator</title>
+      <itunes:title>Pierre Gilbert : le semeur de Sator</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/pierre-gilbert/</link>
+      <guid isPermaLink="false">voix-de-lia-pierre-gilbert</guid>
+      <pubDate>Wed, 14 Oct 2026 17:36:03 GMT</pubDate>
+      <description>Prospectiviste du climat, auteur de deux livres sur le géomimétisme, fondateur et président de Sator : le clin d'œil d'Ada, Alan et Lia à Pierre Gilbert, dont la plateforme a fait de Carl Gustav Jung un professeur.
+
+Épisode enregistré le 14 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/pierre-gilbert/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Prospectiviste du climat, auteur de deux livres sur le géomimétisme, fondateur et président de Sator : le clin d&#39;œil d&#39;Ada, Alan et Lia à Pierre Gilbert, dont la plateforme a fait de Carl Gustav Jung un professeur.</p><p>Épisode enregistré le 14 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/pierre-gilbert/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/pierre-gilbert.mp3?v=fb59ad13" length="5635951" type="audio/mpeg"/>
+      <itunes:duration>231</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/pierre-gilbert-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/pierre-gilbert/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/pierre-gilbert/chapitres.json?v=0dc01745" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Mike Krieger : la première photo d'Instagram, puis Anthropic Labs</title>
       <itunes:title>Mike Krieger : la première photo d'Instagram, puis Anthropic Labs</itunes:title>
@@ -1368,15 +1390,15 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
 
 Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
       <content:encoded><![CDATA[<p>Éditeur d&#39;art, pionnier de l&#39;accès à Internet en France, business angel et co-initiateur du manifeste des entrepreneurs de 2012 : Ada et Alan racontent Patrick Robin, un entrepreneur qui parle de ses échecs sans détour.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/patrick-robin/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/patrick-robin.mp3?v=a0c5dfb1" length="13227817" type="audio/mpeg"/>
-      <itunes:duration>548</itunes:duration>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/patrick-robin.mp3?v=32a6f4c5" length="14786387" type="audio/mpeg"/>
+      <itunes:duration>612</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:season>2</itunes:season>
       <itunes:explicit>false</itunes:explicit>
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/patrick-robin-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/patrick-robin/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/patrick-robin/chapitres.json?v=20199ca7" type="application/json+chapters"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/patrick-robin/chapitres.json?v=0683123b" type="application/json+chapters"/>
     </item>
     <item>
       <title>Alexandre Lebrun, l'homme des machines qui parlent</title>
