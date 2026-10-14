@@ -1732,3 +1732,8 @@ html.anime .hero .lia-carte:not(.ecoute) .lia-piste{display:none}
 .hero .lia-lire{margin:0}
 .bandeau-actions{margin-top:1.1rem}
 @media(max-width:700px){.hero .lia-texte{margin-top:-1.4rem}}
+/* colonnes inversées (14/10/2026, Alexandre) : « À écouter aujourd'hui » à gauche, le titre et Lia à droite */
+@media(min-width:960px){
+  .hero-dedans{grid-template-areas:"jour texte" "outils outils"}
+  .du-jour{justify-self:start}
+}
