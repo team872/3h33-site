@@ -1668,3 +1668,50 @@ html.en-filtre .hero-dedans{grid-template-areas:"texte" "outils";grid-template-c
 html.en-filtre .bandeau-actions{display:none}
 @media(min-width:960px){.hero .outils .filtres-titre{display:none}.hero .outils .vues{grid-row:2}}
 @media(max-width:700px){.hero .outils .vue{font-size:.8rem;padding-left:.7rem;padding-right:.7rem;white-space:nowrap}.hero .outils .vues{display:flex;width:100%}.hero .outils .vue{flex:1 1 0;justify-content:center}}
+
+/* Lia en médaillon (14/10/2026) : son portrait (Seedream 5 Pro, citron d'ambre au front), le bouton de lecture posé
+   dessus, et le citron qui s'allume doucement au rythme de sa voix (--voix, de 0 à 1, mesuré par site.js) */
+.hero .lia-bouton{gap:1rem}
+.lia-medaillon{position:relative;flex-shrink:0;width:92px;height:92px;border-radius:50%;padding:3px;background:linear-gradient(140deg,#f3dcaa,var(--accent) 45%,#6b5226);box-shadow:0 10px 30px #000a,0 0 0 1px #c4a26540}
+.lia-medaillon picture,.lia-medaillon img{display:block;width:100%;height:100%;border-radius:50%;object-fit:cover}
+.lia-citron{position:absolute;left:calc(3px + 58% * (86 / 92));top:calc(3px + 41% * (86 / 92));width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,#fff6c8 0%,#ffd54ab3 35%,#ffb30066 60%,transparent 72%);mix-blend-mode:screen;
+  opacity:calc(.15 + var(--voix,0) * .85);transform:scale(calc(1 + var(--voix,0) * 1.6));
+  box-shadow:0 0 calc(4px + var(--voix,0) * 22px) calc(var(--voix,0) * 8px) #ffc83d99;transition:opacity .08s linear,transform .08s linear}
+.lia-carte:not(.voix-suivie).joue .lia-citron{animation:citron-doux 1.4s ease-in-out infinite}
+@keyframes citron-doux{0%,100%{opacity:.35;transform:scale(1.1)}50%{opacity:1;transform:scale(2.1)}}
+.lia-carte:not(.ecoutee) .lia-citron{animation:citron-veille 3.2s ease-in-out infinite}
+@keyframes citron-veille{0%,100%{opacity:.12}50%{opacity:.6}}
+.hero .lia-medaillon .lia-rond{position:absolute;right:-4px;bottom:-4px;width:36px;height:36px;background:var(--accent);color:var(--bg);border:2px solid var(--bg);box-shadow:0 4px 12px #000a}
+.hero .lia-medaillon .lia-rond svg{width:13px;height:13px}
+.hero .lia-bouton:hover .lia-medaillon .lia-rond{background:var(--accent-clair);transform:scale(1.08)}
+.hero .lia-bouton:hover .lia-medaillon{box-shadow:0 10px 30px #000a,0 0 24px -2px var(--accent-glow)}
+.lia-nouveau{display:block;font-family:var(--ff-mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.2rem}
+.hero .lia-titre{font-family:var(--ff-display);font-size:1.15rem;font-weight:700;color:var(--text)}
+.hero .lia-bouton:hover .lia-titre{color:var(--accent-clair)}
+.hero .lia-piste,.hero .lia-texte{margin-left:calc(92px + 1rem)}
+@media(max-width:700px){.lia-medaillon{width:76px;height:76px}.hero .lia-piste,.hero .lia-texte{margin-left:calc(76px + 1rem)}.hero .lia-titre{font-size:1.02rem}}
+@media (prefers-reduced-motion: reduce){.lia-citron{animation:none!important;transition:none}}
+
+/* S'abonner : boutons en or plein (14/10/2026, Alexandre : « qu'on les voie encore plus ») */
+.ba-abonner .pa-btn{background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:600}
+.ba-abonner .pa-btn svg{color:var(--bg)}
+.ba-abonner .pa-btn:hover,.ba-abonner .pa-btn:focus-visible{background:var(--accent-clair);border-color:var(--accent-clair);color:var(--bg);transform:translateY(-1px)}
+.ba-abonner .pa-titre{color:var(--accent)}
+.bandeau-actions .pa-discret{border-color:var(--border-2);color:var(--text)}
+.bandeau-actions .pa-discret::after{content:'→';margin-left:.35rem;color:var(--accent);transition:transform .2s}
+.bandeau-actions .pa-discret:hover::after{transform:translateX(3px)}
+.bandeau-actions .card-partager::after{content:none}
+
+/* À écouter aujourd'hui (14/10/2026) */
+.dj-titre{grid-column:1 / -1;margin:0 0 .2rem;font-family:var(--ff-display);font-size:clamp(1.4rem,2.2vw,1.8rem);font-weight:700;color:var(--text)}
+.dj-titre::before{content:'';display:inline-block;width:.55em;height:.55em;margin-right:.5rem;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent-glow);vertical-align:.08em}
+.dj-nom a span{color:var(--accent);font-size:.8em;transition:margin .2s}
+.dj-nom a:hover span{margin-left:.25rem}
+.dj-tous{grid-column:1 / -1;margin:.2rem 0 0}
+.dj-tous a{color:var(--accent-clair);font-size:.92rem;text-decoration:none;border-bottom:1px solid #c4a26566}
+.dj-tous a:hover{border-color:var(--accent)}
+.dj-image{cursor:pointer}
+.dj-image:hover{box-shadow:0 30px 80px #000c,0 0 0 2px var(--accent)}
+/* tout ce qui se clique a l'air cliquable : familles et vues qui s'allument, cartes qui réagissent */
+.hero .puce:hover{border-color:var(--accent);color:var(--accent-clair)}

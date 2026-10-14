@@ -97,6 +97,41 @@
     $$("audio").forEach(function (a) { if (a !== ev.target && !a.paused) a.pause(); });
   }, true);
 
+  /* ------------------------------------------------ bandeau : « À écouter aujourd'hui » (14/10/2026). Le portrait paru
+     aujourd'hui reste ; sinon, à chaque visite, un autre portrait parmi les plus célèbres. */
+  var dj = $(".du-jour"), djListe = $("#donnees-du-jour");
+  var djAujourdhui = false;
+  (function () {
+    var et = $(".dj-etiquette");
+    if (!et) return;
+    var auj = new Date(), deux = function (n) { return (n < 10 ? "0" : "") + n; };
+    djAujourdhui = et.getAttribute("data-publie") === auj.getFullYear() + "-" + deux(auj.getMonth() + 1) + "-" + deux(auj.getDate());
+  })();
+  if (dj && djListe && !djAujourdhui) {
+    try {
+      var djChoix = JSON.parse(djListe.textContent).filter(function (x) { return x.id !== dj.querySelector("[data-jouer]").getAttribute("data-jouer"); });
+      var x = djChoix[Math.floor(Math.random() * djChoix.length)];
+      if (x) {
+        var img = $(".dj-image img", dj), src = $(".dj-image source", dj);
+        img.src = x.image + "-400.jpg";
+        img.srcset = x.image + "-400.jpg 400w, " + x.image + "-800.jpg 800w";
+        img.alt = "Vignette de " + x.nom;
+        if (src) { if (x.webp) src.srcset = x.image + "-400.webp 400w, " + x.image + "-800.webp 800w"; else src.parentNode.removeChild(src); }
+        $$("[data-jouer]", dj).forEach(function (b) { b.setAttribute("data-jouer", x.id); });
+        $(".dj-image", dj).setAttribute("aria-label", "Écouter le portrait de " + x.nom + " (" + x.duree + ")");
+        var nom = $(".dj-nom a", dj); nom.href = x.chemin; nom.firstChild.nodeValue = x.nom + " ";
+        $(".dj-role", dj).textContent = x.role;
+        $(".dj-angle", dj).textContent = x.angle;
+        $(".dj-duree", dj).textContent = x.duree;
+        $(".dj-ouvrir", dj).href = x.chemin;
+        var pt = $(".card-partager", dj);
+        pt.setAttribute("data-partager-url", x.url);
+        pt.setAttribute("data-partager-titre", x.titre + " — un portrait des Voix de l'IA");
+        pt.setAttribute("aria-label", "Partager le portrait de " + x.nom);
+        $(".dj-etiquette", dj).textContent = "Saison 2 · Portrait";
+      }
+    } catch (e) { if (window.console) console.warn("À écouter aujourd'hui :", e); }
+  }
   /* ------------------------------------------------ bandeau : « Le portrait du jour » s'il est paru aujourd'hui */
   var djEtiquette = $(".dj-etiquette");
   if (djEtiquette) {
@@ -234,6 +269,35 @@
         }
       };
       ["timeupdate", "seeked", "loadedmetadata", "ended"].forEach(function (e) { liaAudio.addEventListener(e, majLia); });
+      // le citron d'ambre de Lia (14/10/2026, Alexandre : « il scintillerait quand l'IA parle, vibration douce, lumière
+      // douce autour et à l'intérieur ») : sa lumière suit le volume de sa voix ; sans Web Audio, une pulsation en CSS
+      var voixCtx = null, voixAna = null, voixDonnees = null, voixLissee = 0;
+      var suivreVoix = function () {
+        if (!voixAna || liaAudio.paused) { lia.style.setProperty("--voix", "0"); return; }
+        voixAna.getByteTimeDomainData(voixDonnees);
+        var somme = 0;
+        for (var i = 0; i < voixDonnees.length; i++) { var v = (voixDonnees[i] - 128) / 128; somme += v * v; }
+        var niveau = Math.min(1, Math.sqrt(somme / voixDonnees.length) * 4.5);
+        voixLissee += (niveau - voixLissee) * 0.25;
+        lia.style.setProperty("--voix", voixLissee.toFixed(3));
+        requestAnimationFrame(suivreVoix);
+      };
+      liaAudio.addEventListener("play", function () {
+        try {
+          if (!voixCtx && (window.AudioContext || window.webkitAudioContext) && !calme) {
+            voixCtx = new (window.AudioContext || window.webkitAudioContext)();
+            var srcVoix = voixCtx.createMediaElementSource(liaAudio);
+            voixAna = voixCtx.createAnalyser();
+            voixAna.fftSize = 512;
+            voixDonnees = new Uint8Array(voixAna.fftSize);
+            srcVoix.connect(voixAna);
+            voixAna.connect(voixCtx.destination);
+            lia.classList.add("voix-suivie");
+          }
+          if (voixCtx && voixCtx.state === "suspended") voixCtx.resume();
+        } catch (e) { voixAna = null; }
+        requestAnimationFrame(suivreVoix);
+      });
       ["play", "pause", "ended"].forEach(function (e) {
         liaAudio.addEventListener(e, function () {
           var joue = !liaAudio.paused && !liaAudio.ended;
