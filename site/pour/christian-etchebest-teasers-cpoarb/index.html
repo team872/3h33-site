@@ -31,7 +31,18 @@
 /* Charte de choucroute-citron.com (src/styles/global.css) */
 :root{--creme:#f7f3e6;--creme-fonce:#ede7d3;--papier:#fff;--citron:#e8c547;--citron-fonce:#c5a020;--vert:#1f3a23;--vert-clair:#4a6b4d;--encre:#15181a;--encre-douce:#5a5e62;--bord:rgba(31,58,35,.12)}
 *{box-sizing:border-box}html,body{margin:0;background:var(--creme);color:var(--encre)}
-body{font:17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;padding:18px 16px 48px;-webkit-font-smoothing:antialiased}
+body{font:17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;padding:0 16px 0;-webkit-font-smoothing:antialiased;background:radial-gradient(circle at 100% 30%,rgba(232,197,71,.22),transparent 40%),radial-gradient(circle at 0% 75%,rgba(232,197,71,.18),transparent 38%),var(--creme)}
+.scene{position:relative;margin:0 -16px 26px;padding:28px 20px 34px;text-align:center;color:var(--creme);background:linear-gradient(180deg,rgba(14,28,17,.45),rgba(14,28,17,.82) 70%,rgba(14,28,17,.94)),url(fond.jpg) center 40%/cover;border-radius:0 0 32px 32px;box-shadow:0 18px 40px rgba(31,58,35,.25)}
+.scene .logo{width:min(220px,58vw);height:auto;display:block;margin:0 auto 6px;filter:drop-shadow(0 6px 18px rgba(0,0,0,.45))}
+.scene .serie{color:var(--citron);margin:0 0 18px}
+.scene .couverture{width:min(260px,70vw);height:auto;aspect-ratio:1;border-radius:20px;border:6px solid #fffdf5;box-shadow:0 18px 40px rgba(0,0,0,.45);transform:rotate(-2.5deg);display:block;margin:0 auto 20px}
+.scene h1{color:#fffdf5}.scene h1 span{color:var(--citron)}
+.scene .titre-ep{font:italic 400 18px/1.4 Fraunces,Georgia,serif;color:rgba(247,243,230,.9);max-width:30ch;margin:10px auto 0}
+.scene .citron{position:absolute;width:56px;height:56px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f6dc6e,var(--citron) 55%,var(--citron-fonce));box-shadow:0 6px 16px rgba(0,0,0,.3)}
+.scene .c1{top:18px;right:16px;transform:scale(.7)}.scene .c2{bottom:-22px;left:22px}
+.pied{margin:40px -16px 0;padding:28px 20px 36px;background:var(--vert);color:var(--creme);text-align:center;border-radius:32px 32px 0 0}
+.pied img{width:120px;height:auto;display:block;margin:0 auto 12px}
+.pied a{color:var(--citron)}.pied p{margin:0 0 10px}.pied small{color:rgba(247,243,230,.75);border-top:1px solid rgba(247,243,230,.18)}
 main{max-width:640px;margin:0 auto}
 .serie{color:var(--vert-clair);letter-spacing:.14em;font-size:12px;font-weight:600;text-transform:uppercase;margin:0 0 12px}
 .entete{display:flex;align-items:center;gap:14px;margin:0 0 12px}
@@ -42,9 +53,10 @@ p{margin:0 0 14px}a{color:var(--vert)}
 .intro{margin:0 0 12px}
 .ia{background:var(--papier);border-left:4px solid var(--citron);border-radius:0 10px 10px 0;padding:10px 14px;margin:0 0 16px;font-size:15px}
 .ia p{margin:0}.ia b{color:var(--vert)}
-.carte{background:var(--papier);border:1px solid var(--bord);border-radius:18px;padding:14px 16px 12px;margin:0 0 14px;box-shadow:0 1px 2px rgba(15,24,28,.04)}
+.carte{position:relative;background:var(--papier);border:1px solid var(--bord);border-top:5px solid var(--citron);border-radius:20px;padding:16px 16px 12px;margin:0 0 18px;box-shadow:0 10px 26px rgba(31,58,35,.10)}
+.carte:nth-of-type(even){border-top-color:var(--vert-clair)}
 .etiquette{margin:0 0 6px;color:var(--vert);font-weight:600;font-size:15px}
-.etiquette span{display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;background:var(--citron);color:var(--vert);font-weight:700;margin-right:8px}
+.etiquette span{display:inline-block;width:32px;height:32px;line-height:32px;font-size:16px;text-align:center;border-radius:50%;background:var(--citron);color:var(--vert);font-weight:700;margin-right:8px}
 .idee{font-size:15px;color:var(--encre-douce);margin:0 0 10px}.idee b{color:var(--encre)}
 audio{width:100%;display:block}
 .pied-carte{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-top:8px;font-size:14px}
@@ -63,9 +75,14 @@ canvas.courbe{color:var(--vert);--courbe-repos:rgba(31,58,35,.22)}
 </head>
 <body>
 <main>
-<p class="serie">Choucroute Citron · les teasers de ton épisode</p>
-<div class="entete"><img src="photo.jpg" width="84" height="84" alt=""><h1><span>Pour</span>Christian Etchebest</h1></div>
-<p class="intro">Ton épisode, « Une IA a essayé de lui apprendre à cuisiner. Il l'a remise à sa place. », en 3 petits teasers d'une trentaine de secondes. Écoute-les, partage-les si le cœur t'en dit, puis <a href="https://choucroute-citron.com/episodes/christian-etchebest-une-ia-a-essaye-de-lui-apprendre-a-cuisiner-il-l-a-remise-a/">l'épisode complet</a>.</p>
+<header class="scene">
+<img class="logo" src="logo.png" alt="Choucroute Citron">
+<p class="serie">Les teasers de ton épisode</p>
+<img class="couverture" src="photo.jpg" width="800" height="800" alt="Image de l'épisode de Choucroute Citron avec Christian Etchebest">
+<h1><span>Pour</span>Christian Etchebest</h1>
+<p class="titre-ep">« Une IA a essayé de lui apprendre à cuisiner. Il l'a remise à sa place. »</p>
+</header>
+<p class="intro">3 petits teasers d'une trentaine de secondes, tirés de ton épisode. Écoute-les, partage-les si le cœur t'en dit, puis <a href="https://choucroute-citron.com/episodes/christian-etchebest-une-ia-a-essaye-de-lui-apprendre-a-cuisiner-il-l-a-remise-a/">l'épisode complet</a>.</p>
 <div class="ia"><p><b>La présentation est dite par une voix d'IA ; les extraits sont les vraies voix.</b> Lia, l'IA-nimatrice de Choucroute Citron, ouvre et conclut ; entre les deux, le vrai passage de l'épisode : ta voix, et parfois celle d'Alexandre.</p></div>
 <section class="carte" id="christian-etchebest-1">
 <p class="etiquette"><span>1</span> Teaser 1 · 31 s</p>
@@ -90,9 +107,11 @@ canvas.courbe{color:var(--vert);--courbe-repos:rgba(31,58,35,.22)}
 </section>
 <a class="bouton" href="https://choucroute-citron.com/episodes/christian-etchebest-une-ia-a-essaye-de-lui-apprendre-a-cuisiner-il-l-a-remise-a/">Écouter l'épisode complet</a>
 <p class="plateformes">Aussi sur <a href="https://podcasts.apple.com/us/podcast/christian-etchebest-une-ia-a-essay%C3%A9-de-lui-apprendre/id1812305442?i=1000750963584&amp;uo=4" rel="noopener">Apple Podcasts</a> · <a href="https://podcast.ausha.co/choucroute-citron/christian-etchebest-une-ia-a-essaye-de-lui-apprendre-a-cuisiner-il-l-a-remise-a-sa-place" rel="noopener">Ausha</a></p>
-<img class="grande" src="photo.jpg" width="800" height="800" alt="Image de l'épisode de Choucroute Citron avec Christian Etchebest">
+<footer class="pied">
+<img src="logo.png" alt="" width="120">
 <p>Choucroute Citron, c'est le podcast d'Alexandre Stopnicki où les invités dialoguent en direct avec une IA : <a href="https://choucroute-citron.com/">choucroute-citron.com</a>.</p>
 <small>Page faite pour toi, Christian, par Alexandre Stopnicki. Elle n'est pas référencée : seules les personnes qui ont le lien la voient. Les teasers sont à toi : télécharge-les et partage-les librement.</small>
+</footer>
 </main>
 <script>
 // Courbe audio (lib/courbe-audio.mjs) : le son joue toujours, même si la courbe échoue
