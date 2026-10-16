@@ -1909,3 +1909,6 @@ html:not(.en-filtre) .hero .outils .compte-ligne{display:none}
 .qz-mode-d{font-size:.82rem;color:var(--text-dim);line-height:1.45;font-weight:300}
 .qz-mode-ligne{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem}
 .qz-changer{background:none;border:none;cursor:pointer;font-family:var(--ff-body);font-size:.8rem;letter-spacing:0;text-transform:none;padding:0}
+/* les voix du quiz (16/10/2026) */
+.qz-voix{border-color:var(--accent);background:#c4a2651a}
+.qf-mention{padding:.45rem 1.1rem;font-size:.72rem;color:var(--text-faible);border-bottom:1px solid var(--border)}

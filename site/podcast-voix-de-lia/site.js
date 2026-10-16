@@ -1808,11 +1808,14 @@
     /* le passage à réécouter : sur la page du portrait, le lecteur de l'épisode ; sur le grand quiz, un lecteur à
        part, jamais visible. La lecture s'arrête au début de la réplique suivante (tf). */
     var passage = { audio: null, fin: null, bouton: null };
-    var etiquette = function (b, joue) { b.classList.toggle("joue", joue); $(".qz-ecoute-txt", b).textContent = joue ? "Pause" : "Réécouter ce passage"; };
+    var etiquette = function (b, joue) { b.classList.toggle("joue", joue); $(".qz-ecoute-txt", b).textContent = joue ? "Pause" : b.getAttribute("data-libelle") || "Réécouter ce passage"; };
     function ecouterPassage(bouton, audio, t, tf) {
       if (passage.bouton === bouton && !audio.paused) { audio.pause(); return; }
       if (passage.bouton && passage.bouton !== bouton) etiquette(passage.bouton, false);
       if (passage.audio && passage.audio !== audio) passage.audio.pause();
+      if (lecteurVoix && lecteurVoix !== audio) lecteurVoix.pause();
+      var episode = $(".lecteur[data-audio] audio");
+      if (episode && episode !== audio && !episode.paused) episode.pause();
       passage.audio = audio; passage.fin = tf; passage.bouton = bouton;
       if (!audio.quizRelie) {
         audio.quizRelie = true;
@@ -1830,9 +1833,20 @@
     }
     function couperPassage() {
       if (passage.audio && passage.bouton && !passage.audio.paused) passage.audio.pause();
+      if (lecteurVoix && !lecteurVoix.paused) lecteurVoix.pause();
       passage.bouton = null; passage.fin = null;
     }
     var lecteurAPart = null;
+    // les voix du quiz (16/10/2026) : l'ouverture d'Alexandre et la réponse dite par Ada, Alan ou Lia ; jouées
+    // d'elles-mêmes (après un clic, donc permis par les navigateurs) sauf si on les a coupées (gardé dans ce navigateur)
+    var lecteurVoix = null;
+    var voixActives = function () { return lireLS("quiz-voix") !== "non"; };
+    function audioVoix(src) {
+      if (!lecteurVoix) { lecteurVoix = new Audio(); lecteurVoix.preload = "auto"; }
+      if (lecteurVoix.getAttribute("data-src") !== src) { lecteurVoix.src = src; lecteurVoix.setAttribute("data-src", src); }
+      return lecteurVoix;
+    }
+    var PRENOM = { ada: "Ada", alan: "Alan", lia: "Lia" };
     function audioDe(src) {
       if (!src) return $(".lecteur[data-audio] audio");
       if (!lecteurAPart) { lecteurAPart = new Audio(); lecteurAPart.preload = "none"; }
@@ -1980,6 +1994,17 @@
         retour.appendChild(fig);
 
         var actions = el("div", "qz-actions");
+        if (q.a) {
+          var vx = el("button", "qz-ecouter qz-voix");
+          vx.type = "button";
+          var libelle = (PRENOM[q.av] || "L'IA-nimateur") + " vous donne la réponse";
+          vx.setAttribute("data-libelle", libelle);
+          vx.innerHTML = ICONE_ECOUTE + '<span class="qz-ecoute-txt"></span>';
+          $(".qz-ecoute-txt", vx).textContent = libelle;
+          vx.addEventListener("click", function () { ecouterPassage(vx, audioVoix(q.a), 0, null); });
+          actions.appendChild(vx);
+          if (voixActives()) setTimeout(function () { if (document.body.contains(vx)) ecouterPassage(vx, audioVoix(q.a), 0, null); }, 350);
+        }
         var audio = o.mode === "grand" ? (p.s ? audioDe(p.s) : null) : audioDe(null);
         if (audio && q.t !== null && q.t !== undefined) {
           var ec = el("button", "qz-ecouter");
@@ -1998,6 +2023,17 @@
           var aller = el("a", "qz-lien", "Le quiz " + (/^[aeiouyàâéèêîôûœh]/i.test(p.n) ? "d'" : "de ") + p.n);
           aller.href = p.ch + "#quiz";
           actions.appendChild(aller);
+        }
+        if (q.a) {
+          var couper = el("button", "qz-lien qz-couper", voixActives() ? "Couper les voix" : "Remettre les voix");
+          couper.type = "button";
+          couper.addEventListener("click", function () {
+            var actives = !voixActives();
+            ecrireLS("quiz-voix", actives ? "oui" : "non");
+            couper.textContent = actives ? "Couper les voix" : "Remettre les voix";
+            if (!actives) couperPassage();
+          });
+          actions.appendChild(couper);
         }
         var suite = el("button", "btn btn-primary qz-suivante");
         suite.type = "button";
@@ -2157,6 +2193,10 @@
       fenetre.setAttribute("aria-labelledby", "qf-titre");
       fenetre.innerHTML = '<div class="qf-dedans"><div class="qf-tete"><h2 id="qf-titre"></h2><button type="button" class="rf-fermer qf-fermer" aria-label="Fermer le quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="quiz-scene"></div></div>';
       $("#qf-titre", fenetre).textContent = "Le quiz · " + dq.nom;
+      if (dq.ouverture || dq.questions.some(function (q) { return q.a; })) {
+        var mention = el("p", "qf-mention", (dq.ouverture ? "Voix d'Alexandre recréée par IA, avec son accord ; " : "") + "voix d'Ada, d'Alan et de Lia générées par IA.");
+        $(".qf-tete", fenetre).insertAdjacentElement("afterend", mention);
+      }
       document.body.appendChild(fenetre);
       var moteur = monterQuiz($(".quiz-scene", fenetre), { mode: "portrait", questions: dq.questions, id: dq.id, grand: dq.grand, surPage: true, fermer: function () { fenetre.close(); } });
       var ouvrirQuiz = function () {
@@ -2166,6 +2206,13 @@
         moteur.demarrer();
         fenetre.showModal();
         doc.classList.add("fenetre-ouverte");
+        if (dq.ouverture && voixActives()) {
+          var episode = $(".lecteur[data-audio] audio");
+          if (episode && !episode.paused) episode.pause();
+          var ov = audioVoix(dq.ouverture);
+          ov.currentTime = 0;
+          ov.play().catch(function () {});
+        }
       };
       $(".qf-fermer", fenetre).addEventListener("click", function () { fenetre.close(); });
       fenetre.addEventListener("click", function (ev) { if (ev.target === fenetre) fenetre.close(); });
