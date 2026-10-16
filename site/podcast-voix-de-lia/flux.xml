@@ -18,7 +18,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Fri, 16 Oct 2026 18:25:49 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2026 08:12:16 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -36,28 +36,6 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
-    <item>
-      <title>Benjamin Perret : il feuilletait les journaux avant de savoir lire</title>
-      <itunes:title>Benjamin Perret : il feuilletait les journaux avant de savoir lire</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/benjamin-perret/</link>
-      <guid isPermaLink="false">voix-de-lia-benjamin-perret</guid>
-      <pubDate>Fri, 16 Oct 2026 18:25:49 GMT</pubDate>
-      <description>Passé par Ogilvy et Euro RSCG, directeur de la communication d'Aéroports de Paris, de Fnac Darty et d'EDF, cofondateur de Nation Advisors en 2025 : le clin d'œil d'Ada, Alan et Lia à Benjamin Perret, qui faisait semblant de feuilleter des journaux avant de savoir lire.
-
-Épisode enregistré le 16 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/benjamin-perret/
-
-Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Passé par Ogilvy et Euro RSCG, directeur de la communication d&#39;Aéroports de Paris, de Fnac Darty et d&#39;EDF, cofondateur de Nation Advisors en 2025 : le clin d&#39;œil d&#39;Ada, Alan et Lia à Benjamin Perret, qui faisait semblant de feuilleter des journaux avant de savoir lire.</p><p>Épisode enregistré le 16 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/benjamin-perret/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/benjamin-perret.mp3?v=596e794d" length="8207157" type="audio/mpeg"/>
-      <itunes:duration>338</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/benjamin-perret-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/benjamin-perret/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/benjamin-perret/chapitres.json?v=f92972f8" type="application/json+chapters"/>
-    </item>
     <item>
       <title>Mike Krieger : la première photo d'Instagram, puis Anthropic Labs</title>
       <itunes:title>Mike Krieger : la première photo d'Instagram, puis Anthropic Labs</itunes:title>
