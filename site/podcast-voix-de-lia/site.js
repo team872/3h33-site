@@ -2137,6 +2137,28 @@
       return lecteurVoix;
     }
     var PRENOM = { ada: "Ada", alan: "Alan", lia: "Lia" };
+    var HP_OUI = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>';
+    var HP_NON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>';
+    // Le haut-parleur (couper / remettre les voix), un seul, en haut du quiz ; le choix reste dans ce navigateur
+    function boutonVoix() {
+      var b = el("button", "qz-hp");
+      b.type = "button";
+      var maj = function () {
+        var on = voixActives();
+        b.innerHTML = on ? HP_OUI : HP_NON;
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+        b.setAttribute("aria-label", on ? "Couper les voix du quiz" : "Remettre les voix du quiz");
+        b.title = on ? "Couper les voix" : "Remettre les voix";
+      };
+      b.addEventListener("click", function () {
+        ecrireLS("quiz-voix", voixActives() ? "non" : "oui");
+        if (!voixActives()) couperPassage();
+        $$(".qz-hp").forEach(function (x) { if (x.majHp) x.majHp(); });
+      });
+      b.majHp = maj;
+      maj();
+      return b;
+    }
     function audioDe(src) {
       if (!src) return $(".lecteur[data-audio] audio");
       if (!lecteurAPart) { lecteurAPart = new Audio(); lecteurAPart.preload = "none"; }
@@ -2215,6 +2237,7 @@
             changer.type = "button";
             changer.addEventListener("click", function () { couperPassage(); accueil(); });
             ligne.appendChild(changer);
+            if (q.a) ligne.appendChild(boutonVoix());
             bloc.insertBefore(ligne, bloc.firstChild);
           }
           var p = o.portraitDe(q), qui = el("p", "qz-qui");
@@ -2277,10 +2300,17 @@
         if (juste) verdict.textContent = o.mode === "grand" && gq.serie > 1 ? "Bonne réponse ! " + gq.serie + " de suite." : "Bonne réponse !";
         else { verdict.textContent = "Pas tout à fait. La réponse : "; verdict.appendChild(el("strong", "", fin(q.c[q.b]))); }
         retour.appendChild(verdict);
-        retour.appendChild(el("p", "qz-explication", fin(q.x)));
-        var fig = el("figure", "qz-extrait" + (q.v ? " " + q.v : ""));
-        fig.appendChild(el("blockquote", "", "« " + fin(q.e) + " »"));
+        // la phrase exacte de l'épisode, avec qui la dit : c'est la preuve que rien n'est inventé. L'explication n'est
+        // ajoutée que si elle apporte autre chose : elle la répète dans 1 006 cas sur 1 017 (16/10, « redondance »)
         var p = o.mode === "grand" ? o.portraitDe(q) : null;
+        var plat = function (t) { return String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(); };
+        var motsExpl = {};
+        plat(q.x).split(" ").forEach(function (m) { motsExpl[m] = 1; });
+        var motsCit = plat(q.e).split(" ").filter(function (m) { return m.length > 2; });
+        var repris = motsCit.filter(function (m) { return motsExpl[m]; }).length / Math.max(1, motsCit.length);
+        if (repris < 0.6) retour.appendChild(el("p", "qz-explication", fin(q.x)));
+        var fig = el("figure", "qz-extrait" + (q.v ? " " + q.v : ""));
+        fig.appendChild(el("blockquote", "", "\u00ab\u00a0" + fin(q.e) + "\u00a0\u00bb"));
         fig.appendChild(el("figcaption", "", (q.v ? VOIX[q.v] + ", d" : "D") + (p ? "ans le portrait " + (/^[aeiouyàâéèêîôûœh]/i.test(p.n) ? "d'" : "de ") + p.n : "ans l'épisode")));
         retour.appendChild(fig);
 
@@ -2298,9 +2328,14 @@
         }
         var audio = o.mode === "grand" ? (p.s ? audioDe(p.s) : null) : audioDe(null);
         if (audio && q.t !== null && q.t !== undefined) {
-          var ec = el("button", "qz-ecouter");
+          // une seule grande touche « son » (16/10, Alexandre : « redondance et mauvaise UX ») : quand la réponse est
+          // dite, le passage de l'épisode devient un lien discret, à côté de « Lire le passage »
+          var ec = el("button", q.a ? "qz-lien qz-lien-son" : "qz-ecouter");
           ec.type = "button";
-          ec.innerHTML = ICONE_ECOUTE + '<span class="qz-ecoute-txt">Réécouter ce passage</span><span class="qz-t">' + mmss(q.t) + "</span>";
+          if (q.a) {
+            ec.setAttribute("data-libelle", "L'entendre dans l'épisode");
+            ec.innerHTML = '<span class="qz-ecoute-txt">L\'entendre dans l\'épisode</span> <span class="qz-t">' + mmss(q.t) + "</span>";
+          } else ec.innerHTML = ICONE_ECOUTE + '<span class="qz-ecoute-txt">Réécouter ce passage</span><span class="qz-t">' + mmss(q.t) + "</span>";
           ec.addEventListener("click", function () { ecouterPassage(ec, audio, q.t, q.tf); });
           actions.appendChild(ec);
         }
@@ -2314,17 +2349,6 @@
           var aller = el("a", "qz-lien", "Le quiz " + (/^[aeiouyàâéèêîôûœh]/i.test(p.n) ? "d'" : "de ") + p.n);
           aller.href = p.ch + "#quiz";
           actions.appendChild(aller);
-        }
-        if (q.a) {
-          var couper = el("button", "qz-lien qz-couper", voixActives() ? "Couper les voix" : "Remettre les voix");
-          couper.type = "button";
-          couper.addEventListener("click", function () {
-            var actives = !voixActives();
-            ecrireLS("quiz-voix", actives ? "oui" : "non");
-            couper.textContent = actives ? "Couper les voix" : "Remettre les voix";
-            if (!actives) couperPassage();
-          });
-          actions.appendChild(couper);
         }
         var suite = el("button", "btn btn-primary qz-suivante");
         suite.type = "button";
@@ -2485,6 +2509,7 @@
       fenetre.innerHTML = '<div class="qf-dedans"><div class="qf-tete"><h2 id="qf-titre"></h2><button type="button" class="rf-fermer qf-fermer" aria-label="Fermer le quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="quiz-scene"></div></div>';
       $("#qf-titre", fenetre).textContent = "Le quiz · " + dq.nom;
       if (dq.ouverture || dq.questions.some(function (q) { return q.a; })) {
+        $(".qf-tete", fenetre).insertBefore(boutonVoix(), $(".qf-fermer", fenetre));
         var mention = el("p", "qf-mention", (dq.ouverture ? "Voix d'Alexandre recréée par IA, avec son accord ; " : "") + "voix d'Ada, d'Alan et de Lia générées par IA.");
         $(".qf-tete", fenetre).insertAdjacentElement("afterend", mention);
       }

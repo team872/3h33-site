@@ -2131,3 +2131,13 @@ body.playlist-ouverte .remonter{opacity:0;visibility:hidden;pointer-events:none}
 body.pc-ecoute{padding-bottom:calc(76px + var(--safe-bottom))}
 body.pc-ecoute .remonter{bottom:calc(84px + var(--safe-bottom))}
 @media (max-width:520px){.pc-dit{display:block}.pc-lia{margin:0 0 .6rem}}
+/* une seule touche « son » après la réponse, le reste en liens ; haut-parleur en haut (16/10/2026) */
+button.qz-lien{background:none;border:none;padding:0;cursor:pointer;font:inherit;font-size:.86rem}
+.qz-lien-son .qz-t{margin-left:.2rem}
+.qz-lien-son.joue{color:var(--accent-clair)}
+.qz-hp{flex:none;width:42px;height:42px;margin-left:auto;margin-right:.5rem;display:flex;align-items:center;justify-content:center;border:1px solid var(--border-2);border-radius:50%;background:none;color:var(--accent);cursor:pointer;transition:color .2s,border-color .2s}
+.qz-hp:hover{border-color:var(--accent)}
+.qz-hp[aria-pressed="false"]{color:var(--text-faible)}
+.qz-hp svg{width:20px;height:20px}
+.qz-mode-ligne .qz-hp{width:34px;height:34px;margin:0 0 0 .6rem}
+.qz-extrait-seul .qz-explication{margin:0;color:var(--text)}
