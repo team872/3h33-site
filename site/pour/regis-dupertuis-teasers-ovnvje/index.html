@@ -86,6 +86,21 @@ canvas.courbe{display:block;width:100%;height:56px;margin:0 0 8px}
 canvas.courbe{color:var(--vert);--courbe-repos:rgba(31,58,35,.22)}
 @media (max-width:480px){body{font-size:16px}.ia{font-size:14px}.idee{font-size:14px}}
 
+.linkedin{background:var(--papier);border:1px solid var(--bord);border-top:5px solid var(--vert);border-radius:20px;padding:16px 16px 12px;margin:6px 0 18px;box-shadow:0 10px 26px rgba(31,58,35,.10)}
+.linkedin h2{font:600 24px/1.2 Fraunces,"Playfair Display",Georgia,serif;color:var(--vert);margin:0 0 8px}
+.li-intro{font-size:15px;color:var(--encre-douce);margin:0 0 10px}
+.li-texte{display:block;width:100%;min-height:200px;resize:vertical;overflow:hidden;font:16px/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--encre);background:var(--creme);border:1px solid var(--bord);border-radius:12px;padding:12px 14px;white-space:pre-wrap}
+.li-texte:focus{outline:2px solid var(--citron-fonce);outline-offset:1px;background:#fffdf5}
+.li-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin:12px 0 4px}
+.li-copier{display:inline-flex;align-items:center;gap:8px;min-height:44px;border:0;border-radius:999px;background:var(--vert);color:#fffdf5;font:600 16px/1 Inter,system-ui,-apple-system,sans-serif;padding:10px 20px 10px 16px;cursor:pointer;box-shadow:0 4px 14px rgba(31,58,35,.18)}
+.li-copier svg{width:19px;height:19px;flex:none}
+.li-copier:hover{background:var(--vert-clair)}
+.li-copier:focus-visible,.li-ouvrir:focus-visible{outline:2px solid var(--citron-fonce);outline-offset:3px}
+.li-ouvrir{font-size:15px;color:var(--vert-clair)}
+.li-etat{margin:4px 0 0;font-size:14px;color:var(--vert);font-weight:600}
+.li-etat:empty{display:none}
+.li-aide{margin:10px 0 0;padding-left:20px;font-size:14px;color:var(--encre-douce)}
+.li-aide li{margin:0 0 6px}
 </style>
 </head>
 <body>
@@ -97,7 +112,7 @@ canvas.courbe{color:var(--vert);--courbe-repos:rgba(31,58,35,.22)}
 <h1><span>Pour</span>Régis Dupertuis</h1>
 <p class="titre-ep">« Régis Dupertuis Manipulation ou influence : savez-vous faire la différence ? »</p>
 </header>
-<p class="intro">2 petits teasers d'une trentaine de secondes, tirés de ton épisode. Écoute-les, partage-les si le cœur t'en dit, puis <a href="https://choucroute-citron.com/episodes/regis-dupertuis-manipulation-ou-influence-savez-vous-faire-la-difference/">l'épisode complet</a>. Le bouton « Partager » envoie la vidéo du teaser depuis ton téléphone ; sur ordinateur, il donne son lien, qui s'affiche avec son propre visuel.</p>
+<p class="intro">2 petits teasers d'une trentaine de secondes, tirés de ton épisode. Écoute-les, partage-les si le cœur t'en dit, puis <a href="https://choucroute-citron.com/episodes/regis-dupertuis-manipulation-ou-influence-savez-vous-faire-la-difference/">l'épisode complet</a>. Le bouton « Partager » envoie la vidéo du teaser depuis ton téléphone ; sur ordinateur, il donne son lien, qui s'affiche avec son propre visuel. Plus bas, <a href="#linkedin">un texte prêt à poster sur LinkedIn</a>.</p>
 <div class="ia"><p><b>La présentation est dite par une voix d'IA ; les extraits sont les vraies voix.</b> Lia, l'IA-nimatrice de Choucroute Citron, ouvre et conclut ; entre les deux, le vrai passage de l'épisode : ta voix, et parfois celle d'Alexandre.</p></div>
 <section class="carte" id="regis-dupertuis-1">
 <p class="etiquette"><span>1</span> Teaser 1 · 32 s</p>
@@ -138,6 +153,30 @@ canvas.courbe{color:var(--vert);--courbe-repos:rgba(31,58,35,.22)}
 <p class="etat" aria-live="polite"></p>
 </div>
 <div class="pied-carte"><details><summary>Ce que dit Lia, la voix d'IA</summary><p class="gris">… d'abord la question d'Alexandre, sa vraie voix …</p><p>« Je suis Lia, IA-nimatrice. Formatrice d'un jour face à Régis Dupertuis, j'avais promis un peu vite. »</p><p class="gris">… le vrai passage de l'épisode, ta vraie voix …</p><p>« Moins de promesses, plus de franchise : noté. Écoutez l'épisode avec Régis Dupertuis, dans Choucroute Citron. »</p></details></div>
+</section>
+<section class="linkedin" id="linkedin" aria-labelledby="linkedin-titre">
+<h2 id="linkedin-titre">Pour LinkedIn</h2>
+<p class="li-intro">Si tu veux en parler à ton réseau, voici un texte prêt à poster, écrit à la première personne. Tu peux le retoucher ici avant de le copier.</p>
+<textarea class="li-texte" rows="13" spellcheck="true" aria-label="Texte du post LinkedIn">J'ai été l'invité de Choucroute Citron, le podcast où les invités dialoguent en direct avec une IA. 🍋
+
+On y parle de la frontière entre influence et manipulation, et de plus de vingt-cinq ans passés à former des vendeurs et des managers du luxe.
+
+On m'a demandé si, un jour, des IA apprendraient mon métier. J'ai répondu franchement : « elles iront plus vite que moi et elles seront meilleures que moi ». Mais être connecté aux gens comme je le suis, ça, une IA ne le fera pas.
+
+🎧 L'épisode complet : https://choucroute-citron.com/episodes/regis-dupertuis-manipulation-ou-influence-savez-vous-faire-la-difference/
+
+Merci @Alexandre Stopnicki pour l'invitation, et pour cette conversation à trois.
+
+#podcast #IA #luxe #vente</textarea>
+<div class="li-actions">
+<button type="button" class="li-copier"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>Copier le texte</span></button>
+<a class="li-ouvrir" href="https://www.linkedin.com/feed/?shareActive=true" target="_blank" rel="noopener">Ouvrir LinkedIn</a>
+</div>
+<p class="li-etat" aria-live="polite"></p>
+<ol class="li-aide">
+<li>Colle-le dans un nouveau post LinkedIn et ajoute la vidéo du teaser téléchargée ci-dessus (le teaser 1, celui de la citation, va très bien).</li>
+<li>Pour qu'Alexandre soit identifié : dans LinkedIn, efface « @Alexandre Stopnicki », tape @ puis « Alexandre Sto » et choisis son profil dans la liste qui s'ouvre. Collé tel quel, son nom reste du simple texte.</li>
+</ol>
 </section>
 <a class="bouton" href="https://choucroute-citron.com/episodes/regis-dupertuis-manipulation-ou-influence-savez-vous-faire-la-difference/">Écouter l'épisode complet</a>
 <p class="plateformes">Aussi sur <a href="https://podcasts.apple.com/us/podcast/r%C3%A9gis-dupertuis-manipulation-ou-influence-savez-vous/id1812305442?i=1000746164222&amp;uo=4" rel="noopener">Apple Podcasts</a> · <a href="https://podcast.ausha.co/choucroute-citron/regis-dupertuis-manipulation-ou-influence-savez-vous-faire-la-difference" rel="noopener">Ausha</a></p>
@@ -349,6 +388,36 @@ canvas.courbe{color:var(--vert);--courbe-repos:rgba(31,58,35,.22)}
     if (ev.key !== "Escape") return;
     var ouvert = document.querySelector(".menu-partage:not([hidden])");
     if (ouvert) { fermer(); var b = ouvert.parentNode.querySelector(".partager"); if (b) b.focus(); }
+  });
+})();
+</script>
+<script>
+// Bloc « Pour LinkedIn » (lib/linkedin-invite.mjs) : hauteur du texte ajustée à son contenu, bouton « Copier le texte »
+// (presse-papiers ; repli : sélection + copie, sinon le texte reste sélectionné pour le menu du téléphone)
+(function () {
+  document.querySelectorAll(".linkedin").forEach(function (bloc) {
+    var ta = bloc.querySelector(".li-texte"), b = bloc.querySelector(".li-copier"), etat = bloc.querySelector(".li-etat");
+    if (!ta || !b) return;
+    var libelle = b.querySelector("span"), minuterie = null;
+    function ajuster() { ta.style.height = "auto"; ta.style.height = (ta.scrollHeight + 2) + "px"; }
+    ta.addEventListener("input", ajuster);
+    window.addEventListener("resize", ajuster);
+    window.addEventListener("load", ajuster);
+    ajuster();
+    function ok() {
+      libelle.textContent = "Texte copié ✓";
+      etat.textContent = "C'est copié : il ne reste qu'à le coller dans un nouveau post LinkedIn.";
+      clearTimeout(minuterie);
+      minuterie = setTimeout(function () { libelle.textContent = "Copier le texte"; }, 2500);
+    }
+    function repli() {
+      ta.focus(); ta.select(); try { ta.setSelectionRange(0, ta.value.length); } catch (e) {}
+      var r = false; try { r = document.execCommand("copy"); } catch (e) {}
+      if (r) ok(); else etat.textContent = "Le texte est sélectionné : le copier avec le menu du téléphone (ou Cmd + C, Ctrl + C).";
+    }
+    b.addEventListener("click", function () {
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(ta.value).then(ok, repli); else repli();
+    });
   });
 })();
 </script>
