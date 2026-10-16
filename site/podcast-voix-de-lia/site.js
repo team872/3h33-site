@@ -2179,6 +2179,14 @@
        page même (lien #replique-N, lecteur de la page). */
     function monterQuiz(scene, o) {
       var liste = [], i = 0, bonnes = 0, ratees = [], courante = null, repondu = false;
+      // « J'en suis là » (16/10/2026, Alexandre : « il faut pouvoir revenir sur son questionnaire ») : le quiz d'un
+      // portrait en cours est gardé dans ce navigateur (ordre, question, réponses) ; on le reprend où on l'a laissé
+      var cleEnCours = "quiz-en-cours:" + o.id, reponses = {}, actif = false;
+      function sauver() {
+        if (o.mode !== "portrait" || !actif) return;
+        ecrireLS(cleEnCours, JSON.stringify({ ordre: liste.map(function (q) { return q.id; }), i: i, bonnes: bonnes, ratees: ratees.map(function (q) { return q.id; }), reponses: reponses }));
+      }
+      function oublier() { try { localStorage.removeItem(cleEnCours); } catch (e) {} }
       // grand quiz : un mode (« Tout le podcast », « Ils gagnent à être connus », « Difficile ») = une réserve de
       // questions, avec sa série, son record et ses questions déjà vues ; « Tout le podcast » garde les anciennes clés
       var modeCourant = null, pool = o.questions, nbPortraitsPool = o.nbPortraits, cleGq = "quiz-grand", cleVues = "quiz-grand-vues";
@@ -2268,7 +2276,7 @@
         titre.focus({ preventScroll: true });
       }
 
-      function repondre(k, bloc) {
+      function repondre(k, bloc, rejeu) {
         if (repondu) return;
         repondu = true;
         var q = courante, juste = k === q.b;
@@ -2279,7 +2287,11 @@
           else if (kb === k) b.classList.add("faux");
           else b.classList.add("autre");
         });
-        if (juste) bonnes++; else ratees.push(q);
+        if (!rejeu) {
+          if (juste) bonnes++; else ratees.push(q);
+          reponses[q.id] = k;
+          sauver();
+        }
         if (o.mode === "grand") {
           gq.repondues++;
           if (juste) { gq.bonnes++; gq.serie++; if (gq.serie > gq.record) gq.record = gq.serie; } else gq.serie = 0;
@@ -2324,7 +2336,7 @@
           $(".qz-ecoute-txt", vx).textContent = libelle;
           vx.addEventListener("click", function () { ecouterPassage(vx, audioVoix(q.a), 0, null); });
           actions.appendChild(vx);
-          if (voixActives()) setTimeout(function () { if (document.body.contains(vx)) ecouterPassage(vx, audioVoix(q.a), 0, null); }, 350);
+          if (voixActives() && !rejeu) setTimeout(function () { if (document.body.contains(vx)) ecouterPassage(vx, audioVoix(q.a), 0, null); }, 350);
         }
         var audio = o.mode === "grand" ? (p.s ? audioDe(p.s) : null) : audioDe(null);
         if (audio && q.t !== null && q.t !== undefined) {
@@ -2342,12 +2354,15 @@
         if (q.r) {
           var lire = el("a", "qz-lien", "Lire le passage");
           lire.href = (p ? p.ch : "") + "#replique-" + q.r;
+          if (p) { lire.target = "_blank"; lire.rel = "noopener"; }
           if (o.surPage) lire.addEventListener("click", function () { if (o.fermer) o.fermer(); });
           actions.appendChild(lire);
         }
         if (p) {
           var aller = el("a", "qz-lien", "Le quiz " + (/^[aeiouyàâéèêîôûœh]/i.test(p.n) ? "d'" : "de ") + p.n);
           aller.href = p.ch + "#quiz";
+          aller.target = "_blank";
+          aller.rel = "noopener";
           actions.appendChild(aller);
         }
         var suite = el("button", "btn btn-primary qz-suivante");
@@ -2365,7 +2380,7 @@
       function suivante() {
         if (o.mode === "grand") { courante = tirer(); afficher(); return; }
         i++;
-        if (i >= liste.length) finPortrait(); else { courante = liste[i]; afficher(); }
+        if (i >= liste.length) finPortrait(); else { courante = liste[i]; sauver(); afficher(); }
       }
 
       // grand quiz : une question pas encore vue (80 % des questions au plus en mémoire), d'un portrait qui n'est pas
@@ -2385,6 +2400,8 @@
 
       function finPortrait() {
         couperPassage();
+        actif = false;
+        oublier();
         scene.innerHTML = "";
         var n = liste.length, cle = "quiz-meilleur:" + o.id;
         var meilleur = Number(lireLS(cle)) || 0;
@@ -2434,9 +2451,29 @@
       // portrait : du plus facile au plus difficile, dans un ordre nouveau à chaque fois
       function demarrer(seulement) {
         liste = melanger(seulement || o.questions).sort(function (a, b) { return a.n - b.n; });
-        i = 0; bonnes = 0; ratees = [];
+        i = 0; bonnes = 0; ratees = []; reponses = {}; actif = true;
         if (o.mode === "grand") courante = tirer(); else courante = liste[0];
+        sauver();
         afficher();
+      }
+      // reprend le quiz gardé (et remontre la réponse déjà donnée à la question en cours) ; faux s'il n'y en a pas
+      function reprendre() {
+        var st = lireJsonLS(cleEnCours, null), parId = {};
+        if (!st || !st.ordre || !st.ordre.length) return false;
+        o.questions.forEach(function (q) { parId[q.id] = q; });
+        var l = st.ordre.map(function (id) { return parId[id]; });
+        if (l.some(function (q) { return !q; }) || !(st.i < l.length)) { oublier(); return false; }
+        liste = l; i = st.i; bonnes = st.bonnes || 0; reponses = st.reponses || {}; actif = true;
+        ratees = (st.ratees || []).map(function (id) { return parId[id]; }).filter(Boolean);
+        courante = liste[i];
+        afficher();
+        if (reponses[courante.id] !== undefined) repondre(reponses[courante.id], $(".qz", scene), true);
+        return true;
+      }
+      function etat() {
+        if (actif) return { actif: true, i: i + (repondu ? 1 : 0), q: i + 1, n: liste.length };
+        var st = o.mode === "portrait" ? lireJsonLS(cleEnCours, null) : null;
+        return st && st.ordre ? { actif: false, garde: true, i: st.i + (st.reponses && st.reponses[st.ordre[st.i]] !== undefined ? 1 : 0), q: st.i + 1, n: st.ordre.length } : null;
       }
 
       function accueil() {
@@ -2497,7 +2534,7 @@
         if (b) { ev.preventDefault(); b.click(); }
       });
 
-      return { demarrer: demarrer, accueil: accueil, couper: couperPassage };
+      return { demarrer: demarrer, reprendre: reprendre, etat: etat, accueil: accueil, couper: couperPassage };
     }
 
     /* -------- page d'un portrait : bouton sous le lecteur, encart après la conversation, fenêtre du quiz */
@@ -2519,10 +2556,13 @@
         var invit = $(".quiz-invitation");
         if (invit) invit.remove();
         if (fenetre.open) return;
-        moteur.demarrer();
+        var flottant = $(".quiz-revenir");
+        if (flottant) flottant.remove();
+        var e = moteur.etat(), repris = true;
+        if (!(e && e.actif) && !moteur.reprendre()) { moteur.demarrer(); repris = false; }
         fenetre.showModal();
         doc.classList.add("fenetre-ouverte");
-        if (dq.ouverture && voixActives()) {
+        if (!repris && dq.ouverture && voixActives()) {
           var episode = $(".lecteur[data-audio] audio");
           if (episode && !episode.paused) episode.pause();
           var ov = audioVoix(dq.ouverture);
@@ -2532,13 +2572,31 @@
       };
       $(".qf-fermer", fenetre).addEventListener("click", function () { fenetre.close(); });
       fenetre.addEventListener("click", function (ev) { if (ev.target === fenetre) fenetre.close(); });
-      fenetre.addEventListener("close", function () { doc.classList.remove("fenetre-ouverte"); moteur.couper(); });
+      // quiz quitté en cours de route (croix, « Lire le passage »…) : un bouton fixe ramène où on en était
+      var montrerRevenir = function () {
+        var e = moteur.etat();
+        if (!e || e.i >= e.n || $(".quiz-revenir")) return;
+        var b = el("button", "quiz-revenir");
+        b.type = "button";
+        b.innerHTML = '<span class="quiz-revenir-icone" aria-hidden="true">\u21a9</span><span><strong>Revenir au quiz</strong><span>' + (e.i > 0 ? "Vous en êtes à la question " + e.q + " sur " + e.n : e.n + " questions") + "</span></span>";
+        b.addEventListener("click", ouvrirQuiz);
+        document.body.appendChild(b);
+        requestAnimationFrame(function () { b.classList.add("visible"); });
+      };
+      fenetre.addEventListener("close", function () { doc.classList.remove("fenetre-ouverte"); moteur.couper(); montrerRevenir(); });
+      // en arrivant sur la page : un quiz commencé (même hier) se retrouve
+      var garde = moteur.etat();
+      if (garde && garde.garde) {
+        montrerRevenir();
+        var btEncart = $(".quiz-encart [data-quiz-ouvrir] span");
+        if (btEncart) btEncart.textContent = "Reprendre le quiz";
+      }
       $$("[data-quiz-ouvrir]").forEach(function (b) { b.addEventListener("click", ouvrirQuiz); });
       $$(".quiz-encart, .pa-quiz[data-quiz-ouvrir]").forEach(function (x) { x.hidden = false; });
       if (location.hash === "#quiz") setTimeout(ouvrirQuiz, 300);
       // à la fin de l'écoute : une invitation discrète, une seule fois
       document.addEventListener("episode:fin", function () {
-        if (fenetre.open || $(".quiz-invitation")) return;
+        if (fenetre.open || $(".quiz-invitation") || $(".quiz-revenir")) return;
         var inv = el("div", "quiz-invitation");
         inv.setAttribute("role", "status");
         inv.innerHTML = '<p><strong>Qu’avez-vous retenu ?</strong><span>' + dq.questions.length + " questions sur l'épisode</span></p>";
