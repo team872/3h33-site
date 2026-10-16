@@ -1853,7 +1853,28 @@
        page même (lien #replique-N, lecteur de la page). */
     function monterQuiz(scene, o) {
       var liste = [], i = 0, bonnes = 0, ratees = [], courante = null, repondu = false;
-      var gq = lireJsonLS("quiz-grand", { repondues: 0, bonnes: 0, serie: 0, record: 0 });
+      // grand quiz : un mode (« Tout le podcast », « Ils gagnent à être connus », « Difficile ») = une réserve de
+      // questions, avec sa série, son record et ses questions déjà vues ; « Tout le podcast » garde les anciennes clés
+      var modeCourant = null, pool = o.questions, nbPortraitsPool = o.nbPortraits, cleGq = "quiz-grand", cleVues = "quiz-grand-vues";
+      var gq = lireJsonLS(cleGq, { repondues: 0, bonnes: 0, serie: 0, record: 0 });
+      function choisirMode(m) {
+        modeCourant = m;
+        pool = m ? o.questions.filter(function (q) { return garde(m, q); }) : o.questions;
+        var vus = {};
+        pool.forEach(function (q) { vus[q.p] = 1; });
+        nbPortraitsPool = Object.keys(vus).length;
+        var suffixe = m && m.id !== "tout" ? ":" + m.id : "";
+        cleGq = "quiz-grand" + suffixe;
+        cleVues = "quiz-grand-vues" + suffixe;
+        gq = lireJsonLS(cleGq, { repondues: 0, bonnes: 0, serie: 0, record: 0 });
+        derniersPortraits = [];
+        ecrireLS("quiz-grand-mode", m ? m.id : "tout");
+      }
+      function garde(m, q) {
+        if (m.famille) return (o.portraitDe(q).f || []).indexOf(m.famille) >= 0;
+        if (m.niveau) return q.n === m.niveau;
+        return true;
+      }
 
       function tete() {
         var t = el("div", "qz-tete");
@@ -1882,6 +1903,15 @@
           barre.appendChild(plein);
           bloc.appendChild(barre);
         } else {
+          if (o.modes && o.modes.length > 1) {
+            var ligne = el("p", "qz-mode-ligne");
+            ligne.appendChild(el("span", "", modeCourant ? modeCourant.nom : "Tout le podcast"));
+            var changer = el("button", "qz-lien qz-changer", "Changer de mode");
+            changer.type = "button";
+            changer.addEventListener("click", function () { couperPassage(); accueil(); });
+            ligne.appendChild(changer);
+            bloc.insertBefore(ligne, bloc.firstChild);
+          }
           var p = o.portraitDe(q), qui = el("p", "qz-qui");
           qui.appendChild(vignette(p, "qz-vignette"));
           qui.appendChild(el("span", "", "Portrait : " + p.n));
@@ -1925,10 +1955,10 @@
         if (o.mode === "grand") {
           gq.repondues++;
           if (juste) { gq.bonnes++; gq.serie++; if (gq.serie > gq.record) gq.record = gq.serie; } else gq.serie = 0;
-          ecrireLS("quiz-grand", JSON.stringify(gq));
-          var vues = lireJsonLS("quiz-grand-vues", []);
+          ecrireLS(cleGq, JSON.stringify(gq));
+          var vues = lireJsonLS(cleVues, []);
           vues.unshift(q.id);
-          ecrireLS("quiz-grand-vues", JSON.stringify(vues.slice(0, Math.max(10, Math.floor(o.questions.length * 0.8)))));
+          ecrireLS(cleVues, JSON.stringify(vues.slice(0, Math.max(5, Math.floor(pool.length * 0.8)))));
           var ancienne = $(".qz-tete", bloc);
           ancienne.parentNode.replaceChild(tete(), ancienne);
         } else {
@@ -1989,16 +2019,16 @@
 
       // grand quiz : une question pas encore vue (80 % des questions au plus en mémoire), d'un portrait qui n'est pas
       // parmi les quatre derniers
-      var derniersPortraits = [];
+      var derniersPortraits;
       function tirer() {
-        var vues = lireJsonLS("quiz-grand-vues", []), dejaVu = {};
+        var vues = lireJsonLS(cleVues, []), dejaVu = {};
         vues.forEach(function (id) { dejaVu[id] = 1; });
-        var candidats = o.questions.filter(function (q) { return !dejaVu[q.id] && derniersPortraits.indexOf(q.p) < 0; });
-        if (!candidats.length) candidats = o.questions.filter(function (q) { return !dejaVu[q.id]; });
-        if (!candidats.length) { ecrireLS("quiz-grand-vues", "[]"); candidats = o.questions; }
+        var candidats = pool.filter(function (q) { return !dejaVu[q.id] && derniersPortraits.indexOf(q.p) < 0; });
+        if (!candidats.length) candidats = pool.filter(function (q) { return !dejaVu[q.id]; });
+        if (!candidats.length) { ecrireLS(cleVues, "[]"); candidats = pool; }
         var q = candidats[Math.floor(Math.random() * candidats.length)];
         derniersPortraits.unshift(q.p);
-        derniersPortraits = derniersPortraits.slice(0, Math.min(4, Math.floor(o.nbPortraits / 2)));
+        derniersPortraits = derniersPortraits.slice(0, Math.min(4, Math.floor(nbPortraitsPool / 2)));
         return q;
       }
 
@@ -2061,15 +2091,37 @@
       function accueil() {
         scene.innerHTML = "";
         var a = el("div", "qz-accueil");
+        if (o.modes && o.modes.length > 1) {
+          var groupe = el("div", "qz-modes");
+          groupe.setAttribute("role", "group");
+          groupe.setAttribute("aria-label", "Choisir un mode de jeu");
+          o.modes.forEach(function (m) {
+            var b = el("button", "qz-mode-btn");
+            b.type = "button";
+            b.setAttribute("aria-pressed", modeCourant && modeCourant.id === m.id ? "true" : "false");
+            b.appendChild(el("strong", "", m.nom));
+            b.appendChild(el("span", "qz-mode-n", m.nombre + " questions"));
+            b.appendChild(el("span", "qz-mode-d", m.d));
+            b.addEventListener("click", function () {
+              choisirMode(m);
+              try { history.replaceState(null, "", m.id === "tout" ? location.pathname : "#mode=" + m.id); } catch (e) {}
+              accueil();
+              var actif = $(".qz-mode-btn[aria-pressed=true]", scene);
+              if (actif) actif.focus({ preventScroll: true });
+            });
+            groupe.appendChild(b);
+          });
+          a.appendChild(groupe);
+        }
         var chiffres = el("ul", "qz-chiffres");
-        [[o.questions.length, "questions"], [o.nbPortraits, "portraits"]].concat(gq.repondues ? [[gq.record, "votre record de suite"]] : []).forEach(function (x) {
+        [[pool.length, "questions"], [nbPortraitsPool, "portraits"]].concat(gq.repondues ? [[gq.record, "votre record de suite"]] : []).forEach(function (x) {
           var li = el("li");
           li.appendChild(el("strong", "", String(x[0])));
           li.appendChild(el("span", "", x[1]));
           chiffres.appendChild(li);
         });
         a.appendChild(chiffres);
-        a.appendChild(el("p", "qz-accueil-texte", gq.repondues ? "Vous avez déjà répondu à " + gq.repondues + " question" + (gq.repondues > 1 ? "s" : "") + ", dont " + gq.bonnes + " bonne" + (gq.bonnes > 1 ? "s" : "") + ". Celles déjà vues ne reviennent pas tout de suite." : "Une question à la fois, tirée au hasard dans tous les portraits. Enchaînez les bonnes réponses : votre meilleure série est gardée."));
+        a.appendChild(el("p", "qz-accueil-texte", gq.repondues ? "Dans ce mode, vous avez déjà répondu à " + gq.repondues + " question" + (gq.repondues > 1 ? "s" : "") + ", dont " + gq.bonnes + " bonne" + (gq.bonnes > 1 ? "s" : "") + ". Celles déjà vues ne reviennent pas tout de suite." : "Une question à la fois, tirée au hasard. Enchaînez les bonnes réponses : votre meilleure série est gardée."));
         var go = el("button", "btn btn-primary qz-commencer");
         go.type = "button";
         go.innerHTML = "<span>" + (gq.repondues ? "Reprendre" : "Commencer") + "</span>" + FLECHE;
@@ -2077,6 +2129,12 @@
         a.appendChild(go);
         scene.appendChild(a);
       }
+
+      // mode d'arrivée : l'adresse (#mode=difficile, à partager), sinon le dernier choisi dans ce navigateur
+      if (o.modes && o.modes.length) {
+        var voulu = (location.hash.match(/mode=([a-z0-9-]+)/) || [])[1] || lireLS("quiz-grand-mode") || "tout";
+        choisirMode(o.modes.filter(function (m) { return m.id === voulu; })[0] || o.modes[0]);
+      } else derniersPortraits = [];
 
       // clavier : 1 à 4 (ou A à D) pour répondre ; Entrée passe à la suite (bouton déjà en focus)
       scene.addEventListener("keydown", function (ev) {
@@ -2142,7 +2200,7 @@
       grand.classList.add("charge");
       fetch(grand.getAttribute("data-quiz-url")).then(function (r) { return r.json(); }).then(function (idx) {
         grand.classList.remove("charge");
-        var m = monterQuiz(grand, { mode: "grand", questions: idx.questions, nbPortraits: idx.portraits.length, portraitDe: function (q) { return idx.portraits[q.p]; } });
+        var m = monterQuiz(grand, { mode: "grand", questions: idx.questions, nbPortraits: idx.portraits.length, modes: idx.modes || [], portraitDe: function (q) { return idx.portraits[q.p]; } });
         m.accueil();
       }).catch(function () {
         grand.classList.remove("charge");
