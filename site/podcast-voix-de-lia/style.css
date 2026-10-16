@@ -2148,3 +2148,15 @@ button.qz-lien{background:none;border:none;padding:0;cursor:pointer;font:inherit
 .quiz-revenir-icone{width:36px;height:36px;flex:none;border-radius:50%;background:var(--accent);color:var(--bg);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
 .quiz-revenir strong{display:block;font-family:var(--ff-display);font-size:1.02rem}
 .quiz-revenir strong+span{display:block;font-size:.8rem;color:var(--text-dim)}
+/* le bandeau du parcours (17/10/2026, Alexandre : « un super bandeau », moins haut, le texte tout de suite) :
+   pleine largeur jusqu'à 1200 px, au-dessus de la colonne de texte ; il porte le titre, que la page ne redit pas sur
+   ordinateur (gardé pour les lecteurs d'écran) ; sur téléphone, le titre reste écrit sous le bandeau */
+.page-parcours .parcours-page{padding-top:5.2rem}
+.pc-bandeau{display:block;width:min(1200px,100vw - 2 * var(--gouttiere));margin:.8rem 0 1.4rem;position:relative;left:50%;transform:translateX(-50%);border:1px solid var(--border-2);box-shadow:0 30px 80px #0009;overflow:hidden}
+.pc-bandeau img{display:block;width:100%;height:auto}
+.pc-entete.avec-bandeau{display:block;margin-bottom:.4rem}
+@media (min-width:700px){
+  .pc-entete.avec-bandeau .section-label,.pc-entete.avec-bandeau h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+  .pc-entete.avec-bandeau .pc-chapo{font-size:clamp(1.3rem,2.4vw,1.6rem);margin-top:0}
+}
+@media (max-width:699px){.pc-entete.avec-bandeau .section-title{font-size:1.9rem}.pc-bandeau{width:calc(100vw - 2 * var(--gouttiere))}}
