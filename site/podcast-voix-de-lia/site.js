@@ -11,6 +11,9 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var majBoutonsJouer = function () {}; // remplacée par le lecteur collant de la page de l'émission
+  // icônes fabriquées ici (« Ma playlist ») : les mêmes que ICONES dans gabarits.mjs
+  var trait = function (d, l) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="' + (l || 2) + '" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + d + '"/></svg>'; };
+  var ICONES_MP = { monter: trait("M6 15l6-6 6 6"), descendre: trait("M6 9l6 6 6-6"), croix: trait("M18 6L6 18M6 6l12 12"), plus: trait("M12 5v14M5 12h14", 2.2), coche: trait("M5 12.5l4.5 4.5L19 7", 2.4) };
 
   function duree(s) {
     if (!isFinite(s) || s < 0) s = 0;
@@ -746,6 +749,8 @@
   if (player && donnees) {
     var episodes = JSON.parse(donnees.textContent);
     var actuel = null;
+    // « Ma playlist » (plus bas) se branche ici : elle sait quel épisode se charge et décide de la suite
+    var pl = { charge: function () {}, voisin: function () { return false; }, fin: function () { return false; } };
     var pAudio = $("audio", player);
     var pBouton = $(".bouton-lecture", player);
     var frame = $("#playerFrame");
@@ -804,6 +809,7 @@
       }
       player.classList.add("active");
       marquerCartes();
+      pl.charge(ep);
     };
     // un seul écouteur pour tous les boutons « écouter » (y compris celui de « Connaissez-vous… ? », qui change de
     // portrait sans recharger la page)
@@ -815,7 +821,7 @@
       for (var i = 0; i < episodes.length; i++) if (episodes[i].id === id) { ev.preventDefault(); ev.stopPropagation(); return charger(i, true); }
     });
     var voisin = function (pas) {
-      if (!actuel) return;
+      if (!actuel || pl.voisin(pas)) return;
       var n = episodes.length, i = actuel.index;
       for (var k = 1; k <= n; k++) { var j = (i + pas * k + n * k) % n; if (episodes[j].type) return charger(j, true); }
     };
@@ -827,17 +833,289 @@
       document.body.classList.remove("lecteur-ouvert", "mode-audio");
       setTimeout(function () { frame.innerHTML = ""; }, 500);
       actuel = null; marquerCartes();
+      pl.charge(null);
     });
-    pAudio.addEventListener("ended", function () { voisin(1); });
+    pAudio.addEventListener("ended", function () { if (!pl.fin()) voisin(1); });
     // « La conversation » : la page du portrait reprend au moment écouté (même clé que sa reprise, 13/10/2026)
     $(".lien-page", player).addEventListener("click", function () {
       if (!actuel || actuel.type !== "audio" || !(pAudio.currentTime > 2)) return;
       try { localStorage.setItem("vdia-position:" + new URL(actuel.page, location.href).pathname, String(Math.floor(pAudio.currentTime))); } catch (e) {}
     });
     document.addEventListener("keydown", function (e) {
-      if (!player.classList.contains("active") || e.target.closest("input,textarea,dialog")) return;
+      if (!player.classList.contains("active") || e.target.closest("input,textarea,dialog,#ma-playlist")) return;
       if (e.key === "Escape") $("#closeBtn").click();
     });
+
+    /* ------------------------------------------------ « Ma playlist » (marche 1 de docs/ETUDE-PLAYLISTS-PARCOURS.md, 16/10/2026)
+       Un « + » sur chaque portrait (et « Tout ajouter » sur une recherche ou une famille) remplit la playlist ; une
+       barre en bas de l'écran la résume (« Ma playlist · 6 épisodes · 58 min — Écouter ») et le lecteur collant
+       l'enchaîne : à la fin d'un épisode, le suivant de la liste, et rien après le dernier. La liste s'ouvre au-dessus
+       de la barre : écouter un épisode, le remonter, le descendre, le retirer, copier le lien. Gardée dans ce
+       navigateur (localStorage, s'il est permis) ; le lien …/#playlist=id1,id2 la donne à quelqu'un d'autre, sans
+       compte ni serveur. Seuls les portraits qu'on peut écouter (MP3) y entrent. */
+    (function () {
+      var boite = $("#ma-playlist");
+      if (!boite) return;
+      var CLE = "vdia-playlist", CLE_AVANT = "vdia-playlist-avant";
+      var parId = {};
+      episodes.forEach(function (ep, i) { if (ep.type === "audio") parId[ep.id] = i; });
+      var valides = function (ids) {
+        var vus = {};
+        return (Array.isArray(ids) ? ids : []).filter(function (id) { if (typeof id !== "string" || !(id in parId) || vus[id]) return false; vus[id] = 1; return true; }).slice(0, 200);
+      };
+      var lire = function (k) { try { var v = JSON.parse(localStorage.getItem(k) || "null"); return v && Array.isArray(v.ids) ? v : null; } catch (e) { return null; } };
+      var garde = lire(CLE) || { ids: [] };
+      var ids = valides(garde.ids);
+      var enCours = false;  // le lecteur suit-il la playlist ?
+      var idCourant = null; // l'épisode de la playlist qu'on écoute
+      var pos = Math.max(0, Math.min(Number(garde.pos) || 0, ids.length - 1)); // où reprendre
+      var lancement = false;
+      var sauver = function () { try { localStorage.setItem(CLE, JSON.stringify({ ids: ids, pos: pos })); } catch (e) {} };
+
+      var barreEl = $(".mp-barre", boite), panneau = $("#mp-panneau"), liste = $(".mp-liste", boite);
+      var ouvrir = $(".mp-ouvrir", boite), ecouter = $(".mp-ecouter", boite), resume = $(".mp-resume", boite);
+      var etatEl = $(".mp-etat", boite), recu = $(".mp-recu", boite);
+      var toutAjouter = $(".tout-ajouter");
+      var ICONE_LECTURE = '<polygon points="5,3 19,12 5,21"/>', ICONE_PAUSE = '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>';
+
+      var dureeTotale = function (s) {
+        var m = Math.round(s / 60);
+        if (m < 60) return m + "\u00a0min";
+        return Math.floor(m / 60) + "\u00a0h\u00a0" + ("0" + (m % 60)).slice(-2);
+      };
+      var dire = function (t) {
+        etatEl.textContent = t;
+        clearTimeout(dire.m);
+        dire.m = setTimeout(function () { etatEl.textContent = ""; }, 4000);
+      };
+      // la barre se pose juste au-dessus du lecteur collant quand il est ouvert
+      var caler = function () {
+        doc.style.setProperty("--lecteur-h", player.classList.contains("active") ? player.offsetHeight + "px" : "0px");
+      };
+      window.addEventListener("resize", caler);
+
+      var bouton = function (classe, icone, label, action) {
+        var b = document.createElement("button");
+        b.type = "button"; b.className = classe; b.innerHTML = icone; b.setAttribute("aria-label", label); b.title = label;
+        b.addEventListener("click", action);
+        return b;
+      };
+      var rendre = function () {
+        var n = ids.length;
+        boite.hidden = !n;
+        document.body.classList.toggle("avec-playlist", !!n);
+        if (!n) { panneau.hidden = true; ouvrir.setAttribute("aria-expanded", "false"); boite.classList.remove("ouverte"); document.body.classList.remove("playlist-ouverte"); enCours = false; }
+        var total = ids.reduce(function (t, id) { return t + (Number(episodes[parId[id]].duree) || 0); }, 0);
+        var k = enCours && idCourant ? ids.indexOf(idCourant) : -1;
+        resume.textContent = (k >= 0 ? (k + 1) + " sur " + n : n + (n > 1 ? " épisodes" : " épisode")) + " · " + dureeTotale(total);
+        ouvrir.setAttribute("aria-label", "Ma playlist, " + n + (n > 1 ? " épisodes, " : " épisode, ") + dureeTotale(total) + " : ouvrir la liste");
+        var joue = enCours && !pAudio.paused && !pAudio.ended;
+        $("svg", ecouter).innerHTML = joue ? ICONE_PAUSE : ICONE_LECTURE;
+        $(".mp-ecouter-mot", ecouter).textContent = joue ? "Pause" : enCours ? "Reprendre" : "Écouter";
+        ecouter.setAttribute("aria-label", joue ? "Mettre la playlist en pause" : enCours ? "Reprendre la playlist" : "Écouter la playlist");
+        boite.classList.toggle("joue", joue);
+        // la liste
+        liste.textContent = "";
+        ids.forEach(function (id, i) {
+          var ep = episodes[parId[id]], li = document.createElement("li");
+          li.className = "mp-item" + (enCours && id === idCourant ? " en-cours" : "");
+          var jouer = document.createElement("button");
+          jouer.type = "button"; jouer.className = "mp-jouer";
+          jouer.setAttribute("aria-label", "Écouter " + ep.nom + " (" + duree(ep.duree) + "), épisode " + (i + 1) + " de la playlist");
+          var vig = document.createElement("span"); vig.className = "mp-vignette";
+          if (ep.image) { var im = document.createElement("img"); im.src = ep.image; im.alt = ""; im.width = 40; im.height = 40; im.loading = "lazy"; vig.appendChild(im); }
+          else vig.textContent = ep.initiales || "";
+          var tx = document.createElement("span"); tx.className = "mp-texte";
+          var nm = document.createElement("strong"); nm.textContent = ep.nom;
+          var ro = document.createElement("span"); ro.className = "mp-role"; ro.textContent = duree(ep.duree) + (ep.role ? " · " + ep.role : "");
+          tx.appendChild(nm); tx.appendChild(ro);
+          var num = document.createElement("span"); num.className = "mp-num"; num.setAttribute("aria-hidden", "true"); num.textContent = String(i + 1);
+          jouer.appendChild(num); jouer.appendChild(vig); jouer.appendChild(tx);
+          jouer.addEventListener("click", function () { lancer(i); });
+          var haut = bouton("mp-bouger", ICONES_MP.monter, "Remonter " + ep.nom, function () { bouger(i, -1); });
+          var bas = bouton("mp-bouger", ICONES_MP.descendre, "Descendre " + ep.nom, function () { bouger(i, 1); });
+          var retirer = bouton("mp-retirer", ICONES_MP.croix, "Retirer " + ep.nom + " de la playlist", function () { retirerId(id, i); });
+          haut.disabled = i === 0; bas.disabled = i === n - 1;
+          li.appendChild(jouer); li.appendChild(haut); li.appendChild(bas); li.appendChild(retirer);
+          liste.appendChild(li);
+        });
+        // les « + » des cartes
+        $$("[data-ajouter]").forEach(function (b) {
+          var dedans = ids.indexOf(b.getAttribute("data-ajouter")) >= 0;
+          b.setAttribute("aria-pressed", dedans ? "true" : "false");
+          var nom = b.getAttribute("data-nom") || (b.setAttribute("data-nom", (b.getAttribute("aria-label") || "").replace(/^Ajouter le portrait | à ma playlist$/g, "")), b.getAttribute("data-nom"));
+          b.setAttribute("aria-label", dedans ? "Retirer le portrait " + nom + " de ma playlist" : "Ajouter le portrait " + nom + " à ma playlist");
+          b.title = dedans ? "Dans ma playlist (retirer)" : "Ajouter à ma playlist";
+        });
+        majToutAjouter();
+        caler();
+        sauver();
+      };
+      // « Tout ajouter » : seulement pendant une recherche ou une famille, quand des résultats ne sont pas encore dedans
+      var resultats = function () {
+        return $$("#grille-portraits .episode-card").filter(function (c) { return !c.hidden; })
+          .map(function (c) { return c.getAttribute("data-id"); }).filter(function (id) { return id in parId; });
+      };
+      var majToutAjouter = function () {
+        if (!toutAjouter) return;
+        var r = doc.classList.contains("en-filtre") ? resultats() : [];
+        var manquent = r.filter(function (id) { return ids.indexOf(id) < 0; }).length;
+        toutAjouter.hidden = !r.length;
+        toutAjouter.classList.toggle("fait", !manquent);
+        toutAjouter.disabled = !manquent;
+        $(".ta-mot", toutAjouter).textContent = !manquent ? "Tous dans ma playlist" : manquent === r.length ? "Tout ajouter à ma playlist (" + r.length + ")" : "Ajouter les " + manquent + " autres";
+        toutAjouter.innerHTML = (!manquent ? ICONES_MP.coche : ICONES_MP.plus) + toutAjouter.innerHTML.replace(/^<svg[\s\S]*?<\/svg>/, "");
+      };
+      document.addEventListener("vdia-resultats", majToutAjouter);
+      if (toutAjouter) toutAjouter.addEventListener("click", function () {
+        var r = resultats().filter(function (id) { return ids.indexOf(id) < 0; });
+        if (!r.length) return;
+        var avaitFocus = document.activeElement === toutAjouter;
+        ids = ids.concat(r);
+        rendre();
+        if (avaitFocus) try { ouvrir.focus({ preventScroll: true }); } catch (e) { ouvrir.focus(); } // le bouton s'éteint : on passe à la barre
+        dire(r.length > 1 ? r.length + " épisodes ajoutés à ma playlist" : "1 épisode ajouté à ma playlist");
+        clignoter();
+      });
+      var clignoter = function () { barreEl.classList.remove("ajoute"); void barreEl.offsetWidth; barreEl.classList.add("ajoute"); };
+
+      var lancer = function (i) {
+        if (!ids[i]) return;
+        pos = i;
+        if (enCours && idCourant === ids[i] && actuel && actuel.id === ids[i]) { if (pAudio.paused) pAudio.play().catch(function () {}); else pAudio.pause(); return; }
+        lancement = true;
+        charger(parId[ids[i]], true);
+        lancement = false;
+      };
+      var bouger = function (i, pas) {
+        var j = i + pas;
+        if (j < 0 || j >= ids.length) return;
+        var x = ids[i]; ids[i] = ids[j]; ids[j] = x;
+        rendre();
+        var b = $$(".mp-item", liste)[j];
+        b = b && $$(".mp-bouger", b)[pas < 0 ? 0 : 1];
+        if (b && !b.disabled) b.focus(); else if ($$(".mp-item", liste)[j]) $(".mp-jouer", $$(".mp-item", liste)[j]).focus();
+      };
+      var retirerId = function (id, i) {
+        var k = ids.indexOf(id);
+        if (k < 0) return;
+        ids.splice(k, 1);
+        if (k < pos) pos--;
+        if (id === idCourant) pos = k; // l'épisode en cours continue ; ensuite, celui qui a pris sa place
+        pos = Math.max(0, Math.min(pos, ids.length - 1));
+        rendre();
+        if (typeof i === "number") {
+          var items = $$(".mp-item", liste), suivant = items[Math.min(i, items.length - 1)];
+          if (suivant) $(".mp-jouer", suivant).focus(); else ouvrir.focus();
+        }
+      };
+
+      // ce que le lecteur collant nous dit et nous demande
+      pl.charge = function (ep) {
+        if (!ep) { enCours = false; idCourant = null; }
+        else if (lancement || (enCours && ids.indexOf(ep.id) >= 0)) { enCours = true; idCourant = ep.id; pos = ids.indexOf(ep.id); }
+        else { enCours = false; idCourant = null; } // un autre épisode, lancé d'une carte : on quitte la playlist
+        rendre();
+      };
+      pl.voisin = function (pas) {
+        if (!enCours) return false;
+        var k = ids.indexOf(idCourant), j = (k < 0 ? pos - (pas > 0 ? 1 : 0) : k) + pas;
+        if (j >= 0 && j < ids.length) lancer(j);
+        return true;
+      };
+      pl.fin = function () {
+        if (!enCours) return false;
+        var k = ids.indexOf(idCourant), j = k < 0 ? pos : k + 1;
+        if (j < ids.length) { lancer(j); return true; }
+        pos = 0; enCours = false; idCourant = null; // « Écouter » repartira du premier
+        rendre();
+        dire("Fin de la playlist");
+        return true; // après le dernier : on s'arrête
+      };
+      ["play", "pause", "ended"].forEach(function (e) { pAudio.addEventListener(e, rendre); });
+
+      ecouter.addEventListener("click", function () {
+        if (enCours && actuel && actuel.id === idCourant) { if (pAudio.paused) pAudio.play().catch(function () {}); else pAudio.pause(); return; }
+        lancer(Math.min(pos, ids.length - 1));
+      });
+      var basculer = function (ouvert) {
+        panneau.hidden = !ouvert;
+        ouvrir.setAttribute("aria-expanded", ouvert ? "true" : "false");
+        boite.classList.toggle("ouverte", ouvert);
+        document.body.classList.toggle("playlist-ouverte", ouvert); // la flèche « remonter » se range
+        if (!ouvert) recu.hidden = true;
+      };
+      ouvrir.addEventListener("click", function () { basculer(panneau.hidden); });
+      $(".mp-fermer", boite).addEventListener("click", function () { basculer(false); ouvrir.focus(); });
+      boite.addEventListener("keydown", function (ev) {
+        if (ev.key === "Escape" && !panneau.hidden) { ev.preventDefault(); ev.stopPropagation(); basculer(false); ouvrir.focus(); }
+      });
+      $(".mp-vider", boite).addEventListener("click", function () {
+        if (!window.confirm("Vider la playlist (" + ids.length + (ids.length > 1 ? " épisodes" : " épisode") + ") ?")) return;
+        ids = []; pos = 0; enCours = false; idCourant = null;
+        rendre();
+      });
+      // le lien de partage : …/podcast-voix-de-lia/#playlist=jensen-huang,lisa-su
+      var lien = function () { return location.origin + location.pathname + "#playlist=" + ids.join(","); };
+      $(".mp-partager", boite).addEventListener("click", function () {
+        var url = lien(), titre = "Ma playlist des Voix de l'IA (" + ids.length + (ids.length > 1 ? " épisodes)" : " épisode)");
+        if (navigator.share && window.matchMedia("(pointer:coarse)").matches) { navigator.share({ title: titre, url: url }).catch(function () {}); return; }
+        var ok = function () { dire("Lien copié : collez-le dans un message."); };
+        // sans presse-papiers : la petite fenêtre « Copiez ce lien », et si elle est refusée, le lien affiché dans la liste
+        var secours = function () { try { window.prompt("Copiez ce lien :", url); } catch (e) { clearTimeout(dire.m); etatEl.textContent = "Copiez ce lien : " + url; } };
+        if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(url).then(ok, secours); else secours();
+      });
+
+      // le « + » de chaque carte : ajoute, ou retire si c'est déjà dedans
+      document.addEventListener("click", function (ev) {
+        var b = ev.target.closest && ev.target.closest("[data-ajouter]");
+        if (!b) return;
+        ev.preventDefault(); ev.stopPropagation();
+        var id = b.getAttribute("data-ajouter");
+        if (!(id in parId)) return;
+        if (ids.indexOf(id) >= 0) { retirerId(id); dire("Retiré de ma playlist"); }
+        else { ids.push(id); rendre(); dire(episodes[parId[id]].nom + " ajouté à ma playlist"); clignoter(); }
+      });
+
+      // arrivée par un lien partagé : la playlist reçue remplace la sienne, qu'on peut remettre d'un clic
+      // aussi sans recharger la page : un lien « Écouter le parcours » de la page d'accueil (#playlist=…)
+      function recevoir() {
+        var m = /[#&]playlist=([^&]*)/.exec(location.hash);
+        if (!m) return;
+        var recus = [];
+        try { recus = valides(decodeURIComponent(m[1]).split(",")); } catch (e) {}
+        // on retire la playlist de l'adresse (elle est gardée dans le navigateur), le reste reste (#q=…, #famille=…)
+        var resteHash = location.hash.replace(/^#/, "").split("&").filter(function (x) { return x && x.indexOf("playlist=") !== 0; }).join("&");
+        try { history.replaceState(null, "", location.pathname + location.search + (resteHash ? "#" + resteHash : "")); } catch (e) {}
+        if (recus.length && recus.join(",") !== ids.join(",")) {
+          if (ids.length) try { localStorage.setItem(CLE_AVANT, JSON.stringify({ ids: ids, pos: pos })); } catch (e) {}
+          var avant = ids.slice();
+          ids = recus; pos = 0; enCours = false;
+          recu.textContent = "";
+          var duRecu = recus.reduce(function (t, id) { return t + (Number(episodes[parId[id]].duree) || 0); }, 0);
+          recu.appendChild(document.createTextNode("On vous a envoyé cette playlist : " + recus.length + (recus.length > 1 ? " épisodes" : " épisode") + " · " + dureeTotale(duRecu) + ". "));
+          if (avant.length) {
+            var remettre = document.createElement("button");
+            remettre.type = "button"; remettre.className = "mp-remettre";
+            remettre.textContent = "Remettre ma playlist (" + avant.length + ")";
+            remettre.addEventListener("click", function () {
+              ids = valides(avant); pos = 0; enCours = false; recu.hidden = true;
+              try { localStorage.removeItem(CLE_AVANT); } catch (e) {}
+              rendre();
+              dire("Votre playlist est revenue");
+            });
+            recu.appendChild(remettre);
+          }
+          recu.hidden = false;
+          rendre();
+          basculer(true);
+          recu.hidden = false;
+        } else if (recus.length) basculer(true);
+      }
+      recevoir();
+      window.addEventListener("hashchange", function () { if (/[#&]playlist=/.test(location.hash)) { recevoir(); rendre(); } });
+      rendre();
+    })();
   }
 
   // Recherche, familles et « Connaissez-vous… ? » : dans leur propre portée (aucun nom partagé avec ce qui précède)
@@ -1201,6 +1479,7 @@
       var champ = $(".cherche-champ", outils);
       var effacer = $(".cherche-effacer", outils);
       var puces = $$(".puce[data-famille]", outils);
+      var sujets = $$("[data-sujet]", outils);
       var compte = $(".compte", outils);
       var ligneCompte = $(".compte-ligne", outils);
       var toutVoirHaut = $(".tout-voir", outils);
@@ -1361,6 +1640,9 @@
         }
         // assez de place sous le champ pour toujours pouvoir l'amener sous la barre, même avec un seul résultat
         if (filtre) section.style.setProperty("--avant-outils", Math.max(0, Math.round(outils.getBoundingClientRect().top - section.getBoundingClientRect().top)) + "px");
+        // les pastilles « Sujets » : celle qu'on a cliquée reste allumée tant que c'est la recherche en cours
+        sujets.forEach(function (b) { b.setAttribute("aria-pressed", norm(b.getAttribute("data-sujet")) === norm(q) ? "true" : "false"); });
+        try { document.dispatchEvent(new CustomEvent("vdia-resultats")); } catch (e) {} // « Tout ajouter » (Ma playlist)
       };
 
       // rien trouvé : des pistes (orthographe proche, hors des familles choisies, familles, exemples)
@@ -1554,6 +1836,13 @@
       });
       $$("[data-exemple]", outils).forEach(function (b) {
         b.addEventListener("click", function () { chercherTexte(b.getAttribute("data-exemple")); });
+      });
+      // Sujets (playlists, 16/10/2026) : un clic cherche ce mot ; un second clic l'efface
+      sujets.forEach(function (b) {
+        b.addEventListener("click", function () {
+          if (b.getAttribute("aria-pressed") === "true") { vider(true); return; }
+          chercherTexte(b.getAttribute("data-sujet"));
+        });
       });
       // un lien vers une partie rangée pendant la recherche (« Saison 1 », « S'abonner »…) : on efface d'abord, pour
       // qu'elle réapparaisse et que le navigateur puisse y aller
@@ -1885,6 +2174,7 @@
         ecrireLS("quiz-grand-mode", m ? m.id : "tout");
       }
       function garde(m, q) {
+        if (m.portraits) return m.portraits.indexOf(o.portraitDe(q).id) >= 0;
         if (m.famille) return (o.portraitDe(q).f || []).indexOf(m.famille) >= 0;
         if (m.niveau) return q.n === m.niveau;
         return true;
