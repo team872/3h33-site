@@ -372,5 +372,8 @@ canvas.courbe{color:var(--vert);--courbe-repos:rgba(31,58,35,.22)}
   });
 })();
 </script>
+<script>
+(function(){try{if(navigator.doNotTrack==="1"||window.doNotTrack==="1"||navigator.msDoNotTrack==="1"||location.hash==="#apercu")return;var u=location.href.split("#")[0],a="https://api.choucroute-citron.com/v1/lien-vu",b=JSON.stringify({url:u});if(navigator.sendBeacon&&navigator.sendBeacon(a,new Blob([b],{type:"text/plain"})))return;if(window.fetch){fetch(a,{method:"POST",body:b,mode:"no-cors",keepalive:true,headers:{"Content-Type":"text/plain"}}).catch(function(){});return}new Image().src=a+".gif?u="+encodeURIComponent(u)}catch(e){}})();
+</script>
 </body>
 </html>
