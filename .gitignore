@@ -19,3 +19,5 @@ site/podcast-voix-de-lia/audio/
 
 # Teasers des kits personnels (podcast-engine/site/kits-en-ligne.sh) : copiés à part sur le serveur (rsync)
 site/pour/*/*.mp3
+# Vidéos des teasers à partager (16/10/2026) : même chemin que les MP3
+site/pour/*/*.mp4

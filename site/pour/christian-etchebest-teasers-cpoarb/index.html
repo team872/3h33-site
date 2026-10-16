@@ -70,8 +70,22 @@ details{flex:1}summary{cursor:pointer;color:var(--vert-clair)}details p{margin:8
 img.grande{width:100%;height:auto;border-radius:18px;display:block;margin:28px 0 20px}
 small{display:block;color:var(--encre-douce);font-size:14px;margin-top:28px;border-top:1px solid var(--bord);padding-top:16px}
 canvas.courbe{display:block;width:100%;height:56px;margin:0 0 8px}
+.partage{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:12px 0 4px}
+.partager{display:inline-flex;align-items:center;gap:8px;min-height:44px;border:0;border-radius:999px;background:var(--vert);color:#fffdf5;font:600 16px/1 Inter,system-ui,-apple-system,sans-serif;padding:10px 20px 10px 16px;cursor:pointer;box-shadow:0 4px 14px rgba(31,58,35,.18)}
+.partager svg{width:19px;height:19px;flex:none}
+.partager:hover{background:var(--vert-clair)}
+.partager:focus-visible,.menu-partage :focus-visible{outline:2px solid var(--citron-fonce);outline-offset:3px}
+.partage .tele{font-size:14px;color:var(--encre-douce)}.partage .tele a{color:var(--vert-clair)}
+.menu-partage{position:absolute;left:0;top:52px;z-index:20;min-width:240px;display:flex;flex-direction:column;background:var(--papier);border:1px solid var(--bord);border-radius:14px;box-shadow:0 16px 36px rgba(31,58,35,.25);padding:6px}
+.menu-partage[hidden],.menu-partage [hidden]{display:none}
+.menu-partage a,.menu-partage button{display:block;text-align:left;background:none;border:0;border-radius:10px;padding:11px 14px;font:500 15px/1.2 Inter,system-ui,-apple-system,sans-serif;color:var(--encre);text-decoration:none;cursor:pointer}
+.menu-partage a:hover,.menu-partage button:hover{background:var(--creme)}
+.menu-partage .copier{font-weight:600;color:var(--vert)}
+.partage .etat{flex-basis:100%;margin:0;font-size:13px;color:var(--encre-douce)}
+.partage .etat:empty{display:none}
 canvas.courbe{color:var(--vert);--courbe-repos:rgba(31,58,35,.22)}
 @media (max-width:480px){body{font-size:16px}.ia{font-size:14px}.idee{font-size:14px}}
+
 </style>
 </head>
 <body>
@@ -83,28 +97,67 @@ canvas.courbe{color:var(--vert);--courbe-repos:rgba(31,58,35,.22)}
 <h1><span>Pour</span>Christian Etchebest</h1>
 <p class="titre-ep">« Une IA a essayé de lui apprendre à cuisiner. Il l'a remise à sa place. »</p>
 </header>
-<p class="intro">3 petits teasers d'une trentaine de secondes, tirés de ton épisode. Écoute-les, partage-les si le cœur t'en dit, puis <a href="https://choucroute-citron.com/episodes/christian-etchebest-une-ia-a-essaye-de-lui-apprendre-a-cuisiner-il-l-a-remise-a/">l'épisode complet</a>.</p>
+<p class="intro">3 petits teasers d'une trentaine de secondes, tirés de ton épisode. Écoute-les, partage-les si le cœur t'en dit, puis <a href="https://choucroute-citron.com/episodes/christian-etchebest-une-ia-a-essaye-de-lui-apprendre-a-cuisiner-il-l-a-remise-a/">l'épisode complet</a>. Le bouton « Partager » envoie la vidéo du teaser depuis ton téléphone ; sur ordinateur, il donne son lien, qui s'affiche avec son propre visuel.</p>
 <div class="ia"><p><b>La présentation est dite par une voix d'IA ; les extraits sont les vraies voix.</b> Lia, l'IA-nimatrice de Choucroute Citron, ouvre et conclut ; entre les deux, le vrai passage de l'épisode : ta voix, et parfois celle d'Alexandre.</p></div>
 <section class="carte" id="christian-etchebest-1">
 <p class="etiquette"><span>1</span> Teaser 1 · 31 s</p>
 <p class="idee">On m'a demandé ce que je pensais d'une recette de choucroute… au citron. J'ai trouvé ça plutôt malin. Le chef Christian Etchebest, lui, a son avis.</p>
 <canvas class="courbe" data-enveloppe="hs9urvg211kyurrad342111kururp4ndnlokpnkrgkbieao365111lbajdj91111mrjtqt7slvwpj4111bvex8mgor9ssv8bimts2bojtpf5300000jkdstmqfqlmtglqzvnbnknonlntsttrrrksua42541cqpbvxtgsxsn420etsynkyprvsuthn8ourlohiaa116rrvmicrvd0ttnqkdb81000003dtwirrfx4nt5mcmk6kjsdgmjs4jaif5987519nusvttoq7pf231111vqqxnluqqm7nept8pqp461bodqdu5nbi7111" aria-hidden="true"></canvas>
 <audio controls preload="metadata" src="christian-etchebest-1.mp3"></audio>
-<div class="pied-carte"><details><summary>Ce que dit Lia, la voix d'IA</summary><p>« Je suis Lia, IA-nimatrice. On m'a demandé ce que je pensais d'une recette de choucroute… au citron. J'ai trouvé ça plutôt malin. Le chef Christian Etchebest, lui, a son avis. »</p><p class="gris">… le vrai passage de l'épisode, ta vraie voix …</p><p>« Une choucroute sans citron, dans Choucroute Citron… Faut-il renommer le podcast ? Écoutez l'épisode avec Christian Etchebest, dans Choucroute Citron. »</p></details><a href="christian-etchebest-1.mp3" download="Choucroute Citron — Christian Etchebest — teaser 1.mp3">Télécharger</a></div>
+<div class="partage">
+<button type="button" class="partager" aria-haspopup="true" aria-expanded="false" data-url="https://3h33.com/pour/christian-etchebest-teasers-cpoarb/t1/" data-titre="Christian Etchebest dans Choucroute Citron · teaser 1" data-texte="Christian Etchebest dans Choucroute Citron, le podcast où les invités dialoguent avec une IA 🍋 La présentation est une voix d'IA ; l'extrait, c'est la vraie voix de Christian." data-video="t1.mp4" data-nom-video="Choucroute Citron — Christian Etchebest — teaser 1.mp4"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg><span>Partager</span></button>
+<span class="tele">Télécharger <a href="t1.mp4" download="Choucroute Citron — Christian Etchebest — teaser 1.mp4">la vidéo</a> · <a href="christian-etchebest-1.mp3" download="Choucroute Citron — Christian Etchebest — teaser 1.mp3">le son</a></span>
+<div class="menu-partage" role="menu" hidden>
+<button type="button" role="menuitem" class="copier">Copier le lien</button>
+<a role="menuitem" href="https://wa.me/?text=Christian%20Etchebest%20dans%20Choucroute%20Citron%2C%20le%20podcast%20o%C3%B9%20les%20invit%C3%A9s%20dialoguent%20avec%20une%20IA%20%F0%9F%8D%8B%20La%20pr%C3%A9sentation%20est%20une%20voix%20d'IA%20%3B%20l'extrait%2C%20c'est%20la%20vraie%20voix%20de%20Christian.%20https%3A%2F%2F3h33.com%2Fpour%2Fchristian-etchebest-teasers-cpoarb%2Ft1%2F" target="_blank" rel="noopener">WhatsApp</a>
+<a role="menuitem" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3h33.com%2Fpour%2Fchristian-etchebest-teasers-cpoarb%2Ft1%2F" target="_blank" rel="noopener">LinkedIn</a>
+<a role="menuitem" href="https://twitter.com/intent/tweet?text=Christian%20Etchebest%20dans%20Choucroute%20Citron%2C%20le%20podcast%20o%C3%B9%20les%20invit%C3%A9s%20dialoguent%20avec%20une%20IA%20%F0%9F%8D%8B%20La%20pr%C3%A9sentation%20est%20une%20voix%20d'IA%20%3B%20l'extrait%2C%20c'est%20la%20vraie%20voix%20de%20Christian.&amp;url=https%3A%2F%2F3h33.com%2Fpour%2Fchristian-etchebest-teasers-cpoarb%2Ft1%2F" target="_blank" rel="noopener">X (Twitter)</a>
+<a role="menuitem" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3h33.com%2Fpour%2Fchristian-etchebest-teasers-cpoarb%2Ft1%2F" target="_blank" rel="noopener">Facebook</a>
+<button type="button" role="menuitem" class="natif" hidden>Autres applications…</button>
+</div>
+<p class="etat" aria-live="polite"></p>
+</div>
+<div class="pied-carte"><details><summary>Ce que dit Lia, la voix d'IA</summary><p>« Je suis Lia, IA-nimatrice. On m'a demandé ce que je pensais d'une recette de choucroute… au citron. J'ai trouvé ça plutôt malin. Le chef Christian Etchebest, lui, a son avis. »</p><p class="gris">… le vrai passage de l'épisode, ta vraie voix …</p><p>« Une choucroute sans citron, dans Choucroute Citron… Faut-il renommer le podcast ? Écoutez l'épisode avec Christian Etchebest, dans Choucroute Citron. »</p></details></div>
 </section>
 <section class="carte" id="christian-etchebest-2">
 <p class="etiquette"><span>2</span> Teaser 2 · 25 s</p>
 <p class="idee">Chez le chef Christian Etchebest, on vient comme on est.</p>
 <canvas class="courbe" data-enveloppe="gr8rsvp611cwwuspad3331105qujtk9l4smipwl3611pmvp2wtnl911111smsqts92110000wtztmnrqme30nrhpvgljkngi8900005mvrouwuhqrqmlvpuingsh7og68ntjkqrsishhghoqaskqtvpkpo8l9vtr86410nppoqieorpk49qmnlsuj2oi000asflnvmo8kq7da2mjrtryrjb5688spnplilwumafkmrgnni351jiijp9i9g5110" aria-hidden="true"></canvas>
 <audio controls preload="metadata" src="christian-etchebest-2.mp3"></audio>
-<div class="pied-carte"><details><summary>Ce que dit Lia, la voix d'IA</summary><p>« Je suis Lia, IA-nimatrice. Chez le chef Christian Etchebest, on vient comme on est. Ma formule : »</p><p class="gris">… le vrai passage de l'épisode, ta vraie voix …</p><p>« Kiffée par un chef : je l'encadre ! Écoutez l'épisode avec Christian Etchebest, dans Choucroute Citron. »</p></details><a href="christian-etchebest-2.mp3" download="Choucroute Citron — Christian Etchebest — teaser 2.mp3">Télécharger</a></div>
+<div class="partage">
+<button type="button" class="partager" aria-haspopup="true" aria-expanded="false" data-url="https://3h33.com/pour/christian-etchebest-teasers-cpoarb/t2/" data-titre="Christian Etchebest dans Choucroute Citron · teaser 2" data-texte="Christian Etchebest dans Choucroute Citron, le podcast où les invités dialoguent avec une IA 🍋 La présentation est une voix d'IA ; l'extrait, c'est la vraie voix de Christian." data-video="t2.mp4" data-nom-video="Choucroute Citron — Christian Etchebest — teaser 2.mp4"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg><span>Partager</span></button>
+<span class="tele">Télécharger <a href="t2.mp4" download="Choucroute Citron — Christian Etchebest — teaser 2.mp4">la vidéo</a> · <a href="christian-etchebest-2.mp3" download="Choucroute Citron — Christian Etchebest — teaser 2.mp3">le son</a></span>
+<div class="menu-partage" role="menu" hidden>
+<button type="button" role="menuitem" class="copier">Copier le lien</button>
+<a role="menuitem" href="https://wa.me/?text=Christian%20Etchebest%20dans%20Choucroute%20Citron%2C%20le%20podcast%20o%C3%B9%20les%20invit%C3%A9s%20dialoguent%20avec%20une%20IA%20%F0%9F%8D%8B%20La%20pr%C3%A9sentation%20est%20une%20voix%20d'IA%20%3B%20l'extrait%2C%20c'est%20la%20vraie%20voix%20de%20Christian.%20https%3A%2F%2F3h33.com%2Fpour%2Fchristian-etchebest-teasers-cpoarb%2Ft2%2F" target="_blank" rel="noopener">WhatsApp</a>
+<a role="menuitem" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3h33.com%2Fpour%2Fchristian-etchebest-teasers-cpoarb%2Ft2%2F" target="_blank" rel="noopener">LinkedIn</a>
+<a role="menuitem" href="https://twitter.com/intent/tweet?text=Christian%20Etchebest%20dans%20Choucroute%20Citron%2C%20le%20podcast%20o%C3%B9%20les%20invit%C3%A9s%20dialoguent%20avec%20une%20IA%20%F0%9F%8D%8B%20La%20pr%C3%A9sentation%20est%20une%20voix%20d'IA%20%3B%20l'extrait%2C%20c'est%20la%20vraie%20voix%20de%20Christian.&amp;url=https%3A%2F%2F3h33.com%2Fpour%2Fchristian-etchebest-teasers-cpoarb%2Ft2%2F" target="_blank" rel="noopener">X (Twitter)</a>
+<a role="menuitem" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3h33.com%2Fpour%2Fchristian-etchebest-teasers-cpoarb%2Ft2%2F" target="_blank" rel="noopener">Facebook</a>
+<button type="button" role="menuitem" class="natif" hidden>Autres applications…</button>
+</div>
+<p class="etat" aria-live="polite"></p>
+</div>
+<div class="pied-carte"><details><summary>Ce que dit Lia, la voix d'IA</summary><p>« Je suis Lia, IA-nimatrice. Chez le chef Christian Etchebest, on vient comme on est. Ma formule : »</p><p class="gris">… le vrai passage de l'épisode, ta vraie voix …</p><p>« Kiffée par un chef : je l'encadre ! Écoutez l'épisode avec Christian Etchebest, dans Choucroute Citron. »</p></details></div>
 </section>
 <section class="carte" id="christian-etchebest-alexandre-1">
 <p class="etiquette"><span>3</span> Teaser 3 · 36 s · avec la question d'Alexandre</p>
 <p class="idee">Bien manger ? Je n'ai ni bouche ni estomac. J'ai quand même répondu : le plaisir, le bon sens, et une place pour le partage. Le chef Christian Etchebest a écouté.</p>
 <canvas class="courbe" data-enveloppe="1psstrrjmodtvoekqpb000jpro9rmfqmfea001jrfsqvg211nwspp9c3231119frrpvc211hlsoksnqvnpp5vti31111hptzxqeqfork21apcrrglok72emfsdmoh331ltskvbhqmkdkd521112uptnam4uniruhcjqkd9i51000bicnhfenhi740awvhgikbb1bzysjmrpquspnlqn9ljhfmvzglh61tsd5otjtyossupuure5khlkaopun8410008bri8rhsoonrodm8ntnmm7o5gmpgewmsikoqao7s4j56543e4bjp7mpfing8u7hlb12111slqqljrsul9laqp7loa546mkikq8gaf5110" aria-hidden="true"></canvas>
 <audio controls preload="metadata" src="christian-etchebest-alexandre-1.mp3"></audio>
-<div class="pied-carte"><details><summary>Ce que dit Lia, la voix d'IA</summary><p class="gris">… d'abord la question d'Alexandre, sa vraie voix …</p><p>« Je suis Lia, IA-nimatrice. Bien manger ? Je n'ai ni bouche ni estomac. J'ai quand même répondu : le plaisir, le bon sens, et une place pour le partage. Le chef Christian Etchebest a écouté. »</p><p class="gris">… le vrai passage de l'épisode, ta vraie voix …</p><p>« Un chef d'accord avec une IA-nimatrice qui n'a jamais goûté une choucroute ! Mais que met-il dans son assiette, lui ? Écoutez l'épisode avec Christian Etchebest, dans Choucroute Citron. »</p></details><a href="christian-etchebest-alexandre-1.mp3" download="Choucroute Citron — Christian Etchebest — teaser 3.mp3">Télécharger</a></div>
+<div class="partage">
+<button type="button" class="partager" aria-haspopup="true" aria-expanded="false" data-url="https://3h33.com/pour/christian-etchebest-teasers-cpoarb/t3/" data-titre="Christian Etchebest dans Choucroute Citron · teaser 3" data-texte="Christian Etchebest dans Choucroute Citron, le podcast où les invités dialoguent avec une IA 🍋 La présentation est une voix d'IA ; l'extrait, ce sont les vraies voix de Christian et d'Alexandre." data-video="t3.mp4" data-nom-video="Choucroute Citron — Christian Etchebest — teaser 3.mp4"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg><span>Partager</span></button>
+<span class="tele">Télécharger <a href="t3.mp4" download="Choucroute Citron — Christian Etchebest — teaser 3.mp4">la vidéo</a> · <a href="christian-etchebest-alexandre-1.mp3" download="Choucroute Citron — Christian Etchebest — teaser 3.mp3">le son</a></span>
+<div class="menu-partage" role="menu" hidden>
+<button type="button" role="menuitem" class="copier">Copier le lien</button>
+<a role="menuitem" href="https://wa.me/?text=Christian%20Etchebest%20dans%20Choucroute%20Citron%2C%20le%20podcast%20o%C3%B9%20les%20invit%C3%A9s%20dialoguent%20avec%20une%20IA%20%F0%9F%8D%8B%20La%20pr%C3%A9sentation%20est%20une%20voix%20d'IA%20%3B%20l'extrait%2C%20ce%20sont%20les%20vraies%20voix%20de%20Christian%20et%20d'Alexandre.%20https%3A%2F%2F3h33.com%2Fpour%2Fchristian-etchebest-teasers-cpoarb%2Ft3%2F" target="_blank" rel="noopener">WhatsApp</a>
+<a role="menuitem" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3h33.com%2Fpour%2Fchristian-etchebest-teasers-cpoarb%2Ft3%2F" target="_blank" rel="noopener">LinkedIn</a>
+<a role="menuitem" href="https://twitter.com/intent/tweet?text=Christian%20Etchebest%20dans%20Choucroute%20Citron%2C%20le%20podcast%20o%C3%B9%20les%20invit%C3%A9s%20dialoguent%20avec%20une%20IA%20%F0%9F%8D%8B%20La%20pr%C3%A9sentation%20est%20une%20voix%20d'IA%20%3B%20l'extrait%2C%20ce%20sont%20les%20vraies%20voix%20de%20Christian%20et%20d'Alexandre.&amp;url=https%3A%2F%2F3h33.com%2Fpour%2Fchristian-etchebest-teasers-cpoarb%2Ft3%2F" target="_blank" rel="noopener">X (Twitter)</a>
+<a role="menuitem" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3h33.com%2Fpour%2Fchristian-etchebest-teasers-cpoarb%2Ft3%2F" target="_blank" rel="noopener">Facebook</a>
+<button type="button" role="menuitem" class="natif" hidden>Autres applications…</button>
+</div>
+<p class="etat" aria-live="polite"></p>
+</div>
+<div class="pied-carte"><details><summary>Ce que dit Lia, la voix d'IA</summary><p class="gris">… d'abord la question d'Alexandre, sa vraie voix …</p><p>« Je suis Lia, IA-nimatrice. Bien manger ? Je n'ai ni bouche ni estomac. J'ai quand même répondu : le plaisir, le bon sens, et une place pour le partage. Le chef Christian Etchebest a écouté. »</p><p class="gris">… le vrai passage de l'épisode, ta vraie voix …</p><p>« Un chef d'accord avec une IA-nimatrice qui n'a jamais goûté une choucroute ! Mais que met-il dans son assiette, lui ? Écoutez l'épisode avec Christian Etchebest, dans Choucroute Citron. »</p></details></div>
 </section>
 <a class="bouton" href="https://choucroute-citron.com/episodes/christian-etchebest-une-ia-a-essaye-de-lui-apprendre-a-cuisiner-il-l-a-remise-a/">Écouter l'épisode complet</a>
 <p class="plateformes">Aussi sur <a href="https://podcasts.apple.com/us/podcast/christian-etchebest-une-ia-a-essay%C3%A9-de-lui-apprendre/id1812305442?i=1000750963584&amp;uo=4" rel="noopener">Apple Podcasts</a> · <a href="https://podcast.ausha.co/choucroute-citron/christian-etchebest-une-ia-a-essaye-de-lui-apprendre-a-cuisiner-il-l-a-remise-a-sa-place" rel="noopener">Ausha</a></p>
@@ -227,6 +280,96 @@ canvas.courbe{color:var(--vert);--courbe-repos:rgba(31,58,35,.22)}
     dessiner(c, reduit && !!c.env);
   });
   window.addEventListener("resize", function () { courbes.forEach(function (c) { taille(c); dessiner(c, reduit && !!c.env); }); });
+})();
+</script>
+<script>
+// Bouton « Partager » d'un teaser (lib/partage-teaser.mjs)
+(function () {
+  var tactile = window.matchMedia && matchMedia("(pointer: coarse)").matches;
+  var peutPartager = typeof navigator.share === "function";
+  var peutFichiers = false;
+  try { peutFichiers = peutPartager && !!navigator.canShare && navigator.canShare({ files: [new File(["x"], "t.mp4", { type: "video/mp4" })] }); } catch (e) {}
+  var videos = {};
+  function charger(b) {
+    var u = b.getAttribute("data-video");
+    if (!peutFichiers || !u) return null;
+    if (!videos[u]) {
+      var v = videos[u] = { fichier: null };
+      v.promesse = fetch(u).then(function (r) { if (!r.ok) throw new Error(r.status); return r.blob(); })
+        .then(function (bl) { v.fichier = new File([bl], b.getAttribute("data-nom-video") || "teaser.mp4", { type: "video/mp4" }); return v.fichier; })
+        .catch(function () { delete videos[u]; return null; });
+    }
+    return videos[u];
+  }
+  function etat(b, msg) { var p = b.parentNode.querySelector(".etat"); if (p) p.textContent = msg || ""; }
+  function fermer(sauf) {
+    document.querySelectorAll(".menu-partage").forEach(function (m) {
+      if (m === sauf) return;
+      m.hidden = true;
+      var b = m.parentNode.querySelector(".partager"); if (b) b.setAttribute("aria-expanded", "false");
+    });
+  }
+  function menu(b) {
+    var m = b.parentNode.querySelector(".menu-partage");
+    fermer(m);
+    m.hidden = !m.hidden;
+    b.setAttribute("aria-expanded", String(!m.hidden));
+    if (!m.hidden) { var p = m.querySelector("button:not([hidden]),a"); if (p) p.focus(); }
+  }
+  function lien(b) {
+    return navigator.share({ title: b.getAttribute("data-titre"), text: b.getAttribute("data-texte"), url: b.getAttribute("data-url") })
+      .catch(function (err) { if (!err || err.name !== "AbortError") menu(b); });
+  }
+  function natif(b) {
+    var titre = b.getAttribute("data-titre"), texte = b.getAttribute("data-texte"), url = b.getAttribute("data-url");
+    var v = charger(b);
+    if (!v) return lien(b);
+    function envoyer(f) {
+      if (!f || !navigator.canShare({ files: [f] })) return lien(b);
+      etat(b, "");
+      return navigator.share({ files: [f], title: titre, text: texte + " " + url }).catch(function (err) {
+        if (err && err.name === "AbortError") return;
+        if (err && err.name === "NotAllowedError") { etat(b, "Vidéo prête : appuyer encore sur « Partager »."); return; }
+        return lien(b);
+      });
+    }
+    if (v.fichier) return envoyer(v.fichier);
+    etat(b, "Préparation de la vidéo…");
+    return v.promesse.then(envoyer);
+  }
+  function copier(b, bouton) {
+    var url = b.getAttribute("data-url");
+    function ok() { bouton.textContent = "Lien copié ✓"; setTimeout(function () { bouton.textContent = "Copier le lien"; }, 2200); }
+    function repli() {
+      var ta = document.createElement("textarea");
+      ta.value = url; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.top = "0"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.focus(); ta.select(); ta.setSelectionRange(0, url.length);
+      var r = false; try { r = document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(ta);
+      if (r) ok(); else window.prompt("Copier le lien :", url);
+    }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(url).then(ok, repli); else repli();
+  }
+  document.querySelectorAll(".partage").forEach(function (bloc) {
+    var b = bloc.querySelector(".partager"), m = bloc.querySelector(".menu-partage");
+    if (peutPartager) m.querySelector(".natif").hidden = false;
+    ["pointerdown", "touchstart", "focus"].forEach(function (t) { b.addEventListener(t, function () { if (tactile) charger(b); }, { passive: true }); });
+    var carte = bloc.closest(".carte"), son = carte && carte.querySelector("audio");
+    if (son) son.addEventListener("play", function () { if (tactile) charger(b); });
+    b.addEventListener("click", function (ev) {
+      ev.stopPropagation();
+      if (tactile && peutPartager) natif(b); else menu(b);
+    });
+    m.querySelector(".copier").addEventListener("click", function (ev) { ev.stopPropagation(); copier(b, ev.currentTarget); });
+    m.querySelector(".natif").addEventListener("click", function (ev) { ev.stopPropagation(); fermer(); natif(b); });
+    m.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { fermer(); }); });
+  });
+  document.addEventListener("click", function (ev) { if (!ev.target.closest || !ev.target.closest(".menu-partage")) fermer(); });
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key !== "Escape") return;
+    var ouvert = document.querySelector(".menu-partage:not([hidden])");
+    if (ouvert) { fermer(); var b = ouvert.parentNode.querySelector(".partager"); if (b) b.focus(); }
+  });
 })();
 </script>
 </body>
