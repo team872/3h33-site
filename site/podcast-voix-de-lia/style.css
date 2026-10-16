@@ -2160,3 +2160,10 @@ button.qz-lien{background:none;border:none;padding:0;cursor:pointer;font:inherit
   .pc-entete.avec-bandeau .pc-chapo{font-size:clamp(1.3rem,2.4vw,1.6rem);margin-top:0}
 }
 @media (max-width:699px){.pc-entete.avec-bandeau .section-title{font-size:1.9rem}.pc-bandeau{width:calc(100vw - 2 * var(--gouttiere))}}
+/* Une indication (astuce, « à savoir ») : la même partout, bien visible, sans rien qui ressemble à un bouton
+   (17/10/2026, Alexandre : « on ne peut pas faire un bouton avec un texte ») : pas de cadre, pas de forme arrondie ;
+   un petit mot doré en capitales, puis le texte. */
+.indication{display:block;background:none;border:0;border-radius:0;padding:0;color:var(--text-dim);font-size:.9rem;line-height:1.55;font-weight:300}
+.indication-mot{display:inline-block;margin-right:.6rem;font-family:var(--ff-mono);font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.astuce.indication{margin:.4rem 0 1.6rem;color:var(--accent-clair)}
+.astuce.indication[hidden]{display:none}

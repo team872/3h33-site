@@ -2109,16 +2109,25 @@
       passage.audio = audio; passage.fin = tf; passage.bouton = bouton;
       if (!audio.quizRelie) {
         audio.quizRelie = true;
-        audio.addEventListener("timeupdate", function () {
-          if (passage.audio === audio && passage.fin && audio.currentTime >= passage.fin + 0.2) { passage.fin = null; audio.pause(); }
-        });
+        // arrêt net à la fin de la réplique (tf, fabriqué par construire.mjs) : « timeupdate » ne passe que toutes les
+        // ~250 ms, on surveille donc à chaque image, et on baisse le son sur les 80 dernières millisecondes
+        var surveiller = function () {
+          if (passage.audio !== audio || !passage.fin || audio.paused) { audio.volume = 1; return; }
+          var reste = passage.fin - audio.currentTime;
+          if (reste <= 0) { passage.fin = null; audio.pause(); audio.volume = 1; return; }
+          audio.volume = reste < 0.08 ? Math.max(0, reste / 0.08) : 1;
+          requestAnimationFrame(surveiller);
+        };
+        audio.quizSurveiller = surveiller;
+        audio.addEventListener("playing", function () { if (passage.audio === audio && passage.fin) requestAnimationFrame(surveiller); });
         ["play", "pause", "ended"].forEach(function (e) {
           audio.addEventListener(e, function () { if (passage.audio === audio && passage.bouton) etiquette(passage.bouton, !audio.paused && !audio.ended); });
         });
       }
-      var aller = function () { audio.currentTime = Math.max(0, t - 0.2); };
+      var aller = function () { audio.currentTime = Math.max(0, t); }; // t est déjà calé juste avant la voix (construire.mjs)
       if (audio.readyState >= 1) aller(); else audio.addEventListener("loadedmetadata", aller, { once: true });
       audio.play().catch(function () {});
+      if (audio.quizSurveiller) requestAnimationFrame(audio.quizSurveiller);
       etiquette(bouton, true);
     }
     function couperPassage() {
