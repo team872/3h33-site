@@ -1082,10 +1082,11 @@
       function recevoir() {
         var m = /[#&]playlist=([^&]*)/.exec(location.hash);
         if (!m) return;
+        var duParcours = /[#&]parcours(&|$)/.test(location.hash);
         var recus = [];
         try { recus = valides(decodeURIComponent(m[1]).split(",")); } catch (e) {}
         // on retire la playlist de l'adresse (elle est gardée dans le navigateur), le reste reste (#q=…, #famille=…)
-        var resteHash = location.hash.replace(/^#/, "").split("&").filter(function (x) { return x && x.indexOf("playlist=") !== 0; }).join("&");
+        var resteHash = location.hash.replace(/^#/, "").split("&").filter(function (x) { return x && x.indexOf("playlist=") !== 0 && x !== "parcours"; }).join("&");
         try { history.replaceState(null, "", location.pathname + location.search + (resteHash ? "#" + resteHash : "")); } catch (e) {}
         if (recus.length && recus.join(",") !== ids.join(",")) {
           if (ids.length) try { localStorage.setItem(CLE_AVANT, JSON.stringify({ ids: ids, pos: pos })); } catch (e) {}
@@ -1093,7 +1094,7 @@
           ids = recus; pos = 0; enCours = false;
           recu.textContent = "";
           var duRecu = recus.reduce(function (t, id) { return t + (Number(episodes[parId[id]].duree) || 0); }, 0);
-          recu.appendChild(document.createTextNode("On vous a envoyé cette playlist : " + recus.length + (recus.length > 1 ? " épisodes" : " épisode") + " · " + dureeTotale(duRecu) + ". "));
+          recu.appendChild(document.createTextNode((duParcours ? "Le parcours est dans votre playlist : " : "On vous a envoyé cette playlist : ") + recus.length + (recus.length > 1 ? " épisodes" : " épisode") + " · " + dureeTotale(duRecu) + ". "));
           if (avant.length) {
             var remettre = document.createElement("button");
             remettre.type = "button"; remettre.className = "mp-remettre";
