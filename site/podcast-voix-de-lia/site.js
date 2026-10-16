@@ -442,6 +442,11 @@
     };
     var commence = function () { return !audio.paused || (audio.currentTime > 0 && !audio.ended); };
     suiviParAudio = function () { return !audio.paused && !audio.ended; };
+    // le quiz (plus bas) se propose quand l'écoute arrive au « mot de la fin » (ou à la toute fin, sans minutage)
+    var hFin = $("#le-mot-de-la-fin[data-debut]"), tFin = hFin ? Number(hFin.getAttribute("data-debut")) : 0, finDite = false;
+    var annoncerFin = function () { if (!finDite) { finDite = true; document.dispatchEvent(new CustomEvent("episode:fin")); } };
+    audio.addEventListener("timeupdate", function () { if (tFin > 60 && !audio.paused && audio.currentTime >= tFin) annoncerFin(); });
+    audio.addEventListener("ended", annoncerFin);
 
     var repliques = $$(".replique[data-debut]");
     var debuts = repliques.map(function (r) { return Number(r.getAttribute("data-debut")); });
@@ -1779,6 +1784,370 @@
           });
         }
       } else cv.classList.add("pret");
+    }
+  })();
+
+  /* ------------------------------------------------ le quiz (16/10/2026)
+     Un quiz par portrait (#donnees-quiz : ouvert par-dessus la page, proposé quand l'écoute arrive à la fin) et le
+     grand quiz (page quiz/, quiz.json) qui pioche sans fin dans tous les portraits. Les questions viennent uniquement
+     des épisodes (site/quiz.mjs) ; après chaque réponse : l'explication, le passage mot pour mot, et « Réécouter ».
+     Scores, série et questions déjà vues restent dans ce navigateur (localStorage), nulle part ailleurs. */
+  (function () {
+    var lireLS = function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } };
+    var ecrireLS = function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} };
+    var lireJsonLS = function (k, defaut) { try { return JSON.parse(lireLS(k)) || defaut; } catch (e) { return defaut; } };
+    var melanger = function (t) { t = t.slice(); for (var i = t.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), x = t[i]; t[i] = t[j]; t[j] = x; } return t; };
+    var el = function (tag, classe, texte) { var n = document.createElement(tag); if (classe) n.className = classe; if (texte != null) n.textContent = texte; return n; };
+    var fin = function (t) { return String(t).replace(/ ([!?;])/g, " $1").replace(/ :/g, " :").replace(/« /g, "« ").replace(/ »/g, " »"); };
+    var mmss = function (t) { t = Math.max(0, Math.floor(t)); return Math.floor(t / 60) + ":" + (t % 60 < 10 ? "0" : "") + (t % 60); };
+    var VOIX = { ada: "Ada", alan: "Alan", lia: "Lia" };
+    var LETTRES = ["A", "B", "C", "D"];
+    var ICONE_ECOUTE = '<svg class="i-lecture" viewBox="0 0 24 24" aria-hidden="true"><polygon points="6,4 19,12 6,20"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
+    var FLECHE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+    /* le passage à réécouter : sur la page du portrait, le lecteur de l'épisode ; sur le grand quiz, un lecteur à
+       part, jamais visible. La lecture s'arrête au début de la réplique suivante (tf). */
+    var passage = { audio: null, fin: null, bouton: null };
+    var etiquette = function (b, joue) { b.classList.toggle("joue", joue); $(".qz-ecoute-txt", b).textContent = joue ? "Pause" : "Réécouter ce passage"; };
+    function ecouterPassage(bouton, audio, t, tf) {
+      if (passage.bouton === bouton && !audio.paused) { audio.pause(); return; }
+      if (passage.bouton && passage.bouton !== bouton) etiquette(passage.bouton, false);
+      if (passage.audio && passage.audio !== audio) passage.audio.pause();
+      passage.audio = audio; passage.fin = tf; passage.bouton = bouton;
+      if (!audio.quizRelie) {
+        audio.quizRelie = true;
+        audio.addEventListener("timeupdate", function () {
+          if (passage.audio === audio && passage.fin && audio.currentTime >= passage.fin + 0.2) { passage.fin = null; audio.pause(); }
+        });
+        ["play", "pause", "ended"].forEach(function (e) {
+          audio.addEventListener(e, function () { if (passage.audio === audio && passage.bouton) etiquette(passage.bouton, !audio.paused && !audio.ended); });
+        });
+      }
+      var aller = function () { audio.currentTime = Math.max(0, t - 0.2); };
+      if (audio.readyState >= 1) aller(); else audio.addEventListener("loadedmetadata", aller, { once: true });
+      audio.play().catch(function () {});
+      etiquette(bouton, true);
+    }
+    function couperPassage() {
+      if (passage.audio && passage.bouton && !passage.audio.paused) passage.audio.pause();
+      passage.bouton = null; passage.fin = null;
+    }
+    var lecteurAPart = null;
+    function audioDe(src) {
+      if (!src) return $(".lecteur[data-audio] audio");
+      if (!lecteurAPart) { lecteurAPart = new Audio(); lecteurAPart.preload = "none"; }
+      if (lecteurAPart.getAttribute("data-src") !== src) { lecteurAPart.src = src; lecteurAPart.setAttribute("data-src", src); }
+      return lecteurAPart;
+    }
+
+    function vignette(p, classe) {
+      var v = el("span", classe);
+      if (p.i) { var img = el("img"); img.src = p.i + "-400.jpg"; img.alt = ""; img.width = 44; img.height = 44; img.decoding = "async"; v.appendChild(img); }
+      else v.textContent = p.in || "";
+      v.setAttribute("aria-hidden", "true");
+      return v;
+    }
+
+    /* Le moteur, commun aux deux quiz. o.mode : « portrait » (une série de questions, puis le score) ou « grand »
+       (sans fin). o.portraitDe(q) : le portrait d'une question (grand quiz). o.surPage : le passage se lit dans la
+       page même (lien #replique-N, lecteur de la page). */
+    function monterQuiz(scene, o) {
+      var liste = [], i = 0, bonnes = 0, ratees = [], courante = null, repondu = false;
+      var gq = lireJsonLS("quiz-grand", { repondues: 0, bonnes: 0, serie: 0, record: 0 });
+
+      function tete() {
+        var t = el("div", "qz-tete");
+        if (o.mode === "portrait") {
+          t.appendChild(el("span", "qz-progres", "Question " + (i + 1) + " sur " + liste.length));
+          t.appendChild(el("span", "qz-score", bonnes + (bonnes > 1 ? " bonnes réponses" : " bonne réponse")));
+        } else {
+          var serie = el("span", "qz-progres");
+          serie.innerHTML = "Série <strong>" + gq.serie + "</strong>";
+          t.appendChild(serie);
+          t.appendChild(el("span", "qz-score", "Record " + gq.record + " · " + gq.bonnes + " sur " + gq.repondues));
+        }
+        return t;
+      }
+
+      function afficher() {
+        couperPassage();
+        repondu = false;
+        scene.innerHTML = "";
+        var q = courante;
+        var bloc = el("div", "qz");
+        bloc.appendChild(tete());
+        if (o.mode === "portrait") {
+          var barre = el("div", "qz-barre"), plein = el("i");
+          plein.style.width = (100 * i / liste.length) + "%";
+          barre.appendChild(plein);
+          bloc.appendChild(barre);
+        } else {
+          var p = o.portraitDe(q), qui = el("p", "qz-qui");
+          qui.appendChild(vignette(p, "qz-vignette"));
+          qui.appendChild(el("span", "", "Portrait : " + p.n));
+          bloc.appendChild(qui);
+        }
+        var titre = el("h3", "qz-question", fin(q.q));
+        titre.tabIndex = -1;
+        bloc.appendChild(titre);
+        var choix = el("div", "qz-choix");
+        choix.setAttribute("role", "group");
+        choix.setAttribute("aria-label", "Réponses possibles (touches 1 à 4)");
+        melanger([0, 1, 2, 3]).forEach(function (k, rang) {
+          var b = el("button", "qz-reponse");
+          b.type = "button";
+          b.setAttribute("data-k", k);
+          b.appendChild(el("span", "qz-lettre", LETTRES[rang]));
+          b.appendChild(el("span", "qz-texte", fin(q.c[k])));
+          b.addEventListener("click", function () { repondre(k, bloc); });
+          choix.appendChild(b);
+        });
+        bloc.appendChild(choix);
+        var retour = el("div", "qz-retour");
+        retour.setAttribute("aria-live", "polite");
+        bloc.appendChild(retour);
+        scene.appendChild(bloc);
+        titre.focus({ preventScroll: true });
+      }
+
+      function repondre(k, bloc) {
+        if (repondu) return;
+        repondu = true;
+        var q = courante, juste = k === q.b;
+        $$(".qz-reponse", bloc).forEach(function (b) {
+          var kb = Number(b.getAttribute("data-k"));
+          b.disabled = true;
+          if (kb === q.b) b.classList.add("juste");
+          else if (kb === k) b.classList.add("faux");
+          else b.classList.add("autre");
+        });
+        if (juste) bonnes++; else ratees.push(q);
+        if (o.mode === "grand") {
+          gq.repondues++;
+          if (juste) { gq.bonnes++; gq.serie++; if (gq.serie > gq.record) gq.record = gq.serie; } else gq.serie = 0;
+          ecrireLS("quiz-grand", JSON.stringify(gq));
+          var vues = lireJsonLS("quiz-grand-vues", []);
+          vues.unshift(q.id);
+          ecrireLS("quiz-grand-vues", JSON.stringify(vues.slice(0, Math.max(10, Math.floor(o.questions.length * 0.8)))));
+          var ancienne = $(".qz-tete", bloc);
+          ancienne.parentNode.replaceChild(tete(), ancienne);
+        } else {
+          $(".qz-score", bloc).textContent = bonnes + (bonnes > 1 ? " bonnes réponses" : " bonne réponse");
+          $(".qz-barre i", bloc).style.width = (100 * (i + 1) / liste.length) + "%";
+        }
+        bloc.classList.add(juste ? "reussi" : "rate");
+
+        var retour = $(".qz-retour", bloc);
+        var verdict = el("p", "qz-verdict");
+        if (juste) verdict.textContent = o.mode === "grand" && gq.serie > 1 ? "Bonne réponse ! " + gq.serie + " de suite." : "Bonne réponse !";
+        else { verdict.textContent = "Pas tout à fait. La réponse : "; verdict.appendChild(el("strong", "", fin(q.c[q.b]))); }
+        retour.appendChild(verdict);
+        retour.appendChild(el("p", "qz-explication", fin(q.x)));
+        var fig = el("figure", "qz-extrait" + (q.v ? " " + q.v : ""));
+        fig.appendChild(el("blockquote", "", "« " + fin(q.e) + " »"));
+        var p = o.mode === "grand" ? o.portraitDe(q) : null;
+        fig.appendChild(el("figcaption", "", (q.v ? VOIX[q.v] + ", d" : "D") + (p ? "ans le portrait " + (/^[aeiouyàâéèêîôûœh]/i.test(p.n) ? "d'" : "de ") + p.n : "ans l'épisode")));
+        retour.appendChild(fig);
+
+        var actions = el("div", "qz-actions");
+        var audio = o.mode === "grand" ? (p.s ? audioDe(p.s) : null) : audioDe(null);
+        if (audio && q.t !== null && q.t !== undefined) {
+          var ec = el("button", "qz-ecouter");
+          ec.type = "button";
+          ec.innerHTML = ICONE_ECOUTE + '<span class="qz-ecoute-txt">Réécouter ce passage</span><span class="qz-t">' + mmss(q.t) + "</span>";
+          ec.addEventListener("click", function () { ecouterPassage(ec, audio, q.t, q.tf); });
+          actions.appendChild(ec);
+        }
+        if (q.r) {
+          var lire = el("a", "qz-lien", "Lire le passage");
+          lire.href = (p ? p.ch : "") + "#replique-" + q.r;
+          if (o.surPage) lire.addEventListener("click", function () { if (o.fermer) o.fermer(); });
+          actions.appendChild(lire);
+        }
+        if (p) {
+          var aller = el("a", "qz-lien", "Le quiz " + (/^[aeiouyàâéèêîôûœh]/i.test(p.n) ? "d'" : "de ") + p.n);
+          aller.href = p.ch + "#quiz";
+          actions.appendChild(aller);
+        }
+        var suite = el("button", "btn btn-primary qz-suivante");
+        suite.type = "button";
+        suite.innerHTML = "<span>" + (o.mode === "portrait" && i === liste.length - 1 ? "Voir mon score" : "Question suivante") + "</span>" + FLECHE;
+        suite.addEventListener("click", suivante);
+        actions.appendChild(suite);
+        retour.appendChild(actions);
+        suite.focus({ preventScroll: true });
+        // sur téléphone, l'explication peut tomber sous l'écran : on la montre, sans sauter
+        var r = retour.getBoundingClientRect();
+        if (r.bottom > (window.innerHeight || 0) && retour.scrollIntoView) retour.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
+      function suivante() {
+        if (o.mode === "grand") { courante = tirer(); afficher(); return; }
+        i++;
+        if (i >= liste.length) finPortrait(); else { courante = liste[i]; afficher(); }
+      }
+
+      // grand quiz : une question pas encore vue (80 % des questions au plus en mémoire), d'un portrait qui n'est pas
+      // parmi les quatre derniers
+      var derniersPortraits = [];
+      function tirer() {
+        var vues = lireJsonLS("quiz-grand-vues", []), dejaVu = {};
+        vues.forEach(function (id) { dejaVu[id] = 1; });
+        var candidats = o.questions.filter(function (q) { return !dejaVu[q.id] && derniersPortraits.indexOf(q.p) < 0; });
+        if (!candidats.length) candidats = o.questions.filter(function (q) { return !dejaVu[q.id]; });
+        if (!candidats.length) { ecrireLS("quiz-grand-vues", "[]"); candidats = o.questions; }
+        var q = candidats[Math.floor(Math.random() * candidats.length)];
+        derniersPortraits.unshift(q.p);
+        derniersPortraits = derniersPortraits.slice(0, Math.min(4, Math.floor(o.nbPortraits / 2)));
+        return q;
+      }
+
+      function finPortrait() {
+        couperPassage();
+        scene.innerHTML = "";
+        var n = liste.length, cle = "quiz-meilleur:" + o.id;
+        var meilleur = Number(lireLS(cle)) || 0;
+        if (n === o.questions.length && bonnes > meilleur) ecrireLS(cle, String(bonnes));
+        var f = el("div", "qz-fin");
+        var note = el("p", "qz-fin-note");
+        note.innerHTML = "<strong>" + bonnes + "</strong> / " + n;
+        f.appendChild(note);
+        var r = bonnes / n;
+        var mot = r === 1 ? "Sans faute ! Vous avez tout retenu." : r >= 0.75 ? "Très belle écoute." : r >= 0.5 ? "Pas mal ! Quelques passages à réécouter." : "Une deuxième écoute s'impose ?";
+        var titre = el("h3", "qz-fin-mot", mot);
+        titre.tabIndex = -1;
+        f.appendChild(titre);
+        if (n === o.questions.length && meilleur) f.appendChild(el("p", "qz-fin-record", bonnes > meilleur ? "Nouveau record pour ce portrait (avant : " + meilleur + " / " + n + ")." : "Votre meilleur score sur ce portrait : " + meilleur + " / " + n + "."));
+        var actions = el("div", "qz-actions qz-fin-actions");
+        var erreurs = ratees.slice();
+        if (erreurs.length && erreurs.length < n) {
+          var revoir = el("button", "btn btn-primary", "Revoir mes erreurs (" + erreurs.length + ")");
+          revoir.type = "button";
+          revoir.addEventListener("click", function () { demarrer(erreurs); });
+          actions.appendChild(revoir);
+        }
+        var encore = el("button", "btn btn-ghost", "Recommencer");
+        encore.type = "button";
+        encore.addEventListener("click", function () { demarrer(); });
+        actions.appendChild(encore);
+        if (o.grand) { var g = el("a", "qz-lien qz-grand"); g.href = o.grand; g.innerHTML = "<span>Le grand quiz : tous les portraits</span>" + FLECHE; actions.appendChild(g); }
+        f.appendChild(actions);
+        if (ratees.length) {
+          f.appendChild(el("p", "qz-fin-sous", "À réécouter"));
+          var ul = el("ul", "qz-fin-liste");
+          ratees.forEach(function (q) {
+            var li = el("li");
+            li.appendChild(el("span", "qz-fin-q", fin(q.q)));
+            var rep = el("span", "qz-fin-r", "Réponse : ");
+            rep.appendChild(el("strong", "", fin(q.c[q.b])));
+            li.appendChild(rep);
+            if (q.r) { var a = el("a", "qz-lien", "Lire le passage"); a.href = "#replique-" + q.r; a.addEventListener("click", function () { if (o.fermer) o.fermer(); }); li.appendChild(a); }
+            ul.appendChild(li);
+          });
+          f.appendChild(ul);
+        }
+        scene.appendChild(f);
+        titre.focus({ preventScroll: true });
+      }
+
+      // portrait : du plus facile au plus difficile, dans un ordre nouveau à chaque fois
+      function demarrer(seulement) {
+        liste = melanger(seulement || o.questions).sort(function (a, b) { return a.n - b.n; });
+        i = 0; bonnes = 0; ratees = [];
+        if (o.mode === "grand") courante = tirer(); else courante = liste[0];
+        afficher();
+      }
+
+      function accueil() {
+        scene.innerHTML = "";
+        var a = el("div", "qz-accueil");
+        var chiffres = el("ul", "qz-chiffres");
+        [[o.questions.length, "questions"], [o.nbPortraits, "portraits"]].concat(gq.repondues ? [[gq.record, "votre record de suite"]] : []).forEach(function (x) {
+          var li = el("li");
+          li.appendChild(el("strong", "", String(x[0])));
+          li.appendChild(el("span", "", x[1]));
+          chiffres.appendChild(li);
+        });
+        a.appendChild(chiffres);
+        a.appendChild(el("p", "qz-accueil-texte", gq.repondues ? "Vous avez déjà répondu à " + gq.repondues + " question" + (gq.repondues > 1 ? "s" : "") + ", dont " + gq.bonnes + " bonne" + (gq.bonnes > 1 ? "s" : "") + ". Celles déjà vues ne reviennent pas tout de suite." : "Une question à la fois, tirée au hasard dans tous les portraits. Enchaînez les bonnes réponses : votre meilleure série est gardée."));
+        var go = el("button", "btn btn-primary qz-commencer");
+        go.type = "button";
+        go.innerHTML = "<span>" + (gq.repondues ? "Reprendre" : "Commencer") + "</span>" + FLECHE;
+        go.addEventListener("click", function () { demarrer(); });
+        a.appendChild(go);
+        scene.appendChild(a);
+      }
+
+      // clavier : 1 à 4 (ou A à D) pour répondre ; Entrée passe à la suite (bouton déjà en focus)
+      scene.addEventListener("keydown", function (ev) {
+        if (ev.altKey || ev.ctrlKey || ev.metaKey || repondu) return;
+        var n = "1234".indexOf(ev.key), l = "abcd".indexOf(String(ev.key).toLowerCase());
+        var rang = n >= 0 ? n : l;
+        if (rang < 0 || /input|textarea/i.test(ev.target.tagName)) return;
+        var b = $$(".qz-reponse", scene)[rang];
+        if (b) { ev.preventDefault(); b.click(); }
+      });
+
+      return { demarrer: demarrer, accueil: accueil, couper: couperPassage };
+    }
+
+    /* -------- page d'un portrait : bouton sous le lecteur, encart après la conversation, fenêtre du quiz */
+    var donneesQuiz = $("#donnees-quiz");
+    if (donneesQuiz && typeof HTMLDialogElement === "function") {
+      var dq = JSON.parse(donneesQuiz.textContent);
+      var fenetre = el("dialog", "quiz-fenetre");
+      fenetre.setAttribute("aria-labelledby", "qf-titre");
+      fenetre.innerHTML = '<div class="qf-dedans"><div class="qf-tete"><h2 id="qf-titre"></h2><button type="button" class="rf-fermer qf-fermer" aria-label="Fermer le quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="quiz-scene"></div></div>';
+      $("#qf-titre", fenetre).textContent = "Le quiz · " + dq.nom;
+      document.body.appendChild(fenetre);
+      var moteur = monterQuiz($(".quiz-scene", fenetre), { mode: "portrait", questions: dq.questions, id: dq.id, grand: dq.grand, surPage: true, fermer: function () { fenetre.close(); } });
+      var ouvrirQuiz = function () {
+        var invit = $(".quiz-invitation");
+        if (invit) invit.remove();
+        if (fenetre.open) return;
+        moteur.demarrer();
+        fenetre.showModal();
+        doc.classList.add("fenetre-ouverte");
+      };
+      $(".qf-fermer", fenetre).addEventListener("click", function () { fenetre.close(); });
+      fenetre.addEventListener("click", function (ev) { if (ev.target === fenetre) fenetre.close(); });
+      fenetre.addEventListener("close", function () { doc.classList.remove("fenetre-ouverte"); moteur.couper(); });
+      $$("[data-quiz-ouvrir]").forEach(function (b) { b.addEventListener("click", ouvrirQuiz); });
+      $$(".quiz-encart, .pa-quiz[data-quiz-ouvrir]").forEach(function (x) { x.hidden = false; });
+      if (location.hash === "#quiz") setTimeout(ouvrirQuiz, 300);
+      // à la fin de l'écoute : une invitation discrète, une seule fois
+      document.addEventListener("episode:fin", function () {
+        if (fenetre.open || $(".quiz-invitation")) return;
+        var inv = el("div", "quiz-invitation");
+        inv.setAttribute("role", "status");
+        inv.innerHTML = '<p><strong>Qu’avez-vous retenu ?</strong><span>' + dq.questions.length + " questions sur l'épisode</span></p>";
+        var go = el("button", "btn btn-primary", "Faire le quiz");
+        go.type = "button";
+        go.addEventListener("click", ouvrirQuiz);
+        var non = el("button", "quiz-invitation-fermer");
+        non.type = "button";
+        non.setAttribute("aria-label", "Plus tard");
+        non.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+        non.addEventListener("click", function () { inv.remove(); });
+        inv.appendChild(go);
+        inv.appendChild(non);
+        document.body.appendChild(inv);
+        requestAnimationFrame(function () { inv.classList.add("visible"); });
+      });
+    }
+
+    /* -------- le grand quiz (page quiz/) */
+    var grand = $("#grand-quiz[data-quiz-url]");
+    if (grand && window.fetch) {
+      grand.classList.add("charge");
+      fetch(grand.getAttribute("data-quiz-url")).then(function (r) { return r.json(); }).then(function (idx) {
+        grand.classList.remove("charge");
+        var m = monterQuiz(grand, { mode: "grand", questions: idx.questions, nbPortraits: idx.portraits.length, portraitDe: function (q) { return idx.portraits[q.p]; } });
+        m.accueil();
+      }).catch(function () {
+        grand.classList.remove("charge");
+        grand.appendChild(el("p", "quiz-sans-js", "Le quiz n'a pas pu se charger. Rechargez la page pour réessayer."));
+      });
     }
   })();
 })();
