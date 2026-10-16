@@ -2103,3 +2103,31 @@ body.playlist-ouverte .remonter{opacity:0;visibility:hidden;pointer-events:none}
 /* Ma playlist : des vignettes qu'on voit (16/10/2026, Alexandre : « ce qui donne envie, c'est la vignette ») */
 .mp-vignette{width:64px;height:64px;border-radius:4px}
 @media(max-width:420px){.mp-vignette{width:54px;height:54px}}
+/* l'écoute d'un parcours avec Lia (16/10/2026) : bouton « Lia » devant chaque texte dit, lecteur en bas de la page */
+.pc-dit{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);gap:.8rem;align-items:start}
+.pc-dit:not(:has(.pc-lia)){display:block}
+.pc-lia{display:inline-flex;align-items:center;gap:.35rem;margin-top:.2rem;padding:.3rem .7rem .3rem .35rem;border:1px solid #c4a26599;border-radius:999px;background:none;color:var(--accent-clair);font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.pc-lia svg{width:22px;height:22px;padding:6px;border-radius:50%;background:var(--accent);fill:var(--bg)}
+.pc-lia:hover,.pc-lia.joue{background:#c4a2651f;border-color:var(--accent)}
+.pc-en-cours .pc-liaison{border-left-color:var(--accent-clair);background:linear-gradient(90deg,#c4a2651a,transparent 70%)}
+.pc-episode.pc-en-cours{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 0 30px #c4a26533}
+.pc-lire svg{fill:currentColor}
+.pc-lecteur{position:fixed;left:0;right:0;bottom:0;z-index:999;background:var(--player-bg);border-top:1px solid #c4a2654d;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding-bottom:var(--safe-bottom);box-shadow:0 -12px 30px #0007}
+.pc-lecteur[hidden]{display:none}
+.pc-lecteur-dedans{position:relative;max-width:760px;margin:0 auto;padding:.6rem 1rem;display:flex;align-items:center;gap:.5rem}
+.pc-lecteur button{width:40px;height:40px;flex:none;display:flex;align-items:center;justify-content:center;border:0;border-radius:50%;background:none;color:var(--text-dim);cursor:pointer}
+.pc-lecteur button svg{width:16px;height:16px}
+.pc-l-prec svg{transform:rotate(-90deg)}
+.pc-l-suiv svg{transform:rotate(-90deg)}
+.pc-lecteur .pc-l-jouer{width:46px;height:46px;background:var(--accent);color:var(--bg)}
+.pc-l-jouer svg{fill:currentColor}
+.pc-lecteur.joue .pc-l-jouer svg{display:none}
+.pc-lecteur.joue .pc-l-jouer::before{content:"";width:12px;height:14px;border-left:4px solid var(--bg);border-right:4px solid var(--bg)}
+.pc-l-texte{min-width:0;display:flex;flex-direction:column;line-height:1.25;margin-left:.3rem}
+.pc-l-titre{font-family:var(--ff-display);font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pc-l-etape{font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.08em;color:var(--text-faible)}
+.pc-l-barre{position:absolute;left:0;right:0;top:0;height:2px;background:var(--border)}
+.pc-l-barre i{display:block;height:100%;width:0;background:var(--accent)}
+body.pc-ecoute{padding-bottom:calc(76px + var(--safe-bottom))}
+body.pc-ecoute .remonter{bottom:calc(84px + var(--safe-bottom))}
+@media (max-width:520px){.pc-dit{display:block}.pc-lia{margin:0 0 .6rem}}

@@ -2546,4 +2546,49 @@
       });
     }
   })();
+  /* ================================================ L'ÉCOUTE D'UN PARCOURS (16/10/2026)
+     Page parcours/<id>/ : Lia ouvre, présente chaque épisode, puis l'épisode, et ainsi de suite jusqu'à la conclusion
+     (liste dans #parcours-sons, fabriquée par construire.mjs). Un seul <audio>, un lecteur en bas de la page, le
+     passage en cours éclairé ; un bouton « Lia » devant chaque texte dit repart de là. */
+  (function () {
+    var donnees = $("#parcours-sons"), boite = $(".pc-lecteur");
+    if (!donnees || !boite) return;
+    var seq = [];
+    try { seq = JSON.parse(donnees.textContent) || []; } catch (e) { return; }
+    if (!seq.length) return;
+    var audio = $("audio", boite), titre = $(".pc-l-titre", boite), etape = $(".pc-l-etape", boite), barre = $(".pc-l-barre i", boite);
+    var jouerB = $(".pc-l-jouer", boite), pos = -1;
+    var eclairer = function () {
+      $$("[data-pc-k]").forEach(function (x) { x.classList.toggle("pc-en-cours", pos >= 0 && x.getAttribute("data-pc-k") === seq[pos].k); });
+      $$("[data-pc-lire]").forEach(function (b) { b.classList.toggle("joue", !audio.paused && Number(b.getAttribute("data-pc-lire")) === pos); });
+      boite.classList.toggle("joue", !audio.paused);
+    };
+    var lancer = function (i, defiler) {
+      if (i < 0 || i >= seq.length) return;
+      pos = i;
+      audio.src = seq[i].src;
+      audio.play().catch(function () {});
+      boite.hidden = false;
+      document.body.classList.add("pc-ecoute");
+      titre.textContent = seq[i].t;
+      etape.textContent = (i + 1) + " / " + seq.length;
+      eclairer();
+      var cible = $('[data-pc-k="' + seq[i].k + '"]');
+      if (defiler && cible) cible.scrollIntoView({ behavior: calme ? "auto" : "smooth", block: "center" });
+    };
+    $$("[data-pc-lire]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var i = Number(b.getAttribute("data-pc-lire"));
+        if (i === pos && !audio.paused) { audio.pause(); return; }
+        if (i === pos && audio.paused && audio.currentTime) { audio.play().catch(function () {}); return; }
+        lancer(i, b.classList.contains("pc-lire"));
+      });
+    });
+    jouerB.addEventListener("click", function () { if (pos < 0) lancer(0, true); else if (audio.paused) audio.play().catch(function () {}); else audio.pause(); });
+    $(".pc-l-prec", boite).addEventListener("click", function () { lancer(Math.max(0, pos - 1), true); });
+    $(".pc-l-suiv", boite).addEventListener("click", function () { if (pos < seq.length - 1) lancer(pos + 1, true); });
+    audio.addEventListener("ended", function () { if (pos < seq.length - 1) lancer(pos + 1, true); else { eclairer(); } });
+    audio.addEventListener("timeupdate", function () { if (audio.duration) barre.style.width = (100 * audio.currentTime / audio.duration) + "%"; });
+    ["play", "pause"].forEach(function (ev) { audio.addEventListener(ev, eclairer); });
+  })();
 })();
