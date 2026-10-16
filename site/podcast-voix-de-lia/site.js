@@ -1115,6 +1115,17 @@
       }
       recevoir();
       window.addEventListener("hashchange", function () { if (/[#&]playlist=/.test(location.hash)) { recevoir(); rendre(); } });
+      // « Écouter » d'un parcours sur cette page (17/10/2026, Alexandre : « cette playlist ne fonctionne plus ? ») :
+      // la liste se remplissait sans rien jouer. Le clic remplit Ma playlist ET lance le premier épisode, dans le geste
+      // même (les navigateurs refusent le son lancé plus tard).
+      document.addEventListener("click", function (ev) {
+        var a = ev.target.closest && ev.target.closest('a[href*="#playlist="]');
+        if (!a || a.pathname !== location.pathname || ev.metaKey || ev.ctrlKey || ev.shiftKey) return;
+        ev.preventDefault();
+        try { history.replaceState(null, "", location.pathname + location.search + a.hash); } catch (e) { return; }
+        recevoir(); rendre();
+        if (ids.length) lancer(0);
+      });
       rendre();
     })();
   }
