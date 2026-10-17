@@ -2599,7 +2599,9 @@
         if (b) { ev.preventDefault(); b.click(); }
       });
 
-      return { demarrer: demarrer, reprendre: reprendre, etat: etat, accueil: accueil, couper: couperPassage };
+      // quitter (17/10/2026) : le quiz commencé est oublié, il repartira de zéro
+      function quitter() { oublier(); actif = false; liste = []; i = 0; }
+      return { demarrer: demarrer, reprendre: reprendre, etat: etat, accueil: accueil, couper: couperPassage, quitter: quitter };
     }
 
     /* -------- page d'un portrait : bouton sous le lecteur, encart après la conversation, fenêtre du quiz */
@@ -2641,10 +2643,25 @@
       var montrerRevenir = function () {
         var e = moteur.etat();
         if (!e || e.i >= e.n || $(".quiz-revenir")) return;
-        var b = el("button", "quiz-revenir");
-        b.type = "button";
-        b.innerHTML = '<span class="quiz-revenir-icone" aria-hidden="true">\u21a9</span><span><strong>Revenir au quiz</strong><span>' + (e.i > 0 ? "Vous en êtes à la question " + e.q + " sur " + e.n : e.n + " questions") + "</span></span>";
-        b.addEventListener("click", ouvrirQuiz);
+        // « Revenir au quiz » et, à côté, « Quitter le quiz » (17/10/2026, Alexandre : « il faudrait quitter le quiz aussi »)
+        var b = el("div", "quiz-revenir");
+        var go = el("button", "quiz-revenir-ouvrir");
+        go.type = "button";
+        go.innerHTML = '<span class="quiz-revenir-icone" aria-hidden="true">\u21a9</span><span><strong>Revenir au quiz</strong><span>' + (e.i > 0 ? "Vous en êtes à la question " + e.q + " sur " + e.n : e.n + " questions") + "</span></span>";
+        go.addEventListener("click", ouvrirQuiz);
+        var stop = el("button", "quiz-revenir-quitter");
+        stop.type = "button";
+        stop.setAttribute("aria-label", "Quitter le quiz");
+        stop.innerHTML = '<span aria-hidden="true">\u00d7</span><span class="quiz-revenir-quitter-mot">Quitter</span>';
+        stop.addEventListener("click", function () {
+          if (moteur.quitter) moteur.quitter();
+          b.classList.remove("visible");
+          setTimeout(function () { b.remove(); }, 450);
+          var btEncart = $(".quiz-encart [data-quiz-ouvrir] span");
+          if (btEncart) btEncart.textContent = "Faire le quiz";
+        });
+        b.appendChild(go);
+        b.appendChild(stop);
         document.body.appendChild(b);
         requestAnimationFrame(function () { b.classList.add("visible"); });
       };
