@@ -2231,6 +2231,20 @@
         return true;
       }
 
+      // « Défier un ami » (17/10/2026) : le score part avec le lien, par le partage du téléphone, sinon copié
+      function defier(texte) {
+        var b = el("button", "btn btn-ghost qz-defier", "Défier un ami");
+        b.type = "button";
+        b.addEventListener("click", function () {
+          var url = location.href;
+          if (navigator.share) { navigator.share({ title: "Les Voix de l'IA", text: texte, url: url }).catch(function () {}); return; }
+          var ok = function () { b.textContent = "Message copié, collez-le à un ami"; setTimeout(function () { b.textContent = "Défier un ami"; }, 2600); };
+          if (navigator.clipboard) navigator.clipboard.writeText(texte + " " + url).then(ok, function () { window.prompt("Copiez ce message :", texte + " " + url); });
+          else window.prompt("Copiez ce message :", texte + " " + url);
+        });
+        return b;
+      }
+
       function tete() {
         var t = el("div", "qz-tete");
         if (o.mode === "portrait") {
@@ -2241,6 +2255,7 @@
           serie.innerHTML = "Série <strong>" + gq.serie + "</strong>";
           t.appendChild(serie);
           t.appendChild(el("span", "qz-score", "Record " + gq.record + " · " + gq.bonnes + " sur " + gq.repondues));
+          if (gq.record > 1) t.appendChild(defier("Mon record au grand quiz des Voix de l'IA : " + gq.record + " bonnes réponses de suite. Tu fais mieux ?"));
         }
         return t;
       }
@@ -2444,6 +2459,7 @@
           revoir.addEventListener("click", function () { demarrer(erreurs); });
           actions.appendChild(revoir);
         }
+        actions.appendChild(defier("J'ai eu " + bonnes + " sur " + n + " au quiz de ce portrait des Voix de l'IA. À toi !"));
         var encore = el("button", "btn btn-ghost", "Recommencer");
         encore.type = "button";
         encore.addEventListener("click", function () { demarrer(); });

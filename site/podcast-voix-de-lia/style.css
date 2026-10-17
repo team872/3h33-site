@@ -2217,3 +2217,5 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 @media (min-width:700px){.pc-entete.avec-bandeau .pc-chapo{font-size:1.18rem;line-height:1.5;color:var(--text-dim);max-width:62ch}}
 .pc-bandeau{margin-bottom:1rem}
 .pc-cta{margin-top:1rem}
+/* « Défier un ami » dans les quiz (17/10/2026) */
+.qz-tete .qz-defier{margin-left:auto;padding:.35rem .7rem;font-size:.6rem}
