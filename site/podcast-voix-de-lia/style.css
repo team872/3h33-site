@@ -2219,3 +2219,7 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .pc-cta{margin-top:1rem}
 /* « Défier un ami » dans les quiz (17/10/2026) */
 .qz-tete .qz-defier{margin-left:auto;padding:.35rem .7rem;font-size:.6rem}
+/* La voix d'Alexandre dans un portrait (17/10/2026) : au centre, comme Lia, en ivoire */
+.replique.alexandre{color:var(--text);max-width:680px;margin-left:auto;margin-right:auto}
+.replique.alexandre .bulle{border-color:#efe6d240;background:#131316;border-radius:16px}
+.replique.alexandre .qui::after{content:' · sa voix recréée par I.A.';letter-spacing:.12em;opacity:.7}

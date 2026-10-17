@@ -18,7 +18,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Fri, 16 Oct 2026 18:25:49 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 17 Oct 2026 01:00:28 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -36,6 +36,28 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée</title>
+      <itunes:title>Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/sandra-le-grand/</link>
+      <guid isPermaLink="false">voix-de-lia-sandra-le-grand</guid>
+      <pubDate>Sat, 17 Oct 2026 01:00:28 GMT</pubDate>
+      <description>Trois permissions demandées pour en obtenir une, soixante-dix rendez-vous pour dix investisseurs, une veste jaune dans les soirées grises et trois livres pour oser, viser haut et aller vers les autres : le clin d'œil d'Ada, Alan et Lia à Sandra Le Grand, créatrice de Kalidea, passeuse d'énergie et coautrice, en octobre 2026, de « Réseautez à l'ère de l'IA ».
+
+Épisode enregistré le 17 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/sandra-le-grand/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Trois permissions demandées pour en obtenir une, soixante-dix rendez-vous pour dix investisseurs, une veste jaune dans les soirées grises et trois livres pour oser, viser haut et aller vers les autres : le clin d&#39;œil d&#39;Ada, Alan et Lia à Sandra Le Grand, créatrice de Kalidea, passeuse d&#39;énergie et coautrice, en octobre 2026, de « Réseautez à l&#39;ère de l&#39;IA ».</p><p>Épisode enregistré le 17 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/sandra-le-grand/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/sandra-le-grand.mp3?v=dc51f42e" length="10564179" type="audio/mpeg"/>
+      <itunes:duration>436</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/sandra-le-grand-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/sandra-le-grand/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/sandra-le-grand/chapitres.json?v=928df778" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Benjamin Perret : il feuilletait les journaux avant de savoir lire</title>
       <itunes:title>Benjamin Perret : il feuilletait les journaux avant de savoir lire</itunes:title>

@@ -1404,7 +1404,7 @@
       return n ? { texte: texte, n: n } : null;
     }
 
-    var VOIX_NOM = { a: "Ada", n: "Alan", l: "Lia" };
+    var VOIX_NOM = { a: "Ada", n: "Alan", l: "Lia", x: "Alexandre" };
     // où le passage a été trouvé, et l'adresse qui y mène
     function lieuDe(index, P, r, requete) {
       var s = r.extrait && r.extrait.s, q = "?q=" + encodeURIComponent(requete.trim());
@@ -2101,7 +2101,7 @@
     var el = function (tag, classe, texte) { var n = document.createElement(tag); if (classe) n.className = classe; if (texte != null) n.textContent = texte; return n; };
     var fin = function (t) { return String(t).replace(/ ([!?;])/g, " $1").replace(/ :/g, " :").replace(/« /g, "« ").replace(/ »/g, " »"); };
     var mmss = function (t) { t = Math.max(0, Math.floor(t)); return Math.floor(t / 60) + ":" + (t % 60 < 10 ? "0" : "") + (t % 60); };
-    var VOIX = { ada: "Ada", alan: "Alan", lia: "Lia" };
+    var VOIX = { ada: "Ada", alan: "Alan", lia: "Lia", alexandre: "Alexandre" };
     var LETTRES = ["A", "B", "C", "D"];
     var ICONE_ECOUTE = '<svg class="i-lecture" viewBox="0 0 24 24" aria-hidden="true"><polygon points="6,4 19,12 6,20"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
     var FLECHE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
