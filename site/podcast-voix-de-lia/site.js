@@ -2156,7 +2156,7 @@
       if (lecteurVoix.getAttribute("data-src") !== src) { lecteurVoix.src = src; lecteurVoix.setAttribute("data-src", src); }
       return lecteurVoix;
     }
-    var PRENOM = { ada: "Ada", alan: "Alan", lia: "Lia" };
+    var PRENOM = { ada: "Ada", alan: "Alan", lia: "Lia", alexandre: "Alexandre" };
     var HP_OUI = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>';
     var HP_NON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>';
     // Le haut-parleur (couper / remettre les voix), un seul, en haut du quiz ; le choix reste dans ce navigateur
@@ -2367,7 +2367,7 @@
           vx.type = "button";
           var libelle = (PRENOM[q.av] || "L'IA-nimateur") + " vous donne la réponse";
           vx.setAttribute("data-libelle", libelle);
-          vx.innerHTML = ICONE_ECOUTE + '<span class="qz-ecoute-txt"></span>';
+          vx.innerHTML = (q.av === "alexandre" ? '<img class="qz-avatar" src="../images/alexandre-stopnicki-avatar.jpg" width="32" height="32" alt="">' : ICONE_ECOUTE) + '<span class="qz-ecoute-txt"></span>';
           $(".qz-ecoute-txt", vx).textContent = libelle;
           vx.addEventListener("click", function () { ecouterPassage(vx, audioVoix(q.a), 0, null); });
           actions.appendChild(vx);

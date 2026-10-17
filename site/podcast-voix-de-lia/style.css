@@ -2223,3 +2223,14 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .replique.alexandre{color:var(--text);max-width:680px;margin-left:auto;margin-right:auto}
 .replique.alexandre .bulle{border-color:#efe6d240;background:#131316;border-radius:16px}
 .replique.alexandre .qui::after{content:' · sa voix recréée par I.A.';letter-spacing:.12em;opacity:.7}
+/* Alexandre mis en valeur : parcours, quiz, portraits (17/10/2026) */
+.pc-dit-alexandre{display:flex;gap:1rem;align-items:flex-start;padding:1rem;border:1px solid var(--accent);background:linear-gradient(135deg,#c4a26514,transparent)}
+.pc-dit-alexandre .pc-avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--accent)}
+.pc-dit-alexandre .pc-dit-corps{flex:1;min-width:0}
+.pc-dit-alexandre .pc-qui{margin:0 0 .5rem;font-size:1rem}.pc-dit-alexandre .pc-qui span{color:var(--text-dim);font-size:.85rem}
+.pc-dit-alexandre .pc-dit-ligne{display:flex;gap:.7rem;align-items:flex-start;flex-wrap:wrap}
+.replique.alexandre .avatar{overflow:hidden;padding:0}.replique.alexandre .avatar img{width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block}
+.quiz-auteur{display:flex;gap:.9rem;align-items:center;margin:0 0 1.2rem;color:var(--text-dim)}
+.quiz-auteur img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);flex:none}
+.qz-voix .qz-avatar{width:32px;height:32px;border-radius:50%;object-fit:cover;flex:none}
+
