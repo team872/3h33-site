@@ -24,6 +24,16 @@ faq:
   - Comment devenir vibe coder ?|En construisant, tout simplement, sur un vrai besoin plutôt que sur un tutoriel. Une [session Forge](/forge/) ou une [formation Claude](/formation-claude/) donnent la méthode : décrire précisément, découper, vérifier à chaque étape, garder la main sur ce qui part en production.
 ---
 
+<figure class="vibe-message" style="margin:0 0 2rem;padding:1.2rem;border:1px solid #d8c9a8;border-radius:16px;display:flex;gap:1.2rem;flex-wrap:wrap;align-items:flex-start">
+  <video controls playsinline preload="none" poster="https://3h33.com/pour/alexandre-vibe-coding/alexandre.jpg" src="https://3h33.com/pour/alexandre-vibe-coding/video.mp4" style="width:220px;max-width:100%;border-radius:12px;background:#000"></video>
+  <figcaption style="flex:1;min-width:240px">
+    <strong style="font-size:1.15rem">Mon nouveau métier : le vibe coding</strong>
+    <p style="margin:.4rem 0 .8rem">Trente ans dans le digital, et un nouveau métier : réaliser les projets des entreprises avec l'IA, vite et sur mesure. Mon parcours en deux minutes, avec ma voix… clonée par IA.</p>
+    <audio controls preload="none" src="https://3h33.com/pour/alexandre-vibe-coding/complet.mp3" style="width:100%"></audio>
+    <p style="margin:.6rem 0 0"><a href="/pour/alexandre-vibe-coding/">Voir la vidéo et partager ce message →</a></p>
+  </figcaption>
+</figure>
+
 ## Ce que c'est
 
 Pendant trente ans, fabriquer un logiciel voulait dire écrire des lignes de code. Le vibe coding change le point de départ : on décrit ce qu'on veut obtenir, en français, et l'intelligence artificielle écrit le programme. On regarde le résultat, on corrige, on recommence. En quelques heures, l'outil existe.
