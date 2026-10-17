@@ -2258,3 +2258,14 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .minute-voix{color:var(--accent);font-weight:600}
 .minute-carte .lia-citation [data-t]{display:block;margin:.25rem 0}
 @media (max-width:560px){.minute-carte .lia-medaillon.minute-medaillon{width:116px;height:116px}}
+/* La minute d'Alexandre plus visible (17/10/2026, Alexandre : « l'explication doit être plus visible ») : un encadré doré,
+   et sur téléphone juste sous le titre, avant le portrait du jour */
+.hero .lia-carte.minute-carte{max-width:36rem;margin:1.4rem 0 .4rem;padding:1rem 1.1rem;border:1px solid #c4a265aa;border-radius:20px;background:linear-gradient(150deg,#1d1810,#121014 70%);box-shadow:0 14px 40px #0009,0 0 0 4px #c4a26514}
+.minute-carte .lia-nouveau{color:var(--accent)}
+.minute-carte .lia-titre{font-size:1.25rem}
+@media(max-width:700px){
+  .hero .lia-carte.minute-carte{order:3;margin:1rem 0 .6rem}
+  .du-jour{order:4}
+  .hero-phrase{order:5}
+  .minute-carte .lia-titre{font-size:1.12rem}
+}
