@@ -52,6 +52,8 @@ details{margin:0 0 16px;font-size:15px}summary{cursor:pointer;color:var(--or)}de
 small{display:block;color:var(--gris);font-size:14px;margin-top:32px;border-top:1px solid #2a241b;padding-top:16px}
 canvas.courbe{display:block;width:100%;height:56px;margin:0 0 8px}
 canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e}
+.partager{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0}.titre-partager{width:100%;margin:0;color:var(--or);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.partager a,.partager button{border:1px solid #5a4a2e;background:none;color:var(--ivoire);font:inherit;font-size:15px;padding:9px 12px;text-decoration:none;cursor:pointer}.partager a:hover,.partager button:hover{border-color:var(--or);color:var(--or)}
 .pres-haut{display:flex;gap:14px;align-items:center;margin:0 0 12px}.pres-haut img{width:96px;height:96px;flex:none;border:1px solid #3a3226}.pres-haut p{margin:0;font-size:16px;color:var(--gris)}
 .teasers-cc{display:grid;grid-template-columns:1fr 1fr;gap:10px}.teasers-cc video{width:100%;aspect-ratio:1;background:#000;border:1px solid #3a3226;display:block}@media (max-width:520px){.teasers-cc{grid-template-columns:1fr}}
 </style>
@@ -84,6 +86,16 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e}
 <canvas class="courbe" data-enveloppe="lhdfcleedikfaacnsvwi95otmfmeb65gs9gj9jgpuiqvk84iksooh674765mikff5l8akllkkg6gf5pbahnnke648fasfhllnif7e6kijaje969hklkokj422kiocqoib932ibfijtkddlhsqtgdlkbiieejumj9g65ijdplmllhabnlmiiib8jml85eqrpxmaisjsynvqghuuchh96866mlrtytko5lo86jv79qvrmeeojd565oqcpmp7jjjc32nuqamrii5hh6321egmsqmcnd69fh6fmnlc8ahgcfj8fbbk7ha7566mkghmrmh6comafkjc67kf6mili9c9dnkbildukolpmtg768jncjeklmpolb5eqllnmhng68ouvoas7ybjvj5cvhtsarg98p5nwkjgekki212njwjchxnikeppbpkjdhbd6589ueuufenpjlrkrjjuqlehofo8ibb7bo8sns8fsne4dthxqoyvk8am6fzrjplpmooqle668butkt885777bajhfdgkddb85544322211" aria-hidden="true"></canvas>
 <audio controls preload="metadata" src="presentation.mp3"></audio>
 <a class="bouton" href="https://3h33.com/podcast-voix-de-lia/">Découvrir Les Voix de l'IA</a>
+<div class="partager" data-url="https://3h33.com/podcast-voix-de-lia/" data-texte="Les Voix de l'IA : 129 portraits audio des gens qui font la tech et l'IA, un grand quiz et des parcours. C'est gratuit.">
+<p class="titre-partager">Faire découvrir la série</p>
+<button type="button" class="p-natif" hidden>Partager</button>
+<a href="https://wa.me/?text=Les%20Voix%20de%20l'IA%20%3A%20129%20portraits%20audio%20des%20gens%20qui%20font%20la%20tech%20et%20l'IA%2C%20un%20grand%20quiz%20et%20des%20parcours.%20C'est%20gratuit.%20https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F" target="_blank" rel="noopener">WhatsApp</a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://x.com/intent/tweet?text=Les%20Voix%20de%20l'IA%20%3A%20129%20portraits%20audio%20des%20gens%20qui%20font%20la%20tech%20et%20l'IA%2C%20un%20grand%20quiz%20et%20des%20parcours.%20C'est%20gratuit.&amp;url=https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F" target="_blank" rel="noopener">X</a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F" target="_blank" rel="noopener">Facebook</a>
+<a href="mailto:?subject=Les%20Voix%20de%20l'IA%20%3A%20129%20portraits%20audio%20des%20gens%20qui%20font%20la%20tech%20et%20l'IA%2C%20un%20grand%20quiz%20et%20des%20parcours.%20C'est%20gratuit.&amp;body=Les%20Voix%20de%20l'IA%20%3A%20129%20portraits%20audio%20des%20gens%20qui%20font%20la%20tech%20et%20l'IA%2C%20un%20grand%20quiz%20et%20des%20parcours.%20C'est%20gratuit.%0Ahttps%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F">E-mail</a>
+<button type="button" class="p-copie">Copier le lien</button>
+</div>
 </div>
 <img class="photo" src="photo.jpg" width="800" height="800" alt="Vignette du portrait de Sandra Le Grand dans Les Voix de l'IA">
 <p>Les Voix de l'IA, ce sont plus de cent portraits des gens qui font la tech et l'intelligence artificielle, racontés par Ada et Alan, deux animateurs IA, avec Lia, l'IA de Choucroute Citron. Chaque fait est vérifié, avec ses sources.</p>
@@ -108,6 +120,17 @@ var e3 = document.getElementById("etape-3"), lecteurs = document.querySelectorAl
 if (e3 && lecteurs[1]) lecteurs[1].addEventListener("ended", function () {
   e3.classList.add("allumee");
   e3.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+</script>
+<script>
+// Partage : la feuille de partage du téléphone si elle existe, sinon les liens ; « Copier le lien » partout
+document.querySelectorAll(".partager").forEach(function (p) {
+  var url = p.getAttribute("data-url"), texte = p.getAttribute("data-texte"), n = p.querySelector(".p-natif"), c = p.querySelector(".p-copie");
+  if (navigator.share && n) { n.hidden = false; n.addEventListener("click", function () { navigator.share({ title: texte, text: texte, url: url }).catch(function () {}); }); }
+  c.addEventListener("click", function () {
+    var ok = function () { c.textContent = "Lien copié ✓"; setTimeout(function () { c.textContent = "Copier le lien"; }, 2200); };
+    if (navigator.clipboard) navigator.clipboard.writeText(url).then(ok, function () { window.prompt("Copiez ce lien :", url); }); else window.prompt("Copiez ce lien :", url);
+  });
 });
 </script>
 <script>
