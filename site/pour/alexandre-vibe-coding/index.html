@@ -14,9 +14,9 @@
 :root{--encre:#0f1524;--gris:#5f6a80;--bleu:#1f6ff5;--or:#d6961e;--trait:#e1e7f2;--verre:rgba(255,255,255,.62)}
 *{box-sizing:border-box}html{background:#f6f8fc}
 body{margin:0;color:var(--encre);font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif;background:radial-gradient(1200px 600px at 80% -10%,#e8f0ff 0,transparent 60%),radial-gradient(900px 500px at -10% 40%,#fff6e6 0,transparent 55%),#f6f8fc;overflow-x:hidden}
-.haut{position:relative;min-height:62vh;display:flex;align-items:flex-end;overflow:hidden}
-.haut video,.haut img.fond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.9}
-.haut::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(246,248,252,.15) 0,rgba(246,248,252,.35) 45%,#f6f8fc 100%)}
+.haut{position:relative;min-height:clamp(300px,44vh,440px);display:flex;align-items:flex-end;overflow:hidden;padding-top:70px}
+.haut video,.haut img.fond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.haut::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(246,248,252,0) 0,rgba(246,248,252,.25) 50%,#f6f8fc 100%)}
 .haut .texte{position:relative;z-index:2;max-width:680px;margin:0 auto;width:100%;padding:0 20px 28px}
 .sur{display:inline-block;padding:6px 14px;border-radius:999px;background:var(--verre);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);color:var(--bleu);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 6px 20px rgba(15,21,36,.06)}
 h1{font-weight:800;font-size:clamp(2.1rem,8vw,3.3rem);line-height:1.04;letter-spacing:-.02em;margin:.5rem 0 .4rem}
@@ -67,13 +67,13 @@ a{color:var(--bleu)}:focus-visible{outline:3px solid var(--bleu);outline-offset:
 @keyframes flotte{0%,100%{transform:translate3d(0,0,0) rotate(var(--r,0deg))}50%{transform:translate3d(0,-14px,0) rotate(calc(var(--r,0deg) + 3deg))}}
 .apparait{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .apparait.vu{opacity:1;transform:none}
-@media(max-width:420px){.partage{grid-template-columns:repeat(2,1fr)}.haut{min-height:56vh}}
+@media(max-width:420px){.partage{grid-template-columns:repeat(2,1fr)}.haut{min-height:300px;padding-top:110px}}
 @media(prefers-reduced-motion:reduce){.tuile{animation:none}.apparait{opacity:1;transform:none;transition:none}.haut video{display:none}}
 </style></head>
 <body>
 <header class="haut">
-<img class="fond" src="fond.jpg?v=ec3fb8d1" alt="">
-<video class="fond" autoplay muted loop playsinline preload="auto" poster="fond.jpg?v=ec3fb8d1" src="fond.mp4?v=2e55bc3f" aria-hidden="true"></video>
+<picture><source media="(min-width:700px)" srcset="fond-large.jpg?v=87be0bcf"><img class="fond" src="fond.jpg?v=ec3fb8d1" alt=""></picture>
+<video class="fond" autoplay muted loop playsinline preload="auto" poster="fond.jpg?v=ec3fb8d1" aria-hidden="true"><source media="(min-width:700px)" src="fond-large.mp4?v=f4a87d5f" type="video/mp4"><source src="fond.mp4?v=2e55bc3f" type="video/mp4"></video>
 <div class="texte">
 <span class="sur">Un message d'Alexandre Stopnicki</span>
 <h1>Mon nouveau métier : <em>le vibe coding</em></h1>
