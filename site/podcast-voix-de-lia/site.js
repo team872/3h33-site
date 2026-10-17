@@ -259,7 +259,7 @@
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(majLire);
     }
     if (liaAudio && liaBouton) {
-      relierBouton(liaAudio, liaBouton, "Lia qui vous présente l'émission");
+      relierBouton(liaAudio, liaBouton, "Les Voix de l'IA en une minute");
       var courantLia = -1;
       var majLia = function () {
         var d = liaAudio.duration || Number(liaAudio.dataset.duree) || 0;
@@ -1094,7 +1094,7 @@
           ids = recus; pos = 0; enCours = false;
           recu.textContent = "";
           var duRecu = recus.reduce(function (t, id) { return t + (Number(episodes[parId[id]].duree) || 0); }, 0);
-          recu.appendChild(document.createTextNode((duParcours ? "Le parcours est dans votre playlist : " : "On vous a envoyé cette playlist : ") + recus.length + (recus.length > 1 ? " épisodes" : " épisode") + " · " + dureeTotale(duRecu) + ". "));
+          recu.appendChild(document.createTextNode((duParcours ? "La playlist à thème est dans Ma playlist : " : "On vous a envoyé cette playlist : ") + recus.length + (recus.length > 1 ? " épisodes" : " épisode") + " · " + dureeTotale(duRecu) + ". "));
           if (avant.length) {
             var remettre = document.createElement("button");
             remettre.type = "button"; remettre.className = "mp-remettre";

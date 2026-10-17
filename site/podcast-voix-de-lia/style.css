@@ -2249,3 +2249,12 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .sommaire-fiche a{display:inline-flex;align-items:center;min-height:38px;padding:.4rem .9rem;border:1px solid var(--border-2);border-radius:999px;color:var(--text);text-decoration:none;font-size:.88rem;transition:border-color .25s,color .25s}
 .sommaire-fiche a:hover,.sommaire-fiche a:focus-visible{border-color:var(--accent);color:var(--accent)}
 
+
+/* « Les Voix de l'IA en une minute » dans le bandeau (17/10/2026, Alexandre : sa vignette en plus grand) */
+.minute-carte .lia-medaillon.minute-medaillon{width:148px;height:148px;border-radius:18px;padding:3px}
+.minute-carte .minute-medaillon picture,.minute-carte .minute-medaillon img{border-radius:15px}
+.minute-carte .lia-textes{display:flex;flex-direction:column;gap:.15rem}
+.minute-qui{display:block;font-size:.85rem;color:var(--text-dim);font-weight:400}
+.minute-voix{color:var(--accent);font-weight:600}
+.minute-carte .lia-citation [data-t]{display:block;margin:.25rem 0}
+@media (max-width:560px){.minute-carte .lia-medaillon.minute-medaillon{width:116px;height:116px}}
