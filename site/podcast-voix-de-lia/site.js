@@ -2231,6 +2231,26 @@
         return true;
       }
 
+      // Feux d'artifice du sans-faute (17/10/2026) : des étincelles dorées par-dessus le quiz, 2,5 s, rien si
+      // l'utilisateur a demandé moins d'animations
+      function feuxDArtifice(sous) {
+        if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        var cv = document.createElement("canvas"); cv.className = "qz-feux"; cv.setAttribute("aria-hidden", "true");
+        (sous.closest("dialog") || document.body).appendChild(cv); // une fenêtre <dialog> passe au-dessus de tout
+        var dpr = window.devicePixelRatio || 1, W = cv.width = innerWidth * dpr, H = cv.height = innerHeight * dpr, c = cv.getContext("2d");
+        var couleurs = ["#e8c77a", "#c4a265", "#f3e4b8", "#d98c5f", "#ffffff"], parts = [];
+        for (var k = 0; k < 7; k++) {
+          var x = W * (0.12 + 0.76 * Math.random()), y = H * (0.12 + 0.4 * Math.random());
+          for (var m = 0; m < 110; m++) { var ang = Math.random() * Math.PI * 2, v = (3 + Math.random() * 8) * dpr; parts.push({ x: x, y: y, vx: Math.cos(ang) * v, vy: Math.sin(ang) * v, c: couleurs[m % couleurs.length], t: k * 12 }); }
+        }
+        var debut = performance.now();
+        (function anim(now) {
+          var e = now - debut; c.clearRect(0, 0, W, H);
+          parts.forEach(function (p) { if (p.t > 0) { p.t--; return; } p.x += p.vx; p.y += p.vy; p.vy += 0.08 * dpr; p.vx *= 0.985; c.globalAlpha = Math.max(0, 1 - e / 3000); c.fillStyle = p.c; c.fillRect(p.x, p.y, 4 * dpr, 4 * dpr); });
+          if (e < 3000) requestAnimationFrame(anim); else cv.remove();
+        })(debut);
+      }
+
       // « Défier un ami » (17/10/2026) : le score part avec le lien, par le partage du téléphone, sinon copié
       function defier(texte) {
         var b = el("button", "btn btn-ghost qz-defier", "Défier un ami");
@@ -2446,24 +2466,31 @@
         note.innerHTML = "<strong>" + bonnes + "</strong> / " + n;
         f.appendChild(note);
         var r = bonnes / n;
-        var mot = r === 1 ? "Sans faute ! Vous avez tout retenu." : r >= 0.75 ? "Très belle écoute." : r >= 0.5 ? "Pas mal ! Quelques passages à réécouter." : "Une deuxième écoute s'impose ?";
+        // Quatre paliers (décision d'Alexandre, 17/10/2026) : sans faute (feux d'artifice + sa voix), presque, pas mal,
+        // à réécouter ; chaque palier met en avant la bonne suite. La voix : un son court commun à tous les portraits
+        // (audio/quiz-fin/<palier>.mp3), joué si les voix du quiz sont actives ; absent, rien ne se passe.
+        var palier = r === 1 ? "parfait" : r >= 0.75 ? "presque" : r >= 0.5 ? "pasmal" : "reecouter";
+        var mot = { parfait: "Sans faute ! Vous avez tout retenu.", presque: "Presque parfait !", pasmal: "Pas mal ! Quelques passages à réécouter.", reecouter: "Une deuxième écoute s'impose ?" }[palier];
         var titre = el("h3", "qz-fin-mot", mot);
         titre.tabIndex = -1;
         f.appendChild(titre);
         if (n === o.questions.length && meilleur) f.appendChild(el("p", "qz-fin-record", bonnes > meilleur ? "Nouveau record pour ce portrait (avant : " + meilleur + " / " + n + ")." : "Votre meilleur score sur ce portrait : " + meilleur + " / " + n + "."));
         var actions = el("div", "qz-actions qz-fin-actions");
         var erreurs = ratees.slice();
-        if (erreurs.length && erreurs.length < n) {
-          var revoir = el("button", "btn btn-primary", "Revoir mes erreurs (" + erreurs.length + ")");
-          revoir.type = "button";
-          revoir.addEventListener("click", function () { demarrer(erreurs); });
-          actions.appendChild(revoir);
-        }
-        actions.appendChild(defier("J'ai eu " + bonnes + " sur " + n + " au quiz de ce portrait des Voix de l'IA. À toi !"));
-        var encore = el("button", "btn btn-ghost", "Recommencer");
-        encore.type = "button";
-        encore.addEventListener("click", function () { demarrer(); });
-        actions.appendChild(encore);
+        var bouton = function (texte, classe, fn) { var x = el("button", "btn " + classe, texte); x.type = "button"; x.addEventListener("click", fn); return x; };
+        var revoir = erreurs.length && erreurs.length < n ? bouton("Revoir mes erreurs (" + erreurs.length + ")", "btn-primary", function () { demarrer(erreurs); }) : null;
+        var defi = defier(palier === "parfait" ? "Sans faute (" + n + " sur " + n + ") au quiz de ce portrait des Voix de l'IA. À toi !" : "J'ai eu " + bonnes + " sur " + n + " au quiz de ce portrait des Voix de l'IA. À toi !");
+        var encore = bouton(palier === "pasmal" ? "Rejouer" : "Recommencer", "btn-ghost", function () { demarrer(); });
+        var suivant = document.querySelector("a.voisin.suivant");
+        var lienSuivant = suivant ? (function () { var x = el("a", "btn btn-ghost", "Le portrait suivant →"); x.href = suivant.href; return x; })() : null;
+        var cle1 = erreurs.filter(function (q) { return q.t !== null && q.t !== undefined; })[0];
+        var passage = cle1 && audioDe(null) ? bouton("Réécouter le passage clé", "btn-primary", function () { ecouterPassage(this, audioDe(null), cle1.t, cle1.tf); }) : null;
+        var jEp = function () { return document.querySelector(".lecteur[data-audio] .bouton-lecture") || document.querySelector("[data-jouer]"); };
+        var episode = jEp() ? bouton("Réécouter l'épisode", "btn-primary", function () { if (o.fermer) o.fermer(); var j = jEp(); if (j) { j.scrollIntoView({ behavior: "smooth", block: "center" }); if (j.getAttribute("aria-pressed") !== "true") j.click(); } }) : null;
+        if (palier === "parfait") { defi.classList.remove("btn-ghost"); defi.classList.add("btn-primary"); [defi, lienSuivant, encore].forEach(function (x) { if (x) actions.appendChild(x); }); }
+        else if (palier === "presque") [revoir, defi, encore].forEach(function (x) { if (x) actions.appendChild(x); });
+        else if (palier === "pasmal") [passage || revoir, encore, defi].forEach(function (x) { if (x) actions.appendChild(x); });
+        else [episode || passage, revoir, encore].forEach(function (x) { if (x) actions.appendChild(x); });
         if (o.grand) { var g = el("a", "qz-lien qz-grand"); g.href = o.grand; g.innerHTML = "<span>Le grand quiz : tous les portraits</span>" + FLECHE; actions.appendChild(g); }
         f.appendChild(actions);
         if (ratees.length) {
@@ -2482,6 +2509,8 @@
         }
         scene.appendChild(f);
         titre.focus({ preventScroll: true });
+        if (palier === "parfait") feuxDArtifice(scene);
+        if (voixActives()) { try { var vf = new Audio((o.prefixeAudio || "../") + "audio/quiz-fin/" + palier + ".mp3"); vf.play().catch(function () {}); } catch (e) {} }
       }
 
       // portrait : du plus facile au plus difficile, dans un ordre nouveau à chaque fois

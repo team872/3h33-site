@@ -2233,4 +2233,5 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .quiz-auteur{display:flex;gap:.9rem;align-items:center;margin:0 0 1.2rem;color:var(--text-dim)}
 .quiz-auteur img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);flex:none}
 .qz-voix .qz-avatar{width:32px;height:32px;border-radius:50%;object-fit:cover;flex:none}
-
+/* Feux d'artifice du sans-faute (17/10/2026) */
+.qz-feux{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:9999}
