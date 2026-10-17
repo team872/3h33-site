@@ -2241,4 +2241,11 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .quiz-revenir-quitter{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.1rem;align-self:stretch;padding:0 .9rem;background:none;border:0;border-left:1px solid var(--border-2);color:var(--text-dim);font:inherit;cursor:pointer}
 .quiz-revenir-quitter span:first-child{font-size:1.3rem;line-height:1}.quiz-revenir-quitter-mot{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase}
 .quiz-revenir-quitter:hover{color:var(--accent)}
+/* Option C (17/10/2026) : « Découvrir la fiche complète » bien visible sur chaque carte, sommaire en haut de chaque fiche */
+.card-fiche{background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:600}
+.card-fiche:hover,.card-fiche:focus-visible{background:var(--accent-clair);border-color:var(--accent-clair);color:var(--bg)}
+.sommaire-fiche{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin:1rem 0 0}
+.sommaire-fiche .sf-titre{width:100%;font-family:var(--ff-mono);font-size:.64rem;letter-spacing:.25em;text-transform:uppercase;color:var(--text-dim)}
+.sommaire-fiche a{display:inline-flex;align-items:center;min-height:38px;padding:.4rem .9rem;border:1px solid var(--border-2);border-radius:999px;color:var(--text);text-decoration:none;font-size:.88rem;transition:border-color .25s,color .25s}
+.sommaire-fiche a:hover,.sommaire-fiche a:focus-visible{border-color:var(--accent);color:var(--accent)}
 
