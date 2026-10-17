@@ -2167,3 +2167,53 @@ button.qz-lien{background:none;border:none;padding:0;cursor:pointer;font:inherit
 .indication-mot{display:inline-block;margin-right:.6rem;font-family:var(--ff-mono);font-size:.62rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
 .astuce.indication{margin:.4rem 0 1.6rem;color:var(--accent-clair)}
 .astuce.indication[hidden]{display:none}
+/* Page parcours, version resserrée (17/10/2026, Alexandre : « trop d'infos tuent l'info », « il faut qu'on ait envie
+   de cliquer et qu'on comprenne tout de suite où ») : deux grands boutons sous l'accroche, celui de l'écoute bat comme
+   un cœur ; chaque passage dit tient sur une ligne, son texte se lit en ouvrant ; le reste dans « En savoir plus ». */
+.pc-cta{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:.8rem;margin:1.4rem 0 .5rem}
+.pc-cta-ecouter,.pc-cta-quiz{display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;text-align:left;text-decoration:none;cursor:pointer;font:inherit;border-radius:14px;transition:transform .2s var(--ease),box-shadow .3s,background .3s}
+.pc-cta-ecouter{border:0;background:linear-gradient(135deg,var(--accent-clair),var(--accent));color:var(--bg);box-shadow:0 10px 34px #c4a26540}
+.pc-cta-quiz{border:2px solid var(--accent);background:radial-gradient(ellipse 90% 120% at 0% 0%,#c4a26526,transparent 70%),var(--bg-card);color:var(--text)}
+.pc-cta-ecouter:hover,.pc-cta-quiz:hover{transform:translateY(-2px)}
+.pc-cta-quiz:hover{background:#c4a2652e}
+.pc-cta-icone{flex:none;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.pc-cta-ecouter .pc-cta-icone{background:var(--bg);color:var(--accent-clair)}
+.pc-cta-ecouter .pc-cta-icone svg{width:20px;height:20px;fill:currentColor;margin-left:3px}
+.pc-cta-quiz .pc-cta-icone{background:var(--accent);color:var(--bg)}
+.pc-cta-quiz .pc-cta-icone svg{width:26px;height:26px}
+.pc-cta-txt{display:flex;flex-direction:column;gap:.15rem;min-width:0}
+.pc-cta-txt strong{font-family:var(--ff-display);font-size:1.3rem;line-height:1.15}
+.pc-cta-txt small{font-family:var(--ff-mono);font-size:.68rem;letter-spacing:.08em;opacity:.85}
+.pc-cta-fin{margin:2.6rem 0 1.6rem}
+.pc-alt{margin:.2rem 0 2.2rem;font-size:.85rem;color:var(--text-faible)}
+.pc-alt a{color:var(--text-dim)}
+/* le cœur qui bat : le bouton d'écoute tant qu'on n'écoute pas ; puis le bouton du lecteur pendant l'écoute */
+@keyframes pc-coeur{0%,100%{transform:scale(1);box-shadow:0 10px 34px #c4a26540,0 0 0 0 #c4a26566}14%{transform:scale(1.035)}28%{transform:scale(1)}42%{transform:scale(1.025);box-shadow:0 10px 34px #c4a26540,0 0 0 14px #c4a26500}70%{transform:scale(1)}}
+.pc-cta-ecouter{animation:pc-coeur 2.4s ease-in-out infinite}
+body.pc-ecoute .pc-cta-ecouter{animation:none}
+@keyframes pc-coeur-rond{0%,100%{box-shadow:0 0 0 0 #c4a26599}50%{box-shadow:0 0 0 10px #c4a26500}}
+.pc-lecteur.joue .pc-l-jouer{animation:pc-coeur-rond 1.6s ease-out infinite}
+@media (prefers-reduced-motion:reduce){.pc-cta-ecouter,.pc-lecteur.joue .pc-l-jouer{animation:none}}
+/* les passages dits : une ligne, le texte derrière « Lire » */
+.pc-etape-dit{display:block}
+.pc-dit{display:flex;align-items:flex-start;gap:.7rem;grid-template-columns:none}
+.pc-texte{flex:1;min-width:0}
+.pc-texte summary{cursor:pointer;list-style:none;padding:.35rem 0;color:var(--text-dim);font-size:.92rem}
+.pc-texte summary::-webkit-details-marker{display:none}
+.pc-texte summary::after{content:" · lire";color:var(--text-faible);font-size:.82rem}
+.pc-texte[open] summary::after{content:" · fermer"}
+.pc-texte .pc-liaison{margin:.4rem 0 .6rem;font-size:1rem}
+.pc-dit-duree{font-family:var(--ff-mono);font-size:.66rem;color:var(--text-faible)}
+.pc-lia-muet{cursor:default}
+.pc-dit.pc-en-cours .pc-texte summary{color:var(--accent-clair)}
+.pc-dit.pc-en-cours .pc-lia{background:#c4a26529;border-color:var(--accent)}
+.pc-etapes{gap:1.4rem}
+.pc-etape{gap:.6rem}
+.pc-plus{margin:1rem 0 1.4rem;border-top:1px solid var(--border);padding-top:.9rem}
+.pc-plus summary{cursor:pointer;font-family:var(--ff-mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.pc-plus p{color:var(--text-dim);line-height:1.6;margin:.8rem 0 1rem;font-weight:300}
+@media (max-width:520px){.pc-dit{display:flex}.pc-lia{margin:0}.pc-cta-txt strong{font-size:1.15rem}}
+/* l'accroche plus discrète, pour que les deux boutons se voient sans faire défiler */
+@media (min-width:700px){.pc-entete.avec-bandeau .pc-chapo{font-size:1.18rem;line-height:1.5;color:var(--text-dim);max-width:62ch}}
+.pc-bandeau{margin-bottom:1rem}
+.pc-cta{margin-top:1rem}
