@@ -2269,3 +2269,12 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
   .hero-phrase{order:5}
   .minute-carte .lia-titre{font-size:1.12rem}
 }
+/* « Mon nouveau métier : le vibe coding » dans « Une série … imaginée par » (17/10/2026) */
+.vibe-carte{display:flex;gap:1rem;align-items:center;margin:1rem 0 0;padding:.9rem;border:1px solid #c4a26566;border-radius:16px;background:#121014}
+.vibe-carte img{width:120px;height:120px;flex:none;border-radius:12px;object-fit:cover}
+.vibe-carte figcaption{display:flex;flex-direction:column;gap:.35rem;min-width:0;flex:1}
+.vibe-carte strong{font-family:var(--ff-display);font-size:1.05rem;color:var(--text)}
+.vibe-carte span{font-size:.85rem;color:var(--text-dim)}
+.vibe-carte audio{width:100%;margin-top:.2rem}
+.vibe-lien{font-size:.8rem;color:var(--accent)}
+@media(max-width:520px){.vibe-carte{flex-direction:column;align-items:stretch}.vibe-carte img{width:100%;height:auto;aspect-ratio:1/1;max-width:260px;align-self:center}}
