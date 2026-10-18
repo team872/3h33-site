@@ -181,7 +181,8 @@ var ePres = document.getElementById("etape-presentation"), ePortrait = document.
 aLaFin("#etape-1 audio", function () { allumer(ePres || ePortrait); });
 aLaFin("#etape-presentation audio", function () { allumer(ePortrait); });
 // Fin du portrait : les teasers de Choucroute Citron s'allument (17/10/2026)
-aLaFin("#etape-portrait audio", function () { var cc = document.getElementById("etape-cc"); if (cc) { if (plus) plus.open = true; allumer(cc); } });
+// 18/10/2026 : s'il y a la zone « Ton quiz » (portrait public), c'est elle qu'on amène à l'écran ; sinon Choucroute Citron
+aLaFin("#etape-portrait audio", function () { var ae = document.getElementById("apres-ecoute"); if (ae) { ae.scrollIntoView({ behavior: "smooth", block: "center" }); return; } var cc = document.getElementById("etape-cc"); if (cc) { if (plus) plus.open = true; allumer(cc); } });
 </script>
 <script>
 // Lecteurs maison : un seul joue à la fois ; toucher la courbe avance dans le son ; à la fin du portrait, le lien vers le site

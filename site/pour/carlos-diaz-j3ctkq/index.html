@@ -76,7 +76,9 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 .l-bas{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--gris)}.l-recul{background:none;border:0;color:var(--gris);font:inherit;font-size:14px;cursor:pointer;padding:4px}
 .p-explication{margin:8px 0 0;color:var(--gris);font-size:14px;text-align:center}
 .apres-ecoute{margin:16px 0 0;text-align:center}.apres-ecoute .bouton{margin:0}.bouton-quiz strong{display:block;font-size:19px;font-weight:600;font-family:inherit}.bouton-quiz span{display:block;font-size:14px;font-weight:500;opacity:.8;margin-top:2px}.ae-sous{margin:8px 0 0;color:var(--gris);font-size:14px}
-#etape-portrait .bouton-partager{background:none;border:1px solid #c9a96b88;color:var(--or)}.bouton-clair{background:none;border:1px solid var(--or);color:var(--or);margin:0}
+#etape-portrait .bouton-partager{background:none;border:1px solid #c9a96b88;color:var(--or)}
+#apres-ecoute:not(.fini) .bouton-quiz{background:none;border:1px solid #c9a96b88;color:var(--or);padding:10px}#apres-ecoute:not(.fini) .bouton-quiz strong{font-size:16px}#apres-ecoute:not(.fini) .bouton-quiz span,#apres-ecoute:not(.fini) .ae-sous,#apres-ecoute:not(.fini) .p-reseaux,#apres-ecoute:not(.fini) .p-explication{display:none}#apres-ecoute:not(.fini) .bouton-partager{padding:10px;font-size:16px}
+#apres-ecoute.fini .bouton-quiz{animation:ae-appel 1.6s ease-out .2s 2}@keyframes ae-appel{0%{box-shadow:0 0 0 0 #c9a96bcc}100%{box-shadow:0 0 0 16px #c9a96b00}}@media (prefers-reduced-motion:reduce){#apres-ecoute.fini .bouton-quiz{animation:none}}.bouton-clair{background:none;border:1px solid var(--or);color:var(--or);margin:0}
 .partager{margin:18px 0 0}.bouton-partager{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border:0;cursor:pointer;font-family:inherit;margin:0}.bouton-partager svg{width:22px;height:22px;fill:currentColor}
 .titre-partager{display:none}.p-reseaux{margin-top:10px}
 .p-reseaux{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
@@ -138,7 +140,7 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 </div>
 
 
-<div class="apres-ecoute" id="apres-ecoute"><a class="bouton bouton-quiz" href="https://3h33.com/podcast-voix-de-lia/carlos-diaz/#quiz"><strong>Ton quiz : 8 questions sur toi →</strong><span>sur ta page publique · défie tes proches</span></a><p class="ae-sous">Ta page publique : ton portrait, ses sources et ton quiz, sur le site des Voix de l'IA.</p></div>
+<div class="apres-ecoute" id="apres-ecoute"><a class="bouton bouton-quiz" href="https://3h33.com/podcast-voix-de-lia/carlos-diaz/#quiz"><strong>Ton quiz : 8 questions sur toi →</strong><span>sur ta page publique · défie tes proches</span></a><p class="ae-sous">Ta page publique : ton portrait, ses sources et ton quiz, sur le site des Voix de l'IA.</p>
 <div class="partager" data-url="https://3h33.com/podcast-voix-de-lia/carlos-diaz/" data-texte="Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley — un portrait des Voix de l'IA">
 <button type="button" class="bouton bouton-partager p-natif"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16a3 3 0 0 0-2.4 1.2l-6.7-3.4a3 3 0 0 0 0-1.6l6.7-3.4A3 3 0 1 0 15 7l-6.7 3.4a3 3 0 1 0 0 3.2L15 17a3 3 0 1 0 3-1z"/></svg><span>Partager ton portrait</span></button>
 <p class="p-explication">Le lien mène à ta page publique.</p>
@@ -150,7 +152,7 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 <a class="p-reseau" href="mailto:?subject=Carlos%20Diaz%20%3A%20du%20prof%20de%20Limoges%20%C3%A0%20El%20Gringo%20de%20la%20Silicon%20Valley%20%E2%80%94%20un%20portrait%20des%20Voix%20de%20l'IA&amp;body=Carlos%20Diaz%20%3A%20du%20prof%20de%20Limoges%20%C3%A0%20El%20Gringo%20de%20la%20Silicon%20Valley%20%E2%80%94%20un%20portrait%20des%20Voix%20de%20l'IA%0Ahttps%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2Fcarlos-diaz%2F"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.3V17h16V7.3l-8 5.6-8-5.6zM5.2 7l6.8 4.8L18.8 7H5.2z"/></svg><span>E-mail</span></a>
 <button type="button" class="p-reseau p-copie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a1 1 0 1 1 1.4 1.4L12 13.4a1 1 0 0 1-1.4 0zm-2.8 5.2a3.5 3.5 0 0 1-2.5-6l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a1.5 1.5 0 0 0 2.1 2.1l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a3.5 3.5 0 0 1-2.4 1.1zm8.3-6.6a1 1 0 0 1-.7-1.7l2.1-2.1a1.5 1.5 0 0 0-2.1-2.1l-2.1 2.1a1 1 0 0 1-1.4-1.4l2.1-2.1a3.5 3.5 0 0 1 5 5l-2.1 2.1a1 1 0 0 1-.8.2z"/></svg><span>Copier le lien</span></button>
 </div>
-</div>
+</div></div>
 </div>
 <details class="plus" id="plus">
 <summary>Les coulisses de ton portrait</summary>
@@ -175,7 +177,8 @@ var ePres = document.getElementById("etape-presentation"), ePortrait = document.
 aLaFin("#etape-1 audio", function () { allumer(ePres || ePortrait); });
 aLaFin("#etape-presentation audio", function () { allumer(ePortrait); });
 // Fin du portrait : les teasers de Choucroute Citron s'allument (17/10/2026)
-aLaFin("#etape-portrait audio", function () { var cc = document.getElementById("etape-cc"); if (cc) { if (plus) plus.open = true; allumer(cc); } });
+// 18/10/2026 : s'il y a la zone « Ton quiz » (portrait public), c'est elle qu'on amène à l'écran ; sinon Choucroute Citron
+aLaFin("#etape-portrait audio", function () { var ae = document.getElementById("apres-ecoute"); if (ae) { ae.scrollIntoView({ behavior: "smooth", block: "center" }); return; } var cc = document.getElementById("etape-cc"); if (cc) { if (plus) plus.open = true; allumer(cc); } });
 </script>
 <script>
 // Lecteurs maison : un seul joue à la fois ; toucher la courbe avance dans le son ; à la fin du portrait, le lien vers le site
@@ -192,7 +195,8 @@ document.querySelectorAll(".lecteur").forEach(function (l) {
   l.querySelector(".l-recul").addEventListener("click", function () { a.currentTime = Math.max(0, a.currentTime - 15); });
   if (cv) cv.addEventListener("click", function (ev) { var r = cv.getBoundingClientRect(); if (a.duration) { a.currentTime = (ev.clientX - r.left) / r.width * a.duration; if (a.paused) b.click(); } });
 });
-(function () { var ap = document.getElementById("apres-ecoute"), p = document.querySelector("#etape-portrait audio"); if (ap && p) p.addEventListener("ended", function () { ap.hidden = false; }); })();
+// 18/10/2026, Alexandre : le quiz écrasait le lecteur → zone discrète pendant l'écoute, mise en avant à la fin (ou après 80 %)
+(function () { var ap = document.getElementById("apres-ecoute"), p = document.querySelector("#etape-portrait audio"); if (!ap || !p) return; var fini = function () { ap.classList.add("fini"); }; p.addEventListener("ended", fini); p.addEventListener("timeupdate", function () { if (p.duration && p.currentTime > p.duration * 0.8) fini(); }); })();
 </script>
 <script>
 // Partage : la feuille de partage du téléphone si elle existe, sinon les liens ; « Copier le lien » partout
