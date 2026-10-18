@@ -18,7 +18,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Sun, 18 Oct 2026 16:31:26 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 17:40:09 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -36,6 +36,50 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Éric Briones : le fils de la couturière devenu planneur du luxe</title>
+      <itunes:title>Éric Briones : le fils de la couturière devenu planneur du luxe</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/eric-briones/</link>
+      <guid isPermaLink="false">voix-de-lia-eric-briones</guid>
+      <pubDate>Sun, 18 Oct 2026 17:40:09 GMT</pubDate>
+      <description>Fils d'une couturière, mauvais élève de son propre aveu, entré dans le luxe sans vraiment le vouloir chez l'agence d'Hermès : Éric Briones, alias Darkplanneur, voit l'IA comme la « Première Main » du créateur, qui exécute sans désirer.
+
+Épisode enregistré le 18 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/eric-briones/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Fils d&#39;une couturière, mauvais élève de son propre aveu, entré dans le luxe sans vraiment le vouloir chez l&#39;agence d&#39;Hermès : Éric Briones, alias Darkplanneur, voit l&#39;IA comme la « Première Main » du créateur, qui exécute sans désirer.</p><p>Épisode enregistré le 18 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/eric-briones/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/eric-briones.mp3?v=89ca5fe8" length="12063528" type="audio/mpeg"/>
+      <itunes:duration>499</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/eric-briones-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/eric-briones/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/eric-briones/chapitres.json?v=e8afc9d4" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée</title>
+      <itunes:title>Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/sandra-le-grand/</link>
+      <guid isPermaLink="false">voix-de-lia-sandra-le-grand</guid>
+      <pubDate>Sun, 18 Oct 2026 17:34:31 GMT</pubDate>
+      <description>Trois permissions demandées pour en obtenir une, soixante-dix rendez-vous pour dix investisseurs, une veste jaune dans les soirées grises et trois livres pour oser, viser haut et aller vers les autres : le clin d'œil d'Ada, Alan et Lia à Sandra Le Grand, créatrice de Kalidea, passeuse d'énergie et coautrice, en octobre 2026, de « Réseautez à l'ère de l'IA ».
+
+Épisode enregistré le 18 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/sandra-le-grand/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Trois permissions demandées pour en obtenir une, soixante-dix rendez-vous pour dix investisseurs, une veste jaune dans les soirées grises et trois livres pour oser, viser haut et aller vers les autres : le clin d&#39;œil d&#39;Ada, Alan et Lia à Sandra Le Grand, créatrice de Kalidea, passeuse d&#39;énergie et coautrice, en octobre 2026, de « Réseautez à l&#39;ère de l&#39;IA ».</p><p>Épisode enregistré le 18 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/sandra-le-grand/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/sandra-le-grand.mp3?v=23b294f5" length="10569198" type="audio/mpeg"/>
+      <itunes:duration>437</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/sandra-le-grand-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/sandra-le-grand/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/sandra-le-grand/chapitres.json?v=42d71a37" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley</title>
       <itunes:title>Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley</itunes:title>
@@ -211,28 +255,6 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/louis-duroulle-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/louis-duroulle/transcription.html" type="text/html" language="fr"/>
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/louis-duroulle/chapitres.json?v=33b90ef8" type="application/json+chapters"/>
-    </item>
-    <item>
-      <title>Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée</title>
-      <itunes:title>Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/sandra-le-grand/</link>
-      <guid isPermaLink="false">voix-de-lia-sandra-le-grand</guid>
-      <pubDate>Sat, 17 Oct 2026 01:00:28 GMT</pubDate>
-      <description>Trois permissions demandées pour en obtenir une, soixante-dix rendez-vous pour dix investisseurs, une veste jaune dans les soirées grises et trois livres pour oser, viser haut et aller vers les autres : le clin d'œil d'Ada, Alan et Lia à Sandra Le Grand, créatrice de Kalidea, passeuse d'énergie et coautrice, en octobre 2026, de « Réseautez à l'ère de l'IA ».
-
-Épisode enregistré le 17 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/sandra-le-grand/
-
-Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Trois permissions demandées pour en obtenir une, soixante-dix rendez-vous pour dix investisseurs, une veste jaune dans les soirées grises et trois livres pour oser, viser haut et aller vers les autres : le clin d&#39;œil d&#39;Ada, Alan et Lia à Sandra Le Grand, créatrice de Kalidea, passeuse d&#39;énergie et coautrice, en octobre 2026, de « Réseautez à l&#39;ère de l&#39;IA ».</p><p>Épisode enregistré le 17 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/sandra-le-grand/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/sandra-le-grand.mp3?v=dc51f42e" length="10564179" type="audio/mpeg"/>
-      <itunes:duration>436</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/sandra-le-grand-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/sandra-le-grand/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/sandra-le-grand/chapitres.json?v=928df778" type="application/json+chapters"/>
     </item>
     <item>
       <title>Benjamin Perret : il feuilletait les journaux avant de savoir lire</title>
