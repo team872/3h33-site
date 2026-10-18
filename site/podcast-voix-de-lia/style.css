@@ -2278,3 +2278,15 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .vibe-carte audio{width:100%;margin-top:.2rem}
 .vibe-lien{font-size:.8rem;color:var(--accent)}
 @media(max-width:520px){.vibe-carte{flex-direction:column;align-items:stretch}.vibe-carte img{width:100%;height:auto;aspect-ratio:1/1;max-width:260px;align-self:center}}
+/* iPad (18/10/2026, Alexandre : « la version iPad ne fonctionne pas ») : entre 701 et 959 px, .hero .outils portait
+   grid-area:outils alors que la grille n'avait que "texte" "jour" → colonnes implicites, titre et portrait du jour
+   écrasés à 0 px, bandeau de 3 000 px. On donne à cette largeur une grille en une colonne qui connaît les trois zones. */
+@media(min-width:701px) and (max-width:959px){
+  .hero{padding:5.6rem var(--gouttiere) 2.4rem}
+  .hero-dedans{grid-template-columns:minmax(0,1fr);grid-template-areas:"texte" "jour" "outils";row-gap:2rem;align-items:start}
+  .du-jour{max-width:none;justify-self:stretch;grid-template-columns:220px minmax(0,1fr);column-gap:1.4rem;align-items:start}
+  .dj-boutons{grid-column:1 / -1}
+  .hero .lia-carte.minute-carte{max-width:none}
+}
+/* Barre du haut sur tablette : 6 liens + « S'abonner » débordaient de 66 px à 768 px */
+@media(max-width:1024px){.barre nav a.facultatif{display:none}.barre nav{gap:1.1rem}}
