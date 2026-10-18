@@ -23,9 +23,9 @@ chapo: "Nous ne vendons pas d'intelligence artificielle. Nous fabriquons avec, c
 <a class="carte" href="/agence-conseil-marketing-digital/"><span class="duree">Conseil</span><h2>Conseil et stratégie</h2><p>Par où commencer, avec quelles données, dans quel cadre. Le diagnostic avant les outils.</p><span class="suite">Voir le conseil →</span></a>
 </div>
 
-<div class="compteur" data-compteur data-fin="34" data-part="1">
-  <p class="compteur__l">Construits et mis en ligne depuis 2024</p>
-  <p class="compteur__n"><span class="v">34</span><span class="u">sites et outils</span></p>
+<div class="compteur" data-compteur data-fin="35" data-part="1">
+  <p class="compteur__l">Construits et mis en ligne depuis 2024 : plus de</p>
+  <p class="compteur__n"><span class="v">35</span><span class="u">sites et outils</span></p>
   <div class="compteur__barre"><i></i></div>
   <div class="compteur__pied"><span>2024</span><span>vérifié le 2 septembre 2026</span></div>
 </div>

@@ -98,7 +98,7 @@ Une demi-journée avec vos équipes, et un outil qui tourne le lendemain. Le dé
 
 ## Ce qu'on a construit comme ça
 
-Trente-quatre sites et outils sont en ligne aujourd'hui, tous fabriqués de cette manière. Trois exemples qui montrent l'écart de nature entre eux.
+Plus de trente-cinq sites et outils sont en ligne aujourd'hui, tous fabriqués de cette manière. Trois exemples qui montrent l'écart de nature entre eux.
 
 ### chapitre.ai — une IA qui écrit votre livre
 
