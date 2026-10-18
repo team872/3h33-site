@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>3h33, l'agence de l'IA : formation, vibe coding et agents IA</title>
-<meta name="description" content="Agence et organisme de formation en IA générative depuis 2010 : formations, outils sur mesure en vibe coding, agents conversationnels et studio créatif.">
+<title>3h33, l'agence de l'IA : vibe coding, formation et agents IA</title>
+<meta name="description" content="Agence et formation en IA depuis 2010 : nous construisons vos outils en vibe coding et formons vos équipes à le faire. Agents IA, studio, podcast Les Voix de l'IA.">
 <link rel="canonical" href="https://3h33.com/">
 
-<meta property="og:title" content="3h33, l'agence de l'IA : formation, vibe coding et agents IA">
-<meta property="og:description" content="Agence et organisme de formation en IA générative depuis 2010 : formations, outils sur mesure en vibe coding, agents conversationnels et studio créatif.">
+<meta property="og:title" content="3h33, l'agence de l'IA : vibe coding, formation et agents IA">
+<meta property="og:description" content="Agence et formation en IA depuis 2010 : nous construisons vos outils en vibe coding et formons vos équipes à le faire. Agents IA, studio, podcast Les Voix de l'IA.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://3h33.com/">
 <meta property="og:locale" content="fr_FR">
@@ -355,6 +355,47 @@ footer .bloc{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   .progress{animation:croit linear both;animation-timeline:scroll(root)}
   .reveal{animation:lever linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
 }
+/* deux promesses côte à côte (18/10/2026) */
+.hero__texte--deux{max-width:1180px}
+.hero__texte--deux .hero__preuves{max-width:none;width:100%}
+.promesses{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"e1 e2" "t1 t2" "c1 c2";column-gap:56px;row-gap:14px;width:100%}
+.promesses__titre{display:contents}
+.hero__contenu .promesse__t{font-size:clamp(32px,3.6vw,52px);line-height:1.06;letter-spacing:-.035em;max-width:16ch;display:block}
+.promesse__t--1{grid-area:t1}.promesse__t--2{grid-area:t2}.promesse__e--1{grid-area:e1}.promesse__e--2{grid-area:e2}
+.promesse__c{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.promesse__c--1{grid-area:c1}.promesse__c--2{grid-area:c2}
+.promesse__c--2{padding-left:0}
+.btn--clair{background:#fff;color:var(--ink);box-shadow:inset 0 0 0 2px var(--acc)}
+.message{display:flex;align-items:center;gap:14px;padding:8px 18px 8px 8px;border:1px solid var(--trait);border-radius:999px;background:rgba(255,255,255,.88);cursor:pointer;font:inherit;color:var(--ink);text-align:left;box-shadow:var(--ombre)}
+.message:hover{border-color:var(--acc)}
+.message img{width:52px;height:52px;border-radius:50%;object-fit:cover}
+.message__txt{display:flex;flex-direction:column;gap:2px;font-size:15px}
+.message__txt span{color:var(--acc);font-weight:700;font-size:14px}
+.message-dialogue{border:0;border-radius:18px;padding:16px;max-width:min(420px,92vw);background:#0f1524;color:#fff}
+.message-dialogue::backdrop{background:rgba(15,21,36,.7)}
+.message-dialogue video{display:block;width:100%;max-height:78vh;border-radius:12px;background:#000}
+.message-dialogue p{margin:10px 2px 0;font-size:14px;color:#c9d2e3}
+.message-dialogue a{color:#9fc1ff}
+.message-dialogue__fermer{position:absolute;top:8px;right:8px;z-index:2;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.9);color:#0f1524;font-size:16px;cursor:pointer}
+@media (max-width:860px){.promesses{grid-template-columns:1fr;grid-template-areas:"e1" "t1" "c1" "e2" "t2" "c2"}.promesse__e--2{margin-top:26px}}
+/* Les Voix de l'IA sur l'accueil (18/10/2026) */
+.lvia__grille{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start;margin-top:26px}
+.lvia__mosaique{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.lvia__mosaique a{display:block;border-radius:14px;overflow:hidden;box-shadow:var(--ombre)}
+.lvia__mosaique img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;transition:transform .4s var(--ease)}
+.lvia__mosaique a:hover img{transform:scale(1.05)}
+.lvia__info{display:flex;flex-direction:column;gap:20px}
+.lvia__minute{display:flex;gap:14px;align-items:flex-start;padding:16px;border:1px solid var(--trait);border-radius:var(--radius-s);background:#fff;box-shadow:var(--ombre)}
+.lvia__minute img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}
+.lvia__minute b{display:block}.lvia__minute span{display:block;font-size:14px;color:var(--ink-3);margin-bottom:8px}
+.lvia__minute audio{width:100%}
+.lvia__chiffres{list-style:none;display:flex;gap:30px;margin:0;padding:0;flex-wrap:wrap}
+.lvia__chiffres li{display:flex;flex-direction:column;gap:2px}
+.lvia__chiffres b{font-size:28px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.lvia__chiffres span{font-size:13.5px;color:var(--ink-3);max-width:16ch;line-height:1.3}
+.lvia__methode{margin:0;padding-left:1.2em;color:var(--ink-2);font-size:16px;display:flex;flex-direction:column;gap:6px}
+.lvia__lia{margin:0;font-size:15px;color:var(--ink-2)}
+@media (max-width:860px){.lvia__grille{grid-template-columns:1fr}.lvia__mosaique{grid-template-columns:repeat(3,1fr)}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.mots .m>span{transform:none;opacity:1}}
 html.calme *,html.calme *::before,html.calme *::after{animation:none!important;transition:none!important}
 html.calme #verre{opacity:.3}
@@ -477,7 +518,7 @@ html.calme .mots .m>span{transform:none;opacity:1}
 @media (max-width:860px){.qui__grille,.faq-accueil{grid-template-columns:1fr;gap:28px}.qui__photo{max-width:260px}.guides{grid-template-columns:1fr 1fr}.section{padding-top:72px}}
 @media (max-width:560px){.portes,.outils,.guides{grid-template-columns:1fr}.section{padding-left:20px;padding-right:20px}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","EducationalOrganization"],"@id":"https://3h33.com/#organisation","name":"3h33","alternateName":["3h33, l'agence de l'IA","3H33"],"url":"https://3h33.com/","logo":"https://3h33.com/medias/partage.jpg","image":"https://3h33.com/medias/partage.jpg","description":"Agence et organisme de formation français spécialisés dans les usages de l'intelligence artificielle générative en entreprise : formations, outils sur mesure en vibe coding, agents conversationnels et studio créatif.","slogan":"On apprend l'IA en construisant.","foundingDate":"2010","founder":{"@id":"https://3h33.com/#alexandre"},"email":"info@3h33.fr","areaServed":"FR","contactPoint":{"@type":"ContactPoint","contactType":"commercial","url":"https://3h33.com/contact/","availableLanguage":["fr","en"]},"knowsAbout":["Intelligence artificielle générative","Formation à l'intelligence artificielle","Vibe coding","Agents conversationnels","AI Act","IA souveraine","Learning Management Agentique","Production audiovisuelle par IA"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Masterclass IA","url":"https://3h33.com/masterclass-ia/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ateliers de formation à l'IA","url":"https://3h33.com/ateliers-formation/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Formation Claude","url":"https://3h33.com/formation-claude/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Méthode Forge","url":"https://3h33.com/forge/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Vibe coding : outils sur mesure","url":"https://3h33.com/vibe-coding/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Chatbots et agents IA","url":"https://3h33.com/chatbots/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Coaching IA des dirigeants","url":"https://3h33.com/coaching-ia-dirigeants/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Studio créatif IA","url":"https://3h33.com/studio/","provider":{"@id":"https://3h33.com/#organisation"}}}],"sameAs":["https://alexandrestopnicki.com","https://fr.linkedin.com/in/alexandrestopnicki","https://twitter.com/alexandre3h33","https://www.facebook.com/3h33.FORMATIONS","https://instagram.com/alexandre3h33","https://choucroute-citron.com"],"brand":[{"@type":"Brand","name":"BotMoiLeQi","url":"https://botmoileqi.com"},{"@type":"Brand","name":"NegoVox","url":"https://negovox.com"},{"@type":"Brand","name":"Media Training Vox","url":"https://media-training-vox.com"},{"@type":"Brand","name":"Le savez-vous ?","url":"https://le-savez-vous.com"}]},{"@type":"Person","@id":"https://3h33.com/#alexandre","name":"Alexandre Stopnicki","jobTitle":"Fondateur de 3h33, formateur et conférencier en intelligence artificielle","description":"Fondateur de 3h33. Dans le numérique depuis trente ans : en 1997, sa société Numériland tenait la régie publicitaire du Deuxième Monde, le métavers de Canal+. Construit des chatbots depuis 2017 ; chroniqueur de l'émission The Artificial Intelligence Society.","url":"https://alexandrestopnicki.com","image":"https://3h33.com/medias/alexandre-stopnicki.jpg","worksFor":[{"@id":"https://3h33.com/#organisation"},{"@type":"Organization","@id":"https://listen-to-my-art.com/#organisation","name":"Listen to my art","alternateName":"Musée à la maison","url":"https://listen-to-my-art.com/"}],"knowsAbout":["Intelligence artificielle générative","Vibe coding","Pédagogie","Agents conversationnels","Métavers"],"sameAs":["https://fr.linkedin.com/in/alexandrestopnicki","https://alexandre.ai","https://alexandrestopnicki.com"]},{"@type":"WebSite","@id":"https://3h33.com/#site","url":"https://3h33.com/","name":"3h33","inLanguage":"fr-FR","publisher":{"@id":"https://3h33.com/#organisation"}},{"@type":"WebPage","@id":"https://3h33.com/#accueil","url":"https://3h33.com/","name":"3h33, l'agence de l'IA","description":"Agence et organisme de formation en IA générative depuis 2010 : formations, outils sur mesure en vibe coding, agents conversationnels et studio créatif.","inLanguage":"fr-FR","isPartOf":{"@id":"https://3h33.com/#site"},"about":{"@id":"https://3h33.com/#organisation"},"primaryImageOfPage":"https://3h33.com/medias/partage.jpg"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qu'est-ce que 3h33 ?","acceptedAnswer":{"@type":"Answer","text":"3h33 est une agence et un organisme de formation français, créé en 2010 par Alexandre Stopnicki, spécialisé dans les usages de l'intelligence artificielle générative en entreprise. Elle forme les équipes, construit avec elles des outils d'IA en vibe coding et des agents conversationnels, et produit des contenus avec son studio créatif."}},{"@type":"Question","name":"Qui est Alexandre Stopnicki ?","acceptedAnswer":{"@type":"Answer","text":"Le fondateur de 3h33, formateur et conférencier en intelligence artificielle. Il travaille dans le numérique depuis trente ans : en 1997, sa société Numériland tenait la régie publicitaire du Deuxième Monde, le métavers de Canal+. Il construit des chatbots depuis 2017 et commente l'actualité de l'IA dans l'émission The Artificial Intelligence Society."}},{"@type":"Question","name":"Quelles formations à l'IA propose 3h33 ?","acceptedAnswer":{"@type":"Answer","text":"Une masterclass de deux heures pour acculturer jusqu'à cent personnes, des ateliers d'un à deux jours où six à quinze participants pratiquent sur leurs propres dossiers, une formation Claude d'un ou deux jours, et des rendez-vous de veille réguliers. Toutes partent des métiers et des cas réels."}},{"@type":"Question","name":"Qu'est-ce que la méthode Forge ?","acceptedAnswer":{"@type":"Answer","text":"Une session Forge est une demi-journée de co-construction en visioconférence, préparée en amont et consolidée après. On y fabrique avec vos équipes un agent, une automatisation ou un tableau de bord, documenté et utilisable dès le lendemain. L'objectif est de vous rendre autonomes, pas dépendants."}},{"@type":"Question","name":"Qu'est-ce que le vibe coding ?","acceptedAnswer":{"@type":"Answer","text":"Fabriquer un logiciel en décrivant en français ce qu'on veut, pendant qu'une IA écrit le code. 3h33 construit ainsi ses propres applications depuis 2024, et les outils de ses clients, dont le code leur appartient. Voir le vibe coding en entreprise."}},{"@type":"Question","name":"La formation à l'IA est-elle obligatoire ?","acceptedAnswer":{"@type":"Answer","text":"L'article 4 de l'AI Act demande aux entreprises qui utilisent l'IA de prendre des mesures pour développer la maîtrise de l'IA de leurs équipes. Depuis l'omnibus numérique de juillet 2026, c'est une obligation de moyens et non de résultat. Le détail."}},{"@type":"Question","name":"Faut-il une équipe technique pour travailler avec 3h33 ?","acceptedAnswer":{"@type":"Answer","text":"Non. Formations, ateliers et sessions Forge sont conçus pour des équipes métier. Ce qui est construit est livré documenté, et l'on vous apprend à le faire vivre."}},{"@type":"Question","name":"Nos données restent-elles chez nous ?","acceptedAnswer":{"@type":"Answer","text":"Oui quand c'est nécessaire : nous travaillons avec des modèles hébergés en Europe ou installés sur vos propres serveurs, et la question est posée dès le premier échange. Voir IA locale et souveraine."}},{"@type":"Question","name":"Travaillez-vous avec les collectivités ?","acceptedAnswer":{"@type":"Answer","text":"Oui : formation des agents et construction d'outils pour plusieurs communes, dont la mairie de Laxou. Le point d'entrée dédié est mairie.ai."}},{"@type":"Question","name":"Combien ça coûte ?","acceptedAnswer":{"@type":"Answer","text":"Masterclass, ateliers et sessions Forge ont chacun un tarif fixe, annoncé avant tout engagement, et le devis tient sur une page. Nous intervenons à distance comme en présentiel, et le premier échange de vingt minutes est gratuit."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","EducationalOrganization"],"@id":"https://3h33.com/#organisation","name":"3h33","alternateName":["3h33, l'agence de l'IA","3H33"],"url":"https://3h33.com/","logo":"https://3h33.com/medias/partage.jpg","image":"https://3h33.com/medias/partage.jpg","description":"Agence et organisme de formation français spécialisés dans les usages de l'intelligence artificielle générative en entreprise : formations, outils sur mesure en vibe coding, agents conversationnels et studio créatif.","slogan":"On apprend l'IA en construisant.","foundingDate":"2010","founder":{"@id":"https://3h33.com/#alexandre"},"email":"info@3h33.fr","areaServed":"FR","contactPoint":{"@type":"ContactPoint","contactType":"commercial","url":"https://3h33.com/contact/","availableLanguage":["fr","en"]},"knowsAbout":["Intelligence artificielle générative","Formation à l'intelligence artificielle","Vibe coding","Agents conversationnels","AI Act","IA souveraine","Learning Management Agentique","Production audiovisuelle par IA"],"makesOffer":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Masterclass IA","url":"https://3h33.com/masterclass-ia/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ateliers de formation à l'IA","url":"https://3h33.com/ateliers-formation/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Formation Claude","url":"https://3h33.com/formation-claude/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Méthode Forge","url":"https://3h33.com/forge/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Vibe coding : outils sur mesure","url":"https://3h33.com/vibe-coding/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Chatbots et agents IA","url":"https://3h33.com/chatbots/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Coaching IA des dirigeants","url":"https://3h33.com/coaching-ia-dirigeants/","provider":{"@id":"https://3h33.com/#organisation"}}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Studio créatif IA","url":"https://3h33.com/studio/","provider":{"@id":"https://3h33.com/#organisation"}}}],"sameAs":["https://alexandrestopnicki.com","https://fr.linkedin.com/in/alexandrestopnicki","https://twitter.com/alexandre3h33","https://www.facebook.com/3h33.FORMATIONS","https://instagram.com/alexandre3h33","https://choucroute-citron.com"],"brand":[{"@type":"Brand","name":"BotMoiLeQi","url":"https://botmoileqi.com"},{"@type":"Brand","name":"NegoVox","url":"https://negovox.com"},{"@type":"Brand","name":"Media Training Vox","url":"https://media-training-vox.com"},{"@type":"Brand","name":"Le savez-vous ?","url":"https://le-savez-vous.com"}]},{"@type":"Person","@id":"https://3h33.com/#alexandre","name":"Alexandre Stopnicki","jobTitle":"Fondateur de 3h33, formateur et conférencier en intelligence artificielle","description":"Fondateur de 3h33. Dans le numérique depuis trente ans : en 1997, sa société Numériland tenait la régie publicitaire du Deuxième Monde, le métavers de Canal+. Construit des chatbots depuis 2017 ; chroniqueur de l'émission The Artificial Intelligence Society.","url":"https://alexandrestopnicki.com","image":"https://3h33.com/medias/alexandre-stopnicki.jpg","worksFor":[{"@id":"https://3h33.com/#organisation"},{"@type":"Organization","@id":"https://listen-to-my-art.com/#organisation","name":"Listen to my art","alternateName":"Musée à la maison","url":"https://listen-to-my-art.com/"}],"knowsAbout":["Intelligence artificielle générative","Vibe coding","Pédagogie","Agents conversationnels","Métavers"],"sameAs":["https://fr.linkedin.com/in/alexandrestopnicki","https://alexandre.ai","https://alexandrestopnicki.com"]},{"@type":"WebSite","@id":"https://3h33.com/#site","url":"https://3h33.com/","name":"3h33","inLanguage":"fr-FR","publisher":{"@id":"https://3h33.com/#organisation"}},{"@type":"WebPage","@id":"https://3h33.com/#accueil","url":"https://3h33.com/","name":"3h33, l'agence de l'IA","description":"Agence et formation en IA depuis 2010 : nous construisons vos outils en vibe coding et formons vos équipes à le faire. Agents IA, studio, podcast Les Voix de l'IA.","inLanguage":"fr-FR","isPartOf":{"@id":"https://3h33.com/#site"},"about":{"@id":"https://3h33.com/#organisation"},"primaryImageOfPage":"https://3h33.com/medias/partage.jpg"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qu'est-ce que 3h33 ?","acceptedAnswer":{"@type":"Answer","text":"3h33 est une agence et un organisme de formation français, créé en 2010 par Alexandre Stopnicki, spécialisé dans les usages de l'intelligence artificielle générative en entreprise. Elle forme les équipes, construit avec elles des outils d'IA en vibe coding et des agents conversationnels, et produit des contenus avec son studio créatif."}},{"@type":"Question","name":"Qui est Alexandre Stopnicki ?","acceptedAnswer":{"@type":"Answer","text":"Le fondateur de 3h33, formateur et conférencier en intelligence artificielle. Il travaille dans le numérique depuis trente ans : en 1997, sa société Numériland tenait la régie publicitaire du Deuxième Monde, le métavers de Canal+. Il construit des chatbots depuis 2017 et commente l'actualité de l'IA dans l'émission The Artificial Intelligence Society."}},{"@type":"Question","name":"Quelles formations à l'IA propose 3h33 ?","acceptedAnswer":{"@type":"Answer","text":"Une masterclass de deux heures pour acculturer jusqu'à cent personnes, des ateliers d'un à deux jours où six à quinze participants pratiquent sur leurs propres dossiers, une formation Claude d'un ou deux jours, et des rendez-vous de veille réguliers. Toutes partent des métiers et des cas réels."}},{"@type":"Question","name":"Qu'est-ce que la méthode Forge ?","acceptedAnswer":{"@type":"Answer","text":"Une session Forge est une demi-journée de co-construction en visioconférence, préparée en amont et consolidée après. On y fabrique avec vos équipes un agent, une automatisation ou un tableau de bord, documenté et utilisable dès le lendemain. L'objectif est de vous rendre autonomes, pas dépendants."}},{"@type":"Question","name":"Qu'est-ce que le vibe coding ?","acceptedAnswer":{"@type":"Answer","text":"Fabriquer un logiciel en décrivant en français ce qu'on veut, pendant qu'une IA écrit le code. 3h33 construit ainsi ses propres applications depuis 2024, et les outils de ses clients, dont le code leur appartient : c'est devenu notre métier principal, Alexandre l'explique dans un message de 49 secondes. Voir aussi le vibe coding en entreprise."}},{"@type":"Question","name":"Qu'est-ce que Les Voix de l'IA ?","acceptedAnswer":{"@type":"Answer","text":"Un podcast gratuit de 3h33 : 130 portraits audio des femmes et des hommes qui font la tech et l'intelligence artificielle, racontés par Ada, Alan et Lia, des IA-nimateurs. Des IA cherchent ce qui a été publié, d'autres vérifient chaque fait, et les sources sont sous chaque épisode. Toute la série a été fabriquée en vibe coding. Écouter les portraits."}},{"@type":"Question","name":"La voix d'Alexandre est-elle vraiment clonée ?","acceptedAnswer":{"@type":"Answer","text":"Oui, avec son accord, et c'est annoncé à chaque fois. Ses messages et les teasers des invités des Voix de l'IA utilisent un clone de sa voix fabriqué par IA à partir de ses enregistrements de Choucroute Citron. Les images où il apparaît en mouvement sont créées par IA à partir de sa photo."}},{"@type":"Question","name":"La formation à l'IA est-elle obligatoire ?","acceptedAnswer":{"@type":"Answer","text":"L'article 4 de l'AI Act demande aux entreprises qui utilisent l'IA de prendre des mesures pour développer la maîtrise de l'IA de leurs équipes. Depuis l'omnibus numérique de juillet 2026, c'est une obligation de moyens et non de résultat. Le détail."}},{"@type":"Question","name":"Faut-il une équipe technique pour travailler avec 3h33 ?","acceptedAnswer":{"@type":"Answer","text":"Non. Formations, ateliers et sessions Forge sont conçus pour des équipes métier. Ce qui est construit est livré documenté, et l'on vous apprend à le faire vivre."}},{"@type":"Question","name":"Nos données restent-elles chez nous ?","acceptedAnswer":{"@type":"Answer","text":"Oui quand c'est nécessaire : nous travaillons avec des modèles hébergés en Europe ou installés sur vos propres serveurs, et la question est posée dès le premier échange. Voir IA locale et souveraine."}},{"@type":"Question","name":"Travaillez-vous avec les collectivités ?","acceptedAnswer":{"@type":"Answer","text":"Oui : formation des agents et construction d'outils pour plusieurs communes, dont la mairie de Laxou. Le point d'entrée dédié est mairie.ai."}},{"@type":"Question","name":"Combien ça coûte ?","acceptedAnswer":{"@type":"Answer","text":"Masterclass, ateliers et sessions Forge ont chacun un tarif fixe, annoncé avant tout engagement, et le devis tient sur une page. Nous intervenons à distance comme en présentiel, et le premier échange de vingt minutes est gratuit."}}]}]}</script>
 <script defer src="https://stats.3h33.com/script.js" data-website-id="9456f661-e1ea-4c9d-90bc-dec50970f3b4" data-domains="3h33.com,nouveau.3h33.com"></script>
 </head>
 <body>
@@ -512,17 +553,35 @@ html.calme .mots .m>span{transform:none;opacity:1}
     <div class="plan plan--loin" data-rate="0.12" data-souris="6"><svg id="svg-loin" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
     <div class="plan plan--milieu" data-rate="0.26" data-souris="12"><svg id="svg-milieu" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
     <div class="hero__contenu">
-      <div class="hero__texte">
+      <div class="hero__texte hero__texte--deux">
         <span class="chip"><span class="dot"></span>Agence et formation en IA · depuis 2010</span>
-        <h1 class="mots" data-mots>Formez vos équipes à l'IA et créez vos propres outils</h1>
-        <p class="sous">3h33 est une agence et un organisme de formation spécialisés dans l'intelligence artificielle générative. Formations, outils sur mesure en vibe coding, agents conversationnels, studio créatif : vous repartez avec quelque chose qui fonctionne, pas avec des notes.</p>
-        <div class="hero__actions">
-          <a class="btn" href="/contact/">Réserver un échange de 20 min <span class="fl">→</span></a>
-          <a class="lien lien--hero" href="#portes">Voir nos offres</a>
+        <div class="promesses">
+          <h1 class="promesses__titre"><span class="promesse__t promesse__t--1 mots" data-mots>Nous construisons vos outils avec l'IA</span> <span class="promesse__t promesse__t--2 mots" data-mots>et nous formons vos équipes à le faire</span></h1>
+          <span class="eyebrow promesse__e promesse__e--1">01 · Le vibe coding, notre nouveau métier</span>
+          <span class="eyebrow promesse__e promesse__e--2">02 · La formation</span>
+          <div class="promesse__c promesse__c--1">
+            <p class="sous">Trente ans dans le digital, et un nouveau métier : réaliser les projets des entreprises avec l'IA, vite et sur mesure. Vous décrivez en français, l'IA écrit le code, et le code est à vous.</p>
+            <button type="button" class="message" id="message-ouvrir" aria-haspopup="dialog">
+              <img src="/pour/alexandre-vibe-coding/alexandre.jpg" alt="" width="64" height="64">
+              <span class="message__txt"><b>Mon nouveau métier : le vibe coding</b><span>▶ Le message d'Alexandre · 49 s</span></span>
+            </button>
+            <div class="hero__actions">
+              <a class="btn" href="/contact/">Parlez-nous de votre projet <span class="fl">→</span></a>
+              <a class="lien lien--hero" href="#voix-de-lia">Ce qu'on a construit</a>
+            </div>
+          </div>
+          <div class="promesse__c promesse__c--2">
+            <p class="sous">Une masterclass de deux heures pour toute l'organisation, des ateliers sur les vrais dossiers de chaque métier, une formation à Claude : vos équipes repartent avec un outil qui fonctionne, pas avec des notes.</p>
+            <div class="hero__actions">
+              <a class="btn btn--clair" href="/formations/">Voir les formations <span class="fl">→</span></a>
+              <a class="lien lien--hero" href="/formation-ia-obligatoire-ai-act/">AI Act et formation</a>
+            </div>
+          </div>
         </div>
         <ul class="hero__preuves">
           <li><b>2010</b><span>l'année de création de l'agence</span></li>
           <li><b>38</b><span>sites et applications en ligne</span></li>
+          <li><b>130</b><span>portraits des Voix de l'IA, fabriqués en vibe coding</span></li>
           <li><b>½</b><span>journée pour un premier outil</span></li>
         </ul>
       </div>
@@ -530,6 +589,12 @@ html.calme .mots .m>span{transform:none;opacity:1}
     <div class="plan plan--devant" data-rate="0.5" data-souris="22"><svg id="svg-devant" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
     <div class="hero__sol"></div>
   </section>
+
+  <dialog class="message-dialogue" id="message-dialogue" aria-label="Mon nouveau métier : le vibe coding, le message d'Alexandre">
+    <button type="button" class="message-dialogue__fermer" aria-label="Fermer la vidéo">✕</button>
+    <video controls playsinline preload="none" poster="/pour/alexandre-vibe-coding/affiche.jpg" data-src="/pour/alexandre-vibe-coding/video.mp4"></video>
+    <p>Ma voix est clonée par IA, avec mon accord. <a href="/pour/alexandre-vibe-coding/">Partager ce message</a></p>
+  </dialog>
 
   <section class="bloc section" id="portes" aria-labelledby="portes-titre">
     <div class="entree">
@@ -539,6 +604,17 @@ html.calme .mots .m>span{transform:none;opacity:1}
     <div class="portes">
       <article class="porte">
         <span class="porte__n">01</span>
+        <h3>Construire</h3>
+        <p>En une demi-journée, nous fabriquons avec vos équipes un agent, une automatisation ou un tableau de bord. Le code est à vous, documenté, prêt le lendemain.</p>
+        <ul>
+          <li><a href="/forge/">Méthode Forge</a></li>
+          <li><a href="/vibe-coding/">Vibe coding</a></li>
+          <li><a href="/chatbots/">Chatbots et agents IA</a></li>
+          <li><a href="/ia-locale-souveraine/">IA locale et souveraine</a></li>
+        </ul>
+      </article>
+      <article class="porte">
+        <span class="porte__n">02</span>
         <h3>Former</h3>
         <p>Une masterclass de deux heures pour toute l'organisation, des ateliers d'un à deux jours sur les vrais dossiers de chaque métier, une formation à Claude pour aller plus loin.</p>
         <ul>
@@ -547,17 +623,6 @@ html.calme .mots .m>span{transform:none;opacity:1}
           <li><a href="/formation-claude/">Formation Claude</a></li>
           <li><a href="/formation-ia-obligatoire-ai-act/">AI Act et formation</a></li>
           <li><a href="https://botmoileqi.com/">BotMoiLeQi, pour les formateurs</a></li>
-        </ul>
-      </article>
-      <article class="porte">
-        <span class="porte__n">02</span>
-        <h3>Construire</h3>
-        <p>En une demi-journée, nous fabriquons avec vos équipes un agent, une automatisation ou un tableau de bord. Le code est à vous, documenté, prêt le lendemain.</p>
-        <ul>
-          <li><a href="/forge/">Méthode Forge</a></li>
-          <li><a href="/vibe-coding/">Vibe coding</a></li>
-          <li><a href="/chatbots/">Chatbots et agents IA</a></li>
-          <li><a href="/ia-locale-souveraine/">IA locale et souveraine</a></li>
         </ul>
       </article>
       <article class="porte">
@@ -581,6 +646,53 @@ html.calme .mots .m>span{transform:none;opacity:1}
           <li><a href="/synthetic-content/">Comédiens virtuels</a></li>
         </ul>
       </article>
+    </div>
+  </section>
+
+  <section class="bloc section lvia" id="voix-de-lia" aria-labelledby="lvia-titre">
+    <div class="entree">
+      <span class="eyebrow">La preuve par l'exemple</span>
+      <h2 id="lvia-titre">Les Voix de l'IA : une série entière, fabriquée en vibe coding</h2>
+      <p>Les portraits des femmes et des hommes qui font la tech et l'IA, racontés par Ada, Alan et Lia, nos IA-nimateurs. Gratuit, sur Apple Podcasts, Spotify et 3h33.com.</p>
+    </div>
+    <div class="lvia__grille">
+      <div class="lvia__mosaique">
+          <a href="/podcast-voix-de-lia/sam-altman/"><img src="/podcast-voix-de-lia/images/sam-altman-400.webp" alt="Sam Altman, portrait des Voix de l'IA" width="400" height="400" loading="lazy"></a>
+          <a href="/podcast-voix-de-lia/fei-fei-li/"><img src="/podcast-voix-de-lia/images/fei-fei-li-400.webp" alt="Fei-Fei Li, portrait des Voix de l'IA" width="400" height="400" loading="lazy"></a>
+          <a href="/podcast-voix-de-lia/jensen-huang/"><img src="/podcast-voix-de-lia/images/jensen-huang-400.webp" alt="Jensen Huang, portrait des Voix de l'IA" width="400" height="400" loading="lazy"></a>
+          <a href="/podcast-voix-de-lia/lisa-su/"><img src="/podcast-voix-de-lia/images/lisa-su-400.webp" alt="Lisa Su, portrait des Voix de l'IA" width="400" height="400" loading="lazy"></a>
+          <a href="/podcast-voix-de-lia/arthur-mensch/"><img src="/podcast-voix-de-lia/images/arthur-mensch-400.webp" alt="Arthur Mensch, portrait des Voix de l'IA" width="400" height="400" loading="lazy"></a>
+          <a href="/podcast-voix-de-lia/demis-hassabis/"><img src="/podcast-voix-de-lia/images/demis-hassabis-400.webp" alt="Demis Hassabis, portrait des Voix de l'IA" width="400" height="400" loading="lazy"></a>
+          <a href="/podcast-voix-de-lia/mira-murati/"><img src="/podcast-voix-de-lia/images/mira-murati-400.webp" alt="Mira Murati, portrait des Voix de l'IA" width="400" height="400" loading="lazy"></a>
+          <a href="/podcast-voix-de-lia/yann-lecun/"><img src="/podcast-voix-de-lia/images/yann-lecun-400.webp" alt="Yann LeCun, portrait des Voix de l'IA" width="400" height="400" loading="lazy"></a>
+          <a href="/podcast-voix-de-lia/fidji-simo/"><img src="/podcast-voix-de-lia/images/fidji-simo-400.webp" alt="Fidji Simo, portrait des Voix de l'IA" width="400" height="400" loading="lazy"></a>
+          <a href="/podcast-voix-de-lia/dario-amodei/"><img src="/podcast-voix-de-lia/images/dario-amodei-400.webp" alt="Dario Amodei, portrait des Voix de l'IA" width="400" height="400" loading="lazy"></a>
+          <a href="/podcast-voix-de-lia/sandra-le-grand/"><img src="/podcast-voix-de-lia/images/sandra-le-grand-400.webp" alt="Sandra Le Grand, portrait des Voix de l'IA" width="400" height="400" loading="lazy"></a>
+          <a href="/podcast-voix-de-lia/elon-musk/"><img src="/podcast-voix-de-lia/images/elon-musk-400.webp" alt="Elon Musk, portrait des Voix de l'IA" width="400" height="400" loading="lazy"></a>
+      </div>
+      <div class="lvia__info">
+        <div class="lvia__minute">
+          <img src="/podcast-voix-de-lia/images/alexandre-presentation-400.webp" alt="" width="72" height="72" loading="lazy">
+          <div><b>Les Voix de l'IA en une minute</b><span>par Alexandre Stopnicki, créateur de la série · 69 s</span>
+          <audio controls preload="none" src="/podcast-voix-de-lia/audio/presentation-voix-de-lia.mp3"></audio></div>
+        </div>
+        <ul class="lvia__chiffres">
+          <li><b>130</b><span>portraits à écouter</span></li>
+          <li><b>1 000+</b><span>questions de quiz</span></li>
+          <li><b>✓</b><span>les sources sous chaque épisode</span></li>
+        </ul>
+        <ul class="lvia__methode">
+          <li>Des IA cherchent tout ce qui a été publié : articles, interviews, livres, conférences.</li>
+          <li>D'autres vérifient chaque fait, point par point, sur ses sources.</li>
+          <li>Une conférence de rédaction relit avant la moindre voix. Aucune citation n'est inventée.</li>
+        </ul>
+        <div class="hero__actions">
+          <a class="btn" href="/podcast-voix-de-lia/">Écouter les portraits <span class="fl">→</span></a>
+          <a class="lien" href="https://podcasts.apple.com/fr/podcast/les-voix-de-lia/id6822430918" rel="noopener" target="_blank">Apple Podcasts</a>
+          <a class="lien" href="https://open.spotify.com/show/0rdllAOWQFhE8vTfKgAxzV" rel="noopener" target="_blank">Spotify</a>
+        </div>
+        <p class="lvia__lia">Lia vient de <a href="/podcasts/">Choucroute Citron</a>, le podcast où de vrais invités dialoguent en direct avec des IA-nimatrices.</p>
+      </div>
     </div>
   </section>
 
@@ -635,8 +747,8 @@ html.calme .mots .m>span{transform:none;opacity:1}
       <figure class="vcarte"><button type="button" class="vcarte__lire" data-video="qoEDtP7cRVg" aria-label="Lire la vidéo : Le clip de Choucroute Citron"><img src="https://i.ytimg.com/vi/qoEDtP7cRVg/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="vcarte__play" aria-hidden="true">▶</span></button><figcaption><b>Le clip de Choucroute Citron</b><span class="vcarte__meta">2025 · 3:18</span><span class="vcarte__texte">Le podcast, ses invités et ses IA-nimatrices, entièrement en images IA.</span></figcaption></figure>
     </div>
     <div class="podcasts">
-      <a class="podcast" href="/podcasts/"><span class="eyebrow">Podcast</span><b>Choucroute Citron</b><span>Des IA interviewent en direct des invités au parcours remarquable, de Richard Orlinski à Christian Etchebest. Plus de trente épisodes.</span></a>
-      <a class="podcast" href="/podcast-voix-de-lia/"><span class="eyebrow">Podcast</span><b>Les Voix de l'IA</b><span>Le portrait, en cinq à huit minutes, des dirigeants qui font l'IA : Sam Altman, Dario Amodei, Jensen Huang…</span></a>
+      <a class="podcast" href="/podcasts/"><span class="eyebrow">Podcast</span><b>Choucroute Citron</b><span>De vrais invités dialoguent en direct avec des IA-nimatrices, de Richard Orlinski à Christian Etchebest. Plus de trente épisodes. Lia, son IA-nimatrice, présente aussi Les Voix de l'IA.</span></a>
+      <a class="podcast" href="/podcast-voix-de-lia/"><span class="eyebrow">Podcast</span><b>Les Voix de l'IA</b><span>130 portraits des talents qui font la tech et l'IA, de Jensen Huang à Fidji Simo, racontés par Ada, Alan et Lia. Chaque fait est vérifié, avec ses sources.</span></a>
     </div>
   </section>
 
@@ -652,7 +764,9 @@ html.calme .mots .m>span{transform:none;opacity:1}
         <details><summary>Qui est Alexandre Stopnicki ?</summary><p>Le fondateur de 3h33, formateur et conférencier en intelligence artificielle. Il travaille dans le numérique depuis trente ans : en 1997, sa société Numériland tenait la régie publicitaire du <a href="/deuxieme-monde/">Deuxième Monde</a>, le métavers de Canal+. Il construit des chatbots depuis 2017 et commente l'actualité de l'IA dans l'émission The Artificial Intelligence Society.</p></details>
         <details><summary>Quelles formations à l'IA propose 3h33 ?</summary><p>Une <a href="/masterclass-ia/">masterclass</a> de deux heures pour acculturer jusqu'à cent personnes, des <a href="/ateliers-formation/">ateliers</a> d'un à deux jours où six à quinze participants pratiquent sur leurs propres dossiers, une <a href="/formation-claude/">formation Claude</a> d'un ou deux jours, et des <a href="/rendez-vous-ia-talent/">rendez-vous de veille</a> réguliers. Toutes partent des métiers et des cas réels.</p></details>
         <details><summary>Qu'est-ce que la méthode Forge ?</summary><p>Une session <a href="/forge/">Forge</a> est une demi-journée de co-construction en visioconférence, préparée en amont et consolidée après. On y fabrique avec vos équipes un agent, une automatisation ou un tableau de bord, documenté et utilisable dès le lendemain. L'objectif est de vous rendre autonomes, pas dépendants.</p></details>
-        <details><summary>Qu'est-ce que le vibe coding ?</summary><p>Fabriquer un logiciel en décrivant en français ce qu'on veut, pendant qu'une IA écrit le code. 3h33 construit ainsi ses propres applications depuis 2024, et les outils de ses clients, dont le code leur appartient. Voir <a href="/vibe-coding/">le vibe coding en entreprise</a>.</p></details>
+        <details><summary>Qu'est-ce que le vibe coding ?</summary><p>Fabriquer un logiciel en décrivant en français ce qu'on veut, pendant qu'une IA écrit le code. 3h33 construit ainsi ses propres applications depuis 2024, et les outils de ses clients, dont le code leur appartient : c'est devenu notre métier principal, Alexandre l'explique dans <a href="/pour/alexandre-vibe-coding/">un message de 49 secondes</a>. Voir aussi <a href="/vibe-coding/">le vibe coding en entreprise</a>.</p></details>
+        <details><summary>Qu'est-ce que Les Voix de l'IA ?</summary><p>Un podcast gratuit de 3h33 : 130 portraits audio des femmes et des hommes qui font la tech et l'intelligence artificielle, racontés par Ada, Alan et Lia, des IA-nimateurs. Des IA cherchent ce qui a été publié, d'autres vérifient chaque fait, et les sources sont sous chaque épisode. Toute la série a été fabriquée en vibe coding. <a href="/podcast-voix-de-lia/">Écouter les portraits</a>.</p></details>
+        <details><summary>La voix d'Alexandre est-elle vraiment clonée ?</summary><p>Oui, avec son accord, et c'est annoncé à chaque fois. Ses messages et les teasers des invités des Voix de l'IA utilisent un clone de sa voix fabriqué par IA à partir de ses enregistrements de Choucroute Citron. Les images où il apparaît en mouvement sont créées par IA à partir de sa photo.</p></details>
         <details><summary>La formation à l'IA est-elle obligatoire ?</summary><p>L'article 4 de l'AI Act demande aux entreprises qui utilisent l'IA de prendre des mesures pour développer la maîtrise de l'IA de leurs équipes. Depuis l'omnibus numérique de juillet 2026, c'est une obligation de moyens et non de résultat. <a href="/formation-ia-obligatoire-ai-act/">Le détail</a>.</p></details>
         <details><summary>Faut-il une équipe technique pour travailler avec 3h33 ?</summary><p>Non. Formations, ateliers et sessions Forge sont conçus pour des équipes métier. Ce qui est construit est livré documenté, et l'on vous apprend à le faire vivre.</p></details>
         <details><summary>Nos données restent-elles chez nous ?</summary><p>Oui quand c'est nécessaire : nous travaillons avec des modèles hébergés en Europe ou installés sur vos propres serveurs, et la question est posée dès le premier échange. Voir <a href="/ia-locale-souveraine/">IA locale et souveraine</a>.</p></details>
@@ -766,6 +880,11 @@ let attente=false;addEventListener("scroll",()=>{entete.classList.toggle("pose",
 rendre(scrollY);
 /* ---------- vidéos : le lecteur ne se charge qu'au clic ---------- */
 document.querySelectorAll(".vcarte__lire").forEach(b=>b.addEventListener("click",()=>{const f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+b.dataset.video+"?autoplay=1&rel=0";f.title=b.getAttribute("aria-label");f.allow="autoplay; encrypted-media; picture-in-picture";f.allowFullscreen=true;const c=document.createElement("div");c.className="vcarte__lire";c.appendChild(f);b.replaceWith(c)}));
+/* ---------- le message d'Alexandre : la vidéo ne se charge qu'au clic, son actif seulement après ce clic ---------- */
+(function(){const d=document.getElementById("message-dialogue"),o=document.getElementById("message-ouvrir");if(!d||!o)return;const v=d.querySelector("video");
+o.addEventListener("click",()=>{if(!v.src)v.src=v.dataset.src;d.showModal();v.play().catch(()=>{})});
+d.querySelector(".message-dialogue__fermer").addEventListener("click",()=>d.close());
+d.addEventListener("click",e=>{if(e.target===d)d.close()});d.addEventListener("close",()=>v.pause())})();
 /* ---------- menu sur petit écran ---------- */
 const burger=document.querySelector(".burger-accueil"),nav=document.getElementById("nav-principale");
 burger.addEventListener("click",()=>{const o=nav.classList.toggle("ouvert");burger.setAttribute("aria-expanded",String(o));burger.textContent=o?"✕":"☰"});

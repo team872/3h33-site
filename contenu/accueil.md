@@ -1,7 +1,7 @@
 ---
 titre: "3h33, l'agence de l'IA"
-titre_seo: "3h33, l'agence de l'IA : formation, vibe coding et agents IA"
-description: "Agence et organisme de formation en IA générative depuis 2010 : formations, outils sur mesure en vibe coding, agents conversationnels et studio créatif."
+titre_seo: "3h33, l'agence de l'IA : vibe coding, formation et agents IA"
+description: "Agence et formation en IA depuis 2010 : nous construisons vos outils en vibe coding et formons vos équipes à le faire. Agents IA, studio, podcast Les Voix de l'IA."
 url: /
 gabarit: accueil
 faq:
@@ -9,7 +9,9 @@ faq:
   - Qui est Alexandre Stopnicki ?|Le fondateur de 3h33, formateur et conférencier en intelligence artificielle. Il travaille dans le numérique depuis trente ans : en 1997, sa société Numériland tenait la régie publicitaire du [Deuxième Monde](/deuxieme-monde/), le métavers de Canal+. Il construit des chatbots depuis 2017 et commente l'actualité de l'IA dans l'émission The Artificial Intelligence Society.
   - Quelles formations à l'IA propose 3h33 ?|Une [masterclass](/masterclass-ia/) de deux heures pour acculturer jusqu'à cent personnes, des [ateliers](/ateliers-formation/) d'un à deux jours où six à quinze participants pratiquent sur leurs propres dossiers, une [formation Claude](/formation-claude/) d'un ou deux jours, et des [rendez-vous de veille](/rendez-vous-ia-talent/) réguliers. Toutes partent des métiers et des cas réels.
   - Qu'est-ce que la méthode Forge ?|Une session [Forge](/forge/) est une demi-journée de co-construction en visioconférence, préparée en amont et consolidée après. On y fabrique avec vos équipes un agent, une automatisation ou un tableau de bord, documenté et utilisable dès le lendemain. L'objectif est de vous rendre autonomes, pas dépendants.
-  - Qu'est-ce que le vibe coding ?|Fabriquer un logiciel en décrivant en français ce qu'on veut, pendant qu'une IA écrit le code. 3h33 construit ainsi ses propres applications depuis 2024, et les outils de ses clients, dont le code leur appartient. Voir [le vibe coding en entreprise](/vibe-coding/).
+  - Qu'est-ce que le vibe coding ?|Fabriquer un logiciel en décrivant en français ce qu'on veut, pendant qu'une IA écrit le code. 3h33 construit ainsi ses propres applications depuis 2024, et les outils de ses clients, dont le code leur appartient : c'est devenu notre métier principal, Alexandre l'explique dans [un message de 49 secondes](/pour/alexandre-vibe-coding/). Voir aussi [le vibe coding en entreprise](/vibe-coding/).
+  - Qu'est-ce que Les Voix de l'IA ?|Un podcast gratuit de 3h33 : 130 portraits audio des femmes et des hommes qui font la tech et l'intelligence artificielle, racontés par Ada, Alan et Lia, des IA-nimateurs. Des IA cherchent ce qui a été publié, d'autres vérifient chaque fait, et les sources sont sous chaque épisode. Toute la série a été fabriquée en vibe coding. [Écouter les portraits](/podcast-voix-de-lia/).
+  - La voix d'Alexandre est-elle vraiment clonée ?|Oui, avec son accord, et c'est annoncé à chaque fois. Ses messages et les teasers des invités des Voix de l'IA utilisent un clone de sa voix fabriqué par IA à partir de ses enregistrements de Choucroute Citron. Les images où il apparaît en mouvement sont créées par IA à partir de sa photo.
   - La formation à l'IA est-elle obligatoire ?|L'article 4 de l'AI Act demande aux entreprises qui utilisent l'IA de prendre des mesures pour développer la maîtrise de l'IA de leurs équipes. Depuis l'omnibus numérique de juillet 2026, c'est une obligation de moyens et non de résultat. [Le détail](/formation-ia-obligatoire-ai-act/).
   - Faut-il une équipe technique pour travailler avec 3h33 ?|Non. Formations, ateliers et sessions Forge sont conçus pour des équipes métier. Ce qui est construit est livré documenté, et l'on vous apprend à le faire vivre.
   - Nos données restent-elles chez nous ?|Oui quand c'est nécessaire : nous travaillons avec des modèles hébergés en Europe ou installés sur vos propres serveurs, et la question est posée dès le premier échange. Voir [IA locale et souveraine](/ia-locale-souveraine/).
