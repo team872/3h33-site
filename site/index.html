@@ -396,6 +396,47 @@ footer .bloc{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .lvia__methode{margin:0;padding-left:1.2em;color:var(--ink-2);font-size:16px;display:flex;flex-direction:column;gap:6px}
 .lvia__lia{margin:0;font-size:15px;color:var(--ink-2)}
 @media (max-width:860px){.lvia__grille{grid-template-columns:1fr}.lvia__mosaique{grid-template-columns:repeat(3,1fr)}}
+/* ---------- refonte « luxe futuriste » (18/10/2026) : l'esprit de /pour/alexandre-vibe-coding/ ----------
+   fini le paysage, les arbres et le coucher de soleil ; blanc, encre, bleu 3h33, touche d'or, verre dépoli. */
+:root{--verre:rgba(255,255,255,.62);--or-fin:#d6961e;--page:#f6f8fc}
+html{background:var(--page)}
+body{background:radial-gradient(1200px 700px at 85% -5%,#e3edff 0,transparent 60%),radial-gradient(900px 600px at -10% 30%,#fff4e2 0,transparent 55%),radial-gradient(1000px 700px at 110% 70%,#e8f0ff 0,transparent 60%),var(--page)}
+.hero{background:none;padding:150px 0 110px;min-height:auto}
+.hero__fond{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero__fond img,.hero__fond video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 60%;opacity:.55}
+.hero__fond::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--page) 0,rgba(246,248,252,.86) 42%,rgba(246,248,252,.35) 75%,rgba(246,248,252,.6) 100%),linear-gradient(180deg,rgba(246,248,252,0) 60%,var(--page) 100%)}
+.tuile{position:absolute;z-index:1;border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.8),rgba(255,255,255,.25));border:1px solid rgba(255,255,255,.95);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 18px 40px rgba(31,111,245,.12),inset 0 0 0 1px rgba(31,111,245,.06);animation:flotte 9s ease-in-out infinite;pointer-events:none;transform:rotate(var(--r,0deg))}
+.tuile--b{background:linear-gradient(145deg,rgba(61,139,255,.35),rgba(255,255,255,.3))}
+.tuile--o{box-shadow:0 18px 40px rgba(214,150,30,.16),inset 0 -3px 0 rgba(214,150,30,.5)}
+@keyframes flotte{0%,100%{transform:translate3d(0,0,0) rotate(var(--r,0deg))}50%{transform:translate3d(0,-14px,0) rotate(calc(var(--r,0deg) + 3deg))}}
+html.calme .tuile{animation:none}
+.chip{background:var(--verre);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.85);color:var(--acc);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 6px 20px rgba(15,21,36,.06)}
+.chip .dot{background:var(--or-fin);box-shadow:0 0 10px rgba(214,150,30,.7)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px}
+.entree .eyebrow::after{content:"";width:44px;height:3px;border-radius:2px;background:var(--or-fin)}
+.btn{background:linear-gradient(135deg,#1f6ff5,#3d8bff);box-shadow:0 12px 28px rgba(31,111,245,.3)}
+.btn:hover{box-shadow:0 16px 34px rgba(31,111,245,.42);transform:translateY(-1px)}
+.btn--clair{background:var(--verre);backdrop-filter:blur(10px);color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(31,111,245,.55),0 10px 24px rgba(15,21,36,.06)}
+.btn--or{background:linear-gradient(135deg,#d6961e,#f0b94a);color:#1b1408;box-shadow:0 12px 28px rgba(214,150,30,.32)}
+/* le verre, partout où il y avait une carte blanche */
+.porte,.podcast,.outil,.lvia__minute,.message,.capture,.qui__photo,.guides>*{background:var(--verre);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.88);box-shadow:0 20px 50px rgba(15,21,36,.08),inset 0 1px 0 rgba(255,255,255,.9)}
+.porte,.podcast,.outil,.lvia__minute,.capture{border-radius:24px}
+.porte{position:relative;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s}
+.porte::before{content:"";position:absolute;left:24px;top:0;width:44px;height:3px;border-radius:0 0 2px 2px;background:var(--or-fin)}
+.porte:hover,.outil:hover,.podcast:hover{transform:translateY(-4px);box-shadow:0 28px 60px rgba(31,111,245,.14),inset 0 1px 0 rgba(255,255,255,.9)}
+.porte ul{border-top-color:rgba(15,21,36,.08)}
+.outil img{border-bottom:1px solid rgba(255,255,255,.9)}
+.podcast{transition:transform .35s var(--ease),box-shadow .35s}
+.lvia__mosaique a{border-radius:18px;box-shadow:0 14px 34px rgba(15,21,36,.14)}
+.vcarte__lire{border-radius:22px;box-shadow:0 24px 60px rgba(15,21,36,.16)}
+.vcarte__play{background:rgba(255,255,255,.28)!important;backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.9);color:#fff}
+.faq-liste details[open] summary::after{background:var(--or-fin);border-color:var(--or-fin);color:#fff}
+/* le bas de page : plus de collines, un halo et deux tuiles */
+.final{background:radial-gradient(800px 420px at 50% 40%,#e6efff 0,transparent 70%),radial-gradient(600px 320px at 80% 90%,#fff1d8 0,transparent 70%);padding:120px 0 0;margin-top:110px}
+.final .espace{height:140px}
+footer.pied-site{background:rgba(255,255,255,.55);backdrop-filter:blur(10px);border-top:1px solid rgba(15,21,36,.06)}
+@media (max-width:860px){.hero{padding:120px 0 70px}.hero__fond img,.hero__fond video{opacity:.35}.tuile{display:none}}
+@media (prefers-reduced-motion:reduce){.tuile{animation:none}.hero__fond video{display:none}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.mots .m>span{transform:none;opacity:1}}
 html.calme *,html.calme *::before,html.calme *::after{animation:none!important;transition:none!important}
 html.calme #verre{opacity:.3}
@@ -549,9 +590,12 @@ html.calme .mots .m>span{transform:none;opacity:1}
 
 <main id="contenu">
   <section class="hero" id="haut">
-    <div class="plan plan--sablier" data-rate="0.05" aria-hidden="true"><div class="boite"><canvas data-sablier data-duree="28" data-debit="52"></canvas></div></div>
-    <div class="plan plan--loin" data-rate="0.12" data-souris="6"><svg id="svg-loin" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
-    <div class="plan plan--milieu" data-rate="0.26" data-souris="12"><svg id="svg-milieu" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+    <div class="hero__fond" aria-hidden="true">
+      <img src="/pour/alexandre-vibe-coding/fond-large.jpg" alt="" width="1280" height="900">
+      <video autoplay muted loop playsinline preload="none" poster="/pour/alexandre-vibe-coding/fond-large.jpg"><source src="/pour/alexandre-vibe-coding/fond-large.mp4" type="video/mp4"></video>
+    </div>
+    <span class="tuile" style="width:120px;height:84px;top:150px;right:9%;--r:-8deg" aria-hidden="true"></span>
+    <span class="tuile tuile--o" style="width:96px;height:60px;top:520px;right:5%;--r:6deg;animation-delay:-6s" aria-hidden="true"></span>
     <div class="hero__contenu">
       <div class="hero__texte hero__texte--deux">
         <span class="chip"><span class="dot"></span>Agence et formation en IA · depuis 2010</span>
@@ -586,8 +630,6 @@ html.calme .mots .m>span{transform:none;opacity:1}
         </ul>
       </div>
     </div>
-    <div class="plan plan--devant" data-rate="0.5" data-souris="22"><svg id="svg-devant" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
-    <div class="hero__sol"></div>
   </section>
 
   <dialog class="message-dialogue" id="message-dialogue" aria-label="Mon nouveau métier : le vibe coding, le message d'Alexandre">
@@ -792,8 +834,8 @@ html.calme .mots .m>span{transform:none;opacity:1}
   </section>
 
   <section class="final" id="capture">
-    <div class="plan plan--milieu" data-rate="0.18"><svg id="svg-final-milieu" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
-    <div class="plan plan--devant" data-rate="0.36"><svg id="svg-final-devant" viewBox="0 0 1600 420" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+    <span class="tuile" style="width:110px;height:76px;top:60px;left:8%;--r:-6deg" aria-hidden="true"></span>
+    <span class="tuile tuile--o" style="width:84px;height:84px;bottom:90px;right:10%;--r:8deg;animation-delay:-4s" aria-hidden="true"></span>
     <div class="bloc">
       <div class="capture">
         <span class="eyebrow">Contact</span>
@@ -866,11 +908,6 @@ function crete(seed,base,amp,n,couleur,arbres){const r=alea(seed),W=1600,H=420;l
   d+=` L${W} ${H} Z`;let s=`<path d="${d}" fill="${couleur}"/>`;
   for(let i=0;i<arbres;i++){const x=r()*W;const seg=Math.min(n-1,Math.floor(x/(W/n)));const t=(x-seg*W/n)/(W/n);const y=pts[seg][1]*(1-t)+pts[seg+1][1]*t+6;const h=14+r()*26,w=h*0.55;s+=`<path d="M${(x-w).toFixed(1)} ${y.toFixed(1)} L${x.toFixed(1)} ${(y-h).toFixed(1)} L${(x+w).toFixed(1)} ${y.toFixed(1)} Z" fill="#3d5f9c"/>`}
   return s}
-document.getElementById("svg-loin").innerHTML=crete(11,300,150,9,"#dbe8fb",0);
-document.getElementById("svg-milieu").innerHTML=crete(23,330,120,12,"#b9d1f5",0);
-document.getElementById("svg-devant").innerHTML=crete(37,360,90,16,"#6e8fc4",70);
-document.getElementById("svg-final-milieu").innerHTML=crete(41,330,110,10,"#cfe0fb",0);
-document.getElementById("svg-final-devant").innerHTML=crete(53,360,80,14,"#9fbcee",40);
 /* ---------- défilement : heure, paysage, en-tête, logos ---------- */
 const plans=[...document.querySelectorAll(".hero .plan")].map(el=>({el,rate:parseFloat(el.dataset.rate||"0")}));
 const heure=document.getElementById("heure"),entete=document.getElementById("entete"),defiles=[document.getElementById("defile-1"),document.getElementById("defile-2")];
@@ -891,6 +928,5 @@ burger.addEventListener("click",()=>{const o=nav.classList.toggle("ouvert");burg
 nav.addEventListener("click",e=>{if(e.target.closest("a")){nav.classList.remove("ouvert");burger.setAttribute("aria-expanded","false");burger.textContent="☰"}});
 let dx1=0,dx2=0;(function tourne(){if(!immobile()&&!document.hidden){dx1-=0.4;dx2+=0.32;const w1=defiles[0].scrollWidth/2,w2=defiles[1].scrollWidth/2;if(-dx1>w1)dx1+=w1;if(dx2>0)dx2-=w2;defiles[0].style.transform=`translateX(${dx1.toFixed(1)}px)`;defiles[1].style.transform=`translateX(${dx2.toFixed(1)}px)`}requestAnimationFrame(tourne)})();
 </script>
-<script defer src="/sablier.js"></script>
 </body>
 </html>
