@@ -2420,3 +2420,7 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .du-jour .dj-boutons .card-ouvrir:hover{background:var(--accent-clair)}
 @media (max-width:600px){.du-jour .dj-rond{height:34px;font-size:.7rem;padding:0 .7rem 0 .6rem;top:.5rem;right:.5rem}.du-jour .dj-boutons .card-ouvrir,.du-jour .dj-boutons .card-partager{flex:1 1 0;justify-content:center;padding:0 .7rem}}
 @media (max-width:600px){.du-jour .dj-boutons{flex-wrap:wrap;margin-top:.8rem}.du-jour .dj-boutons .card-ouvrir,.du-jour .dj-boutons .card-partager{flex:1 1 auto;min-height:40px;font-size:.84rem}.du-jour .dj-rond{height:28px;font-size:.62rem;padding:0 .55rem 0 .45rem;gap:.3rem;top:.4rem;right:.4rem}.du-jour .dj-rond svg{width:11px;height:11px}}
+
+/* 19/10/2026 : l'enquête seule en haut de la page portrait (l'abonnement n'y est plus) */
+
+.intro-conv .transcription-seule{white-space:nowrap;color:var(--accent-clair)}
