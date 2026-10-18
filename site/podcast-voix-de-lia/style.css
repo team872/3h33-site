@@ -2346,3 +2346,11 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 @keyframes qz-pop{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.12);opacity:1}100%{transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){.qz-verdict-icone{animation:none}}
 .reussi .qz-verdict-texte{font-weight:700}
+
+/* Verdict sous la question, réponses écartées retirées (18/10/2026) */
+.qz-verdict{margin:0 0 .8rem;border:1px solid transparent;animation:qz-arrive .4s var(--ease)}
+.reussi .qz-verdict{border-color:#86b59c88}
+.rate .qz-verdict{border-color:#d9727288}
+.qz-reponse.autre{display:none}
+.qz-retour{margin-top:.8rem}
+@media (prefers-reduced-motion:reduce){.qz-verdict{animation:none}}

@@ -2373,7 +2373,10 @@
         if (juste) vt.textContent = o.mode === "grand" && gq.serie > 1 ? "Bonne réponse ! " + gq.serie + " de suite." : "Bonne réponse !";
         else { vt.appendChild(el("b", "", "Raté !")); vt.appendChild(el("span", "qz-verdict-sous", "La bonne réponse : ")); $(".qz-verdict-sous", vt).appendChild(el("strong", "", fin(q.c[q.b]))); }
         verdict.appendChild(vt);
-        retour.appendChild(verdict);
+        // 18/10/2026, Alexandre : le verdict juste sous la question (il était tout en bas, hors de l'écran sur téléphone) ;
+        // les deux réponses écartées s'effacent, il ne reste que la sienne et la bonne : rien ne saute, tout tient à l'écran
+        var listeChoix = $(".qz-choix", bloc);
+        listeChoix.parentNode.insertBefore(verdict, listeChoix);
         // la phrase exacte de l'épisode, avec qui la dit : c'est la preuve que rien n'est inventé. L'explication n'est
         // ajoutée que si elle apporte autre chose : elle la répète dans 1 006 cas sur 1 017 (16/10, « redondance »)
         var p = o.mode === "grand" ? o.portraitDe(q) : null;
