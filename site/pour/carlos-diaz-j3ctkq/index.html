@@ -75,7 +75,8 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 .l-jouer svg{width:28px;height:28px;fill:currentColor}.l-jouer .i-pause{display:none}.lecteur.joue .l-jouer .i-jouer{display:none}.lecteur.joue .l-jouer .i-pause{display:inline}
 .l-bas{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--gris)}.l-recul{background:none;border:0;color:var(--gris);font:inherit;font-size:14px;cursor:pointer;padding:4px}
 .p-explication{margin:8px 0 0;color:var(--gris);font-size:14px;text-align:center}
-.apres-ecoute{margin:16px 0 0;padding:14px;border:1px dashed var(--or);text-align:center}.apres-ecoute p{margin:0 0 10px}.bouton-clair{background:none;border:1px solid var(--or);color:var(--or);margin:0}
+.apres-ecoute{margin:16px 0 0;text-align:center}.apres-ecoute .bouton{margin:0}.bouton-quiz strong{display:block;font-size:19px;font-weight:600;font-family:inherit}.bouton-quiz span{display:block;font-size:14px;font-weight:500;opacity:.8;margin-top:2px}.ae-sous{margin:8px 0 0;color:var(--gris);font-size:14px}
+#etape-portrait .bouton-partager{background:none;border:1px solid #c9a96b88;color:var(--or)}.bouton-clair{background:none;border:1px solid var(--or);color:var(--or);margin:0}
 .partager{margin:18px 0 0}.bouton-partager{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border:0;cursor:pointer;font-family:inherit;margin:0}.bouton-partager svg{width:22px;height:22px;fill:currentColor}
 .titre-partager{display:none}.p-reseaux{margin-top:10px}
 .p-reseaux{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
@@ -137,9 +138,9 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 </div>
 
 
-<div class="apres-ecoute" id="apres-ecoute"><p>Ton portrait est aussi en ligne, sur le site des Voix de l'IA, avec ses sources et son quiz.</p><a class="bouton bouton-clair" href="https://3h33.com/podcast-voix-de-lia/carlos-diaz/">Voir ma page publique →</a></div>
+<div class="apres-ecoute" id="apres-ecoute"><a class="bouton bouton-quiz" href="https://3h33.com/podcast-voix-de-lia/carlos-diaz/#quiz"><strong>Ton quiz : 8 questions sur toi →</strong><span>sur ta page publique · défie tes proches</span></a><p class="ae-sous">Ta page publique : ton portrait, ses sources et ton quiz, sur le site des Voix de l'IA.</p></div>
 <div class="partager" data-url="https://3h33.com/podcast-voix-de-lia/carlos-diaz/" data-texte="Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley — un portrait des Voix de l'IA">
-<button type="button" class="bouton bouton-partager p-natif"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16a3 3 0 0 0-2.4 1.2l-6.7-3.4a3 3 0 0 0 0-1.6l6.7-3.4A3 3 0 1 0 15 7l-6.7 3.4a3 3 0 1 0 0 3.2L15 17a3 3 0 1 0 3-1z"/></svg><span>Partager ton portrait public</span></button>
+<button type="button" class="bouton bouton-partager p-natif"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16a3 3 0 0 0-2.4 1.2l-6.7-3.4a3 3 0 0 0 0-1.6l6.7-3.4A3 3 0 1 0 15 7l-6.7 3.4a3 3 0 1 0 0 3.2L15 17a3 3 0 1 0 3-1z"/></svg><span>Partager ton portrait</span></button>
 <p class="p-explication">Le lien mène à ta page publique.</p>
 <div class="p-reseaux">
 <a class="p-reseau" href="https://wa.me/?text=Carlos%20Diaz%20%3A%20du%20prof%20de%20Limoges%20%C3%A0%20El%20Gringo%20de%20la%20Silicon%20Valley%20%E2%80%94%20un%20portrait%20des%20Voix%20de%20l'IA%20https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2Fcarlos-diaz%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.96L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.08.9.9-3-.2-.31a8.2 8.2 0 1 1 6.86 3.74zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.31c-.22.25-.86.84-.86 2.05 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.17-.47-.29z"/></svg><span>WhatsApp</span></a>
