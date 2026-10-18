@@ -60,7 +60,9 @@ a{color:var(--bleu)}:focus-visible{outline:3px solid var(--bleu);outline-offset:
 .la.joue .onde span{opacity:.95}
 .la .rail{background:var(--trait);margin-top:8px}
 .la .temps{display:flex;justify-content:space-between;color:var(--gris);font-size:.8rem;margin-top:6px;font-variant-numeric:tabular-nums}
-/* tuiles de verre qui flottent (décor) */
+/* tuiles de verre qui flottent (décor) ; .decor les garde dans la largeur de l'écran (sinon la page glisse de côté sur téléphone) */
+html{overflow-x:clip}
+.decor{position:absolute;inset:0;overflow:hidden;pointer-events:none}
 .tuile{position:absolute;z-index:1;border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.75),rgba(255,255,255,.25));border:1px solid rgba(255,255,255,.9);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);box-shadow:0 18px 40px rgba(31,111,245,.12),inset 0 0 0 1px rgba(31,111,245,.06);animation:flotte 9s ease-in-out infinite;pointer-events:none}
 .tuile.b{background:linear-gradient(145deg,rgba(61,139,255,.35),rgba(255,255,255,.3))}
 .tuile.o{box-shadow:0 18px 40px rgba(214,150,30,.16),inset 0 -3px 0 rgba(214,150,30,.5)}
@@ -81,9 +83,11 @@ a{color:var(--bleu)}:focus-visible{outline:3px solid var(--bleu);outline-offset:
 </div>
 </header>
 <main>
+<div class="decor" aria-hidden="true">
 <div class="tuile b" style="width:86px;height:86px;top:40px;right:-18px;--r:12deg"></div>
 <div class="tuile o" style="width:60px;height:60px;top:560px;left:-22px;--r:-10deg;animation-delay:-3s"></div>
 <div class="tuile" style="width:110px;height:72px;top:980px;right:-30px;--r:6deg;animation-delay:-6s"></div>
+</div>
 <div class="carte video apparait"><div class="lv" id="lv"><video playsinline preload="metadata" poster="affiche.jpg?v=085c6676" src="video.mp4?v=3f7a9dfa"></video>
 <button type="button" class="gros" aria-label="Lire la vidéo"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
 <div class="barre"><button type="button" class="btn pp" aria-label="Lecture ou pause"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button><div class="rail" aria-label="Avancer dans la vidéo"><i></i></div><span class="t">0:00</span><button type="button" class="btn son" aria-label="Couper le son"><svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4z"/></svg></button><button type="button" class="btn plein" aria-label="Plein écran"><svg viewBox="0 0 24 24"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/></svg></button></div></div></div>
