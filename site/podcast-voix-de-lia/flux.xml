@@ -18,7 +18,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Sat, 17 Oct 2026 01:00:28 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 16:00:49 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -36,6 +36,94 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Driss Aït Youssef : la sécurité, une affaire de libertés</title>
+      <itunes:title>Driss Aït Youssef : la sécurité, une affaire de libertés</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/driss-ait-youssef/</link>
+      <guid isPermaLink="false">voix-de-lia-driss-ait-youssef</guid>
+      <pubDate>Sun, 18 Oct 2026 16:00:49 GMT</pubDate>
+      <description>Docteur en droit public, ancien président de l'Institut Léonard de Vinci, il est l'un des consultants sécurité que BFMTV, franceinfo ou C dans l'air invitent : portrait d'un juriste pour qui la formation est une garantie des libertés.
+
+Épisode enregistré le 18 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/driss-ait-youssef/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Docteur en droit public, ancien président de l&#39;Institut Léonard de Vinci, il est l&#39;un des consultants sécurité que BFMTV, franceinfo ou C dans l&#39;air invitent : portrait d&#39;un juriste pour qui la formation est une garantie des libertés.</p><p>Épisode enregistré le 18 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/driss-ait-youssef/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/driss-ait-youssef.mp3?v=75b6c138" length="10073712" type="audio/mpeg"/>
+      <itunes:duration>416</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/driss-ait-youssef-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/driss-ait-youssef/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/driss-ait-youssef/chapitres.json?v=8c1fe7f8" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Marc Ménasé : des PC de la rue Montgallet au pont Paris-San Francisco</title>
+      <itunes:title>Marc Ménasé : des PC de la rue Montgallet au pont Paris-San Francisco</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/marc-menase/</link>
+      <guid isPermaLink="false">voix-de-lia-marc-menase</guid>
+      <pubDate>Sun, 18 Oct 2026 16:00:49 GMT</pubDate>
+      <description>Il montait les ordinateurs des copains, a refusé d'être « patron de l'Italie » chez Kelkoo, a connu la chute de Menlook, puis a bâti Founders Future, un fonds qui se dit « AI-first » entre Paris et San Francisco.
+
+Épisode enregistré le 18 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/marc-menase/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il montait les ordinateurs des copains, a refusé d&#39;être « patron de l&#39;Italie » chez Kelkoo, a connu la chute de Menlook, puis a bâti Founders Future, un fonds qui se dit « AI-first » entre Paris et San Francisco.</p><p>Épisode enregistré le 18 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/marc-menase/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/marc-menase.mp3?v=e2779dac" length="12033591" type="audio/mpeg"/>
+      <itunes:duration>498</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/marc-menase-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/marc-menase/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/marc-menase/chapitres.json?v=450d7b86" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Marc Simoncini : le poète qui a tout perdu avant de fonder Meetic</title>
+      <itunes:title>Marc Simoncini : le poète qui a tout perdu avant de fonder Meetic</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/marc-simoncini/</link>
+      <guid isPermaLink="false">voix-de-lia-marc-simoncini</guid>
+      <pubDate>Sun, 18 Oct 2026 16:00:48 GMT</pubDate>
+      <description>Le fils que son père présentait comme « poète » a choisi l'informatique par ordre alphabétique, découvert Internet un biberon à la main, tout perdu après iFrance, fondé Meetic… puis s'est mis au vibe coding en 2026.
+
+Épisode enregistré le 18 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/marc-simoncini/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Le fils que son père présentait comme « poète » a choisi l&#39;informatique par ordre alphabétique, découvert Internet un biberon à la main, tout perdu après iFrance, fondé Meetic… puis s&#39;est mis au vibe coding en 2026.</p><p>Épisode enregistré le 18 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/marc-simoncini/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/marc-simoncini.mp3?v=77471f15" length="12962930" type="audio/mpeg"/>
+      <itunes:duration>536</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/marc-simoncini-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/marc-simoncini/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/marc-simoncini/chapitres.json?v=eaed5015" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Louis Duroulle : de la préfecture au MBA qu'il dirige</title>
+      <itunes:title>Louis Duroulle : de la préfecture au MBA qu'il dirige</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/louis-duroulle/</link>
+      <guid isPermaLink="false">voix-de-lia-louis-duroulle</guid>
+      <pubDate>Sun, 18 Oct 2026 15:43:10 GMT</pubDate>
+      <description>Des amphis de Toulouse aux Terres australes, d'une lettre « écrite au culot », comme le raconte la Guilde des Plumes, à sa présidence : Louis Duroulle, communicant et directeur de MBA, explique l'IA chaque vendredi et préfère l'haltère à la prothèse.
+
+Épisode enregistré le 18 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/louis-duroulle/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Des amphis de Toulouse aux Terres australes, d&#39;une lettre « écrite au culot », comme le raconte la Guilde des Plumes, à sa présidence : Louis Duroulle, communicant et directeur de MBA, explique l&#39;IA chaque vendredi et préfère l&#39;haltère à la prothèse.</p><p>Épisode enregistré le 18 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/louis-duroulle/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/louis-duroulle.mp3?v=faffaa45" length="12402296" type="audio/mpeg"/>
+      <itunes:duration>513</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/louis-duroulle-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/louis-duroulle/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/louis-duroulle/chapitres.json?v=33b90ef8" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée</title>
       <itunes:title>Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée</itunes:title>
