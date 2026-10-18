@@ -396,6 +396,12 @@
       if (!bp) return;
       bp.classList.remove("rappel"); void bp.offsetWidth; bp.classList.add("rappel");
     });
+    // Écran de fin d'écoute (18/10/2026) : partager, le quiz, le portrait suivant
+    // dès « le mot de la fin » (événement episode:fin, ou la vraie fin si l'épisode n'a pas ce chapitre)
+    var montrerFin = function () { var fe = $("#fin-ecoute"); if (fe) fe.hidden = false; };
+    document.addEventListener("episode:fin", montrerFin);
+    audio.addEventListener("ended", montrerFin);
+    audio.addEventListener("play", function () { var fe = $("#fin-ecoute"); if (fe && !fe.hidden && audio.currentTime < 5) fe.hidden = true; });
     audio.addEventListener("play", function () {
       if (reprise > 15 && audio.currentTime < 1) audio.currentTime = reprise;
       reprise = 0;
@@ -2688,11 +2694,14 @@
         if (btEncart) btEncart.textContent = "Reprendre le quiz";
       }
       $$("[data-quiz-ouvrir]").forEach(function (b) { b.addEventListener("click", ouvrirQuiz); });
-      $$(".quiz-encart, .pa-quiz[data-quiz-ouvrir], .pa-quiz-grand[data-quiz-ouvrir]").forEach(function (x) { x.hidden = false; });
+      $$(".quiz-encart, .pa-quiz[data-quiz-ouvrir], .pa-quiz-grand[data-quiz-ouvrir], .fe-quiz[data-quiz-ouvrir]").forEach(function (x) { x.hidden = false; });
       if (location.hash === "#quiz") setTimeout(ouvrirQuiz, 300);
       // à la fin de l'écoute : une invitation discrète, une seule fois
       document.addEventListener("episode:fin", function () {
         if (fenetre.open || $(".quiz-invitation") || $(".quiz-revenir")) return;
+        // l'écran de fin d'écoute propose déjà le quiz : la bannière ne sert que s'il n'est pas à l'écran (18/10/2026)
+        var fe = $("#fin-ecoute");
+        if (fe) { var rf = fe.getBoundingClientRect(); if (rf.bottom > 0 && rf.top < window.innerHeight) return; }
         var inv = el("div", "quiz-invitation");
         inv.setAttribute("role", "status");
         inv.innerHTML = '<p><strong>Qu’avez-vous retenu ?</strong><span>' + dq.questions.length + " questions sur l'épisode</span></p>";
