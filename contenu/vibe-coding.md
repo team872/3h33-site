@@ -12,6 +12,8 @@ priorite: 1.0
 eyebrow: "Vibe coding"
 heure: "14:02 → 17:30"
 chapo: "Votre outil existe déjà. Il n'est simplement pas encore écrit. Décrire ce qu'on veut, le voir apparaître, le corriger à la voix : c'est comme ça que nous construisons depuis deux ans."
+en_bref: "Le vibe coding consiste à fabriquer un logiciel en décrivant en français ce qu'on veut obtenir, pendant qu'une intelligence artificielle écrit le code ; on corrige ensuite par itérations jusqu'au résultat. Pour une entreprise, c'est un outil interne obtenu en une demi-journée de session au lieu de plusieurs mois, du vrai code qui lui appartient, sans abonnement à une plateforme. Il ne dispense ni de relire, ni de tester, ni de sécuriser : c'est le rôle de 3h33."
+definition: "Vibe coding|Fabrication d'un logiciel en décrivant en langage courant ce qu'on veut obtenir, en dialoguant avec une intelligence artificielle qui écrit le code, puis en corrigeant par itérations successives jusqu'au résultat."
 faq:
   - Qu'est-ce que le vibe coding ?|Le vibe coding consiste à fabriquer un logiciel en décrivant en langage courant ce qu'on veut obtenir, en dialoguant avec une intelligence artificielle qui écrit le code, puis en corrigeant par itérations successives jusqu'au résultat.
   - Est-ce la même chose que le no-code ?|Non. Le no-code assemble des briques prévues à l'avance dans un outil fermé. Le vibe coding produit du vrai code, que vous possédez, sans limite de forme et sans abonnement à une plateforme.

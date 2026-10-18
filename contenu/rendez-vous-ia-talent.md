@@ -13,6 +13,7 @@ priorite: 0.8
 eyebrow: "Rendez-vous · en visioconférence"
 heure: "11:00 → 12:00"
 chapo: "Une équipe formée en janvier travaille en juin avec des outils qui ont changé trois fois. Une heure par mois suffit à ne pas décrocher."
+en_bref: "Les rendez-vous IA Talent sont un point mensuel d'une heure en visioconférence : ce qui a changé dans l'IA, filtré pour votre secteur, une démonstration, vos questions et ce qu'on adapte chez vous. Pour les équipes déjà formées et les référents internes."
 faq:
   - À quel rythme ont lieu les rendez-vous ?|Un rendez-vous par mois, en visioconférence, d'une heure environ.
   - Faut-il avoir suivi une formation avant ?|Non, mais les rendez-vous prennent tout leur sens après une masterclass ou un atelier.

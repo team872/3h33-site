@@ -9,6 +9,7 @@ fil: "No-code, low-code, vibe coding"
 priorite: 0.8
 eyebrow: "Comparatif"
 chapo: "En 2022, nous accompagnions les entreprises dans le no-code. Depuis, l'IA écrit du vrai code à partir d'une simple description. Le no-code n'a pas disparu, mais il n'est plus la seule réponse à « je voudrais un outil sans attendre six mois »."
+en_bref: "Le no-code assemble des briques visuelles d'une plateforme (Bubble, Airtable, Webflow) et l'application vit chez cet éditeur. Le low-code y ajoute un peu de code et vise les équipes informatiques (Power Apps, Retool). En vibe coding, on décrit ce qu'on veut à une IA qui écrit du vrai code, qui vous appartient, sans limite de forme ni abonnement imposé."
 faq:
   - Quelle différence entre no-code et low-code ?|Le no-code permet de construire une application uniquement par assemblage visuel, sans écrire une ligne : Bubble, Glide, Airtable, Webflow. Le low-code ajoute la possibilité d'écrire un peu de code pour aller plus loin, et vise plutôt les équipes informatiques : Power Apps, OutSystems, Retool.
   - Quelle différence entre no-code et vibe coding ?|Le no-code assemble des briques prévues par une plateforme, et l'application vit chez cette plateforme. En vibe coding, on décrit ce qu'on veut à une IA qui écrit du vrai code : l'application vous appartient, sans limite de forme ni abonnement imposé. Voir [le vibe coding en entreprise](/vibe-coding/).

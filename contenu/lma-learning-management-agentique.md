@@ -10,6 +10,8 @@ fil: "LMA"
 priorite: 0.9
 eyebrow: "Un mot nouveau, pour une chose nouvelle"
 chapo: "Un LMS range des cours. Un LMA les fait travailler : il retrouve, explique, interroge et s'adapte. Nous appelons ça le Learning Management Agentique."
+en_bref: "Le LMA, ou Learning Management Agentique, est une plateforme d'apprentissage dont le cœur n'est plus un catalogue de cours mais des agents d'IA qui retrouvent l'information, l'expliquent, interrogent l'apprenant et suivent sa progression. Il succède au LMS (Learning Management System), qui range des contenus. Le terme est proposé par 3h33 ; son LMA s'appelle BotMoiLeQi LMA."
+definition: "Learning Management Agentique (LMA)|Plateforme d'apprentissage dont le cœur n'est plus un catalogue de cours à parcourir, mais des agents qui retrouvent l'information, l'expliquent, interrogent l'apprenant et suivent sa progression. Successeur du LMS."
 faq:
   - Que veut dire LMA ?|LMA signifie Learning Management Agentique. Le terme désigne une plateforme d'apprentissage dont le cœur n'est plus un catalogue de cours à parcourir, mais des agents qui retrouvent l'information, l'expliquent, interrogent l'apprenant et suivent sa progression.
   - Quelle différence avec un LMS ?|Un LMS, Learning Management System, range des contenus et suit des inscriptions. Un LMA travaille sur ces contenus : il retrouve le passage exact qui répond à une question, reformule pour le niveau de la personne, pose des questions et adapte la suite du parcours.

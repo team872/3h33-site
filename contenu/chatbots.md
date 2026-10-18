@@ -11,6 +11,7 @@ fil: "Chatbots et agents"
 priorite: 0.9
 eyebrow: "Agence · agents"
 chapo: "Un bon agent ne récite pas un script. Il comprend la question, va chercher dans vos documents, cite le passage utilisé, et dit quand il ne sait pas."
+en_bref: "3h33 conçoit des agents conversationnels qui répondent à partir de vos documents, citent le passage utilisé, disent quand ils ne savent pas et peuvent agir dans vos outils. Contrairement à un chatbot classique qui suit un arbre de réponses, un agent comprend une demande libre. Les données sont hébergées chez un fournisseur européen ou sur vos serveurs."
 faq:
   - Quelle différence entre un chatbot et un agent ?|Un chatbot classique suit un arbre de réponses préécrites. Un agent comprend la demande, cherche dans vos documents, peut appeler d'autres outils et formule une réponse propre à la question posée.
   - L'agent peut-il se tromper ?|Oui, comme un humain. On réduit le risque en l'obligeant à citer ses sources, en limitant son périmètre et en lui apprenant à dire qu'il ne sait pas.

@@ -28,7 +28,7 @@ chapo: "Depuis 2024, Alexandre Stopnicki écrit, filme, met en musique et monte 
 
 **[Choucroute Citron](/podcasts/)** : des IA interviewent en direct des invités au parcours remarquable, de Richard Orlinski à Christian Etchebest. Plus de trente épisodes depuis 2025.
 
-**[Les Voix de l'IA](/podcast-voix-de-lia/)** : en cinq à huit minutes, le portrait des dirigeants qui façonnent l'IA, de Sam Altman à Jensen Huang.
+**[Les Voix de l'IA](/podcast-voix-de-lia/)** : 130 portraits d'une dizaine de minutes des femmes et des hommes qui font la tech et l'IA, de Sam Altman à Jensen Huang.
 
 ## Des œuvres vivantes
 

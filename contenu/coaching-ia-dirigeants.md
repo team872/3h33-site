@@ -10,6 +10,7 @@ fil: "Coaching des dirigeants"
 priorite: 0.9
 eyebrow: "Dirigeants"
 chapo: "Un dirigeant n'a pas besoin d'un cours sur l'IA. Il a besoin d'outils qui lui font gagner du temps, et d'un partenaire d'entraînement disponible la veille du rendez-vous qui compte. C'est ce que nous proposons, en trois volets."
+en_bref: "Le coaching IA des dirigeants par 3h33 combine trois volets : construire ses propres outils d'IA en session Forge d'une demi-journée, s'entraîner à négocier face à une IA vocale avec NegoVox, et préparer ses prises de parole avec Media Training Vox. Aucune connaissance technique n'est nécessaire ; le premier échange de vingt minutes est gratuit."
 faq:
   - En quoi consiste le coaching IA d'un dirigeant ?|En trois volets combinables : construire avec lui ses propres outils d'IA en session Forge, l'entraîner à la négociation avec NegoVox, et le préparer à ses prises de parole avec Media Training Vox. On part toujours de ses échéances réelles.
   - Faut-il des connaissances techniques ?|Aucune. Forge est conçue pour des équipes métier, et les simulateurs vocaux s'utilisent dans le navigateur, avec un micro et un casque.

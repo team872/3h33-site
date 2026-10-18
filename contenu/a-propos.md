@@ -10,6 +10,7 @@ fil: "À propos"
 priorite: 0.8
 eyebrow: "À propos"
 chapo: "Une agence qui fabrique au lieu de présenter, et un organisme de formation où l'on apprend en construisant."
+en_bref: "3h33 est une agence et un organisme de formation français, créé en 2010 par Alexandre Stopnicki, spécialisé depuis 2023 dans les usages de l'intelligence artificielle générative : former les équipes, construire les outils en vibe coding, produire les contenus. Plus de trente-cinq sites et outils sont en ligne, tous fabriqués ainsi."
 ---
 
 ## L'agence

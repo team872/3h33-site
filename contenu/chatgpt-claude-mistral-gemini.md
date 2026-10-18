@@ -9,6 +9,7 @@ fil: "ChatGPT, Claude, Mistral ou Gemini"
 priorite: 0.8
 eyebrow: "Comparatif"
 chapo: "C'est la question qu'on nous pose le plus souvent, et la réponse la plus honnête est : ça dépend de ce que vous en faites, de vos données et des outils que vous utilisez déjà. Voici comment trancher."
+en_bref: "Il n'y a pas un meilleur assistant d'IA pour toutes les entreprises. Claude est souvent préféré pour la rédaction longue, l'analyse de documents et le code ; ChatGPT pour sa polyvalence ; Gemini et Copilot pour leur intégration à Google Workspace et Microsoft 365 ; Le Chat de Mistral AI pour la souveraineté européenne. Choisissez sur des critères stables : données, outils déjà en place, usages réels et réversibilité."
 faq:
   - Quel est le meilleur assistant d'IA pour une entreprise ?|Il n'y en a pas un seul. Claude est souvent préféré pour la rédaction longue, l'analyse de documents et le code ; ChatGPT pour sa polyvalence et son écosystème ; Gemini et Copilot pour leur intégration à Google Workspace et à Microsoft 365 ; Mistral pour la souveraineté européenne. Beaucoup d'entreprises en combinent deux.
   - Mes données servent-elles à entraîner les modèles ?|Pas avec les offres professionnelles, qui s'engagent à ne pas entraîner leurs modèles sur vos échanges. Avec les versions gratuites ou personnelles, c'est souvent le cas par défaut. Vérifiez l'offre souscrite et ses réglages avant d'y mettre des données de l'entreprise.
