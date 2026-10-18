@@ -56,6 +56,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
       <itunes:author>Alexandre Stopnicki</itunes:author>
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/carlos-diaz-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/carlos-diaz/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/carlos-diaz/chapitres.json?v=f3a1f691" type="application/json+chapters"/>
     </item>
     <item>
       <title>Alexandre Michelin : de Nam June Paik au KIF, la création avant tout</title>
