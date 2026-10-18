@@ -18,7 +18,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Sun, 18 Oct 2026 16:03:59 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2026 16:31:26 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA</title>
@@ -36,6 +36,93 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley</title>
+      <itunes:title>Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/carlos-diaz/</link>
+      <guid isPermaLink="false">voix-de-lia-carlos-diaz</guid>
+      <pubDate>Sun, 18 Oct 2026 16:31:26 GMT</pubDate>
+      <description>Ancien professeur, diplômé de lettres, l'un des initiateurs des « Pigeons », puis voix de Silicon Carne depuis San Francisco : le portrait de Carlos Diaz, l'entrepreneur qui raconte la course à l'IA en français.
+
+Épisode enregistré le 18 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/carlos-diaz/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Ancien professeur, diplômé de lettres, l&#39;un des initiateurs des « Pigeons », puis voix de Silicon Carne depuis San Francisco : le portrait de Carlos Diaz, l&#39;entrepreneur qui raconte la course à l&#39;IA en français.</p><p>Épisode enregistré le 18 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/carlos-diaz/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/carlos-diaz.mp3?v=2d72c57e" length="12761897" type="audio/mpeg"/>
+      <itunes:duration>528</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/carlos-diaz-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/carlos-diaz/transcription.html" type="text/html" language="fr"/>
+    </item>
+    <item>
+      <title>Alexandre Michelin : de Nam June Paik au KIF, la création avant tout</title>
+      <itunes:title>Alexandre Michelin : de Nam June Paik au KIF, la création avant tout</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/alexandre-michelin/</link>
+      <guid isPermaLink="false">voix-de-lia-alexandre-michelin</guid>
+      <pubDate>Sun, 18 Oct 2026 16:24:24 GMT</pubDate>
+      <description>Il a dirigé l'antenne de Paris Première au temps de Paris Dernière, celle de France 5 quand naissait Rendez-vous en terre inconnue, puis MSN chez Microsoft, avant de réunir les pionniers de l'immersion et de l'IA au KIF : le portrait d'Alexandre Michelin, l'homme qui a presque toujours eu un écran d'avance.
+
+Épisode enregistré le 18 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/alexandre-michelin/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il a dirigé l&#39;antenne de Paris Première au temps de Paris Dernière, celle de France 5 quand naissait Rendez-vous en terre inconnue, puis MSN chez Microsoft, avant de réunir les pionniers de l&#39;immersion et de l&#39;IA au KIF : le portrait d&#39;Alexandre Michelin, l&#39;homme qui a presque toujours eu un écran d&#39;avance.</p><p>Épisode enregistré le 18 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/alexandre-michelin/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/alexandre-michelin.mp3?v=39d0ae08" length="12292298" type="audio/mpeg"/>
+      <itunes:duration>509</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/alexandre-michelin-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/alexandre-michelin/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/alexandre-michelin/chapitres.json?v=086b6835" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Christophe Dané : l'enfant qui rêvait de la Lune et enseigne à diriger l'IA</title>
+      <itunes:title>Christophe Dané : l'enfant qui rêvait de la Lune et enseigne à diriger l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/christophe-dane/</link>
+      <guid isPermaLink="false">voix-de-lia-christophe-dane</guid>
+      <pubDate>Sun, 18 Oct 2026 16:24:24 GMT</pubDate>
+      <description>Il voulait aller sur la Lune, il est « tombé dans la pub à la sortie du bac », a dirigé le numérique chez Mediaedge, Havas et Omnicom, puis est devenu pédagogue : depuis juillet 2026, il dirige les programmes de l'IIM, où l'on apprend à diriger l'IA.
+
+Épisode enregistré le 18 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/christophe-dane/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il voulait aller sur la Lune, il est « tombé dans la pub à la sortie du bac », a dirigé le numérique chez Mediaedge, Havas et Omnicom, puis est devenu pédagogue : depuis juillet 2026, il dirige les programmes de l&#39;IIM, où l&#39;on apprend à diriger l&#39;IA.</p><p>Épisode enregistré le 18 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/christophe-dane/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/christophe-dane.mp3?v=9d177d94" length="10309507" type="audio/mpeg"/>
+      <itunes:duration>426</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/christophe-dane-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/christophe-dane/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/christophe-dane/chapitres.json?v=096d8dc9" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Vincent Montet : le « fainéant » qui a rendu l'IA obligatoire</title>
+      <itunes:title>Vincent Montet : le « fainéant » qui a rendu l'IA obligatoire</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/vincent-montet/</link>
+      <guid isPermaLink="false">voix-de-lia-vincent-montet</guid>
+      <pubDate>Sun, 18 Oct 2026 16:24:24 GMT</pubDate>
+      <description>Il a créé un des premiers MBA du commerce en ligne, puis rendu l'IA obligatoire pour ses étudiants quand d'autres l'interdisaient : portrait de Vincent Montet, directeur-fondateur du MBA DMB de l'EFAP.
+
+Épisode enregistré le 18 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/vincent-montet/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il a créé un des premiers MBA du commerce en ligne, puis rendu l&#39;IA obligatoire pour ses étudiants quand d&#39;autres l&#39;interdisaient : portrait de Vincent Montet, directeur-fondateur du MBA DMB de l&#39;EFAP.</p><p>Épisode enregistré le 18 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/vincent-montet/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/vincent-montet.mp3?v=9ab5b915" length="10267461" type="audio/mpeg"/>
+      <itunes:duration>424</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/vincent-montet-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/vincent-montet/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/vincent-montet/chapitres.json?v=65534a80" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Driss Aït Youssef : la sécurité, une affaire de libertés</title>
       <itunes:title>Driss Aït Youssef : la sécurité, une affaire de libertés</itunes:title>
@@ -1465,28 +1552,6 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/eric-larcheveque-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/eric-larcheveque/transcription.html" type="text/html" language="fr"/>
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/eric-larcheveque/chapitres.json?v=872c0bc2" type="application/json+chapters"/>
-    </item>
-    <item>
-      <title>Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley</title>
-      <itunes:title>Carlos Diaz : du prof de Limoges à El Gringo de la Silicon Valley</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/carlos-diaz/</link>
-      <guid isPermaLink="false">voix-de-lia-carlos-diaz</guid>
-      <pubDate>Mon, 12 Oct 2026 20:30:34 GMT</pubDate>
-      <description>Ancien professeur, diplômé de lettres, l'un des initiateurs des « Pigeons », puis voix de Silicon Carne depuis San Francisco : le portrait de Carlos Diaz, l'entrepreneur qui raconte la course à l'IA en français.
-
-Épisode enregistré le 12 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/carlos-diaz/
-
-Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Ancien professeur, diplômé de lettres, l&#39;un des initiateurs des « Pigeons », puis voix de Silicon Carne depuis San Francisco : le portrait de Carlos Diaz, l&#39;entrepreneur qui raconte la course à l&#39;IA en français.</p><p>Épisode enregistré le 12 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/carlos-diaz/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/carlos-diaz.mp3?v=3c488cd1" length="12769420" type="audio/mpeg"/>
-      <itunes:duration>528</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/carlos-diaz-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/carlos-diaz/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/carlos-diaz/chapitres.json?v=36630a26" type="application/json+chapters"/>
     </item>
     <item>
       <title>Patrick Robin : du Minitel à la French Tech, sans diplôme supérieur</title>
