@@ -2114,7 +2114,7 @@
     /* le passage à réécouter : sur la page du portrait, le lecteur de l'épisode ; sur le grand quiz, un lecteur à
        part, jamais visible. La lecture s'arrête au début de la réplique suivante (tf). */
     var passage = { audio: null, fin: null, bouton: null };
-    var etiquette = function (b, joue) { b.classList.toggle("joue", joue); var t = $(".qz-ecoute-txt", b) || $(".qz-fin-btn-titre", b); if (t) t.textContent = joue ? "Pause" : b.getAttribute("data-libelle") || "Réécouter ce passage"; };
+    var etiquette = function (b, joue) { b.classList.toggle("joue", joue); var t = $(".qz-ecoute-txt", b) || $(".qz-fin-btn-titre", b); if (t) t.textContent = joue ? (b.classList.contains("qz-voix") ? (b.getAttribute("data-libelle") || "").split(" ")[0] + " vous répond…" : "Pause") : b.getAttribute("data-libelle") || "Réécouter ce passage"; };
     function ecouterPassage(bouton, audio, t, tf) {
       if (passage.bouton === bouton && !audio.paused) { audio.pause(); return; }
       if (passage.bouton && passage.bouton !== bouton) etiquette(passage.bouton, false);
@@ -2170,13 +2170,15 @@
       b.type = "button";
       var maj = function () {
         var on = voixActives();
-        b.innerHTML = on ? HP_OUI : HP_NON;
+        // 18/10/2026, Alexandre : l'icône seule ne se comprenait pas → l'état est écrit
+        b.innerHTML = (on ? HP_OUI : HP_NON) + '<span class="qz-hp-txt">' + (on ? "Voix activées" : "Voix coupées") + "</span>";
         b.setAttribute("aria-pressed", on ? "true" : "false");
         b.setAttribute("aria-label", on ? "Couper les voix du quiz" : "Remettre les voix du quiz");
         b.title = on ? "Couper les voix" : "Remettre les voix";
       };
       b.addEventListener("click", function () {
         ecrireLS("quiz-voix", voixActives() ? "non" : "oui");
+        $$(".qz-choix-voix").forEach(function (x) { x.remove(); });
         if (!voixActives()) couperPassage();
         $$(".qz-hp").forEach(function (x) { if (x.majHp) x.majHp(); });
       });
@@ -2405,7 +2407,10 @@
           vx.innerHTML = (q.av === "alexandre" ? '<img class="qz-avatar" src="../images/alexandre-stopnicki-avatar.jpg" width="32" height="32" alt="">' : ICONE_ECOUTE) + '<span class="qz-ecoute-txt"></span>';
           $(".qz-ecoute-txt", vx).textContent = libelle;
           vx.addEventListener("click", function () { ecouterPassage(vx, audioVoix(q.a), 0, null); });
-          actions.appendChild(vx);
+          // 18/10/2026, Alexandre : on doit voir qui parle → la voix est dans le bandeau ✓/✗, avec une onde qui bouge
+          vx.classList.add("qz-voix-bandeau");
+          vx.insertAdjacentHTML("beforeend", '<span class="qz-onde" aria-hidden="true"><i></i><i></i><i></i><i></i></span>');
+          verdict.appendChild(vx);
           if (voixActives() && !rejeu) setTimeout(function () { if (document.body.contains(vx)) ecouterPassage(vx, audioVoix(q.a), 0, null); }, 350);
         }
         var audio = o.mode === "grand" ? (p.s ? audioDe(p.s) : null) : audioDe(null);
@@ -2415,9 +2420,9 @@
           var ec = el("button", q.a ? "qz-lien qz-lien-son" : "qz-ecouter");
           ec.type = "button";
           if (q.a) {
-            ec.setAttribute("data-libelle", "L'entendre dans l'épisode");
-            ec.innerHTML = '<span class="qz-ecoute-txt">L\'entendre dans l\'épisode</span> <span class="qz-t">' + mmss(q.t) + "</span>";
-          } else ec.innerHTML = ICONE_ECOUTE + '<span class="qz-ecoute-txt">Réécouter ce passage</span><span class="qz-t">' + mmss(q.t) + "</span>";
+            ec.setAttribute("data-libelle", "Le passage de l'épisode");
+            ec.innerHTML = '<span class="qz-ecoute-txt">Le passage de l\'épisode</span> <span class="qz-t">' + mmss(q.t) + "</span>";
+          } else { ec.setAttribute("data-libelle", "Le passage de l'épisode"); ec.innerHTML = ICONE_ECOUTE + '<span class="qz-ecoute-txt">Le passage de l\'épisode</span><span class="qz-t">' + mmss(q.t) + "</span>"; }
           ec.addEventListener("click", function () { ecouterPassage(ec, audio, q.t, q.tf); });
           actions.appendChild(ec);
         }
@@ -2440,6 +2445,15 @@
         suite.innerHTML = "<span>" + (o.mode === "portrait" && i === liste.length - 1 ? "Voir mon score" : "Question suivante") + "</span>" + FLECHE;
         suite.addEventListener("click", suivante);
         actions.appendChild(suite);
+        // « Question suivante » se met en valeur quand la voix a fini de parler (on peut toujours cliquer avant)
+        if (q.a && voixActives() && !rejeu) {
+          suite.classList.add("qz-attend");
+          var lv = audioVoix(q.a);
+          var pret = function () { if (lv.getAttribute("data-src") !== q.a) return; suite.classList.remove("qz-attend"); suite.classList.add("qz-pret"); lv.removeEventListener("ended", pret); lv.removeEventListener("pause", pret); };
+          lv.addEventListener("ended", pret);
+          lv.addEventListener("pause", pret);
+          setTimeout(function () { if (suite.classList.contains("qz-attend")) { suite.classList.remove("qz-attend"); } }, 20000);
+        }
         retour.appendChild(actions);
         suite.focus({ preventScroll: true });
         // sur téléphone, l'explication peut tomber sous l'écran : on la montre, sans sauter
@@ -2636,6 +2650,17 @@
         $(".qf-tete", fenetre).insertBefore(boutonVoix(), $(".qf-fermer", fenetre));
         var mention = el("p", "qf-mention", (dq.ouverture ? "Voix d'Alexandre recréée par IA, avec son accord ; " : "") + "voix d'Ada, d'Alan et de Lia générées par IA.");
         $(".qf-tete", fenetre).insertAdjacentElement("afterend", mention);
+        // 18/10/2026, Alexandre : dire dès le départ qu'on peut jouer avec les voix (tant qu'on n'a pas choisi)
+        if (lireLS("quiz-voix") === null && dq.questions.some(function (q) { return q.a; })) {
+          var cv = el("div", "qz-choix-voix");
+          cv.innerHTML = '<p>Ada et Alan vous donnent les réponses à voix haute.</p>';
+          var avec = el("button", "qz-cv-avec", "Avec les voix (conseillé)"), sans = el("button", "qz-cv-sans", "Sans le son");
+          avec.type = sans.type = "button";
+          avec.addEventListener("click", function () { ecrireLS("quiz-voix", "oui"); cv.remove(); $$(".qz-hp").forEach(function (x) { if (x.majHp) x.majHp(); }); });
+          sans.addEventListener("click", function () { ecrireLS("quiz-voix", "non"); couperPassage(); if (lecteurVoix) lecteurVoix.pause(); cv.remove(); $$(".qz-hp").forEach(function (x) { if (x.majHp) x.majHp(); }); });
+          cv.appendChild(avec); cv.appendChild(sans);
+          mention.insertAdjacentElement("afterend", cv);
+        }
       }
       document.body.appendChild(fenetre);
       var moteur = monterQuiz($(".quiz-scene", fenetre), { mode: "portrait", questions: dq.questions, id: dq.id, grand: dq.grand, surPage: true, fermer: function () { fenetre.close(); } });

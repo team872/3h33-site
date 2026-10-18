@@ -2386,3 +2386,26 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .fe-choix[hidden]{display:none}
 @media (prefers-reduced-motion:reduce){.fin-ecoute{animation:none}}
 .fin-ecoute:not([hidden]) ~ .portrait-actions{display:none}
+
+/* Voix du quiz (18/10/2026, Alexandre : « qu'on entende les voix et les corrections ») */
+.qz-hp{width:auto;border-radius:999px;gap:.4rem;padding:0 .8rem 0 .6rem;font-family:var(--ff-body);font-size:.82rem;color:var(--text)}
+.qz-hp[aria-pressed="true"]{border-color:#c4a26599;color:var(--accent-clair)}
+@media (max-width:420px){.qz-hp-txt{display:none}.qz-hp{padding:0;width:42px}}
+.qz-mode-ligne .qz-hp{width:auto;padding:0 .6rem}
+.qz-choix-voix{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .6rem;padding:.7rem 1.1rem;border-bottom:1px solid var(--border);background:#c4a26512}
+.qz-choix-voix p{flex:1 1 100%;margin:0;font-size:.9rem}
+.qz-choix-voix button{min-height:38px;padding:.35rem .9rem;border-radius:999px;font-family:var(--ff-body);font-size:.88rem;cursor:pointer}
+.qz-cv-avec{border:0;background:var(--accent);color:var(--bg);font-weight:600}
+.qz-cv-sans{border:1px solid var(--border-2);background:none;color:var(--text)}
+.qz-verdict{flex-wrap:wrap}
+.qz-voix-bandeau{flex:1 1 100%;margin-top:.2rem;justify-content:flex-start;background:#00000033;border-color:transparent;color:var(--text);font-size:.92rem;font-family:var(--ff-body)}
+@container (min-width:520px){.qz-voix-bandeau{flex:0 0 auto;margin:0 0 0 auto}}
+.qz-onde{display:inline-flex;align-items:flex-end;gap:2px;height:14px;margin-left:.3rem}
+.qz-onde i{width:3px;height:30%;border-radius:2px;background:currentColor;opacity:.5}
+.qz-voix-bandeau.joue .qz-onde i{opacity:1;animation:qz-onde .9s ease-in-out infinite}
+.qz-voix-bandeau.joue .qz-onde i:nth-child(2){animation-delay:.15s}.qz-voix-bandeau.joue .qz-onde i:nth-child(3){animation-delay:.3s}.qz-voix-bandeau.joue .qz-onde i:nth-child(4){animation-delay:.45s}
+@keyframes qz-onde{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1.6)}}
+.qz-onde i{transform-origin:bottom}
+.qz-suivante.qz-attend{opacity:.55}
+.qz-suivante.qz-pret{animation:qz-pop .45s var(--ease)}
+@media (prefers-reduced-motion:reduce){.qz-voix-bandeau.joue .qz-onde i,.qz-suivante.qz-pret{animation:none}}
