@@ -2409,3 +2409,14 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .qz-suivante.qz-attend{opacity:.55}
 .qz-suivante.qz-pret{animation:qz-pop .45s var(--ease)}
 @media (prefers-reduced-motion:reduce){.qz-voix-bandeau.joue .qz-onde i,.qz-suivante.qz-pret{animation:none}}
+
+/* « À écouter aujourd'hui » (18/10/2026) : un seul ▶, en pastille avec la durée, en haut à droite de la vignette (il
+   cachait le nom) ; « La fiche complète » et « Partager » de même hauteur, dans la colonne du texte */
+.du-jour .dj-rond{top:.8rem;right:.8rem;bottom:auto;width:auto;height:40px;padding:0 .9rem 0 .75rem;gap:.45rem;display:inline-flex;align-items:center;border-radius:999px;font-family:var(--ff-mono);font-size:.78rem;letter-spacing:.04em}
+.du-jour .dj-rond svg{width:14px;height:14px;margin:0}
+.du-jour .dj-texte .dj-boutons{margin-top:1.2rem;grid-column:auto}
+.du-jour .dj-boutons{flex-wrap:wrap;gap:.45rem}.du-jour .dj-boutons .card-ouvrir,.du-jour .dj-boutons .card-partager{min-height:42px;padding:0 .75rem;font-size:.84rem;flex:0 0 auto;white-space:nowrap}
+.du-jour .dj-boutons .card-ouvrir{background:var(--accent);color:var(--bg);border-color:var(--accent)}
+.du-jour .dj-boutons .card-ouvrir:hover{background:var(--accent-clair)}
+@media (max-width:600px){.du-jour .dj-rond{height:34px;font-size:.7rem;padding:0 .7rem 0 .6rem;top:.5rem;right:.5rem}.du-jour .dj-boutons .card-ouvrir,.du-jour .dj-boutons .card-partager{flex:1 1 0;justify-content:center;padding:0 .7rem}}
+@media (max-width:600px){.du-jour .dj-boutons{flex-wrap:wrap;margin-top:.8rem}.du-jour .dj-boutons .card-ouvrir,.du-jour .dj-boutons .card-partager{flex:1 1 auto;min-height:40px;font-size:.84rem}.du-jour .dj-rond{height:28px;font-size:.62rem;padding:0 .55rem 0 .45rem;gap:.3rem;top:.4rem;right:.4rem}.du-jour .dj-rond svg{width:11px;height:11px}}
