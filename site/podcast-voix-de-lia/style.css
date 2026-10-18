@@ -2320,3 +2320,29 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .lecteur-pied .pa-partager::after{content:'';position:absolute;inset:-1px;border-radius:inherit;border:1px solid var(--accent);box-shadow:0 0 14px #c4a26599;opacity:0;pointer-events:none;will-change:transform,opacity;animation:partage-pouls 1.6s ease-out 4s 3}
 @keyframes partage-pouls{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.18)}}
 @media(prefers-reduced-motion:reduce){.lecteur-pied .pa-partager::after{animation:none}}
+
+/* Quiz : bonne ou mauvaise réponse, impossible de se tromper (18/10/2026, Alexandre : « ça doit être beaucoup plus
+   clair »). Bandeau vert ou rouge avec ✓ / ✗, étiquette sur les réponses, zone du retour encadrée. Animations en
+   transform et opacity seulement. */
+.qz-reponse{position:relative}
+.qz-etiquette{margin-left:auto;flex:none;font-family:var(--ff-mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .55rem;border-radius:999px}
+.qz-reponse.juste .qz-etiquette{background:var(--accent2-clair);color:var(--bg)}
+.qz-reponse.faux .qz-etiquette{background:#d97272;color:var(--bg)}
+.qz-reponse.juste{border-width:2px;background:#5b8a7240}
+.qz-reponse.faux{border-width:2px;border-color:#d97272;background:#c4656536}
+.qz-reponse.autre{opacity:.35}
+.qz-retour{padding:1rem 1.1rem 1.1rem;border:1px solid var(--border-2);background:#ffffff06}
+.reussi .qz-retour{border-color:#86b59c66;background:#5b8a7214}
+.rate .qz-retour{border-color:#d9727266;background:#c465650f}
+.qz-verdict{display:flex;align-items:center;gap:.85rem;margin:-1rem -1.1rem 1rem;padding:.9rem 1.1rem;font-size:1.5rem;line-height:1.2}
+.reussi .qz-verdict{background:#5b8a7240;color:#bfe3cd}
+.rate .qz-verdict{background:#c4656540;color:#f4c4c4}
+.qz-verdict-icone{flex:none;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--ff-body);font-size:1.4rem;font-weight:700;color:var(--bg);animation:qz-pop .5s var(--ease) both}
+.reussi .qz-verdict-icone{background:var(--accent2-clair)}
+.rate .qz-verdict-icone{background:#d97272}
+.qz-verdict-texte b{display:block;font-weight:700}
+.qz-verdict-sous{display:block;font-family:var(--ff-body);font-size:1rem;margin-top:.2rem;color:var(--text)}
+.rate .qz-verdict strong{color:#fff}
+@keyframes qz-pop{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.12);opacity:1}100%{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.qz-verdict-icone{animation:none}}
+.reussi .qz-verdict-texte{font-weight:700}

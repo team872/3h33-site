@@ -2338,8 +2338,11 @@
         $$(".qz-reponse", bloc).forEach(function (b) {
           var kb = Number(b.getAttribute("data-k"));
           b.disabled = true;
-          if (kb === q.b) b.classList.add("juste");
-          else if (kb === k) b.classList.add("faux");
+          // 18/10/2026, Alexandre : « on doit voir beaucoup plus clairement si c'est bon ou pas » → une étiquette
+          // sur la réponse choisie et, en cas d'erreur, sur la bonne
+          var etiq = function (t) { var x = el("span", "qz-etiquette", t); b.appendChild(x); };
+          if (kb === q.b) { b.classList.add("juste"); etiq(kb === k ? "✓ Votre réponse" : "✓ La bonne réponse"); }
+          else if (kb === k) { b.classList.add("faux"); etiq("✗ Votre réponse"); }
           else b.classList.add("autre");
         });
         if (!rejeu) {
@@ -2364,8 +2367,12 @@
 
         var retour = $(".qz-retour", bloc);
         var verdict = el("p", "qz-verdict");
-        if (juste) verdict.textContent = o.mode === "grand" && gq.serie > 1 ? "Bonne réponse ! " + gq.serie + " de suite." : "Bonne réponse !";
-        else { verdict.textContent = "Pas tout à fait. La réponse : "; verdict.appendChild(el("strong", "", fin(q.c[q.b]))); }
+        verdict.setAttribute("role", "status");
+        verdict.appendChild(el("span", "qz-verdict-icone", juste ? "✓" : "✗"));
+        var vt = el("span", "qz-verdict-texte");
+        if (juste) vt.textContent = o.mode === "grand" && gq.serie > 1 ? "Bonne réponse ! " + gq.serie + " de suite." : "Bonne réponse !";
+        else { vt.appendChild(el("b", "", "Raté !")); vt.appendChild(el("span", "qz-verdict-sous", "La bonne réponse : ")); $(".qz-verdict-sous", vt).appendChild(el("strong", "", fin(q.c[q.b]))); }
+        verdict.appendChild(vt);
         retour.appendChild(verdict);
         // la phrase exacte de l'épisode, avec qui la dit : c'est la preuve que rien n'est inventé. L'explication n'est
         // ajoutée que si elle apporte autre chose : elle la répète dans 1 006 cas sur 1 017 (16/10, « redondance »)
