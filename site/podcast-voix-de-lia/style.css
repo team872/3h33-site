@@ -2290,3 +2290,33 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 }
 /* Barre du haut sur tablette : 6 liens + « S'abonner » débordaient de 66 px à 768 px */
 @media(max-width:1024px){.barre nav a.facultatif{display:none}.barre nav{gap:1.1rem}}
+
+/* Pied de la carte du lecteur (18/10/2026, Alexandre : même fond que le lecteur, boutons qui se comprennent) */
+.lecteur .lecteur-pied{margin:1.1rem -1.2rem -1.2rem;padding:1.1rem 1.2rem 1.2rem;border-top:1px solid var(--border);background:#0f0f12}
+@media(min-width:700px){.lecteur .lecteur-pied{margin:1.3rem -1.6rem -1.5rem;padding:1.2rem 1.6rem 1.4rem}}
+.lecteur-pied .portrait-actions{margin-top:0;align-items:stretch}
+.pa-quiz-grand{flex:1 1 260px;display:flex;align-items:center;gap:.8rem;min-height:56px;padding:.7rem 1rem;border:0;border-radius:10px;background:var(--accent);color:var(--bg);font-family:var(--ff-body);text-align:left;cursor:pointer;transition:background .25s,transform .25s}
+.pa-quiz-grand:hover,.pa-quiz-grand:focus-visible{background:var(--accent-clair);transform:translateY(-1px)}
+.pa-quiz-grand>svg{width:24px;height:24px;flex:none}
+.pa-quiz-grand>svg:last-child{width:18px;height:18px;margin-left:auto}
+.pa-quiz-grand .pq-texte strong{display:block;font-size:1rem;font-weight:600}
+.pa-quiz-grand .pq-texte span{font-size:.8rem;opacity:.8}
+.pa-quiz-grand[hidden]{display:none}
+.lecteur-pied .pa-btn.pa-partager{align-self:center}
+.lecteur-pied .sommaire-fiche{display:grid;grid-template-columns:1fr;gap:.5rem;margin-top:1.1rem}
+@media(min-width:560px){.lecteur-pied .sommaire-fiche{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.lecteur-pied .sommaire-fiche .sf-titre{grid-column:1/-1;color:var(--accent)}
+.lecteur-pied .sommaire-fiche a{display:flex;align-items:flex-start;gap:.6rem;min-height:0;padding:.7rem .8rem;border:1px solid var(--border-2);border-radius:8px}
+.lecteur-pied .sommaire-fiche a svg{width:18px;height:18px;flex:none;margin-top:.15rem;color:var(--accent)}
+.lecteur-pied .sommaire-fiche a svg:not([fill]){fill:currentColor}
+.lecteur-pied .sommaire-fiche a strong{display:block;font-weight:500;font-size:.9rem}
+.lecteur-pied .sommaire-fiche a span span{display:block;font-size:.76rem;color:var(--text-dim);margin-top:.1rem}
+/* 18/10/2026, Alexandre : vignette plus grande, en haut de la colonne (elle flottait au milieu, avec du vide au-dessus) */
+@media(min-width:900px){.portrait-grille{grid-template-columns:minmax(0,11fr) minmax(0,13fr);gap:3rem;align-items:start}.portrait-visuel{max-width:600px;margin-top:2.2rem}}
+/* « Partager l'épisode » s'allume trois fois puis se tait (18/10/2026). Seuls transform et opacity bougent, sur un
+   calque à part : la carte graphique s'en charge, rien n'est recalculé dans la page. Rien si l'appareil demande moins
+   d'animations. */
+.lecteur-pied .pa-partager{position:relative;isolation:isolate}
+.lecteur-pied .pa-partager::after{content:'';position:absolute;inset:-1px;border-radius:inherit;border:1px solid var(--accent);box-shadow:0 0 14px #c4a26599;opacity:0;pointer-events:none;will-change:transform,opacity;animation:partage-pouls 1.6s ease-out 4s 3}
+@keyframes partage-pouls{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.18)}}
+@media(prefers-reduced-motion:reduce){.lecteur-pied .pa-partager::after{animation:none}}

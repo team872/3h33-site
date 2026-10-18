@@ -2674,7 +2674,7 @@
         if (btEncart) btEncart.textContent = "Reprendre le quiz";
       }
       $$("[data-quiz-ouvrir]").forEach(function (b) { b.addEventListener("click", ouvrirQuiz); });
-      $$(".quiz-encart, .pa-quiz[data-quiz-ouvrir]").forEach(function (x) { x.hidden = false; });
+      $$(".quiz-encart, .pa-quiz[data-quiz-ouvrir], .pa-quiz-grand[data-quiz-ouvrir]").forEach(function (x) { x.hidden = false; });
       if (location.hash === "#quiz") setTimeout(ouvrirQuiz, 300);
       // à la fin de l'écoute : une invitation discrète, une seule fois
       document.addEventListener("episode:fin", function () {
