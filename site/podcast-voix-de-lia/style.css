@@ -1381,14 +1381,10 @@ html.en-pause .replique.en-cours .bulle{animation:respire-bulle 1.6s ease-in-out
 html.en-ecoute .replique.en-cours .bulle:hover{box-shadow:0 0 0 1px var(--voix,var(--accent)),0 0 44px -6px var(--voix,var(--accent))}
 
 /* affichage « Essentiel » / « Tout afficher » (13/10/2026) : sans JavaScript, tout reste affiché comme avant */
-.affichage{display:inline-flex;margin-top:1.2rem;padding:3px;border:1px solid var(--border-2);border-radius:999px;background:#0c0c0f}
-html:not(.anime) .affichage{display:none}
-.affichage button{min-height:36px;padding:.4rem 1rem;border:0;border-radius:999px;background:none;color:var(--text-dim);font-family:var(--ff-body);font-size:.84rem;cursor:pointer;transition:background .25s,color .25s}
-.affichage button:hover{color:var(--text)}
-.affichage button[aria-pressed="true"]{background:var(--accent);color:var(--bg);font-weight:500}
 html.anime:not(.complet) .complet-seul{display:none!important}
 html.complet .simple-seul{display:none!important}
-html.anime:not(.complet) .portrait-corps{grid-template-columns:minmax(0,1fr);max-width:820px;margin-inline:auto}
+/* 18/10/2026 : plus de colonne unique en « essentiel » — les chapitres, désormais toujours visibles, sont collés sur le
+   côté (colonne de 260 px) ; en une colonne, la liste collante passait par-dessus la conversation au défilement */
 .plus-loin{margin-top:3.5rem;padding-top:2rem;border-top:1px solid var(--border-2)}
 .tiroir{margin-top:.7rem;border:1px solid var(--border-2);border-radius:14px;background:#0c0c0f;transition:border-color .25s}
 .tiroir[open]{border-color:#c4a26566}
@@ -2304,7 +2300,11 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .pa-quiz-grand[hidden]{display:none}
 .lecteur-pied .pa-btn.pa-partager{align-self:center}
 .lecteur-pied .sommaire-fiche{display:grid;grid-template-columns:1fr;gap:.5rem;margin-top:1.1rem}
-@media(min-width:560px){.lecteur-pied .sommaire-fiche{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* 3 liens côte à côte seulement si la carte du lecteur est assez large (pas l'écran : sur iPad en deux colonnes, la
+   carte est étroite) ; sinon l'un sous l'autre, et « Partager l'épisode » passe sous le quiz */
+.lecteur-pied{container-type:inline-size}
+@container (min-width:500px){.lecteur-pied .sommaire-fiche{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@container (max-width:499px){.lecteur-pied .pa-btn.pa-partager{flex:1 1 100%;justify-content:center}}
 .lecteur-pied .sommaire-fiche .sf-titre{grid-column:1/-1;color:var(--accent)}
 .lecteur-pied .sommaire-fiche a{display:flex;align-items:flex-start;gap:.6rem;min-height:0;padding:.7rem .8rem;border:1px solid var(--border-2);border-radius:8px}
 .lecteur-pied .sommaire-fiche a svg{width:18px;height:18px;flex:none;margin-top:.15rem;color:var(--accent)}
