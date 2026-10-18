@@ -2109,7 +2109,7 @@
     /* le passage à réécouter : sur la page du portrait, le lecteur de l'épisode ; sur le grand quiz, un lecteur à
        part, jamais visible. La lecture s'arrête au début de la réplique suivante (tf). */
     var passage = { audio: null, fin: null, bouton: null };
-    var etiquette = function (b, joue) { b.classList.toggle("joue", joue); $(".qz-ecoute-txt", b).textContent = joue ? "Pause" : b.getAttribute("data-libelle") || "Réécouter ce passage"; };
+    var etiquette = function (b, joue) { b.classList.toggle("joue", joue); var t = $(".qz-ecoute-txt", b) || $(".qz-fin-btn-titre", b); if (t) t.textContent = joue ? "Pause" : b.getAttribute("data-libelle") || "Réécouter ce passage"; };
     function ecouterPassage(bouton, audio, t, tf) {
       if (passage.bouton === bouton && !audio.paused) { audio.pause(); return; }
       if (passage.bouton && passage.bouton !== bouton) etiquette(passage.bouton, false);
@@ -2258,7 +2258,7 @@
         b.addEventListener("click", function () {
           var url = location.href;
           if (navigator.share) { navigator.share({ title: "Les Voix de l'IA", text: texte, url: url }).catch(function () {}); return; }
-          var ok = function () { b.textContent = "Message copié, collez-le à un ami"; setTimeout(function () { b.textContent = "Défier un ami"; }, 2600); };
+          var ok = function () { var t = b.querySelector(".qz-fin-btn-titre") || b; t.textContent = "Message copié, collez-le à un ami"; setTimeout(function () { t.textContent = "Défier un ami"; }, 2600); };
           if (navigator.clipboard) navigator.clipboard.writeText(texte + " " + url).then(ok, function () { window.prompt("Copiez ce message :", texte + " " + url); });
           else window.prompt("Copiez ce message :", texte + " " + url);
         });
@@ -2480,27 +2480,32 @@
         // à réécouter ; chaque palier met en avant la bonne suite. La voix : un son court commun à tous les portraits
         // (audio/quiz-fin/<palier>.mp3), joué si les voix du quiz sont actives ; absent, rien ne se passe.
         var palier = r === 1 ? "parfait" : r >= 0.75 ? "presque" : r >= 0.5 ? "pasmal" : "reecouter";
-        var mot = { parfait: "Sans faute ! Vous avez tout retenu.", presque: "Presque parfait !", pasmal: "Pas mal ! Quelques passages à réécouter.", reecouter: "Une deuxième écoute s'impose ?" }[palier];
+        var mot = { parfait: "Sans faute\u00a0! Vous avez tout retenu.", presque: "Presque parfait\u00a0!", pasmal: "Pas mal\u00a0! Quelques passages à réécouter.", reecouter: "Une deuxième écoute s'impose\u00a0?" }[palier];
         var titre = el("h3", "qz-fin-mot", mot);
         titre.tabIndex = -1;
         f.appendChild(titre);
         if (n === o.questions.length && meilleur) f.appendChild(el("p", "qz-fin-record", bonnes > meilleur ? "Nouveau record pour ce portrait (avant : " + meilleur + " / " + n + ")." : "Votre meilleur score sur ce portrait : " + meilleur + " / " + n + "."));
         var actions = el("div", "qz-actions qz-fin-actions");
         var erreurs = ratees.slice();
-        var bouton = function (texte, classe, fn) { var x = el("button", "btn " + classe, texte); x.type = "button"; x.addEventListener("click", fn); return x; };
-        var revoir = erreurs.length && erreurs.length < n ? bouton("Revoir mes erreurs (" + erreurs.length + ")", "btn-primary", function () { demarrer(erreurs); }) : null;
+        // 18/10/2026, Alexandre : « les boutons, on ne comprend pas trop » → chacun dit ce qu'il fait, en une ligne
+        var expliquer = function (x, sous) { var t = x.textContent; x.textContent = ""; x.appendChild(el("strong", "qz-fin-btn-titre", t)); if (sous) x.appendChild(el("span", "qz-fin-btn-sous", sous)); return x; };
+        var bouton = function (texte, classe, fn, sous) { var x = el("button", "btn " + classe, texte); x.type = "button"; x.setAttribute("data-libelle", texte); x.addEventListener("click", fn); return expliquer(x, sous); };
+        var revoir = erreurs.length && erreurs.length < n ? bouton("Revoir mes erreurs (" + erreurs.length + ")", "btn-primary", function () { demarrer(erreurs); }, "seulement les questions ratées") : null;
         var defi = defier(palier === "parfait" ? "Sans faute (" + n + " sur " + n + ") au quiz de ce portrait des Voix de l'IA. À toi !" : "J'ai eu " + bonnes + " sur " + n + " au quiz de ce portrait des Voix de l'IA. À toi !");
-        var encore = bouton(palier === "pasmal" ? "Rejouer" : "Recommencer", "btn-ghost", function () { demarrer(); });
+        var encore = bouton("Refaire le quiz", "btn-ghost", function () { demarrer(); }, "les " + n + " questions depuis le début");
         var suivant = document.querySelector("a.voisin.suivant");
-        var lienSuivant = suivant ? (function () { var x = el("a", "btn btn-ghost", "Le portrait suivant →"); x.href = suivant.href; return x; })() : null;
+        var lienSuivant = suivant ? (function () { var x = el("a", "btn btn-ghost", "Le portrait suivant →"); x.href = suivant.href; return expliquer(x, "écouter un autre épisode"); })() : null;
         var cle1 = erreurs.filter(function (q) { return q.t !== null && q.t !== undefined; })[0];
-        var passage = cle1 && audioDe(null) ? bouton("Réécouter le passage clé", "btn-primary", function () { ecouterPassage(this, audioDe(null), cle1.t, cle1.tf); }) : null;
+        var passage = cle1 && audioDe(null) ? bouton("Réécouter le passage clé", "btn-primary", function () { ecouterPassage(this, audioDe(null), cle1.t, cle1.tf); }, "le moment de l'épisode qui donne la réponse") : null;
         var jEp = function () { return document.querySelector(".lecteur[data-audio] .bouton-lecture") || document.querySelector("[data-jouer]"); };
-        var episode = jEp() ? bouton("Réécouter l'épisode", "btn-primary", function () { if (o.fermer) o.fermer(); var j = jEp(); if (j) { j.scrollIntoView({ behavior: "smooth", block: "center" }); if (j.getAttribute("aria-pressed") !== "true") j.click(); } }) : null;
+        var episode = jEp() ? bouton("Réécouter l'épisode", "btn-primary", function () { if (o.fermer) o.fermer(); var j = jEp(); if (j) { j.scrollIntoView({ behavior: "smooth", block: "center" }); if (j.getAttribute("aria-pressed") !== "true") j.click(); } }, "retour au lecteur") : null;
+        expliquer(defi, "lui envoyer votre score : " + bonnes + " / " + n);
         if (palier === "parfait") { defi.classList.remove("btn-ghost"); defi.classList.add("btn-primary"); [defi, lienSuivant, encore].forEach(function (x) { if (x) actions.appendChild(x); }); }
         else if (palier === "presque") [revoir, defi, encore].forEach(function (x) { if (x) actions.appendChild(x); });
         else if (palier === "pasmal") [passage || revoir, encore, defi].forEach(function (x) { if (x) actions.appendChild(x); });
         else [episode || passage, revoir, encore].forEach(function (x) { if (x) actions.appendChild(x); });
+        // une seule action en or : la première ; les autres en contour
+        $$(".btn-primary", actions).slice(1).forEach(function (x) { x.classList.remove("btn-primary"); x.classList.add("btn-ghost"); });
         if (o.grand) { var g = el("a", "qz-lien qz-grand"); g.href = o.grand; g.innerHTML = "<span>Le grand quiz : tous les portraits</span>" + FLECHE; actions.appendChild(g); }
         f.appendChild(actions);
         if (ratees.length) {
@@ -2620,7 +2625,7 @@
       var dq = JSON.parse(donneesQuiz.textContent);
       var fenetre = el("dialog", "quiz-fenetre");
       fenetre.setAttribute("aria-labelledby", "qf-titre");
-      fenetre.innerHTML = '<div class="qf-dedans"><div class="qf-tete"><h2 id="qf-titre"></h2><button type="button" class="rf-fermer qf-fermer" aria-label="Fermer le quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div><div class="quiz-scene"></div></div>';
+      fenetre.innerHTML = '<div class="qf-dedans"><div class="qf-tete"><h2 id="qf-titre"></h2><button type="button" class="rf-fermer qf-fermer" aria-label="Fermer le quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Fermer</span></button></div><div class="quiz-scene"></div></div>';
       $("#qf-titre", fenetre).textContent = "Le quiz · " + dq.nom;
       if (dq.ouverture || dq.questions.some(function (q) { return q.a; })) {
         $(".qf-tete", fenetre).insertBefore(boutonVoix(), $(".qf-fermer", fenetre));
