@@ -383,7 +383,8 @@ footer .bloc{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 :root{--verre:rgba(255,255,255,.62);--or-fin:#d6961e;--page:#f6f8fc}
 html{background:var(--page)}
 body{background:radial-gradient(1200px 700px at 85% -5%,#e3edff 0,transparent 60%),radial-gradient(900px 600px at -10% 30%,#fff4e2 0,transparent 55%),radial-gradient(1000px 700px at 110% 70%,#e8f0ff 0,transparent 60%),var(--page)}
-.hero{background:none;padding:150px 0 110px;min-height:auto}
+.hero{background:none;padding:150px 0 24px;min-height:auto}
+#portes{padding-top:56px}
 .hero__fond{position:absolute;inset:0;z-index:0;pointer-events:none}
 .hero__fond img,.hero__fond video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 60%;opacity:.55}
 .hero__fond::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--page) 0,rgba(246,248,252,.86) 42%,rgba(246,248,252,.35) 75%,rgba(246,248,252,.6) 100%),linear-gradient(180deg,rgba(246,248,252,0) 60%,var(--page) 100%)}
@@ -417,7 +418,7 @@ html.calme .tuile{animation:none}
 .final{background:radial-gradient(800px 420px at 50% 40%,#e6efff 0,transparent 70%),radial-gradient(600px 320px at 80% 90%,#fff1d8 0,transparent 70%);padding:120px 0 0;margin-top:110px}
 .final .espace{height:140px}
 footer.pied-site{background:rgba(255,255,255,.55);backdrop-filter:blur(10px);border-top:1px solid rgba(15,21,36,.06)}
-@media (max-width:860px){.hero{padding:120px 0 70px}.hero__fond img,.hero__fond video{opacity:.35}.tuile{display:none}}
+@media (max-width:860px){.hero{padding:120px 0 16px}#portes{padding-top:40px}.hero__fond img,.hero__fond video{opacity:.35}.tuile{display:none}}
 @media (prefers-reduced-motion:reduce){.tuile{animation:none}.hero__fond video{display:none}}
 /* le sablier garde l'idée du temps (Alexandre, 18/10) : filigrane en haut, objet visible au contact */
 .capture--sablier{display:grid;grid-template-columns:150px 1fr;gap:40px;align-items:center;max-width:900px;text-align:left}
