@@ -26,19 +26,12 @@
      Essentiel par défaut : le reste est rangé dans des tiroirs. « Tout afficher » les ouvre tous et la page s'en
      souvient. Un lien vers un passage rangé (#sources…) ouvre son tiroir. Une astuce, une seule fois : toucher une réplique. */
   (function () {
-    var boutons = $$("[data-affichage]");
-    if (!boutons.length) return;
+    // 18/10/2026, Alexandre : le bouton « Essentiel / Tout afficher » est retiré (on ne comprenait pas à quoi il servait ;
+    // les liens « Lire, vérifier, comprendre » et les tiroirs suffisent). La page reste en « essentiel ».
+    if (!$("details[data-tiroir]")) return;
     var lire = function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } };
     var ecrire = function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} };
-    var choisir = function (v, sauver) {
-      var complet = v === "complet";
-      doc.classList.toggle("complet", complet);
-      boutons.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-affichage") === v ? "true" : "false"); });
-      $$("details[data-tiroir]").forEach(function (t) { t.open = complet; });
-      if (sauver) ecrire("vdia-affichage", v);
-    };
-    choisir(lire("vdia-affichage") === "complet" ? "complet" : "simple", false);
-    boutons.forEach(function (b) { b.addEventListener("click", function () { choisir(b.getAttribute("data-affichage"), true); }); });
+    doc.classList.remove("complet");
     var ouvrirCible = function () {
       var id = location.hash.slice(1), el = null;
       if (!id) return;
