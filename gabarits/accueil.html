@@ -437,6 +437,15 @@ html.calme .tuile{animation:none}
 footer.pied-site{background:rgba(255,255,255,.55);backdrop-filter:blur(10px);border-top:1px solid rgba(15,21,36,.06)}
 @media (max-width:860px){.hero{padding:120px 0 70px}.hero__fond img,.hero__fond video{opacity:.35}.tuile{display:none}}
 @media (prefers-reduced-motion:reduce){.tuile{animation:none}.hero__fond video{display:none}}
+/* le sablier garde l'idée du temps (Alexandre, 18/10) : filigrane en haut, objet visible au contact */
+.hero .plan--sablier{z-index:2}
+.hero .plan--sablier canvas{opacity:.18;filter:drop-shadow(0 30px 40px rgba(31,111,245,.18))}
+html.calme .hero .plan--sablier canvas{opacity:.18}
+.capture--sablier{display:grid;grid-template-columns:150px 1fr;gap:40px;align-items:center;max-width:900px;text-align:left}
+.capture__sablier{line-height:0;filter:drop-shadow(0 24px 30px rgba(214,150,30,.22))}
+.capture__sablier canvas{display:block;width:100%;height:auto;aspect-ratio:440/620}
+.capture--sablier .capture__p{margin-left:0}
+@media (max-width:700px){.capture--sablier{grid-template-columns:1fr;text-align:center;justify-items:center}.capture__sablier{width:110px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}.mots .m>span{transform:none;opacity:1}}
 html.calme *,html.calme *::before,html.calme *::after{animation:none!important;transition:none!important}
 html.calme #verre{opacity:.3}
@@ -590,11 +599,11 @@ html.calme .mots .m>span{transform:none;opacity:1}
 
 <main id="contenu">
   <section class="hero" id="haut">
+    <div class="plan plan--sablier" data-rate="0.05" aria-hidden="true"><div class="boite"><canvas data-sablier data-duree="28" data-debit="52"></canvas></div></div>
     <div class="hero__fond" aria-hidden="true">
       <img src="/pour/alexandre-vibe-coding/fond-large.jpg" alt="" width="1280" height="900">
       <video autoplay muted loop playsinline preload="none" poster="/pour/alexandre-vibe-coding/fond-large.jpg"><source src="/pour/alexandre-vibe-coding/fond-large.mp4" type="video/mp4"></video>
     </div>
-    <span class="tuile" style="width:120px;height:84px;top:150px;right:9%;--r:-8deg" aria-hidden="true"></span>
     <span class="tuile tuile--o" style="width:96px;height:60px;top:520px;right:5%;--r:6deg;animation-delay:-6s" aria-hidden="true"></span>
     <div class="hero__contenu">
       <div class="hero__texte hero__texte--deux">
@@ -826,11 +835,14 @@ html.calme .mots .m>span{transform:none;opacity:1}
     <span class="tuile" style="width:110px;height:76px;top:60px;left:8%;--r:-6deg" aria-hidden="true"></span>
     <span class="tuile tuile--o" style="width:84px;height:84px;bottom:90px;right:10%;--r:8deg;animation-delay:-4s" aria-hidden="true"></span>
     <div class="bloc">
-      <div class="capture">
+      <div class="capture capture--sablier">
+        <div class="capture__sablier" aria-hidden="true"><canvas data-sablier data-duree="33" data-debit="52"></canvas></div>
+        <div class="capture__texte">
         <span class="eyebrow">Contact</span>
         <h2>Dites-nous ce qui vous prend du temps</h2>
         <p class="capture__p">Trois lignes suffisent. Nous répondons sous un jour ouvré, souvent par une démonstration plutôt que par une réunion. Le premier échange de vingt minutes est gratuit et sans engagement.</p>
         <a class="btn btn--or" href="/contact/">Nous contacter</a>
+        </div>
       </div>
     </div>
     <div class="espace"></div>
@@ -917,5 +929,6 @@ burger.addEventListener("click",()=>{const o=nav.classList.toggle("ouvert");burg
 nav.addEventListener("click",e=>{if(e.target.closest("a")){nav.classList.remove("ouvert");burger.setAttribute("aria-expanded","false");burger.textContent="☰"}});
 let dx1=0,dx2=0;(function tourne(){if(!immobile()&&!document.hidden){dx1-=0.4;dx2+=0.32;const w1=defiles[0].scrollWidth/2,w2=defiles[1].scrollWidth/2;if(-dx1>w1)dx1+=w1;if(dx2>0)dx2-=w2;defiles[0].style.transform=`translateX(${dx1.toFixed(1)}px)`;defiles[1].style.transform=`translateX(${dx2.toFixed(1)}px)`}requestAnimationFrame(tourne)})();
 </script>
+<script defer src="/sablier.js"></script>
 </body>
 </html>
