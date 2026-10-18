@@ -9,6 +9,7 @@ fil: "Dix ans de réalisations"
 priorite: 0.8
 eyebrow: "Réalisations · 1997 → 2026"
 chapo: "Nous faisons converser des marques avec leurs clients depuis 1997, et nous construisons des chatbots depuis 2017, cinq ans avant ChatGPT. Ce qui a changé en route : ils ne suivent plus un arbre de réponses, ils comprennent, cherchent, et aujourd'hui ils parlent."
+en_bref: "3h33 construit des chatbots depuis 2017, avec LècheBot, puis des agents pédagogiques comme BotMoiLeQi dès 2018 et 2019, et aujourd'hui des agents vocaux d'entraînement : NegoVox pour la vente, Media Training Vox pour la prise de parole. Dès 1997, Numériland, la société d'Alexandre Stopnicki, faisait accueillir les visiteurs par des avatars dans le Deuxième Monde de Canal+."
 faq:
   - Depuis quand 3h33 construit-elle des chatbots ?|Depuis 2017, avec LècheBot, puis une série d'agents pédagogiques et de démonstration en 2018 et 2019, dont BotMoiLeQi, conçu pour former et accompagner des étudiants, bien avant l'arrivée de ChatGPT.
   - Quelle différence entre les chatbots de 2019 et les agents d'aujourd'hui ?|Les premiers suivaient des scénarios écrits à l'avance : chaque question possible avait sa réponse. Un agent d'aujourd'hui comprend une demande formulée librement, va chercher l'information dans vos documents, enchaîne plusieurs étapes, et peut tenir une conversation à voix haute.

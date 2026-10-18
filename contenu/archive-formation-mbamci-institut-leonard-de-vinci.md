@@ -64,7 +64,7 @@ Des partenaires engagés et professionnels
 
 Un réseau de plus de 1000 étudiants
 
-### 3h33 et [Alexandre Stopnicki](https://twitter.com/alexandre3h33) assure la direction pédagogique du MBAMCI en partenariat avec l’ILV
+## 3h33 et [Alexandre Stopnicki](https://twitter.com/alexandre3h33) assure la direction pédagogique du MBAMCI en partenariat avec l’ILV
 
 Connexions du réseau #MBAMCIEtudiants #MBAMCICafés engloutis
 

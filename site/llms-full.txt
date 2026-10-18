@@ -2,6 +2,25 @@
 
 > 3h33 est une agence et un organisme de formation français, créé en 2010 par Alexandre Stopnicki, spécialisé dans les usages de l'intelligence artificielle générative en entreprise. Résumé court : https://3h33.com/llms.txt
 
+## Faits clés
+
+- Nom : 3h33 (aussi écrit 3H33), « l'agence de l'IA ». Site officiel : https://3h33.com
+- Nature : agence et organisme de formation français, spécialisés dans les usages de l'intelligence artificielle générative en entreprise.
+- Création : 2010, par Alexandre Stopnicki, qui en est le fondateur. Depuis 2023, l'essentiel du travail porte sur l'IA générative.
+- Ce que fait 3h33 : former les équipes (masterclass de deux heures, ateliers d'un à deux jours, formation Claude, rendez-vous de veille mensuels), construire avec elles des outils d'IA en vibe coding (agents, automatisations, tableaux de bord ; méthode Forge en une demi-journée) et produire des contenus avec son studio créatif (vidéos, podcasts, comédiens virtuels).
+- Réalisations : plus de trente-cinq sites et outils en ligne, tous fabriqués en vibe coding, réunis dans la galaxie 3h33 (https://3h33.com/galaxie/).
+- Applications éditées : NegoVox, Media Training Vox, BotMoiLeQi (et BotMoiLeQi LMA, BotMoiLeQi Slide), Le savez-vous ?.
+- Podcasts : Choucroute Citron (des IA-nimatrices interrogent des invités en direct) et Les Voix de l'IA (130 portraits des talents de la tech et de l'IA).
+- Clients cités sur le site : Criteo, Saint-Gobain, Air Liquide, Dentsply Sirona, Bolton Group, Robert Half, le Cnam, Esmod, Casino, Maria Schools, De Vinci Executive Education, l'Institut français, Giropharm, Les Acteurs de la Compétence, Acorus, la mairie de Laxou.
+- Zone : France ; interventions à distance comme en présentiel, en français (et en anglais sur demande).
+- Contact : https://3h33.com/contact/ — info@3h33.fr ; premier échange de vingt minutes gratuit.
+- Alexandre Stopnicki : fondateur de 3h33, formateur, conférencier et constructeur d'outils d'IA ; il travaille dans le numérique depuis trente ans.
+- En 1997, sa société Numériland tenait la régie publicitaire du Deuxième Monde, le métavers de Canal+ (https://3h33.com/deuxieme-monde/).
+- Il construit des chatbots depuis 2017 (LècheBot, puis BotMoiLeQi) et il est chroniqueur de l'émission The Artificial Intelligence Society.
+- Il anime le podcast Choucroute Citron. Site personnel : https://alexandrestopnicki.com ; créations visuelles : https://alexandre.ai ; LinkedIn : https://fr.linkedin.com/in/alexandrestopnicki
+
+---
+
 # 3h33, l'agence de l'IA
 URL : https://3h33.com/
 
@@ -39,6 +58,8 @@ URL : https://3h33.com/
 URL : https://3h33.com/vibe-coding/
 
 > Le vibe coding consiste à fabriquer un logiciel en dialoguant avec une IA. Ce que ça change pour une entreprise, et ce que ça ne remplace pas.
+
+En bref : Le vibe coding consiste à fabriquer un logiciel en décrivant en français ce qu'on veut obtenir, pendant qu'une intelligence artificielle écrit le code ; on corrige ensuite par itérations jusqu'au résultat. Pour une entreprise, c'est un outil interne obtenu en une demi-journée de session au lieu de plusieurs mois, du vrai code qui lui appartient, sans abonnement à une plateforme. Il ne dispense ni de relire, ni de tester, ni de sécuriser : c'est le rôle de 3h33.
 
 Votre outil existe déjà. Il n'est simplement pas encore écrit. Décrire ce qu'on veut, le voir apparaître, le corriger à la voix : c'est comme ça que nous construisons depuis deux ans.
 
@@ -147,6 +168,8 @@ URL : https://3h33.com/ateliers-formation/
 
 > Un à deux jours pour que vos équipes pratiquent l'IA sur leurs propres dossiers : contenus, données, automatisations. Ateliers sur mesure.
 
+En bref : Les ateliers de formation à l'IA de 3h33 durent un à deux jours, pour six à quinze participants, en présentiel ou à distance. Chacun travaille sur ses propres dossiers (contenus, données, automatisations, cadre et sécurité) et repart avec ses gabarits, une documentation et un référent interne.
+
 Personne ne regarde une démonstration. Chacun travaille sur ce qui lui prend du temps, avec les outils qu'il gardera ensuite.
 
 ## Apprendre en faisant
@@ -188,6 +211,8 @@ Pour un besoin plus profond, la [méthode Forge](/forge/) construit avec vous l'
 URL : https://3h33.com/chatbots/
 
 > Nous concevons des agents conversationnels qui répondent vraiment : nourris de vos documents, capables de citer leurs sources et branchés sur vos outils.
+
+En bref : 3h33 conçoit des agents conversationnels qui répondent à partir de vos documents, citent le passage utilisé, disent quand ils ne savent pas et peuvent agir dans vos outils. Contrairement à un chatbot classique qui suit un arbre de réponses, un agent comprend une demande libre. Les données sont hébergées chez un fournisseur européen ou sur vos serveurs.
 
 Un bon agent ne récite pas un script. Il comprend la question, va chercher dans vos documents, cite le passage utilisé, et dit quand il ne sait pas.
 
@@ -274,6 +299,8 @@ Le [studio créatif](/studios-creatifs-multi-services/) prend en charge les prod
 URL : https://3h33.com/coaching-ia-dirigeants/
 
 > Construire ses propres outils en une demi-journée, s'entraîner à négocier et à prendre la parole face à une IA vocale : l'accompagnement des dirigeants par 3h33.
+
+En bref : Le coaching IA des dirigeants par 3h33 combine trois volets : construire ses propres outils d'IA en session Forge d'une demi-journée, s'entraîner à négocier face à une IA vocale avec NegoVox, et préparer ses prises de parole avec Media Training Vox. Aucune connaissance technique n'est nécessaire ; le premier échange de vingt minutes est gratuit.
 
 Un dirigeant n'a pas besoin d'un cours sur l'IA. Il a besoin d'outils qui lui font gagner du temps, et d'un partenaire d'entraînement disponible la veille du rendez-vous qui compte. C'est ce que nous proposons, en trois volets.
 
@@ -370,6 +397,8 @@ URL : https://3h33.com/formation-ia-obligatoire-ai-act/
 
 > L'article 4 de l'AI Act oblige les entreprises à développer la maîtrise de l'IA de leurs équipes. Ce que dit le texte depuis l'omnibus de 2026, et comment faire.
 
+En bref : Oui, l'article 4 de l'AI Act (règlement (UE) 2024/1689), applicable depuis le 2 février 2025, oblige toute organisation qui utilise un système d'IA, même un simple assistant comme ChatGPT, Claude ou Copilot, à prendre des mesures pour développer la maîtrise de l'IA de ses équipes. Depuis l'omnibus numérique (règlement (UE) 2026/1744, en vigueur le 27 juillet 2026), c'est une obligation de moyens et non de résultat. Aucune certification n'est imposée, mais il faut garder une trace de ce qui a été fait.
+
 Depuis février 2025, une entreprise qui utilise l'intelligence artificielle doit agir pour que ses équipes sachent s'en servir. Le texte a été assoupli en juillet 2026, mais l'obligation demeure. Voici ce qu'elle recouvre, sans jargon.
 
 ## Ce que dit le texte
@@ -448,6 +477,8 @@ URL : https://3h33.com/ia-en-entreprise/
 
 > Par où commencer, quels usages, quels modèles, que faire des données, ce que demande l'AI Act, ce que change le vibe coding : nos réponses aux entreprises.
 
+En bref : Pour commencer avec l'IA en entreprise, partez d'une tâche concrète qui prend du temps, mesurez-la, construisez une première réponse avec l'IA et comparez. Les usages qui rapportent le plus vite touchent l'écrit et la recherche d'information. Depuis le 2 février 2025, l'article 4 de l'AI Act demande aux entreprises qui utilisent l'IA de développer la maîtrise de l'IA de leurs équipes, une obligation de moyens depuis juillet 2026.
+
 Dirigeants, DRH, directions métier, agents publics : ce sont les questions qu'on nous pose avant, pendant et après un premier projet d'intelligence artificielle. Les réponses tiennent en quelques lignes, et renvoient vers le détail quand il existe.
 
 ## Avant de lire les réponses
@@ -507,6 +538,8 @@ URL : https://3h33.com/lma-learning-management-agentique/
 
 > Le LMA, Learning Management Agentique, succède au LMS : une plateforme où des agents retrouvent, expliquent et interrogent l'apprenant.
 
+En bref : Le LMA, ou Learning Management Agentique, est une plateforme d'apprentissage dont le cœur n'est plus un catalogue de cours mais des agents d'IA qui retrouvent l'information, l'expliquent, interrogent l'apprenant et suivent sa progression. Il succède au LMS (Learning Management System), qui range des contenus. Le terme est proposé par 3h33 ; son LMA s'appelle BotMoiLeQi LMA.
+
 Un LMS range des cours. Un LMA les fait travailler : il retrouve, explique, interroge et s'adapte. Nous appelons ça le Learning Management Agentique.
 
 Notre LMA existe : c'est [BotMoiLeQi LMA](https://lma.botmoileqi.com), de la famille [BotMoiLeQi](https://botmoileqi.com). Les apprenants y sont accompagnés par un tuteur qui répond à partir des cours, les formateurs voient où ça bloque, et les preuves Qualiopi se constituent au fil de l'eau.
@@ -551,6 +584,8 @@ C'est aujourd'hui notre définition de travail du LMA, et nous construisons éga
 URL : https://3h33.com/masterclass-ia/
 
 > Deux heures pour démystifier l'intelligence artificielle et repartir avec des usages concrets. Masterclass d'acculturation à l'IA animée par Alexandre Stopnicki.
+
+En bref : La masterclass IA de 3h33 dure deux heures, en présentiel ou en visioconférence, pour dix à cent personnes. Animée par Alexandre Stopnicki, elle montre en direct ce que l'IA générative sait faire sur trois cas réels de vos équipes, sans connaissance technique préalable, et laisse une liste de premiers pas.
 
 Deux heures, des démonstrations en direct sur vos propres cas, et une salle qui sait enfin par où commencer.
 
@@ -625,6 +660,8 @@ URL : https://3h33.com/a-propos/
 
 > 3h33 est une agence et un organisme de formation spécialisés dans les usages de l'IA générative, fondés par Alexandre Stopnicki.
 
+En bref : 3h33 est une agence et un organisme de formation français, créé en 2010 par Alexandre Stopnicki, spécialisé depuis 2023 dans les usages de l'intelligence artificielle générative : former les équipes, construire les outils en vibe coding, produire les contenus. Plus de trente-cinq sites et outils sont en ligne, tous fabriqués ainsi.
+
 Une agence qui fabrique au lieu de présenter, et un organisme de formation où l'on apprend en construisant.
 
 ## L'agence
@@ -685,6 +722,8 @@ Pour les questions de conformité, notre outil [IA Conforme](https://ia-conforme
 URL : https://3h33.com/chatgpt-claude-mistral-gemini/
 
 > Les grands assistants d'IA comparés pour un usage professionnel : points forts, données, hébergement, intégration à vos outils, et comment choisir.
+
+En bref : Il n'y a pas un meilleur assistant d'IA pour toutes les entreprises. Claude est souvent préféré pour la rédaction longue, l'analyse de documents et le code ; ChatGPT pour sa polyvalence ; Gemini et Copilot pour leur intégration à Google Workspace et Microsoft 365 ; Le Chat de Mistral AI pour la souveraineté européenne. Choisissez sur des critères stables : données, outils déjà en place, usages réels et réversibilité.
 
 C'est la question qu'on nous pose le plus souvent, et la réponse la plus honnête est : ça dépend de ce que vous en faites, de vos données et des outils que vous utilisez déjà. Voici comment trancher.
 
@@ -764,6 +803,8 @@ URL : https://3h33.com/ia-locale-souveraine/
 
 > Garder ses données en Europe, ou ne rien laisser sortir : modèles européens, cloud souverain, IA installée sur vos serveurs. Ce qui est possible, à quel prix.
 
+En bref : Une IA locale est un modèle ouvert (Mistral, Llama, Qwen, Gemma) installé sur vos propres serveurs : aucune donnée ne sort. Une IA souveraine est un modèle européen hébergé dans l'Union européenne, chez un fournisseur soumis au droit européen. Entre les deux et le cloud américain avec garanties, on choisit selon la sensibilité des données.
+
 Contrats, dossiers patients, données RH, secrets de fabrication : certaines informations ne doivent pas quitter l'entreprise. Bonne nouvelle, l'IA peut venir à elles plutôt que l'inverse.
 
 ## Trois niveaux de maîtrise
@@ -808,6 +849,8 @@ Commencez par classer vos données : ce qui peut aller dans le cloud, ce qui doi
 URL : https://3h33.com/no-code/
 
 > Bubble, Airtable, Zapier, Power Apps ou une IA qui écrit le code : ce que chaque approche permet, ce qu'elle coûte à terme, et comment choisir pour votre entreprise.
+
+En bref : Le no-code assemble des briques visuelles d'une plateforme (Bubble, Airtable, Webflow) et l'application vit chez cet éditeur. Le low-code y ajoute un peu de code et vise les équipes informatiques (Power Apps, Retool). En vibe coding, on décrit ce qu'on veut à une IA qui écrit du vrai code, qui vous appartient, sans limite de forme ni abonnement imposé.
 
 En 2022, nous accompagnions les entreprises dans le no-code. Depuis, l'IA écrit du vrai code à partir d'une simple description. Le no-code n'a pas disparu, mais il n'est plus la seule réponse à « je voudrais un outil sans attendre six mois ».
 
@@ -864,6 +907,8 @@ URL : https://3h33.com/podcasts/
 
 > Choucroute Citron, le podcast où des IA interviewent des invités en direct, et Les Voix de l'IA, les portraits des dirigeants de l'IA mondiale.
 
+En bref : 3h33 produit deux podcasts. Choucroute Citron, animé par Alexandre Stopnicki, où des IA-nimatrices interrogent en direct des invités au parcours remarquable : plus de trente épisodes depuis 2025. Les Voix de l'IA : 130 portraits audio d'une dizaine de minutes des femmes et des hommes qui font la tech et l'intelligence artificielle, aux faits vérifiés et sourcés.
+
 Deux émissions. Dans la première, des IA posent leurs questions à des invités en chair et en os. Dans la seconde, on raconte en quelques minutes qui sont les dirigeants qui façonnent l'IA.
 
 ## Choucroute Citron, le podcast où des IA interviewent les invités
@@ -886,9 +931,9 @@ Vidéo : Le clip de Choucroute Citron, entièrement en images IA — https://www
 
 ## Les Voix de l'IA, les dirigeants de l'IA en portraits
 
-Qui sont les gens qui décident de ce que nous utiliserons demain ? Chaque épisode dresse, en cinq à huit minutes, le portrait d'un dirigeant de l'intelligence artificielle : son parcours, sa vision, ses obsessions. Un dialogue à deux voix, construit à partir d'interviews, de biographies et de conférences.
+Qui sont les gens qui décident de ce que nous utiliserons demain ? Chaque épisode dresse, en une dizaine de minutes, le portrait d'un dirigeant de l'intelligence artificielle : son parcours, sa vision, ses obsessions. Un dialogue à deux voix, construit à partir d'interviews, de biographies et de conférences.
 
-Les portraits : **Sam Altman** (OpenAI), **Dario Amodei** (Anthropic), **Jensen Huang** (NVIDIA), **Satya Nadella** (Microsoft), **Sundar Pichai** (Google), **Demis Hassabis** (Google DeepMind), **David Holz** (Midjourney), **Tim Cook** (Apple) et **Aravind Srinivas** (Perplexity), plus une introduction et un épisode sur ce qu'il ne faut jamais dire à une IA.
+Parmi les 130 portraits : **Sam Altman** (OpenAI), **Dario Amodei** (Anthropic), **Jensen Huang** (NVIDIA), **Satya Nadella** (Microsoft), **Sundar Pichai** (Google), **Demis Hassabis** (Google DeepMind), **David Holz** (Midjourney), **Tim Cook** (Apple) et **Aravind Srinivas** (Perplexity).
 
 [Écouter Les Voix de l'IA →](/podcast-voix-de-lia/)
 
@@ -896,7 +941,7 @@ Les portraits : **Sam Altman** (OpenAI), **Dario Amodei** (Anthropic), **Jensen 
 
 **Qu'est-ce que Choucroute Citron ?** Un podcast animé par Alexandre Stopnicki, où des IA-nimatrices et IA-nimateurs interviennent en direct pour interroger des invités au parcours remarquable : entrepreneurs, artistes, chercheurs, sportifs. Plus de trente épisodes depuis 2025, à écouter sur Apple Podcasts, Spotify, Deezer, Amazon Music et Ausha.
 
-**Qu'est-ce que Les Voix de l'IA ?** Une série de portraits de 5 à 8 minutes consacrés aux dirigeants de l'intelligence artificielle, de Sam Altman à Dario Amodei en passant par Jensen Huang, construits à partir de recherches approfondies et racontés sous forme de dialogue.
+**Qu'est-ce que Les Voix de l'IA ?** Une série gratuite de 130 portraits audio d'une dizaine de minutes consacrés aux femmes et aux hommes qui font la tech et l'intelligence artificielle, de Sam Altman à Dario Amodei en passant par Jensen Huang, racontés par Ada, Alan et Lia, des IA-nimateurs. Des IA cherchent ce qui a été publié, d'autres vérifient chaque fait, et les sources sont sous chaque épisode.
 
 **Peut-on être invité ou sponsoriser une émission ?** Oui. Les deux podcasts accueillent des partenaires, et Choucroute Citron reçoit des propositions d'invités. Écrivez-nous.
 
@@ -906,6 +951,8 @@ Les portraits : **Sam Altman** (OpenAI), **Dario Amodei** (Anthropic), **Jensen 
 URL : https://3h33.com/realisations-chatbots-agents/
 
 > De LècheBot en 2017 aux simulateurs vocaux NegoVox et Media Training Vox : les chatbots et agents conversationnels construits par 3h33, et ce qu'ils ont appris.
+
+En bref : 3h33 construit des chatbots depuis 2017, avec LècheBot, puis des agents pédagogiques comme BotMoiLeQi dès 2018 et 2019, et aujourd'hui des agents vocaux d'entraînement : NegoVox pour la vente, Media Training Vox pour la prise de parole. Dès 1997, Numériland, la société d'Alexandre Stopnicki, faisait accueillir les visiteurs par des avatars dans le Deuxième Monde de Canal+.
 
 Nous faisons converser des marques avec leurs clients depuis 1997, et nous construisons des chatbots depuis 2017, cinq ans avant ChatGPT. Ce qui a changé en route : ils ne suivent plus un arbre de réponses, ils comprennent, cherchent, et aujourd'hui ils parlent.
 
@@ -963,6 +1010,8 @@ La boucle se referme sur la voix. **[NegoVox](https://negovox.com/)** fait jouer
 URL : https://3h33.com/rendez-vous-ia-talent/
 
 > Des points réguliers en visioconférence pour suivre les évolutions de l'intelligence artificielle et adapter vos usages, sans y passer vos journées.
+
+En bref : Les rendez-vous IA Talent sont un point mensuel d'une heure en visioconférence : ce qui a changé dans l'IA, filtré pour votre secteur, une démonstration, vos questions et ce qu'on adapte chez vous. Pour les équipes déjà formées et les référents internes.
 
 Une équipe formée en janvier travaille en juin avec des outils qui ont changé trois fois. Une heure par mois suffit à ne pas décrocher.
 
@@ -1073,7 +1122,7 @@ Depuis 2024, Alexandre Stopnicki écrit, filme, met en musique et monte avec des
 
 **[Choucroute Citron](/podcasts/)** : des IA interviewent en direct des invités au parcours remarquable, de Richard Orlinski à Christian Etchebest. Plus de trente épisodes depuis 2025.
 
-**[Les Voix de l'IA](/podcast-voix-de-lia/)** : en cinq à huit minutes, le portrait des dirigeants qui façonnent l'IA, de Sam Altman à Jensen Huang.
+**[Les Voix de l'IA](/podcast-voix-de-lia/)** : 130 portraits d'une dizaine de minutes des femmes et des hommes qui font la tech et l'IA, de Sam Altman à Jensen Huang.
 
 ## Des œuvres vivantes
 
@@ -1558,3 +1607,144 @@ L’Intelligence Artificielle offre de nombreuses possibilités pour améliorer 
  [Contactez-nous](https://3h33.com/contactez-lagence-3h33-com/)
 
 ---
+
+# Les Voix de l'IA : les portraits
+URL : https://3h33.com/podcast-voix-de-lia/
+
+> Podcast gratuit de 3h33 : 130 portraits audio d'une dizaine de minutes des femmes et des hommes qui font la tech et l'intelligence artificielle, racontés par Ada, Alan et Lia, des IA-nimateurs. Chaque fait est vérifié, les sources sont sous chaque épisode.
+
+- Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée — Trois permissions demandées pour en obtenir une, soixante-dix rendez-vous pour dix investisseurs, une veste jaune dans les soirées grises et trois livres… https://3h33.com/podcast-voix-de-lia/sandra-le-grand/
+- Benjamin Perret : les journaux avant de savoir lire — Passé par Ogilvy et Euro RSCG, directeur de la communication d'Aéroports de Paris, de Fnac Darty et d'EDF, cofondateur de Nation Advisors en 2025… https://3h33.com/podcast-voix-de-lia/benjamin-perret/
+- Mike Krieger : de la première photo d'Instagram à Anthropic — Né à São Paulo, il a publié la toute première photo d'Instagram en 2010, connu l'échec avec Artifact, puis rejoint Anthropic, dont il quitte la direction… https://3h33.com/podcast-voix-de-lia/mike-krieger/
+- Arvind Jain, le chèque en blanc et la recherche « pas cool » — En 2013, il répondait « Je ne suis pas un entrepreneur » ; il a pourtant cofondé Rubrik, puis Glean, le moteur de recherche d'entreprise valorisé… https://3h33.com/podcast-voix-de-lia/arvind-jain/
+- Matthieu Rouif : du lasso de GoPro à Photoroom — Des heures à détourer une image au lasso chez GoPro, une appli codée en deux semaines, puis Photoroom, valorisée cinq cents millions de dollars… https://3h33.com/podcast-voix-de-lia/matthieu-rouif/
+- Eiso Kant : trop tôt sur l'IA du code, puis Poolside — Il a parié sur l'IA appliquée au code dès 2015, a connu ce qu'il appelle le plus grand échec de sa carrière, puis a cofondé Poolside en 2023, avant d'en… https://3h33.com/podcast-voix-de-lia/eiso-kant/
+- Charles Kantor : 220 millions avant le premier produit — Il a réuni quatre anciens de DeepMind et 220 millions de dollars avant même un premier produit, puis il est revenu en septembre 2026 avec Blackfuel… https://3h33.com/podcast-voix-de-lia/charles-kantor/
+- Daniel Ek : de la banlieue de Stockholm à Spotify — Élevé par sa mère dans une banlieue de Stockholm, Daniel Ek a cofondé Spotify en 2006 et l'a dirigé jusqu'à fin 2025. En 2026, il est aussi cofondateur… https://3h33.com/podcast-voix-de-lia/daniel-ek/
+- Patrick Collison : de Limerick aux paiements de l'IA — À seize ans, il gagnait un concours scientifique irlandais avec un langage de programmation ; en 2025, Stripe, l'entreprise cofondée avec son frère John… https://3h33.com/podcast-voix-de-lia/patrick-collison/
+- Thomas Plantenga : venu cinq semaines, il dirige Vinted — Venu en 2016 pour une mission de cinq semaines dans une start-up lituanienne promise à la faillite, le Néerlandais Thomas Plantenga n'est jamais reparti… https://3h33.com/podcast-voix-de-lia/thomas-plantenga/
+- Brian Chesky : des matelas gonflables au pari de l'IA — Un enfant qui dormait en tenue de hockey, des Pop-Tarts pas grillées, des céréales électorales et un ami nommé Sam Altman : le portrait de Brian Chesky… https://3h33.com/podcast-voix-de-lia/brian-chesky/
+- Kevin Systrom : d'un appareil en plastique à Instagram — Un disquaire harcelé, un professeur qui confisque un appareil photo, un chien devant un stand de tacos : Ada et Alan racontent Kevin Systrom, cofondateur… https://3h33.com/podcast-voix-de-lia/kevin-systrom/
+- Tony Fadell : dix ans d'échecs, puis l'iPod et Nest — Douze écoles en quinze ans, dix ans d'échecs, une maquette en polystyrène montrée à Steve Jobs : le portrait de Tony Fadell, l'un des pères de l'iPod… https://3h33.com/podcast-voix-de-lia/tony-fadell/
+- Stewart Butterfield : deux jeux ratés, Flickr et Slack — Né Dharma dans une cabane en rondins, diplômé de philosophie, Stewart Butterfield a raté deux fois le même jeu vidéo et en a tiré Flickr puis Slack : Ada… https://3h33.com/podcast-voix-de-lia/stewart-butterfield/
+- Niklas Zennström : de Kazaa à Skype, puis l'IA européenne — De Kazaa aux procès, de Skype à Atomico : le portrait d'un Suédois discret qui a appris de ses échecs et investit dans l'IA européenne. https://3h33.com/podcast-voix-de-lia/niklas-zennstrom/
+- Whitney Wolfe Herd : de Tinder à la fin du swipe — Des sacs en bambou à la cloche du Nasdaq, de Tinder à un assistant IA pour les rencontres : le parcours de Whitney Wolfe Herd, fondatrice de Bumble. https://3h33.com/podcast-voix-de-lia/whitney-wolfe-herd/
+- Jack Clark : le littéraire qui a vu venir le tsunami de l'IA — Ancien journaliste de Brighton, diplômé de lettres, cofondateur d'Anthropic : Ada et Alan racontent le parcours de Jack Clark, ses images marquantes… https://3h33.com/podcast-voix-de-lia/jack-clark/
+- Marc Andreessen : de Mosaic au combat pour accélérer l'IA — Il a coécrit le navigateur qui a affiché les images au milieu du texte sur le web, puis cofondé l'un des plus gros fonds de capital-risque du monde… https://3h33.com/podcast-voix-de-lia/marc-andreessen/
+- Aidan Gomez : le « T » de ChatGPT à 20 ans, puis Cohere — À vingt ans, stagiaire chez Google Brain, il cosigne l'article qui invente le Transformer. Il fonde ensuite Cohere à Toronto. Ada, Alan et Lia racontent… https://3h33.com/podcast-voix-de-lia/aidan-gomez/
+- Jonathan Cherki : des légumes secs à Contentsquare — Petit-fils d'un importateur marseillais de légumes secs, il dit n'avoir jamais écrit lui-même une ligne de code chez Contentsquare, et a pourtant bâti… https://3h33.com/podcast-voix-de-lia/jonathan-cherki/
+- Winston Weinberg : 86 sur 100, le test à l'origine de Harvey — Un jeune avocat qui ne connaissait rien au droit locatif, un colocataire chercheur en IA, un courriel à OpenAI : l'histoire vraie de Winston Weinberg… https://3h33.com/podcast-voix-de-lia/winston-weinberg/
+- Eddie Wu : l'ingénieur discret qui a converti Alibaba à l'IA — Cofondateur d'Alibaba, bâtisseur d'Alipay et de Taobao, Eddie Wu dirige le groupe depuis 2023 et l'a lancé dans l'IA de bout en bout, des puces… https://3h33.com/podcast-voix-de-lia/eddie-wu/
+- Richard Sutton, l'écureuil et la leçon amère — D'un D moins en neuropsychologie au prix Turing, le portrait de Rich Sutton, père de l'apprentissage par renforcement, qui prend l'écureuil au sérieux… https://3h33.com/podcast-voix-de-lia/richard-sutton/
+- Morris Chang, fondateur de TSMC, l'usine des puces de l'IA — Il rêvait d'être romancier, il a raté son examen de doctorat, puis il a inventé à Taïwan la fonderie pure : portrait de Morris Chang, fondateur de TSMC… https://3h33.com/podcast-voix-de-lia/morris-chang/
+- Mikey Shulman : des bœufs au sous-sol aux milliards de Suno — Docteur en physique, bassiste du soir et cofondateur de Suno, Mikey Shulman veut que chacun puisse faire de la musique, au cœur d'une bataille majeure… https://3h33.com/podcast-voix-de-lia/mikey-shulman/
+- Lei Jun : du clavier en papier à Xiaomi, voitures et IA — Fils d'un instituteur du Hubei, programmeur sur papier faute d'ordinateur, Lei Jun a fondé Xiaomi autour d'une marmite de millet avant de parier… https://3h33.com/podcast-voix-de-lia/lei-jun/
+- Jakub Pachocki : sceptique, puis chef scientifique d'OpenAI — Lycéen champion d'informatique à Gdynia, sceptique à son arrivée chez OpenAI, puis successeur d'Ilya Sutskever : Ada, Alan et leur invitée Lia racontent… https://3h33.com/podcast-voix-de-lia/jakub-pachocki/
+- Jean-Baptiste Rudelle : de la saladerie au Nasdaq — Fils d'un peintre et d'une historienne, il a imaginé Criteo dans l'arrière-boutique d'une saladerie avant de la mener jusqu'au Nasdaq : portrait… https://3h33.com/podcast-voix-de-lia/jean-baptiste-rudelle/
+- Thibaud Hug de Larauze : le pari fou de Back Market — D'un lycée français de Toronto à la licorne Back Market : le portrait du cofondateur qui a voulu rendre le reconditionné cool, et rentable. https://3h33.com/podcast-voix-de-lia/thibaud-hug-de-larauze/
+- Timothée Lacroix, le normalien qui fait tourner Mistral — Normalien, docteur de l'École des Ponts, coauteur de LLaMA puis cofondateur et directeur technique de Mistral AI : portrait du plus discret des trois… https://3h33.com/podcast-voix-de-lia/timothee-lacroix/
+- Nicolas Julia : l'envol et le retour sur terre de Sorare — Enfant, il collectionnait les images de footballeurs. En 2021, son jeu de cartes numériques Sorare lève six cent quatre-vingts millions de dollars. Puis… https://3h33.com/podcast-voix-de-lia/nicolas-julia/
+- Bernard Liautaud : le logiciel dont Oracle ne voulait pas — Il a racheté un logiciel dont Oracle ne voulait pas, l'a mené au Nasdaq puis l'a vendu à SAP : portrait de Bernard Liautaud, cofondateur de Business… https://3h33.com/podcast-voix-de-lia/bernard-liautaud/
+- Gary Marcus : le sceptique qui aime l'IA — De l'enfant qui dit « il a prendu » au Sénat américain, le portrait de Gary Marcus, chercheur en sciences cognitives devenu le critique le plus en vue… https://3h33.com/podcast-voix-de-lia/gary-marcus/
+- Jony Ive : du design de l'iPhone à OpenAI — Fils d'orfèvre, partenaire de Steve Jobs, père du design de l'iPhone, puis chargé du design chez OpenAI : portrait de Jony Ive, le designer qui se dit… https://3h33.com/podcast-voix-de-lia/jony-ive/
+- Edwin Chen, l'ingénieur qui apprend aux IA ce qui est bon — Fils de restaurateurs venus de Taïwan, passé par le MIT et Twitter, Edwin Chen a fondé Surge AI, qui fabrique les données humaines avec lesquelles… https://3h33.com/podcast-voix-de-lia/edwin-chen/
+- Dylan Field : de la bourse Thiel au milliard d'Adobe — Payé cent mille dollars pour quitter l'université, Dylan Field a fondé Figma, frôlé une vente à Adobe pour vingt milliards et fait de son outil un cas… https://3h33.com/podcast-voix-de-lia/dylan-field/
+- Joëlle Barral : de l'IRM à Google DeepMind — Polytechnicienne, docteure de Stanford en IRM, passée par la robotique chirurgicale : le portrait de Joëlle Barral, qui dirige depuis Paris une partie… https://3h33.com/podcast-voix-de-lia/joelle-barral/
+- Lucie Basch : de Too Good To Go à Poppins — Ingénieure passée par les usines de Nestlé, Lucie Basch a lancé Too Good To Go en France puis cofondé Poppins : portrait d'une entrepreneuse… https://3h33.com/podcast-voix-de-lia/lucie-basch/
+- Luc Julia, de Siri à Renault : « l'IA n'existe pas » — Chercheur au SRI, patron de l'équipe Siri chez Apple, directeur scientifique de Renault : le portrait de Luc Julia, le Toulousain qui répète… https://3h33.com/podcast-voix-de-lia/luc-julia/
+- Céline Lazorthes : de la cagnotte Leetchi au suivi du cancer — Elle a contribué à installer un réflexe bien français, la cagnotte en ligne, puis a tout misé sur le suivi des patients atteints de cancer : portrait… https://3h33.com/podcast-voix-de-lia/celine-lazorthes/
+- Sara Blakely : des ciseaux, un collant et un milliard — Sept ans de télécopieurs au porte-à-porte, une paire de ciseaux et un pantalon blanc : Ada et Alan racontent comment Sara Blakely a créé Spanx sans… https://3h33.com/podcast-voix-de-lia/sara-blakely/
+- Cristóbal Valenzuela : la thèse jamais rendue devenue Runway — Un étudiant chilien en économie, artiste la nuit, transforme son projet de fin d'études à New York en Runway, pionnière de la vidéo générée par IA : Ada… https://3h33.com/podcast-voix-de-lia/cristobal-valenzuela/
+- Alex Karp : le philosophe de Palantir qui a choisi son camp — Docteur en sciences sociales formé à Francfort, ami de Peter Thiel et cofondateur de Palantir : portrait d'Alex Karp, l'homme qui veut mettre l'IA… https://3h33.com/podcast-voix-de-lia/alex-karp/
+- Andrew Feldman, l'économiste de la puce géante Cerebras — Fils de professeurs de Stanford, économiste et passionné de barbecue, Andrew Feldman a cofondé Cerebras, l'entreprise de la puce géante, et l'a menée… https://3h33.com/podcast-voix-de-lia/andrew-feldman/
+- Jonathan Ross : du TPU de Google aux puces Groq chez Nvidia — Il a lancé la première puce d'IA maison de Google, cofondé Groq, frôlé la panne sèche, puis rejoint Nvidia : portrait de Jonathan Ross, obsédé… https://3h33.com/podcast-voix-de-lia/jonathan-ross/
+- Chris Olah : le décrocheur qui regarde dans la tête des IA — Sans aucun diplôme universitaire, Chris Olah est devenu cofondateur d'Anthropic et l'un des pionniers de l'interprétabilité, l'art de comprendre… https://3h33.com/podcast-voix-de-lia/chris-olah/
+- Jeff Dean : l'ingénieur qui avait raison vingt ans trop tôt — Il a bâti la tuyauterie de Google, mené son virage vers l'IA, baptisé Gemini, puis il est parti après vingt-sept ans pour automatiser la découverte… https://3h33.com/podcast-voix-de-lia/jeff-dean/
+- Mathilde Collin : de Front à KORA, l'IA mesurée pour enfants — Étudiante, elle n'osait pas se dire entrepreneuse. Elle a fait de Front une licorne dans la Silicon Valley, puis a lancé KORA, un banc d'essai… https://3h33.com/podcast-voix-de-lia/mathilde-collin/
+- Regina Barzilay : des langues mortes à l'IA contre le cancer — Née en Moldavie soviétique, passée par un kibboutz puis par le MIT, Regina Barzilay a déchiffré une langue morte avec une machine avant de mettre l'IA… https://3h33.com/podcast-voix-de-lia/regina-barzilay/
+- Rana el Kaliouby, l'ordinateur qui ne la comprenait pas — Du Caire à Cambridge puis au MIT, le portrait de Rana el Kaliouby, cofondatrice d'Affectiva et pionnière de l'IA émotionnelle, qui raconte avoir dit non… https://3h33.com/podcast-voix-de-lia/rana-el-kaliouby/
+- John Jumper : d'AlphaFold au prix Nobel de chimie 2024 — De Little Rock au prix Nobel de chimie 2024, le portrait de John Jumper, le physicien qui a dirigé l'équipe d'AlphaFold 2 chez Google DeepMind avant… https://3h33.com/podcast-voix-de-lia/john-jumper/
+- Stanislas Niox-Chateau : Doctolib, le Covid et l'IA — Ancien espoir du tennis et cofondateur de Doctolib, Stanislas Niox-Chateau a fait de la prise de rendez-vous un réflexe national, avant de miser sur l'IA… https://3h33.com/podcast-voix-de-lia/stanislas-niox-chateau/
+- Melanie Perkins : cent refus, du kitesurf et le pari Canva — Des écharpes vendues à 14 ans, plus de cent refus d'investisseurs, une leçon de kitesurf : Ada et Alan racontent Melanie Perkins, cofondatrice de Canva… https://3h33.com/podcast-voix-de-lia/melanie-perkins/
+- Joy Buolamwini, le masque blanc qui a démasqué l'IA — Un masque d'Halloween, un miroir qui ne la voyait pas, des photos de députés du Rwanda à l'Islande : le portrait de Joy Buolamwini, l'informaticienne… https://3h33.com/podcast-voix-de-lia/joy-buolamwini/
+- Kate Crawford : l'IA, ni artificielle ni intelligente — Musicienne électronique nommée aux ARIA, chercheuse chez Microsoft et artiste primée à Venise : Kate Crawford a fait de la matière, du pouvoir… https://3h33.com/podcast-voix-de-lia/kate-crawford/
+- Frédéric Mazzella : la licorne patiente de BlaBlaCar — Pianiste primé, normalien, passé par Stanford : Frédéric Mazzella a mis des années à faire de BlaBlaCar l'une des premières licornes françaises, avant… https://3h33.com/podcast-voix-de-lia/frederic-mazzella/
+- Daniela Rus : le cerveau d'un ver au volant de l'IA — Des vis de locomotive dans la Roumanie de Ceaușescu à la direction du plus grand laboratoire interdisciplinaire du MIT : le portrait de Daniela Rus… https://3h33.com/podcast-voix-de-lia/daniela-rus/
+- Jean-Charles Samuelian-Werve, cofondateur d'Alan — Il fabriquait des sièges d'avion en titane, il a cofondé le premier assureur santé indépendant agréé en France depuis 1986, puis a aidé discrètement… https://3h33.com/podcast-voix-de-lia/jean-charles-samuelian-werve/
+- Jacques-Antoine Granjon : le soldeur de vente-privee — Il a démarré avec vingt mille francs prêtés par son père et cofondé vente-privee.com, devenue Veepee : le portrait de Jacques-Antoine Granjon, des stocks… https://3h33.com/podcast-voix-de-lia/jacques-antoine-granjon/
+- Xavier Niel : de la Freebox à l'IA ouverte — Un ado avec un petit ZX81, le Minitel rose, la Freebox, un forfait à 19,99 euros, puis l'école 42, Station F et Kyutai : Ada et Alan racontent… https://3h33.com/podcast-voix-de-lia/xavier-niel/
+- Éric Larchevêque : du poker au bitcoin, puis Ledger — Joueur de poker, pionnier du bitcoin, cofondateur de la licorne Ledger et juré de M6 : Ada et Alan racontent comment Éric Larchevêque crée, cède… https://3h33.com/podcast-voix-de-lia/eric-larcheveque/
+- Carlos Diaz : l'ancien prof devenu voix de Silicon Carne — Ancien professeur, diplômé de lettres, l'un des initiateurs des « Pigeons », puis voix de Silicon Carne depuis San Francisco : le portrait de Carlos… https://3h33.com/podcast-voix-de-lia/carlos-diaz/
+- Patrick Robin : du Minitel à la French Tech — Éditeur d'art, pionnier de l'accès à Internet en France, business angel et co-initiateur du manifeste des entrepreneurs de 2012 : Ada et Alan racontent… https://3h33.com/podcast-voix-de-lia/patrick-robin/
+- Alexandre Lebrun, l'homme des machines qui parlent — Polytechnicien, créateur de VirtuOz et de Wit.ai, père de l'assistant M de Facebook puis de Nabla : Ada et Alan racontent Alexandre Lebrun, devenu… https://3h33.com/podcast-voix-de-lia/alexandre-lebrun/
+- Octave Klaba : de Nowa Ruda au cloud européen — Arrivé de Pologne à seize ans sans parler français, Octave Klaba a fondé OVHcloud, l'un des principaux fournisseurs européens de cloud, et a annoncé… https://3h33.com/podcast-voix-de-lia/octave-klaba/
+- Aurélie Jean : derrière les algorithmes, les humains — Elle a appris à coder à vingt et un ans, a refusé deux postes de professeure aux États-Unis et répète depuis 2019 que derrière chaque algorithme, il y a… https://3h33.com/podcast-voix-de-lia/aurelie-jean/
+- Brett Adcock : du maïs de l'Illinois aux robots de Figure — Fils d'agriculteurs de l'Illinois, Brett Adcock a vendu une start-up de recrutement, fait entrer en Bourse des taxis volants, puis fait grimper… https://3h33.com/podcast-voix-de-lia/brett-adcock/
+- Ali Ghodsi : du Commodore 64 cassé à Databricks — Réfugié en Suède à cinq ans, programmeur par la grâce d'un ordinateur en panne, Ali Ghodsi a fait de Databricks l'une des entreprises privées les plus… https://3h33.com/podcast-voix-de-lia/ali-ghodsi/
+- Jan Koum : des bons alimentaires aux milliards de WhatsApp — Arrivé d'Ukraine à seize ans, Jan Koum a cofondé WhatsApp, l'a vendue à Facebook pour près de vingt-deux milliards de dollars, puis s'est fait discret… https://3h33.com/podcast-voix-de-lia/jan-koum/
+- Assaf Rappaport : il a dit non à Google… avant 32 milliards — Il a refusé environ vingt-trois milliards de dollars avant de vendre Wiz à Google pour trente-deux : portrait d'Assaf Rappaport, le cofondateur qui veut… https://3h33.com/podcast-voix-de-lia/assaf-rappaport/
+- Palmer Luckey : du casque Oculus aux drones de guerre — Enfant, il réparait des iPhone pour s'acheter des lasers. À 21 ans, il vend Oculus à Facebook, puis fonde Anduril, l'entreprise de défense qui mise… https://3h33.com/podcast-voix-de-lia/palmer-luckey/
+- Varun Mohan : de Windsurf à Google DeepMind — Médaille officieuse au Mexique, deux pivots radicaux et un week-end de juillet 2025 qui a secoué la Silicon Valley : Ada et Alan racontent Varun Mohan… https://3h33.com/podcast-voix-de-lia/varun-mohan/
+- Timnit Gebru, la chercheuse des « perroquets stochastiques » — Réfugiée devenue ingénieure chez Apple, chercheuse chez Google puis fondatrice de son propre institut, Timnit Gebru a appris à l'IA à se regarder… https://3h33.com/podcast-voix-de-lia/timnit-gebru/
+- Meredith Whittaker : du service client de Google à Signal — Entrée chez Google au service client, elle a coorganisé la grève mondiale de 2018 avant de prendre la tête de Signal : portrait de Meredith Whittaker… https://3h33.com/podcast-voix-de-lia/meredith-whittaker/
+- Joëlle Pineau : de l'alto à l'IA transparente — Altiste devenue roboticienne, ancienne patronne de la recherche fondamentale de Meta et nommée directrice de l'IA de Cohere en 2025 : Ada et Alan… https://3h33.com/podcast-voix-de-lia/joelle-pineau/
+- Daphne Koller : de Coursera à insitro, l'IA des médicaments — Titulaire d'une licence à dix-sept ans, cofondatrice de Coursera puis fondatrice de la biotech insitro, Daphne Koller met l'IA au service… https://3h33.com/podcast-voix-de-lia/daphne-koller/
+- Ren Zhengfei : du rêve d'un petit pain à l'empire Huawei — Enfant de la Grande Famine, ingénieur militaire sans grade, fondateur de Huawei avec 21 000 yuans : Ada, Alan et leur invitée Lia racontent Ren Zhengfei… https://3h33.com/podcast-voix-de-lia/ren-zhengfei/
+- Alexandr Wang, de Los Alamos à la superintelligence de Meta — Fils de physiciens de Los Alamos, fondateur de Scale AI à dix-neuf ans, nommé directeur de l'IA de Meta en juin 2025 : Ada, Alan et Lia racontent… https://3h33.com/podcast-voix-de-lia/alexandr-wang/
+- Greg Brockman : de la ferme du Dakota au bâtisseur d'OpenAI — Il trayait les vaches dans le Dakota du Nord, il a été le premier CTO de Stripe, puis il a cofondé OpenAI dans son salon : Ada et Alan racontent Greg… https://3h33.com/podcast-voix-de-lia/greg-brockman/
+- Thomas Wolf : physicien, puis cofondateur de Hugging Face — Physicien, conseil en brevets, puis cofondateur de Hugging Face : le parcours de Thomas Wolf, l'homme qui rêve d'IA capables de poser les bonnes questions. https://3h33.com/podcast-voix-de-lia/thomas-wolf/
+- Guillaume Lample, le chercheur discret au cœur de Mistral AI — Polytechnicien, chercheur chez Meta puis cofondateur de Mistral AI, Guillaume Lample parle très peu : Ada et Alan racontent son parcours à travers… https://3h33.com/podcast-voix-de-lia/guillaume-lample/
+- Fidji Simo : des pêcheurs de Sète au sommet d'OpenAI — Née à Sète dans une famille de pêcheurs, Fidji Simo a lancé Facebook Live, dirigé Instacart puis est devenue la numéro deux d'OpenAI : portrait d'une… https://3h33.com/podcast-voix-de-lia/fidji-simo/
+- Noam Shazeer, l'ingénieur discret derrière le Transformer — Médaille d'or aux Olympiades de mathématiques, coauteur du Transformer, fondateur de Character.AI, puis recruté par OpenAI : Ada et Alan dressent… https://3h33.com/podcast-voix-de-lia/noam-shazeer/
+- Yoshua Bengio : le parrain de l'IA qui a changé d'avis — Il croyait aux réseaux de neurones quand presque personne n'y croyait. Il est devenu l'un des parrains de l'apprentissage profond, puis l'une des voix… https://3h33.com/podcast-voix-de-lia/yoshua-bengio/
+- Andrew Ng : le prof de l'IA, de Google Brain à Coursera — De l'ordinateur offert par son père au neurone qui reconnaît les chats, portrait d'Andrew Ng, cofondateur de Google Brain et de Coursera, voix centrale… https://3h33.com/podcast-voix-de-lia/andrew-ng/
+- Peter Steinberger : le père d'OpenClaw, l'IA qui agit — Un développeur autrichien, un visa qui n'arrive pas, une première entreprise et une sortie à neuf chiffres selon lui, un grand vide, puis un projet… https://3h33.com/podcast-voix-de-lia/peter-steinberger/
+- Satya Nadella : du cricket au cloud et à l'IA de Microsoft — Un élève fou de cricket qui rate son grand concours, un père bouleversé par la naissance de son fils, puis le patron qui a fait passer Microsoft… https://3h33.com/podcast-voix-de-lia/satya-nadella/
+- Jensen Huang : de la plonge chez Denny's aux puces de l'IA — Pensionnat du Kentucky, plonge chez Denny's, paris fous sur des puces : Ada et Alan racontent Jensen Huang, cofondateur de NVIDIA, avec Lia de Choucroute… https://3h33.com/podcast-voix-de-lia/jensen-huang/
+- Dario Amodei, le bâtisseur d'IA qui demande de ralentir — De l'enfant à la calculatrice au patron d'Anthropic qui demande à toute l'industrie de ralentir : le portrait de Dario Amodei, cofondateur… https://3h33.com/podcast-voix-de-lia/dario-amodei/
+- Zhilin Yang : le batteur de rock derrière Kimi et Moonshot — Ancien batteur de rock devenu chercheur star, il a fondé Moonshot AI le jour des cinquante ans d'un album de Pink Floyd. Portrait de l'homme derrière Kimi. https://3h33.com/podcast-voix-de-lia/zhilin-yang/
+- Aravind Srinivas : du centième de point à Perplexity — Il connaissait toutes les capitales en CE1 et a raté l'informatique pour un centième de point : le portrait d'Aravind Srinivas, chercheur devenu patron… https://3h33.com/podcast-voix-de-lia/aravind-srinivas/
+- Tim Cook : l'homme des stocks qui a succédé à Steve Jobs — D'un lycée d'Alabama à la succession de Steve Jobs, Ada et Alan racontent Tim Cook, l'ingénieur discret qui a dirigé Apple de 2011 à 2026, avec Lia… https://3h33.com/podcast-voix-de-lia/tim-cook/
+- David Holz : de l'argile virtuelle à Midjourney — Fils d'un dentiste qui soignait sur un voilier, pionnier du suivi des mains puis fondateur d'un Midjourney qui se présente comme sans investisseurs… https://3h33.com/podcast-voix-de-lia/david-holz/
+- Demis Hassabis : de l'échiquier au prix Nobel — Enfant prodige des échecs, concepteur de jeux vidéo à 17 ans, neuroscientifique puis cofondateur de DeepMind : Ada et Alan racontent le parcours de Demis… https://3h33.com/podcast-voix-de-lia/demis-hassabis/
+- Sam Altman : du scorbut à ChatGPT, renvoyé puis rappelé — Du lycéen qui a changé son école au patron d'OpenAI renvoyé en visioconférence puis rappelé au cinquième jour : le portrait de Sam Altman, à partir… https://3h33.com/podcast-voix-de-lia/sam-altman/
+- Sundar Pichai : de Chennai à la tête de Google — Un enfant de Chennai qui retenait les numéros de téléphone par cœur, un entretien chez Google qu'il prend pour un poisson d'avril, un navigateur qualifié… https://3h33.com/podcast-voix-de-lia/sundar-pichai/
+- Michael Truell : Cursor et le code piloté par l'IA — Il code depuis ses onze ans, a reçu un prix de l'ACM dès le lycée et a cofondé Cursor, l'éditeur de code piloté par l'IA qui a rejoint SpaceX… https://3h33.com/podcast-voix-de-lia/michael-truell/
+- Clément Delangue : de La Bassée à Hugging Face — Fils d'une infirmière et d'un marchand de tondeuses du Nord, Clément Delangue a fait d'une appli de chatbot pour ados la grande plateforme de l'IA… https://3h33.com/podcast-voix-de-lia/clement-delangue/
+- Bill Gates : du jeu de morpion à l'alarme sur l'IA — Du terminal financé par une vente de charité au lycée jusqu'à ses mises en garde sur l'IA, le portrait de Bill Gates, cofondateur de Microsoft devenu… https://3h33.com/podcast-voix-de-lia/bill-gates/
+- Pony Ma : du télescope d'enfant à l'empire WeChat — Il rêvait d'être astronome, il a cofondé Tencent et WeChat : portrait de Pony Ma, ingénieur discret qui a reconnu publiquement le retard de son groupe… https://3h33.com/podcast-voix-de-lia/pony-ma/
+- Wang Xingxing : du robot à 200 yuans à la Bourse de Shanghai — Écarté du master de l'Université du Zhejiang en raison de son niveau d'anglais, il a fait d'Unitree un fabricant chinois majeur de robots à pattes… https://3h33.com/podcast-voix-de-lia/wang-xingxing/
+- Yan Junjie, fondateur de MiniMax, a renoncé à son salaire — Il est né en 1989 dans une petite ville du Henan et a été vice-président de SenseTime. Il a fondé MiniMax, une entreprise d'IA cotée à Hong Kong, après… https://3h33.com/podcast-voix-de-lia/yan-junjie/
+- Kai-Fu Lee : l'enfant qui reculait les horloges — Il est arrivé au Tennessee à 11 ans sans parler anglais, a dirigé Google Chine et fondé 01.AI : Ada et Alan racontent Kai-Fu Lee, pionnier… https://3h33.com/podcast-voix-de-lia/kai-fu-lee/
+- Zhang Yiming : de ByteDance au succès mondial de TikTok — Un étudiant qui choisit son université selon la neige et les fruits de mer, un ingénieur qui s'ennuie chez Microsoft, puis un fondateur qui inverse… https://3h33.com/podcast-voix-de-lia/zhang-yiming/
+- Robin Li : de la troupe d'opéra à Baidu, le pari de l'IA — Fils d'ouvriers, recruté enfant par une troupe d'opéra, découragé de faire de l'IA par son professeur : Ada et Alan racontent Robin Li, fondateur… https://3h33.com/podcast-voix-de-lia/robin-li/
+- Xiao Hong : l'agent d'IA pris entre Pékin et Meta — Il recrutait ses camarades autour d'un restaurant du Nord-Est. Plus tard, son agent d'IA Manus a été racheté par Meta, puis Pékin a fait annuler… https://3h33.com/podcast-voix-de-lia/xiao-hong/
+- Bret Taylor : de Google Maps à la gouvernance d'OpenAI — Co-créateur de Google Maps, pionnier du bouton Like, puis, en octobre 2026, patron de Sierra et président du conseil de l'OpenAI Foundation : le parcours… https://3h33.com/podcast-voix-de-lia/bret-taylor/
+- Harrison Chase : du sport dans Excel à la licorne LangChain — De l'analyse sportive à Harvard à LangChain, un projet perso d'environ 800 lignes devenu licorne : le portrait de Harrison Chase, CEO qui assume… https://3h33.com/podcast-voix-de-lia/harrison-chase/
+- Anton Osika, le physicien qui veut rendre le code facultatif — Ancien du CERN, enfant d'une famille qui touchait l'aide sociale, Anton Osika a fondé Lovable, la start-up suédoise qui transforme une simple description… https://3h33.com/podcast-voix-de-lia/anton-osika/
+- Amjad Masad : de l'IBM PC d'Amman à Replit — Fils de réfugiés grandi à Amman, il a reconnu son propre code dans le lancement de Codecademy, puis a fait de Replit un outil pour créer des applications… https://3h33.com/podcast-voix-de-lia/amjad-masad/
+- Scott Wu : champion de maths, puis Devin chez Cognition — Champion national de maths à quatorze ans, score parfait aux Olympiades d'informatique, puis cofondateur de Cognition, qui développe l'agent… https://3h33.com/podcast-voix-de-lia/scott-wu/
+- Larry Ellison : fondateur d'Oracle, il a tout misé sur l'IA — Adopté à neuf mois, sans diplôme, il a fondé Oracle avec deux mille dollars puis a misé l'entreprise sur les centres de données pour l'IA : voici… https://3h33.com/podcast-voix-de-lia/larry-ellison/
+- Masayoshi Son : le parieur de SoftBank qui mise sur OpenAI — D'un adolescent qui relance soixante fois le patron de McDonald's Japon au fondateur de SoftBank qui mise des dizaines de milliards sur OpenAI, Ada… https://3h33.com/podcast-voix-de-lia/masayoshi-son/
+- Sergey Brin : de Moscou à Gemini, le cofondateur qui revient — Arrivé de Moscou à six ans, cofondateur de Google, revenu de sa retraite pour travailler sur Gemini : le portrait de Sergey Brin, fait par fait, date… https://3h33.com/podcast-voix-de-lia/sergey-brin/
+- Larry Page : le rêve d'une nuit qui a classé tout le Web — Une imprimante en Lego, un rêve noté en pleine nuit et un garage loué mille sept cents dollars par mois : Ada et Alan racontent Larry Page… https://3h33.com/podcast-voix-de-lia/larry-page/
+- Jeff Bezos : inventeur de garage, d'Amazon à Blue Origin — Inventeur de garage, fils adoptif d'un réfugié cubain, fondateur d'Amazon et de Blue Origin : Ada et Alan racontent Jeff Bezos, avec Lia en invitée… https://3h33.com/podcast-voix-de-lia/jeff-bezos/
+- Mustafa Suleyman : des milk-shakes à la superintelligence — Fils d'un chauffeur de taxi syrien et d'une infirmière anglaise, il a quitté Oxford pour une ligne d'écoute, cofondé DeepMind, puis pris la tête… https://3h33.com/podcast-voix-de-lia/mustafa-suleyman/
+- Liang Wenfeng : le discret de DeepSeek qui a secoué la tech — Fils d'instituteur, passionné de maths, fondateur d'un fonds quantitatif puis de DeepSeek : le portrait de Liang Wenfeng, l'homme qui parle très peu mais… https://3h33.com/podcast-voix-de-lia/liang-wenfeng/
+- Ilya Sutskever, l'homme le plus secret de l'IA — Il a contribué à lancer le boom de l'IA en 2012, cofondé OpenAI, voté le renvoi de Sam Altman, puis créé un laboratoire qui n'a encore rien montré… https://3h33.com/podcast-voix-de-lia/ilya-sutskever/
+- Geoffrey Hinton : le parrain de l'IA qui ne s'assoit plus — Descendant de George Boole, menuisier d'un an, prix Nobel de physique : Ada et Alan racontent Geoffrey Hinton, le pionnier des réseaux de neurones devenu… https://3h33.com/podcast-voix-de-lia/geoffrey-hinton/
+- Andrej Karpathy : du Rubik's Cube au vibe coding — Speedcubeur sur YouTube, membre fondateur d'OpenAI, patron de l'IA de Tesla, inventeur du « vibe coding » : le portrait d'Andrej Karpathy, chercheur… https://3h33.com/podcast-voix-de-lia/andrej-karpathy/
+- Mati Staniszewski : le Polonais qui a donné une voix à l'IA — Comment un amateur de « maths excentriques », marqué par les films lus d'une seule voix monocorde en Pologne, a cofondé ElevenLabs, l'entreprise d'IA… https://3h33.com/podcast-voix-de-lia/mati-staniszewski/
+- Mark Zuckerberg : du réseau maison à la superintelligence — Un réseau bricolé à onze ans, une rencontre dans une file d'attente, un empire de plus de trois milliards d'utilisateurs et, en octobre 2026, un film… https://3h33.com/podcast-voix-de-lia/mark-zuckerberg/
+- Lisa Su : recalée à Juilliard, reine des puces chez AMD — Elle rêvait d'être pianiste, elle est devenue ingénieure au MIT puis a fait d'AMD, une entreprise en perdition, le grand challenger de Nvidia… https://3h33.com/podcast-voix-de-lia/lisa-su/
+- Fei-Fei Li : du pressing familial aux machines qui voient — À quinze ans, elle arrive avec sa famille dans le New Jersey ; ils ont moins de vingt dollars. Fei-Fei Li a lancé, avec son équipe, ImageNet, la base… https://3h33.com/podcast-voix-de-lia/fei-fei-li/
+- Elon Musk, l'IA qui fait peur et celle qu'il construit — Un enfant de Pretoria qui vend son premier jeu vidéo à douze ans et qui, en octobre 2026, dirigeait Tesla et SpaceX. Ada et Alan racontent Elon Musk… https://3h33.com/podcast-voix-de-lia/elon-musk/
+- Daniela Amodei : la littéraire qui préside Anthropic — Bourse de flûte, licence de littérature, campagne politique, puis Stripe et OpenAI : Ada et Alan racontent le parcours de Daniela Amodei, cofondatrice… https://3h33.com/podcast-voix-de-lia/daniela-amodei/
+- Arthur Mensch : de l'IRM du cerveau à Mistral AI — De l'IRM du cerveau aux modèles géants : Ada et Alan racontent Arthur Mensch, cofondateur de Mistral AI, avec la complicité de Lia. https://3h33.com/podcast-voix-de-lia/arthur-mensch/
+- Mira Murati : de Vlorë à une IA que chacun peut façonner — Fille de professeurs de littérature passionnée de maths, ingénieure chez Tesla, directrice technique d'OpenAI puis fondatrice de Thinking Machines Lab… https://3h33.com/podcast-voix-de-lia/mira-murati/
+- Yann LeCun : de HAL 9000 aux modèles du monde — Du bricoleur de synthétiseurs du Val-d'Oise au prix Turing, puis à AMI Labs : le portrait de Yann LeCun, qui parie sur des IA capables de comprendre… https://3h33.com/podcast-voix-de-lia/yann-lecun/
+- Elles ont pris les commandes · une playlist à thème des Voix de l'IA — Une cagnotte d'étudiants, un départ pour San Francisco, quarante millions refusés, une cloche en Bourse, l'équipage avant soi, puis le sommet de l'I.A.… https://3h33.com/podcast-voix-de-lia/parcours/femmes-de-la-tech/
+- Comprendre la guerre des puces · une playlist à thème des Voix de l'IA — NVIDIA, TSMC, Huawei : en six portraits, de l'usine de Taïwan aux restrictions américaines, qui tient vraiment les puces de l'I.A. 6 épisodes, environ… https://3h33.com/podcast-voix-de-lia/parcours/guerre-des-puces/
+- Elles font l'I.A. : du laboratoire à votre écran · une playlist à thème des Voix de l'IA — Six femmes qui tiennent chacune un maillon de l'I.A., du laboratoire à l'écran de votre téléphone. Certaines, vous ne les connaissez pas encore.… https://3h33.com/podcast-voix-de-lia/parcours/elles-font-l-ia/
+- De la chute au succès · une playlist à thème des Voix de l'IA — Un examen raté, cent refus, un mois de paie en caisse : six fondateurs qui ont failli tout perdre, et le geste précis qui les a relevés. 6 épisodes… https://3h33.com/podcast-voix-de-lia/parcours/de-la-chute-au-succes/
+- Le grand quiz des Voix de l'IA · 1023 questions — Testez ce que vous savez des figures de l'IA : 1023 questions tirées des 130 portraits du podcast, chaque réponse avec le passage où c'est dit. https://3h33.com/podcast-voix-de-lia/quiz/

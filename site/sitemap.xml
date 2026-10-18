@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://3h33.com/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://3h33.com/a-propos/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://3h33.com/dessins/flux-atelier3h33.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://3h33.com/agence-conseil-marketing-digital/</loc>
@@ -17,8 +18,14 @@
   </url>
   <url>
     <loc>https://3h33.com/agence/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.9</priority>
+    <image:image><image:loc>https://3h33.com/dessins/flux-atelier3h33.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://3h33.com/archives/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://3h33.com/archives/3h33-e-pedagogie-formations-marketing-digital/</loc>
@@ -151,6 +158,11 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://3h33.com/archives/formations-e-marketing/</loc>
+    <lastmod>2022-05-25</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://3h33.com/archives/formations-e-marketing/formation-comment-communiquer-sur-internet/</loc>
     <lastmod>2022-05-25</lastmod>
     <priority>0.3</priority>
@@ -162,11 +174,6 @@
   </url>
   <url>
     <loc>https://3h33.com/archives/formations-e-marketing/formation-reseaux-sociaux/</loc>
-    <lastmod>2022-05-25</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://3h33.com/archives/formations-e-marketing/</loc>
     <lastmod>2022-05-25</lastmod>
     <priority>0.3</priority>
   </url>
@@ -246,19 +253,20 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://3h33.com/archives/</loc>
-    <lastmod>2026-09-06</lastmod>
-    <priority>0.4</priority>
-  </url>
-  <url>
     <loc>https://3h33.com/assistant-de-recherche/</loc>
     <lastmod>2026-09-05</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://3h33.com/ateliers-formation/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.9</priority>
+    <image:image><image:loc>https://3h33.com/dessins/flux-atelier.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://3h33.com/blog/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://3h33.com/blog/33-conseils-dont-vous-pourriez-vous-inspirer-en-2022/</loc>
@@ -286,29 +294,31 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://3h33.com/blog/</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://3h33.com/chatbots/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.9</priority>
+    <image:image><image:loc>https://3h33.com/dessins/flux-agents.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://3h33.com/chatgpt-claude-mistral-gemini/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://3h33.com/chatgpt/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.9</priority>
+    <image:image><image:loc>https://3h33.com/dessins/flux-contenus.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://3h33.com/coaching-ia-dirigeants/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://3h33.com/conditions-generales/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <priority>0.2</priority>
   </url>
   <url>
     <loc>https://3h33.com/contact/</loc>
@@ -322,7 +332,7 @@
   </url>
   <url>
     <loc>https://3h33.com/formation-ia-obligatoire-ai-act/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
@@ -334,26 +344,49 @@
     <loc>https://3h33.com/formations/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.9</priority>
+    <image:image><image:loc>https://3h33.com/dessins/flux-formation.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://3h33.com/ia-en-entreprise/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://3h33.com/ia-locale-souveraine/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://3h33.com/conditions-generales/</loc>
-    <lastmod>2026-09-06</lastmod>
-    <priority>0.2</priority>
+    <loc>https://3h33.com/lma-learning-management-agentique/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://3h33.com/dessins/flux-apprentissage.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://3h33.com/masterclass-ia/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.9</priority>
+    <image:image><image:loc>https://3h33.com/dessins/flux-masterclass.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://3h33.com/mentions-legales/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://3h33.com/no-code/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3h33.com/plan-du-site/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://3h33.com/podcasts/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://3h33.com/politique-de-confidentialite/</loc>
@@ -366,39 +399,21 @@
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://3h33.com/lma-learning-management-agentique/</loc>
-    <lastmod>2026-10-04</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://3h33.com/masterclass-ia/</loc>
-    <lastmod>2026-09-06</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://3h33.com/no-code/</loc>
-    <lastmod>2026-10-03</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://3h33.com/plan-du-site/</loc>
-    <lastmod>2026-10-04</lastmod>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://3h33.com/podcasts/</loc>
-    <lastmod>2026-10-04</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://3h33.com/realisations-chatbots-agents/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://3h33.com/rendez-vous-ia-talent/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.8</priority>
+    <image:image><image:loc>https://3h33.com/dessins/flux-rendezvous.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://3h33.com/studio/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://3h33.com/dessins/flux-tournage.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://3h33.com/studio/videos/</loc>
@@ -406,14 +421,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://3h33.com/studio/</loc>
-    <lastmod>2026-10-04</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://3h33.com/studios-creatifs-multi-services/</loc>
     <lastmod>2026-09-06</lastmod>
     <priority>0.9</priority>
+    <image:image><image:loc>https://3h33.com/dessins/flux-studio.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://3h33.com/synthetic-content/</loc>
@@ -422,8 +433,9 @@
   </url>
   <url>
     <loc>https://3h33.com/vibe-coding/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>1.0</priority>
+    <image:image><image:loc>https://3h33.com/dessins/flux-vibecoding.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://3h33.com/galaxie/</loc>
@@ -432,7 +444,7 @@
   </url>
   <url>
     <loc>https://3h33.com/forge/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -442,22 +454,28 @@
   </url>
   <url>
     <loc>https://3h33.com/podcast-voix-de-lia/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://3h33.com/verif-nom/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://3h33.com/cartographie-mondiale-des-usages-de-l-ia/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://3h33.com/cobrandz/</loc>
-    <lastmod>2026-09-05</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3h33.com/pour/alexandre-vibe-coding/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://3h33.com/pour/alexandre-vibe-coding/vignette.jpg</image:loc></image:image>
   </url>
 </urlset>

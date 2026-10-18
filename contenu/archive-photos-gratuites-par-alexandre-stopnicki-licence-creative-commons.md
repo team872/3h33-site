@@ -14,7 +14,7 @@ chapo: "Page d'archive, publiée en 2014 et laissée telle quelle. Pour ce que n
 
 Photos gratuites par alexandre stopnicki sous licence creative commons
 
-### Voici des photos réalisées par Alexandre Stopnicki offertes par [3h33.com](https://3h33.com/) que vous pouvez utiliser pour vos présentations en respectant les droits des [licences Créative Commons](http://creativecommons.org/licenses/by-nc/4.0/).
+## Voici des photos réalisées par Alexandre Stopnicki offertes par [3h33.com](https://3h33.com/) que vous pouvez utiliser pour vos présentations en respectant les droits des [licences Créative Commons](http://creativecommons.org/licenses/by-nc/4.0/).
 
 Cela me ferai vraiment plaisir que vous preniez le temps de m’indiquer parfois que vous utilisez mes photos.
 

@@ -9,6 +9,7 @@ fil: "IA locale et souveraine"
 priorite: 0.8
 eyebrow: "Souveraineté"
 chapo: "Contrats, dossiers patients, données RH, secrets de fabrication : certaines informations ne doivent pas quitter l'entreprise. Bonne nouvelle, l'IA peut venir à elles plutôt que l'inverse."
+en_bref: "Une IA locale est un modèle ouvert (Mistral, Llama, Qwen, Gemma) installé sur vos propres serveurs : aucune donnée ne sort. Une IA souveraine est un modèle européen hébergé dans l'Union européenne, chez un fournisseur soumis au droit européen. Entre les deux et le cloud américain avec garanties, on choisit selon la sensibilité des données."
 faq:
   - Qu'est-ce qu'une IA locale ?|Un modèle d'IA qui tourne sur vos propres machines, un serveur de l'entreprise ou même un ordinateur puissant, sans envoyer de données à un service extérieur. On utilise pour cela des modèles dits ouverts, dont les poids sont publiés et peuvent être installés librement.
   - Une IA locale est-elle aussi performante que ChatGPT ?|Un peu moins sur les tâches les plus complexes, mais largement suffisante pour résumer, classer, extraire des informations, rédiger ou répondre à partir de documents internes. L'écart se réduit à chaque génération de modèles ouverts.

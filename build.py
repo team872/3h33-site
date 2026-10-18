@@ -201,45 +201,186 @@ def enligne(t):
     t = re.sub(r"`([^`]+)`", r"<code>\1</code>", t)
     return t
 
+# ---------------------------------------------------------------- entités
+# Une seule définition de « 3h33 » et d'« Alexandre Stopnicki », reprise par TOUTES
+# les pages avec le même @id : c'est ce qui permet à Google, Bing et aux assistants
+# d'IA de comprendre que la page Masterclass, l'accueil et le blog parlent de la même
+# organisation et de la même personne (18/10/2026). Avant, chaque page déclarait une
+# « Organization » anonyme, sans @id ni sameAs : quatre-vingts organisations homonymes.
+# sameAs : uniquement des profils officiels déjà cités dans le site. Les comptes
+# personnels d'Alexandre vont sur la Personne, pas sur l'Organisation.
+ORG_ID, PERS_ID, SITE_ID = SITE_URL + "/#organisation", SITE_URL + "/#alexandre", SITE_URL + "/#site"
+ORG_SAMEAS = ["https://www.facebook.com/3h33.FORMATIONS", "https://twitter.com/alexandre3h33",
+              "https://instagram.com/alexandre3h33"]
+PERS_SAMEAS = ["https://fr.linkedin.com/in/alexandrestopnicki", "https://alexandrestopnicki.com",
+               "https://alexandre.ai", "https://twitter.com/alexandre3h33"]
+LOGO = {"@type": "ImageObject", "url": SITE_URL + "/medias/partage.jpg", "width": 2400, "height": 1260}
+
+def noeud_org(complet=False):
+    n = {"@type": ["Organization", "EducationalOrganization"], "@id": ORG_ID, "name": "3h33",
+         "alternateName": ["3h33, l'agence de l'IA", "3H33"], "url": SITE_URL + "/",
+         "logo": LOGO, "founder": {"@id": PERS_ID}, "foundingDate": "2010",
+         "areaServed": "FR", "sameAs": ORG_SAMEAS}
+    if complet:
+        n.update({
+            "image": SITE_URL + "/medias/partage.jpg",
+            "description": "Agence et organisme de formation français spécialisés dans les usages de "
+                           "l'intelligence artificielle générative en entreprise : formations, outils sur "
+                           "mesure en vibe coding, agents conversationnels et studio créatif.",
+            "slogan": "On apprend l'IA en construisant.", "email": "info@3h33.fr",
+            "contactPoint": {"@type": "ContactPoint", "contactType": "commercial",
+                             "url": SITE_URL + "/contact/", "email": "info@3h33.fr",
+                             "availableLanguage": ["fr", "en"]},
+            "knowsAbout": ["Intelligence artificielle générative", "Formation à l'intelligence artificielle",
+                           "Vibe coding", "Agents conversationnels", "AI Act", "IA souveraine",
+                           "Learning Management Agentique", "Production audiovisuelle par IA"],
+            "brand": [{"@type": "Brand", "name": n, "url": u} for n, u in (
+                ("BotMoiLeQi", "https://botmoileqi.com"), ("NegoVox", "https://negovox.com"),
+                ("Media Training Vox", "https://media-training-vox.com"),
+                ("Le savez-vous ?", "https://le-savez-vous.com"))],
+            "subjectOf": [{"@id": SITE_URL + "/podcast-voix-de-lia/#serie"}]})
+    return n
+
+def noeud_personne(complet=False):
+    n = {"@type": "Person", "@id": PERS_ID, "name": "Alexandre Stopnicki",
+         "url": "https://alexandrestopnicki.com", "image": SITE_URL + "/medias/alexandre-stopnicki.jpg",
+         "jobTitle": "Fondateur de 3h33, formateur et conférencier en intelligence artificielle",
+         "worksFor": {"@id": ORG_ID}, "sameAs": PERS_SAMEAS}
+    if complet:
+        n.update({
+            "description": "Fondateur de 3h33. Dans le numérique depuis trente ans : en 1997, sa société "
+                           "Numériland tenait la régie publicitaire du Deuxième Monde, le métavers de Canal+. "
+                           "Construit des chatbots depuis 2017 ; chroniqueur de l'émission The Artificial "
+                           "Intelligence Society.",
+            "worksFor": [{"@id": ORG_ID},
+                         {"@type": "Organization", "@id": "https://listen-to-my-art.com/#organisation",
+                          "name": "Listen to my art", "alternateName": "Musée à la maison",
+                          "url": "https://listen-to-my-art.com/"}],
+            "knowsAbout": ["Intelligence artificielle générative", "Vibe coding", "Pédagogie",
+                           "Agents conversationnels", "Métavers"],
+            "nationality": {"@type": "Country", "name": "France"}, "knowsLanguage": ["fr", "en"]})
+    return n
+
+def noeud_site():
+    return {"@type": "WebSite", "@id": SITE_ID, "url": SITE_URL + "/", "name": "3h33",
+            "alternateName": "3h33.com", "inLanguage": "fr-FR", "publisher": {"@id": ORG_ID}}
+
+# Les deux podcasts, tels que le site les décrit (podcasts.md et la page de la série).
+PODCASTS = [
+    {"@type": "PodcastSeries", "@id": SITE_URL + "/podcast-voix-de-lia/#serie", "name": "Les Voix de l'IA",
+     "url": SITE_URL + "/podcast-voix-de-lia/", "webFeed": SITE_URL + "/podcast-voix-de-lia/flux.xml",
+     "inLanguage": "fr-FR", "image": SITE_URL + "/podcast-voix-de-lia/images/partage.jpg",
+     "description": "130 portraits audio d'une dizaine de minutes des femmes et des hommes qui "
+                    "font la tech et l'intelligence artificielle, racontés par Ada, Alan et Lia, des "
+                    "IA-nimateurs ; chaque fait est vérifié et les sources sont sous chaque épisode.",
+     "author": {"@id": PERS_ID}, "publisher": {"@id": ORG_ID},
+     "sameAs": ["https://podcasts.apple.com/fr/podcast/les-voix-de-lia/id6822430918",
+                "https://open.spotify.com/show/0rdllAOWQFhE8vTfKgAxzV"]},
+    {"@type": "PodcastSeries", "@id": "https://choucroute-citron.com/#serie", "name": "Choucroute Citron",
+     "url": "https://choucroute-citron.com/", "inLanguage": "fr-FR",
+     "description": "Le podcast animé par Alexandre Stopnicki où des IA-nimatrices et IA-nimateurs "
+                    "interrogent en direct des invités au parcours remarquable.",
+     "author": {"@id": PERS_ID},
+     "sameAs": ["https://podcasts.apple.com/fr/podcast/choucroute-citron/id1812305442",
+                "https://podcast.ausha.co/show/9peJafn6W6DR"]},
+]
+
+# La vidéo « Mon nouveau métier : le vibe coding » (17/10/2026), servie sous /pour/.
+VIDEO_VIBE = {"@type": "VideoObject", "@id": SITE_URL + "/pour/alexandre-vibe-coding/#video",
+              "name": "Mon nouveau métier : le vibe coding",
+              "description": "30 ans dans le digital, et un nouveau métier : réaliser les projets des "
+                             "entreprises avec l'IA, vite et sur mesure. Le message d'Alexandre Stopnicki, "
+                             "en moins d'une minute, avec sa voix clonée par IA.",
+              "thumbnailUrl": [SITE_URL + "/pour/alexandre-vibe-coding/vignette.jpg",
+                               SITE_URL + "/pour/alexandre-vibe-coding/alexandre.jpg"],
+              "uploadDate": "2026-10-17", "duration": "PT49S", "inLanguage": "fr-FR",
+              "contentUrl": SITE_URL + "/pour/alexandre-vibe-coding/video.mp4",
+              "url": SITE_URL + "/pour/alexandre-vibe-coding/",
+              "creator": {"@id": PERS_ID}, "publisher": {"@id": ORG_ID}}
+
+def image_page(meta):
+    if meta.get("dessin"):
+        return SITE_URL + "/dessins/" + meta["dessin"].split("|")[0].strip()
+    return SITE_URL + "/medias/partage.jpg"
+
 # ---------------------------------------------------------------- données structurées
-def jsonld(meta, url, corps=""):
+def jsonld(meta, url, corps="", modifie=None):
+    page_id = SITE_URL + url + "#page"
     fil = [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": SITE_URL + "/"}]
     for n, (nom, lien) in enumerate(fil_dariane(meta), start=2):
         fil.append({"@type": "ListItem", "position": n, "name": nom,
-                    **({"item": SITE_URL + lien} if lien else {})})
-    blocs = [{"@type": "BreadcrumbList", "itemListElement": fil}]
+                    "item": SITE_URL + (lien or url)})
+    blocs = [noeud_org(), noeud_personne(), noeud_site(),
+             {"@type": "BreadcrumbList", "@id": SITE_URL + url + "#fil", "itemListElement": fil}]
 
     t = meta.get("type", "page")
+    # La page elle-même : un WebPage (AboutPage, ContactPage, CollectionPage selon
+    # le cas) qui dit de quoi il parle, quand il a changé, et qui l'édite.
+    type_page = {"/a-propos/": "AboutPage", "/contact/": "ContactPage", "/plan-du-site/": "CollectionPage",
+                 "/blog/": "CollectionPage", "/archives/": "CollectionPage", "/ia-en-entreprise/": "FAQPage"
+                 }.get(url, "WebPage")
+    page = {"@type": type_page, "@id": page_id, "url": SITE_URL + url, "name": meta["titre"],
+            "description": meta["description"], "inLanguage": "fr-FR",
+            "isPartOf": {"@id": SITE_ID}, "publisher": {"@id": ORG_ID},
+            "breadcrumb": {"@id": SITE_URL + url + "#fil"},
+            "primaryImageOfPage": {"@type": "ImageObject", "url": image_page(meta)}}
+    if modifie:
+        page["dateModified"] = modifie
+    if meta.get("en_bref"):
+        page["abstract"] = texte_brut(meta["en_bref"])
+    if url == "/a-propos/":
+        page["mainEntity"] = {"@id": ORG_ID}
+        page["about"] = [{"@id": ORG_ID}, {"@id": PERS_ID}]
+        blocs[0], blocs[1] = noeud_org(complet=True), noeud_personne(complet=True)
+    blocs.append(page)
+
     base = {"name": meta["titre"], "description": meta["description"],
             "url": SITE_URL + url, "inLanguage": "fr-FR",
-            "isPartOf": {"@type": "WebSite", "name": "3h33", "url": SITE_URL + "/"},
-            "publisher": {"@type": "Organization", "name": "3h33", "url": SITE_URL + "/"}}
+            "mainEntityOfPage": {"@id": page_id}}
     if t == "formation":
-        blocs.append({"@type": "Course", **base,
-                      "provider": {"@type": "Organization", "name": "3h33", "url": SITE_URL + "/"},
+        modes = [m.strip() for m in meta.get("mode", "blended").split(",")]
+        blocs.append({"@type": "Course", "@id": SITE_URL + url + "#formation", **base,
+                      "provider": {"@id": ORG_ID}, "instructor": {"@id": PERS_ID},
                       "teaches": meta.get("enseigne", meta["titre"]),
-                      "hasCourseInstance": {"@type": "CourseInstance",
-                                            "courseMode": meta.get("mode", "blended"),
-                                            "courseWorkload": meta.get("duree", "PT2H")}})
+                      "hasCourseInstance": [{"@type": "CourseInstance", "courseMode": m,
+                                             "courseWorkload": meta.get("duree", "PT2H"),
+                                             "inLanguage": "fr-FR",
+                                             "instructor": {"@id": PERS_ID}} for m in modes]})
     elif t == "article":
-        blocs.append({"@type": "BlogPosting", **base, "headline": meta["titre"],
+        blocs.append({"@type": "BlogPosting", "@id": SITE_URL + url + "#article", **base,
+                      "headline": meta["titre"][:110], "image": image_page(meta),
                       "datePublished": meta.get("publie", AUJOURD_HUI),
                       "dateModified": meta.get("modifie", meta.get("publie", AUJOURD_HUI)),
-                      "author": {"@type": "Person", "name": "Alexandre Stopnicki",
-                                 "url": "https://alexandrestopnicki.com"}})
+                      "author": {"@id": PERS_ID}, "publisher": {"@id": ORG_ID}})
     elif t == "service":
-        blocs.append({"@type": "Service", **base,
+        blocs.append({"@type": "Service", "@id": SITE_URL + url + "#service", **base,
                       "serviceType": meta.get("service", meta["titre"]),
-                      "areaServed": "FR",
-                      "provider": {"@type": "Organization", "name": "3h33", "url": SITE_URL + "/"}})
-    else:
-        blocs.append({"@type": "WebPage", **base})
+                      "areaServed": {"@type": "Country", "name": "France"},
+                      "provider": {"@id": ORG_ID}})
+    if meta.get("definition"):
+        terme, sens = meta["definition"].split("|", 1)
+        blocs.append({"@type": "DefinedTerm", "@id": SITE_URL + url + "#definition",
+                      "name": terme.strip(), "description": texte_brut(sens), "inLanguage": "fr-FR",
+                      "url": SITE_URL + url,
+                      "inDefinedTermSet": {"@type": "DefinedTermSet", "name": "Le vocabulaire de l'IA, par 3h33",
+                                           "url": SITE_URL + "/ia-en-entreprise/"}})
+        page["about"] = {"@id": SITE_URL + url + "#definition"}
+    if url == "/podcasts/":
+        blocs += PODCASTS
+        page["about"] = [{"@id": p["@id"]} for p in PODCASTS]
+    if url == "/vibe-coding/":
+        blocs.append(VIDEO_VIBE)
+        page["video"] = {"@id": VIDEO_VIBE["@id"]}
 
     if meta.get("faq"):
-        qr = [q.split("|") for q in meta["faq"]]
-        blocs.append({"@type": "FAQPage", "mainEntity": [
+        qr = [q.split("|", 1) for q in meta["faq"]]
+        faq = {"mainEntity": [
             {"@type": "Question", "name": q.strip(),
-             "acceptedAnswer": {"@type": "Answer", "text": texte_brut(r)}} for q, r in qr]})
+             "acceptedAnswer": {"@type": "Answer", "text": texte_brut(r)}} for q, r in qr]}
+        if type_page == "FAQPage":
+            page.update(faq)                          # la page EST la FAQ : un seul nœud
+        else:
+            blocs.append({"@type": "FAQPage", "@id": SITE_URL + url + "#faq", "isPartOf": {"@id": page_id}, **faq})
     for v in videos_de(corps):
         blocs.append({"@type": "VideoObject", "name": v["titre"], "description": texte_brut(v["texte"]),
                       "thumbnailUrl": f"https://i.ytimg.com/vi/{v['id']}/hqdefault.jpg",
@@ -247,10 +388,9 @@ def jsonld(meta, url, corps=""):
                       "embedUrl": f"https://www.youtube-nocookie.com/embed/{v['id']}",
                       "contentUrl": f"https://www.youtube.com/watch?v={v['id']}",
                       "inLanguage": "fr-FR",
-                      "creator": {"@type": "Person", "name": "Alexandre Stopnicki", "url": "https://alexandre.ai"},
-                      "publisher": {"@type": "Organization", "name": "3h33", "url": SITE_URL + "/"}})
+                      "creator": {"@id": PERS_ID}, "publisher": {"@id": ORG_ID}})
     return json.dumps({"@context": "https://schema.org", "@graph": blocs},
-                      ensure_ascii=False, separators=(",", ":"))
+                      ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 def texte_brut(t):
     """Une réponse de FAQ sans sa syntaxe Markdown, pour les données structurées."""
@@ -307,6 +447,79 @@ def fil_html(meta):
                      else f'<span aria-current="page">{esc(nom)}</span>')
     return ' <span aria-hidden="true">›</span> '.join(parts)
 
+
+# ---------------------------------------------------------------- aides de construction
+def date_page(meta):
+    """La date de dernière modification d'une page : celle que fixe la fiche, sinon
+    celle du dernier commit de sa fiche. L'accueil vit aussi dans son gabarit."""
+    if meta.get("modifie"):
+        return meta["modifie"]
+    d = date_git(CONTENU / meta["_fichier"])
+    if meta.get("gabarit") == "accueil":
+        d = max(d, date_git(RACINE / "gabarits" / "accueil.html"))
+    return d
+
+def robots_meta(meta):
+    """Indexable : on autorise explicitement les grands aperçus (image, extrait, vidéo).
+    Sans cette ligne, Google peut se contenter d'une vignette et d'un extrait court,
+    et les assistants qui suivent ces directives citent moins long."""
+    if meta.get("indexer") == "non":
+        return '<meta name="robots" content="noindex, follow">'
+    return '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">'
+
+def en_bref_html(meta):
+    """« En bref » : la réponse courte, en tête de page. C'est le passage que les
+    assistants d'IA (ChatGPT, Perplexity, Gemini, Claude) reprennent quand ils
+    citent une source : il doit se comprendre seul, sans le reste de la page."""
+    if not meta.get("en_bref"):
+        return ""
+    return (f'<p class="en-bref"><strong>En bref.</strong> {enligne(esc(meta["en_bref"]))}</p>\n')
+
+def taille_image(chemin):
+    """(largeur, hauteur) d'un PNG, JPEG, GIF ou WebP, sans dépendance. None si inconnu."""
+    import struct
+    try:
+        with open(chemin, "rb") as f:
+            d = f.read(1 << 16)
+            if d[:8] == b"\x89PNG\r\n\x1a\n":
+                return struct.unpack(">II", d[16:24])
+            if d[:6] in (b"GIF87a", b"GIF89a"):
+                return struct.unpack("<HH", d[6:10])
+            if d[:4] == b"RIFF" and d[8:12] == b"WEBP":
+                if d[12:16] == b"VP8X": return (int.from_bytes(d[24:27], "little") + 1, int.from_bytes(d[27:30], "little") + 1)
+                if d[12:16] == b"VP8 ": return (struct.unpack("<H", d[26:28])[0] & 0x3fff, struct.unpack("<H", d[28:30])[0] & 0x3fff)
+                if d[12:16] == b"VP8L":
+                    b = int.from_bytes(d[21:25], "little"); return ((b & 0x3fff) + 1, ((b >> 14) & 0x3fff) + 1)
+            if d[:2] == b"\xff\xd8":
+                f.seek(2)
+                while True:
+                    m = f.read(2)
+                    if len(m) < 2 or m[0] != 0xFF: return None
+                    if m[1] in (0xD8, 0x01) or 0xD0 <= m[1] <= 0xD7: continue
+                    n = struct.unpack(">H", f.read(2))[0]
+                    if m[1] in (0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF):
+                        h, w = struct.unpack(">xHH", f.read(5)); return (w, h)
+                    f.seek(n - 2, 1)
+    except OSError:
+        return None
+    return None
+
+def dimensions_images(texte):
+    """Ajoute width et height aux images locales qui n'en ont pas : sans eux, la page
+    saute pendant le chargement (CLS), ce que Google mesure et pénalise."""
+    def ajoute(m):
+        balise = m.group(0)
+        if re.search(r"\swidth=", balise):
+            return balise
+        src = re.search(r'src="(/[^"?#]+)', balise)
+        if not src:
+            return balise
+        taille = taille_image(SITE / src.group(1).lstrip("/"))
+        if not taille:
+            return balise
+        return balise[:-1].rstrip("/").rstrip() + f' width="{taille[0]}" height="{taille[1]}">'
+    return re.sub(r"<img\b[^>]*>", ajoute, texte)
+
 # ---------------------------------------------------------------- construction
 def construire(verifie=False):
     fiches = sorted(CONTENU.glob("*.md"))
@@ -339,17 +552,23 @@ def construire(verifie=False):
     ecrites = 0
     for meta, corps, titre_seo in pages:
         url = meta["url"]
+        modifie = date_page(meta)
         if meta.get("gabarit") == "accueil":
-            ecrire(meta["url"], page_accueil(meta, titre_seo)); ecrites += 1
+            ecrire(meta["url"], page_accueil(meta, titre_seo, modifie)); ecrites += 1
             continue
         page = GABARIT.replace('href="/style.css"', f'href="/style.css?v={VERSION_STYLE}"')
         page = page.replace("{{titre_seo}}", esc(titre_seo))
         page = page.replace("{{description}}", esc(meta["description"]))
         page = page.replace("{{url}}", url)
         page = page.replace("{{og_type}}", "article" if meta.get("type") == "article" else "website")
-        page = page.replace("{{robots}}", '<meta name="robots" content="noindex, follow">'
-                            if meta.get("indexer") == "non" else "")
-        page = page.replace("{{jsonld}}", jsonld(meta, url, corps))
+        page = page.replace("{{robots}}", robots_meta(meta))
+        suppl = []
+        if meta.get("type") == "article":
+            suppl += [f'<meta property="article:published_time" content="{meta.get("publie", modifie)}">',
+                      f'<meta property="article:modified_time" content="{meta.get("modifie", modifie)}">',
+                      '<meta property="article:author" content="https://alexandrestopnicki.com">']
+        page = page.replace("{{meta_suppl}}", "\n".join(suppl))
+        page = page.replace("{{jsonld}}", jsonld(meta, url, corps, modifie))
         page = page.replace("{{fil}}", fil_html(meta))
         page = page.replace("{{titre}}", esc(meta["titre"]))
         if meta.get("heure"):
@@ -365,12 +584,14 @@ def construire(verifie=False):
         dessin = ""
         if meta.get("dessin"):
             fichier, legende = (meta["dessin"].split("|") + [""])[:2]
+            # Les dessins font 1400 × 1050 : la hauteur annoncée était 933, et le
+            # navigateur réservait une place fausse avant de charger l'image.
             dessin = (f'<figure class="dessin"><img src="/dessins/{fichier.strip()}" '
-                      f'alt="{esc(legende.strip() or meta["titre"])}" loading="lazy" '
-                      f'width="1400" height="933"></figure>')
+                      f'alt="{esc(legende.strip() or meta["titre"])}" loading="lazy" decoding="async" '
+                      f'width="1400" height="1050"></figure>')
         page = page.replace("{{dessin}}", dessin)
         page = page.replace("{{duree}}", duree_lecture(corps, meta))
-        page = page.replace("{{contenu}}", md(corps) + faq_html(meta))
+        page = page.replace("{{contenu}}", dimensions_images(en_bref_html(meta) + md(corps) + faq_html(meta)))
         dest = SITE / url.strip("/") / "index.html" if url != "/" else SITE / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(page, encoding="utf-8")
@@ -383,30 +604,84 @@ def construire(verifie=False):
     llms_complet(pages)
     print(f"  ✓ {ecrites} pages écrites, sitemap, plan du site et llms.txt à jour")
 
+FAITS_CLES = [
+    "Nom : 3h33 (aussi écrit 3H33), « l'agence de l'IA ». Site officiel : https://3h33.com",
+    "Nature : agence et organisme de formation français, spécialisés dans les usages de l'intelligence artificielle générative en entreprise.",
+    "Création : 2010, par Alexandre Stopnicki, qui en est le fondateur. Depuis 2023, l'essentiel du travail porte sur l'IA générative.",
+    "Ce que fait 3h33 : former les équipes (masterclass de deux heures, ateliers d'un à deux jours, formation Claude, rendez-vous de veille mensuels), construire avec elles des outils d'IA en vibe coding (agents, automatisations, tableaux de bord ; méthode Forge en une demi-journée) et produire des contenus avec son studio créatif (vidéos, podcasts, comédiens virtuels).",
+    "Réalisations : plus de trente-cinq sites et outils en ligne, tous fabriqués en vibe coding, réunis dans la galaxie 3h33 (https://3h33.com/galaxie/).",
+    "Applications éditées : NegoVox, Media Training Vox, BotMoiLeQi (et BotMoiLeQi LMA, BotMoiLeQi Slide), Le savez-vous ?.",
+    "Podcasts : Choucroute Citron (des IA-nimatrices interrogent des invités en direct) et Les Voix de l'IA (130 portraits des talents de la tech et de l'IA).",
+    "Clients cités sur le site : Criteo, Saint-Gobain, Air Liquide, Dentsply Sirona, Bolton Group, Robert Half, le Cnam, Esmod, Casino, Maria Schools, De Vinci Executive Education, l'Institut français, Giropharm, Les Acteurs de la Compétence, Acorus, la mairie de Laxou.",
+    "Zone : France ; interventions à distance comme en présentiel, en français (et en anglais sur demande).",
+    "Contact : https://3h33.com/contact/ — info@3h33.fr ; premier échange de vingt minutes gratuit.",
+]
+FAITS_ALEXANDRE = [
+    "Alexandre Stopnicki : fondateur de 3h33, formateur, conférencier et constructeur d'outils d'IA ; il travaille dans le numérique depuis trente ans.",
+    "En 1997, sa société Numériland tenait la régie publicitaire du Deuxième Monde, le métavers de Canal+ (https://3h33.com/deuxieme-monde/).",
+    "Il construit des chatbots depuis 2017 (LècheBot, puis BotMoiLeQi) et il est chroniqueur de l'émission The Artificial Intelligence Society.",
+    "Il anime le podcast Choucroute Citron. Site personnel : https://alexandrestopnicki.com ; créations visuelles : https://alexandre.ai ; LinkedIn : https://fr.linkedin.com/in/alexandrestopnicki",
+]
+
+def episodes_voix_de_lia():
+    """Les portraits de la série Les Voix de l'IA, lus dans les pages que publie le dépôt
+    podcast-engine (on ne les modifie pas : on lit leur titre et leur description)."""
+    plan_serie = SITE / "podcast-voix-de-lia" / "sitemap.xml"
+    if not plan_serie.exists():
+        return []
+    sortie = []
+    for loc in re.findall(r"<loc>([^<]+)</loc>", plan_serie.read_text(encoding="utf-8")):
+        chemin = loc.replace(SITE_URL, "").strip("/")
+        if chemin == "podcast-voix-de-lia":
+            continue
+        f = SITE / chemin / "index.html"
+        if not f.exists():
+            continue
+        t = f.read_text(encoding="utf-8")
+        titre = re.search(r"<title>(.*?)</title>", t, re.S)
+        desc = re.search(r'<meta name="description" content="([^"]*)"', t)
+        if titre:
+            titre = html.unescape(titre.group(1)).strip()
+            titre = re.sub(r"\s*[·|—-]\s*Les Voix de l.IA\s*$", "", titre)
+            sortie.append((titre, loc, html.unescape(desc.group(1)).strip() if desc else ""))
+    return sortie
+
 def llms(pages):
     """/llms.txt : le résumé du site à l'usage des assistants d'IA (format llmstxt.org).
     Régénéré à chaque construction, comme le sitemap, pour ne jamais décrire un site
-    qui n'existe plus. Les archives et les pages légales restent hors du résumé."""
+    qui n'existe plus. Les archives et les pages légales restent hors du résumé.
+    Depuis le 18/10/2026 : des faits clés en phrases autonomes, faciles à citer, les
+    contenus de référence en tête, et la liste des portraits des Voix de l'IA."""
     groupes = {"Offres": [], "Comprendre l'IA": [], "Articles": [], "Autres pages": []}
+    reference = {"/vibe-coding/", "/ia-en-entreprise/", "/formation-ia-obligatoire-ai-act/",
+                 "/chatgpt-claude-mistral-gemini/", "/no-code/", "/ia-locale-souveraine/",
+                 "/lma-learning-management-agentique/"}
+    refs = []
     for meta, _, _ in sorted(pages, key=lambda p: -float(p[0].get("priorite", "0.7"))):
         u = meta["url"]
         if meta.get("indexer") == "non" or u in ("/", "/plan-du-site/") or u.startswith("/archives/") \
                 or float(meta.get("priorite", "0.7")) <= 0.3 or meta.get("type") == "legal":
             continue
+        ligne = f"- [{meta['titre']}]({SITE_URL}{u}): {texte_brut(meta.get('en_bref') or meta['description'])}"
+        if u in reference:
+            refs.append(ligne); continue
         t = meta.get("type", "page")
         cle = ("Offres" if t in ("service", "formation") else "Articles" if t == "article"
                else "Comprendre l'IA" if meta.get("faq") else "Autres pages")
-        groupes[cle].append(f"- [{meta['titre']}]({SITE_URL}{u}): {meta['description']}")
+        groupes[cle].append(ligne)
     lignes = ["# 3h33", "",
               "> 3h33 est une agence et un organisme de formation français spécialisés dans les "
-              "usages de l'intelligence artificielle générative en entreprise, fondés par "
+              "usages de l'intelligence artificielle générative en entreprise, fondés en 2010 par "
               "Alexandre Stopnicki. 3h33 forme les équipes (masterclass, ateliers, formation "
               "Claude), construit avec elles des outils d'IA en vibe coding (agents, "
               "automatisations, tableaux de bord, méthode Forge en une demi-journée) et produit "
               "des contenus avec son studio créatif.", "",
               "Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes sur "
               "l'IA en entreprise sont rassemblées sur https://3h33.com/ia-en-entreprise/. Le texte "
-              "complet du site, en un seul fichier : https://3h33.com/llms-full.txt", ""]
+              "complet du site, en un seul fichier : https://3h33.com/llms-full.txt", "",
+              "## Faits clés sur 3h33", ""] + [f"- {f}" for f in FAITS_CLES] + [
+              "", "## Alexandre Stopnicki, fondateur", ""] + [f"- {f}" for f in FAITS_ALEXANDRE] + [
+              "", "## Contenus de référence", ""] + refs + [""]
     for nom, items in groupes.items():
         if items:
             lignes += [f"## {nom}", ""] + items + [""]
@@ -414,12 +689,24 @@ def llms(pages):
                f"- [Méthode Forge]({SITE_URL}/forge/): des solutions IA (agent, automatisation, tableau de bord) co-construites avec vos équipes en une demi-journée.",
                f"- [Formation Claude]({SITE_URL}/formation-claude/): formation à Claude (Anthropic) pour salariés et managers, un ou deux jours.",
                f"- [La galaxie 3h33]({SITE_URL}/galaxie/): l'annuaire des sites et applications de l'écosystème 3h33.",
-               f"- [Cartographie mondiale des usages de l'IA]({SITE_URL}/cartographie-mondiale-des-usages-de-l-ia/)", "",
+               f"- [Cartographie mondiale des usages de l'IA]({SITE_URL}/cartographie-mondiale-des-usages-de-l-ia/): étude 2024–2026 sur les usages réels de l'IA dans le monde, 90 pages, plus de 90 sources, 13 zones géographiques, PDF gratuit.",
+               f"- [Mon nouveau métier : le vibe coding]({SITE_URL}/pour/alexandre-vibe-coding/): le message vidéo d'Alexandre Stopnicki, en moins d'une minute.", "",
                "## Applications éditées par 3h33", "",
                "- [NegoVox](https://negovox.com/): simulateur d'entraînement vocal par IA pour les commerciaux ; un client joué par l'IA, puis un débrief noté sur douze compétences de vente.",
                "- [Media Training Vox](https://media-training-vox.com/): entraînement par IA vocale aux prises de parole des dirigeants, face aux médias, au comité de direction, au conseil ou aux actionnaires.",
                "- [BotMoiLeQi](https://botmoileqi.com/): le learning agentique pour les organismes de formation ; un agent IA et ses outils (BotMoiLeQi LMA, BotMoiLeQi Slide) accompagnent chaque apprenant jusqu'à la certification. Marque de 3h33.",
                "- [Le savez-vous ?](https://le-savez-vous.com/): chaque matin, un fait surprenant et sourcé à lire ou écouter en 90 secondes.", ""]
+    eps = episodes_voix_de_lia()
+    if eps:
+        lignes += ["## Les Voix de l'IA : les portraits", "",
+                   f"Podcast gratuit de 3h33 : {SITE_URL}/podcast-voix-de-lia/ (flux RSS : "
+                   f"{SITE_URL}/podcast-voix-de-lia/flux.xml). Chaque portrait cite ses sources sous l'épisode.", ""]
+        lignes += [f"- [{t}]({u})" for t, u, _ in eps] + [""]
+    lignes += ["## Profils officiels", "",
+               "- 3h33 : https://www.facebook.com/3h33.FORMATIONS · https://twitter.com/alexandre3h33 · https://instagram.com/alexandre3h33",
+               "- Alexandre Stopnicki : https://fr.linkedin.com/in/alexandrestopnicki · https://alexandrestopnicki.com · https://alexandre.ai",
+               "- Choucroute Citron : https://choucroute-citron.com · https://podcasts.apple.com/fr/podcast/choucroute-citron/id1812305442",
+               "- Les Voix de l'IA : https://podcasts.apple.com/fr/podcast/les-voix-de-lia/id6822430918 · https://open.spotify.com/show/0rdllAOWQFhE8vTfKgAxzV", ""]
     (SITE / "llms.txt").write_text("\n".join(lignes), encoding="utf-8")
 
 def ecrire(url, page):
@@ -427,7 +714,7 @@ def ecrire(url, page):
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(page, encoding="utf-8")
 
-def page_accueil(meta, titre_seo):
+def page_accueil(meta, titre_seo, modifie=None):
     """La page d'accueil : gabarit à part (gabarits/accueil.html), FAQ et données
     structurées tirées de contenu/accueil.md. La FAQ affichée et celle du JSON-LD
     viennent de la même liste : elles ne peuvent plus diverger (l'ancienne page
@@ -436,69 +723,34 @@ def page_accueil(meta, titre_seo):
     faq = "\n".join(f'        <details><summary>{esc(q.split("|",1)[0].strip())}</summary>'
                      f'<p>{enligne(esc(q.split("|",1)[1].strip()))}</p></details>' for q in meta["faq"])
     for cle, val in (("{{titre_seo}}", esc(titre_seo)), ("{{description}}", esc(meta["description"])),
-                     ("{{url}}", meta["url"]), ("{{faq}}", faq), ("{{jsonld}}", jsonld_accueil(meta)),
-                     ("{{robots}}", '<meta name="robots" content="noindex, nofollow">'
-                                    if meta.get("indexer") == "non" else "")):
+                     ("{{url}}", meta["url"]), ("{{faq}}", faq), ("{{jsonld}}", jsonld_accueil(meta, modifie)),
+                     ("{{robots}}", robots_meta(meta))):
         page = page.replace(cle, val)
     return page
 
-def jsonld_accueil(meta):
-    org, pers = SITE_URL + "/#organisation", SITE_URL + "/#alexandre"
+def jsonld_accueil(meta, modifie=None):
     services = [("Masterclass IA", "/masterclass-ia/"), ("Ateliers de formation à l'IA", "/ateliers-formation/"),
                 ("Formation Claude", "/formation-claude/"), ("Méthode Forge", "/forge/"),
                 ("Vibe coding : outils sur mesure", "/vibe-coding/"), ("Chatbots et agents IA", "/chatbots/"),
                 ("Coaching IA des dirigeants", "/coaching-ia-dirigeants/"), ("Studio créatif IA", "/studio/")]
-    graphe = [
-        {"@type": ["Organization", "EducationalOrganization"], "@id": org, "name": "3h33",
-         "alternateName": ["3h33, l'agence de l'IA", "3H33"], "url": SITE_URL + "/",
-         "logo": SITE_URL + "/medias/partage.jpg", "image": SITE_URL + "/medias/partage.jpg",
-         "description": "Agence et organisme de formation français spécialisés dans les usages de "
-                        "l'intelligence artificielle générative en entreprise : formations, outils sur "
-                        "mesure en vibe coding, agents conversationnels et studio créatif.",
-         "slogan": "On apprend l'IA en construisant.", "foundingDate": "2010",
-         "founder": {"@id": pers}, "email": "info@3h33.fr", "areaServed": "FR",
-         "contactPoint": {"@type": "ContactPoint", "contactType": "commercial",
-                          "url": SITE_URL + "/contact/", "availableLanguage": ["fr", "en"]},
-         "knowsAbout": ["Intelligence artificielle générative", "Formation à l'intelligence artificielle",
-                        "Vibe coding", "Agents conversationnels", "AI Act", "IA souveraine",
-                        "Learning Management Agentique", "Production audiovisuelle par IA"],
-         "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": n,
-                         "url": SITE_URL + u, "provider": {"@id": org}}} for n, u in services],
-         "sameAs": ["https://alexandrestopnicki.com", "https://fr.linkedin.com/in/alexandrestopnicki",
-                    "https://twitter.com/alexandre3h33", "https://www.facebook.com/3h33.FORMATIONS",
-                    "https://instagram.com/alexandre3h33", "https://choucroute-citron.com"],
-         "brand": [{"@type": "Brand", "name": n, "url": u} for n, u in (
-             ("BotMoiLeQi", "https://botmoileqi.com"), ("NegoVox", "https://negovox.com"),
-             ("Media Training Vox", "https://media-training-vox.com"),
-             ("Le savez-vous ?", "https://le-savez-vous.com"))]},
-        {"@type": "Person", "@id": pers, "name": "Alexandre Stopnicki",
-         "jobTitle": "Fondateur de 3h33, formateur et conférencier en intelligence artificielle",
-         "description": "Fondateur de 3h33. Dans le numérique depuis trente ans : en 1997, sa société "
-                        "Numériland tenait la régie publicitaire du Deuxième Monde, le métavers de Canal+. "
-                        "Construit des chatbots depuis 2017 ; chroniqueur de l'émission The Artificial "
-                        "Intelligence Society.",
-         "url": "https://alexandrestopnicki.com", "image": SITE_URL + "/medias/alexandre-stopnicki.jpg",
-         "worksFor": [{"@id": org},
-                      {"@type": "Organization", "@id": "https://listen-to-my-art.com/#organisation",
-                       "name": "Listen to my art", "alternateName": "Musée à la maison",
-                       "url": "https://listen-to-my-art.com/"}],
-         "knowsAbout": ["Intelligence artificielle générative", "Vibe coding", "Pédagogie",
-                        "Agents conversationnels", "Métavers"],
-         "sameAs": ["https://fr.linkedin.com/in/alexandrestopnicki", "https://alexandre.ai",
-                    "https://alexandrestopnicki.com"]},
-        {"@type": "WebSite", "@id": SITE_URL + "/#site", "url": SITE_URL + "/", "name": "3h33",
-         "inLanguage": "fr-FR", "publisher": {"@id": org}},
-        {"@type": "WebPage", "@id": SITE_URL + "/#accueil", "url": SITE_URL + "/",
-         "name": meta["titre"], "description": meta["description"], "inLanguage": "fr-FR",
-         "isPartOf": {"@id": SITE_URL + "/#site"}, "about": {"@id": org},
-         "primaryImageOfPage": SITE_URL + "/medias/partage.jpg"},
-        {"@type": "FAQPage", "mainEntity": [
+    org = noeud_org(complet=True)
+    org["makesOffer"] = [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": n,
+                          "url": SITE_URL + u, "provider": {"@id": ORG_ID}}} for n, u in services]
+    page = {"@type": "WebPage", "@id": SITE_URL + "/#accueil", "url": SITE_URL + "/",
+            "name": meta["titre"], "description": meta["description"], "inLanguage": "fr-FR",
+            "isPartOf": {"@id": SITE_ID}, "about": {"@id": ORG_ID}, "publisher": {"@id": ORG_ID},
+            "primaryImageOfPage": {"@type": "ImageObject", "url": SITE_URL + "/medias/partage.jpg"}}
+    if modifie:
+        page["dateModified"] = modifie
+    graphe = [org, noeud_personne(complet=True), noeud_site(), page, PODCASTS[0],
+        {"@type": "FAQPage", "@id": SITE_URL + "/#faq", "isPartOf": {"@id": SITE_URL + "/#accueil"},
+         "mainEntity": [
             {"@type": "Question", "name": q.split("|", 1)[0].strip(),
              "acceptedAnswer": {"@type": "Answer", "text": texte_brut(q.split("|", 1)[1])}}
             for q in meta["faq"]]},
     ]
     return json.dumps({"@context": "https://schema.org", "@graph": graphe},
-                      ensure_ascii=False, separators=(",", ":"))
+                      ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
 def episodes_secours():
     """site/inclus/choucroute-defaut.html : la liste servie quand le serveur n'a pas
@@ -526,7 +778,8 @@ def llms_complet(pages):
     blocs = ["# 3h33 — texte complet du site", "",
              "> 3h33 est une agence et un organisme de formation français, créé en 2010 par "
              "Alexandre Stopnicki, spécialisé dans les usages de l'intelligence artificielle "
-             "générative en entreprise. Résumé court : " + SITE_URL + "/llms.txt", ""]
+             "générative en entreprise. Résumé court : " + SITE_URL + "/llms.txt", "",
+             "## Faits clés", ""] + [f"- {f}" for f in FAITS_CLES + FAITS_ALEXANDRE] + ["", "---", ""]
     for _, _, meta, corps in sorted(retenues, key=lambda r: (r[0], r[1])):
         url = SITE_URL + ("/" if meta.get("gabarit") == "accueil" else meta["url"])
         texte = []
@@ -551,6 +804,8 @@ def llms_complet(pages):
                 m = re.match(r"^@youtube\s+([\w-]{11})\s*\|\s*(.+)$", l)
                 texte.append(f"Vidéo : {m.group(2).strip()} — https://www.youtube.com/watch?v={m.group(1)}" if m else l)
         blocs += [f"# {meta['titre']}", f"URL : {url}", "", f"> {meta['description']}", ""]
+        if meta.get("en_bref"):
+            blocs += ["En bref : " + texte_brut(meta["en_bref"]), ""]
         if meta.get("chapo"):
             blocs += [texte_brut(meta["chapo"]), ""]
         if texte:
@@ -561,24 +816,45 @@ def llms_complet(pages):
                 question, reponse = q.split("|", 1)
                 blocs += [f"**{question.strip()}** {texte_brut(reponse)}", ""]
         blocs += ["---", ""]
+    eps = episodes_voix_de_lia()
+    if eps:
+        blocs += ["# Les Voix de l'IA : les portraits", f"URL : {SITE_URL}/podcast-voix-de-lia/", "",
+                  "> Podcast gratuit de 3h33 : 130 portraits audio d'une dizaine de minutes des femmes et des "
+                  "hommes qui font la tech et l'intelligence artificielle, racontés par Ada, Alan et Lia, des "
+                  "IA-nimateurs. Chaque fait est vérifié, les sources sont sous chaque épisode.", ""]
+        blocs += [f"- {t} — {d} {u}" for t, u, d in eps] + [""]
     (SITE / "llms-full.txt").write_text("\n".join(blocs), encoding="utf-8")
 
 def sitemap(pages):
+    """Le plan du site pour les moteurs. Chaque page porte la date de sa dernière vraie
+    modification (le dernier commit de sa fiche) et, quand elle en a une, son image :
+    Google Images et les assistants qui affichent des visuels la trouvent ainsi."""
     lignes = ['<?xml version="1.0" encoding="UTF-8"?>',
-              '<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">'.replace("sitemap.org", "sitemaps.org")]
-    entrees = [("/", "1.0", date_git(SITE / "index.html"))]
+              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+              'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
+    entrees = []
     for meta, _, _ in pages:
-        if meta.get("indexer") == "non" or meta["url"] == "/":
+        if meta.get("indexer") == "non":
             continue
-        prio = meta.get("priorite", "0.7")
-        entrees.append((meta["url"], prio, meta.get("modifie") or date_git(RACINE / "contenu" / meta["_fichier"])))
-    # les sept sites HTML purs, conservés à l'identique
+        prio = "1.0" if meta["url"] == "/" else meta.get("priorite", "0.7")
+        image = image_page(meta) if meta.get("dessin") else None
+        entrees.append((meta["url"], prio, date_page(meta), image))
+    entrees.sort(key=lambda e: (e[0] != "/", e[0]))
+    # les sites HTML purs, conservés à l'identique
     for u in ("/galaxie/", "/forge/", "/formation-claude/", "/podcast-voix-de-lia/",
               "/verif-nom/", "/cartographie-mondiale-des-usages-de-l-ia/", "/cobrandz/"):
-        entrees.append((u, "0.8", date_git(SITE / u.strip("/") / "index.html")))
-    for url, prio, date in entrees:
+        entrees.append((u, "0.8", date_git(SITE / u.strip("/") / "index.html"), None))
+    # La seule page de /pour/ qui soit publique et faite pour être partagée : le message
+    # d'Alexandre sur le vibe coding. Les autres pages de /pour/ sont privées (noindex).
+    entrees.append(("/pour/alexandre-vibe-coding/", "0.8",
+                    date_git(SITE / "pour" / "alexandre-vibe-coding" / "index.html"),
+                    SITE_URL + "/pour/alexandre-vibe-coding/vignette.jpg"))
+    for url, prio, date, image in entrees:
         lignes += ["  <url>", f"    <loc>{SITE_URL}{url}</loc>",
-                   f"    <lastmod>{date}</lastmod>", f"    <priority>{prio}</priority>", "  </url>"]
+                   f"    <lastmod>{date}</lastmod>", f"    <priority>{prio}</priority>"]
+        if image:
+            lignes.append(f"    <image:image><image:loc>{image}</image:loc></image:image>")
+        lignes.append("  </url>")
     lignes.append("</urlset>")
     (SITE / "sitemap.xml").write_text("\n".join(lignes) + "\n", encoding="utf-8")
 

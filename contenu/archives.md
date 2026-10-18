@@ -35,7 +35,6 @@ Le socle enseigné entre 2012 et 2016 : réseaux sociaux, contenus, référencem
 - [Formation pour les professeurs](/archives/formation-marketing-digital-professeurs/) · 2013
 - [Formation pro du digital](/archives/formation-community-management/) · 2015
 - [Formation pro du digital – Agence 3h33](/archives/formation-content-marketing/) · 2015
-- [Formations 3h33](/archives/les-formations-chez-3h33/) · 2015
 - [Formations E-Marketing Digital – Toutes les formations innovantes de 3](/archives/formations-e-marketing/) · 2012
 - [Formations Marketing Digital et E-Pédagogie](/archives/3h33-e-pedagogie-formations-marketing-digital/) · 2014
 - [Formations au Marketing Digital & Agence 2.0](/archives/3h33-formations-e-marketing-et-conseil-en-strategie-digitale/) · 2013

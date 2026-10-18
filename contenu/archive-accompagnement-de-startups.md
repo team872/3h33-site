@@ -13,7 +13,7 @@ chapo: "Page d'archive, publiée en 2012 et laissée telle quelle. Pour ce que n
 ---
 
 L’agence 3h33 accompagne les start-ups dans le développement de leur activité
-### NOUS VOUS PROPOSONS UN ACCOMPAGNEMENT 100 % PERSONNALISE A VOS BESOINS
+## NOUS VOUS PROPOSONS UN ACCOMPAGNEMENT 100 % PERSONNALISE A VOS BESOINS
 
 ![](/medias/archives/SITE-WEB-3h33-STARTUP-300x171.jpg)
 
@@ -27,7 +27,7 @@ Son engagement auprès des Startups est important et il est membre du jury de la
 
 ![](/medias/archives/shutterstock_85769425-300x218.jpg)
 
-### 5 raisons de se faire accompagner en tant qu’entrepreneur :
+## 5 raisons de se faire accompagner en tant qu’entrepreneur :
 
  - Gagnez du temps
 

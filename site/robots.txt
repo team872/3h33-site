@@ -1,23 +1,71 @@
 # 3h33.com — tout est ouvert, aux moteurs de recherche comme aux assistants d'IA.
-# Les robots d'IA sont nommés un par un : c'est explicite, et ça le reste si la règle
-# générale change un jour. Résumé du site pour les assistants : /llms.txt
-# Texte complet du site en un seul fichier : /llms-full.txt
+# Les robots sont nommés un par un : c'est explicite, et ça le reste si la règle
+# générale change un jour. Mis à jour le 18/10/2026.
+#
+# Résumé du site pour les assistants : https://3h33.com/llms.txt
+# Texte complet du site en un seul fichier : https://3h33.com/llms-full.txt
+#
+# Seules les pages privées des invités (/pour/…) sont exclues de l'index, par une
+# balise noindex dans chaque page : elles ne sont pas bloquées ici, pour que les
+# robots puissent lire cette consigne. /pour/alexandre-vibe-coding/ est publique.
+
 User-agent: *
 Allow: /
 
+# Moteurs de recherche
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Googlebot-Video
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+User-agent: Qwantbot
+User-agent: YandexBot
+User-agent: Baiduspider
+Allow: /
+
+# OpenAI (ChatGPT, recherche ChatGPT, entraînement)
 User-agent: GPTBot
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
+# Anthropic (Claude)
 User-agent: ClaudeBot
 User-agent: Claude-SearchBot
 User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: claude-web
+# Perplexity
 User-agent: PerplexityBot
 User-agent: Perplexity-User
+# Google (Gemini, AI Overviews, Vertex)
 User-agent: Google-Extended
+User-agent: GoogleOther
+User-agent: Google-CloudVertexBot
+# Apple (Apple Intelligence, Siri)
 User-agent: Applebot-Extended
-User-agent: Bingbot
+# Microsoft Copilot passe par Bingbot (ci-dessus)
+# Mistral (Le Chat)
 User-agent: MistralAI-User
+# Meta (Meta AI)
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+User-agent: FacebookBot
+# Amazon (Alexa, Rufus)
+User-agent: Amazonbot
+# DuckDuckGo (Duck.ai)
+User-agent: DuckAssistBot
+# Common Crawl (base de nombreux modèles)
 User-agent: CCBot
+# Autres assistants et moteurs de réponse
+User-agent: cohere-ai
+User-agent: cohere-training-data-crawler
+User-agent: YouBot
+User-agent: PhindBot
+User-agent: Bytespider
+User-agent: Timpibot
+User-agent: Kangaroo Bot
+User-agent: AI2Bot
+User-agent: Diffbot
 Allow: /
 
 Sitemap: https://3h33.com/sitemap.xml

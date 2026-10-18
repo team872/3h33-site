@@ -6,13 +6,14 @@ url: /masterclass-ia/
 dessin: "flux-masterclass.jpg|Une masterclass devant un petit groupe, croquis au crayon"
 type: formation
 duree: PT2H
-mode: onsite
+mode: onsite, online
 enseigne: "Acculturation à l'intelligence artificielle générative en entreprise"
 rubrique: "Formations|/formations/"
 priorite: 0.9
 eyebrow: "Masterclass · 2 heures"
 heure: "14:00 → 16:00"
 chapo: "Deux heures, des démonstrations en direct sur vos propres cas, et une salle qui sait enfin par où commencer."
+en_bref: "La masterclass IA de 3h33 dure deux heures, en présentiel ou en visioconférence, pour dix à cent personnes. Animée par Alexandre Stopnicki, elle montre en direct ce que l'IA générative sait faire sur trois cas réels de vos équipes, sans connaissance technique préalable, et laisse une liste de premiers pas."
 faq:
   - Combien de temps dure la masterclass ?|Deux heures, en présentiel ou en visioconférence, pour un groupe de dix à cent personnes.
   - Faut-il des connaissances techniques ?|Aucune. La masterclass s'adresse à des équipes métier, des dirigeants et des agents publics qui n'ont jamais utilisé l'IA générative.

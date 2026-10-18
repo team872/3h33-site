@@ -6,13 +6,14 @@ url: /ateliers-formation/
 dessin: "flux-atelier.jpg|Deux collègues travaillant côte à côte sur un ordinateur, croquis au crayon"
 type: formation
 duree: P1D
-mode: blended
+mode: onsite, online
 enseigne: "Pratique de l'IA générative appliquée aux métiers"
 rubrique: "Formations|/formations/"
 priorite: 0.9
 eyebrow: "Ateliers · 1 à 2 jours"
 heure: "09:00 → 17:30"
 chapo: "Personne ne regarde une démonstration. Chacun travaille sur ce qui lui prend du temps, avec les outils qu'il gardera ensuite."
+en_bref: "Les ateliers de formation à l'IA de 3h33 durent un à deux jours, pour six à quinze participants, en présentiel ou à distance. Chacun travaille sur ses propres dossiers (contenus, données, automatisations, cadre et sécurité) et repart avec ses gabarits, une documentation et un référent interne."
 faq:
   - Combien de personnes par atelier ?|Entre six et quinze participants, pour que chacun pratique réellement.
   - Sur quels outils travaille-t-on ?|Sur ceux que vous utiliserez ensuite. Le choix se fait avec vous selon vos contraintes de sécurité et de budget.
