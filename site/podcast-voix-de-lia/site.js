@@ -390,6 +390,12 @@
     audio.addEventListener("timeupdate", function () { enregistrer(false); });
     audio.addEventListener("pause", function () { enregistrer(true); });
     audio.addEventListener("ended", function () { reprise = 0; enregistrer(true); });
+    // 18/10/2026, Alexandre : à la fin de l'écoute, « Partager l'épisode » se rallume 3 fois (le bon moment pour partager)
+    audio.addEventListener("ended", function () {
+      var bp = $(".lecteur-pied .pa-partager");
+      if (!bp) return;
+      bp.classList.remove("rappel"); void bp.offsetWidth; bp.classList.add("rappel");
+    });
     audio.addEventListener("play", function () {
       if (reprise > 15 && audio.currentTime < 1) audio.currentTime = reprise;
       reprise = 0;

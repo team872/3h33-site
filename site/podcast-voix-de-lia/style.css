@@ -2319,7 +2319,9 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 .lecteur-pied .pa-partager{position:relative;isolation:isolate}
 .lecteur-pied .pa-partager::after{content:'';position:absolute;inset:-1px;border-radius:inherit;border:1px solid var(--accent);box-shadow:0 0 14px #c4a26599;opacity:0;pointer-events:none;will-change:transform,opacity;animation:partage-pouls 1.6s ease-out 4s 3}
 @keyframes partage-pouls{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.18)}}
-@media(prefers-reduced-motion:reduce){.lecteur-pied .pa-partager::after{animation:none}}
+.lecteur-pied .pa-partager.rappel::after{animation:partage-pouls2 1.6s ease-out .3s 3}
+@keyframes partage-pouls2{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.18)}}
+@media(prefers-reduced-motion:reduce){.lecteur-pied .pa-partager::after,.lecteur-pied .pa-partager.rappel::after{animation:none}}
 
 /* Quiz : bonne ou mauvaise réponse, impossible de se tromper (18/10/2026, Alexandre : « ça doit être beaucoup plus
    clair »). Bandeau vert ou rouge avec ✓ / ✗, étiquette sur les réponses, zone du retour encadrée. Animations en
