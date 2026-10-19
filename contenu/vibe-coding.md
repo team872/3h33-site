@@ -11,19 +11,18 @@ rubrique: "Vibe coding|"
 fil: "Vibe coding"
 priorite: 1.0
 eyebrow: "Vibe coding"
-heure: "14:02 → 17:30"
-chapo: "Votre outil existe déjà. Il n'est simplement pas encore écrit. Décrire ce qu'on veut, le voir apparaître, le corriger à la voix : c'est comme ça que nous construisons depuis deux ans."
-en_bref: "Le vibe coding consiste à fabriquer un logiciel en décrivant en français ce qu'on veut obtenir, pendant qu'une intelligence artificielle écrit le code ; on corrige ensuite par itérations jusqu'au résultat. Pour une entreprise, c'est un outil interne obtenu en une demi-journée de session au lieu de plusieurs mois, du vrai code qui lui appartient, sans abonnement à une plateforme. Il ne dispense ni de relire, ni de tester, ni de sécuriser : c'est le rôle de 3h33."
+chapo: "Décrire en français ce qu'on veut, voir l'outil apparaître à l'écran, le corriger au fur et à mesure : c'est ainsi que nous fabriquons nos outils."
+en_bref: "Le vibe coding consiste à fabriquer un logiciel en décrivant en français ce qu'on veut obtenir, pendant qu'une intelligence artificielle écrit le code ; on corrige ensuite par itérations jusqu'au résultat. Pour une entreprise, c'est un premier outil interne obtenu en une demi-journée au lieu de plusieurs semaines, du vrai code qui lui appartient, sans abonnement à une plateforme. Il ne dispense ni de relire, ni de tester, ni de sécuriser : c'est le rôle de 3h33."
 definition: "Vibe coding|Fabrication d'un logiciel en décrivant en langage courant ce qu'on veut obtenir, en dialoguant avec une intelligence artificielle qui écrit le code, puis en corrigeant par itérations successives jusqu'au résultat."
 faq:
   - Qu'est-ce que le vibe coding ?|Le vibe coding consiste à fabriquer un logiciel en décrivant en langage courant ce qu'on veut obtenir, en dialoguant avec une intelligence artificielle qui écrit le code, puis en corrigeant par itérations successives jusqu'au résultat.
-  - Est-ce la même chose que le no-code ?|Non. Le no-code assemble des briques prévues à l'avance dans un outil fermé. Le vibe coding produit du vrai code, que vous possédez, sans limite de forme et sans abonnement à une plateforme.
+  - Est-ce la même chose que le no-code ?|Non. Le no-code assemble des briques prévues à l'avance dans un outil fermé. Le vibe coding produit du vrai code, que vous possédez, sans ces limites et sans abonnement à une plateforme.
   - Faut-il savoir programmer ?|Pas pour décrire le besoin ni pour juger le résultat. Il faut en revanche quelqu'un qui sache lire ce qui est produit, tester et sécuriser : c'est notre rôle.
-  - Combien de temps pour un premier outil ?|Une demi-journée de session suffit à obtenir un outil qui tourne, puis une phase de consolidation le rend propre et documenté.
+  - Combien de temps pour un premier outil ?|Une demi-journée suffit pour obtenir un premier outil qui fonctionne. Quelques jours de consolidation le rendent ensuite propre et documenté.
   - Quels outils utilise-t-on pour faire du vibe coding ?|Trois familles : des agents qui travaillent directement dans le projet, comme Claude Code ou Codex ; des éditeurs de code augmentés, comme Cursor ; des plateformes qui génèrent une application complète dans le navigateur, comme Lovable, Bolt ou Replit. Le bon choix dépend de ce que l'outil deviendra : une maquette pour convaincre, ou un logiciel à maintenir.
-  - Le code produit par l'IA est-il sûr ?|Pas par défaut. Une IA écrit vite du code qui fonctionne, mais elle peut laisser une clé d'accès en clair, oublier un contrôle de droits ou une limite de requêtes. Avant toute mise en ligne, on relit, on teste et on vérifie la sécurité et les données personnelles. C'est la partie du travail qu'on ne délègue pas.
+  - Le code produit par l'IA est-il sûr ?|Pas par défaut. Une IA écrit vite du code qui fonctionne, mais elle peut laisser une clé d'accès en clair, oublier un contrôle de droits ou une limite de requêtes. Avant toute mise en ligne, nous relisons, testons et vérifions la sécurité et les données personnelles. C'est la partie du travail que nous ne déléguons pas.
   - Peut-on mettre en production une application construite en vibe coding ?|Oui, à condition de la traiter comme n'importe quel logiciel : code versionné, tests, sauvegardes, surveillance, hébergement maîtrisé. Plusieurs sites et applications de la [galaxie 3h33](/galaxie/) ont été construits ainsi et tournent tous les jours.
-  - Qui maintient l'outil une fois livré ?|Vous, si vous le souhaitez : le code est à vous, documenté, et on apprend à vos équipes à le faire évoluer en dialoguant avec l'IA. Ou nous, pour les outils critiques. Dans les deux cas, pas de dépendance à une plateforme propriétaire.
+  - Qui maintient l'outil une fois livré ?|Vous, si vous le souhaitez : le code est à vous, documenté, et nous apprenons à vos équipes à le faire évoluer en dialoguant avec l'IA. Ou nous, pour les outils critiques. Dans les deux cas, pas de dépendance à une plateforme propriétaire.
   - Comment devenir vibe coder ?|En construisant, tout simplement, sur un vrai besoin plutôt que sur un tutoriel. Une [session Forge](/forge/) ou une [formation Claude](/formation-claude/) donnent la méthode : décrire précisément, découper, vérifier à chaque étape, garder la main sur ce qui part en production.
 ---
 
@@ -32,9 +31,9 @@ faq:
   <figcaption>
     <span class="sur">Le message d'Alexandre · 1 min</span>
     <h2>Mon nouveau métier : le vibe coding</h2>
-    <p>Je travaille dans le numérique depuis trente ans, et j'ai un nouveau métier : réaliser avec l'IA les projets des entreprises, sur mesure. Mon parcours complet en deux minutes, avec ma voix… clonée par IA.</p>
+    <p>Je travaille dans le numérique depuis trente ans, et j'ai un nouveau métier : réaliser avec l'IA les projets des entreprises, sur mesure. Juste en dessous, mon parcours complet en deux minutes, raconté avec ma voix clonée par IA.</p>
     <audio controls preload="none" src="/pour/alexandre-vibe-coding/complet.mp3?v=1fb8864a"></audio>
-    <div class="partage-msg"><span>Partager ce message</span><div class="ronds"><a href="https://wa.me/?text=Le%20vibe%20coding%2C%20le%20nouveau%20m%C3%A9tier%20d'Alexandre%20Stopnicki%2C%20en%20moins%20d'une%20minute%20%3A%20https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="WhatsApp" aria-label="Partager sur WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.96L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.08.9.9-3-.2-.31a8.2 8.2 0 1 1 6.86 3.74zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.31c-.22.25-.86.84-.86 2.05 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.17-.47-.29z"/></svg></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="LinkedIn" aria-label="Partager sur LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="Facebook" aria-label="Partager sur Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"/></svg></a><a href="https://x.com/intent/tweet?text=Le%20vibe%20coding%2C%20le%20nouveau%20m%C3%A9tier%20d'Alexandre%20Stopnicki%2C%20en%20moins%20d'une%20minute%20%3A&url=https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="X" aria-label="Partager sur X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3zm-1.08 16.2h1.7L7.4 4.73H5.58L16.67 19.2z"/></svg></a><a href="mailto:?subject=Mon%20nouveau%20m%C3%A9tier%20%3A%20le%20vibe%20coding&body=Le%20vibe%20coding%2C%20le%20nouveau%20m%C3%A9tier%20d'Alexandre%20Stopnicki%2C%20en%20moins%20d'une%20minute%20%3A%0Ahttps%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="E-mail" aria-label="Partager sur un e-mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.3V17h16V7.3l-8 5.6-8-5.6zM5.2 7l6.8 4.8L18.8 7H5.2z"/></svg></a><button type="button" class="copier" title="Copier le lien" aria-label="Copier le lien"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a1 1 0 1 1 1.4 1.4L12 13.4a1 1 0 0 1-1.4 0zm-2.8 5.2a3.5 3.5 0 0 1-2.5-6l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a1.5 1.5 0 0 0 2.1 2.1l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a3.5 3.5 0 0 1-2.4 1.1zm8.3-6.6a1 1 0 0 1-.7-1.7l2.1-2.1a1.5 1.5 0 0 0-2.1-2.1l-2.1 2.1a1 1 0 0 1-1.4-1.4l2.1-2.1a3.5 3.5 0 0 1 5 5l-2.1 2.1a1 1 0 0 1-.8.2z"/></svg></button></div><button type="button" class="partager-natif"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.2c.1-.2.1-.5.1-.7s0-.5-.1-.7l7-4.1c.5.5 1.3.8 2.1.8 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3c0 .2 0 .5.1.7l-7 4.1c-.5-.5-1.3-.8-2.1-.8-1.7 0-3 1.3-3 3s1.3 3 3 3c.8 0 1.5-.3 2.1-.8l7.1 4.2c-.1.2-.1.4-.1.6 0 1.6 1.3 2.9 2.9 2.9s2.9-1.3 2.9-2.9-1.3-2.9-2.9-2.9z"/></svg>Partager…</button></div>
+    <div class="partage-msg"><span>Partager ce message</span><div class="ronds"><a href="https://wa.me/?text=Le%20vibe%20coding%2C%20le%20nouveau%20m%C3%A9tier%20d'Alexandre%20Stopnicki%2C%20en%20une%20minute%20%3A%20https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="WhatsApp" aria-label="Partager sur WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.96L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.08.9.9-3-.2-.31a8.2 8.2 0 1 1 6.86 3.74zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.31c-.22.25-.86.84-.86 2.05 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.17-.47-.29z"/></svg></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="LinkedIn" aria-label="Partager sur LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="Facebook" aria-label="Partager sur Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"/></svg></a><a href="https://x.com/intent/tweet?text=Le%20vibe%20coding%2C%20le%20nouveau%20m%C3%A9tier%20d'Alexandre%20Stopnicki%2C%20en%20une%20minute%20%3A&url=https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="X" aria-label="Partager sur X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3zm-1.08 16.2h1.7L7.4 4.73H5.58L16.67 19.2z"/></svg></a><a href="mailto:?subject=Mon%20nouveau%20m%C3%A9tier%20%3A%20le%20vibe%20coding&body=Le%20vibe%20coding%2C%20le%20nouveau%20m%C3%A9tier%20d'Alexandre%20Stopnicki%2C%20en%20une%20minute%20%3A%0Ahttps%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="E-mail" aria-label="Partager sur un e-mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.3V17h16V7.3l-8 5.6-8-5.6zM5.2 7l6.8 4.8L18.8 7H5.2z"/></svg></a><button type="button" class="copier" title="Copier le lien" aria-label="Copier le lien"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a1 1 0 1 1 1.4 1.4L12 13.4a1 1 0 0 1-1.4 0zm-2.8 5.2a3.5 3.5 0 0 1-2.5-6l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a1.5 1.5 0 0 0 2.1 2.1l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a3.5 3.5 0 0 1-2.4 1.1zm8.3-6.6a1 1 0 0 1-.7-1.7l2.1-2.1a1.5 1.5 0 0 0-2.1-2.1l-2.1 2.1a1 1 0 0 1-1.4-1.4l2.1-2.1a3.5 3.5 0 0 1 5 5l-2.1 2.1a1 1 0 0 1-.8.2z"/></svg></button></div><button type="button" class="partager-natif"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.2c.1-.2.1-.5.1-.7s0-.5-.1-.7l7-4.1c.5.5 1.3.8 2.1.8 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3c0 .2 0 .5.1.7l-7 4.1c-.5-.5-1.3-.8-2.1-.8-1.7 0-3 1.3-3 3s1.3 3 3 3c.8 0 1.5-.3 2.1-.8l7.1 4.2c-.1.2-.1.4-.1.6 0 1.6 1.3 2.9 2.9 2.9s2.9-1.3 2.9-2.9-1.3-2.9-2.9-2.9z"/></svg>Partager…</button></div>
     <a class="lien-msg" href="/pour/alexandre-vibe-coding/">Voir ma page →</a>
   </figcaption>
 </figure>
@@ -59,30 +58,30 @@ document.querySelectorAll(".partage-msg .partager-natif").forEach(function(b){b.
 
 ## Le vibe coding, c'est quoi ?
 
-Pendant trente ans, fabriquer un logiciel voulait dire écrire des lignes de code. Le vibe coding change le point de départ : on décrit ce qu'on veut obtenir, en français, et l'intelligence artificielle écrit le programme. On regarde le résultat, on corrige, on recommence. En quelques heures, l'outil existe.
+Jusqu'ici, fabriquer un logiciel voulait dire écrire soi-même chaque ligne de code. Le vibe coding change le point de départ : on décrit ce qu'on veut obtenir, en français, et l'intelligence artificielle écrit le programme. On regarde le résultat, on corrige, on recommence. En quelques heures, une première version fonctionne.
 
-Ce n'est pas de la magie et ce n'est pas non plus du bricolage. Le code produit est du vrai code, qui vous appartient, qu'on peut relire, tester, héberger et faire évoluer.
+Ce n'est ni de la magie ni du bricolage. Le code produit est du vrai code, qui vous appartient, qu'on peut relire, tester, héberger et faire évoluer.
 
-## Ce que ça change pour une entreprise
+## Ce que le vibe coding change pour une entreprise
 
-- **Le délai.** Un outil interne qui demandait deux mois de développement se construit en une demi-journée de session, puis se consolide en quelques jours.
-- **Le coût d'essai.** On peut se tromper. Fabriquer une première version pour voir si l'idée tient ne coûte plus un budget de projet.
-- **La propriété.** Pas d'abonnement à une plateforme qui décide de vos limites. Le code est chez vous.
-- **La précision.** L'outil colle à votre métier, parce qu'il est écrit pour vous et pas pour un marché.
+- **Le délai.** Un outil interne qui demandait plusieurs semaines de développement se construit en une demi-journée, puis se consolide en quelques jours.
+- **Le coût d'un essai.** Tester une idée avec une première version ne demande plus le budget d'un projet entier. On a le droit de se tromper.
+- **La propriété.** Le code vous appartient. Aucun abonnement à une plateforme qui fixe vos limites.
+- **Le sur-mesure.** L'outil suit votre façon de travailler : il est fait pour vous, pas pour le plus grand nombre.
 
-## Ce que ça ne remplace pas
+## Ce que le vibe coding ne remplace pas
 
-Il faut être honnête sur les limites, sinon la promesse se retourne contre vous.
+Autant être clair sur les limites.
 
-Le vibe coding ne dispense pas de savoir ce qu'on veut. Il ne dispense pas non plus de relire, de tester, de penser à la sécurité et aux données personnelles. Une intelligence artificielle produit vite du code qui marche, pas forcément du code qu'on peut mettre entre toutes les mains. C'est exactement là que nous intervenons.
+Le vibe coding ne dispense pas de savoir ce qu'on veut. Il ne dispense pas non plus de relire, de tester, de penser à la sécurité et aux données personnelles. Une intelligence artificielle produit vite du code qui marche, pas forcément du code sûr. C'est précisément là que nous intervenons.
 
-## Et le no-code dans tout ça
+## Vibe coding ou no-code ?
 
-Beaucoup d'entreprises sont arrivées à ces questions par le no-code, ces plateformes où l'on assemble des briques sans écrire une ligne. Le no-code reste utile pour des besoins simples et bien cadrés.
+Beaucoup d'entreprises sont arrivées à ces questions par le no-code : des plateformes où l'on assemble des briques toutes faites, sans écrire de code. Le no-code reste utile pour des besoins simples et bien cadrés.
 
-Le vibe coding va plus loin : pas de brique imposée, pas de limite de forme, pas de dépendance à un éditeur. Si vous êtes venu chercher du no-code, lisez notre [comparatif no-code, low-code et vibe coding](/no-code/), puis regardez ce que la [méthode Forge](/forge/) produit en une demi-journée.
+Le vibe coding va plus loin : pas de brique imposée, pas de limites fixées par un outil, pas de dépendance à un fournisseur. Pour comparer en détail, lisez notre [comparatif no-code, low-code et vibe coding](/no-code/), puis regardez ce que la [méthode Forge](/forge/) produit en une demi-journée.
 
-## Comment on travaille
+## Comment nous travaillons
 
 <div class="rouage-fond">
 <svg class="rouage" viewBox="0 0 250 120" role="img" aria-label="Trois roues dentees qui engrenent">
@@ -112,22 +111,22 @@ Le vibe coding va plus loin : pas de brique imposée, pas de limite de forme, pa
   </g>
 </svg>
 
-Une demi-journée avec vos équipes, et un outil qui tourne le lendemain. Le déroulé tient en trois temps.
+Une demi-journée de travail avec vos équipes suffit pour obtenir un premier outil qui fonctionne. Cela se déroule en trois temps.
 
-1. **On part d'un besoin réel**, pas d'une idée générale. Un formulaire qui prend trop de temps, des courriers à traiter, un tableau de bord qui n'existe pas.
-2. **On construit en direct**, avec vos équipes, en visioconférence. Vous voyez l'outil se former et vous corrigez au fur et à mesure.
-3. **On consolide**, on documente, on met en ligne. L'outil est à vous, avec son mode d'emploi.
+1. **Nous partons d'un besoin réel**, pas d'une idée générale : un formulaire trop long à remplir, des courriers à traiter, un tableau de bord qui manque.
+2. **Nous construisons en direct**, avec vos équipes, en visioconférence. Vous voyez l'outil prendre forme et vous le corrigez au fur et à mesure.
+3. **Nous consolidons**, documentons et mettons en ligne. L'outil est à vous, avec son mode d'emploi.
 </div>
 
-## Ce qu'on a construit comme ça
+## Ce que nous avons construit ainsi
 
-Plus de trente-cinq sites et outils sont en ligne aujourd'hui, tous fabriqués de cette manière. Trois exemples qui montrent l'écart de nature entre eux.
+Plus de trente-cinq sites et outils sont en ligne aujourd'hui, tous fabriqués de cette manière. Quatre exemples, très différents les uns des autres.
 
 ### chapitre.ai — une IA qui écrit votre livre
 
 [chapitre.ai](https://chapitre.ai) est une IA-biographe. Elle vous interviewe, recueille votre histoire et l'écrit comme un livre : amour, aventure, héritage, hommage. Vous parlez, elle écrit, vous corrigez à la voix. Les données restent privées par défaut et hébergées en France.
 
-Ce n'est pas un chatbot déguisé : c'est un produit complet, avec un parcours d'entretien, une fabrication de livre et des options de bande dessinée ou de film.
+C'est un produit complet, avec un parcours d'entretien, une fabrication de livre et des options de bande dessinée ou de film.
 
 <a class="vignette" href="https://chapitre.ai" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>chapitre.ai</em></span><img src="/vignettes/chapitre.jpg?v=20261004" alt="La page d'accueil de chapitre.ai" loading="lazy" width="800" height="500"></a>
 
@@ -145,12 +144,12 @@ Ce n'est pas un chatbot déguisé : c'est un produit complet, avec un parcours d
 
 ### Subsidium — agir là où vous vivez
 
-[subsidium.world](https://subsidium.world) est la plus grosse de nos plateformes. Elle réunit une communauté, des outils et des IA qui préparent le travail sans jamais décider à la place des gens : on y dépose une idée, elle rencontre ceux qui peuvent l'aider, elle devient un projet situé, et elle sert ensuite à d'autres ailleurs. Repair cafés, compostage de quartier, aide aux personnes âgées : des projets réels, portés par quelqu'un.
+[subsidium.world](https://subsidium.world) est la plus importante de nos plateformes. Elle réunit une communauté, des outils et des IA qui préparent le travail sans jamais décider à la place des gens : on y dépose une idée, elle rencontre ceux qui peuvent l'aider, elle devient un projet ancré dans un lieu, et ce projet peut ensuite servir de modèle ailleurs. Repair cafés, compostage de quartier, aide aux personnes âgées : des projets réels, chacun porté par une personne.
 
 <a class="vignette" href="https://subsidium.world" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>subsidium.world</em></span><img src="/vignettes/subsidium.jpg" alt="La page d'accueil de Subsidium" loading="lazy" width="760" height="412"></a>
 
-La liste complète vit dans [la galaxie 3h33](/galaxie/).
+La liste complète se trouve dans [la galaxie 3h33](/galaxie/).
 
 <div class="encadre">
-<p><strong>Et chez vous, ça donnerait quoi ?</strong> Dites-nous en trois lignes ce qui vous prend du temps. On répond sous un jour ouvré, souvent par une démonstration plutôt que par une réunion. <a href="#contact">Nous écrire</a></p>
+<p><strong>Et chez vous, ça donnerait quoi ?</strong> Décrivez votre besoin en trois lignes dans le formulaire ci-dessous. <a href="#contact">Nous écrire</a></p>
 </div>
