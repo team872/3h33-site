@@ -441,3 +441,21 @@ blockquote::before{content:"";position:absolute;top:-10px;left:24px;width:70px;h
 @keyframes coule{0%{height:0}100%{height:34px}}
 
 @media (prefers-reduced-motion:reduce){.goutte,.tache{display:none}}
+
+/* Étape 8 : les orientations d'Alexandre et un prompt en exemple */
+.orientations { margin-top: 1.2rem; }
+.prompt-exemple { margin: 1rem 0 1.4rem; border: 2px dashed rgba(240, 233, 214, .45); background: rgba(10, 10, 10, .65); }
+.prompt-exemple summary { cursor: pointer; padding: .8rem 1rem; font-weight: 700; letter-spacing: .02em; list-style: none; }
+.prompt-exemple summary::-webkit-details-marker { display: none; }
+.prompt-exemple summary::after { content: " ▸ ouvrir"; font-weight: 400; opacity: .75; }
+.prompt-exemple[open] summary::after { content: " ▾ fermer"; }
+.prompt-exemple .prompt-note { margin: 0 1rem .6rem; font-size: .9rem; opacity: .8; }
+.prompt-exemple pre { margin: 0; padding: 1rem; max-height: 26rem; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere;
+  font: .82rem/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; color: #f0e9d6; background: #0b0b0b; border-top: 1px solid rgba(240,233,214,.2); }
+
+/* Étape 2 : chaque accessoire avec son image tirée du film */
+.accessoires{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:14px 0 6px}
+.accessoires li{padding:8px 8px 10px;display:flex;flex-direction:column;gap:8px}
+.accessoires li img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:2px solid #111;filter:contrast(1.05)}
+.accessoires .acc-nom{display:block;text-align:center}
+.accessoires li .acc-nom span{margin-right:4px}
