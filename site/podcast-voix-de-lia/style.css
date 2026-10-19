@@ -2425,9 +2425,15 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 
 .intro-conv .transcription-seule{white-space:nowrap;color:var(--accent-clair)}
 
-/* 19/10/2026, Alexandre : le bouton ▶ durée sort de la vignette (il cachait le visage) et se pose dessous, à gauche ;
-   « Découvrir les N autres portraits » passe dans la colonne du texte, sous les deux boutons. */
-.du-jour .dj-visuel{display:flex;flex-direction:column;align-items:flex-start;gap:.7rem;min-width:0}
-.du-jour .dj-rond{position:static;border:0;cursor:pointer;height:40px}
-.du-jour .dj-tous{margin:.9rem 0 0}
-@media (max-width:600px){.du-jour .dj-visuel{gap:.5rem}.du-jour .dj-rond{position:static;height:32px;font-size:.68rem;padding:0 .65rem 0 .55rem}.du-jour .dj-rond svg{width:12px;height:12px}.du-jour .dj-tous{margin-top:.6rem}.du-jour .dj-tous a{font-size:.84rem}}
+/* 19/10/2026, Alexandre : le bouton ▶ durée sort de la vignette (il cachait le visage) et se pose dessous, CENTRÉ et
+   plus visible ; les deux boutons (« Découvrir son portrait », « Partager ») ont la même largeur, l'un sous l'autre, et
+   « Découvrir les N autres portraits » est centré dessous (« j'aime bien les boutons centrés »). */
+.du-jour .dj-visuel{display:flex;flex-direction:column;align-items:center;gap:.8rem;min-width:0}
+.du-jour .dj-rond{position:static;justify-content:center;border:0;cursor:pointer;min-width:62%;height:48px;padding:0 1.3rem;gap:.55rem;font-size:.92rem;box-shadow:0 8px 26px #000b,0 0 0 1px #e2c58a66}
+.du-jour .dj-rond svg{width:16px;height:16px}
+.du-jour .dj-texte .dj-boutons{display:grid;grid-template-columns:minmax(0,1fr);gap:.55rem;max-width:20rem}
+.du-jour .dj-texte .dj-boutons .card-ouvrir,.du-jour .dj-texte .dj-boutons .card-partager{width:100%;min-height:46px;justify-content:center;font-size:.9rem}
+.du-jour .dj-tous{max-width:20rem;margin:.9rem 0 0;text-align:center}
+@media (min-width:960px) and (max-width:1100px){.du-jour .dj-texte .dj-boutons .card-ouvrir,.du-jour .dj-texte .dj-boutons .card-partager{padding:0 .5rem;gap:.3rem;font-size:.8rem}}
+@media (min-width:960px) and (max-width:1020px){.du-jour .dj-ouvrir svg{display:none}}
+@media (max-width:600px){.du-jour .dj-visuel{gap:.55rem}.du-jour .dj-rond{min-width:100%;height:36px;font-size:.72rem;padding:0 .6rem;gap:.35rem}.du-jour .dj-rond svg{width:12px;height:12px}.du-jour .dj-texte .dj-boutons{max-width:none}.du-jour .dj-texte .dj-boutons .card-ouvrir,.du-jour .dj-texte .dj-boutons .card-partager{min-height:42px;font-size:.86rem}.du-jour .dj-tous{max-width:none;margin-top:.6rem}.du-jour .dj-tous a{font-size:.84rem}}

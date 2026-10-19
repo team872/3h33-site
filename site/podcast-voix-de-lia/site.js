@@ -116,7 +116,7 @@
         if (src) { if (x.webp) src.srcset = x.image + "-400.webp 400w, " + x.image + "-800.webp 800w"; else src.parentNode.removeChild(src); }
         $$("[data-jouer]", dj).forEach(function (b) { b.setAttribute("data-jouer", x.id); });
         $(".dj-image", dj).setAttribute("aria-label", "Écouter le portrait de " + x.nom + " (" + x.duree + ")");
-        var nom = $(".dj-nom a", dj); nom.href = x.chemin; nom.firstChild.nodeValue = x.nom + " ";
+        var nom = $(".dj-nom a", dj); nom.href = x.chemin; nom.firstChild.nodeValue = x.nom + "\u00a0"; // la flèche reste avec le nom (19/10/2026)
         $(".dj-role", dj).textContent = x.role;
         $(".dj-angle", dj).textContent = x.angle;
         var djs = $(".dj-sources", dj);
