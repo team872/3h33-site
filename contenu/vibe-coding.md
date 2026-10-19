@@ -3,6 +3,7 @@ titre: "Vibe coding : construire des outils en dialoguant avec l'IA"
 titre_seo: "Vibe coding en entreprise : de l'idée à l'outil en ligne · 3h33"
 description: "Le vibe coding consiste à fabriquer un logiciel en dialoguant avec une IA. Ce que ça change pour une entreprise, et ce que ça ne remplace pas."
 url: /vibe-coding/
+gabarit: vibe
 dessin: "flux-vibecoding.jpg|Des mains au clavier et une structure qui s'assemble au-dessus de l'écran, croquis au crayon"
 type: service
 service: "Conception d'outils sur mesure en vibe coding"
@@ -26,13 +27,14 @@ faq:
   - Comment devenir vibe coder ?|En construisant, tout simplement, sur un vrai besoin plutôt que sur un tutoriel. Une [session Forge](/forge/) ou une [formation Claude](/formation-claude/) donnent la méthode : décrire précisément, découper, vérifier à chaque étape, garder la main sur ce qui part en production.
 ---
 
-<figure class="vibe-message" style="margin:0 0 2rem;padding:1.2rem;border:1px solid #d8c9a8;border-radius:16px;display:flex;gap:1.2rem;flex-wrap:wrap;align-items:flex-start">
-  <video controls playsinline preload="none" poster="https://3h33.com/pour/alexandre-vibe-coding/alexandre.jpg" src="https://3h33.com/pour/alexandre-vibe-coding/video.mp4" style="width:220px;max-width:100%;border-radius:12px;background:#000"></video>
-  <figcaption style="flex:1;min-width:240px">
-    <strong style="font-size:1.15rem">Mon nouveau métier : le vibe coding</strong>
-    <p style="margin:.4rem 0 .8rem">Trente ans dans le digital, et un nouveau métier : réaliser les projets des entreprises avec l'IA, vite et sur mesure. Mon parcours en deux minutes, avec ma voix… clonée par IA.</p>
-    <audio controls preload="none" src="https://3h33.com/pour/alexandre-vibe-coding/complet.mp3" style="width:100%"></audio>
-    <p style="margin:.6rem 0 0"><a href="/pour/alexandre-vibe-coding/">Voir la vidéo et partager ce message →</a></p>
+<figure class="message verre">
+  <video controls playsinline preload="none" poster="/pour/alexandre-vibe-coding/affiche.jpg" src="/pour/alexandre-vibe-coding/video.mp4" aria-label="Mon nouveau métier : le vibe coding, la vidéo d'Alexandre Stopnicki (51 secondes)"></video>
+  <figcaption>
+    <span class="sur">Le message d'Alexandre · 51 s</span>
+    <h2>Mon nouveau métier : le vibe coding</h2>
+    <p>Trente ans dans le digital, et un nouveau métier : réaliser les projets des entreprises avec l'IA, vite et sur mesure. Mon parcours en deux minutes, avec ma voix… clonée par IA.</p>
+    <audio controls preload="none" src="/pour/alexandre-vibe-coding/complet.mp3"></audio>
+    <a class="bouton bouton--verre" href="/pour/alexandre-vibe-coding/">Qui est Alexandre ? Voir et partager son message →</a>
   </figcaption>
 </figure>
 
@@ -131,5 +133,5 @@ Ce n'est pas un chatbot déguisé : c'est un produit complet, avec un parcours d
 La liste complète vit dans [la galaxie 3h33](/galaxie/).
 
 <div class="encadre">
-<p><strong>Et chez vous, ça donnerait quoi ?</strong> Dites-nous en trois lignes ce qui vous prend du temps. On répond sous un jour ouvré, souvent par une démonstration plutôt que par une réunion. <a href="/contact/">Nous écrire</a>.</p>
+<p><strong>Et chez vous, ça donnerait quoi ?</strong> Dites-nous en trois lignes ce qui vous prend du temps. On répond sous un jour ouvré, souvent par une démonstration plutôt que par une réunion. <a href="#contact">Nous écrire</a></p>
 </div>

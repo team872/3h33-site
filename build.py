@@ -293,12 +293,14 @@ VIDEO_VIBE = {"@type": "VideoObject", "@id": SITE_URL + "/pour/alexandre-vibe-co
                              "en moins d'une minute, avec sa voix clonée par IA.",
               "thumbnailUrl": [SITE_URL + "/pour/alexandre-vibe-coding/vignette.jpg",
                                SITE_URL + "/pour/alexandre-vibe-coding/alexandre.jpg"],
-              "uploadDate": "2026-10-17", "duration": "PT49S", "inLanguage": "fr-FR",
+              "uploadDate": "2026-10-17", "duration": "PT51S", "inLanguage": "fr-FR",
               "contentUrl": SITE_URL + "/pour/alexandre-vibe-coding/video.mp4",
               "url": SITE_URL + "/pour/alexandre-vibe-coding/",
               "creator": {"@id": PERS_ID}, "publisher": {"@id": ORG_ID}}
 
 def image_page(meta):
+    if meta.get("gabarit") == "vibe":            # l'image de partage de la vidéo, pas l'ancien dessin
+        return SITE_URL + "/pour/alexandre-vibe-coding/vignette.jpg"
     if meta.get("dessin"):
         return SITE_URL + "/dessins/" + meta["dessin"].split("|")[0].strip()
     return SITE_URL + "/medias/partage.jpg"
@@ -556,7 +558,11 @@ def construire(verifie=False):
         if meta.get("gabarit") == "accueil":
             ecrire(meta["url"], page_accueil(meta, titre_seo, modifie)); ecrites += 1
             continue
-        page = GABARIT.replace('href="/style.css"', f'href="/style.css?v={VERSION_STYLE}"')
+        # « gabarit: vibe » (19/10/2026) : la page prend gabarits/vibe.html, dans la charte de la vidéo
+        # du vibe coding, au lieu du gabarit commun ; mêmes repères {{…}}.
+        modele = ((RACINE / "gabarits" / f'{meta["gabarit"]}.html').read_text(encoding="utf-8")
+                  if meta.get("gabarit") else GABARIT)
+        page = modele.replace('href="/style.css"', f'href="/style.css?v={VERSION_STYLE}"')
         page = page.replace("{{titre_seo}}", esc(titre_seo))
         page = page.replace("{{description}}", esc(meta["description"]))
         page = page.replace("{{url}}", url)
