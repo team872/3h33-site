@@ -2444,3 +2444,12 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 /* 44 px, à 3 px sous l'image : il tient entre la vignette et le nom, même pour un nom long sur iPad, où il reste affiché */
 .card-inner > .card-cover-play{top:3px;right:1.5rem;bottom:auto;width:44px;height:44px}
 .card-inner > .card-cover-play svg{width:16px;height:16px}
+
+/* « Écouter la réponse » bien visible (19/10/2026) : fond doré léger, texte plus gros et gras, il s'allume une fois */
+.qz-ecouter.qz-passage{min-height:48px;padding:.45rem 1.1rem .45rem .5rem;background:#c4a26526;border:1.5px solid var(--accent);color:var(--text);font-size:1rem;font-weight:600;animation:qz-appel 1.6s ease-out .6s 2}
+.qz-ecouter.qz-passage svg{width:32px;height:32px;padding:8px}
+.qz-ecouter.qz-passage:hover,.qz-ecouter.qz-passage:focus-visible{background:#c4a26545}
+.qz-ecouter.qz-passage .qz-t{color:var(--accent-clair);font-weight:400}
+@keyframes qz-appel{0%{box-shadow:0 0 0 0 #c4a265aa}100%{box-shadow:0 0 0 14px #c4a26500}}
+@media (prefers-reduced-motion:reduce){.qz-ecouter.qz-passage{animation:none}}
+@media (max-width:600px){.qz-actions .qz-passage{width:100%;justify-content:flex-start}}

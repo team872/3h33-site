@@ -2417,12 +2417,14 @@
         if (audio && q.t !== null && q.t !== undefined) {
           // une seule grande touche « son » (16/10, Alexandre : « redondance et mauvaise UX ») : quand la réponse est
           // dite, le passage de l'épisode devient un lien discret, à côté de « Lire le passage »
-          var ec = el("button", q.a ? "qz-lien qz-lien-son" : "qz-ecouter");
+          // 19/10/2026, Alexandre : « Écouter la réponse », et bien visible (sinon on ne clique jamais) ; quand Ada ou Alan
+          // la dit déjà dans le bandeau, ce bouton mène au passage de l'épisode : « L'entendre dans l'épisode »
+          var ec = el("button", "qz-ecouter qz-passage");
           ec.type = "button";
           if (q.a) {
-            ec.setAttribute("data-libelle", "Le passage de l'épisode");
-            ec.innerHTML = '<span class="qz-ecoute-txt">Le passage de l\'épisode</span> <span class="qz-t">' + mmss(q.t) + "</span>";
-          } else { ec.setAttribute("data-libelle", "Le passage de l'épisode"); ec.innerHTML = ICONE_ECOUTE + '<span class="qz-ecoute-txt">Le passage de l\'épisode</span><span class="qz-t">' + mmss(q.t) + "</span>"; }
+            ec.setAttribute("data-libelle", "L'entendre dans l'épisode");
+            ec.innerHTML = ICONE_ECOUTE + '<span class="qz-ecoute-txt">L\'entendre dans l\'épisode</span><span class="qz-t">' + mmss(q.t) + "</span>";
+          } else { ec.setAttribute("data-libelle", "Écouter la réponse"); ec.innerHTML = ICONE_ECOUTE + '<span class="qz-ecoute-txt">Écouter la réponse</span><span class="qz-t">' + mmss(q.t) + "</span>"; }
           ec.addEventListener("click", function () { ecouterPassage(ec, audio, q.t, q.tf); });
           actions.appendChild(ec);
         }
