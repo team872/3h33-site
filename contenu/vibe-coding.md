@@ -96,7 +96,7 @@ Le vibe coding va plus loin : pas de brique imposée, pas de limites fixées par
 Une demi-journée de travail avec vos équipes suffit pour obtenir un premier outil qui fonctionne. Cela se déroule en trois temps.
 
 1. **Nous partons d'un besoin réel**, pas d'une idée générale : un formulaire trop long à remplir, des courriers à traiter, un tableau de bord qui manque.
-2. **Nous construisons en direct**, avec vos équipes, en visioconférence. Vous voyez l'outil prendre forme et vous le corrigez au fur et à mesure.
+2. **Nous construisons en direct**, avec vos équipes, en visioconférence ou sur place. Vous voyez l'outil prendre forme et vous le corrigez au fur et à mesure.
 3. **Nous consolidons**, documentons et mettons en ligne. L'outil est à vous, avec son mode d'emploi.
 </div>
 
