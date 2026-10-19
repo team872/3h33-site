@@ -2424,3 +2424,10 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 /* 19/10/2026 : l'enquête seule en haut de la page portrait (l'abonnement n'y est plus) */
 
 .intro-conv .transcription-seule{white-space:nowrap;color:var(--accent-clair)}
+
+/* 19/10/2026, Alexandre : le bouton ▶ durée sort de la vignette (il cachait le visage) et se pose dessous, à gauche ;
+   « Découvrir les N autres portraits » passe dans la colonne du texte, sous les deux boutons. */
+.du-jour .dj-visuel{display:flex;flex-direction:column;align-items:flex-start;gap:.7rem;min-width:0}
+.du-jour .dj-rond{position:static;border:0;cursor:pointer;height:40px}
+.du-jour .dj-tous{margin:.9rem 0 0}
+@media (max-width:600px){.du-jour .dj-visuel{gap:.5rem}.du-jour .dj-rond{position:static;height:32px;font-size:.68rem;padding:0 .65rem 0 .55rem}.du-jour .dj-rond svg{width:12px;height:12px}.du-jour .dj-tous{margin-top:.6rem}.du-jour .dj-tous a{font-size:.84rem}}
