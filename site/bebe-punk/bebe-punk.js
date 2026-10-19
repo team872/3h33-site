@@ -244,39 +244,39 @@
   });
 
 
-  /* ------------------------------------------------ choisis ta fin : un lecteur, neuf fins */
+  /* ------------------------------------------------ choisis ta fin : un lecteur, neuf fins
+     Chaque fin est un court fichier (du plongeon à la fin, ≈ 12 s) ; « Voir le film en entier » charge la version complète. */
   var lecteur = document.getElementById('lecteur-fins');
   var finEnCours = document.getElementById('fin-en-cours');
-  var DEPART_FIN = 14.5; // juste avant le plongeon dans le trou (15 s dans la V3)
-  function lancer(depuis) {
-    var aller = function () { try { lecteur.currentTime = depuis; } catch (e) {} lecteur.muted = false; var p = lecteur.play(); if (p && p.catch) p.catch(function () {}); };
-    if (lecteur.readyState >= 1) aller();
-    else { lecteur.preload = 'auto'; lecteur.addEventListener('loadedmetadata', aller, { once: true }); lecteur.load(); }
+  var finChoisie = document.querySelector('.fin[aria-pressed="true"]');
+  function charger(src, poster) {
+    if (lecteur.getAttribute('src') !== src) {
+      lecteur.pause();
+      if (poster) lecteur.setAttribute('poster', poster);
+      lecteur.setAttribute('src', src);
+      lecteur.load();
+    }
+    var aller = function () { try { lecteur.currentTime = 0; } catch (e) {} lecteur.muted = false; var p = lecteur.play(); if (p && p.catch) p.catch(function () {}); };
+    if (lecteur.readyState >= 1) aller(); else lecteur.addEventListener('loadedmetadata', aller, { once: true });
   }
   if (lecteur) {
     var boutonsFins = document.querySelectorAll('.fin');
     boutonsFins.forEach(function (b) {
       b.addEventListener('click', function () {
+        finChoisie = b;
         boutonsFins.forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
-        var src = b.dataset.src;
-        if (lecteur.getAttribute('src') !== src) {
-          lecteur.pause();
-          lecteur.setAttribute('poster', b.dataset.poster);
-          lecteur.setAttribute('src', src);
-          lecteur.load();
-        }
         var sym = b.querySelector('.fin-symbole').textContent;
         finEnCours.innerHTML = '';
         var s1 = document.createElement('span'); s1.className = 'fin-en-cours-sym'; s1.setAttribute('aria-hidden', 'true'); s1.textContent = sym;
         var st = document.createElement('strong'); st.textContent = b.dataset.titre;
         finEnCours.appendChild(s1); finEnCours.appendChild(document.createTextNode(' Fin choisie : '));
         finEnCours.appendChild(st); finEnCours.appendChild(document.createTextNode('. ' + b.dataset.texte));
-        lancer(DEPART_FIN);
+        charger(b.dataset.src, b.dataset.poster);
         if (innerWidth < 1000) lecteur.scrollIntoView({ behavior: calme ? 'auto' : 'smooth', block: 'center' });
       });
     });
-    document.getElementById('voir-fin').addEventListener('click', function () { lancer(DEPART_FIN); });
-    document.getElementById('depuis-debut').addEventListener('click', function () { lancer(0); });
+    document.getElementById('voir-fin').addEventListener('click', function () { if (finChoisie) charger(finChoisie.dataset.src); });
+    document.getElementById('depuis-debut').addEventListener('click', function () { if (finChoisie) charger(finChoisie.dataset.film || finChoisie.dataset.src); });
   }
 
   /* ------------------------------------------------ planches-contact : visionneuse */
@@ -476,7 +476,7 @@
   document.querySelectorAll('.liste-fins li[id] .fin').forEach(function (f) {
     f.addEventListener('click', function () {
       if (!bFin) return;
-      bFin.dataset.partage = f.parentNode.id; bFin.dataset.titre = f.dataset.titre; bFin.dataset.video = f.dataset.src;
+      bFin.dataset.partage = f.parentNode.id; bFin.dataset.titre = f.dataset.titre; bFin.dataset.video = f.dataset.film || f.dataset.src;
     });
   });
   // arrivée par un lien partagé : #fin-… ouvre la bonne fin
