@@ -28,9 +28,9 @@ faq:
 ---
 
 <figure class="message verre">
-  <video controls playsinline preload="none" poster="/pour/alexandre-vibe-coding/affiche.jpg" src="/pour/alexandre-vibe-coding/video.mp4" aria-label="Mon nouveau métier : le vibe coding, la vidéo d'Alexandre Stopnicki (51 secondes)"></video>
+  <video controls playsinline preload="none" poster="/pour/alexandre-vibe-coding/affiche.jpg?v=0fbb17aa" src="/pour/alexandre-vibe-coding/video.mp4?v=90e46f44" aria-label="Mon nouveau métier : le vibe coding, la vidéo d'Alexandre Stopnicki (64 secondes)"></video>
   <figcaption>
-    <span class="sur">Le message d'Alexandre · 51 s</span>
+    <span class="sur">Le message d'Alexandre · 1 min</span>
     <h2>Mon nouveau métier : le vibe coding</h2>
     <p>Je travaille dans le numérique depuis trente ans, et j'ai un nouveau métier : réaliser avec l'IA les projets des entreprises, sur mesure. Mon parcours complet en deux minutes, avec ma voix… clonée par IA.</p>
     <audio controls preload="none" src="/pour/alexandre-vibe-coding/complet.mp3"></audio>

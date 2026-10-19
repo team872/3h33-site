@@ -288,12 +288,12 @@ PODCASTS = [
 # La vidéo « Mon nouveau métier : le vibe coding » (17/10/2026), servie sous /pour/.
 VIDEO_VIBE = {"@type": "VideoObject", "@id": SITE_URL + "/pour/alexandre-vibe-coding/#video",
               "name": "Mon nouveau métier : le vibe coding",
-              "description": "30 ans dans le digital, et un nouveau métier : réaliser les projets des "
-                             "entreprises avec l'IA, vite et sur mesure. Le message d'Alexandre Stopnicki, "
-                             "en moins d'une minute, avec sa voix clonée par IA.",
+              "description": "Je travaille dans le numérique depuis trente ans, et j'ai un nouveau métier : "
+                             "réaliser avec l'IA les projets des entreprises, sur mesure. Le message d'Alexandre "
+                             "Stopnicki, en une minute, avec sa voix clonée par IA.",
               "thumbnailUrl": [SITE_URL + "/pour/alexandre-vibe-coding/vignette.jpg",
                                SITE_URL + "/pour/alexandre-vibe-coding/alexandre.jpg"],
-              "uploadDate": "2026-10-17", "duration": "PT51S", "inLanguage": "fr-FR",
+              "uploadDate": "2026-10-19", "duration": "PT64S", "inLanguage": "fr-FR",
               "contentUrl": SITE_URL + "/pour/alexandre-vibe-coding/video.mp4",
               "url": SITE_URL + "/pour/alexandre-vibe-coding/",
               "creator": {"@id": PERS_ID}, "publisher": {"@id": ORG_ID}}
