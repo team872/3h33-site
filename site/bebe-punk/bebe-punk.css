@@ -459,3 +459,82 @@ blockquote::before{content:"";position:absolute;top:-10px;left:24px;width:70px;h
 .accessoires li img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:2px solid #111;filter:contrast(1.05)}
 .accessoires .acc-nom{display:block;text-align:center}
 .accessoires li .acc-nom span{margin-right:4px}
+
+/* Étape 4 : le principe de base et la dictée devenue film */
+.principe-titre{font-size:1.08em;margin-top:14px}
+.principe{list-style:none;margin:10px 0 20px;padding:0;display:grid;gap:10px}
+.principe li{position:relative;padding:12px 14px 12px 52px;background:rgba(243,238,226,.06);border-left:4px solid var(--bleu)}
+.principe-signe{position:absolute;left:14px;top:10px;font-size:22px;line-height:1;color:var(--bleu)}
+.dictee-titre{margin:22px 0 6px;font:clamp(20px,2.6vw,26px)/1.1 var(--affiche);text-transform:uppercase;letter-spacing:.02em;color:var(--lait)}
+.dictee-temps{list-style:none;margin:12px 0 18px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.dictee-temps li{background:var(--lait);color:#16130f;padding:8px 8px 12px;box-shadow:4px 4px 0 #000;transform:rotate(var(--r,-1deg))}
+.dictee-temps li:nth-child(2){--r:1deg}.dictee-temps li:nth-child(3){--r:-.6deg}.dictee-temps li:nth-child(4){--r:1.2deg}
+.dictee-temps img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:2px solid #111}
+.dictee-temps-nom{margin:8px 4px 4px;font:700 15px/1 var(--machine);text-transform:uppercase;letter-spacing:.06em}
+.dictee-mots{margin:0 4px;font:16px/1.4 var(--marqueur)}
+@media (prefers-reduced-motion: reduce){.dictee-temps li{transform:none}}
+
+/* ------------------------------------------------ 19/10 : musique, chutes, planches des personnages, partage, café */
+.musique{margin-top:26px;padding:16px 18px;background:rgba(243,238,226,.06);border-left:4px solid var(--bleu)}
+.musique p{margin:4px 0 12px;color:var(--texte2)}
+.musique audio{width:100%;max-width:560px;display:block}
+.partage-film{margin:22px 0 0}
+.bouton-partage{gap:8px}
+.a-cote{padding:12px 14px;background:rgba(255,138,43,.1);border-left:4px solid var(--orange)}
+.a-cote>span[aria-hidden]{color:var(--orange);font-weight:700;margin-right:4px}
+.etiquette-chute{background:#3a1f14;border-color:var(--orange);color:#ffd2b0}
+.grille-chutes .carte-media video{filter:saturate(.75)}
+.bouton-partage-carte{margin-top:12px;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:6px 12px;background:transparent;color:var(--lait);border:1px dashed var(--lait);font:15px/1 var(--machine);cursor:pointer}
+.bouton-partage-carte:hover,.bouton-partage-carte:focus-visible{background:var(--lait);color:#000;border-style:solid}
+.planches-persos{margin-bottom:34px}
+.planches-persos .planche-bouton img{filter:none}
+img{-webkit-user-drag:none;-webkit-touch-callout:none}
+.partager{padding-bottom:70px}
+.partage-grille{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:10px}
+.partage-lien{display:flex;align-items:center;gap:10px;width:100%;min-height:50px;padding:8px 12px;background:#1b1916;color:var(--texte);border:2px solid #4a453e;font:16px/1.2 var(--machine);text-decoration:none;text-align:left;cursor:pointer;box-shadow:3px 3px 0 #000;transition:transform .12s}
+.partage-lien:hover,.partage-lien:focus-visible{background:var(--lait);color:#000;border-color:#000;transform:translate(-2px,-2px)}
+.partage-lien small{font-size:12px;opacity:.8}
+.partage-ico{flex:0 0 30px;height:30px;display:grid;place-items:center;background:#000;color:var(--lait);font:700 16px/1 -apple-system,"Segoe UI",sans-serif;border:1px solid #555}
+.partage-natif,.partage-video{border-color:var(--bleu)}
+.partage-natif .partage-ico,.partage-video .partage-ico{background:var(--bleu);color:#000}
+.cafe{margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 26px;padding:20px 22px;background:var(--lait);color:#16130f;box-shadow:6px 6px 0 #000;transform:rotate(-.6deg)}
+.cafe-texte{flex:1 1 280px;margin:0;font:20px/1.35 var(--marqueur)}
+.cafe-tasse{font-size:28px;margin-right:4px}
+.bouton-cafe{background:#ffdd00;color:#000;border:3px solid #000;box-shadow:5px 5px 0 #000}
+.bouton-cafe:hover{color:#000;transform:translate(-2px,-2px);box-shadow:8px 8px 0 #000}
+.partage{width:min(94vw,760px);max-width:none;max-height:94vh;padding:0;border:2px solid var(--lait);background:#050505;color:var(--texte);overflow:auto}
+.partage::backdrop{background:rgba(0,0,0,.85)}
+.partage-haut{position:sticky;top:0;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;padding:10px 12px;background:#050505;border-bottom:1px solid #333}
+.partage-surtitre{margin:0;font:14px/1 var(--machine);color:var(--bleu)}
+.partage-titre{flex:1 1 200px;margin:0;font:20px/1.15 var(--affiche);letter-spacing:.04em;text-transform:uppercase}
+.partage-haut .bouton{min-height:42px;font-size:15px;padding:8px 14px}
+.partage-vignette{display:block;width:calc(100% - 24px);height:auto;margin:12px auto;border:2px solid #222}
+.partage .partage-liens{padding:0 12px 16px}
+@media (prefers-reduced-motion: reduce){.cafe{transform:none}.partage-lien{transition:none}}
+
+/* ------------------------------------------------ The LoopHole Project : leurs couleurs (rose, turquoise) */
+:root{--lp-rose:#f25cc1;--lp-rose-clair:#fc92d8;--lp-turquoise:#00ddd4}
+.badge-loophole{display:inline-flex;flex-direction:column;align-items:flex-start;gap:6px;margin:18px 0 6px;padding:8px;background:#010101;border:2px solid var(--lp-rose);box-shadow:5px 5px 0 var(--lp-turquoise);text-decoration:none;color:var(--texte);transform:rotate(-1.2deg);max-width:300px}
+.badge-loophole img{display:block;width:100%;height:auto}
+.badge-loophole span{font:14px/1.2 var(--machine)}
+.badge-loophole strong{color:var(--lp-rose-clair)}
+.badge-loophole:hover{transform:rotate(0) translate(-2px,-2px)}
+.fortuit{margin:10px 0 0;max-width:34em;font:15px/1.4 var(--machine);color:var(--texte2)}
+.fortuit span{color:var(--lp-rose-clair)}
+.bandeau-loophole{display:block;margin:0 0 18px;border:3px solid var(--lp-rose);box-shadow:8px 8px 0 var(--lp-turquoise)}
+.bandeau-loophole img{display:block;width:100%;height:auto}
+.idee-geniale{margin:0 0 34px;padding:14px 16px;background:rgba(242,92,193,.1);border-left:5px solid var(--lp-rose);font-size:18px}
+.idee-geniale>span[aria-hidden]{color:var(--lp-rose-clair)}
+.idee-geniale a{color:var(--lp-turquoise)}
+.pied-loophole{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px 32px;align-items:center;margin:0 0 40px;padding:18px;background:#010101;border:3px solid var(--lp-rose);box-shadow:8px 8px 0 var(--lp-turquoise)}
+@media (max-width:820px){.pied-loophole{grid-template-columns:1fr}}
+.pied-loophole-logo img{display:block;width:100%;height:auto}
+.pied-loophole-titre{margin:0 0 8px;font:clamp(24px,3.2vw,34px)/1.05 var(--affiche);text-transform:uppercase;color:var(--lait)}
+.pied-loophole-titre strong{color:var(--lp-rose-clair);font-weight:400}
+.pied-loophole-texte p{color:var(--texte)}
+.pied-loophole-liens{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:12px}
+.bouton-loophole{background:var(--lp-rose);color:#000;border:3px solid #000;box-shadow:5px 5px 0 var(--lp-turquoise)}
+.bouton-loophole:hover{color:#000;transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--lp-turquoise)}
+.bouton-loophole-2{background:var(--lp-turquoise)}
+.bouton-loophole-2,.bouton-loophole-2:hover{box-shadow:5px 5px 0 var(--lp-rose)}
+@media (prefers-reduced-motion: reduce){.badge-loophole{transform:none}}

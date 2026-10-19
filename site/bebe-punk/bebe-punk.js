@@ -375,6 +375,127 @@
     if ('requestIdleCallback' in window) requestIdleCallback(chargerScene, { timeout: 2500 });
     else setTimeout(chargerScene, 600);
   }
+
+  /* ------------------------------------------------ partager : la page, chaque version, chaque fin */
+  var BASE = 'https://3h33.com/bebe-punk/';
+  var TEXTE_PAGE = 'Un monstre de 4 mètres tombe du ciel… et c’est un bébé punk qui lui fait peur. BOOM! Le film IA d’Alexandre Stopnicki pour The Loophole Project.';
+  function adresse(slug) { return (!slug || slug === 'page') ? BASE : BASE + 'v/' + slug + '/'; }
+  function vignette(slug) { return BASE + 'medias/vignettes/' + (slug || 'page') + '.jpg'; }
+  function enc(x) { return encodeURIComponent(x); }
+  function reseaux(o) {
+    var u = enc(o.url), t = enc(o.texte), tu = enc(o.texte + ' ' + o.url), ti = enc(o.titre);
+    return [
+      ['whatsapp', '✆', 'WhatsApp', 'https://wa.me/?text=' + tu],
+      ['x', '✕', 'X (Twitter)', 'https://x.com/intent/post?text=' + t + '&url=' + u + '&hashtags=AIfilm,TheLoopholeProject,BabyPunk'],
+      ['facebook', 'f', 'Facebook', 'https://www.facebook.com/sharer/sharer.php?u=' + u],
+      ['linkedin', 'in', 'LinkedIn', 'https://www.linkedin.com/sharing/share-offsite/?url=' + u],
+      ['bluesky', '☁', 'Bluesky', 'https://bsky.app/intent/compose?text=' + tu],
+      ['threads', '@', 'Threads', 'https://www.threads.net/intent/post?text=' + tu],
+      ['reddit', '◉', 'Reddit', 'https://www.reddit.com/submit?url=' + u + '&title=' + ti],
+      ['telegram', '➤', 'Telegram', 'https://t.me/share/url?url=' + u + '&text=' + t],
+      ['pinterest', 'P', 'Pinterest', 'https://pinterest.com/pin/create/button/?url=' + u + '&media=' + enc(o.image) + '&description=' + t],
+      ['email', '✉', 'E-mail', 'mailto:?subject=' + ti + '&body=' + enc(o.texte + '\n\n' + o.url)]
+    ];
+  }
+  function remplir(boite, o) {
+    boite.innerHTML = '';
+    var ul = document.createElement('ul'); ul.className = 'partage-grille';
+    function li(el) { var l = document.createElement('li'); l.appendChild(el); ul.appendChild(l); }
+    if (navigator.share) {
+      var nat = document.createElement('button'); nat.type = 'button'; nat.className = 'partage-lien partage-natif';
+      nat.innerHTML = '<span class="partage-ico" aria-hidden="true">↗</span><span>Partager… <small>(menu du téléphone)</small></span>';
+      nat.addEventListener('click', function () { navigator.share({ title: o.titre, text: o.texte, url: o.url }).catch(function () {}); });
+      li(nat);
+    }
+    reseaux(o).forEach(function (r) {
+      var a = document.createElement('a'); a.className = 'partage-lien partage-' + r[0]; a.href = r[3];
+      if (r[0] !== 'email') { a.target = '_blank'; a.rel = 'noopener'; }
+      a.innerHTML = '<span class="partage-ico" aria-hidden="true"></span><span></span>';
+      a.firstChild.textContent = r[1]; a.lastChild.textContent = r[2];
+      li(a);
+    });
+    var copie = document.createElement('button'); copie.type = 'button'; copie.className = 'partage-lien partage-copie';
+    copie.innerHTML = '<span class="partage-ico" aria-hidden="true">⧉</span><span>Copier le lien</span>';
+    copie.addEventListener('click', function () {
+      var fait = function () { copie.lastChild.textContent = '✓ Lien copié'; setTimeout(function () { copie.lastChild.textContent = 'Copier le lien'; }, 2200); };
+      if (navigator.clipboard) navigator.clipboard.writeText(o.url).then(fait, function () { prompt('Le lien :', o.url); });
+      else prompt('Le lien :', o.url);
+    });
+    li(copie);
+    if (o.video) {
+      // Instagram et TikTok n'acceptent pas de lien : on envoie la vidéo elle-même
+      var vid = document.createElement('button'); vid.type = 'button'; vid.className = 'partage-lien partage-video';
+      vid.innerHTML = '<span class="partage-ico" aria-hidden="true">▶</span><span>La vidéo pour Instagram, TikTok… <small>(fichier MP4)</small></span>';
+      vid.addEventListener('click', function () {
+        var nom = o.video.split('/').pop();
+        var telecharger = function () { var a = document.createElement('a'); a.href = o.video; a.download = 'bebe-punk-' + nom; document.body.appendChild(a); a.click(); a.remove(); };
+        if (!navigator.canShare) return telecharger();
+        vid.lastChild.firstChild.textContent = 'Préparation de la vidéo… ';
+        fetch(o.video).then(function (r) { return r.blob(); }).then(function (b) {
+          var f = new File([b], 'bebe-punk-' + nom, { type: 'video/mp4' });
+          vid.lastChild.firstChild.textContent = 'La vidéo pour Instagram, TikTok… ';
+          if (navigator.canShare({ files: [f] })) return navigator.share({ files: [f], title: o.titre, text: o.texte + ' ' + o.url }).catch(function () {});
+          telecharger();
+        }).catch(telecharger);
+      });
+      li(vid);
+    }
+    boite.appendChild(ul);
+  }
+  var dlg = document.getElementById('partage');
+  function ouvrirPartage(slug, titre, video) {
+    var o = { url: adresse(slug), titre: titre + ' — Le monstre et le bébé punk', image: vignette(slug), video: video,
+              texte: slug === 'page' ? TEXTE_PAGE : titre + ' — Le monstre et le bébé punk, un film IA d’Alexandre Stopnicki. BOOM!' };
+    if (!dlg || !dlg.showModal) { if (navigator.share) navigator.share({ title: o.titre, url: o.url }).catch(function () {}); else prompt('Le lien :', o.url); return; }
+    document.getElementById('partage-titre').textContent = titre;
+    var img = document.getElementById('partage-vignette'); img.src = 'medias/vignettes/' + (slug || 'page') + '.jpg'; img.alt = 'Vignette de partage : ' + titre;
+    remplir(dlg.querySelector('[data-partage-liens]'), o);
+    dlg.showModal();
+  }
+  if (dlg) {
+    document.getElementById('partage-fermer').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  }
+  var zonePage = document.querySelector('[data-partage-liens="page"]');
+  if (zonePage) remplir(zonePage, { url: BASE, titre: 'Le monstre et le bébé punk', texte: TEXTE_PAGE, image: vignette('page'), video: 'medias/v3-musique.mp4' });
+  // un bouton « Partager » sur chaque version
+  document.querySelectorAll('.carte-version[id]').forEach(function (carte) {
+    var v = carte.querySelector('video'), t = carte.querySelector('h4'), zone = carte.querySelector('.carte-texte');
+    if (!v || !t || !zone) return;
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'bouton-partage-carte';
+    b.dataset.partage = carte.id === 'carte-v3' ? 'film' : carte.id; b.dataset.titre = t.textContent; b.dataset.video = v.getAttribute('src');
+    b.innerHTML = '<span aria-hidden="true">↗</span> Partager';
+    zone.appendChild(b);
+  });
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-partage]');
+    if (b) ouvrirPartage(b.dataset.partage, b.dataset.titre, b.dataset.video);
+  });
+  // le bouton « Partager cette fin » suit la fin choisie
+  var bFin = document.getElementById('partager-fin');
+  document.querySelectorAll('.liste-fins li[id] .fin').forEach(function (f) {
+    f.addEventListener('click', function () {
+      if (!bFin) return;
+      bFin.dataset.partage = f.parentNode.id; bFin.dataset.titre = f.dataset.titre; bFin.dataset.video = f.dataset.src;
+    });
+  });
+  // arrivée par un lien partagé : #fin-… ouvre la bonne fin
+  (function () {
+    var id = decodeURIComponent(location.hash.slice(1));
+    var li = id && document.getElementById(id);
+    if (li && li.closest('.liste-fins')) {
+      var f = li.querySelector('.fin'); if (f) f.click();
+      var ancre = document.getElementById('fins'); if (ancre) setTimeout(function () { ancre.scrollIntoView(); }, 50);
+    }
+  })();
+
+  /* ------------------------------------------------ clic droit refusé sur les images et les vidéos (un frein, pas une protection) */
+  document.addEventListener('contextmenu', function (e) {
+    if (e.target.closest('img, video, canvas, picture, .planche, .polaroid, .carte-media, .ecran, .choix-ecran')) e.preventDefault();
+  });
+  document.addEventListener('dragstart', function (e) { if (e.target.closest('img, video')) e.preventDefault(); });
+  document.querySelectorAll('video, audio').forEach(function (m) { m.setAttribute('controlslist', 'nodownload'); });
+
   if (document.readyState === 'complete') apresChargement();
   else addEventListener('load', apresChargement);
 })();
