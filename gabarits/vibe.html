@@ -23,7 +23,20 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Le vibe coding avec 3h33">
 {{meta_suppl}}
-<meta name="twitter:card" content="summary_large_image">
+<!-- la vidéo du message dans l'aperçu du lien (19/10/2026) : iMessage, Telegram, Discord, Slack la lisent ; X par sa carte
+     « player » ; WhatsApp, LinkedIn et Facebook montrent la vignette (pour eux : le bouton « Envoyer la vidéo ») -->
+<meta property="og:video" content="https://3h33.com/pour/alexandre-vibe-coding/video.mp4">
+<meta property="og:video:secure_url" content="https://3h33.com/pour/alexandre-vibe-coding/video.mp4">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="1080">
+<meta property="og:video:height" content="1350">
+<meta name="twitter:card" content="player">
+<meta name="twitter:image" content="https://3h33.com/pour/alexandre-vibe-coding/affiche.jpg">
+<meta name="twitter:player" content="https://3h33.com/pour/alexandre-vibe-coding/lecteur/">
+<meta name="twitter:player:width" content="540">
+<meta name="twitter:player:height" content="675">
+<meta name="twitter:player:stream" content="https://3h33.com/pour/alexandre-vibe-coding/video.mp4">
+<meta name="twitter:player:stream:content_type" content="video/mp4">
 <meta name="twitter:site" content="@alexandre3h33">
 <meta name="twitter:creator" content="@alexandre3h33">
 <meta name="author" content="Alexandre Stopnicki">
@@ -153,6 +166,10 @@ main{position:relative}
 .partage-msg .ronds{display:contents}
 .partage-msg .ronds a,.partage-msg .ronds button,.partage-msg .partager-natif{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;height:42px;min-width:42px;padding:0;border-radius:999px;border:1px solid rgba(31,111,245,.25);background:#fff;color:var(--bleu);cursor:pointer;font:inherit;font-size:.92rem;font-weight:600;transition:background .2s,color .2s,transform .2s}
 .partage-msg .partager-natif{padding:0 16px;color:var(--encre)}
+.partage-msg .envoyer-video{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:52px;margin-bottom:4px;border:0;border-radius:16px;background:linear-gradient(135deg,#0f1524,#2a3550);color:#fff;font:inherit;font-weight:700;cursor:pointer;box-shadow:0 12px 28px rgba(15,21,36,.25)}
+.partage-msg .envoyer-video>span{width:auto;font-size:1rem;letter-spacing:0;text-transform:none;color:inherit}
+.partage-msg .telecharger-video{width:100%;font-weight:600}
+.partage-msg .envoyer-video[hidden],.partage-msg .telecharger-video[hidden]{display:none}
 .partage-msg svg{width:18px;height:18px;fill:currentColor}
 .partage-msg .ronds a:hover,.partage-msg .ronds button:hover,.partage-msg .partager-natif:hover{background:var(--bleu);color:#fff;transform:translateY(-1px)}
 .partage-msg .copier.copie::after{content:"Lien copié ✓";position:absolute;bottom:50px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:4px 9px;border-radius:8px;background:var(--encre);color:#fff;font-size:.78rem;font-weight:600}
@@ -355,7 +372,18 @@ la.querySelector(".rail").addEventListener("click",function(e){var b=this.getBou
 var u="https://3h33.com/pour/alexandre-vibe-coding/",t="Le vibe coding, le nouveau métier d'Alexandre Stopnicki, en une minute";
 function copier(b){var ok=function(){b.classList.add("copie");setTimeout(function(){b.classList.remove("copie");},2200);};if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,function(){prompt("Copiez ce lien :",u);});else prompt("Copiez ce lien :",u);}
 m.querySelectorAll(".copier").forEach(function(b){b.onclick=function(){copier(b);};});
-m.querySelectorAll(".partager-natif").forEach(function(b){b.onclick=function(){if(navigator.share)navigator.share({title:"Mon nouveau métier : le vibe coding",text:t,url:u}).catch(function(){});else copier(m.querySelector(".copier"));};});})();
+m.querySelectorAll(".partager-natif").forEach(function(b){b.onclick=function(){if(navigator.share)navigator.share({title:"Mon nouveau métier : le vibe coding",text:t,url:u}).catch(function(){});else copier(m.querySelector(".copier"));};});
+/* « Envoyer la vidéo » (19/10) : le fichier lui-même, lu directement dans WhatsApp, Messages, Instagram… Préparé d'avance :
+   l'iPhone refuse un partage qui suit un long téléchargement. Sans partage de fichiers (ordinateur) : « Télécharger la vidéo ». */
+var ev=m.querySelector(".envoyer-video"),tv=m.querySelector(".telecharger-video"),NOM="Alexandre Stopnicki - le vibe coding.mp4",fichier=null,promesse=null,okf=false;
+try{okf=!!(window.File&&navigator.canShare&&navigator.canShare({files:[new File([""],NOM,{type:"video/mp4"})]}));}catch(e){}
+if(ev&&!okf)tv.hidden=false;
+if(ev&&okf){var lab=ev.querySelector("span");ev.hidden=false;
+function preparer(){if(fichier)return Promise.resolve();if(!promesse)promesse=fetch(vid.getAttribute("src")).then(function(r){if(!r.ok)throw new Error(r.status);return r.blob();}).then(function(bl){fichier=new File([bl],NOM,{type:"video/mp4"});}).catch(function(e){promesse=null;throw e;});return promesse;}
+ev.onclick=function(){if(fichier){navigator.share({files:[fichier],title:"Mon nouveau métier : le vibe coding"}).catch(function(){});lab.textContent="Envoyer la vidéo";return;}
+lab.textContent="Préparation de la vidéo…";preparer().then(function(){lab.textContent="Envoyer maintenant";},function(){lab.textContent="Envoyer la vidéo";});};
+if(!(navigator.connection&&navigator.connection.saveData)&&"IntersectionObserver" in window){var ob=new IntersectionObserver(function(es){if(es[0].isIntersecting){ob.disconnect();preparer().catch(function(){});}});ob.observe(ev);}}
+})();
 /* formulaire : même envoi que 3h33.com/contact/ et /pour/alexandre-vibe-coding/ */
 (function(){var f=document.getElementById("f-contact"),r=document.getElementById("c-retour"),ouvert=Date.now();if(!f)return;f.addEventListener("submit",function(e){e.preventDefault();if(!f.checkValidity()){r.className="retour large erreur";r.textContent="Merci d'indiquer votre nom, votre adresse e-mail et votre projet.";return;}var b=f.querySelector("button");b.disabled=true;r.className="retour large";r.textContent="Envoi en cours…";var d=Object.fromEntries(new FormData(f).entries());d.instant=ouvert;d.page=location.pathname;fetch("/api/contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)}).then(function(rep){return rep.json().then(function(j){return{st:rep.status,j:j};});}).then(function(x){if(x.st===200){f.reset();r.className="retour large ok";r.textContent="Merci, votre message est parti. Nous vous répondons sous un jour ouvré.";}else{r.className="retour large erreur";r.textContent=(x.j.erreurs||["Envoi impossible pour le moment."]).join(" ");b.disabled=false;}}).catch(function(){r.className="retour large erreur";r.textContent="L'envoi a échoué. Réessayez, ou écrivez-nous à info@3h33.fr.";b.disabled=false;});});})();
 </script>
