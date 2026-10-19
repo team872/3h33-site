@@ -63,7 +63,22 @@ En bref : Le vibe coding consiste à fabriquer un logiciel en décrivant en fran
 
 Votre outil existe déjà. Il n'est simplement pas encore écrit. Décrire ce qu'on veut, le voir apparaître, le corriger à la voix : c'est comme ça que nous construisons depuis deux ans.
 
-## Ce que c'est
+.partage-msg{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
+.partage-msg>span{width:100%;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#5b6475}
+.partage-msg .ronds{display:flex;flex-wrap:wrap;gap:8px}
+.partage-msg .ronds a,.partage-msg .ronds button,.partage-msg .partager-natif{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;min-width:44px;padding:0;border-radius:999px;border:1px solid rgba(31,111,245,.3);background:rgba(255,255,255,.85);color:#1f6ff5;cursor:pointer;font:inherit;font-weight:600;transition:background .2s,color .2s,transform .2s}
+.partage-msg .partager-natif{padding:0 18px;color:#0f1524}
+.partage-msg svg{width:19px;height:19px;fill:currentColor}
+.partage-msg .ronds a:hover,.partage-msg .ronds button:hover,.partage-msg .partager-natif:hover{background:#1f6ff5;color:#fff;transform:translateY(-1px)}
+.partage-msg .copier.copie::after{content:"Lien copié ✓";position:absolute;bottom:52px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:4px 9px;border-radius:8px;background:#0f1524;color:#fff;font-size:.78rem;font-weight:600}
+.lien-msg{display:inline-block;margin-top:14px;font-weight:600;color:#1f6ff5;text-decoration:none}
+.lien-msg:hover{text-decoration:underline}
+(function(){var u="https://3h33.com/pour/alexandre-vibe-coding/",t="Le vibe coding, le nouveau métier d'Alexandre Stopnicki, en une minute";
+function copier(b){var ok=function(){b.classList.add("copie");setTimeout(function(){b.classList.remove("copie");},2200);};if(navigator.clipboard)navigator.clipboard.writeText(u).then(ok,ok);else ok();}
+document.querySelectorAll(".partage-msg .copier").forEach(function(b){b.onclick=function(){copier(b);};});
+document.querySelectorAll(".partage-msg .partager-natif").forEach(function(b){b.onclick=function(){if(navigator.share)navigator.share({title:"Mon nouveau métier : le vibe coding",text:t,url:u}).catch(function(){});else copier(document.querySelector(".partage-msg .copier"));};});})();
+
+## Le vibe coding, c'est quoi ?
 
 Pendant trente ans, fabriquer un logiciel voulait dire écrire des lignes de code. Le vibe coding change le point de départ : on décrit ce qu'on veut obtenir, en français, et l'intelligence artificielle écrit le programme. On regarde le résultat, on corrige, on recommence. En quelques heures, l'outil existe.
 
@@ -1613,7 +1628,16 @@ URL : https://3h33.com/podcast-voix-de-lia/
 
 > Podcast gratuit de 3h33 : 130 portraits audio d'une dizaine de minutes des femmes et des hommes qui font la tech et l'intelligence artificielle, racontés par Ada, Alan et Lia, des IA-nimateurs. Chaque fait est vérifié, les sources sont sous chaque épisode.
 
+- Éric Briones : fils de couturière, planneur du luxe — Fils d'une couturière, mauvais élève de son propre aveu, entré dans le luxe sans vraiment le vouloir chez l'agence d'Hermès : Éric Briones, alias… https://3h33.com/podcast-voix-de-lia/eric-briones/
 - Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée — Trois permissions demandées pour en obtenir une, soixante-dix rendez-vous pour dix investisseurs, une veste jaune dans les soirées grises et trois livres… https://3h33.com/podcast-voix-de-lia/sandra-le-grand/
+- Carlos Diaz : l'ancien prof devenu voix de Silicon Carne — Ancien professeur, diplômé de lettres, l'un des initiateurs des « Pigeons », puis voix de Silicon Carne depuis San Francisco : le portrait de Carlos… https://3h33.com/podcast-voix-de-lia/carlos-diaz/
+- Alexandre Michelin : de Nam June Paik au KIF — Il a dirigé l'antenne de Paris Première au temps de Paris Dernière, celle de France 5 quand naissait Rendez-vous en terre inconnue, puis MSN chez… https://3h33.com/podcast-voix-de-lia/alexandre-michelin/
+- Christophe Dané : l'enfant qui rêvait de la Lune — Il voulait aller sur la Lune, il est « tombé dans la pub à la sortie du bac », a dirigé le numérique chez Mediaedge, Havas et Omnicom, puis est devenu… https://3h33.com/podcast-voix-de-lia/christophe-dane/
+- Vincent Montet : le « fainéant » qui rend l'IA obligatoire — Il a créé un des premiers MBA du commerce en ligne, puis rendu l'IA obligatoire pour ses étudiants quand d'autres l'interdisaient : portrait de Vincent… https://3h33.com/podcast-voix-de-lia/vincent-montet/
+- Driss Aït Youssef : la sécurité, une affaire de libertés — Docteur en droit public, ancien président de l'Institut Léonard de Vinci, il est l'un des consultants sécurité que BFMTV, franceinfo ou C dans l'air… https://3h33.com/podcast-voix-de-lia/driss-ait-youssef/
+- Marc Simoncini : le poète qui a tout perdu avant Meetic — Le fils que son père présentait comme « poète » a choisi l'informatique par ordre alphabétique, découvert Internet un biberon à la main, tout perdu après… https://3h33.com/podcast-voix-de-lia/marc-simoncini/
+- Marc Ménasé : des PC de la rue Montgallet à Founders Future — Il montait les ordinateurs des copains, a refusé d'être « patron de l'Italie » chez Kelkoo, a connu la chute de Menlook, puis a bâti Founders Future… https://3h33.com/podcast-voix-de-lia/marc-menase/
+- Louis Duroulle : de la préfecture au MBA qu'il dirige — Des amphis de Toulouse aux Terres australes, d'une lettre « écrite au culot », comme le raconte la Guilde des Plumes, à sa présidence : Louis Duroulle… https://3h33.com/podcast-voix-de-lia/louis-duroulle/
 - Benjamin Perret : les journaux avant de savoir lire — Passé par Ogilvy et Euro RSCG, directeur de la communication d'Aéroports de Paris, de Fnac Darty et d'EDF, cofondateur de Nation Advisors en 2025… https://3h33.com/podcast-voix-de-lia/benjamin-perret/
 - Mike Krieger : de la première photo d'Instagram à Anthropic — Né à São Paulo, il a publié la toute première photo d'Instagram en 2010, connu l'échec avec Artifact, puis rejoint Anthropic, dont il quitte la direction… https://3h33.com/podcast-voix-de-lia/mike-krieger/
 - Arvind Jain, le chèque en blanc et la recherche « pas cool » — En 2013, il répondait « Je ne suis pas un entrepreneur » ; il a pourtant cofondé Rubrik, puis Glean, le moteur de recherche d'entreprise valorisé… https://3h33.com/podcast-voix-de-lia/arvind-jain/
@@ -1674,7 +1698,6 @@ URL : https://3h33.com/podcast-voix-de-lia/
 - Jacques-Antoine Granjon : le soldeur de vente-privee — Il a démarré avec vingt mille francs prêtés par son père et cofondé vente-privee.com, devenue Veepee : le portrait de Jacques-Antoine Granjon, des stocks… https://3h33.com/podcast-voix-de-lia/jacques-antoine-granjon/
 - Xavier Niel : de la Freebox à l'IA ouverte — Un ado avec un petit ZX81, le Minitel rose, la Freebox, un forfait à 19,99 euros, puis l'école 42, Station F et Kyutai : Ada et Alan racontent… https://3h33.com/podcast-voix-de-lia/xavier-niel/
 - Éric Larchevêque : du poker au bitcoin, puis Ledger — Joueur de poker, pionnier du bitcoin, cofondateur de la licorne Ledger et juré de M6 : Ada et Alan racontent comment Éric Larchevêque crée, cède… https://3h33.com/podcast-voix-de-lia/eric-larcheveque/
-- Carlos Diaz : l'ancien prof devenu voix de Silicon Carne — Ancien professeur, diplômé de lettres, l'un des initiateurs des « Pigeons », puis voix de Silicon Carne depuis San Francisco : le portrait de Carlos… https://3h33.com/podcast-voix-de-lia/carlos-diaz/
 - Patrick Robin : du Minitel à la French Tech — Éditeur d'art, pionnier de l'accès à Internet en France, business angel et co-initiateur du manifeste des entrepreneurs de 2012 : Ada et Alan racontent… https://3h33.com/podcast-voix-de-lia/patrick-robin/
 - Alexandre Lebrun, l'homme des machines qui parlent — Polytechnicien, créateur de VirtuOz et de Wit.ai, père de l'assistant M de Facebook puis de Nabla : Ada et Alan racontent Alexandre Lebrun, devenu… https://3h33.com/podcast-voix-de-lia/alexandre-lebrun/
 - Octave Klaba : de Nowa Ruda au cloud européen — Arrivé de Pologne à seize ans sans parler français, Octave Klaba a fondé OVHcloud, l'un des principaux fournisseurs européens de cloud, et a annoncé… https://3h33.com/podcast-voix-de-lia/octave-klaba/
@@ -1747,4 +1770,4 @@ URL : https://3h33.com/podcast-voix-de-lia/
 - Comprendre la guerre des puces · une playlist à thème des Voix de l'IA — NVIDIA, TSMC, Huawei : en six portraits, de l'usine de Taïwan aux restrictions américaines, qui tient vraiment les puces de l'I.A. 6 épisodes, environ… https://3h33.com/podcast-voix-de-lia/parcours/guerre-des-puces/
 - Elles font l'I.A. : du laboratoire à votre écran · une playlist à thème des Voix de l'IA — Six femmes qui tiennent chacune un maillon de l'I.A., du laboratoire à l'écran de votre téléphone. Certaines, vous ne les connaissez pas encore.… https://3h33.com/podcast-voix-de-lia/parcours/elles-font-l-ia/
 - De la chute au succès · une playlist à thème des Voix de l'IA — Un examen raté, cent refus, un mois de paie en caisse : six fondateurs qui ont failli tout perdre, et le geste précis qui les a relevés. 6 épisodes… https://3h33.com/podcast-voix-de-lia/parcours/de-la-chute-au-succes/
-- Le grand quiz des Voix de l'IA · 1023 questions — Testez ce que vous savez des figures de l'IA : 1023 questions tirées des 130 portraits du podcast, chaque réponse avec le passage où c'est dit. https://3h33.com/podcast-voix-de-lia/quiz/
+- Le grand quiz des Voix de l'IA · 1084 questions — Testez ce que vous savez des figures de l'IA : 1084 questions tirées des 138 portraits du podcast, chaque réponse avec le passage où c'est dit. https://3h33.com/podcast-voix-de-lia/quiz/

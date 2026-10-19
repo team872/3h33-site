@@ -91,7 +91,16 @@ Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes 
 
 Podcast gratuit de 3h33 : https://3h33.com/podcast-voix-de-lia/ (flux RSS : https://3h33.com/podcast-voix-de-lia/flux.xml). Chaque portrait cite ses sources sous l'épisode.
 
+- [Éric Briones : fils de couturière, planneur du luxe](https://3h33.com/podcast-voix-de-lia/eric-briones/)
 - [Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée](https://3h33.com/podcast-voix-de-lia/sandra-le-grand/)
+- [Carlos Diaz : l'ancien prof devenu voix de Silicon Carne](https://3h33.com/podcast-voix-de-lia/carlos-diaz/)
+- [Alexandre Michelin : de Nam June Paik au KIF](https://3h33.com/podcast-voix-de-lia/alexandre-michelin/)
+- [Christophe Dané : l'enfant qui rêvait de la Lune](https://3h33.com/podcast-voix-de-lia/christophe-dane/)
+- [Vincent Montet : le « fainéant » qui rend l'IA obligatoire](https://3h33.com/podcast-voix-de-lia/vincent-montet/)
+- [Driss Aït Youssef : la sécurité, une affaire de libertés](https://3h33.com/podcast-voix-de-lia/driss-ait-youssef/)
+- [Marc Simoncini : le poète qui a tout perdu avant Meetic](https://3h33.com/podcast-voix-de-lia/marc-simoncini/)
+- [Marc Ménasé : des PC de la rue Montgallet à Founders Future](https://3h33.com/podcast-voix-de-lia/marc-menase/)
+- [Louis Duroulle : de la préfecture au MBA qu'il dirige](https://3h33.com/podcast-voix-de-lia/louis-duroulle/)
 - [Benjamin Perret : les journaux avant de savoir lire](https://3h33.com/podcast-voix-de-lia/benjamin-perret/)
 - [Mike Krieger : de la première photo d'Instagram à Anthropic](https://3h33.com/podcast-voix-de-lia/mike-krieger/)
 - [Arvind Jain, le chèque en blanc et la recherche « pas cool »](https://3h33.com/podcast-voix-de-lia/arvind-jain/)
@@ -152,7 +161,6 @@ Podcast gratuit de 3h33 : https://3h33.com/podcast-voix-de-lia/ (flux RSS : http
 - [Jacques-Antoine Granjon : le soldeur de vente-privee](https://3h33.com/podcast-voix-de-lia/jacques-antoine-granjon/)
 - [Xavier Niel : de la Freebox à l'IA ouverte](https://3h33.com/podcast-voix-de-lia/xavier-niel/)
 - [Éric Larchevêque : du poker au bitcoin, puis Ledger](https://3h33.com/podcast-voix-de-lia/eric-larcheveque/)
-- [Carlos Diaz : l'ancien prof devenu voix de Silicon Carne](https://3h33.com/podcast-voix-de-lia/carlos-diaz/)
 - [Patrick Robin : du Minitel à la French Tech](https://3h33.com/podcast-voix-de-lia/patrick-robin/)
 - [Alexandre Lebrun, l'homme des machines qui parlent](https://3h33.com/podcast-voix-de-lia/alexandre-lebrun/)
 - [Octave Klaba : de Nowa Ruda au cloud européen](https://3h33.com/podcast-voix-de-lia/octave-klaba/)
@@ -225,7 +233,7 @@ Podcast gratuit de 3h33 : https://3h33.com/podcast-voix-de-lia/ (flux RSS : http
 - [Comprendre la guerre des puces · une playlist à thème des Voix de l'IA](https://3h33.com/podcast-voix-de-lia/parcours/guerre-des-puces/)
 - [Elles font l'I.A. : du laboratoire à votre écran · une playlist à thème des Voix de l'IA](https://3h33.com/podcast-voix-de-lia/parcours/elles-font-l-ia/)
 - [De la chute au succès · une playlist à thème des Voix de l'IA](https://3h33.com/podcast-voix-de-lia/parcours/de-la-chute-au-succes/)
-- [Le grand quiz des Voix de l'IA · 1023 questions](https://3h33.com/podcast-voix-de-lia/quiz/)
+- [Le grand quiz des Voix de l'IA · 1084 questions](https://3h33.com/podcast-voix-de-lia/quiz/)
 
 ## Profils officiels
 
