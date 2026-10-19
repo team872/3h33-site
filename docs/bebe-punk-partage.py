@@ -82,6 +82,9 @@ PAGE_PARTAGE = """<!doctype html>
 <meta name="description" content="{desc}">
 <meta name="robots" content="noindex,follow">
 <link rel="canonical" href="{url}">
+<link rel="icon" href="/bebe-punk/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/bebe-punk/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/bebe-punk/apple-touch-icon.png">
 <meta property="og:type" content="video.other">
 <meta property="og:site_name" content="3h33">
 <meta property="og:locale" content="fr_FR">
@@ -89,6 +92,8 @@ PAGE_PARTAGE = """<!doctype html>
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{image}">
+<meta property="og:image:secure_url" content="{image}">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="{titre} — vignette du film Le monstre et le bébé punk">
