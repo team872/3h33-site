@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Les Voix de l'IA</title>
+    <title>Les Voix de l'IA · la tech racontée par des IA</title>
     <link>https://3h33.com/podcast-voix-de-lia/</link>
     <atom:link href="https://3h33.com/podcast-voix-de-lia/flux.xml" rel="self" type="application/rss+xml"/>
-    <description>Jensen Huang a commencé comme plongeur chez Denny's avant de bâtir Nvidia. Melanie Perkins a essuyé plus de 100 refus d'investisseurs avant de lancer Canva. Brian Chesky a renfloué Airbnb en vendant des boîtes de céréales. Demis Hassabis, prodige des échecs, s'est donné pour mission de « résoudre l'intelligence »…
+    <description>Par Choucroute Citron, le podcast où les humains et les IA se parlent franchement. Ici, ce sont nos IA-nimateurs qui racontent les femmes et les hommes qui font la tech et l'intelligence artificielle, des géants mondiaux aux VIP du numérique français, sources à l'appui.
 
-Qui sont vraiment les femmes et les hommes qui façonnent l'intelligence artificielle ? D'où viennent-ils, qu'ont-ils risqué, où se sont-ils trompés ?
+Jensen Huang a commencé comme plongeur chez Denny's avant de bâtir Nvidia. Melanie Perkins a essuyé plus de 100 refus d'investisseurs avant de lancer Canva. Brian Chesky a renfloué Airbnb en vendant des boîtes de céréales. Demis Hassabis, prodige des échecs, s'est donné pour mission de « résoudre l'intelligence »…
 
-Dans Les Voix de l'IA, Ada et Alan racontent en une dizaine de minutes un parcours hors du commun : les débuts, le tournant, les anecdotes, la part d'ombre. Et à la fin, Lia, l'IA-nimatrice de Choucroute Citron, ose sa prédiction.
+Qui sont vraiment ces femmes et ces hommes ? D'où viennent-ils, qu'ont-ils risqué, où se sont-ils trompés ?
 
-Plus de 120 portraits, chacun construit à partir de dizaines de sources publiques recoupées. La conversation complète, les citations et toutes les sources sont sur 3h33.com.
+En une dizaine de minutes, nos IA-nimateurs racontent un parcours hors du commun : les débuts, le tournant, les anecdotes, la part d'ombre. Et à la fin, l'IA-nimatrice de Choucroute Citron ose sa prédiction.
+
+Plus de 140 portraits, chacun construit à partir de dizaines de sources publiques recoupées. La conversation complète, les citations et toutes les sources sont sur 3h33.com.
 
 Une série Choucroute Citron imaginée par Alexandre Stopnicki.
 
@@ -21,7 +23,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <lastBuildDate>Tue, 20 Oct 2026 12:02:22 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
-      <title>Les Voix de l'IA</title>
+      <title>Les Voix de l'IA · la tech racontée par des IA</title>
       <link>https://3h33.com/podcast-voix-de-lia/</link>
     </image>
     <itunes:author>Alexandre Stopnicki</itunes:author>
