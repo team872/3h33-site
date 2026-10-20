@@ -595,3 +595,34 @@ button{font-family:inherit}
   .ouverture-texte{grid-template-areas:"sur sur" "titre titre" "accroche film" "actions film" "badge film" "fortuit film" "indice film"}
   .hero-film{align-self:start;margin-top:22px}
 }
+
+/* ------------------------------------------------ 20/10 : téléphones et tablettes — la page plantait sur iPhone (mémoire graphique).
+   On garde l'allure, on retire ce qui occupe la mémoire en permanence : grain mélangé plein écran, flou du menu, mélanges du titre. */
+@media (pointer: coarse), (max-width: 899px){
+  .grain{inset:0;mix-blend-mode:normal;animation:none;opacity:.06}
+  .rayures{display:none}
+  .bandeau{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(12,12,14,.94)}
+  .glitch::before,.glitch::after{mix-blend-mode:normal;animation:none;display:none}
+  .brume{animation:none}
+  .concours::after{display:none}
+  #scene3d{display:none}
+}
+
+/* ------------------------------------------------ 20/10 : ordinateur, même allure en plus léger */
+.grain{inset:-6%}
+.onglet-cache *,.onglet-cache *::before,.onglet-cache *::after{animation-play-state:paused !important}
+/* Sur téléphone : aucune profondeur 3D (perspective, preserve-3d, translateZ) — elle transformait toute la page en une couche
+   graphique géante que l'iPhone ne peut pas garder en mémoire. Les apparitions se font en fondu + glissé, à plat. */
+@media (pointer: coarse), (max-width: 899px){
+  .js .reveal{transform:translateY(30px)}
+  .js .reveal.vu{transform:none}
+  .grille-versions{perspective:none}
+  .carte-version,.js .carte-version.reveal.vu{transform-style:flat;transform:none}
+  .carte-texte{transform:none}
+  .js .carte-temps.reveal.vu{transform:rotate(var(--rot,0deg))}
+}
+@media (pointer: coarse), (max-width: 899px){
+  .repli-3d{z-index:35}
+  .repli-trou{display:none}
+  .repli-grenade{opacity:.9}
+}

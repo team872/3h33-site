@@ -348,12 +348,16 @@
   });
 
   /* ------------------------------------------------ la 3D, chargée en dernier */
+  var TELEPHONE = (window.matchMedia && matchMedia('(pointer: coarse)').matches) || innerWidth < 900;
   function webglPossible() {
     try { var c = document.createElement('canvas'); return !!(window.WebGLRenderingContext && (c.getContext('webgl2') || c.getContext('webgl'))); }
     catch (e) { return false; }
   }
   function chargerScene() {
     var canvas = document.getElementById('scene3d');
+    // Pas de 3D sur téléphone et tablette : la mémoire graphique y est limitée et la page, très longue,
+    // faisait planter Chrome et Safari sur iPhone (20/10). Le repli dessiné en CSS prend le relais.
+    if (TELEPHONE) return;
     if (!canvas || !webglPossible()) return;
     import('./scene3d.js?v=1').then(function (m) {
       scene = m.demarrer(canvas, { calme: calme, petit: innerWidth < 700 });
@@ -506,6 +510,18 @@
     });
     heroV.addEventListener('play', function () { heroV.closest('.hero-film').classList.add('lance'); });
   }
+
+  /* ------------------------------------------------ légèreté (20/10) : une vidéo quittée s'arrête, rien ne tourne onglet caché */
+  if ('IntersectionObserver' in window) {
+    var ioPause = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (e) { if (!e.isIntersecting && !e.target.paused) e.target.pause(); });
+    }, { threshold: 0 });
+    document.querySelectorAll('video').forEach(function (v) { ioPause.observe(v); });
+  }
+  document.addEventListener('visibilitychange', function () {
+    document.documentElement.classList.toggle('onglet-cache', document.hidden);
+    if (document.hidden) document.querySelectorAll('video').forEach(function (v) { if (!v.paused && v.muted) v.pause(); });
+  });
 
   if (document.readyState === 'complete') apresChargement();
   else addEventListener('load', apresChargement);
