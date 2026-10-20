@@ -38,7 +38,7 @@ img.photo{width:100%;height:auto;border:1px solid #3a3226;display:block;margin:3
 .titre-haut{font:italic 400 clamp(30px,8vw,46px)/1.1 Didot,"Bodoni 72",Georgia,serif;margin:0 0 14px}.titre-haut span{display:block;font-style:normal;font-size:.5em;color:var(--gris)}
 .vignette-haut{width:100%;height:auto;border:1px solid #3a3226;display:block;margin:0 0 18px}
 .etape.principale{border:0;background:linear-gradient(135deg,#efe6d2,#d9c39a);color:#1a140b;padding:12px 14px}
-.etape.principale .numero{color:#5a4320;margin:0 0 8px;font-size:15px;white-space:nowrap}.etape.principale .numero span{background:#1a140b;color:#efe6d2;width:24px;height:24px;line-height:24px}
+.etape.principale .numero{color:#5a4320;margin:0 0 8px;font-size:15px;white-space:nowrap}
 .etape.principale .l-jouer{width:52px;height:52px;background:#1a140b;color:#efe6d2;box-shadow:0 0 0 5px #1a140b1f}.etape.principale .l-jouer svg{width:24px;height:24px}
 .etape.principale canvas.courbe{color:#5a4320;--courbe-repos:#a88f62;height:40px}.etape.principale .l-bas,.etape.principale .l-recul{color:#5a4320}
 .suite-courte{margin:-2px 0 8px;font-size:17px;font-weight:600;color:var(--or);line-height:1.2}
@@ -57,7 +57,7 @@ details.plus{margin:26px 0 0;border-top:1px solid #2a241b;padding-top:14px}detai
 .etape.allumee{background:#1d1810;box-shadow:0 0 0 3px var(--or)}
 .suite{color:var(--gris);font-size:14px;text-align:center;margin:-4px 0 14px}
 .numero{margin:0 0 12px;color:var(--or);font-size:15px;letter-spacing:.05em;text-transform:uppercase}
-.numero span{display:inline-block;width:28px;height:28px;line-height:28px;text-align:center;border-radius:50%;background:var(--or);color:#140f08;font-weight:700;margin-right:8px;letter-spacing:0}
+
 .titre-portrait{font:italic 400 22px/1.3 Didot,"Bodoni 72",Georgia,serif;margin:0 0 4px}
 .etape .bouton{margin:12px 0 0}
 audio{width:100%}
@@ -104,6 +104,63 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 .etape.principale .l-jouer{position:relative;width:84px;height:84px}.etape.principale .l-jouer svg{width:34px;height:34px;position:relative;z-index:1}@media (max-width:520px){.etape.principale .l-jouer{width:72px;height:72px}}
 .etape.principale .l-jouer::before,.etape.principale .l-jouer::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #1a140b;opacity:0;pointer-events:none;animation:onde-message 2.6s ease-out infinite}.etape.principale .l-jouer::after{animation-delay:1.3s}@keyframes onde-message{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.6);opacity:0}}.etape.principale.lance .l-jouer::before,.etape.principale.lance .l-jouer::after{animation:none;opacity:0}.etape.principale .lecteur{padding:10px 0}@media (prefers-reduced-motion:reduce){.etape.principale .l-jouer::before,.etape.principale .l-jouer::after{animation:none}}
 .pres-haut{display:flex;gap:14px;align-items:center;margin:0 0 12px}.pres-haut img{width:230px;height:230px;flex:none;border:1px solid #3a3226;border-radius:14px}@media(max-width:560px){.pres-haut{flex-direction:row;align-items:center}.pres-haut img{width:110px;height:110px;max-width:none;aspect-ratio:1/1;align-self:center}}.pres-haut p{margin:0;font-size:16px;color:var(--gris)}
+/* 20/10/2026, Alexandre : trois étapes qu'on voit d'un coup d'œil (gros numéros, cadres nets), l'étape 3 en aboutissement */
+.serie-limitee em{color:var(--or)}.serie-limitee{margin:0 0 14px;font:italic 400 17px/1.45 Didot,"Bodoni 72",Georgia,serif;color:var(--ivoire);border-left:3px solid var(--or);padding:2px 0 2px 12px}
+.etape{border:2px solid var(--or);border-radius:14px;padding:16px 16px 14px}
+.numero,.etape.principale .numero{display:flex;align-items:center;gap:14px;margin:0 0 14px;text-transform:none;letter-spacing:0;white-space:normal;font-size:inherit}
+.numero .n,.etape.principale .numero .n{flex:none;display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--or);color:#140f08;font:700 34px/1 Didot,"Bodoni 72",Georgia,serif;margin:0}
+.etape.principale .numero .n{background:#1a140b;color:#efe6d2}
+.insecable{white-space:nowrap}.n-texte{display:flex;flex-direction:column;min-width:0}
+.n-etape{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--or);font-weight:600}
+.n-titre{font-size:20px;line-height:1.25;color:var(--ivoire);font-weight:600}
+.etape.principale .n-etape{color:#5a4320}.etape.principale .n-titre{color:#1a140b}
+.suite-courte{text-align:center}
+.etape.aboutissement{border-width:3px;background:linear-gradient(180deg,#221b10,#0f0c08 70%);box-shadow:0 0 0 1px #c9a86a33,0 10px 40px #c9a86a1f;padding:18px 16px 16px}
+.aboutissement .numero .n{width:64px;height:64px;font-size:40px;box-shadow:0 0 0 6px #c9a86a2a}
+.aboutissement .n-titre{font-size:22px}
+.aboutissement .titre-portrait{font-size:26px;color:var(--or);margin:4px 0 6px;text-align:center}
+.duree-portrait{text-align:center;color:var(--gris);font-size:15px;margin:0 0 4px}
+.apres-ecoute{margin:22px 0 0;padding:16px 14px;border:1px solid #3a3226;border-radius:14px}
+.ae-titre{margin:0 0 12px;color:var(--gris);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+#apres-ecoute .bouton-partager{background:none;border:1px solid #c9a96b88;color:var(--or)}
+.abonner{margin:18px 0 0;padding-top:14px;border-top:1px solid #2a241b;text-align:center}.ab-titre{margin:0 0 8px;color:var(--or);font-size:16px}
+.ab-liens{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0}.ab-liens a{padding:8px 14px;border:1px solid #c9a96b88;border-radius:999px;text-decoration:none;font-size:15px}
+@media (max-width:520px){.numero .n,.etape.principale .numero .n{width:48px;height:48px;font-size:30px}.aboutissement .numero .n{width:56px;height:56px;font-size:34px}.n-titre{font-size:18px}.aboutissement .n-titre{font-size:19px}.serie-limitee{font-size:15px;margin:0 0 10px}.aboutissement .titre-portrait{font-size:22px}}
+.sous+.sous{margin-top:12px;padding-top:12px;border-top:1px solid #1a140b2e}.sous-titre{margin:0;font-size:16px;font-weight:600;color:#1a140b}.sous-titre b{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;border:1.5px solid #5a4320;color:#5a4320;font-size:13px;margin-right:8px;vertical-align:1px}
+#etape-1 .sous.allumee .l-jouer{animation:pres-appel 1.4s ease-out infinite}
+/* 20/10/2026, Alexandre : « les players sont un tout petit peu trop gros » → boutons plus petits, courbes plus basses */
+#etape-1 .lecteur .l-jouer{width:56px;height:56px}#etape-1 .lecteur .l-jouer svg{width:24px;height:24px}#etape-1 .lecteur{padding:6px 0;gap:12px}#etape-1 .lecteur canvas.courbe{height:42px}
+#etape-portrait .lecteur .l-jouer{width:70px;height:70px}#etape-portrait .lecteur .l-jouer svg{width:30px;height:30px}#etape-portrait .lecteur{padding:10px 0}#etape-portrait .lecteur canvas.courbe{height:46px}
+@media (max-width:520px){#etape-1 .lecteur .l-jouer{width:50px;height:50px}#etape-portrait .lecteur .l-jouer{width:62px;height:62px}}
+/* 20/10/2026, Alexandre : « que le 1 soit plus gros que le player » → gros numéros, boutons de lecture plus petits */
+.numero .n,.etape.principale .numero .n{width:68px;height:68px;font-size:44px}.aboutissement .numero .n{width:72px;height:72px;font-size:46px}
+#etape-1 .lecteur .l-jouer{width:44px;height:44px}#etape-1 .lecteur .l-jouer svg{width:20px;height:20px}
+#etape-portrait .lecteur .l-jouer{width:54px;height:54px}#etape-portrait .lecteur .l-jouer svg{width:24px;height:24px}
+@media (max-width:520px){.numero .n,.etape.principale .numero .n{width:60px;height:60px;font-size:40px}.aboutissement .numero .n{width:64px;height:64px;font-size:42px}#etape-1 .lecteur .l-jouer{width:40px;height:40px}#etape-portrait .lecteur .l-jouer{width:50px;height:50px}}
+/* 20/10/2026 (soir) : le bouton du quiz est retiré (le quiz se fait sur la page du site : la phrase le dit) ; l'abonnement reste */
+/* 20/10/2026 : l'étape 2 = l'écoute ici (déjà en ligne : pas d'« avant-première »), puis un gros lien vers la vraie page du site (celle qu'on partage) */
+.vraie-page{margin:14px 0 0;padding-top:14px;border-top:1px solid #c9a86a44;text-align:center}.vp-texte{margin:0 0 12px;font-size:15px;color:var(--ivoire)}
+.bouton-vraie-page{margin:0 auto;max-width:380px}.bouton-vraie-page strong{display:block;font-size:19px;font-weight:600;font-family:inherit}.bouton-vraie-page span{display:block;font-size:13px;font-weight:500;opacity:.75;margin-top:2px}
+.vraie-page .bouton-partager{width:100%;max-width:380px;margin:0 auto;background:none;border:1px solid #c9a96b88;color:var(--or);min-height:52px;font-size:17px}
+.apres-ecoute .bouton-quiz{background:none;border:1px solid #c9a96b88;color:var(--or);max-width:380px;margin:0 auto;padding:12px}.apres-ecoute .bouton-quiz strong{font-size:17px}.apres-ecoute .bouton-quiz span{font-size:13px;opacity:.8}
+.apres-ecoute:not(:has(.bouton-quiz)) .abonner{margin:0;padding:0;border:0}
+.en-savoir-plus{margin:22px 0 0;padding:16px 14px;border:1px solid var(--or);border-radius:14px;background:#15110a}.esp-titre{margin:0 0 4px;color:var(--or);font-size:18px;font-weight:600}.esp-sous{margin:0 0 10px;color:var(--gris);font-size:15px}
+.en-savoir-plus .l-jouer{width:48px;height:48px}.en-savoir-plus .l-jouer svg{width:22px;height:22px}.en-savoir-plus canvas.courbe{height:36px}.en-savoir-plus.allumee{box-shadow:0 0 0 3px var(--or)}
+/* 20/10/2026 (soir) : bas de page simplifié (un seul bloc : s'abonner + un bouton pour partager le site), coulisses en lien */
+.coulisses{display:block;margin:14px 0 0;text-align:center;font-size:15px}
+.pied{margin:22px 0 18px;padding:16px 14px;border:1px solid #3a3226;border-radius:14px;text-align:center}.pied .abonner{margin:0;padding:0;border:0}
+.pied .partager{margin:14px 0 0}.pied .p-reseaux,.pied .p-explication{display:none}.pied .bouton-partager{width:100%;max-width:340px;margin:0 auto;min-height:50px;padding:10px;font-size:16px;background:none;border:1px solid #c9a96b88;color:var(--or)}
+.lien-linkedin{text-align:center;margin:-6px 0 18px;font-size:15px}.bloc-cc{margin:22px 0 0}
+/* 20/10/2026 (soir), Alexandre : « qu'on voie très très bien la partie vibe coding » → un bloc bleu ardoise, doux (le bleu vif était « violent ») ; la phrase « Fait pour toi… » retirée */
+.vibe-bloc{margin:26px 0 10px;padding:16px 14px 12px;border-radius:16px;background:linear-gradient(135deg,#1f3b4d,#2b5068);border:1px solid #4f7a93;box-shadow:0 6px 20px #00000055}
+.vibe-bloc .vibe-carte{max-width:none;margin:0;padding:0;border:0;color:#fff}.vibe-bloc .vibe-carte img{width:76px;height:76px;border-radius:12px;border:2px solid #ffffffcc}
+.vibe-bloc .vc-sur{color:#a9c7d9;font-weight:700}.vibe-bloc .vibe-carte strong{color:#eef4f8;font-size:18px}.vibe-bloc .vc-sous{color:#d6e6ef;font-weight:600}
+.vibe-bloc .lien-linkedin{margin:12px 0 0;text-align:left}.vibe-bloc .lien-linkedin a{color:#d6e6ef;font-weight:600}
+/* 20/10/2026 (soir), Alexandre : « aligner les deux boutons de façon plus claire » → même largeur, centrés, l'un plein (aller sur
+   la page), l'autre en contour (partager) ; boutons de lecture sans anneau sombre autour */
+#apres-ecoute .bouton-vraie-page,#apres-ecoute .bouton-partager{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;max-width:380px;min-height:60px;margin:0 auto;box-sizing:border-box;border-radius:12px}
+#apres-ecoute .bouton-partager{flex-direction:row;gap:10px;margin-top:12px;font-size:17px}#apres-ecoute .partager{margin:0}
+#etape-portrait .lecteur .l-jouer,.en-savoir-plus .l-jouer,#etape-1 .lecteur .l-jouer{box-shadow:none}
 .teasers-cc{display:grid;grid-template-columns:1fr 1fr;gap:10px}.teasers-cc video{width:100%;aspect-ratio:1;background:#000;border:1px solid #3a3226;display:block}@media (max-width:520px){.teasers-cc{grid-template-columns:1fr}}
 </style>
 </head>
@@ -111,42 +168,41 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 <main>
 <p class="serie">Les Voix de l'IA · Choucroute Citron</p>
 <h1 class="titre-haut"><span>Pour</span>Pierre Gilbert</h1>
+
 <img class="vignette-haut" src="photo.jpg?v=cdf99377" width="800" height="800" alt="Vignette du portrait de Pierre Gilbert dans Les Voix de l'IA">
 <div class="etape principale" id="etape-1">
-<p class="numero numero-court"><span>1</span> Un message d'Alexandre <i class="coeur" aria-hidden="true">♥</i></p>
+<p class="numero"><span class="n" aria-hidden="true">1</span><span class="n-texte"><span class="n-etape">Étape 1 sur 2</span><span class="n-titre">Écoute l'invitation privée qu'Alexandre a faite pour <span class="insecable">toi <i class="coeur" aria-hidden="true">♥</i></span></span></span></p>
 <div class="lecteur">
-<button type="button" class="l-jouer" aria-label="Écouter mon message"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-jouer" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
-<div class="l-corps"><canvas class="courbe" data-enveloppe="kgceckddchieaab68triqtmb66ptobrg875kknb7698oukurbanl9kvqtemohmknkddd9fc96759klofngjlqlfb5654fuvtf7iofiulljla75akkd8ncmjmeamilmidclijoaakqinklfhecdgrl796kkkkklbiqompkngempj45koqn6iqnjb8454qusarp9dkmrd5fmgvlnnchghiel8faji77bkpgoq7imkpghomnkbeccjbnknnhammhkmha212dnrqpich41knjmac6530eginmrpfojjnck9jc87eghlag8dk8liojd8454ip8rpjoghjlmktmjhb675fjfckn8i8e85754btsqqjfe55476cjij5kmi8554gi7i5h6fg8jf8fnmhfjg5j7egjiecfgjl5ohoof6g7k8lie967699fhjgmkkskg65bnonofhhke8nigjmadh7jenkdlgehghcohpklifa5567meachkmggc85ftwc4gqmkios9k5hi57bolatm66ljrvoln8rr822njonggqrnl9g1113utnrmqsnkgg55dae778864aof55dyilnh7eo4jqsusrqjnlngkldkjjhehehh874efkjle58cg8hcf97e95mo9slid75okrdvnromonrgmeapseoea555rohzk32ienpelpjja63100111110gibcafc8a7c965652" aria-hidden="true"></canvas><audio preload="metadata" src="teaser.mp3?v=8b556a53"></audio>
-<div class="l-bas"><span class="l-temps"><span class="l-ecoule">0:00</span> / 1:12</span><button type="button" class="l-recul" aria-label="Revenir de 15 secondes">↺ 15 s</button></div></div>
+<button type="button" class="l-jouer" aria-label="Écouter mon invitation"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-jouer" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+<div class="l-corps"><canvas class="courbe onde" data-enveloppe="ifcdbica9879txhttnd57xsfokb645oqd65797mrmsviammiftsvmklmmmejddbhc8433crjxhouti49kiogpaqtkpmofoskgcnkgr9btlpph65dqelpkmnldqoop7stj68nbrpbd80044osgromgmn3gbfn9odsowrg4bhqgj7ga4423dnpqkmlgjlro9keonld963334iroqsd5zplb5344ron5n6llirj8yvokoqplk5on7sjfkjnmgkenwt6i9mggcf953102jrcjr6kmrqnrmnjmniujriostuomff75365qtd9kmipfkea624433mlrfskpkjikk8f8434mspnp8oska8lkgkslngtitc63432221" aria-hidden="true"></canvas><audio preload="metadata" src="teaser.mp3?v=ab0043d6"></audio>
+<div class="l-bas"><span class="l-temps"><span class="l-ecoule">0:00</span> / 0:37</span><button type="button" class="l-recul" aria-label="Revenir de 15 secondes">↺ 15 s</button></div></div>
 </div>
 </div>
 <p class="suite suite-courte">puis <i class="fleche" aria-hidden="true">↓</i></p>
-<div class="etape presentation" id="etape-presentation">
-<p class="numero"><span>2</span> Avant ton portrait : comprends le concept en une minute</p>
-<p class="pres-pastille">1 min · à écouter d'abord</p>
-<div class="pres-haut"><img src="presentation.jpg?v=62ef8b12" width="230" height="230" alt="Alexandre Stopnicki enfant, vignette des Voix de l'IA"><p>138 portraits audio des talents qui font la tech et l'IA, racontés par des voix d'IA. Je t'explique tout : recherche des talents, playlists à thème, quiz, sources.</p></div>
-<div class="lecteur">
-<button type="button" class="l-jouer" aria-label="Écouter la présentation"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-jouer" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
-<div class="l-corps"><canvas class="courbe" data-enveloppe="kgcebkdddhieaablutuna57nxpbqnfa7kermrpigonjnj6476chqrlklkhnf9jlpopf66566bjnf6jehgf7jickopdgdgh8lebhmpmc76bfmpckiojkih4iedgokf11nlhiknkkgphmlomeb476flnknfm9747kokifjkkjmdnkple645eeomrpghj9jlggolpgg88cilmonlgdjkllhiga7npk68oxnwt6ipaquospakvpaigb77658ojrstzioa9oj22rn2mqrqnbdqd711euftmk9pak45brrjkjofhp7n6mgc65fhkiph9inkdd7mhhggfa886chhdf7mk967fierrj9ihjld5cidbfjbgkfggd556joeojkhcb86kse8efcsokojptpg637jolkjpkgjfhkjkcpmd75gkqilhjljhhca658rstj9u9v9ite48dsissaqik9fmlerregkiiom74llnsaaeul9m8qd7s9hkb48rjovfciojhqmpiiqhc8kmlpegi8a6hiitlt5jql52iqtewsreirltsfsmjqdmmkea6566hlrkjophtr84okotkangfrmbhb4686iqysnmprqos7ro7bmatifnfb647dodwinxre7ehcvmpejqcs8qfmc8764crsml967566cddaflgdd96654433222110" aria-hidden="true"></canvas><audio preload="metadata" src="presentation.mp3?v=b3456124"></audio>
-<div class="l-bas"><span class="l-temps"><span class="l-ecoule">0:00</span> / 1:09</span><button type="button" class="l-recul" aria-label="Revenir de 15 secondes">↺ 15 s</button></div></div>
-</div>
-<a class="bouton bouton-contour" href="https://3h33.com/podcast-voix-de-lia/">Découvrir tous les épisodes →</a>
-</div>
-<p class="suite suite-courte">puis <i class="fleche" aria-hidden="true">↓</i></p>
-<div class="etape" id="etape-portrait">
-<p class="numero"><span>3</span> Puis écoute ton portrait</p>
-<p class="titre-portrait">Pierre Gilbert : le semeur de Sator</p>
+<div class="etape aboutissement" id="etape-portrait">
+<p class="numero"><span class="n" aria-hidden="true">2</span><span class="n-texte"><span class="n-etape">Étape 2 sur 2</span><span class="n-titre">Écoute ton portrait, réalisé rien que pour toi</span></span></p>
+<p class="titre-portrait">« Pierre Gilbert : le semeur de Sator »</p>
+<p class="duree-portrait">3 min 51</p>
 <div class="lecteur">
 <button type="button" class="l-jouer" aria-label="Écouter ton portrait"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-jouer" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
-<div class="l-corps"><canvas class="courbe" data-enveloppe="lhdfcleedikfbekhcfbmeedhkcfdljecgmfedhlefdkicfcmhddildfdkjdfclheeemgccgf8bdfgccdfb6chbgikeed85966678577ddbaelfeeimegeljdgcniedimefelkdgdmhefemhcdhf9hhffcdbggbdb9dibjfb88dfeidceb8feebjejfdhacdfheffceba9ec776mldifcjkgjgcd7hc6ccdecj8a777cecadkidgcoggejmdhenlfdhohfeinfgemkdhdnidcgiajajgiigdjgbba766aficdcfdcbfedcedah9cdbfea66cbbie7cehd8ghdfefcbfbe9ffe9668ifie9ggfehh7fhfdfa99gmbhge9kfei8dbdjgga875a76ge9dcdadbcec986ab7769ffbfeahhec7a6a9676a8789gdbekldheokfheoggflnidgnkdhcphgfilcebge9788522000copoje542mdqlh733211dntrohc555576lsomlibp4p5jso7nlnlfjfnxj5k87ilpzt5qjnjde9515hkiangmmelpljnc641fkqoonee44711ggprrpgm9kmmnpowq9cd4ha23h5lutq8prnbdek7mjge513enp7ngfdc716mnpnjd944411ljpsjntomkepn8hmk6k4mopbplinpklhdjajjikjc633ksjd96318jjslfa6bqfpqkh634nihooomed8dlnaooghafmokjibjdgd73213ifmmkmaiafmjkimpjjkfkmckhkifd7kk9jncedel6ll99ijdha8331dojokhbkhhkopgjid5lhlkjlikiafeekohfhem5hgb9536eqlaj5hkjepaiccde3gclg4ii68jlgdqmec8114mlnfaaihmnonhkhjemagmf528kehmiifileliohcimekfjmljh9h673dkjghjjginnhjqdgdhhe4kakmchmf6b5422knmhljmlik5hb313kildif9gnhmoqh82diknjgkjgbokjhjfkenijflkikiomgjbgdmejidkdmg73bekkhkkinhffmmiihe9a72nlchibogkijf4434oioj9jg11cmh7nh7jhggll8mgimkjchia82akjhkkihknkokdbc3fkn7elhmlkmgkibh6d414mhbnnnidigch5h5dac212kgiljodnjhfmheeg3ehbh69abgihadeeb36c7dbinjib6001005ii7pfdlbnnfa421kjhjfldojildfgkm7mfj7lhh8529drpnj811mqikrtp6hhjkrk62129l6hbii8qqgdjc7aagjkjkhkejjlekiffgk5hihgejjajffkhigbjfmkhf6212keiadgicifi2bffbjiaiijmjplfa42002cfkghf36f2dbfjbbcddjegifiebac3ga6gad4kmje9g9dc9176f44569iijfljjfk9bikkdnkj8dg9gdokkchjahihmejj7j922dfeignmfkillhoimefkg96211lof610hmha9dejkkmkikhi300je7gohcjqhhjjcllolno8kfmf9k4daf21013m6mi2gnple8422jmpkepjcgkdmic620gjmmehhklgfb74eiehjgjk9kjcjii83205ilqhimnino8kke11101h6lioh91pmjljn7lombmj5k5egfb9122ekg61dmopg4h8ggfmklghba10bleke9153jekjg4fimgmfc4dg9gbjiaeacb50h9i4699dkj7mrsk4gjbda200008nlhnfcgmidcijkljgii9ki7did853ffiiefcfc7hekihdcaa7219ilja8jblcj5cfgebfihailhkfk7mg6325eghkcfeglhlfa4ehmkg9jjjbkb52000000000016a4bae9eafddffgd317ceddac5ad9f4fcgbf6320002fcid45ad9bifdfd544c574bbfe9beed9cd947fdic9g3436f99dcaeca8beb6a48gde6a9887a7ccb4ddbhfa9g8facacc8599f5e6agd5eeabeccb8egega96543af5dbce9cee6bc9ee6e5b5546ebedf55547caba8ac7764547667bec9digbdajeccehbdbhgc9diebcdiccbggadaifcbeibcbggbdaiebdbifbcghadaifcd9iddcfheadhfbda6765544444333322222111111100000013hfm6befjjhhaiggf8khfjifjeffehhe21" aria-hidden="true"></canvas><audio preload="metadata" src="portrait.mp3?v=4f734e23"></audio>
+<div class="l-corps"><canvas class="courbe onde" data-enveloppe="lhdfcleedikfbekhcfbmeedhkcfdljecgmfedhlefdkicfcmhddildfdkjdfclheeemgccgf8bdfgccdfb6chbgikeed85966678577ddbaelfeeimegeljdgcniedimefelkdgdmhefemhcdhf9hhffcdbggbdb9dibjfb88dfeidceb8feebjejfdhacdfheffceba9ec776mldifcjkgjgcd7hc6ccdecj8a777cecadkidgcoggejmdhenlfdhohfeinfgemkdhdnidcgiajajgiigdjgbba766aficdcfdcbfedcedah9cdbfea66cbbie7cehd8ghdfefcbfbe9ffe9668ifie9ggfehh7fhfdfa99gmbhge9kfei8dbdjgga875a76ge9dcdadbcec986ab7769ffbfeahhec7a6a9676a8789gdbekldheokfheoggflnidgnkdhcphgfilcebge9788522000copoje542mdqlh733211dntrohc555576lsomlibp4p5jso7nlnlfjfnxj5k87ilpzt5qjnjde9515hkiangmmelpljnc641fkqoonee44711ggprrpgm9kmmnpowq9cd4ha23h5lutq8prnbdek7mjge513enp7ngfdc716mnpnjd944411ljpsjntomkepn8hmk6k4mopbplinpklhdjajjikjc633ksjd96318jjslfa6bqfpqkh634nihooomed8dlnaooghafmokjibjdgd73213ifmmkmaiafmjkimpjjkfkmckhkifd7kk9jncedel6ll99ijdha8331dojokhbkhhkopgjid5lhlkjlikiafeekohfhem5hgb9536eqlaj5hkjepaiccde3gclg4ii68jlgdqmec8114mlnfaaihmnonhkhjemagmf528kehmiifileliohcimekfjmljh9h673dkjghjjginnhjqdgdhhe4kakmchmf6b5422knmhljmlik5hb313kildif9gnhmoqh82diknjgkjgbokjhjfkenijflkikiomgjbgdmejidkdmg73bekkhkkinhffmmiihe9a72nlchibogkijf4434oioj9jg11cmh7nh7jhggll8mgimkjchia82akjhkkihknkokdbc3fkn7elhmlkmgkibh6d414mhbnnnidigch5h5dac212kgiljodnjhfmheeg3ehbh69abgihadeeb36c7dbinjib6001005ii7pfdlbnnfa421kjhjfldojildfgkm7mfj7lhh8529drpnj811mqikrtp6hhjkrk62129l6hbii8qqgdjc7aagjkjkhkejjlekiffgk5hihgejjajffkhigbjfmkhf6212keiadgicifi2bffbjiaiijmjplfa42002cfkghf36f2dbfjbbcddjegifiebac3ga6gad4kmje9g9dc9176f44569iijfljjfk9bikkdnkj8dg9gdokkchjahihmejj7j922dfeignmfkillhoimefkg96211lof610hmha9dejkkmkikhi300je7gohcjqhhjjcllolno8kfmf9k4daf21013m6mi2gnple8422jmpkepjcgkdmic620gjmmehhklgfb74eiehjgjk9kjcjii83205ilqhimnino8kke11101h6lioh91pmjljn7lombmj5k5egfb9122ekg61dmopg4h8ggfmklghba10bleke9153jekjg4fimgmfc4dg9gbjiaeacb50h9i4699dkj7mrsk4gjbda200008nlhnfcgmidcijkljgii9ki7did853ffiiefcfc7hekihdcaa7219ilja8jblcj5cfgebfihailhkfk7mg6325eghkcfeglhlfa4ehmkg9jjjbkb52000000000016a4bae9eafddffgd317ceddac5ad9f4fcgbf6320002fcid45ad9bifdfd544c574bbfe9beed9cd947fdic9g3436f99dcaeca8beb6a48gde6a9887a7ccb4ddbhfa9g8facacc8599f5e6agd5eeabeccb8egega96543af5dbce9cee6bc9ee6e5b5546ebedf55547caba8ac7764547667bec9digbdajeccehbdbhgc9diebcdiccbggadaifcbeibcbggbdaiebdbifbcghadaifcd9iddcfheadhfbda6765544444333322222111111100000013hfm6befjjhhaiggf8khfjifjeffehhe21" aria-hidden="true"></canvas><audio preload="metadata" src="portrait.mp3?v=4f734e23"></audio>
 <div class="l-bas"><span class="l-temps"><span class="l-ecoule">0:00</span> / 3:51</span><button type="button" class="l-recul" aria-label="Revenir de 15 secondes">↺ 15 s</button></div></div>
 </div>
 
 </div>
+<div class="en-savoir-plus" id="etape-presentation">
+<p class="esp-titre">Envie d'en savoir plus sur Les Voix de l'IA ?</p>
+<p class="esp-sous">Le concept en une minute et demie, par Alexandre et ses IA‑nimateurs.</p>
+<div class="lecteur">
+<button type="button" class="l-jouer" aria-label="Écouter le concept des Voix de l'IA"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-jouer" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+<div class="l-corps"><canvas class="courbe onde" data-enveloppe="jd89ijbincfgiamkj635443lkkpklrmh35innnhongh9hacm7mlkeaifalmkgbffqrmf65443ik7hblmgekookjdknkehdfdfc54343hmpi75gffkjleenoma1lelaekifi7gellnjmff733mjqqfmpp7kllkhci5333cljmlijlmoc732grp5443l5hsmml8ld43c8lfeemdmk9oje6875gniugnri5hehid7ienijieblheb4557giqnmmlobbdfahclf7ldjkgabc9710nlkidf5jacd5339mm5g8fgejhablkea84543bgmhbf8f9hcimgaacgkhhj74hiniajbhi7hfjfp8meahg5lkc53eifgcfccgmagj94ggbdihf7kg7gbc4aa62223fodklf8glfnkeg4b5123g9deg5b45466djdeo9jiggc785443hpnbrrh8kjicppoparidmlhn8mqph434ejmbaa9933e8amkc9fjrl643449mfgcadnfzmnkic63c7medcqnl79978pkooti28iqkemjjdf849ong5455aoaflkod9rg7dcjbol5566eonndijc6iiajgndoidl7hihkh9eb745lsn9tohesmcgklmsnsk9mghddcf58kjjpli8jinknng4ic53345kri22koqiblgbsonkjl4ahcihhcjnkklidic4cjbnsmmda933344pmd7vpkf643344b96aab8453335bicfh433hfmongjlgdeah9bkhj7fd4gc54332gqskqcf6mhcrqk5qqhp5mf6htkpemj9f8ph12bgho8m3001111111109hba9bc68697422" aria-hidden="true"></canvas><audio preload="metadata" src="presentation.mp3?v=b79b5f7f"></audio>
+<div class="l-bas"><span class="l-temps"><span class="l-ecoule">0:00</span> / 1:26</span><button type="button" class="l-recul" aria-label="Revenir de 15 secondes">↺ 15 s</button></div></div>
+</div>
+</div>
+
 <details class="plus" id="plus">
 <summary>Les coulisses de ton portrait</summary>
-
-<p>Les Voix de l'IA, ce sont 138 portraits des talents qui font la tech et l'intelligence artificielle, racontés par Ada et Alan, deux animateurs IA, avec Lia, l'IA de Choucroute Citron. Chaque fait est vérifié, avec ses sources.</p>
+<p>Les Voix de l'IA, ce sont 143 portraits des talents qui font la tech et l'intelligence artificielle, racontés par Ada et Alan, deux animateurs IA, avec Lia, l'IA de Choucroute Citron. Chaque fait est vérifié, avec ses sources.</p>
 <div class="methode">
 <p class="titre-methode">Comment ce portrait a été fait</p>
 <p>Aucun humain au micro : c'est voulu, et c'est pédagogique. Mais rien n'est laissé au hasard. Plusieurs IA cherchent dans ce qui a été publié (articles, interviews, livres, conférences) ; d'autres vérifient chaque fait, point par point, sur ses sources ; chaque phrase du texte est revérifiée, une à une, sur sa source avant que la moindre voix ne soit enregistrée. Aucune citation n'est inventée, et ce que l'IA imagine est toujours présenté comme tel.</p>
@@ -155,22 +211,24 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 </div>
 <p>Choucroute Citron, c'est mon podcast où des invités dialoguent en direct avec une IA : <a href="https://choucroute-citron.com/">choucroute-citron.com</a>.</p>
 </details>
-<div class="faire-decouvrir">
-<p class="fd-titre">Tu aimes le concept ? Fais découvrir la série</p>
-<div class="partager" data-url="https://3h33.com/podcast-voix-de-lia/" data-texte="Les Voix de l'IA : 138 portraits audio des talents qui font la tech et l'IA, un grand quiz et des playlists à thème. C'est gratuit.">
-<button type="button" class="bouton bouton-partager p-natif"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16a3 3 0 0 0-2.4 1.2l-6.7-3.4a3 3 0 0 0 0-1.6l6.7-3.4A3 3 0 1 0 15 7l-6.7 3.4a3 3 0 1 0 0 3.2L15 17a3 3 0 1 0 3-1z"/></svg><span>Faire découvrir la série</span></button>
+<div class="pied">
+<div class="abonner"><p class="ab-titre">Abonne-toi aux Voix de l'IA</p><p class="ab-liens"><a href="https://podcasts.apple.com/fr/podcast/les-voix-de-lia/id6822430918" target="_blank" rel="noopener">Apple Podcasts</a><a href="https://open.spotify.com/show/0rdllAOWQFhE8vTfKgAxzV" target="_blank" rel="noopener">Spotify</a><a href="https://3h33.com/podcast-voix-de-lia/">Le site</a></p></div>
+<div class="partager" data-url="https://3h33.com/podcast-voix-de-lia/" data-texte="Les Voix de l'IA : 143 portraits audio des talents qui font la tech et l'IA, un grand quiz et des playlists à thème. C'est gratuit.">
+<button type="button" class="bouton bouton-partager p-natif"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16a3 3 0 0 0-2.4 1.2l-6.7-3.4a3 3 0 0 0 0-1.6l6.7-3.4A3 3 0 1 0 15 7l-6.7 3.4a3 3 0 1 0 0 3.2L15 17a3 3 0 1 0 3-1z"/></svg><span>Partager le site des Voix de l'IA</span></button>
 <div class="p-reseaux">
-<a class="p-reseau" title="WhatsApp" href="https://wa.me/?text=Les%20Voix%20de%20l'IA%20%3A%20138%20portraits%20audio%20des%20talents%20qui%20font%20la%20tech%20et%20l'IA%2C%20un%20grand%20quiz%20et%20des%20playlists%20%C3%A0%20th%C3%A8me.%20C'est%20gratuit.%20https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.96L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.08.9.9-3-.2-.31a8.2 8.2 0 1 1 6.86 3.74zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.31c-.22.25-.86.84-.86 2.05 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.17-.47-.29z"/></svg><span>WhatsApp</span></a>
+<a class="p-reseau" title="WhatsApp" href="https://wa.me/?text=Les%20Voix%20de%20l'IA%20%3A%20143%20portraits%20audio%20des%20talents%20qui%20font%20la%20tech%20et%20l'IA%2C%20un%20grand%20quiz%20et%20des%20playlists%20%C3%A0%20th%C3%A8me.%20C'est%20gratuit.%20https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.96L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.08.9.9-3-.2-.31a8.2 8.2 0 1 1 6.86 3.74zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.31c-.22.25-.86.84-.86 2.05 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.17-.47-.29z"/></svg><span>WhatsApp</span></a>
 <a class="p-reseau" title="LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg><span>LinkedIn</span></a>
 <a class="p-reseau" title="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"/></svg><span>Facebook</span></a>
-<a class="p-reseau" title="X" href="https://x.com/intent/tweet?text=Les%20Voix%20de%20l'IA%20%3A%20138%20portraits%20audio%20des%20talents%20qui%20font%20la%20tech%20et%20l'IA%2C%20un%20grand%20quiz%20et%20des%20playlists%20%C3%A0%20th%C3%A8me.%20C'est%20gratuit.&amp;url=https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3zm-1.08 16.2h1.7L7.4 4.73H5.58L16.67 19.2z"/></svg><span>X</span></a>
-<a class="p-reseau" title="E-mail" href="mailto:?subject=Les%20Voix%20de%20l'IA%20%3A%20138%20portraits%20audio%20des%20talents%20qui%20font%20la%20tech%20et%20l'IA%2C%20un%20grand%20quiz%20et%20des%20playlists%20%C3%A0%20th%C3%A8me.%20C'est%20gratuit.&amp;body=Les%20Voix%20de%20l'IA%20%3A%20138%20portraits%20audio%20des%20talents%20qui%20font%20la%20tech%20et%20l'IA%2C%20un%20grand%20quiz%20et%20des%20playlists%20%C3%A0%20th%C3%A8me.%20C'est%20gratuit.%0Ahttps%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.3V17h16V7.3l-8 5.6-8-5.6zM5.2 7l6.8 4.8L18.8 7H5.2z"/></svg><span>E-mail</span></a>
+<a class="p-reseau" title="X" href="https://x.com/intent/tweet?text=Les%20Voix%20de%20l'IA%20%3A%20143%20portraits%20audio%20des%20talents%20qui%20font%20la%20tech%20et%20l'IA%2C%20un%20grand%20quiz%20et%20des%20playlists%20%C3%A0%20th%C3%A8me.%20C'est%20gratuit.&amp;url=https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3zm-1.08 16.2h1.7L7.4 4.73H5.58L16.67 19.2z"/></svg><span>X</span></a>
+<a class="p-reseau" title="E-mail" href="mailto:?subject=Les%20Voix%20de%20l'IA%20%3A%20143%20portraits%20audio%20des%20talents%20qui%20font%20la%20tech%20et%20l'IA%2C%20un%20grand%20quiz%20et%20des%20playlists%20%C3%A0%20th%C3%A8me.%20C'est%20gratuit.&amp;body=Les%20Voix%20de%20l'IA%20%3A%20143%20portraits%20audio%20des%20talents%20qui%20font%20la%20tech%20et%20l'IA%2C%20un%20grand%20quiz%20et%20des%20playlists%20%C3%A0%20th%C3%A8me.%20C'est%20gratuit.%0Ahttps%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2F"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.3V17h16V7.3l-8 5.6-8-5.6zM5.2 7l6.8 4.8L18.8 7H5.2z"/></svg><span>E-mail</span></a>
 <button type="button" class="p-reseau p-copie" title="Copier le lien"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a1 1 0 1 1 1.4 1.4L12 13.4a1 1 0 0 1-1.4 0zm-2.8 5.2a3.5 3.5 0 0 1-2.5-6l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a1.5 1.5 0 0 0 2.1 2.1l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a3.5 3.5 0 0 1-2.4 1.1zm8.3-6.6a1 1 0 0 1-.7-1.7l2.1-2.1a1.5 1.5 0 0 0-2.1-2.1l-2.1 2.1a1 1 0 0 1-1.4-1.4l2.1-2.1a3.5 3.5 0 0 1 5 5l-2.1 2.1a1 1 0 0 1-.8.2z"/></svg><span>Copier le lien</span></button>
 </div>
 </div>
 </div>
-<a class="vibe-carte" href="https://3h33.com/pour/alexandre-vibe-coding/"><img src="https://3h33.com/pour/alexandre-vibe-coding/vignette.jpg" width="56" height="56" alt="" loading="lazy"><span><span class="vc-sur">Et aussi, de moi</span><strong>Mon nouveau métier : le vibe coding</strong><span class="vc-sous">49 s · à écouter et à partager →</span></span></a>
-<small>Fait pour toi par Alexandre Stopnicki. Ma voix est clonée par IA : c'est voulu.</small>
+<div class="vibe-bloc">
+<a class="vibe-carte" href="https://3h33.com/pour/alexandre-vibe-coding/"><img src="vibe.jpg?v=f2e74b87" width="56" height="56" alt="" loading="lazy"><span><span class="vc-sur">Alexandre Stopnicki</span><strong>Mon nouveau métier : le vibe coding</strong><span class="vc-sous">49 s · à écouter, à partager →</span></span></a>
+<p class="lien-linkedin"><a href="https://www.linkedin.com/in/alexandrestopnicki/" target="_blank" rel="noopener">Alexandre Stopnicki sur LinkedIn →</a></p>
+</div>
 </main>
 <script>
 // Fin du message : l'étape 2 s'allume et vient se placer à l'écran (Alexandre, 14/10 : on ne voyait pas qu'il y avait une suite)
@@ -178,8 +236,8 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 var allumer = function (el) { if (!el) return; el.classList.add("allumee"); el.scrollIntoView({ behavior: "smooth", block: "center" }); };
 var aLaFin = function (sel, fn) { var a = document.querySelector(sel); if (a) a.addEventListener("ended", fn); };
 var ePres = document.getElementById("etape-presentation"), ePortrait = document.getElementById("etape-portrait"), plus = document.getElementById("plus");
-aLaFin("#etape-1 audio", function () { allumer(ePres || ePortrait); });
-aLaFin("#etape-presentation audio", function () { allumer(ePortrait); });
+// 20/10/2026 : message fini → le concept démarre tout seul (s'il ne peut pas, son bouton s'allume)
+aLaFin("#etape-1 audio", function () { allumer(ePortrait); });
 // Fin du portrait : les teasers de Choucroute Citron s'allument (17/10/2026)
 // 18/10/2026 : s'il y a la zone « Ton quiz » (portrait public), c'est elle qu'on amène à l'écran ; sinon Choucroute Citron
 aLaFin("#etape-portrait audio", function () { var ae = document.getElementById("apres-ecoute"); if (ae) { ae.scrollIntoView({ behavior: "smooth", block: "center" }); return; } var cc = document.getElementById("etape-cc"); if (cc) { if (plus) plus.open = true; allumer(cc); } });
@@ -287,10 +345,16 @@ document.querySelectorAll(".partager").forEach(function (p) {
     if (statique) {
       // Silhouette du son, la partie écoutée en couleur pleine (aucune animation)
       var d = c.audio.duration || c.env.length / 10, fait = d ? c.audio.currentTime / d : 0;
+      // moyenne de chaque passage, étalée entre le plus bas et le plus haut (20/10/2026 : une voix est d'un niveau très
+      // régulier, sans cet étalement toutes les barres avaient la même hauteur)
+      var ms = [], lo = 1, hi = 0;
       for (var i = 0; i < n; i++) {
-        var t0 = (i / n) * d, t1 = ((i + 1) / n) * d, m = 0;
-        for (var t = t0; t < t1; t += 0.1) m = Math.max(m, env(c, t));
-        var hb = Math.max(dpr * 2, m * h * 0.9);
+        var t0 = (i / n) * d, t1 = ((i + 1) / n) * d, m = 0, k = 0;
+        for (var t = t0; t < t1; t += 0.1) { m += env(c, t); k++; }
+        m = k ? m / k : 0; ms.push(m); if (m > 0.02) lo = Math.min(lo, m); hi = Math.max(hi, m);
+      }
+      for (var i = 0; i < n; i++) {
+        var x = hi > lo ? Math.max(0, (ms[i] - lo) / (hi - lo)) : 1, hb = ms[i] <= 0.02 ? dpr * 2 : Math.max(dpr * 2, (0.18 + 0.82 * Math.pow(x, 1.3)) * h * 0.95);
         g.fillStyle = (i + 0.5) / n <= fait ? plein : repos;
         g.fillRect(i * pas + (pas - larg) / 2, (h - hb) / 2, larg, hb);
       }
@@ -317,8 +381,9 @@ document.querySelectorAll(".partager").forEach(function (p) {
     var a = cv.nextElementSibling;
     if (!a || a.tagName !== "AUDIO" || !cv.getContext) return;
     var c = { canvas: cv, audio: a, g: cv.getContext("2d"), env: cv.getAttribute("data-enveloppe") || "" };
+    c.fixe = (reduit || cv.classList.contains("onde")) && !!c.env; // silhouette du son plutôt que les barres en direct
     courbes.push(c); taille(c);
-    var rafraichir = function () { if (reduit) dessiner(c, !!c.env); else boucle(c); };
+    var rafraichir = function () { if (c.fixe) dessiner(c, true); else if (!reduit) boucle(c); };
     a.addEventListener("play", function () {
       courbes.forEach(function (o) { if (o !== c && !o.audio.paused) o.audio.pause(); }); // un seul son à la fois
       try { brancher(c); } catch (e) {}
@@ -326,10 +391,10 @@ document.querySelectorAll(".partager").forEach(function (p) {
       rafraichir();
     });
     ["pause", "ended", "seeked", "loadedmetadata"].forEach(function (t) { a.addEventListener(t, rafraichir); });
-    if (reduit) a.addEventListener("timeupdate", rafraichir);
-    dessiner(c, reduit && !!c.env);
+    if (c.fixe) a.addEventListener("timeupdate", rafraichir);
+    dessiner(c, c.fixe);
   });
-  window.addEventListener("resize", function () { courbes.forEach(function (c) { taille(c); dessiner(c, reduit && !!c.env); }); });
+  window.addEventListener("resize", function () { courbes.forEach(function (c) { taille(c); dessiner(c, c.fixe); }); });
 })();
 </script>
 <script>
