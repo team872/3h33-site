@@ -2453,3 +2453,28 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 @keyframes qz-appel{0%{box-shadow:0 0 0 0 #c4a265aa}100%{box-shadow:0 0 0 14px #c4a26500}}
 @media (prefers-reduced-motion:reduce){.qz-ecouter.qz-passage{animation:none}}
 @media (max-width:600px){.qz-actions .qz-passage{width:100%;justify-content:flex-start}}
+/* « Revenir au quiz » beaucoup plus visible (20/10/2026, Alexandre : « il faut qu'il soit beaucoup plus gros pour qu'on
+   ne puisse pas le rater ») : bouton doré plein, large, qui respire ; toujours AU-DESSUS du lecteur et de la playlist
+   (avant, sur téléphone, il passait dessous quand on écoutait un passage pendant le quiz) ; « remonter » passe au-dessus */
+.quiz-revenir{z-index:1002;width:min(560px,calc(100vw - 1.5rem));max-width:none;border:0;border-radius:18px;background:linear-gradient(135deg,var(--accent-clair),var(--accent));color:var(--bg);box-shadow:0 18px 50px #000d,0 0 0 0 #c4a26599;overflow:hidden;transition:transform .45s var(--ease),opacity .35s,bottom .5s var(--ease)}
+.quiz-revenir.visible{animation:quiz-revenir-souffle 2.6s ease-in-out 1s infinite}
+@keyframes quiz-revenir-souffle{0%,100%{box-shadow:0 18px 50px #000d,0 0 0 0 #c4a26599}50%{box-shadow:0 18px 50px #000d,0 0 0 12px #c4a26500}}
+.quiz-revenir:hover{background:linear-gradient(135deg,#f3dca8,var(--accent-clair))}
+.quiz-revenir-ouvrir{flex:1;min-width:0;gap:1rem;padding:1rem 1.1rem;min-height:76px}
+.quiz-revenir-icone{width:50px;height:50px;font-size:1.5rem;background:var(--bg);color:var(--accent-clair)}
+.quiz-revenir strong{font-size:1.4rem;line-height:1.15;color:var(--bg)}
+.quiz-revenir strong+span{font-size:.9rem;color:#1a1408;opacity:.85;margin-top:.15rem}
+.quiz-revenir-quitter{color:#1a1408;border-left:1px solid #0000002e;padding:0 1rem}
+.quiz-revenir-quitter:hover{color:var(--bg);background:#00000014}
+body.lecteur-ouvert .quiz-revenir{bottom:calc(150px + var(--safe-bottom))}
+body.lecteur-ouvert:not(.mode-audio) .quiz-revenir{bottom:calc(250px + var(--safe-bottom))}
+body.avec-playlist .quiz-revenir,body.avec-playlist.lecteur-ouvert .quiz-revenir,body.avec-playlist.lecteur-ouvert:not(.mode-audio) .quiz-revenir{bottom:calc(var(--lecteur-h,0px) + 74px + var(--safe-bottom))}
+body.pc-ecoute .quiz-revenir{bottom:calc(86px + var(--safe-bottom))}
+body.quiz-a-reprendre .remonter{bottom:calc(1.1rem + 108px + var(--safe-bottom))}
+body.quiz-a-reprendre.lecteur-ouvert .remonter{bottom:calc(150px + 108px + var(--safe-bottom))}
+body.quiz-a-reprendre.lecteur-ouvert:not(.mode-audio) .remonter{bottom:calc(250px + 108px + var(--safe-bottom))}
+body.quiz-a-reprendre.avec-playlist .remonter{bottom:calc(var(--lecteur-h,0px) + 74px + 108px + var(--safe-bottom))}
+body.quiz-a-reprendre.pc-ecoute .remonter{bottom:calc(86px + 108px + var(--safe-bottom))}
+body.quiz-a-reprendre{padding-bottom:calc(110px + var(--safe-bottom))}
+@media (max-width:520px){.quiz-revenir strong{font-size:1.22rem}.quiz-revenir-ouvrir{padding:.9rem .9rem;gap:.8rem}.quiz-revenir-icone{width:44px;height:44px}}
+@media (prefers-reduced-motion:reduce){.quiz-revenir.visible{animation:none}}

@@ -2672,6 +2672,7 @@
         if (fenetre.open) return;
         var flottant = $(".quiz-revenir");
         if (flottant) flottant.remove();
+        document.body.classList.remove("quiz-a-reprendre");
         var e = moteur.etat(), repris = true;
         if (!(e && e.actif) && !moteur.reprendre()) { moteur.demarrer(); repris = false; }
         fenetre.showModal();
@@ -2703,6 +2704,7 @@
         stop.addEventListener("click", function () {
           if (moteur.quitter) moteur.quitter();
           b.classList.remove("visible");
+          document.body.classList.remove("quiz-a-reprendre");
           setTimeout(function () { b.remove(); }, 450);
           var btEncart = $(".quiz-encart [data-quiz-ouvrir] span");
           if (btEncart) btEncart.textContent = "Faire le quiz";
@@ -2710,7 +2712,9 @@
         b.appendChild(go);
         b.appendChild(stop);
         document.body.appendChild(b);
-        requestAnimationFrame(function () { b.classList.add("visible"); });
+        document.body.classList.add("quiz-a-reprendre");
+        // setTimeout plutôt que requestAnimationFrame : un onglet en arrière-plan ne dessine pas, le bouton restait caché (20/10/2026)
+        setTimeout(function () { b.classList.add("visible"); }, 60);
       };
       fenetre.addEventListener("close", function () { doc.classList.remove("fenetre-ouverte"); moteur.couper(); montrerRevenir(); });
       // en arrivant sur la page : un quiz commencé (même hier) se retrouve
