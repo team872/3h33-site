@@ -2478,3 +2478,22 @@ body.quiz-a-reprendre.pc-ecoute .remonter{bottom:calc(86px + 108px + var(--safe-
 body.quiz-a-reprendre{padding-bottom:calc(110px + var(--safe-bottom))}
 @media (max-width:520px){.quiz-revenir strong{font-size:1.22rem}.quiz-revenir-ouvrir{padding:.9rem .9rem;gap:.8rem}.quiz-revenir-icone{width:44px;height:44px}}
 @media (prefers-reduced-motion:reduce){.quiz-revenir.visible{animation:none}}
+
+/* 20/10/2026, Alexandre : « Les VIP · Very Internet People » se voient sans cacher l'image (une ligne dorée sous la vignette) */
+.card-number.card-vip{color:var(--accent)}.card-number.card-vip b{display:inline-block;padding:1px 7px;border-radius:999px;background:linear-gradient(90deg,#c4a265,#e6cf98);color:#141008;font-weight:700;letter-spacing:.08em;margin-right:2px}
+/* dans .portrait-visuel (carré, positionné) : posé SOUS l'image, hors du flux, et la place réservée par la marge du dessous */
+.portrait-visuel.avec-vip{margin-bottom:76px}.portrait-visuel .vip-bandeau{position:absolute;left:0;right:0;top:calc(100% + 26px);margin:0}
+.vip-bandeau{display:flex;align-items:center;justify-content:center;gap:10px;max-width:520px;margin:30px auto 0;padding:9px 12px;border-radius:8px;background:linear-gradient(90deg,#c4a265,#e6cf98,#c4a265);color:#141008;letter-spacing:.08em}
+.vip-bandeau b{font:700 1.3rem/1 var(--ff-display);letter-spacing:.06em}.vip-bandeau span{font-size:.8rem;text-transform:uppercase;font-weight:700}
+@media(max-width:700px){.portrait-visuel.avec-vip{margin-bottom:58px}.portrait-visuel .vip-bandeau{top:calc(100% + 18px)}.vip-bandeau{max-width:min(64vw,300px);margin-top:20px;gap:7px;padding:7px 8px}.vip-bandeau b{font-size:1.05rem}.vip-bandeau span{font-size:.62rem;letter-spacing:.06em;white-space:nowrap}}
+@media(max-width:619px){.episodes-grid .card-number.card-vip{display:flex;font-size:.52rem;letter-spacing:.1em;margin:0 0 .45rem;white-space:nowrap}.episodes-grid .card-number.card-vip::after{display:none}.episodes-grid .card-vip .cv-long{display:none}}
+/* 20/10/2026, Alexandre : « une infobulle avec un petit i » : au survol, au clavier (Tab) et au toucher (focus) */
+.vip-bandeau{position:relative}.vip-info{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:1.5px solid #141008;font:italic 700 13px/1 Georgia,serif;color:#141008;cursor:help;position:relative;flex:none;outline:none}
+.vip-info:focus-visible{box-shadow:0 0 0 3px #fff8}
+.vip-bulle{position:absolute;bottom:calc(100% + 12px);right:-10px;width:240px;max-width:78vw;padding:10px 12px;border-radius:10px;background:#141008;color:#f3e9d2;border:1px solid #c4a26599;font:400 13px/1.45 system-ui,sans-serif;letter-spacing:0;text-transform:none;text-align:left;box-shadow:0 8px 24px #000a;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .15s,transform .15s,visibility .15s;z-index:20;pointer-events:none}
+.vip-bulle b{display:block;font-weight:700;color:#e6cf98;margin-bottom:3px}
+.vip-bulle::after{content:"";position:absolute;top:100%;right:15px;border:7px solid transparent;border-top-color:#141008}
+.vip-info:hover .vip-bulle,.vip-info:focus .vip-bulle,.vip-info:focus-within .vip-bulle{opacity:1;visibility:visible;transform:none}
+.vip-bandeau .vip-info{font:italic 700 13px/1 Georgia,serif;text-transform:none;letter-spacing:0}
+.vip-bandeau .vip-bulle{font:400 13px/1.45 system-ui,-apple-system,sans-serif;text-transform:none;letter-spacing:0;font-style:normal}
+.vip-bandeau .vip-bulle b{display:block;font:700 13px/1.3 system-ui,-apple-system,sans-serif;letter-spacing:.02em;color:#e6cf98;margin-bottom:3px}
