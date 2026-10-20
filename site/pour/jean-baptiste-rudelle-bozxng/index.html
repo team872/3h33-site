@@ -161,6 +161,19 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 #apres-ecoute .bouton-vraie-page,#apres-ecoute .bouton-partager{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;max-width:380px;min-height:60px;margin:0 auto;box-sizing:border-box;border-radius:12px}
 #apres-ecoute .bouton-partager{flex-direction:row;gap:10px;margin-top:12px;font-size:17px}#apres-ecoute .partager{margin:0}
 #etape-portrait .lecteur .l-jouer,.en-savoir-plus .l-jouer,#etape-1 .lecteur .l-jouer{box-shadow:none}
+/* 20/10/2026 (soir), Alexandre : le badge VIP SOUS la vignette (« sinon on ne voit plus l'image »), un bandeau doré */
+.vignette-haut+.vip-bandeau{margin-top:-10px}.vip-bandeau{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 18px;padding:8px 10px;border-radius:0 0 10px 10px;background:linear-gradient(90deg,#c9a86a,#e6cf98,#c9a86a);color:#1a140b;letter-spacing:.08em}
+.vip-bandeau b{font:700 22px/1 Didot,"Bodoni 72",Georgia,serif;letter-spacing:.06em}.vip-bandeau span{font-size:12px;text-transform:uppercase;font-weight:700}
+/* 20/10/2026, Alexandre : « une infobulle avec un petit i » : au survol, au clavier (Tab) et au toucher (focus) */
+.vip-bandeau{position:relative}.vip-info{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:1.5px solid #141008;font:italic 700 13px/1 Georgia,serif;color:#141008;cursor:help;position:relative;flex:none;outline:none}
+.vip-info:focus-visible{box-shadow:0 0 0 3px #fff8}
+.vip-bulle{position:absolute;bottom:calc(100% + 12px);right:-10px;width:240px;max-width:78vw;padding:10px 12px;border-radius:10px;background:#141008;color:#f3e9d2;border:1px solid #c9a86a99;font:400 13px/1.45 system-ui,sans-serif;letter-spacing:0;text-transform:none;text-align:left;box-shadow:0 8px 24px #000a;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .15s,transform .15s,visibility .15s;z-index:20;pointer-events:none}
+.vip-bulle b{display:block;font-weight:700;color:#e6cf98;margin-bottom:3px}
+.vip-bulle::after{content:"";position:absolute;top:100%;right:15px;border:7px solid transparent;border-top-color:#141008}
+.vip-info:hover .vip-bulle,.vip-info:focus .vip-bulle,.vip-info:focus-within .vip-bulle{opacity:1;visibility:visible;transform:none}
+.vip-bandeau .vip-info{font:italic 700 13px/1 Georgia,serif;text-transform:none;letter-spacing:0}
+.vip-bandeau .vip-bulle{font:400 13px/1.45 system-ui,-apple-system,sans-serif;text-transform:none;letter-spacing:0;font-style:normal}
+.vip-bandeau .vip-bulle b{display:block;font:700 13px/1.3 system-ui,-apple-system,sans-serif;letter-spacing:.02em;color:#e6cf98;margin-bottom:3px}
 .teasers-cc{display:grid;grid-template-columns:1fr 1fr;gap:10px}.teasers-cc video{width:100%;aspect-ratio:1;background:#000;border:1px solid #3a3226;display:block}@media (max-width:520px){.teasers-cc{grid-template-columns:1fr}}
 </style>
 </head>
@@ -169,7 +182,7 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 <p class="serie">Les Voix de l'IA · Choucroute Citron</p>
 <h1 class="titre-haut"><span>Pour</span>Jean-Baptiste Rudelle</h1>
 <p class="serie-limitee">Les VIP, les <em>Very Internet People</em>, font vivre le numérique en France. Tu en fais partie.</p>
-<img class="vignette-haut" src="photo.jpg?v=1c1019eb" width="800" height="800" alt="Vignette du portrait de Jean-Baptiste Rudelle dans Les Voix de l'IA">
+<img class="vignette-haut" src="photo.jpg?v=1c1019eb" width="800" height="800" alt="Vignette du portrait de Jean-Baptiste Rudelle dans Les Voix de l'IA"><p class="vip-bandeau"><b>VIP</b><span>Very Internet People</span><span class="vip-info" tabindex="0" role="button" aria-label="Qu'est-ce qu'un VIP ?" aria-describedby="vip-bulle">i<span class="vip-bulle" id="vip-bulle" role="tooltip"><b>VIP · Very Internet People</b>Celles et ceux qui construisent et font vivre le numérique en France.</span></span></p>
 <div class="etape principale" id="etape-1">
 <p class="numero"><span class="n" aria-hidden="true">1</span><span class="n-texte"><span class="n-etape">Étape 1 sur 2</span><span class="n-titre">Écoute l'invitation privée qu'Alexandre a faite pour <span class="insecable">toi <i class="coeur" aria-hidden="true">♥</i></span></span></span></p>
 <div class="lecteur">
