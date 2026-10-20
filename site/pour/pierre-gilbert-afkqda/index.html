@@ -174,6 +174,7 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 .vip-bandeau .vip-info{font:italic 700 13px/1 Georgia,serif;text-transform:none;letter-spacing:0}
 .vip-bandeau .vip-bulle{font:400 13px/1.45 system-ui,-apple-system,sans-serif;text-transform:none;letter-spacing:0;font-style:normal}
 .vip-bandeau .vip-bulle b{display:block;font:700 13px/1.3 system-ui,-apple-system,sans-serif;letter-spacing:.02em;color:#e6cf98;margin-bottom:3px}
+.vip-info.ouverte .vip-bulle{opacity:1;visibility:visible;transform:none}
 .teasers-cc{display:grid;grid-template-columns:1fr 1fr;gap:10px}.teasers-cc video{width:100%;aspect-ratio:1;background:#000;border:1px solid #3a3226;display:block}@media (max-width:520px){.teasers-cc{grid-template-columns:1fr}}
 </style>
 </head>
@@ -287,6 +288,10 @@ document.querySelectorAll(".partager").forEach(function (p) {
     if (navigator.clipboard) navigator.clipboard.writeText(url).then(ok, function () { window.prompt("Copiez ce lien :", url); }); else window.prompt("Copiez ce lien :", url);
   });
 });
+</script>
+<script>
+// Infobulle VIP (20/10/2026) : au toucher (iPhone) et au clic, ouvre / ferme ; un clic ailleurs ferme
+document.addEventListener("click", function (ev) { var i = ev.target.closest && ev.target.closest(".vip-info"); document.querySelectorAll(".vip-info.ouverte").forEach(function (o) { if (o !== i) o.classList.remove("ouverte"); }); if (i) i.classList.toggle("ouverte"); });
 </script>
 <script>
 // Courbe audio (lib/courbe-audio.mjs) : le son joue toujours, même si la courbe échoue

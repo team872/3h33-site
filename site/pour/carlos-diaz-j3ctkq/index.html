@@ -174,6 +174,7 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 .vip-bandeau .vip-info{font:italic 700 13px/1 Georgia,serif;text-transform:none;letter-spacing:0}
 .vip-bandeau .vip-bulle{font:400 13px/1.45 system-ui,-apple-system,sans-serif;text-transform:none;letter-spacing:0;font-style:normal}
 .vip-bandeau .vip-bulle b{display:block;font:700 13px/1.3 system-ui,-apple-system,sans-serif;letter-spacing:.02em;color:#e6cf98;margin-bottom:3px}
+.vip-info.ouverte .vip-bulle{opacity:1;visibility:visible;transform:none}
 .teasers-cc{display:grid;grid-template-columns:1fr 1fr;gap:10px}.teasers-cc video{width:100%;aspect-ratio:1;background:#000;border:1px solid #3a3226;display:block}@media (max-width:520px){.teasers-cc{grid-template-columns:1fr}}
 </style>
 </head>
@@ -187,7 +188,7 @@ canvas.courbe{color:var(--or);--courbe-repos:#4a3f2e;cursor:pointer}
 <p class="numero"><span class="n" aria-hidden="true">1</span><span class="n-texte"><span class="n-etape">Étape 1 sur 2</span><span class="n-titre">Écoute l'invitation privée qu'Alexandre a faite pour <span class="insecable">toi <i class="coeur" aria-hidden="true">♥</i></span></span></span></p>
 <div class="lecteur">
 <button type="button" class="l-jouer" aria-label="Écouter mon invitation"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-jouer" d="M8 5v14l11-7z"/><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
-<div class="l-corps"><canvas class="courbe onde" data-enveloppe="iebcaica88639rtrpud854oso8nf743loe7676jpktsd9nohiuqrkkomllijdaceb84323fqjtjpsm88ihmkoiesqfqmkeoqfegkaokbnonqmbcjmklnojkalonp7one48mdoqcb80004bjjqoj9imicoqgdf63ghapsphkoiph8kde94554mqkmhofaidfjnolmkhg8c753324kqptfqqihhjikndmag7329qhssamhekmkpkcemqplsfjpkcngb72112hkoqeml9kjrm5kaonic843344iopx6rlpl5jd442jlanfpohmmlzzmk8mhspkbknhhdlugiikeb4339g5ncfonhg7433ddmopgtqjopoqmdolwsnhebignbkf5jd7645lpnpa222fqmonlpmki54100knpbqiojifik9f6328rqgsbpnl774klfhmpmfsfte633233110" aria-hidden="true"></canvas><audio preload="metadata" src="teaser.mp3?v=6ba331d8"></audio>
+<div class="l-corps"><canvas class="courbe onde" data-enveloppe="hdacahb987638prqnsc854mqm8le743kmd7566injrqc8mmghropiimkkjhhc9bda74322eoisjorl88jglkmgdrndpkjdmocdgjamjbcqknmf3emhkflmiiahpkmgjoi759k9ok8a5033jfipo7gjmdgpnbdc45iecqmkglimcahcd7324ioglekdahbkgnmllhhdba443235mmnofqmffgdldmklbag532angts4hlefmmphaclpojqf2mlk9ngb721118linmbkj8lkohciikmd963332aiqqphnmnfeh9232lfgkgpl6lmozqkf6mdrmgakl9h7qnfhhid7223f74m5kmigc4233dbpjnasnklqkobkiqtoifbfgiiice7i7753cjpnj222cljojkkqdk952000nlkfpbnfhakebc233bqnlolkmg66ckibipflipom642332211" aria-hidden="true"></canvas><audio preload="metadata" src="teaser.mp3?v=c07968f6"></audio>
 <div class="l-bas"><span class="l-temps"><span class="l-ecoule">0:00</span> / 0:46</span><button type="button" class="l-recul" aria-label="Revenir de 15 secondes">↺ 15 s</button></div></div>
 </div>
 </div>
@@ -294,6 +295,10 @@ document.querySelectorAll(".partager").forEach(function (p) {
     if (navigator.clipboard) navigator.clipboard.writeText(url).then(ok, function () { window.prompt("Copiez ce lien :", url); }); else window.prompt("Copiez ce lien :", url);
   });
 });
+</script>
+<script>
+// Infobulle VIP (20/10/2026) : au toucher (iPhone) et au clic, ouvre / ferme ; un clic ailleurs ferme
+document.addEventListener("click", function (ev) { var i = ev.target.closest && ev.target.closest(".vip-info"); document.querySelectorAll(".vip-info.ouverte").forEach(function (o) { if (o !== i) o.classList.remove("ouverte"); }); if (i) i.classList.toggle("ouverte"); });
 </script>
 <script>
 // Courbe audio (lib/courbe-audio.mjs) : le son joue toujours, même si la courbe échoue
