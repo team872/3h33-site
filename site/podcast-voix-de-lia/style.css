@@ -2497,3 +2497,19 @@ body.quiz-a-reprendre{padding-bottom:calc(110px + var(--safe-bottom))}
 .vip-bandeau .vip-info{font:italic 700 13px/1 Georgia,serif;text-transform:none;letter-spacing:0}
 .vip-bandeau .vip-bulle{font:400 13px/1.45 system-ui,-apple-system,sans-serif;text-transform:none;letter-spacing:0;font-style:normal}
 .vip-bandeau .vip-bulle b{display:block;font:700 13px/1.3 system-ui,-apple-system,sans-serif;letter-spacing:.02em;color:#e6cf98;margin-bottom:3px}
+
+/* Infobulles « i » génériques (20/10/2026) : sources vérifiées, prédiction de Lia, Ada/Alan/Lia */
+.info-i{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent);font:italic 700 12px/1 Georgia,serif;text-transform:none;letter-spacing:0;cursor:help;position:relative;vertical-align:middle;margin-left:4px;outline:none}
+.info-i:focus-visible{box-shadow:0 0 0 3px var(--accent-glow)}
+.info-bulle{position:absolute;bottom:calc(100% + 10px);left:50%;width:260px;max-width:80vw;transform:translate(-50%,4px);padding:10px 12px;border-radius:10px;background:#141008;color:#f3e9d2;border:1px solid #c4a26599;font:400 13px/1.45 system-ui,-apple-system,sans-serif;font-style:normal;letter-spacing:0;text-transform:none;text-align:left;box-shadow:0 8px 24px #000a;opacity:0;visibility:hidden;transition:opacity .15s,transform .15s,visibility .15s;z-index:30;pointer-events:none;white-space:normal}
+.info-bulle b{display:block;font:700 13px/1.3 system-ui,-apple-system,sans-serif;color:#e6cf98;margin-bottom:3px;letter-spacing:.02em}
+.info-bulle::after{content:"";position:absolute;top:100%;left:50%;margin-left:-7px;border:7px solid transparent;border-top-color:#141008}
+.info-i:hover .info-bulle,.info-i:focus .info-bulle{opacity:1;visibility:visible;transform:translate(-50%,0)}
+/* site.js place la bulle (left, width, --fleche) pour qu'elle reste dans l'écran ; sans JavaScript : centrée */
+.info-bulle.placee{transform:translateY(4px)}.info-i:hover .info-bulle.placee,.info-i:focus .info-bulle.placee{transform:none}.info-bulle.placee::after{left:var(--fleche,50%)}
+.info-i.ouverte .info-bulle,.vip-info.ouverte .vip-bulle{opacity:1;visibility:visible}.info-i.ouverte .info-bulle.placee{transform:none}.info-i.ouverte .info-bulle:not(.placee){transform:translate(-50%,0)}.vip-info.ouverte .vip-bulle{transform:none}
+/* 20/10/2026 : la bulle garde son propre style partout (le titre du lecteur est en petites capitales) ; le lecteur la laisse dépasser */
+.info-i{text-transform:none!important;font:italic 700 12px/1 Georgia,serif!important;letter-spacing:0!important}
+.info-i .info-bulle{display:block!important;font:400 13px/1.45 system-ui,-apple-system,sans-serif!important;text-transform:none!important;letter-spacing:0!important;color:#f3e9d2!important;font-style:normal!important}
+.info-i .info-bulle b{display:block!important;font:700 13px/1.3 system-ui,-apple-system,sans-serif!important;color:#e6cf98!important;text-transform:none!important;letter-spacing:.02em!important}
+.lecteur:has(.info-i){overflow:visible}
