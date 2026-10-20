@@ -70,7 +70,7 @@
   }
 
   /* ------------------------------------------------ une seule vidéo sonore à la fois */
-  var videosSon = Array.from(document.querySelectorAll('.film-video, .carte-version video, #lecteur-fins'));
+  var videosSon = Array.from(document.querySelectorAll('.film-video, .carte-version video, #lecteur-fins, #hero-video'));
   videosSon.forEach(function (v) {
     v.addEventListener('play', function () {
       if (v.muted) return;
@@ -495,6 +495,17 @@
   });
   document.addEventListener('dragstart', function (e) { if (e.target.closest('img, video')) e.preventDefault(); });
   document.querySelectorAll('video, audio').forEach(function (m) { m.setAttribute('controlslist', 'nodownload'); });
+
+  /* ------------------------------------------------ le film déposé, dans l'ouverture */
+  var heroV = document.getElementById('hero-video'), heroB = document.getElementById('hero-play');
+  if (heroV && heroB) {
+    heroB.addEventListener('click', function () {
+      heroV.closest('.hero-film').classList.add('lance');
+      heroV.muted = false; var p = heroV.play(); if (p && p.catch) p.catch(function () {});
+      heroV.focus();
+    });
+    heroV.addEventListener('play', function () { heroV.closest('.hero-film').classList.add('lance'); });
+  }
 
   if (document.readyState === 'complete') apresChargement();
   else addEventListener('load', apresChargement);

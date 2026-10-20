@@ -568,3 +568,30 @@ button{font-family:inherit}
   .bandeau nav::-webkit-scrollbar{display:none}
   .bandeau nav a{white-space:nowrap;flex:0 0 auto}
 }
+
+/* ------------------------------------------------ 20/10 : le film déposé, visible dès l'ouverture */
+.ouverture-texte{max-width:1240px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-areas:"sur film" "titre film" "accroche film" "actions film" "badge film" "fortuit film" "indice film";column-gap:44px;align-items:start}
+.sur-titre{grid-area:sur}.titre-rancon{grid-area:titre}.accroche{grid-area:accroche}.actions{grid-area:actions}.badge-loophole{grid-area:badge;justify-self:start}.fortuit{grid-area:fortuit}.indice{grid-area:indice}
+.hero-film{grid-area:film;align-self:center;margin:0}
+.hero-ecran{position:relative;background:#000;border:3px solid var(--lait);box-shadow:10px 10px 0 var(--bleu),10px 10px 0 3px #000;transform:rotate(1.2deg)}
+.hero-video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.hero-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:16px;border:0;background:linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,.15));color:var(--lait);cursor:pointer;font:inherit}
+.hero-play-rond{display:grid;place-items:center;width:84px;height:84px;border-radius:50%;background:var(--bleu);color:#000;font-size:36px;padding-left:6px;box-shadow:5px 5px 0 #000;transition:transform .15s}
+.hero-play:hover .hero-play-rond,.hero-play:focus-visible .hero-play-rond{transform:scale(1.08)}
+.hero-play-texte{font:clamp(24px,2.6vw,34px)/1 var(--affiche);text-transform:uppercase;letter-spacing:.03em;text-shadow:3px 3px 0 #000;text-align:left}
+.hero-play-texte small{display:block;margin-top:6px;font:15px/1.2 var(--machine);text-transform:none;letter-spacing:0;color:var(--texte)}
+.hero-film.lance .hero-play{display:none}
+.hero-legende{margin-top:16px;font:16px/1.3 var(--machine);color:var(--texte)}
+.hero-legende span{color:var(--lp-rose-clair)}
+.hero-legende strong{color:var(--lp-rose-clair)}
+@media (max-width:900px){
+  .ouverture-texte{grid-template-columns:1fr;grid-template-areas:"sur" "titre" "film" "accroche" "actions" "badge" "fortuit" "indice"}
+  .hero-film{margin:22px 0 4px}
+  .hero-ecran{transform:none;box-shadow:6px 6px 0 var(--bleu),6px 6px 0 3px #000}
+  .hero-play-rond{width:64px;height:64px;font-size:28px}
+}
+@media (prefers-reduced-motion: reduce){.hero-ecran{transform:none}}
+@media (min-width:901px){
+  .ouverture-texte{grid-template-areas:"sur sur" "titre titre" "accroche film" "actions film" "badge film" "fortuit film" "indice film"}
+  .hero-film{align-self:start;margin-top:22px}
+}
