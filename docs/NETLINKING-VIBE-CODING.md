@@ -18,7 +18,7 @@ visiteur le trouverait normal. **Rien n'est en ligne** : tout attend ton accord,
 ## Site par site
 
 Chaque site a sa propre branche `claude/lien-vibe-coding` (dans son dépôt), enregistrée sur ce Mac,
-**pas encore envoyée sur GitHub**. Les copies de travail sont dans `~/Developer/netlinking/<dépôt>`.
+envoyée sur GitHub le 21/10 avec l'accord d'Alexandre (« oui envoie sur github »), **pas encore fusionnée**. Les copies de travail sont dans `~/Developer/netlinking/<dépôt>`.
 
 | Site | Où est le lien | Texte du lien | Vers | Aperçu |
 |---|---|---|---|---|
@@ -65,20 +65,20 @@ Choix faits :
 
 ## Ce qu'il reste à faire, par toi : la mise en ligne
 
-Ordre pour chaque site : **1)** tu me dis « oui » → j'envoie la branche sur GitHub et j'ouvre la demande
-de fusion (PR) ; **2)** tu fusionnes et tu mets en ligne avec la commande ci-dessous.
+Les demandes de fusion (PR) sont ouvertes. Pour chaque site : tu fusionnes la PR, puis tu lances la
+commande ci-dessous quand il y en a une.
 
 | Site | Mettre en ligne |
 |---|---|
-| alexandrestopnicki.com | Fusionner la PR : le serveur se met à jour seul toutes les 5 minutes. |
-| ia-magique.com | Fusionner la PR : GitHub envoie le site chez Hostinger tout seul (≈ 30 s). |
-| chapitre.ai | Fusionner la PR : GitHub reconstruit et redéploie l'application tout seul. |
-| le-savez-vous.com | Fusionner la PR, puis `ssh -F ~/.hostinger/ssh_config botmoileqi 'cd /opt/botmoileqi && git pull && cd deploy && docker compose -f docker-compose.prod.yml up -d --build backend frontend'` |
-| botmoileqi.com | Fusionner la PR, puis `ssh -F ~/.hostinger/ssh_config botmoileqi 'cd /opt/botmoileqi-site && git pull'` |
-| lma.botmoileqi.com | Fusionner la PR, puis `ssh -F ~/.hostinger/ssh_config srv1472723 'cd /opt/atelier-lms && git pull --ff-only'` (la vitrine est lue directement dans le dossier : pas besoin de reconstruire l'application). ⚠️ Je n'ai pas pu regarder l'état du serveur : si `git pull` refuse, utiliser la procédure de `deploy/DEPLOYER.md` § 5. |
-| slide.botmoileqi.com | Fusionner la PR, puis `scp -F ~/.hostinger/ssh_config ~/Developer/netlinking/botmoileqi-slide/index.html srv1472723:/opt/slide-vitrine/site/index.html` (seul ce fichier change). |
-| listen-to-my-art.com | Fusionner la PR, puis la procédure habituelle (`CLAUDE.md` § 3 du dépôt : archive `site.zip` ≈ 200 Mo envoyée chez Hostinger, **pas depuis le réseau de l'école**). |
-| Les Voix de l'IA | Fusionner la PR, puis depuis le clone propre : `cd ~/Developer/podcast-engine-main && git pull && zsh site/mettre-en-ligne.sh`. ⚠️ Ce script se place sur `main` dans `~/Developer/3h33-site` et y fait un `git pull` : attendre que la session « VIBE CODING » ait enregistré ses modifications là-bas. ⚠️ Ne pas le lancer depuis `~/Developer/podcast-engine` : ce clone est sur une autre branche (`version-anglaise`) avec du travail en cours. |
+| alexandrestopnicki.com ([PR](https://github.com/team872/alexandrestopnicki-com/pull/6)) | Fusionner la PR : le serveur se met à jour seul toutes les 5 minutes. |
+| ia-magique.com ([PR](https://github.com/team872/ia-magique-com/pull/15)) | Fusionner la PR : GitHub envoie le site chez Hostinger tout seul (≈ 30 s). |
+| chapitre.ai ([PR](https://github.com/team872/amourtop/pull/19)) | Fusionner la PR : GitHub reconstruit et redéploie l'application tout seul. |
+| le-savez-vous.com ([PR](https://github.com/team872/le-savez-vous/pull/20)) | Fusionner la PR, puis `ssh -F ~/.hostinger/ssh_config botmoileqi 'cd /opt/botmoileqi && git pull && cd deploy && docker compose -f docker-compose.prod.yml up -d --build backend frontend'` |
+| botmoileqi.com ([PR](https://github.com/team872/botmoileqi-site/pull/2)) | Fusionner la PR, puis `ssh -F ~/.hostinger/ssh_config botmoileqi 'cd /opt/botmoileqi-site && git pull'` |
+| lma.botmoileqi.com ([PR](https://github.com/team872/atelier-lms/pull/5)) | Fusionner la PR, puis `ssh -F ~/.hostinger/ssh_config srv1472723 'cd /opt/atelier-lms && git pull --ff-only'` (la vitrine est lue directement dans le dossier : pas besoin de reconstruire l'application). ⚠️ Je n'ai pas pu regarder l'état du serveur : si `git pull` refuse, utiliser la procédure de `deploy/DEPLOYER.md` § 5. |
+| slide.botmoileqi.com ([PR](https://github.com/team872/botmoileqi-slide/pull/1)) | Fusionner la PR, puis `scp -F ~/.hostinger/ssh_config ~/Developer/netlinking/botmoileqi-slide/index.html srv1472723:/opt/slide-vitrine/site/index.html` (seul ce fichier change). |
+| listen-to-my-art.com ([PR](https://github.com/team872/listen-to-my-art/pull/3)) | Fusionner la PR, puis la procédure habituelle (`CLAUDE.md` § 3 du dépôt : archive `site.zip` ≈ 200 Mo envoyée chez Hostinger, **pas depuis le réseau de l'école**). |
+| Les Voix de l'IA ([PR](https://github.com/team872/podcast-engine/pull/7)) | Fusionner la PR, puis depuis le clone propre : `cd ~/Developer/podcast-engine-main && git pull && zsh site/mettre-en-ligne.sh`. ⚠️ Ce script se place sur `main` dans `~/Developer/3h33-site` et y fait un `git pull` : attendre que la session « VIBE CODING » ait enregistré ses modifications là-bas. ⚠️ Ne pas le lancer depuis `~/Developer/podcast-engine` : ce clone est sur une autre branche (`version-anglaise`) avec du travail en cours. |
 
 ## ⚠️ Sites de clients : aucun lien sans leur accord (consigne d'Alexandre, 21/10)
 
