@@ -30,7 +30,7 @@
 <meta name="theme-color" content="#0c0c0e">
 <link rel="preload" href="polices/anton.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="medias/fond-foret.jpg" as="image">
-<link rel="stylesheet" href="bebe-punk.css?v=5">
+<link rel="stylesheet" href="bebe-punk.css?v=8">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"VideoObject","@id":"https://3h33.com/bebe-punk/#film","name":"Le monstre et le bébé punk","description":"Court-métrage IA de 20 secondes réalisé pour The LoopHole Project, un film collectif : un monstre tombe du ciel dans une forêt morte, un minuscule bébé punk lui crie « BOOM! » et le chasse à coups de biberons-grenades jusqu'à ce qu'il plonge dans un trou noir.","thumbnailUrl":["https://3h33.com/bebe-punk/medias/affiche-v3.jpg","https://3h33.com/bebe-punk/medias/temps-threat.jpg"],"uploadDate":"2026-10-19T18:00:00+02:00","duration":"PT20S","contentUrl":"https://3h33.com/bebe-punk/medias/v3-musique.mp4","url":"https://3h33.com/bebe-punk/","inLanguage":"en","creator":{"@type":"Person","@id":"https://3h33.com/#alexandre","name":"Alexandre Stopnicki","url":"https://alexandrestopnicki.com"},"publisher":{"@type":"Organization","@id":"https://3h33.com/#organisation","name":"3h33","url":"https://3h33.com/"}},{"@type":"WebPage","@id":"https://3h33.com/bebe-punk/#page","url":"https://3h33.com/bebe-punk/","name":"Le monstre et le bébé punk","inLanguage":"fr-FR","primaryImageOfPage":"https://3h33.com/bebe-punk/medias/affiche-v3.jpg","video":{"@id":"https://3h33.com/bebe-punk/#film"}}]}</script>
 </head>
 <body>
@@ -93,9 +93,16 @@
       <span class="ligne l2" aria-hidden="true">et le</span>
       <span class="ligne l3 glitch" aria-hidden="true" data-texte="BÉBÉ PUNK">BÉBÉ PUNK</span>
     </h1>
+    <figure class="hero-film">
+      <div class="hero-ecran">
+        <video id="hero-video" class="hero-video" controls playsinline preload="none" poster="medias/affiche-v3.jpg" src="medias/v3-musique.mp4" aria-label="Le film déposé au LoopHole Project, 20 secondes, avec le son"></video>
+        <button type="button" class="hero-play" id="hero-play"><span class="hero-play-rond" aria-hidden="true">▶</span><span class="hero-play-texte">Regarder le film<small>20 secondes · avec le son</small></span></button>
+      </div>
+      <figcaption class="hero-legende"><span aria-hidden="true">★</span> Le film déposé au <strong>LoopHole Project</strong></figcaption>
+    </figure>
     <p class="accroche">Un monstre de 4 mètres tombe du ciel. <strong>La menace est un bébé</strong>. Il porte une crête bleue, un perfecto clouté et une ceinture de <strong>biberons-grenades</strong>.</p>
     <div class="actions">
-      <a class="bouton bouton-film" href="#film"><span aria-hidden="true">▶</span> Voir le film · 20 s</a>
+      <a class="bouton bouton-film" href="#film"><span aria-hidden="true">↓</span> Plan par plan</a>
       <button class="tampon-boom" type="button" id="boom" aria-describedby="boom-aide">BOOM!</button>
       <span id="boom-aide" class="sr">Fait exploser les biberons-grenades et joue le cri du bébé, tiré du film.</span>
     </div>
@@ -711,6 +718,6 @@ Cinematic creature-feature film, dark comedy tone, energetic camera. Lighting an
   </div>
 </footer>
 
-<script src="bebe-punk.js?v=5" defer></script>
+<script src="bebe-punk.js?v=7" defer></script>
 </body>
 </html>

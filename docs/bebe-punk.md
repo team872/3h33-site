@@ -65,3 +65,27 @@ webhook, pas de `git pull` en tâche planifiée sur le VPS ; le VPS est sur `mai
 Les MP4 sont dans Git sur cette branche (86 Mo, sous le seuil de 100 Mo). Si on préfère garder le dépôt léger
 comme pour `site/pour/*.mp4`, les sortir de Git avant la fusion (`.gitignore`) et les copier à part sur le
 serveur avec `rsync`.
+
+## Reprise du 20/10/2026 (à lire pour continuer)
+
+**Le LoopHole Project n'est pas un concours** : film collectif sans jury ni prix ; tout film conforme y entre (Top 100 éditorial
+et tirages au sort en plus). Dépôt : https://www.theloopholeproject.ai/submit avant le 21/10 23 h 59 (heure de Paris) — à faire
+par Alexandre (code par e-mail). Fichier : Drive « 1 · Pour le concours (20 s) » / « V3 — détails du bébé — avec riff.mp4 » ;
+9:16 facultative à côté (« V3 — 9:16 facultative (LoopHole) »). Champs : nom « Alexandre Stopnicki », site https://3h33.com/bebe-punk/,
+outils Magnific Spaces, Seedance 2.5, Seedream / Nano Banana, Grok, Google Lyria, FFmpeg.
+
+**Page** : film déposé dans l'ouverture ; « concours » remplacé par LoopHole / film collectif ; signature
+« Alexandre Stopnicki · 3h33.com » (28 %, change de coin toutes les 4,5 s) + générique 3 s sur toutes les vidéos sauf la V3 déposée
+(`medias/f/`, script de fabrication dans le scratchpad de la session : refaire au besoin avec ffmpeg) ; « Choisis ta fin » ne montre
+que la fin (`fin-seule-*`) ; partage (21 pages `v/<nom>/` + vignettes, `docs/bebe-punk-partage.py`) ; icône biberon-grenade.
+**Téléphone** : la page plantait sur iPhone (mémoire graphique) → pas de 3D WebGL ni de profondeur CSS sous 900 px / écran tactile.
+Si un visiteur voit encore « Impossible d'ouvrir cette page » : fermer l'onglet et rouvrir (ancienne page gardée par l'onglet).
+
+**Réseaux sociaux** : Drive « 6 · Réseaux sociaux (signés) » (16:9 et 9:16, signature + générique).
+
+**Boutique** (pas commencée côté vente) : Etsy « UnikImage » (team@epedagogie.com) en pause depuis le 31/01/2026, vérification
+d'entreprise à faire par Alexandre ; Printful printful@3h33.fr. Étude : `docs/bebe-punk-boutique-etude.md`. Visuels dans Magnific,
+projet « WWW V2 » : pose rockeur (préférée d'Alexandre) + 8 déclinaisons (grenade du milieu en chocolat), dessins t-shirt / mug /
+casquette brodée, emojis grenade. Générations d'images : **dans l'app Magnific, illimitées** (Nano Banana 2, Seedream) — via le
+connecteur, payantes. Reste : choix des images par Alexandre → agrandir / détourer → maquettes (Mockup Generator de l'app) →
+fiches produits → fichiers Printful → bouton « Boutique » sur la page.

@@ -2672,6 +2672,7 @@
         if (fenetre.open) return;
         var flottant = $(".quiz-revenir");
         if (flottant) flottant.remove();
+        document.body.classList.remove("quiz-a-reprendre");
         var e = moteur.etat(), repris = true;
         if (!(e && e.actif) && !moteur.reprendre()) { moteur.demarrer(); repris = false; }
         fenetre.showModal();
@@ -2703,6 +2704,7 @@
         stop.addEventListener("click", function () {
           if (moteur.quitter) moteur.quitter();
           b.classList.remove("visible");
+          document.body.classList.remove("quiz-a-reprendre");
           setTimeout(function () { b.remove(); }, 450);
           var btEncart = $(".quiz-encart [data-quiz-ouvrir] span");
           if (btEncart) btEncart.textContent = "Faire le quiz";
@@ -2710,7 +2712,9 @@
         b.appendChild(go);
         b.appendChild(stop);
         document.body.appendChild(b);
-        requestAnimationFrame(function () { b.classList.add("visible"); });
+        document.body.classList.add("quiz-a-reprendre");
+        // setTimeout plutôt que requestAnimationFrame : un onglet en arrière-plan ne dessine pas, le bouton restait caché (20/10/2026)
+        setTimeout(function () { b.classList.add("visible"); }, 60);
       };
       fenetre.addEventListener("close", function () { doc.classList.remove("fenetre-ouverte"); moteur.couper(); montrerRevenir(); });
       // en arrivant sur la page : un quiz commencé (même hier) se retrouve
@@ -2806,4 +2810,22 @@
     audio.addEventListener("timeupdate", function () { if (audio.duration) barre.style.width = (100 * audio.currentTime / audio.duration) + "%"; });
     ["play", "pause"].forEach(function (ev) { audio.addEventListener(ev, eclairer); });
   })();
+})();
+
+// Infobulles « i » (20/10/2026) : la bulle reste dans l'écran (16 px de marge) ; survol, clavier (Tab) et toucher
+// (un toucher ouvre, un toucher ailleurs ferme). Sans JavaScript : la bulle s'ouvre au survol, centrée.
+(function () {
+  function placer(i) {
+    var b = i.querySelector(".info-bulle"); if (!b) return;
+    var r = i.getBoundingClientRect(), vw = document.documentElement.clientWidth, w = Math.min(260, vw - 32);
+    var gauche = r.width / 2 - w / 2, abs = r.left + gauche;
+    if (abs < 16) gauche += 16 - abs; else if (abs + w > vw - 16) gauche -= abs + w - (vw - 16);
+    b.style.width = w + "px"; b.style.left = gauche + "px"; b.style.setProperty("--fleche", (r.width / 2 - gauche) + "px"); b.classList.add("placee");
+  }
+  ["mouseover", "focusin"].forEach(function (t) { document.addEventListener(t, function (ev) { var i = ev.target.closest && ev.target.closest(".info-i"); if (i) placer(i); }); });
+  document.addEventListener("click", function (ev) {
+    var i = ev.target.closest && ev.target.closest(".info-i, .vip-info");
+    document.querySelectorAll(".info-i.ouverte, .vip-info.ouverte").forEach(function (o) { if (o !== i) o.classList.remove("ouverte"); });
+    if (i) { ev.preventDefault(); ev.stopPropagation(); if (i.classList.contains("info-i")) placer(i); i.classList.toggle("ouverte"); }
+  }, true);
 })();

@@ -538,3 +538,91 @@ img{-webkit-user-drag:none;-webkit-touch-callout:none}
 .bouton-loophole-2{background:var(--lp-turquoise)}
 .bouton-loophole-2,.bouton-loophole-2:hover{box-shadow:5px 5px 0 var(--lp-rose)}
 @media (prefers-reduced-motion: reduce){.badge-loophole{transform:none}}
+
+/* ------------------------------------------------ 19/10 : lisibilité (audit téléphone, tablette, ordinateur) */
+button{font-family:inherit}
+.interrupteur{font-weight:600;font-size:16px;line-height:1.1}
+.liste-chapitres button{font-size:16px;line-height:1.3;color:var(--texte)}
+.liste-chapitres i{font-size:14px}
+.etiquette{font-size:14px}
+.fin-duree{font-size:14px}
+.fin-texte{font-size:15px}
+.partage-lien small{font-size:13px;opacity:.9}
+.prompt-exemple pre{font-size:14px}
+.cafe strong{color:#000}
+.bouton-partage-carte{min-height:44px}
+@media (max-width:400px){
+  .bandeau nav a{font-size:14px;padding:12px 7px}
+  .logo-3h33{font-size:20px}
+}
+@media (max-width:640px){
+  .frise{padding-left:34px}
+  .frise::before,.frise::after{left:8px}
+  .etape{padding:18px 14px 20px}
+  .js .etape.reveal.vu{transform:none}
+  .etape::before{left:-33px}
+  .prompt-exemple pre{font-size:13px}
+}
+@media (max-width:640px){
+  .bandeau nav{flex-wrap:nowrap;overflow-x:auto;min-width:0;justify-content:flex-start;scrollbar-width:none;-webkit-overflow-scrolling:touch;mask-image:linear-gradient(90deg,#000 88%,transparent)}
+  .bandeau nav::-webkit-scrollbar{display:none}
+  .bandeau nav a{white-space:nowrap;flex:0 0 auto}
+}
+
+/* ------------------------------------------------ 20/10 : le film déposé, visible dès l'ouverture */
+.ouverture-texte{max-width:1240px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-areas:"sur film" "titre film" "accroche film" "actions film" "badge film" "fortuit film" "indice film";column-gap:44px;align-items:start}
+.sur-titre{grid-area:sur}.titre-rancon{grid-area:titre}.accroche{grid-area:accroche}.actions{grid-area:actions}.badge-loophole{grid-area:badge;justify-self:start}.fortuit{grid-area:fortuit}.indice{grid-area:indice}
+.hero-film{grid-area:film;align-self:center;margin:0}
+.hero-ecran{position:relative;background:#000;border:3px solid var(--lait);box-shadow:10px 10px 0 var(--bleu),10px 10px 0 3px #000;transform:rotate(1.2deg)}
+.hero-video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.hero-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:16px;border:0;background:linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,.15));color:var(--lait);cursor:pointer;font:inherit}
+.hero-play-rond{display:grid;place-items:center;width:84px;height:84px;border-radius:50%;background:var(--bleu);color:#000;font-size:36px;padding-left:6px;box-shadow:5px 5px 0 #000;transition:transform .15s}
+.hero-play:hover .hero-play-rond,.hero-play:focus-visible .hero-play-rond{transform:scale(1.08)}
+.hero-play-texte{font:clamp(24px,2.6vw,34px)/1 var(--affiche);text-transform:uppercase;letter-spacing:.03em;text-shadow:3px 3px 0 #000;text-align:left}
+.hero-play-texte small{display:block;margin-top:6px;font:15px/1.2 var(--machine);text-transform:none;letter-spacing:0;color:var(--texte)}
+.hero-film.lance .hero-play{display:none}
+.hero-legende{margin-top:16px;font:16px/1.3 var(--machine);color:var(--texte)}
+.hero-legende span{color:var(--lp-rose-clair)}
+.hero-legende strong{color:var(--lp-rose-clair)}
+@media (max-width:900px){
+  .ouverture-texte{grid-template-columns:1fr;grid-template-areas:"sur" "titre" "film" "accroche" "actions" "badge" "fortuit" "indice"}
+  .hero-film{margin:22px 0 4px}
+  .hero-ecran{transform:none;box-shadow:6px 6px 0 var(--bleu),6px 6px 0 3px #000}
+  .hero-play-rond{width:64px;height:64px;font-size:28px}
+}
+@media (prefers-reduced-motion: reduce){.hero-ecran{transform:none}}
+@media (min-width:901px){
+  .ouverture-texte{grid-template-areas:"sur sur" "titre titre" "accroche film" "actions film" "badge film" "fortuit film" "indice film"}
+  .hero-film{align-self:start;margin-top:22px}
+}
+
+/* ------------------------------------------------ 20/10 : téléphones et tablettes — la page plantait sur iPhone (mémoire graphique).
+   On garde l'allure, on retire ce qui occupe la mémoire en permanence : grain mélangé plein écran, flou du menu, mélanges du titre. */
+@media (pointer: coarse), (max-width: 899px){
+  .grain{inset:0;mix-blend-mode:normal;animation:none;opacity:.06}
+  .rayures{display:none}
+  .bandeau{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(12,12,14,.94)}
+  .glitch::before,.glitch::after{mix-blend-mode:normal;animation:none;display:none}
+  .brume{animation:none}
+  .concours::after{display:none}
+  #scene3d{display:none}
+}
+
+/* ------------------------------------------------ 20/10 : ordinateur, même allure en plus léger */
+.grain{inset:-6%}
+.onglet-cache *,.onglet-cache *::before,.onglet-cache *::after{animation-play-state:paused !important}
+/* Sur téléphone : aucune profondeur 3D (perspective, preserve-3d, translateZ) — elle transformait toute la page en une couche
+   graphique géante que l'iPhone ne peut pas garder en mémoire. Les apparitions se font en fondu + glissé, à plat. */
+@media (pointer: coarse), (max-width: 899px){
+  .js .reveal{transform:translateY(30px)}
+  .js .reveal.vu{transform:none}
+  .grille-versions{perspective:none}
+  .carte-version,.js .carte-version.reveal.vu{transform-style:flat;transform:none}
+  .carte-texte{transform:none}
+  .js .carte-temps.reveal.vu{transform:rotate(var(--rot,0deg))}
+}
+@media (pointer: coarse), (max-width: 899px){
+  .repli-3d{z-index:35}
+  .repli-trou{display:none}
+  .repli-grenade{opacity:.9}
+}

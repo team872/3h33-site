@@ -2453,3 +2453,69 @@ body.pc-ecoute .pc-cta-ecouter{animation:none}
 @keyframes qz-appel{0%{box-shadow:0 0 0 0 #c4a265aa}100%{box-shadow:0 0 0 14px #c4a26500}}
 @media (prefers-reduced-motion:reduce){.qz-ecouter.qz-passage{animation:none}}
 @media (max-width:600px){.qz-actions .qz-passage{width:100%;justify-content:flex-start}}
+/* « Revenir au quiz » beaucoup plus visible (20/10/2026, Alexandre : « il faut qu'il soit beaucoup plus gros pour qu'on
+   ne puisse pas le rater ») : bouton doré plein, large, qui respire ; toujours AU-DESSUS du lecteur et de la playlist
+   (avant, sur téléphone, il passait dessous quand on écoutait un passage pendant le quiz) ; « remonter » passe au-dessus */
+.quiz-revenir{z-index:1002;width:min(560px,calc(100vw - 1.5rem));max-width:none;border:0;border-radius:18px;background:linear-gradient(135deg,var(--accent-clair),var(--accent));color:var(--bg);box-shadow:0 18px 50px #000d,0 0 0 0 #c4a26599;overflow:hidden;transition:transform .45s var(--ease),opacity .35s,bottom .5s var(--ease)}
+.quiz-revenir.visible{animation:quiz-revenir-souffle 2.6s ease-in-out 1s infinite}
+@keyframes quiz-revenir-souffle{0%,100%{box-shadow:0 18px 50px #000d,0 0 0 0 #c4a26599}50%{box-shadow:0 18px 50px #000d,0 0 0 12px #c4a26500}}
+.quiz-revenir:hover{background:linear-gradient(135deg,#f3dca8,var(--accent-clair))}
+.quiz-revenir-ouvrir{flex:1;min-width:0;gap:1rem;padding:1rem 1.1rem;min-height:76px}
+.quiz-revenir-icone{width:50px;height:50px;font-size:1.5rem;background:var(--bg);color:var(--accent-clair)}
+.quiz-revenir strong{font-size:1.4rem;line-height:1.15;color:var(--bg)}
+.quiz-revenir strong+span{font-size:.9rem;color:#1a1408;opacity:.85;margin-top:.15rem}
+.quiz-revenir-quitter{color:#1a1408;border-left:1px solid #0000002e;padding:0 1rem}
+.quiz-revenir-quitter:hover{color:var(--bg);background:#00000014}
+body.lecteur-ouvert .quiz-revenir{bottom:calc(150px + var(--safe-bottom))}
+body.lecteur-ouvert:not(.mode-audio) .quiz-revenir{bottom:calc(250px + var(--safe-bottom))}
+body.avec-playlist .quiz-revenir,body.avec-playlist.lecteur-ouvert .quiz-revenir,body.avec-playlist.lecteur-ouvert:not(.mode-audio) .quiz-revenir{bottom:calc(var(--lecteur-h,0px) + 74px + var(--safe-bottom))}
+body.pc-ecoute .quiz-revenir{bottom:calc(86px + var(--safe-bottom))}
+body.quiz-a-reprendre .remonter{bottom:calc(1.1rem + 108px + var(--safe-bottom))}
+body.quiz-a-reprendre.lecteur-ouvert .remonter{bottom:calc(150px + 108px + var(--safe-bottom))}
+body.quiz-a-reprendre.lecteur-ouvert:not(.mode-audio) .remonter{bottom:calc(250px + 108px + var(--safe-bottom))}
+body.quiz-a-reprendre.avec-playlist .remonter{bottom:calc(var(--lecteur-h,0px) + 74px + 108px + var(--safe-bottom))}
+body.quiz-a-reprendre.pc-ecoute .remonter{bottom:calc(86px + 108px + var(--safe-bottom))}
+body.quiz-a-reprendre{padding-bottom:calc(110px + var(--safe-bottom))}
+@media (max-width:520px){.quiz-revenir strong{font-size:1.22rem}.quiz-revenir-ouvrir{padding:.9rem .9rem;gap:.8rem}.quiz-revenir-icone{width:44px;height:44px}}
+@media (prefers-reduced-motion:reduce){.quiz-revenir.visible{animation:none}}
+
+/* 20/10/2026, Alexandre : « Les VIP · Very Internet People » se voient sans cacher l'image (une ligne dorée sous la vignette) */
+.card-number.card-vip{color:var(--accent)}.card-number.card-vip b{display:inline-block;padding:1px 7px;border-radius:999px;background:linear-gradient(90deg,#c4a265,#e6cf98);color:#141008;font-weight:700;letter-spacing:.08em;margin-right:2px}
+/* dans .portrait-visuel (carré, positionné) : posé SOUS l'image, hors du flux, et la place réservée par la marge du dessous */
+.portrait-visuel.avec-vip{margin-bottom:76px}.portrait-visuel .vip-bandeau{position:absolute;left:0;right:0;top:calc(100% + 26px);margin:0}
+.vip-bandeau{display:flex;align-items:center;justify-content:center;gap:10px;max-width:520px;margin:30px auto 0;padding:9px 12px;border-radius:8px;background:linear-gradient(90deg,#c4a265,#e6cf98,#c4a265);color:#141008;letter-spacing:.08em}
+.vip-bandeau b{font:700 1.3rem/1 var(--ff-display);letter-spacing:.06em}.vip-bandeau span{font-size:.8rem;text-transform:uppercase;font-weight:700}
+@media(max-width:700px){.portrait-visuel.avec-vip{margin-bottom:58px}.portrait-visuel .vip-bandeau{top:calc(100% + 18px)}.vip-bandeau{max-width:min(64vw,300px);margin-top:20px;gap:7px;padding:7px 8px}.vip-bandeau b{font-size:1.05rem}.vip-bandeau span{font-size:.62rem;letter-spacing:.06em;white-space:nowrap}}
+@media(max-width:619px){.episodes-grid .card-number.card-vip{display:flex;font-size:.52rem;letter-spacing:.1em;margin:0 0 .45rem;white-space:nowrap}.episodes-grid .card-number.card-vip::after{display:none}.episodes-grid .card-vip .cv-long{display:none}}
+/* 20/10/2026, Alexandre : « une infobulle avec un petit i » : au survol, au clavier (Tab) et au toucher (focus) */
+.vip-bandeau{position:relative}.vip-info{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:1.5px solid #141008;font:italic 700 13px/1 Georgia,serif;color:#141008;cursor:help;position:relative;flex:none;outline:none}
+.vip-info:focus-visible{box-shadow:0 0 0 3px #fff8}
+.vip-bulle{position:absolute;bottom:calc(100% + 12px);right:-10px;width:240px;max-width:78vw;padding:10px 12px;border-radius:10px;background:#141008;color:#f3e9d2;border:1px solid #c4a26599;font:400 13px/1.45 system-ui,sans-serif;letter-spacing:0;text-transform:none;text-align:left;box-shadow:0 8px 24px #000a;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .15s,transform .15s,visibility .15s;z-index:20;pointer-events:none}
+.vip-bulle b{display:block;font-weight:700;color:#e6cf98;margin-bottom:3px}
+.vip-bulle::after{content:"";position:absolute;top:100%;right:15px;border:7px solid transparent;border-top-color:#141008}
+.vip-info:hover .vip-bulle,.vip-info:focus .vip-bulle,.vip-info:focus-within .vip-bulle{opacity:1;visibility:visible;transform:none}
+.vip-bandeau .vip-info{font:italic 700 13px/1 Georgia,serif;text-transform:none;letter-spacing:0}
+.vip-bandeau .vip-bulle{font:400 13px/1.45 system-ui,-apple-system,sans-serif;text-transform:none;letter-spacing:0;font-style:normal}
+.vip-bandeau .vip-bulle b{display:block;font:700 13px/1.3 system-ui,-apple-system,sans-serif;letter-spacing:.02em;color:#e6cf98;margin-bottom:3px}
+
+/* Infobulles « i » génériques (20/10/2026) : sources vérifiées, prédiction de Lia, Ada/Alan/Lia */
+.info-i{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--accent);color:var(--accent);font:italic 700 12px/1 Georgia,serif;text-transform:none;letter-spacing:0;cursor:help;position:relative;vertical-align:middle;margin-left:4px;outline:none}
+.info-i:focus-visible{box-shadow:0 0 0 3px var(--accent-glow)}
+.info-bulle{position:absolute;bottom:calc(100% + 10px);left:50%;width:260px;max-width:80vw;transform:translate(-50%,4px);padding:10px 12px;border-radius:10px;background:#141008;color:#f3e9d2;border:1px solid #c4a26599;font:400 13px/1.45 system-ui,-apple-system,sans-serif;font-style:normal;letter-spacing:0;text-transform:none;text-align:left;box-shadow:0 8px 24px #000a;opacity:0;visibility:hidden;transition:opacity .15s,transform .15s,visibility .15s;z-index:30;pointer-events:none;white-space:normal}
+.info-bulle b{display:block;font:700 13px/1.3 system-ui,-apple-system,sans-serif;color:#e6cf98;margin-bottom:3px;letter-spacing:.02em}
+.info-bulle::after{content:"";position:absolute;top:100%;left:50%;margin-left:-7px;border:7px solid transparent;border-top-color:#141008}
+.info-i:hover .info-bulle,.info-i:focus .info-bulle{opacity:1;visibility:visible;transform:translate(-50%,0)}
+/* site.js place la bulle (left, width, --fleche) pour qu'elle reste dans l'écran ; sans JavaScript : centrée */
+.info-bulle.placee{transform:translateY(4px)}.info-i:hover .info-bulle.placee,.info-i:focus .info-bulle.placee{transform:none}.info-bulle.placee::after{left:var(--fleche,50%)}
+.info-i.ouverte .info-bulle,.vip-info.ouverte .vip-bulle{opacity:1;visibility:visible}.info-i.ouverte .info-bulle.placee{transform:none}.info-i.ouverte .info-bulle:not(.placee){transform:translate(-50%,0)}.vip-info.ouverte .vip-bulle{transform:none}
+/* 20/10/2026 : la bulle garde son propre style partout (le titre du lecteur est en petites capitales) ; le lecteur la laisse dépasser */
+.info-i{text-transform:none!important;font:italic 700 12px/1 Georgia,serif!important;letter-spacing:0!important}
+.info-i .info-bulle{display:block!important;font:400 13px/1.45 system-ui,-apple-system,sans-serif!important;text-transform:none!important;letter-spacing:0!important;color:#f3e9d2!important;font-style:normal!important}
+.info-i .info-bulle b{display:block!important;font:700 13px/1.3 system-ui,-apple-system,sans-serif!important;color:#e6cf98!important;text-transform:none!important;letter-spacing:.02em!important}
+.lecteur:has(.info-i){overflow:visible}
+
+/* 21/10/2026, Alexandre : « qui je suis », sous le concept en une minute et demie, avec le lien vers le vibe coding */
+.qui-alexandre{margin-top:.8rem;padding-top:.75rem;border-top:1px solid #ffffff12;font-size:.8rem;line-height:1.5;color:var(--text-dim);font-weight:300}
+.qui-alexandre strong{color:var(--text);font-weight:500}
+.qui-alexandre a{color:var(--accent);text-decoration:none;white-space:nowrap;border-bottom:1px solid #c4a26555}
+.qui-alexandre a:hover{border-color:var(--accent)}
