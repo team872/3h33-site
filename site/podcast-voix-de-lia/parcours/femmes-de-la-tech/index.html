@@ -39,6 +39,28 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600;700&display=swap">
 <link rel="stylesheet" href="/podcast-voix-de-lia/style.css?v=d44fec9d">
 <script>document.documentElement.classList.add('js')</script>
+<script defer src="https://stats.3h33.com/script.js" data-website-id="9456f661-e1ea-4c9d-90bc-dec50970f3b4" data-domains="3h33.com" data-tag="voix-de-lia" data-do-not-track="true" data-before-send="mesureAvant"></script>
+<script>
+(function(){
+window.mesureAvant=function(t,p){return location.hash==="#apercu"?false:p};
+function envoi(n,d){try{if(location.hash==="#apercu")return;if(window.umami&&umami.track)umami.track(n,d);}catch(e){}}
+function nom(s){try{return decodeURIComponent((s||"").split("?")[0].split("/").pop())||"?"}catch(e){return "?"}}
+var vus=new WeakMap();
+function etat(m){var s=vus.get(m);if(!s){s={};vus.set(m,s)}return s}
+document.addEventListener("play",function(ev){var m=ev.target,s=etat(m);if(s.joue)return;s.joue=1;envoi("ecoute",{fichier:nom(m.currentSrc||m.src),type:m.tagName.toLowerCase()})},true);
+document.addEventListener("timeupdate",function(ev){var m=ev.target,s=etat(m);if(s.moitie||!m.duration||m.currentTime<m.duration/2)return;s.moitie=1;envoi("ecoute-moitie",{fichier:nom(m.currentSrc||m.src)})},true);
+document.addEventListener("ended",function(ev){var m=ev.target,s=etat(m);if(s.fin)return;s.fin=1;envoi("ecoute-fin",{fichier:nom(m.currentSrc||m.src)})},true);
+document.addEventListener("click",function(ev){var c=ev.target.closest&&ev.target.closest("a,button");if(!c)return;
+var txt=(c.getAttribute("aria-label")||c.textContent||"").replace(/\s+/g," ").trim().slice(0,60);
+if(c.matches("[data-quiz-ouvrir]")||/faire le quiz|reprendre le quiz|revenir au quiz/i.test(txt))return envoi("quiz-ouvert",{bouton:txt});
+if(c.classList.contains("qz-reponse"))return envoi("quiz-reponse");
+var h=c.tagName==="A"?c.getAttribute("href")||"":"";
+if(/podcasts\.apple|open\.spotify|deezer|music\.amazon|youtube\.com\/playlist|flux\.xml|overcast|pocketcasts|podcastaddict/i.test(h))return envoi("abonnement",{lien:h.replace(/^https?:\/\//,"").slice(0,80)});
+if(/^(whatsapp:|mailto:|sms:)|wa\.me|api\.whatsapp|linkedin\.com\/(sharing|share|feed\/\?shareActive)|facebook\.com\/sharer|twitter\.com\/intent|x\.com\/intent|bsky\.app\/intent/i.test(h)||/partager|copier le lien|share/i.test(txt))return envoi("partage",{via:h?(/^https?:/i.test(h)?h.replace(/^https?:\/\//i,"").split("/")[0]:h.split(":")[0]):txt});
+if(/^https?:/i.test(h)){try{var u=new URL(h,location.href);if(u.host!==location.host)envoi("sortie",{lien:(u.host+u.pathname).slice(0,80)})}catch(e){}}
+},true);
+})();
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ItemList","@id":"https://3h33.com/podcast-voix-de-lia/parcours/femmes-de-la-tech/#parcours","url":"https://3h33.com/podcast-voix-de-lia/parcours/femmes-de-la-tech/","name":"Elles ont pris les commandes","description":"Une cagnotte d'étudiants, un départ pour San Francisco, quarante millions refusés, une cloche en Bourse, l'équipage avant soi, puis le sommet de l'I.A. : six femmes, six marches du pouvoir.","numberOfItems":6,"itemListElement":[{"@type":"ListItem","position":1,"name":"Céline Lazorthes","url":"https://3h33.com/podcast-voix-de-lia/celine-lazorthes/"},{"@type":"ListItem","position":2,"name":"Mathilde Collin","url":"https://3h33.com/podcast-voix-de-lia/mathilde-collin/"},{"@type":"ListItem","position":3,"name":"Rana el Kaliouby","url":"https://3h33.com/podcast-voix-de-lia/rana-el-kaliouby/"},{"@type":"ListItem","position":4,"name":"Whitney Wolfe Herd","url":"https://3h33.com/podcast-voix-de-lia/whitney-wolfe-herd/"},{"@type":"ListItem","position":5,"name":"Fidji Simo","url":"https://3h33.com/podcast-voix-de-lia/fidji-simo/"},{"@type":"ListItem","position":6,"name":"Mira Murati","url":"https://3h33.com/podcast-voix-de-lia/mira-murati/"}]},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Choucroute Citron","item":"https://choucroute-citron.com"},{"@type":"ListItem","position":2,"name":"Les Voix de l'IA","item":"https://3h33.com/podcast-voix-de-lia/"},{"@type":"ListItem","position":3,"name":"Elles ont pris les commandes","item":"https://3h33.com/podcast-voix-de-lia/parcours/femmes-de-la-tech/"}]}]}</script>
 </head>
 <body class="page-parcours">

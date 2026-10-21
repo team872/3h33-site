@@ -20,7 +20,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Wed, 21 Oct 2026 16:53:07 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 21 Oct 2026 19:14:17 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA · la tech racontée par des IA</title>
@@ -38,6 +38,28 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Michel Ruiz : de l'armurerie militaire à l'IA qui a un visage</title>
+      <itunes:title>Michel Ruiz : de l'armurerie militaire à l'IA qui a un visage</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/michel-ruiz/</link>
+      <guid isPermaLink="false">voix-de-lia-michel-ruiz</guid>
+      <pubDate>Wed, 21 Oct 2026 19:14:17 GMT</pubDate>
+      <description>À seize ans, il entrait à l'armée pour devenir technicien ; à quarante et un ans, il rendait l'uniforme. Cofondateur de KaviAR Tech, Michel Ruiz donne un visage et une voix aux agents d'intelligence artificielle, et défend une IA qui nous augmente sans nous rendre dépendants.
+
+Épisode enregistré le 21 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/michel-ruiz/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>À seize ans, il entrait à l&#39;armée pour devenir technicien ; à quarante et un ans, il rendait l&#39;uniforme. Cofondateur de KaviAR Tech, Michel Ruiz donne un visage et une voix aux agents d&#39;intelligence artificielle, et défend une IA qui nous augmente sans nous rendre dépendants.</p><p>Épisode enregistré le 21 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/michel-ruiz/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/michel-ruiz.mp3?v=20fa9bba" length="12063896" type="audio/mpeg"/>
+      <itunes:duration>499</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/michel-ruiz-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/michel-ruiz/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/michel-ruiz/chapitres.json?v=d00bf3e3" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Jean-Baptiste Rudelle : de la saladerie au Nasdaq</title>
       <itunes:title>Jean-Baptiste Rudelle : de la saladerie au Nasdaq</itunes:title>
@@ -455,28 +477,6 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/patrick-robin-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/patrick-robin/transcription.html" type="text/html" language="fr"/>
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/patrick-robin/chapitres.json?v=0683123b" type="application/json+chapters"/>
-    </item>
-    <item>
-      <title>Michel Ruiz : de l'armurerie militaire à l'IA qui a un visage</title>
-      <itunes:title>Michel Ruiz : de l'armurerie militaire à l'IA qui a un visage</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/michel-ruiz/</link>
-      <guid isPermaLink="false">voix-de-lia-michel-ruiz</guid>
-      <pubDate>Wed, 21 Oct 2026 15:43:23 GMT</pubDate>
-      <description>À seize ans, il entrait à l'armée pour devenir technicien ; à quarante et un ans, il rendait l'uniforme. Cofondateur de KaviAR Tech, Michel Ruiz donne un visage et une voix aux agents d'intelligence artificielle, et défend une IA qui nous augmente sans nous rendre dépendants.
-
-Épisode enregistré le 21 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/michel-ruiz/
-
-Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>À seize ans, il entrait à l&#39;armée pour devenir technicien ; à quarante et un ans, il rendait l&#39;uniforme. Cofondateur de KaviAR Tech, Michel Ruiz donne un visage et une voix aux agents d&#39;intelligence artificielle, et défend une IA qui nous augmente sans nous rendre dépendants.</p><p>Épisode enregistré le 21 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/michel-ruiz/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/michel-ruiz.mp3?v=54dcaa7a" length="11645728" type="audio/mpeg"/>
-      <itunes:duration>482</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/michel-ruiz-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/michel-ruiz/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/michel-ruiz/chapitres.json?v=a55d7ca9" type="application/json+chapters"/>
     </item>
     <item>
       <title>Mike Krieger : la première photo d'Instagram, puis Anthropic Labs</title>
