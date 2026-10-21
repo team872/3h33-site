@@ -91,13 +91,14 @@ Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes 
 
 Podcast gratuit de 3h33 : https://3h33.com/podcast-voix-de-lia/ (flux RSS : https://3h33.com/podcast-voix-de-lia/flux.xml). Chaque portrait cite ses sources sous l'épisode.
 
+- [Michel Ruiz : de l'armurerie militaire à l'IA incarnée](https://3h33.com/podcast-voix-de-lia/michel-ruiz/)
 - [Jean-Baptiste Rudelle : de la saladerie au Nasdaq](https://3h33.com/podcast-voix-de-lia/jean-baptiste-rudelle/)
 - [Céline Lazorthes : de la cagnotte Leetchi au suivi du cancer](https://3h33.com/podcast-voix-de-lia/celine-lazorthes/)
 - [Alexandre Lebrun, l'homme des machines qui parlent](https://3h33.com/podcast-voix-de-lia/alexandre-lebrun/)
-- [Patrick Robin : du Minitel à la French Tech](https://3h33.com/podcast-voix-de-lia/patrick-robin/)
-- [Alexandre Michelin : de Nam June Paik au KIF](https://3h33.com/podcast-voix-de-lia/alexandre-michelin/)
 - [Carlos Diaz : l'ancien prof devenu voix de Silicon Carne](https://3h33.com/podcast-voix-de-lia/carlos-diaz/)
+- [Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée](https://3h33.com/podcast-voix-de-lia/sandra-le-grand/)
 - [Éric Briones : fils de couturière, planneur du luxe](https://3h33.com/podcast-voix-de-lia/eric-briones/)
+- [Alexandre Michelin : de Nam June Paik au KIF](https://3h33.com/podcast-voix-de-lia/alexandre-michelin/)
 - [Vincent Montet : le « fainéant » qui rend l'IA obligatoire](https://3h33.com/podcast-voix-de-lia/vincent-montet/)
 - [Christophe Dané : l'enfant qui rêvait de la Lune](https://3h33.com/podcast-voix-de-lia/christophe-dane/)
 - [Driss Aït Youssef : la sécurité, une affaire de libertés](https://3h33.com/podcast-voix-de-lia/driss-ait-youssef/)
@@ -105,12 +106,11 @@ Podcast gratuit de 3h33 : https://3h33.com/podcast-voix-de-lia/ (flux RSS : http
 - [Marc Ménasé : des PC de la rue Montgallet à Founders Future](https://3h33.com/podcast-voix-de-lia/marc-menase/)
 - [Marc Simoncini : le poète qui a tout perdu avant Meetic](https://3h33.com/podcast-voix-de-lia/marc-simoncini/)
 - [Pascal Gayat : pionnier de la pub en ligne et des Cas d'OR](https://3h33.com/podcast-voix-de-lia/pascal-gayat/)
-- [Michel Ruiz : de l'armurerie militaire à l'IA incarnée](https://3h33.com/podcast-voix-de-lia/michel-ruiz/)
 - [Pierre Bellanger : des radios libres à l'IA assistée](https://3h33.com/podcast-voix-de-lia/pierre-bellanger/)
 - [Marie-Christine Levet : de Lycos à l'école de demain](https://3h33.com/podcast-voix-de-lia/marie-christine-levet/)
 - [Jérémy Bendayan, le vendeur de pelles qui parie contre l'IA](https://3h33.com/podcast-voix-de-lia/jeremy-bendayan/)
-- [Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée](https://3h33.com/podcast-voix-de-lia/sandra-le-grand/)
 - [Benjamin Perret : les journaux avant de savoir lire](https://3h33.com/podcast-voix-de-lia/benjamin-perret/)
+- [Patrick Robin : du Minitel à la French Tech](https://3h33.com/podcast-voix-de-lia/patrick-robin/)
 - [Mike Krieger : de la première photo d'Instagram à Anthropic](https://3h33.com/podcast-voix-de-lia/mike-krieger/)
 - [Arvind Jain, le chèque en blanc et la recherche « pas cool »](https://3h33.com/podcast-voix-de-lia/arvind-jain/)
 - [Matthieu Rouif : du lasso de GoPro à Photoroom](https://3h33.com/podcast-voix-de-lia/matthieu-rouif/)
@@ -238,7 +238,7 @@ Podcast gratuit de 3h33 : https://3h33.com/podcast-voix-de-lia/ (flux RSS : http
 - [Comprendre la guerre des puces · une playlist à thème des Voix de l'IA](https://3h33.com/podcast-voix-de-lia/parcours/guerre-des-puces/)
 - [Elles font l'I.A. : du laboratoire à votre écran · une playlist à thème des Voix de l'IA](https://3h33.com/podcast-voix-de-lia/parcours/elles-font-l-ia/)
 - [De la chute au succès · une playlist à thème des Voix de l'IA](https://3h33.com/podcast-voix-de-lia/parcours/de-la-chute-au-succes/)
-- [Le grand quiz des Voix de l'IA · 1119 questions](https://3h33.com/podcast-voix-de-lia/quiz/)
+- [Le grand quiz des Voix de l'IA · 1120 questions](https://3h33.com/podcast-voix-de-lia/quiz/)
 
 ## Profils officiels
 
