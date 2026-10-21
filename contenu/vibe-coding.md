@@ -41,6 +41,8 @@ Si l'une de ces phrases vous ressemble, c'est un projet de vibe coding.
 - **« On répond toujours aux mêmes questions. »** Un agent répond à votre place, à l'écrit ou à la voix.
 - **« Notre site se contente de présenter. »** Il devient un outil : il guide, il conseille, il prépare la demande.
 
+<p class="appel-projet"><a class="bouton bouton--plein" href="#contact">Décrire mon projet →</a></p>
+
 ## Ce que ça change pour vous
 
 - **Plus vite.** Ce qui demandait des semaines de développement prend forme en une demi-journée, puis se consolide en quelques jours.
@@ -92,6 +94,8 @@ Une demi-journée de travail avec vos équipes suffit pour obtenir un premier ou
 2. **Nous construisons en direct**, avec vos équipes, en visioconférence ou sur place. Vous voyez l'outil prendre forme et vous le corrigez au fur et à mesure.
 3. **Nous consolidons**, documentons et mettons en ligne. L'outil est à vous, avec son mode d'emploi.
 </div>
+
+<p class="appel-projet"><a class="bouton bouton--plein" href="#contact">Commencer par un échange de vingt minutes →</a></p>
 
 ## Ce que nous avons construit ainsi
 
