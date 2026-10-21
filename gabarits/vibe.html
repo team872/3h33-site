@@ -135,6 +135,9 @@ main{position:relative}
 /* la vidéo : grand bouton de lecture, les commandes n'apparaissent qu'une fois lancée */
 .lv{position:relative;border-radius:20px;overflow:hidden;background:#000;box-shadow:0 18px 40px rgba(15,21,36,.18)}
 .lv video{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+/* plein écran : la vidéo entière, sans recadrage (21/10, Alexandre) */
+.lv video:fullscreen{object-fit:contain;aspect-ratio:auto;width:100%;height:100%;background:#000}
+.lv video:-webkit-full-screen{object-fit:contain;aspect-ratio:auto;width:100%;height:100%;background:#000}
 .lv .gros{position:absolute;top:16px;right:16px;width:72px;height:72px;border-radius:50%;border:1px solid rgba(255,255,255,.9);background:rgba(255,255,255,.28);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;cursor:pointer;animation:halo 2.4s ease-out infinite;transition:opacity .3s,transform .3s}
 .lv .gros svg{width:32px;height:32px;margin-left:5px;fill:#fff;filter:drop-shadow(0 2px 6px rgba(0,0,0,.25))}
 .lv.joue .gros{opacity:0;transform:scale(.8);pointer-events:none}
