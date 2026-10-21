@@ -176,6 +176,10 @@ main{position:relative}
 .contact h2{margin:0;font-size:clamp(1.35rem,3.4vw,1.7rem);letter-spacing:-.015em}
 .contact .or{display:block;height:4px;width:56px;border-radius:2px;background:var(--or);margin:10px 0 12px}
 .contact .intro p{margin:0;color:var(--gris)}
+.contact .intro{display:flex;gap:18px;align-items:flex-start}
+.contact .portrait{flex:none;width:88px;height:88px;border-radius:22px;object-fit:cover;box-shadow:0 10px 24px rgba(15,21,36,.15)}
+.contact .intro .qui{margin-top:8px;font-size:.9rem;color:var(--encre);opacity:.75}
+@media(max-width:480px){.contact .intro{display:block}.contact .portrait{float:left;width:64px;height:64px;border-radius:18px;margin:0 14px 8px 0}.contact .intro p{clear:both}.contact .intro p.qui{clear:none}}
 .contact .intro a{font-weight:600}
 .form-contact{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
 .form-contact .large{grid-column:1/-1}
@@ -354,9 +358,14 @@ main{position:relative}
   <section class="contact" id="contact" aria-labelledby="t-contact">
     <div class="carte verre apparait">
       <div class="intro">
-        <h2 id="t-contact">Un outil à construire&nbsp;?</h2>
-        <span class="or" aria-hidden="true"></span>
-        <p>Dites-nous en trois lignes ce qui vous prend du temps. Nous répondons sous un jour ouvré, souvent par une démonstration plutôt que par une réunion. Le premier échange, de vingt minutes, est gratuit.</p>
+        <!-- la photo d'Alexandre, discrète (21/10) : la même que sur /pour/alexandre-vibe-coding/ -->
+        <img class="portrait" src="/pour/alexandre-vibe-coding/alexandre.jpg" alt="Alexandre Stopnicki" width="88" height="88" loading="lazy">
+        <div>
+          <h2 id="t-contact">Un outil à construire&nbsp;?</h2>
+          <span class="or" aria-hidden="true"></span>
+          <p>Dites-nous en trois lignes ce qui vous prend du temps. Nous répondons sous un jour ouvré, souvent par une démonstration plutôt que par une réunion. Le premier échange, de vingt minutes, est gratuit.</p>
+          <p class="qui">Vous échangez directement avec Alexandre Stopnicki, fondateur de 3h33.</p>
+        </div>
       </div>
       <form class="form-contact" id="f-contact" novalidate>
         <label>Votre nom<input name="nom" type="text" autocomplete="name" required></label>
