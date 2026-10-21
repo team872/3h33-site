@@ -63,10 +63,11 @@ a{color:var(--bleu)}
 }
 
 /* haut de page : le fond animé de la vidéo (écrans de verre qui se relient) */
-.haut{position:relative;min-height:clamp(380px,58vh,560px);display:flex;align-items:flex-end;overflow:hidden}
-.haut video,.haut img.fond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.haut{position:relative;overflow:hidden}
+.haut>video.fond,.haut img.fond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .haut::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(246,248,252,.1) 0,rgba(246,248,252,.45) 45%,var(--fond) 100%)}
-.haut .texte{position:relative;z-index:2;max-width:820px;margin:0 auto;width:100%;padding:28px 20px 34px}
+.haut .texte{position:relative;z-index:2;max-width:1120px;margin:0 auto;width:100%;padding:34px 20px 40px;display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:56px;align-items:center}
+@media(max-width:900px){.haut .texte{grid-template-columns:1fr;gap:28px;padding-top:24px}}
 .fil{font-size:.85rem;color:var(--gris);margin:0 0 14px}.fil a{color:var(--gris);text-decoration:none}.fil a:hover{color:var(--bleu)}
 .eyebrow{display:inline-block;margin:0;padding:6px 14px;border-radius:999px;background:var(--verre);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);color:var(--bleu);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 6px 20px rgba(15,21,36,.06)}
 .eyebrow .hh{color:var(--or)}
@@ -128,10 +129,9 @@ main{position:relative}
 .prose .encadre a{display:inline-block;margin-top:12px;padding:10px 18px;border-radius:12px;background:#fff;color:var(--bleu);font-weight:700;text-decoration:none}
 .tableau{overflow-x:auto}
 /* le message d'Alexandre : la vidéo et le lien vers sa page */
-.message{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:28px;align-items:center;margin:0 0 34px;padding:16px 26px 16px 16px;border-radius:28px}
-.message .sur{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--bleu)}
-.message h2{margin:.3rem 0 .5rem;padding:0;font-size:clamp(1.3rem,3vw,1.6rem)}.message h2::before{display:none}
-.message figcaption>p{margin:0 0 16px;color:var(--encre);opacity:.82}
+.message{padding:12px;border-radius:26px;background:rgba(255,255,255,.7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.9);box-shadow:0 24px 60px rgba(15,21,36,.12)}
+.message .sur{display:block;font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--bleu)}
+.titre-msg{margin:12px 4px 10px}.titre-msg strong{display:block;font-size:1.08rem;line-height:1.3;margin-top:2px}
 /* la vidéo : grand bouton de lecture, les commandes n'apparaissent qu'une fois lancée */
 .lv{position:relative;border-radius:20px;overflow:hidden;background:#000;box-shadow:0 18px 40px rgba(15,21,36,.18)}
 .lv video{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
@@ -143,25 +143,24 @@ main{position:relative}
 .lv.joue .gros{opacity:0;transform:scale(.8);pointer-events:none}
 @keyframes halo{0%{box-shadow:0 0 0 0 rgba(31,111,245,.55)}100%{box-shadow:0 0 0 26px rgba(31,111,245,0)}}
 /* le son du parcours */
-.la{display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;border-radius:18px;background:rgba(255,255,255,.8);border:1px solid var(--trait)}
-.la .jouer{flex:none;width:52px;height:52px;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(135deg,var(--bleu),var(--bleu2));box-shadow:0 10px 24px rgba(31,111,245,.32);display:flex;align-items:center;justify-content:center}
+.la{display:flex;align-items:center;gap:12px;padding:10px 14px 10px 10px;border-radius:18px;background:rgba(255,255,255,.8);border:1px solid var(--trait)}
+.la .jouer{flex:none;width:46px;height:46px;border-radius:50%;border:0;cursor:pointer;background:linear-gradient(135deg,var(--bleu),var(--bleu2));box-shadow:0 10px 24px rgba(31,111,245,.32);display:flex;align-items:center;justify-content:center}
 .la .jouer svg{width:22px;height:22px;fill:#fff}
-.la .corps{flex:1;min-width:0}.la strong{font-size:.95rem}
+.la .corps{flex:1;min-width:0}.la strong{display:block;font-size:.92rem}.la small{display:block;color:var(--gris);font-size:.78rem}
 .la .rail{position:relative;height:6px;border-radius:3px;background:var(--trait);margin-top:8px;cursor:pointer}
 .la .rail i{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:3px;background:linear-gradient(90deg,var(--bleu),#6aa6ff)}
 .la .temps{display:flex;justify-content:space-between;color:var(--gris);font-size:.8rem;margin-top:5px;font-variant-numeric:tabular-nums}
 /* partage */
-.partage-msg{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:18px}
+.partage-msg{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:12px 4px 0}
 .partage-msg>span{width:100%;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gris)}
 .partage-msg .ronds{display:contents}
-.partage-msg .ronds a,.partage-msg .ronds button,.partage-msg .partager-natif{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;height:42px;min-width:42px;padding:0;border-radius:999px;border:1px solid rgba(31,111,245,.25);background:#fff;color:var(--bleu);cursor:pointer;font:inherit;font-size:.92rem;font-weight:600;transition:background .2s,color .2s,transform .2s}
+.partage-msg .ronds a,.partage-msg .ronds button,.partage-msg .partager-natif{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;height:38px;min-width:38px;padding:0;border-radius:999px;border:1px solid rgba(31,111,245,.25);background:#fff;color:var(--bleu);cursor:pointer;font:inherit;font-size:.92rem;font-weight:600;transition:background .2s,color .2s,transform .2s}
 .partage-msg .partager-natif{padding:0 16px;color:var(--encre)}
 .partage-msg svg{width:18px;height:18px;fill:currentColor}
 .partage-msg .ronds a:hover,.partage-msg .ronds button:hover,.partage-msg .partager-natif:hover{background:var(--bleu);color:#fff;transform:translateY(-1px)}
 .partage-msg .copier.copie::after{content:"Lien copié ✓";position:absolute;bottom:50px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:4px 9px;border-radius:8px;background:var(--encre);color:#fff;font-size:.78rem;font-weight:600}
-.message .lien-msg{margin-top:18px;min-height:48px}
-@media(min-width:1000px){.message{margin-left:-70px;margin-right:-70px}}
-@media(max-width:700px){.message{grid-template-columns:1fr;padding:14px}.lv{max-width:340px;width:100%;margin:0 auto}}
+.lien-msg{display:block;margin:12px 4px 4px;font-weight:600;font-size:.95rem;text-decoration:none}.lien-msg:hover{text-decoration:underline}
+@media(max-width:900px){.message{max-width:420px;width:100%}}
 /* FAQ */
 .prose .faq-page{margin-top:56px;padding:22px 22px 10px;border-radius:24px;background:var(--verre);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.85);box-shadow:0 20px 50px rgba(15,21,36,.08)}
 .prose .faq-page h2{margin:0 0 6px}
@@ -201,7 +200,7 @@ main{position:relative}
 /* apparition douce au défilement */
 .apparait{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .apparait.vu{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.tuile,.rouage .roue{animation:none}.apparait{opacity:1;transform:none;transition:none}.haut video{display:none}html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.tuile,.rouage .roue{animation:none}.apparait{opacity:1;transform:none;transition:none}.haut>video.fond{display:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -224,15 +223,25 @@ main{position:relative}
   <picture><source media="(min-width:700px)" srcset="/pour/alexandre-vibe-coding/fond-large.jpg"><img class="fond" src="/pour/alexandre-vibe-coding/fond.jpg" alt=""></picture>
   <video class="fond" autoplay muted loop playsinline preload="auto" poster="/pour/alexandre-vibe-coding/fond.jpg" aria-hidden="true"><source media="(min-width:700px)" src="/pour/alexandre-vibe-coding/fond-large.mp4" type="video/mp4"><source src="/pour/alexandre-vibe-coding/fond.mp4" type="video/mp4"></video>
   <div class="texte">
-    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a> <span aria-hidden="true">›</span> <span aria-current="page">Vibe coding</span></nav>
-    <p class="eyebrow">Vibe coding</p>
-    <h1>Vibe coding : construire des outils en dialoguant avec l'IA</h1>
-    <p class="chapo">Décrire en français ce qu'on veut, voir l'outil apparaître à l'écran, le corriger au fur et à mesure : c'est ainsi que nous fabriquons nos outils.</p>
-    <p class="duree-lecture"><svg viewBox="0 0 24 24" aria-hidden="true"><circle class="c" cx="12" cy="12" r="9"/><path class="a" d="M12 7v5l3.2 2"/></svg>4 minutes de lecture</p>
-    <div class="haut-actions">
-      <a class="bouton bouton--plein" href="#contact">Parler de votre projet</a>
-      <a class="bouton bouton--verre" href="/pour/alexandre-vibe-coding/">▶ Le message d'Alexandre</a>
+    <div class="haut-gauche">
+      <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a> <span aria-hidden="true">›</span> <span aria-current="page">Vibe coding</span></nav>
+      <p class="eyebrow">Vibe coding</p>
+      <h1>Vibe coding : construire des outils en dialoguant avec l'IA</h1>
+      <p class="chapo">Décrire en français ce qu'on veut, voir l'outil apparaître à l'écran, le corriger au fur et à mesure : c'est ainsi que nous fabriquons nos outils.</p>
+      <p class="duree-lecture"><svg viewBox="0 0 24 24" aria-hidden="true"><circle class="c" cx="12" cy="12" r="9"/><path class="a" d="M12 7v5l3.2 2"/></svg>4 minutes de lecture</p>
+      <div class="haut-actions">
+        <a class="bouton bouton--plein" href="#contact">Parler de votre projet</a>
+      </div>
     </div>
+    <!-- La vidéo d'Alexandre dans le haut de page (choix A d'Alexandre, 21/10). Les adresses ?v= suivent la vidéo et le son
+         en ligne : à mettre à jour ici quand ils changent (avant le 21/10, ce bloc vivait dans contenu/vibe-coding.md). -->
+    <aside class="message" aria-label="Le message d'Alexandre">
+      <div class="lv"><video playsinline preload="none" poster="/pour/alexandre-vibe-coding/affiche.jpg?v=0fbb17aa" src="/pour/alexandre-vibe-coding/video.mp4?v=90e46f44" aria-label="Mon nouveau métier : le vibe coding, la vidéo d'Alexandre Stopnicki (64 secondes)"></video><button type="button" class="gros" aria-label="Lire la vidéo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div>
+      <p class="titre-msg"><span class="sur">Le message d'Alexandre · 1 min</span><strong>Mon nouveau métier : le vibe coding</strong></p>
+      <div class="la"><button type="button" class="jouer" aria-label="Écouter mon parcours"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button><div class="corps"><strong>Mon parcours complet</strong><small>raconté avec ma voix clonée par IA</small><div class="rail" aria-hidden="true"><i></i></div><div class="temps"><span class="t">0:00</span><span class="d">2 min</span></div></div><audio preload="none" src="/pour/alexandre-vibe-coding/complet.mp3?v=1fb8864a"></audio></div>
+      <div class="partage-msg"><span>Partager</span><div class="ronds"><a href="https://wa.me/?text=Le%20vibe%20coding%2C%20le%20nouveau%20m%C3%A9tier%20d'Alexandre%20Stopnicki%2C%20en%20une%20minute%20%3A%20https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="WhatsApp" aria-label="Partager sur WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.96L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.08.9.9-3-.2-.31a8.2 8.2 0 1 1 6.86 3.74zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.31c-.22.25-.86.84-.86 2.05 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.17-.47-.29z"/></svg></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="LinkedIn" aria-label="Partager sur LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="Facebook" aria-label="Partager sur Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"/></svg></a><a href="https://x.com/intent/tweet?text=Le%20vibe%20coding%2C%20le%20nouveau%20m%C3%A9tier%20d'Alexandre%20Stopnicki%2C%20en%20une%20minute%20%3A&url=https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="X" aria-label="Partager sur X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3zm-1.08 16.2h1.7L7.4 4.73H5.58L16.67 19.2z"/></svg></a><a href="mailto:?subject=Mon%20nouveau%20m%C3%A9tier%20%3A%20le%20vibe%20coding&body=Le%20vibe%20coding%2C%20le%20nouveau%20m%C3%A9tier%20d'Alexandre%20Stopnicki%2C%20en%20une%20minute%20%3A%0Ahttps%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="E-mail" aria-label="Partager sur un e-mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.3V17h16V7.3l-8 5.6-8-5.6zM5.2 7l6.8 4.8L18.8 7H5.2z"/></svg></a><button type="button" class="copier" title="Copier le lien" aria-label="Copier le lien"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a1 1 0 1 1 1.4 1.4L12 13.4a1 1 0 0 1-1.4 0zm-2.8 5.2a3.5 3.5 0 0 1-2.5-6l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a1.5 1.5 0 0 0 2.1 2.1l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a3.5 3.5 0 0 1-2.4 1.1zm8.3-6.6a1 1 0 0 1-.7-1.7l2.1-2.1a1.5 1.5 0 0 0-2.1-2.1l-2.1 2.1a1 1 0 0 1-1.4-1.4l2.1-2.1a3.5 3.5 0 0 1 5 5l-2.1 2.1a1 1 0 0 1-.8.2z"/></svg></button></div><button type="button" class="partager-natif"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.2c.1-.2.1-.5.1-.7s0-.5-.1-.7l7-4.1c.5.5 1.3.8 2.1.8 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3c0 .2 0 .5.1.7l-7 4.1c-.5-.5-1.3-.8-2.1-.8-1.7 0-3 1.3-3 3s1.3 3 3 3c.8 0 1.5-.3 2.1-.8l7.1 4.2c-.1.2-.1.4-.1.6 0 1.6 1.3 2.9 2.9 2.9s2.9-1.3 2.9-2.9-1.3-2.9-2.9-2.9z"/></svg>Partager…</button></div>
+      <a class="lien-msg" href="/pour/alexandre-vibe-coding/">Voir la page du message →</a>
+    </aside>
   </div>
 </div>
 
@@ -247,17 +256,6 @@ main{position:relative}
   <article class="page">
     <div class="prose">
 <p class="en-bref"><strong>En bref.</strong> Le vibe coding consiste à fabriquer un logiciel en décrivant en français ce qu'on veut obtenir, pendant qu'une intelligence artificielle écrit le code ; on corrige ensuite par itérations jusqu'au résultat. Pour une entreprise, c'est un premier outil interne obtenu en une demi-journée au lieu de plusieurs semaines, du vrai code qui lui appartient, sans abonnement à une plateforme. Il ne dispense ni de relire, ni de tester, ni de sécuriser : c'est le rôle de 3h33.</p>
-<figure class="message verre">
-<div class="lv"><video playsinline preload="none" poster="/pour/alexandre-vibe-coding/affiche.jpg?v=0fbb17aa" src="/pour/alexandre-vibe-coding/video.mp4?v=90e46f44" aria-label="Mon nouveau métier : le vibe coding, la vidéo d'Alexandre Stopnicki (64 secondes)"></video><button type="button" class="gros" aria-label="Lire la vidéo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div>
-<figcaption>
-<span class="sur">Le message d'Alexandre · 1 min</span>
-<h2>Mon nouveau métier : le vibe coding</h2>
-<p>Je travaille dans le numérique depuis trente ans, et j'ai un nouveau métier : réaliser avec l'IA les projets des entreprises, sur mesure. Juste en dessous, mon parcours complet en deux minutes, raconté avec ma voix clonée par IA.</p>
-<div class="la"><button type="button" class="jouer" aria-label="Écouter mon parcours"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button><div class="corps"><strong>Mon parcours complet</strong><div class="rail" aria-hidden="true"><i></i></div><div class="temps"><span class="t">0:00</span><span class="d">2 min</span></div></div><audio preload="none" src="/pour/alexandre-vibe-coding/complet.mp3?v=1fb8864a"></audio></div>
-<div class="partage-msg"><span>Partager ce message</span><div class="ronds"><a href="https://wa.me/?text=Le%20vibe%20coding%2C%20le%20nouveau%20m%C3%A9tier%20d'Alexandre%20Stopnicki%2C%20en%20une%20minute%20%3A%20https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="WhatsApp" aria-label="Partager sur WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.96L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.08.9.9-3-.2-.31a8.2 8.2 0 1 1 6.86 3.74zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.31c-.22.25-.86.84-.86 2.05 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.17-.47-.29z"/></svg></a><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="LinkedIn" aria-label="Partager sur LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="Facebook" aria-label="Partager sur Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21h3z"/></svg></a><a href="https://x.com/intent/tweet?text=Le%20vibe%20coding%2C%20le%20nouveau%20m%C3%A9tier%20d'Alexandre%20Stopnicki%2C%20en%20une%20minute%20%3A&url=https%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="X" aria-label="Partager sur X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3zm-1.08 16.2h1.7L7.4 4.73H5.58L16.67 19.2z"/></svg></a><a href="mailto:?subject=Mon%20nouveau%20m%C3%A9tier%20%3A%20le%20vibe%20coding&body=Le%20vibe%20coding%2C%20le%20nouveau%20m%C3%A9tier%20d'Alexandre%20Stopnicki%2C%20en%20une%20minute%20%3A%0Ahttps%3A%2F%2F3h33.com%2Fpour%2Falexandre-vibe-coding%2F" target="_blank" rel="noopener" title="E-mail" aria-label="Partager sur un e-mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.3V17h16V7.3l-8 5.6-8-5.6zM5.2 7l6.8 4.8L18.8 7H5.2z"/></svg></a><button type="button" class="copier" title="Copier le lien" aria-label="Copier le lien"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a1 1 0 1 1 1.4 1.4L12 13.4a1 1 0 0 1-1.4 0zm-2.8 5.2a3.5 3.5 0 0 1-2.5-6l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a1.5 1.5 0 0 0 2.1 2.1l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a3.5 3.5 0 0 1-2.4 1.1zm8.3-6.6a1 1 0 0 1-.7-1.7l2.1-2.1a1.5 1.5 0 0 0-2.1-2.1l-2.1 2.1a1 1 0 0 1-1.4-1.4l2.1-2.1a3.5 3.5 0 0 1 5 5l-2.1 2.1a1 1 0 0 1-.8.2z"/></svg></button></div><button type="button" class="partager-natif"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1c-.8 0-1.5.3-2 .8l-7.1-4.2c.1-.2.1-.5.1-.7s0-.5-.1-.7l7-4.1c.5.5 1.3.8 2.1.8 1.7 0 3-1.3 3-3s-1.3-3-3-3-3 1.3-3 3c0 .2 0 .5.1.7l-7 4.1c-.5-.5-1.3-.8-2.1-.8-1.7 0-3 1.3-3 3s1.3 3 3 3c.8 0 1.5-.3 2.1-.8l7.1 4.2c-.1.2-.1.4-.1.6 0 1.6 1.3 2.9 2.9 2.9s2.9-1.3 2.9-2.9-1.3-2.9-2.9-2.9z"/></svg>Partager…</button></div>
-<a class="bouton bouton--plein lien-msg" href="/pour/alexandre-vibe-coding/">Voir ma page →</a>
-</figcaption>
-</figure>
 <h2>Le vibe coding, c'est quoi ?</h2>
 <p>Jusqu'ici, fabriquer un logiciel voulait dire écrire soi-même chaque ligne de code. Le vibe coding change le point de départ : on décrit ce qu'on veut obtenir, en français, et l'intelligence artificielle écrit le programme. On regarde le résultat, on corrige, on recommence. En quelques heures, une première version fonctionne.</p>
 <p>Ce n'est ni de la magie ni du bricolage. Le code produit est du vrai code, qui vous appartient, qu'on peut relire, tester, héberger et faire évoluer.</p>
@@ -428,7 +426,7 @@ document.querySelectorAll(".prose h3").forEach(function(h){
   var n=h;while(n&&!(n!==h&&/^H[23]$/.test(n.tagName))&&!(n.classList&&n.classList.contains("encadre"))){var s=n.nextElementSibling;c.appendChild(n);if(n.classList&&n.classList.contains("vignette"))break;n=s;}
 });
 /* les cartes apparaissent en montant ; les tuiles bougent un peu avec le défilement (relief) */
-var cartes=document.querySelectorAll(".apparait,.exemple,.prose ul li,.prose ol li,.en-bref,.faq-page,.message");
+var cartes=document.querySelectorAll(".apparait,.exemple,.prose ul li,.prose ol li,.en-bref,.faq-page");
 cartes.forEach(function(c){c.classList.add("apparait");});
 if("IntersectionObserver" in window){var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vu");o.unobserve(e.target);}});},{threshold:.08});cartes.forEach(function(c){o.observe(c);});}else cartes.forEach(function(c){c.classList.add("vu");});
 if(!matchMedia("(prefers-reduced-motion: reduce)").matches){var ts=document.querySelectorAll(".tuile");addEventListener("scroll",function(){var y=scrollY;ts.forEach(function(el,i){el.style.translate="0 "+(-y*(.04+i*.02))+"px";});},{passive:true});}
