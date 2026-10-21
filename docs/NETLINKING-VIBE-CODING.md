@@ -80,21 +80,24 @@ de fusion (PR) ; **2)** tu fusionnes et tu mets en ligne avec la commande ci-des
 | listen-to-my-art.com | Fusionner la PR, puis la procédure habituelle (`CLAUDE.md` § 3 du dépôt : archive `site.zip` ≈ 200 Mo envoyée chez Hostinger, **pas depuis le réseau de l'école**). |
 | Les Voix de l'IA | Fusionner la PR, puis depuis le clone propre : `cd ~/Developer/podcast-engine-main && git pull && zsh site/mettre-en-ligne.sh`. ⚠️ Ce script se place sur `main` dans `~/Developer/3h33-site` et y fait un `git pull` : attendre que la session « VIBE CODING » ait enregistré ses modifications là-bas. ⚠️ Ne pas le lancer depuis `~/Developer/podcast-engine` : ce clone est sur une autre branche (`version-anglaise`) avec du travail en cours. |
 
-## ⚠️ À part : Subsidium et Sator (rien touché)
+## ⚠️ Sites de clients : aucun lien sans leur accord (consigne d'Alexandre, 21/10)
 
-Ce sont des plateformes de clients. Je n'y ai rien modifié. Ce que je proposerais, **seulement si tu es
-d'accord et si le client l'accepte** :
+Un lien posé sur le site d'un client sans son accord explicite peut lui causer un vrai problème. Donc :
 
-- **Subsidium** ([www.subsidium.world](https://www.subsidium.world)), cité en exemple sur /vibe-coding/ :
-  une ligne discrète en pied de page, « Plateforme conçue avec 3h33 », vers /vibe-coding/. C'est un usage
-  courant entre une agence et son client, mais c'est au client de dire oui.
-- **Sator** ([app.sator.fr](https://app.sator.fr)) : une application réservée aux comptes connectés, donc un
-  lien y servirait peu au référencement (Google n'y entre pas). Je ne proposerais rien, sauf une ligne
-  « Conçu avec 3h33 » sur une éventuelle page publique de Sator, avec l'accord du client.
+- **Subsidium** ([subsidium.world](https://www.subsidium.world)) : **jamais de lien**, sauf ordre explicite
+  d'Alexandre lui-même. On ne touche pas au dépôt, on ne propose pas d'aperçu.
+- **Sator** ([sator.fr](https://app.sator.fr)) : impossible pour l'instant ; l'autorisation se verra avec
+  Pierre, qui est en train d'intégrer Sator à sa communication.
+- **Tout autre site de client** : rien sans son accord explicite. En cas de doute sur ce qui est « à
+  Alexandre » ou « à un client », lui demander avant.
+
+Ce chantier n'a touché **aucun site de client** : les 9 sites ci-dessus sont ceux d'Alexandre et de ses
+produits (3h33, BotMoiLeQi, Le savez-vous ?, Listen to my art, chapitre.ai, Les Voix de l'IA). Rien n'a
+été modifié ni envoyé pour Subsidium ou Sator.
 
 ## Pour plus tard (pas fait)
 
-D'autres sites de la galaxie pourraient porter la même signature, avec chacun son texte :
+D'autres sites de la galaxie **appartenant à Alexandre** (à confirmer avec lui un par un) pourraient porter la même signature, avec chacun son texte :
 [histoires.alexandre.ai](https://histoires.alexandre.ai), [choucroute-citron.com](https://choucroute-citron.com),
 [negovox.com](https://negovox.com), [ia-conforme.com](https://ia-conforme.com),
 [mon-ia-privee.com](https://mon-ia-privee.com), [listen-engine.com](https://listen-engine.com),
