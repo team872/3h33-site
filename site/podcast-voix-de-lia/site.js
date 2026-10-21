@@ -11,6 +11,9 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var majBoutonsJouer = function () {}; // remplacée par le lecteur collant de la page de l'émission
+  // icônes fabriquées ici (« Ma playlist ») : les mêmes que ICONES dans gabarits.mjs
+  var trait = function (d, l) { return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="' + (l || 2) + '" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' + d + '"/></svg>'; };
+  var ICONES_MP = { monter: trait("M6 15l6-6 6 6"), descendre: trait("M6 9l6 6 6-6"), croix: trait("M18 6L6 18M6 6l12 12"), plus: trait("M12 5v14M5 12h14", 2.2), coche: trait("M5 12.5l4.5 4.5L19 7", 2.4) };
 
   function duree(s) {
     if (!isFinite(s) || s < 0) s = 0;
@@ -23,19 +26,12 @@
      Essentiel par défaut : le reste est rangé dans des tiroirs. « Tout afficher » les ouvre tous et la page s'en
      souvient. Un lien vers un passage rangé (#sources…) ouvre son tiroir. Une astuce, une seule fois : toucher une réplique. */
   (function () {
-    var boutons = $$("[data-affichage]");
-    if (!boutons.length) return;
+    // 18/10/2026, Alexandre : le bouton « Essentiel / Tout afficher » est retiré (on ne comprenait pas à quoi il servait ;
+    // les liens « Lire, vérifier, comprendre » et les tiroirs suffisent). La page reste en « essentiel ».
+    if (!$("details[data-tiroir]")) return;
     var lire = function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } };
     var ecrire = function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} };
-    var choisir = function (v, sauver) {
-      var complet = v === "complet";
-      doc.classList.toggle("complet", complet);
-      boutons.forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-affichage") === v ? "true" : "false"); });
-      $$("details[data-tiroir]").forEach(function (t) { t.open = complet; });
-      if (sauver) ecrire("vdia-affichage", v);
-    };
-    choisir(lire("vdia-affichage") === "complet" ? "complet" : "simple", false);
-    boutons.forEach(function (b) { b.addEventListener("click", function () { choisir(b.getAttribute("data-affichage"), true); }); });
+    doc.classList.remove("complet");
     var ouvrirCible = function () {
       var id = location.hash.slice(1), el = null;
       if (!id) return;
@@ -120,7 +116,7 @@
         if (src) { if (x.webp) src.srcset = x.image + "-400.webp 400w, " + x.image + "-800.webp 800w"; else src.parentNode.removeChild(src); }
         $$("[data-jouer]", dj).forEach(function (b) { b.setAttribute("data-jouer", x.id); });
         $(".dj-image", dj).setAttribute("aria-label", "Écouter le portrait de " + x.nom + " (" + x.duree + ")");
-        var nom = $(".dj-nom a", dj); nom.href = x.chemin; nom.firstChild.nodeValue = x.nom + " ";
+        var nom = $(".dj-nom a", dj); nom.href = x.chemin; nom.firstChild.nodeValue = x.nom + "\u00a0"; // la flèche reste avec le nom (19/10/2026)
         $(".dj-role", dj).textContent = x.role;
         $(".dj-angle", dj).textContent = x.angle;
         var djs = $(".dj-sources", dj);
@@ -256,7 +252,7 @@
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(majLire);
     }
     if (liaAudio && liaBouton) {
-      relierBouton(liaAudio, liaBouton, "Lia qui vous présente l'émission");
+      relierBouton(liaAudio, liaBouton, "Les Voix de l'IA en une minute");
       var courantLia = -1;
       var majLia = function () {
         var d = liaAudio.duration || Number(liaAudio.dataset.duree) || 0;
@@ -394,6 +390,18 @@
     audio.addEventListener("timeupdate", function () { enregistrer(false); });
     audio.addEventListener("pause", function () { enregistrer(true); });
     audio.addEventListener("ended", function () { reprise = 0; enregistrer(true); });
+    // 18/10/2026, Alexandre : à la fin de l'écoute, « Partager l'épisode » se rallume 3 fois (le bon moment pour partager)
+    audio.addEventListener("ended", function () {
+      var bp = $(".lecteur-pied .pa-partager");
+      if (!bp) return;
+      bp.classList.remove("rappel"); void bp.offsetWidth; bp.classList.add("rappel");
+    });
+    // Écran de fin d'écoute (18/10/2026) : partager, le quiz, le portrait suivant
+    // dès « le mot de la fin » (événement episode:fin, ou la vraie fin si l'épisode n'a pas ce chapitre)
+    var montrerFin = function () { var fe = $("#fin-ecoute"); if (fe) fe.hidden = false; };
+    document.addEventListener("episode:fin", montrerFin);
+    audio.addEventListener("ended", montrerFin);
+    audio.addEventListener("play", function () { var fe = $("#fin-ecoute"); if (fe && !fe.hidden && audio.currentTime < 5) fe.hidden = true; });
     audio.addEventListener("play", function () {
       if (reprise > 15 && audio.currentTime < 1) audio.currentTime = reprise;
       reprise = 0;
@@ -442,6 +450,11 @@
     };
     var commence = function () { return !audio.paused || (audio.currentTime > 0 && !audio.ended); };
     suiviParAudio = function () { return !audio.paused && !audio.ended; };
+    // le quiz (plus bas) se propose quand l'écoute arrive au « mot de la fin » (ou à la toute fin, sans minutage)
+    var hFin = $("#le-mot-de-la-fin[data-debut]"), tFin = hFin ? Number(hFin.getAttribute("data-debut")) : 0, finDite = false;
+    var annoncerFin = function () { if (!finDite) { finDite = true; document.dispatchEvent(new CustomEvent("episode:fin")); } };
+    audio.addEventListener("timeupdate", function () { if (tFin > 60 && !audio.paused && audio.currentTime >= tFin) annoncerFin(); });
+    audio.addEventListener("ended", annoncerFin);
 
     var repliques = $$(".replique[data-debut]");
     var debuts = repliques.map(function (r) { return Number(r.getAttribute("data-debut")); });
@@ -741,6 +754,8 @@
   if (player && donnees) {
     var episodes = JSON.parse(donnees.textContent);
     var actuel = null;
+    // « Ma playlist » (plus bas) se branche ici : elle sait quel épisode se charge et décide de la suite
+    var pl = { charge: function () {}, voisin: function () { return false; }, fin: function () { return false; } };
     var pAudio = $("audio", player);
     var pBouton = $(".bouton-lecture", player);
     var frame = $("#playerFrame");
@@ -799,6 +814,7 @@
       }
       player.classList.add("active");
       marquerCartes();
+      pl.charge(ep);
     };
     // un seul écouteur pour tous les boutons « écouter » (y compris celui de « Connaissez-vous… ? », qui change de
     // portrait sans recharger la page)
@@ -810,7 +826,7 @@
       for (var i = 0; i < episodes.length; i++) if (episodes[i].id === id) { ev.preventDefault(); ev.stopPropagation(); return charger(i, true); }
     });
     var voisin = function (pas) {
-      if (!actuel) return;
+      if (!actuel || pl.voisin(pas)) return;
       var n = episodes.length, i = actuel.index;
       for (var k = 1; k <= n; k++) { var j = (i + pas * k + n * k) % n; if (episodes[j].type) return charger(j, true); }
     };
@@ -822,17 +838,301 @@
       document.body.classList.remove("lecteur-ouvert", "mode-audio");
       setTimeout(function () { frame.innerHTML = ""; }, 500);
       actuel = null; marquerCartes();
+      pl.charge(null);
     });
-    pAudio.addEventListener("ended", function () { voisin(1); });
+    pAudio.addEventListener("ended", function () { if (!pl.fin()) voisin(1); });
     // « La conversation » : la page du portrait reprend au moment écouté (même clé que sa reprise, 13/10/2026)
     $(".lien-page", player).addEventListener("click", function () {
       if (!actuel || actuel.type !== "audio" || !(pAudio.currentTime > 2)) return;
       try { localStorage.setItem("vdia-position:" + new URL(actuel.page, location.href).pathname, String(Math.floor(pAudio.currentTime))); } catch (e) {}
     });
     document.addEventListener("keydown", function (e) {
-      if (!player.classList.contains("active") || e.target.closest("input,textarea,dialog")) return;
+      if (!player.classList.contains("active") || e.target.closest("input,textarea,dialog,#ma-playlist")) return;
       if (e.key === "Escape") $("#closeBtn").click();
     });
+
+    /* ------------------------------------------------ « Ma playlist » (marche 1 de docs/ETUDE-PLAYLISTS-PARCOURS.md, 16/10/2026)
+       Un « + » sur chaque portrait (et « Tout ajouter » sur une recherche ou une famille) remplit la playlist ; une
+       barre en bas de l'écran la résume (« Ma playlist · 6 épisodes · 58 min — Écouter ») et le lecteur collant
+       l'enchaîne : à la fin d'un épisode, le suivant de la liste, et rien après le dernier. La liste s'ouvre au-dessus
+       de la barre : écouter un épisode, le remonter, le descendre, le retirer, copier le lien. Gardée dans ce
+       navigateur (localStorage, s'il est permis) ; le lien …/#playlist=id1,id2 la donne à quelqu'un d'autre, sans
+       compte ni serveur. Seuls les portraits qu'on peut écouter (MP3) y entrent. */
+    (function () {
+      var boite = $("#ma-playlist");
+      if (!boite) return;
+      var CLE = "vdia-playlist", CLE_AVANT = "vdia-playlist-avant";
+      var parId = {};
+      episodes.forEach(function (ep, i) { if (ep.type === "audio") parId[ep.id] = i; });
+      var valides = function (ids) {
+        var vus = {};
+        return (Array.isArray(ids) ? ids : []).filter(function (id) { if (typeof id !== "string" || !(id in parId) || vus[id]) return false; vus[id] = 1; return true; }).slice(0, 200);
+      };
+      var lire = function (k) { try { var v = JSON.parse(localStorage.getItem(k) || "null"); return v && Array.isArray(v.ids) ? v : null; } catch (e) { return null; } };
+      var garde = lire(CLE) || { ids: [] };
+      var ids = valides(garde.ids);
+      var enCours = false;  // le lecteur suit-il la playlist ?
+      var idCourant = null; // l'épisode de la playlist qu'on écoute
+      var pos = Math.max(0, Math.min(Number(garde.pos) || 0, ids.length - 1)); // où reprendre
+      var lancement = false;
+      var sauver = function () { try { localStorage.setItem(CLE, JSON.stringify({ ids: ids, pos: pos })); } catch (e) {} };
+
+      var barreEl = $(".mp-barre", boite), panneau = $("#mp-panneau"), liste = $(".mp-liste", boite);
+      var ouvrir = $(".mp-ouvrir", boite), ecouter = $(".mp-ecouter", boite), resume = $(".mp-resume", boite);
+      var etatEl = $(".mp-etat", boite), recu = $(".mp-recu", boite);
+      var toutAjouter = $(".tout-ajouter");
+      var ICONE_LECTURE = '<polygon points="5,3 19,12 5,21"/>', ICONE_PAUSE = '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>';
+
+      var dureeTotale = function (s) {
+        var m = Math.round(s / 60);
+        if (m < 60) return m + "\u00a0min";
+        return Math.floor(m / 60) + "\u00a0h\u00a0" + ("0" + (m % 60)).slice(-2);
+      };
+      var dire = function (t) {
+        etatEl.textContent = t;
+        clearTimeout(dire.m);
+        dire.m = setTimeout(function () { etatEl.textContent = ""; }, 4000);
+      };
+      // la barre se pose juste au-dessus du lecteur collant quand il est ouvert
+      var caler = function () {
+        doc.style.setProperty("--lecteur-h", player.classList.contains("active") ? player.offsetHeight + "px" : "0px");
+      };
+      window.addEventListener("resize", caler);
+
+      var bouton = function (classe, icone, label, action) {
+        var b = document.createElement("button");
+        b.type = "button"; b.className = classe; b.innerHTML = icone; b.setAttribute("aria-label", label); b.title = label;
+        b.addEventListener("click", action);
+        return b;
+      };
+      var rendre = function () {
+        var n = ids.length;
+        boite.hidden = !n;
+        document.body.classList.toggle("avec-playlist", !!n);
+        if (!n) { panneau.hidden = true; ouvrir.setAttribute("aria-expanded", "false"); boite.classList.remove("ouverte"); document.body.classList.remove("playlist-ouverte"); enCours = false; }
+        var total = ids.reduce(function (t, id) { return t + (Number(episodes[parId[id]].duree) || 0); }, 0);
+        var k = enCours && idCourant ? ids.indexOf(idCourant) : -1;
+        resume.textContent = (k >= 0 ? (k + 1) + " sur " + n : n + (n > 1 ? " épisodes" : " épisode")) + " · " + dureeTotale(total);
+        ouvrir.setAttribute("aria-label", "Ma playlist, " + n + (n > 1 ? " épisodes, " : " épisode, ") + dureeTotale(total) + " : ouvrir la liste");
+        var joue = enCours && !pAudio.paused && !pAudio.ended;
+        $("svg", ecouter).innerHTML = joue ? ICONE_PAUSE : ICONE_LECTURE;
+        $(".mp-ecouter-mot", ecouter).textContent = joue ? "Pause" : enCours ? "Reprendre" : "Écouter";
+        ecouter.setAttribute("aria-label", joue ? "Mettre la playlist en pause" : enCours ? "Reprendre la playlist" : "Écouter la playlist");
+        boite.classList.toggle("joue", joue);
+        // la liste
+        liste.textContent = "";
+        ids.forEach(function (id, i) {
+          var ep = episodes[parId[id]], li = document.createElement("li");
+          li.className = "mp-item" + (enCours && id === idCourant ? " en-cours" : "");
+          var jouer = document.createElement("button");
+          jouer.type = "button"; jouer.className = "mp-jouer";
+          jouer.setAttribute("aria-label", "Écouter " + ep.nom + " (" + duree(ep.duree) + "), épisode " + (i + 1) + " de la playlist");
+          var vig = document.createElement("span"); vig.className = "mp-vignette";
+          if (ep.image) { var im = document.createElement("img"); im.src = ep.image; im.alt = ""; im.width = 40; im.height = 40; im.loading = "lazy"; vig.appendChild(im); }
+          else vig.textContent = ep.initiales || "";
+          var tx = document.createElement("span"); tx.className = "mp-texte";
+          var nm = document.createElement("strong"); nm.textContent = ep.nom;
+          var ro = document.createElement("span"); ro.className = "mp-role"; ro.textContent = duree(ep.duree) + (ep.role ? " · " + ep.role : "");
+          tx.appendChild(nm); tx.appendChild(ro);
+          var num = document.createElement("span"); num.className = "mp-num"; num.setAttribute("aria-hidden", "true"); num.textContent = String(i + 1);
+          jouer.appendChild(num); jouer.appendChild(vig); jouer.appendChild(tx);
+          jouer.addEventListener("click", function () { lancer(i); });
+          var haut = bouton("mp-bouger", ICONES_MP.monter, "Remonter " + ep.nom, function () { bouger(i, -1); });
+          var bas = bouton("mp-bouger", ICONES_MP.descendre, "Descendre " + ep.nom, function () { bouger(i, 1); });
+          var retirer = bouton("mp-retirer", ICONES_MP.croix, "Retirer " + ep.nom + " de la playlist", function () { retirerId(id, i); });
+          haut.disabled = i === 0; bas.disabled = i === n - 1;
+          li.appendChild(jouer); li.appendChild(haut); li.appendChild(bas); li.appendChild(retirer);
+          liste.appendChild(li);
+        });
+        // les « + » des cartes
+        $$("[data-ajouter]").forEach(function (b) {
+          var dedans = ids.indexOf(b.getAttribute("data-ajouter")) >= 0;
+          b.setAttribute("aria-pressed", dedans ? "true" : "false");
+          var nom = b.getAttribute("data-nom") || (b.setAttribute("data-nom", (b.getAttribute("aria-label") || "").replace(/^Ajouter le portrait | à ma playlist$/g, "")), b.getAttribute("data-nom"));
+          b.setAttribute("aria-label", dedans ? "Retirer le portrait " + nom + " de ma playlist" : "Ajouter le portrait " + nom + " à ma playlist");
+          b.title = dedans ? "Dans ma playlist (retirer)" : "Ajouter à ma playlist";
+        });
+        majToutAjouter();
+        caler();
+        sauver();
+      };
+      // « Tout ajouter » : seulement pendant une recherche ou une famille, quand des résultats ne sont pas encore dedans
+      var resultats = function () {
+        return $$("#grille-portraits .episode-card").filter(function (c) { return !c.hidden; })
+          .map(function (c) { return c.getAttribute("data-id"); }).filter(function (id) { return id in parId; });
+      };
+      var majToutAjouter = function () {
+        if (!toutAjouter) return;
+        var r = doc.classList.contains("en-filtre") ? resultats() : [];
+        var manquent = r.filter(function (id) { return ids.indexOf(id) < 0; }).length;
+        toutAjouter.hidden = !r.length;
+        toutAjouter.classList.toggle("fait", !manquent);
+        toutAjouter.disabled = !manquent;
+        $(".ta-mot", toutAjouter).textContent = !manquent ? "Tous dans ma playlist" : manquent === r.length ? "Tout ajouter à ma playlist (" + r.length + ")" : "Ajouter les " + manquent + " autres";
+        toutAjouter.innerHTML = (!manquent ? ICONES_MP.coche : ICONES_MP.plus) + toutAjouter.innerHTML.replace(/^<svg[\s\S]*?<\/svg>/, "");
+      };
+      document.addEventListener("vdia-resultats", majToutAjouter);
+      if (toutAjouter) toutAjouter.addEventListener("click", function () {
+        var r = resultats().filter(function (id) { return ids.indexOf(id) < 0; });
+        if (!r.length) return;
+        var avaitFocus = document.activeElement === toutAjouter;
+        ids = ids.concat(r);
+        rendre();
+        if (avaitFocus) try { ouvrir.focus({ preventScroll: true }); } catch (e) { ouvrir.focus(); } // le bouton s'éteint : on passe à la barre
+        dire(r.length > 1 ? r.length + " épisodes ajoutés à ma playlist" : "1 épisode ajouté à ma playlist");
+        clignoter();
+      });
+      var clignoter = function () { barreEl.classList.remove("ajoute"); void barreEl.offsetWidth; barreEl.classList.add("ajoute"); };
+
+      var lancer = function (i) {
+        if (!ids[i]) return;
+        pos = i;
+        if (enCours && idCourant === ids[i] && actuel && actuel.id === ids[i]) { if (pAudio.paused) pAudio.play().catch(function () {}); else pAudio.pause(); return; }
+        lancement = true;
+        charger(parId[ids[i]], true);
+        lancement = false;
+      };
+      var bouger = function (i, pas) {
+        var j = i + pas;
+        if (j < 0 || j >= ids.length) return;
+        var x = ids[i]; ids[i] = ids[j]; ids[j] = x;
+        rendre();
+        var b = $$(".mp-item", liste)[j];
+        b = b && $$(".mp-bouger", b)[pas < 0 ? 0 : 1];
+        if (b && !b.disabled) b.focus(); else if ($$(".mp-item", liste)[j]) $(".mp-jouer", $$(".mp-item", liste)[j]).focus();
+      };
+      var retirerId = function (id, i) {
+        var k = ids.indexOf(id);
+        if (k < 0) return;
+        ids.splice(k, 1);
+        if (k < pos) pos--;
+        if (id === idCourant) pos = k; // l'épisode en cours continue ; ensuite, celui qui a pris sa place
+        pos = Math.max(0, Math.min(pos, ids.length - 1));
+        rendre();
+        if (typeof i === "number") {
+          var items = $$(".mp-item", liste), suivant = items[Math.min(i, items.length - 1)];
+          if (suivant) $(".mp-jouer", suivant).focus(); else ouvrir.focus();
+        }
+      };
+
+      // ce que le lecteur collant nous dit et nous demande
+      pl.charge = function (ep) {
+        if (!ep) { enCours = false; idCourant = null; }
+        else if (lancement || (enCours && ids.indexOf(ep.id) >= 0)) { enCours = true; idCourant = ep.id; pos = ids.indexOf(ep.id); }
+        else { enCours = false; idCourant = null; } // un autre épisode, lancé d'une carte : on quitte la playlist
+        rendre();
+      };
+      pl.voisin = function (pas) {
+        if (!enCours) return false;
+        var k = ids.indexOf(idCourant), j = (k < 0 ? pos - (pas > 0 ? 1 : 0) : k) + pas;
+        if (j >= 0 && j < ids.length) lancer(j);
+        return true;
+      };
+      pl.fin = function () {
+        if (!enCours) return false;
+        var k = ids.indexOf(idCourant), j = k < 0 ? pos : k + 1;
+        if (j < ids.length) { lancer(j); return true; }
+        pos = 0; enCours = false; idCourant = null; // « Écouter » repartira du premier
+        rendre();
+        dire("Fin de la playlist");
+        return true; // après le dernier : on s'arrête
+      };
+      ["play", "pause", "ended"].forEach(function (e) { pAudio.addEventListener(e, rendre); });
+
+      ecouter.addEventListener("click", function () {
+        if (enCours && actuel && actuel.id === idCourant) { if (pAudio.paused) pAudio.play().catch(function () {}); else pAudio.pause(); return; }
+        lancer(Math.min(pos, ids.length - 1));
+      });
+      var basculer = function (ouvert) {
+        panneau.hidden = !ouvert;
+        ouvrir.setAttribute("aria-expanded", ouvert ? "true" : "false");
+        boite.classList.toggle("ouverte", ouvert);
+        document.body.classList.toggle("playlist-ouverte", ouvert); // la flèche « remonter » se range
+        if (!ouvert) recu.hidden = true;
+      };
+      ouvrir.addEventListener("click", function () { basculer(panneau.hidden); });
+      $(".mp-fermer", boite).addEventListener("click", function () { basculer(false); ouvrir.focus(); });
+      boite.addEventListener("keydown", function (ev) {
+        if (ev.key === "Escape" && !panneau.hidden) { ev.preventDefault(); ev.stopPropagation(); basculer(false); ouvrir.focus(); }
+      });
+      $(".mp-vider", boite).addEventListener("click", function () {
+        if (!window.confirm("Vider la playlist (" + ids.length + (ids.length > 1 ? " épisodes" : " épisode") + ") ?")) return;
+        ids = []; pos = 0; enCours = false; idCourant = null;
+        rendre();
+      });
+      // le lien de partage : …/podcast-voix-de-lia/#playlist=jensen-huang,lisa-su
+      var lien = function () { return location.origin + location.pathname + "#playlist=" + ids.join(","); };
+      $(".mp-partager", boite).addEventListener("click", function () {
+        var url = lien(), titre = "Ma playlist des Voix de l'IA (" + ids.length + (ids.length > 1 ? " épisodes)" : " épisode)");
+        if (navigator.share && window.matchMedia("(pointer:coarse)").matches) { navigator.share({ title: titre, url: url }).catch(function () {}); return; }
+        var ok = function () { dire("Lien copié : collez-le dans un message."); };
+        // sans presse-papiers : la petite fenêtre « Copiez ce lien », et si elle est refusée, le lien affiché dans la liste
+        var secours = function () { try { window.prompt("Copiez ce lien :", url); } catch (e) { clearTimeout(dire.m); etatEl.textContent = "Copiez ce lien : " + url; } };
+        if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(url).then(ok, secours); else secours();
+      });
+
+      // le « + » de chaque carte : ajoute, ou retire si c'est déjà dedans
+      document.addEventListener("click", function (ev) {
+        var b = ev.target.closest && ev.target.closest("[data-ajouter]");
+        if (!b) return;
+        ev.preventDefault(); ev.stopPropagation();
+        var id = b.getAttribute("data-ajouter");
+        if (!(id in parId)) return;
+        if (ids.indexOf(id) >= 0) { retirerId(id); dire("Retiré de ma playlist"); }
+        else { ids.push(id); rendre(); dire(episodes[parId[id]].nom + " ajouté à ma playlist"); clignoter(); }
+      });
+
+      // arrivée par un lien partagé : la playlist reçue remplace la sienne, qu'on peut remettre d'un clic
+      // aussi sans recharger la page : un lien « Écouter le parcours » de la page d'accueil (#playlist=…)
+      function recevoir() {
+        var m = /[#&]playlist=([^&]*)/.exec(location.hash);
+        if (!m) return;
+        var duParcours = /[#&]parcours(&|$)/.test(location.hash);
+        var recus = [];
+        try { recus = valides(decodeURIComponent(m[1]).split(",")); } catch (e) {}
+        // on retire la playlist de l'adresse (elle est gardée dans le navigateur), le reste reste (#q=…, #famille=…)
+        var resteHash = location.hash.replace(/^#/, "").split("&").filter(function (x) { return x && x.indexOf("playlist=") !== 0 && x !== "parcours"; }).join("&");
+        try { history.replaceState(null, "", location.pathname + location.search + (resteHash ? "#" + resteHash : "")); } catch (e) {}
+        if (recus.length && recus.join(",") !== ids.join(",")) {
+          if (ids.length) try { localStorage.setItem(CLE_AVANT, JSON.stringify({ ids: ids, pos: pos })); } catch (e) {}
+          var avant = ids.slice();
+          ids = recus; pos = 0; enCours = false;
+          recu.textContent = "";
+          var duRecu = recus.reduce(function (t, id) { return t + (Number(episodes[parId[id]].duree) || 0); }, 0);
+          recu.appendChild(document.createTextNode((duParcours ? "La playlist à thème est dans Ma playlist : " : "On vous a envoyé cette playlist : ") + recus.length + (recus.length > 1 ? " épisodes" : " épisode") + " · " + dureeTotale(duRecu) + ". "));
+          if (avant.length) {
+            var remettre = document.createElement("button");
+            remettre.type = "button"; remettre.className = "mp-remettre";
+            remettre.textContent = "Remettre ma playlist (" + avant.length + ")";
+            remettre.addEventListener("click", function () {
+              ids = valides(avant); pos = 0; enCours = false; recu.hidden = true;
+              try { localStorage.removeItem(CLE_AVANT); } catch (e) {}
+              rendre();
+              dire("Votre playlist est revenue");
+            });
+            recu.appendChild(remettre);
+          }
+          recu.hidden = false;
+          rendre();
+          basculer(true);
+          recu.hidden = false;
+        } else if (recus.length) basculer(true);
+      }
+      recevoir();
+      window.addEventListener("hashchange", function () { if (/[#&]playlist=/.test(location.hash)) { recevoir(); rendre(); } });
+      // « Écouter » d'un parcours sur cette page (17/10/2026, Alexandre : « cette playlist ne fonctionne plus ? ») :
+      // la liste se remplissait sans rien jouer. Le clic remplit Ma playlist ET lance le premier épisode, dans le geste
+      // même (les navigateurs refusent le son lancé plus tard).
+      document.addEventListener("click", function (ev) {
+        var a = ev.target.closest && ev.target.closest('a[href*="#playlist="]');
+        if (!a || a.pathname !== location.pathname || ev.metaKey || ev.ctrlKey || ev.shiftKey) return;
+        ev.preventDefault();
+        try { history.replaceState(null, "", location.pathname + location.search + a.hash); } catch (e) { return; }
+        recevoir(); rendre();
+        if (ids.length) lancer(0);
+      });
+      rendre();
+    })();
   }
 
   // Recherche, familles et « Connaissez-vous… ? » : dans leur propre portée (aucun nom partagé avec ce qui précède)
@@ -1109,7 +1409,7 @@
       return n ? { texte: texte, n: n } : null;
     }
 
-    var VOIX_NOM = { a: "Ada", n: "Alan", l: "Lia" };
+    var VOIX_NOM = { a: "Ada", n: "Alan", l: "Lia", x: "Alexandre" };
     // où le passage a été trouvé, et l'adresse qui y mène
     function lieuDe(index, P, r, requete) {
       var s = r.extrait && r.extrait.s, q = "?q=" + encodeURIComponent(requete.trim());
@@ -1196,6 +1496,7 @@
       var champ = $(".cherche-champ", outils);
       var effacer = $(".cherche-effacer", outils);
       var puces = $$(".puce[data-famille]", outils);
+      var sujets = $$("[data-sujet]", outils);
       var compte = $(".compte", outils);
       var ligneCompte = $(".compte-ligne", outils);
       var toutVoirHaut = $(".tout-voir", outils);
@@ -1356,6 +1657,9 @@
         }
         // assez de place sous le champ pour toujours pouvoir l'amener sous la barre, même avec un seul résultat
         if (filtre) section.style.setProperty("--avant-outils", Math.max(0, Math.round(outils.getBoundingClientRect().top - section.getBoundingClientRect().top)) + "px");
+        // les pastilles « Sujets » : celle qu'on a cliquée reste allumée tant que c'est la recherche en cours
+        sujets.forEach(function (b) { b.setAttribute("aria-pressed", norm(b.getAttribute("data-sujet")) === norm(q) ? "true" : "false"); });
+        try { document.dispatchEvent(new CustomEvent("vdia-resultats")); } catch (e) {} // « Tout ajouter » (Ma playlist)
       };
 
       // rien trouvé : des pistes (orthographe proche, hors des familles choisies, familles, exemples)
@@ -1549,6 +1853,13 @@
       });
       $$("[data-exemple]", outils).forEach(function (b) {
         b.addEventListener("click", function () { chercherTexte(b.getAttribute("data-exemple")); });
+      });
+      // Sujets (playlists, 16/10/2026) : un clic cherche ce mot ; un second clic l'efface
+      sujets.forEach(function (b) {
+        b.addEventListener("click", function () {
+          if (b.getAttribute("aria-pressed") === "true") { vider(true); return; }
+          chercherTexte(b.getAttribute("data-sujet"));
+        });
       });
       // un lien vers une partie rangée pendant la recherche (« Saison 1 », « S'abonner »…) : on efface d'abord, pour
       // qu'elle réapparaisse et que le navigateur puisse y aller
@@ -1781,4 +2092,740 @@
       } else cv.classList.add("pret");
     }
   })();
+
+  /* ------------------------------------------------ le quiz (16/10/2026)
+     Un quiz par portrait (#donnees-quiz : ouvert par-dessus la page, proposé quand l'écoute arrive à la fin) et le
+     grand quiz (page quiz/, quiz.json) qui pioche sans fin dans tous les portraits. Les questions viennent uniquement
+     des épisodes (site/quiz.mjs) ; après chaque réponse : l'explication, le passage mot pour mot, et « Réécouter ».
+     Scores, série et questions déjà vues restent dans ce navigateur (localStorage), nulle part ailleurs. */
+  (function () {
+    var lireLS = function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } };
+    var ecrireLS = function (k, v) { try { localStorage.setItem(k, v); } catch (e) {} };
+    var lireJsonLS = function (k, defaut) { try { return JSON.parse(lireLS(k)) || defaut; } catch (e) { return defaut; } };
+    var melanger = function (t) { t = t.slice(); for (var i = t.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), x = t[i]; t[i] = t[j]; t[j] = x; } return t; };
+    var el = function (tag, classe, texte) { var n = document.createElement(tag); if (classe) n.className = classe; if (texte != null) n.textContent = texte; return n; };
+    var fin = function (t) { return String(t).replace(/ ([!?;])/g, " $1").replace(/ :/g, " :").replace(/« /g, "« ").replace(/ »/g, " »"); };
+    var mmss = function (t) { t = Math.max(0, Math.floor(t)); return Math.floor(t / 60) + ":" + (t % 60 < 10 ? "0" : "") + (t % 60); };
+    var VOIX = { ada: "Ada", alan: "Alan", lia: "Lia", alexandre: "Alexandre" };
+    var LETTRES = ["A", "B", "C", "D"];
+    var ICONE_ECOUTE = '<svg class="i-lecture" viewBox="0 0 24 24" aria-hidden="true"><polygon points="6,4 19,12 6,20"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>';
+    var FLECHE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+    /* le passage à réécouter : sur la page du portrait, le lecteur de l'épisode ; sur le grand quiz, un lecteur à
+       part, jamais visible. La lecture s'arrête au début de la réplique suivante (tf). */
+    var passage = { audio: null, fin: null, bouton: null };
+    var etiquette = function (b, joue) { b.classList.toggle("joue", joue); var t = $(".qz-ecoute-txt", b) || $(".qz-fin-btn-titre", b); if (t) t.textContent = joue ? (b.classList.contains("qz-voix") ? (b.getAttribute("data-libelle") || "").split(" ")[0] + " vous répond…" : "Pause") : b.getAttribute("data-libelle") || "Réécouter ce passage"; };
+    function ecouterPassage(bouton, audio, t, tf) {
+      if (passage.bouton === bouton && !audio.paused) { audio.pause(); return; }
+      if (passage.bouton && passage.bouton !== bouton) etiquette(passage.bouton, false);
+      if (passage.audio && passage.audio !== audio) passage.audio.pause();
+      if (lecteurVoix && lecteurVoix !== audio) lecteurVoix.pause();
+      var episode = $(".lecteur[data-audio] audio");
+      if (episode && episode !== audio && !episode.paused) episode.pause();
+      passage.audio = audio; passage.fin = tf; passage.bouton = bouton;
+      if (!audio.quizRelie) {
+        audio.quizRelie = true;
+        // arrêt net à la fin de la réplique (tf, fabriqué par construire.mjs) : « timeupdate » ne passe que toutes les
+        // ~250 ms, on surveille donc à chaque image, et on baisse le son sur les 80 dernières millisecondes
+        var surveiller = function () {
+          if (passage.audio !== audio || !passage.fin || audio.paused) { audio.volume = 1; return; }
+          var reste = passage.fin - audio.currentTime;
+          if (reste <= 0) { passage.fin = null; audio.pause(); audio.volume = 1; return; }
+          audio.volume = reste < 0.08 ? Math.max(0, reste / 0.08) : 1;
+          requestAnimationFrame(surveiller);
+        };
+        audio.quizSurveiller = surveiller;
+        audio.addEventListener("playing", function () { if (passage.audio === audio && passage.fin) requestAnimationFrame(surveiller); });
+        ["play", "pause", "ended"].forEach(function (e) {
+          audio.addEventListener(e, function () { if (passage.audio === audio && passage.bouton) etiquette(passage.bouton, !audio.paused && !audio.ended); });
+        });
+      }
+      var aller = function () { audio.currentTime = Math.max(0, t); }; // t est déjà calé juste avant la voix (construire.mjs)
+      if (audio.readyState >= 1) aller(); else audio.addEventListener("loadedmetadata", aller, { once: true });
+      audio.play().catch(function () {});
+      if (audio.quizSurveiller) requestAnimationFrame(audio.quizSurveiller);
+      etiquette(bouton, true);
+    }
+    function couperPassage() {
+      if (passage.audio && passage.bouton && !passage.audio.paused) passage.audio.pause();
+      if (lecteurVoix && !lecteurVoix.paused) lecteurVoix.pause();
+      passage.bouton = null; passage.fin = null;
+    }
+    var lecteurAPart = null;
+    // les voix du quiz (16/10/2026) : l'ouverture d'Alexandre et la réponse dite par Ada, Alan ou Lia ; jouées
+    // d'elles-mêmes (après un clic, donc permis par les navigateurs) sauf si on les a coupées (gardé dans ce navigateur)
+    var lecteurVoix = null;
+    var voixActives = function () { return lireLS("quiz-voix") !== "non"; };
+    function audioVoix(src) {
+      if (!lecteurVoix) { lecteurVoix = new Audio(); lecteurVoix.preload = "auto"; }
+      if (lecteurVoix.getAttribute("data-src") !== src) { lecteurVoix.src = src; lecteurVoix.setAttribute("data-src", src); }
+      return lecteurVoix;
+    }
+    var PRENOM = { ada: "Ada", alan: "Alan", lia: "Lia", alexandre: "Alexandre" };
+    var HP_OUI = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>';
+    var HP_NON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>';
+    // Le haut-parleur (couper / remettre les voix), un seul, en haut du quiz ; le choix reste dans ce navigateur
+    function boutonVoix() {
+      var b = el("button", "qz-hp");
+      b.type = "button";
+      var maj = function () {
+        var on = voixActives();
+        // 18/10/2026, Alexandre : l'icône seule ne se comprenait pas → l'état est écrit
+        b.innerHTML = (on ? HP_OUI : HP_NON) + '<span class="qz-hp-txt">' + (on ? "Voix activées" : "Voix coupées") + "</span>";
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+        b.setAttribute("aria-label", on ? "Couper les voix du quiz" : "Remettre les voix du quiz");
+        b.title = on ? "Couper les voix" : "Remettre les voix";
+      };
+      b.addEventListener("click", function () {
+        ecrireLS("quiz-voix", voixActives() ? "non" : "oui");
+        $$(".qz-choix-voix").forEach(function (x) { x.remove(); });
+        if (!voixActives()) couperPassage();
+        $$(".qz-hp").forEach(function (x) { if (x.majHp) x.majHp(); });
+      });
+      b.majHp = maj;
+      maj();
+      return b;
+    }
+    function audioDe(src) {
+      if (!src) return $(".lecteur[data-audio] audio");
+      if (!lecteurAPart) { lecteurAPart = new Audio(); lecteurAPart.preload = "none"; }
+      if (lecteurAPart.getAttribute("data-src") !== src) { lecteurAPart.src = src; lecteurAPart.setAttribute("data-src", src); }
+      return lecteurAPart;
+    }
+
+    function vignette(p, classe) {
+      var v = el("span", classe);
+      if (p.i) { var img = el("img"); img.src = p.i + "-400.jpg"; img.alt = ""; img.width = 44; img.height = 44; img.decoding = "async"; v.appendChild(img); }
+      else v.textContent = p.in || "";
+      v.setAttribute("aria-hidden", "true");
+      return v;
+    }
+
+    /* Le moteur, commun aux deux quiz. o.mode : « portrait » (une série de questions, puis le score) ou « grand »
+       (sans fin). o.portraitDe(q) : le portrait d'une question (grand quiz). o.surPage : le passage se lit dans la
+       page même (lien #replique-N, lecteur de la page). */
+    function monterQuiz(scene, o) {
+      var liste = [], i = 0, bonnes = 0, ratees = [], courante = null, repondu = false;
+      // « J'en suis là » (16/10/2026, Alexandre : « il faut pouvoir revenir sur son questionnaire ») : le quiz d'un
+      // portrait en cours est gardé dans ce navigateur (ordre, question, réponses) ; on le reprend où on l'a laissé
+      var cleEnCours = "quiz-en-cours:" + o.id, reponses = {}, actif = false;
+      function sauver() {
+        if (o.mode !== "portrait" || !actif) return;
+        ecrireLS(cleEnCours, JSON.stringify({ ordre: liste.map(function (q) { return q.id; }), i: i, bonnes: bonnes, ratees: ratees.map(function (q) { return q.id; }), reponses: reponses }));
+      }
+      function oublier() { try { localStorage.removeItem(cleEnCours); } catch (e) {} }
+      // grand quiz : un mode (« Tout le podcast », « Ils gagnent à être connus », « Difficile ») = une réserve de
+      // questions, avec sa série, son record et ses questions déjà vues ; « Tout le podcast » garde les anciennes clés
+      var modeCourant = null, pool = o.questions, nbPortraitsPool = o.nbPortraits, cleGq = "quiz-grand", cleVues = "quiz-grand-vues";
+      var gq = lireJsonLS(cleGq, { repondues: 0, bonnes: 0, serie: 0, record: 0 });
+      function choisirMode(m) {
+        modeCourant = m;
+        pool = m ? o.questions.filter(function (q) { return garde(m, q); }) : o.questions;
+        var vus = {};
+        pool.forEach(function (q) { vus[q.p] = 1; });
+        nbPortraitsPool = Object.keys(vus).length;
+        var suffixe = m && m.id !== "tout" ? ":" + m.id : "";
+        cleGq = "quiz-grand" + suffixe;
+        cleVues = "quiz-grand-vues" + suffixe;
+        gq = lireJsonLS(cleGq, { repondues: 0, bonnes: 0, serie: 0, record: 0 });
+        derniersPortraits = [];
+        ecrireLS("quiz-grand-mode", m ? m.id : "tout");
+      }
+      function garde(m, q) {
+        if (m.portraits) return m.portraits.indexOf(o.portraitDe(q).id) >= 0;
+        if (m.famille) return (o.portraitDe(q).f || []).indexOf(m.famille) >= 0;
+        if (m.niveau) return q.n === m.niveau;
+        return true;
+      }
+
+      // Feux d'artifice du sans-faute (17/10/2026) : des étincelles dorées par-dessus le quiz, 2,5 s, rien si
+      // l'utilisateur a demandé moins d'animations
+      function feuxDArtifice(sous) {
+        if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        var cv = document.createElement("canvas"); cv.className = "qz-feux"; cv.setAttribute("aria-hidden", "true");
+        (sous.closest("dialog") || document.body).appendChild(cv); // une fenêtre <dialog> passe au-dessus de tout
+        var dpr = window.devicePixelRatio || 1, W = cv.width = innerWidth * dpr, H = cv.height = innerHeight * dpr, c = cv.getContext("2d");
+        var couleurs = ["#e8c77a", "#c4a265", "#f3e4b8", "#d98c5f", "#ffffff"], parts = [];
+        for (var k = 0; k < 7; k++) {
+          var x = W * (0.12 + 0.76 * Math.random()), y = H * (0.12 + 0.4 * Math.random());
+          for (var m = 0; m < 110; m++) { var ang = Math.random() * Math.PI * 2, v = (3 + Math.random() * 8) * dpr; parts.push({ x: x, y: y, vx: Math.cos(ang) * v, vy: Math.sin(ang) * v, c: couleurs[m % couleurs.length], t: k * 12 }); }
+        }
+        var debut = performance.now();
+        (function anim(now) {
+          var e = now - debut; c.clearRect(0, 0, W, H);
+          parts.forEach(function (p) { if (p.t > 0) { p.t--; return; } p.x += p.vx; p.y += p.vy; p.vy += 0.08 * dpr; p.vx *= 0.985; c.globalAlpha = Math.max(0, 1 - e / 3000); c.fillStyle = p.c; c.fillRect(p.x, p.y, 4 * dpr, 4 * dpr); });
+          if (e < 3000) requestAnimationFrame(anim); else cv.remove();
+        })(debut);
+      }
+
+      // « Défier un ami » (17/10/2026) : le score part avec le lien, par le partage du téléphone, sinon copié
+      function defier(texte) {
+        var b = el("button", "btn btn-ghost qz-defier", "Défier un ami");
+        b.type = "button";
+        b.addEventListener("click", function () {
+          var url = location.href;
+          if (navigator.share) { navigator.share({ title: "Les Voix de l'IA", text: texte, url: url }).catch(function () {}); return; }
+          var ok = function () { var t = b.querySelector(".qz-fin-btn-titre") || b; t.textContent = "Message copié, collez-le à un ami"; setTimeout(function () { t.textContent = "Défier un ami"; }, 2600); };
+          if (navigator.clipboard) navigator.clipboard.writeText(texte + " " + url).then(ok, function () { window.prompt("Copiez ce message :", texte + " " + url); });
+          else window.prompt("Copiez ce message :", texte + " " + url);
+        });
+        return b;
+      }
+
+      function tete() {
+        var t = el("div", "qz-tete");
+        if (o.mode === "portrait") {
+          t.appendChild(el("span", "qz-progres", "Question " + (i + 1) + " sur " + liste.length));
+          t.appendChild(el("span", "qz-score", bonnes + (bonnes > 1 ? " bonnes réponses" : " bonne réponse")));
+        } else {
+          var serie = el("span", "qz-progres");
+          serie.innerHTML = "Série <strong>" + gq.serie + "</strong>";
+          t.appendChild(serie);
+          t.appendChild(el("span", "qz-score", "Record " + gq.record + " · " + gq.bonnes + " sur " + gq.repondues));
+          if (gq.record > 1) t.appendChild(defier("Mon record au grand quiz des Voix de l'IA : " + gq.record + " bonnes réponses de suite. Tu fais mieux ?"));
+        }
+        return t;
+      }
+
+      function afficher() {
+        couperPassage();
+        repondu = false;
+        scene.innerHTML = "";
+        var q = courante;
+        var bloc = el("div", "qz");
+        bloc.appendChild(tete());
+        if (o.mode === "portrait") {
+          var barre = el("div", "qz-barre"), plein = el("i");
+          plein.style.width = (100 * i / liste.length) + "%";
+          barre.appendChild(plein);
+          bloc.appendChild(barre);
+        } else {
+          if (o.modes && o.modes.length > 1) {
+            var ligne = el("p", "qz-mode-ligne");
+            ligne.appendChild(el("span", "", modeCourant ? modeCourant.nom : "Tout le podcast"));
+            var changer = el("button", "qz-lien qz-changer", "Changer de mode");
+            changer.type = "button";
+            changer.addEventListener("click", function () { couperPassage(); accueil(); });
+            ligne.appendChild(changer);
+            if (q.a) ligne.appendChild(boutonVoix());
+            bloc.insertBefore(ligne, bloc.firstChild);
+          }
+          var p = o.portraitDe(q), qui = el("p", "qz-qui");
+          qui.appendChild(vignette(p, "qz-vignette"));
+          qui.appendChild(el("span", "", "Portrait : " + p.n));
+          bloc.appendChild(qui);
+        }
+        var titre = el("h3", "qz-question", fin(q.q));
+        titre.tabIndex = -1;
+        bloc.appendChild(titre);
+        var choix = el("div", "qz-choix");
+        choix.setAttribute("role", "group");
+        choix.setAttribute("aria-label", "Réponses possibles (touches 1 à 4)");
+        melanger([0, 1, 2, 3]).forEach(function (k, rang) {
+          var b = el("button", "qz-reponse");
+          b.type = "button";
+          b.setAttribute("data-k", k);
+          b.appendChild(el("span", "qz-lettre", LETTRES[rang]));
+          b.appendChild(el("span", "qz-texte", fin(q.c[k])));
+          b.addEventListener("click", function () { repondre(k, bloc); });
+          choix.appendChild(b);
+        });
+        bloc.appendChild(choix);
+        var retour = el("div", "qz-retour");
+        retour.setAttribute("aria-live", "polite");
+        bloc.appendChild(retour);
+        scene.appendChild(bloc);
+        titre.focus({ preventScroll: true });
+      }
+
+      function repondre(k, bloc, rejeu) {
+        if (repondu) return;
+        repondu = true;
+        var q = courante, juste = k === q.b;
+        $$(".qz-reponse", bloc).forEach(function (b) {
+          var kb = Number(b.getAttribute("data-k"));
+          b.disabled = true;
+          // 18/10/2026, Alexandre : « on doit voir beaucoup plus clairement si c'est bon ou pas » → une étiquette
+          // sur la réponse choisie et, en cas d'erreur, sur la bonne
+          var etiq = function (t) { var x = el("span", "qz-etiquette", t); b.appendChild(x); };
+          if (kb === q.b) { b.classList.add("juste"); etiq(kb === k ? "✓ Votre réponse" : "✓ La bonne réponse"); }
+          else if (kb === k) { b.classList.add("faux"); etiq("✗ Votre réponse"); }
+          else b.classList.add("autre");
+        });
+        if (!rejeu) {
+          if (juste) bonnes++; else ratees.push(q);
+          reponses[q.id] = k;
+          sauver();
+        }
+        if (o.mode === "grand") {
+          gq.repondues++;
+          if (juste) { gq.bonnes++; gq.serie++; if (gq.serie > gq.record) gq.record = gq.serie; } else gq.serie = 0;
+          ecrireLS(cleGq, JSON.stringify(gq));
+          var vues = lireJsonLS(cleVues, []);
+          vues.unshift(q.id);
+          ecrireLS(cleVues, JSON.stringify(vues.slice(0, Math.max(5, Math.floor(pool.length * 0.8)))));
+          var ancienne = $(".qz-tete", bloc);
+          ancienne.parentNode.replaceChild(tete(), ancienne);
+        } else {
+          $(".qz-score", bloc).textContent = bonnes + (bonnes > 1 ? " bonnes réponses" : " bonne réponse");
+          $(".qz-barre i", bloc).style.width = (100 * (i + 1) / liste.length) + "%";
+        }
+        bloc.classList.add(juste ? "reussi" : "rate");
+
+        var retour = $(".qz-retour", bloc);
+        var verdict = el("p", "qz-verdict");
+        verdict.setAttribute("role", "status");
+        verdict.appendChild(el("span", "qz-verdict-icone", juste ? "✓" : "✗"));
+        var vt = el("span", "qz-verdict-texte");
+        if (juste) vt.textContent = o.mode === "grand" && gq.serie > 1 ? "Bonne réponse ! " + gq.serie + " de suite." : "Bonne réponse !";
+        else { vt.appendChild(el("b", "", "Raté !")); vt.appendChild(el("span", "qz-verdict-sous", "La bonne réponse : ")); $(".qz-verdict-sous", vt).appendChild(el("strong", "", fin(q.c[q.b]))); }
+        verdict.appendChild(vt);
+        // 18/10/2026, Alexandre : le verdict juste sous la question (il était tout en bas, hors de l'écran sur téléphone) ;
+        // les deux réponses écartées s'effacent, il ne reste que la sienne et la bonne : rien ne saute, tout tient à l'écran
+        var listeChoix = $(".qz-choix", bloc);
+        listeChoix.parentNode.insertBefore(verdict, listeChoix);
+        // la phrase exacte de l'épisode, avec qui la dit : c'est la preuve que rien n'est inventé. L'explication n'est
+        // ajoutée que si elle apporte autre chose : elle la répète dans 1 006 cas sur 1 017 (16/10, « redondance »)
+        var p = o.mode === "grand" ? o.portraitDe(q) : null;
+        var plat = function (t) { return String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(); };
+        var motsExpl = {};
+        plat(q.x).split(" ").forEach(function (m) { motsExpl[m] = 1; });
+        var motsCit = plat(q.e).split(" ").filter(function (m) { return m.length > 2; });
+        var repris = motsCit.filter(function (m) { return motsExpl[m]; }).length / Math.max(1, motsCit.length);
+        if (repris < 0.6) retour.appendChild(el("p", "qz-explication", fin(q.x)));
+        var fig = el("figure", "qz-extrait" + (q.v ? " " + q.v : ""));
+        fig.appendChild(el("blockquote", "", "\u00ab\u00a0" + fin(q.e) + "\u00a0\u00bb"));
+        fig.appendChild(el("figcaption", "", (q.v ? VOIX[q.v] + ", d" : "D") + (p ? "ans le portrait " + (/^[aeiouyàâéèêîôûœh]/i.test(p.n) ? "d'" : "de ") + p.n : "ans l'épisode")));
+        retour.appendChild(fig);
+
+        var actions = el("div", "qz-actions");
+        if (q.a) {
+          var vx = el("button", "qz-ecouter qz-voix");
+          vx.type = "button";
+          var libelle = (PRENOM[q.av] || "L'IA-nimateur") + " vous donne la réponse";
+          vx.setAttribute("data-libelle", libelle);
+          vx.innerHTML = (q.av === "alexandre" ? '<img class="qz-avatar" src="../images/alexandre-stopnicki-avatar.jpg" width="32" height="32" alt="">' : ICONE_ECOUTE) + '<span class="qz-ecoute-txt"></span>';
+          $(".qz-ecoute-txt", vx).textContent = libelle;
+          vx.addEventListener("click", function () { ecouterPassage(vx, audioVoix(q.a), 0, null); });
+          // 18/10/2026, Alexandre : on doit voir qui parle → la voix est dans le bandeau ✓/✗, avec une onde qui bouge
+          vx.classList.add("qz-voix-bandeau");
+          vx.insertAdjacentHTML("beforeend", '<span class="qz-onde" aria-hidden="true"><i></i><i></i><i></i><i></i></span>');
+          verdict.appendChild(vx);
+          if (voixActives() && !rejeu) setTimeout(function () { if (document.body.contains(vx)) ecouterPassage(vx, audioVoix(q.a), 0, null); }, 350);
+        }
+        var audio = o.mode === "grand" ? (p.s ? audioDe(p.s) : null) : audioDe(null);
+        if (audio && q.t !== null && q.t !== undefined) {
+          // une seule grande touche « son » (16/10, Alexandre : « redondance et mauvaise UX ») : quand la réponse est
+          // dite, le passage de l'épisode devient un lien discret, à côté de « Lire le passage »
+          // 19/10/2026, Alexandre : « Écouter la réponse », et bien visible (sinon on ne clique jamais) ; quand Ada ou Alan
+          // la dit déjà dans le bandeau, ce bouton mène au passage de l'épisode : « L'entendre dans l'épisode »
+          var ec = el("button", "qz-ecouter qz-passage");
+          ec.type = "button";
+          if (q.a) {
+            ec.setAttribute("data-libelle", "L'entendre dans l'épisode");
+            ec.innerHTML = ICONE_ECOUTE + '<span class="qz-ecoute-txt">L\'entendre dans l\'épisode</span><span class="qz-t">' + mmss(q.t) + "</span>";
+          } else { ec.setAttribute("data-libelle", "Écouter la réponse"); ec.innerHTML = ICONE_ECOUTE + '<span class="qz-ecoute-txt">Écouter la réponse</span><span class="qz-t">' + mmss(q.t) + "</span>"; }
+          ec.addEventListener("click", function () { ecouterPassage(ec, audio, q.t, q.tf); });
+          actions.appendChild(ec);
+        }
+        if (q.r) {
+          var lire = el("a", "qz-lien", "Lire le passage");
+          lire.href = (p ? p.ch : "") + "#replique-" + q.r;
+          if (p) { lire.target = "_blank"; lire.rel = "noopener"; }
+          if (o.surPage) lire.addEventListener("click", function () { if (o.fermer) o.fermer(); });
+          actions.appendChild(lire);
+        }
+        if (p) {
+          var aller = el("a", "qz-lien", "Le quiz " + (/^[aeiouyàâéèêîôûœh]/i.test(p.n) ? "d'" : "de ") + p.n);
+          aller.href = p.ch + "#quiz";
+          aller.target = "_blank";
+          aller.rel = "noopener";
+          actions.appendChild(aller);
+        }
+        var suite = el("button", "btn btn-primary qz-suivante");
+        suite.type = "button";
+        suite.innerHTML = "<span>" + (o.mode === "portrait" && i === liste.length - 1 ? "Voir mon score" : "Question suivante") + "</span>" + FLECHE;
+        suite.addEventListener("click", suivante);
+        actions.appendChild(suite);
+        // « Question suivante » se met en valeur quand la voix a fini de parler (on peut toujours cliquer avant)
+        if (q.a && voixActives() && !rejeu) {
+          suite.classList.add("qz-attend");
+          var lv = audioVoix(q.a);
+          var pret = function () { if (lv.getAttribute("data-src") !== q.a) return; suite.classList.remove("qz-attend"); suite.classList.add("qz-pret"); lv.removeEventListener("ended", pret); lv.removeEventListener("pause", pret); };
+          lv.addEventListener("ended", pret);
+          lv.addEventListener("pause", pret);
+          setTimeout(function () { if (suite.classList.contains("qz-attend")) { suite.classList.remove("qz-attend"); } }, 20000);
+        }
+        retour.appendChild(actions);
+        suite.focus({ preventScroll: true });
+        // sur téléphone, l'explication peut tomber sous l'écran : on la montre, sans sauter
+        var r = retour.getBoundingClientRect();
+        if (r.bottom > (window.innerHeight || 0) && retour.scrollIntoView) retour.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
+
+      function suivante() {
+        if (o.mode === "grand") { courante = tirer(); afficher(); return; }
+        i++;
+        if (i >= liste.length) finPortrait(); else { courante = liste[i]; sauver(); afficher(); }
+      }
+
+      // grand quiz : une question pas encore vue (80 % des questions au plus en mémoire), d'un portrait qui n'est pas
+      // parmi les quatre derniers
+      var derniersPortraits;
+      function tirer() {
+        var vues = lireJsonLS(cleVues, []), dejaVu = {};
+        vues.forEach(function (id) { dejaVu[id] = 1; });
+        var candidats = pool.filter(function (q) { return !dejaVu[q.id] && derniersPortraits.indexOf(q.p) < 0; });
+        if (!candidats.length) candidats = pool.filter(function (q) { return !dejaVu[q.id]; });
+        if (!candidats.length) { ecrireLS(cleVues, "[]"); candidats = pool; }
+        var q = candidats[Math.floor(Math.random() * candidats.length)];
+        derniersPortraits.unshift(q.p);
+        derniersPortraits = derniersPortraits.slice(0, Math.min(4, Math.floor(nbPortraitsPool / 2)));
+        return q;
+      }
+
+      function finPortrait() {
+        couperPassage();
+        actif = false;
+        oublier();
+        scene.innerHTML = "";
+        var n = liste.length, cle = "quiz-meilleur:" + o.id;
+        var meilleur = Number(lireLS(cle)) || 0;
+        if (n === o.questions.length && bonnes > meilleur) ecrireLS(cle, String(bonnes));
+        var f = el("div", "qz-fin");
+        var note = el("p", "qz-fin-note");
+        note.innerHTML = "<strong>" + bonnes + "</strong> / " + n;
+        f.appendChild(note);
+        var r = bonnes / n;
+        // Quatre paliers (décision d'Alexandre, 17/10/2026) : sans faute (feux d'artifice + sa voix), presque, pas mal,
+        // à réécouter ; chaque palier met en avant la bonne suite. La voix : un son court commun à tous les portraits
+        // (audio/quiz-fin/<palier>.mp3), joué si les voix du quiz sont actives ; absent, rien ne se passe.
+        var palier = r === 1 ? "parfait" : r >= 0.75 ? "presque" : r >= 0.5 ? "pasmal" : "reecouter";
+        var mot = { parfait: "Sans faute\u00a0! Vous avez tout retenu.", presque: "Presque parfait\u00a0!", pasmal: "Pas mal\u00a0! Quelques passages à réécouter.", reecouter: "Une deuxième écoute s'impose\u00a0?" }[palier];
+        var titre = el("h3", "qz-fin-mot", mot);
+        titre.tabIndex = -1;
+        f.appendChild(titre);
+        if (n === o.questions.length && meilleur) f.appendChild(el("p", "qz-fin-record", bonnes > meilleur ? "Nouveau record pour ce portrait (avant : " + meilleur + " / " + n + ")." : "Votre meilleur score sur ce portrait : " + meilleur + " / " + n + "."));
+        var actions = el("div", "qz-actions qz-fin-actions");
+        var erreurs = ratees.slice();
+        // 18/10/2026, Alexandre : « les boutons, on ne comprend pas trop » → chacun dit ce qu'il fait, en une ligne
+        var expliquer = function (x, sous) { var t = x.textContent; x.textContent = ""; x.appendChild(el("strong", "qz-fin-btn-titre", t)); if (sous) x.appendChild(el("span", "qz-fin-btn-sous", sous)); return x; };
+        var bouton = function (texte, classe, fn, sous) { var x = el("button", "btn " + classe, texte); x.type = "button"; x.setAttribute("data-libelle", texte); x.addEventListener("click", fn); return expliquer(x, sous); };
+        var revoir = erreurs.length && erreurs.length < n ? bouton("Revoir mes erreurs (" + erreurs.length + ")", "btn-primary", function () { demarrer(erreurs); }, "seulement les questions ratées") : null;
+        var defi = defier(palier === "parfait" ? "Sans faute (" + n + " sur " + n + ") au quiz de ce portrait des Voix de l'IA. À toi !" : "J'ai eu " + bonnes + " sur " + n + " au quiz de ce portrait des Voix de l'IA. À toi !");
+        var encore = bouton("Refaire le quiz", "btn-ghost", function () { demarrer(); }, "les " + n + " questions depuis le début");
+        var suivant = document.querySelector("a.voisin.suivant");
+        var lienSuivant = suivant ? (function () { var x = el("a", "btn btn-ghost", "Le portrait suivant →"); x.href = suivant.href; return expliquer(x, "écouter un autre épisode"); })() : null;
+        var cle1 = erreurs.filter(function (q) { return q.t !== null && q.t !== undefined; })[0];
+        var passage = cle1 && audioDe(null) ? bouton("Réécouter le passage clé", "btn-primary", function () { ecouterPassage(this, audioDe(null), cle1.t, cle1.tf); }, "le moment de l'épisode qui donne la réponse") : null;
+        var jEp = function () { return document.querySelector(".lecteur[data-audio] .bouton-lecture") || document.querySelector("[data-jouer]"); };
+        var episode = jEp() ? bouton("Réécouter l'épisode", "btn-primary", function () { if (o.fermer) o.fermer(); var j = jEp(); if (j) { j.scrollIntoView({ behavior: "smooth", block: "center" }); if (j.getAttribute("aria-pressed") !== "true") j.click(); } }, "retour au lecteur") : null;
+        expliquer(defi, "lui envoyer votre score : " + bonnes + " / " + n);
+        if (palier === "parfait") { defi.classList.remove("btn-ghost"); defi.classList.add("btn-primary"); [defi, lienSuivant, encore].forEach(function (x) { if (x) actions.appendChild(x); }); }
+        else if (palier === "presque") [revoir, defi, encore].forEach(function (x) { if (x) actions.appendChild(x); });
+        else if (palier === "pasmal") [passage || revoir, encore, defi].forEach(function (x) { if (x) actions.appendChild(x); });
+        else [episode || passage, revoir, encore].forEach(function (x) { if (x) actions.appendChild(x); });
+        // une seule action en or : la première ; les autres en contour
+        $$(".btn-primary", actions).slice(1).forEach(function (x) { x.classList.remove("btn-primary"); x.classList.add("btn-ghost"); });
+        if (o.grand) { var g = el("a", "qz-lien qz-grand"); g.href = o.grand; g.innerHTML = "<span>Le grand quiz : tous les portraits</span>" + FLECHE; actions.appendChild(g); }
+        f.appendChild(actions);
+        if (ratees.length) {
+          f.appendChild(el("p", "qz-fin-sous", "À réécouter"));
+          var ul = el("ul", "qz-fin-liste");
+          ratees.forEach(function (q) {
+            var li = el("li");
+            li.appendChild(el("span", "qz-fin-q", fin(q.q)));
+            var rep = el("span", "qz-fin-r", "Réponse : ");
+            rep.appendChild(el("strong", "", fin(q.c[q.b])));
+            li.appendChild(rep);
+            if (q.r) { var a = el("a", "qz-lien", "Lire le passage"); a.href = "#replique-" + q.r; a.addEventListener("click", function () { if (o.fermer) o.fermer(); }); li.appendChild(a); }
+            ul.appendChild(li);
+          });
+          f.appendChild(ul);
+        }
+        scene.appendChild(f);
+        titre.focus({ preventScroll: true });
+        if (palier === "parfait") feuxDArtifice(scene);
+        if (voixActives()) { try { var vf = new Audio((o.prefixeAudio || "../") + "audio/quiz-fin/" + palier + ".mp3"); vf.play().catch(function () {}); } catch (e) {} }
+      }
+
+      // portrait : du plus facile au plus difficile, dans un ordre nouveau à chaque fois
+      function demarrer(seulement) {
+        liste = melanger(seulement || o.questions).sort(function (a, b) { return a.n - b.n; });
+        i = 0; bonnes = 0; ratees = []; reponses = {}; actif = true;
+        if (o.mode === "grand") courante = tirer(); else courante = liste[0];
+        sauver();
+        afficher();
+      }
+      // reprend le quiz gardé (et remontre la réponse déjà donnée à la question en cours) ; faux s'il n'y en a pas
+      function reprendre() {
+        var st = lireJsonLS(cleEnCours, null), parId = {};
+        if (!st || !st.ordre || !st.ordre.length) return false;
+        o.questions.forEach(function (q) { parId[q.id] = q; });
+        var l = st.ordre.map(function (id) { return parId[id]; });
+        if (l.some(function (q) { return !q; }) || !(st.i < l.length)) { oublier(); return false; }
+        liste = l; i = st.i; bonnes = st.bonnes || 0; reponses = st.reponses || {}; actif = true;
+        ratees = (st.ratees || []).map(function (id) { return parId[id]; }).filter(Boolean);
+        courante = liste[i];
+        afficher();
+        if (reponses[courante.id] !== undefined) repondre(reponses[courante.id], $(".qz", scene), true);
+        return true;
+      }
+      function etat() {
+        if (actif) return { actif: true, i: i + (repondu ? 1 : 0), q: i + 1, n: liste.length };
+        var st = o.mode === "portrait" ? lireJsonLS(cleEnCours, null) : null;
+        return st && st.ordre ? { actif: false, garde: true, i: st.i + (st.reponses && st.reponses[st.ordre[st.i]] !== undefined ? 1 : 0), q: st.i + 1, n: st.ordre.length } : null;
+      }
+
+      function accueil() {
+        scene.innerHTML = "";
+        var a = el("div", "qz-accueil");
+        if (o.modes && o.modes.length > 1) {
+          var groupe = el("div", "qz-modes");
+          groupe.setAttribute("role", "group");
+          groupe.setAttribute("aria-label", "Choisir un mode de jeu");
+          o.modes.forEach(function (m) {
+            var b = el("button", "qz-mode-btn");
+            b.type = "button";
+            b.setAttribute("aria-pressed", modeCourant && modeCourant.id === m.id ? "true" : "false");
+            b.appendChild(el("strong", "", m.nom));
+            b.appendChild(el("span", "qz-mode-n", m.nombre + " questions"));
+            b.appendChild(el("span", "qz-mode-d", m.d));
+            b.addEventListener("click", function () {
+              choisirMode(m);
+              try { history.replaceState(null, "", m.id === "tout" ? location.pathname : "#mode=" + m.id); } catch (e) {}
+              accueil();
+              var actif = $(".qz-mode-btn[aria-pressed=true]", scene);
+              if (actif) actif.focus({ preventScroll: true });
+            });
+            groupe.appendChild(b);
+          });
+          a.appendChild(groupe);
+        }
+        var chiffres = el("ul", "qz-chiffres");
+        [[pool.length, "questions"], [nbPortraitsPool, "portraits"]].concat(gq.repondues ? [[gq.record, "votre record de suite"]] : []).forEach(function (x) {
+          var li = el("li");
+          li.appendChild(el("strong", "", String(x[0])));
+          li.appendChild(el("span", "", x[1]));
+          chiffres.appendChild(li);
+        });
+        a.appendChild(chiffres);
+        a.appendChild(el("p", "qz-accueil-texte", gq.repondues ? "Dans ce mode, vous avez déjà répondu à " + gq.repondues + " question" + (gq.repondues > 1 ? "s" : "") + ", dont " + gq.bonnes + " bonne" + (gq.bonnes > 1 ? "s" : "") + ". Celles déjà vues ne reviennent pas tout de suite." : "Une question à la fois, tirée au hasard. Enchaînez les bonnes réponses : votre meilleure série est gardée."));
+        var go = el("button", "btn btn-primary qz-commencer");
+        go.type = "button";
+        go.innerHTML = "<span>" + (gq.repondues ? "Reprendre" : "Commencer") + "</span>" + FLECHE;
+        go.addEventListener("click", function () { demarrer(); });
+        a.appendChild(go);
+        scene.appendChild(a);
+      }
+
+      // mode d'arrivée : l'adresse (#mode=difficile, à partager), sinon le dernier choisi dans ce navigateur
+      if (o.modes && o.modes.length) {
+        var voulu = (location.hash.match(/mode=([a-z0-9-]+)/) || [])[1] || lireLS("quiz-grand-mode") || "tout";
+        choisirMode(o.modes.filter(function (m) { return m.id === voulu; })[0] || o.modes[0]);
+      } else derniersPortraits = [];
+
+      // clavier : 1 à 4 (ou A à D) pour répondre ; Entrée passe à la suite (bouton déjà en focus)
+      scene.addEventListener("keydown", function (ev) {
+        if (ev.altKey || ev.ctrlKey || ev.metaKey || repondu) return;
+        var n = "1234".indexOf(ev.key), l = "abcd".indexOf(String(ev.key).toLowerCase());
+        var rang = n >= 0 ? n : l;
+        if (rang < 0 || /input|textarea/i.test(ev.target.tagName)) return;
+        var b = $$(".qz-reponse", scene)[rang];
+        if (b) { ev.preventDefault(); b.click(); }
+      });
+
+      // quitter (17/10/2026) : le quiz commencé est oublié, il repartira de zéro
+      function quitter() { oublier(); actif = false; liste = []; i = 0; }
+      return { demarrer: demarrer, reprendre: reprendre, etat: etat, accueil: accueil, couper: couperPassage, quitter: quitter };
+    }
+
+    /* -------- page d'un portrait : bouton sous le lecteur, encart après la conversation, fenêtre du quiz */
+    var donneesQuiz = $("#donnees-quiz");
+    if (donneesQuiz && typeof HTMLDialogElement === "function") {
+      var dq = JSON.parse(donneesQuiz.textContent);
+      var fenetre = el("dialog", "quiz-fenetre");
+      fenetre.setAttribute("aria-labelledby", "qf-titre");
+      fenetre.innerHTML = '<div class="qf-dedans"><div class="qf-tete"><h2 id="qf-titre"></h2><button type="button" class="rf-fermer qf-fermer" aria-label="Fermer le quiz"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Fermer</span></button></div><div class="quiz-scene"></div></div>';
+      $("#qf-titre", fenetre).textContent = "Le quiz · " + dq.nom;
+      if (dq.ouverture || dq.questions.some(function (q) { return q.a; })) {
+        $(".qf-tete", fenetre).insertBefore(boutonVoix(), $(".qf-fermer", fenetre));
+        var mention = el("p", "qf-mention", (dq.ouverture ? "Voix d'Alexandre recréée par IA, avec son accord ; " : "") + "voix d'Ada, d'Alan et de Lia générées par IA.");
+        $(".qf-tete", fenetre).insertAdjacentElement("afterend", mention);
+        // 18/10/2026, Alexandre : dire dès le départ qu'on peut jouer avec les voix (tant qu'on n'a pas choisi)
+        if (lireLS("quiz-voix") === null && dq.questions.some(function (q) { return q.a; })) {
+          var cv = el("div", "qz-choix-voix");
+          cv.innerHTML = '<p>Ada et Alan vous donnent les réponses à voix haute.</p>';
+          var avec = el("button", "qz-cv-avec", "Avec les voix (conseillé)"), sans = el("button", "qz-cv-sans", "Sans le son");
+          avec.type = sans.type = "button";
+          avec.addEventListener("click", function () { ecrireLS("quiz-voix", "oui"); cv.remove(); $$(".qz-hp").forEach(function (x) { if (x.majHp) x.majHp(); }); });
+          sans.addEventListener("click", function () { ecrireLS("quiz-voix", "non"); couperPassage(); if (lecteurVoix) lecteurVoix.pause(); cv.remove(); $$(".qz-hp").forEach(function (x) { if (x.majHp) x.majHp(); }); });
+          cv.appendChild(avec); cv.appendChild(sans);
+          mention.insertAdjacentElement("afterend", cv);
+        }
+      }
+      document.body.appendChild(fenetre);
+      var moteur = monterQuiz($(".quiz-scene", fenetre), { mode: "portrait", questions: dq.questions, id: dq.id, grand: dq.grand, surPage: true, fermer: function () { fenetre.close(); } });
+      var ouvrirQuiz = function () {
+        var invit = $(".quiz-invitation");
+        if (invit) invit.remove();
+        if (fenetre.open) return;
+        var flottant = $(".quiz-revenir");
+        if (flottant) flottant.remove();
+        document.body.classList.remove("quiz-a-reprendre");
+        var e = moteur.etat(), repris = true;
+        if (!(e && e.actif) && !moteur.reprendre()) { moteur.demarrer(); repris = false; }
+        fenetre.showModal();
+        doc.classList.add("fenetre-ouverte");
+        if (!repris && dq.ouverture && voixActives()) {
+          var episode = $(".lecteur[data-audio] audio");
+          if (episode && !episode.paused) episode.pause();
+          var ov = audioVoix(dq.ouverture);
+          ov.currentTime = 0;
+          ov.play().catch(function () {});
+        }
+      };
+      $(".qf-fermer", fenetre).addEventListener("click", function () { fenetre.close(); });
+      fenetre.addEventListener("click", function (ev) { if (ev.target === fenetre) fenetre.close(); });
+      // quiz quitté en cours de route (croix, « Lire le passage »…) : un bouton fixe ramène où on en était
+      var montrerRevenir = function () {
+        var e = moteur.etat();
+        if (!e || e.i >= e.n || $(".quiz-revenir")) return;
+        // « Revenir au quiz » et, à côté, « Quitter le quiz » (17/10/2026, Alexandre : « il faudrait quitter le quiz aussi »)
+        var b = el("div", "quiz-revenir");
+        var go = el("button", "quiz-revenir-ouvrir");
+        go.type = "button";
+        go.innerHTML = '<span class="quiz-revenir-icone" aria-hidden="true">\u21a9</span><span><strong>Revenir au quiz</strong><span>' + (e.i > 0 ? "Vous en êtes à la question " + e.q + " sur " + e.n : e.n + " questions") + "</span></span>";
+        go.addEventListener("click", ouvrirQuiz);
+        var stop = el("button", "quiz-revenir-quitter");
+        stop.type = "button";
+        stop.setAttribute("aria-label", "Quitter le quiz");
+        stop.innerHTML = '<span aria-hidden="true">\u00d7</span><span class="quiz-revenir-quitter-mot">Quitter</span>';
+        stop.addEventListener("click", function () {
+          if (moteur.quitter) moteur.quitter();
+          b.classList.remove("visible");
+          document.body.classList.remove("quiz-a-reprendre");
+          setTimeout(function () { b.remove(); }, 450);
+          var btEncart = $(".quiz-encart [data-quiz-ouvrir] span");
+          if (btEncart) btEncart.textContent = "Faire le quiz";
+        });
+        b.appendChild(go);
+        b.appendChild(stop);
+        document.body.appendChild(b);
+        document.body.classList.add("quiz-a-reprendre");
+        // setTimeout plutôt que requestAnimationFrame : un onglet en arrière-plan ne dessine pas, le bouton restait caché (20/10/2026)
+        setTimeout(function () { b.classList.add("visible"); }, 60);
+      };
+      fenetre.addEventListener("close", function () { doc.classList.remove("fenetre-ouverte"); moteur.couper(); montrerRevenir(); });
+      // en arrivant sur la page : un quiz commencé (même hier) se retrouve
+      var garde = moteur.etat();
+      if (garde && garde.garde) {
+        montrerRevenir();
+        var btEncart = $(".quiz-encart [data-quiz-ouvrir] span");
+        if (btEncart) btEncart.textContent = "Reprendre le quiz";
+      }
+      $$("[data-quiz-ouvrir]").forEach(function (b) { b.addEventListener("click", ouvrirQuiz); });
+      $$(".quiz-encart, .pa-quiz[data-quiz-ouvrir], .pa-quiz-grand[data-quiz-ouvrir], .fe-quiz[data-quiz-ouvrir]").forEach(function (x) { x.hidden = false; });
+      if (location.hash === "#quiz") setTimeout(ouvrirQuiz, 300);
+      // à la fin de l'écoute : une invitation discrète, une seule fois
+      document.addEventListener("episode:fin", function () {
+        if (fenetre.open || $(".quiz-invitation") || $(".quiz-revenir")) return;
+        // l'écran de fin d'écoute propose déjà le quiz : la bannière ne sert que s'il n'est pas à l'écran (18/10/2026)
+        var fe = $("#fin-ecoute");
+        if (fe) { var rf = fe.getBoundingClientRect(); if (rf.bottom > 0 && rf.top < window.innerHeight) return; }
+        var inv = el("div", "quiz-invitation");
+        inv.setAttribute("role", "status");
+        inv.innerHTML = '<p><strong>Qu’avez-vous retenu ?</strong><span>' + dq.questions.length + " questions sur l'épisode</span></p>";
+        var go = el("button", "btn btn-primary", "Faire le quiz");
+        go.type = "button";
+        go.addEventListener("click", ouvrirQuiz);
+        var non = el("button", "quiz-invitation-fermer");
+        non.type = "button";
+        non.setAttribute("aria-label", "Plus tard");
+        non.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+        non.addEventListener("click", function () { inv.remove(); });
+        inv.appendChild(go);
+        inv.appendChild(non);
+        document.body.appendChild(inv);
+        requestAnimationFrame(function () { inv.classList.add("visible"); });
+      });
+    }
+
+    /* -------- le grand quiz (page quiz/) */
+    var grand = $("#grand-quiz[data-quiz-url]");
+    if (grand && window.fetch) {
+      grand.classList.add("charge");
+      fetch(grand.getAttribute("data-quiz-url")).then(function (r) { return r.json(); }).then(function (idx) {
+        grand.classList.remove("charge");
+        var m = monterQuiz(grand, { mode: "grand", questions: idx.questions, nbPortraits: idx.portraits.length, modes: idx.modes || [], portraitDe: function (q) { return idx.portraits[q.p]; } });
+        m.accueil();
+      }).catch(function () {
+        grand.classList.remove("charge");
+        grand.appendChild(el("p", "quiz-sans-js", "Le quiz n'a pas pu se charger. Rechargez la page pour réessayer."));
+      });
+    }
+  })();
+  /* ================================================ L'ÉCOUTE D'UN PARCOURS (16/10/2026)
+     Page parcours/<id>/ : Lia ouvre, présente chaque épisode, puis l'épisode, et ainsi de suite jusqu'à la conclusion
+     (liste dans #parcours-sons, fabriquée par construire.mjs). Un seul <audio>, un lecteur en bas de la page, le
+     passage en cours éclairé ; un bouton « Lia » devant chaque texte dit repart de là. */
+  (function () {
+    var donnees = $("#parcours-sons"), boite = $(".pc-lecteur");
+    if (!donnees || !boite) return;
+    var seq = [];
+    try { seq = JSON.parse(donnees.textContent) || []; } catch (e) { return; }
+    if (!seq.length) return;
+    var audio = $("audio", boite), titre = $(".pc-l-titre", boite), etape = $(".pc-l-etape", boite), barre = $(".pc-l-barre i", boite);
+    var jouerB = $(".pc-l-jouer", boite), pos = -1;
+    var eclairer = function () {
+      $$("[data-pc-k]").forEach(function (x) { x.classList.toggle("pc-en-cours", pos >= 0 && x.getAttribute("data-pc-k") === seq[pos].k); });
+      $$("[data-pc-lire]").forEach(function (b) { b.classList.toggle("joue", !audio.paused && Number(b.getAttribute("data-pc-lire")) === pos); });
+      boite.classList.toggle("joue", !audio.paused);
+    };
+    var lancer = function (i, defiler) {
+      if (i < 0 || i >= seq.length) return;
+      pos = i;
+      audio.src = seq[i].src;
+      audio.play().catch(function () {});
+      boite.hidden = false;
+      document.body.classList.add("pc-ecoute");
+      titre.textContent = seq[i].t;
+      etape.textContent = (i + 1) + " / " + seq.length;
+      eclairer();
+      var cible = $('[data-pc-k="' + seq[i].k + '"]');
+      if (defiler && cible) cible.scrollIntoView({ behavior: calme ? "auto" : "smooth", block: "center" });
+    };
+    $$("[data-pc-lire]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var i = Number(b.getAttribute("data-pc-lire"));
+        if (i === pos && !audio.paused) { audio.pause(); return; }
+        if (i === pos && audio.paused && audio.currentTime) { audio.play().catch(function () {}); return; }
+        lancer(i, b.classList.contains("pc-lire"));
+      });
+    });
+    jouerB.addEventListener("click", function () { if (pos < 0) lancer(0, true); else if (audio.paused) audio.play().catch(function () {}); else audio.pause(); });
+    $(".pc-l-prec", boite).addEventListener("click", function () { lancer(Math.max(0, pos - 1), true); });
+    $(".pc-l-suiv", boite).addEventListener("click", function () { if (pos < seq.length - 1) lancer(pos + 1, true); });
+    audio.addEventListener("ended", function () { if (pos < seq.length - 1) lancer(pos + 1, true); else { eclairer(); } });
+    audio.addEventListener("timeupdate", function () { if (audio.duration) barre.style.width = (100 * audio.currentTime / audio.duration) + "%"; });
+    ["play", "pause"].forEach(function (ev) { audio.addEventListener(ev, eclairer); });
+  })();
+})();
+
+// Infobulles « i » (20/10/2026) : la bulle reste dans l'écran (16 px de marge) ; survol, clavier (Tab) et toucher
+// (un toucher ouvre, un toucher ailleurs ferme). Sans JavaScript : la bulle s'ouvre au survol, centrée.
+(function () {
+  function placer(i) {
+    var b = i.querySelector(".info-bulle"); if (!b) return;
+    var r = i.getBoundingClientRect(), vw = document.documentElement.clientWidth, w = Math.min(260, vw - 32);
+    var gauche = r.width / 2 - w / 2, abs = r.left + gauche;
+    if (abs < 16) gauche += 16 - abs; else if (abs + w > vw - 16) gauche -= abs + w - (vw - 16);
+    b.style.width = w + "px"; b.style.left = gauche + "px"; b.style.setProperty("--fleche", (r.width / 2 - gauche) + "px"); b.classList.add("placee");
+  }
+  ["mouseover", "focusin"].forEach(function (t) { document.addEventListener(t, function (ev) { var i = ev.target.closest && ev.target.closest(".info-i"); if (i) placer(i); }); });
+  document.addEventListener("click", function (ev) {
+    var i = ev.target.closest && ev.target.closest(".info-i, .vip-info");
+    document.querySelectorAll(".info-i.ouverte, .vip-info.ouverte").forEach(function (o) { if (o !== i) o.classList.remove("ouverte"); });
+    if (i) { ev.preventDefault(); ev.stopPropagation(); if (i.classList.contains("info-i")) placer(i); i.classList.toggle("ouverte"); }
+  }, true);
 })();
