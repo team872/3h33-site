@@ -696,7 +696,7 @@ def llms(pages):
                f"- [Formation Claude]({SITE_URL}/formation-claude/): formation à Claude (Anthropic) pour salariés et managers, un ou deux jours.",
                f"- [La galaxie 3h33]({SITE_URL}/galaxie/): l'annuaire des sites et applications de l'écosystème 3h33.",
                f"- [Cartographie mondiale des usages de l'IA]({SITE_URL}/cartographie-mondiale-des-usages-de-l-ia/): étude 2024–2026 sur les usages réels de l'IA dans le monde, 90 pages, plus de 90 sources, 13 zones géographiques, PDF gratuit.",
-               f"- [Mon nouveau métier : le vibe coding]({SITE_URL}/pour/alexandre-vibe-coding/): le message vidéo d'Alexandre Stopnicki, en moins d'une minute.", "",
+               f"- [Mon nouveau métier : le vibe coding]({SITE_URL}/pour/alexandre-vibe-coding/): le message vidéo d'Alexandre Stopnicki, en une minute.", "",
                "## Applications éditées par 3h33", "",
                "- [NegoVox](https://negovox.com/): simulateur d'entraînement vocal par IA pour les commerciaux ; un client joué par l'IA, puis un débrief noté sur douze compétences de vente.",
                "- [Media Training Vox](https://media-training-vox.com/): entraînement par IA vocale aux prises de parole des dirigeants, face aux médias, au comité de direction, au conseil ou aux actionnaires.",

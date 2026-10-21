@@ -26,7 +26,7 @@ Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes 
 
 ## Contenus de référence
 
-- [Vibe coding : construire des outils en dialoguant avec l'IA](https://3h33.com/vibe-coding/): Le vibe coding consiste à fabriquer un logiciel en décrivant en français ce qu'on veut obtenir, pendant qu'une intelligence artificielle écrit le code ; on corrige ensuite par itérations jusqu'au résultat. Pour une entreprise, c'est un outil interne obtenu en une demi-journée de session au lieu de plusieurs mois, du vrai code qui lui appartient, sans abonnement à une plateforme. Il ne dispense ni de relire, ni de tester, ni de sécuriser : c'est le rôle de 3h33.
+- [Vibe coding : construire des outils en dialoguant avec l'IA](https://3h33.com/vibe-coding/): Le vibe coding : fabriquer un logiciel en le décrivant en français à une IA. Ce que ça change pour une entreprise, des exemples, et comment lancer votre projet.
 - [Former ses salariés à l'IA : ce que demande vraiment l'AI Act](https://3h33.com/formation-ia-obligatoire-ai-act/): Oui, l'article 4 de l'AI Act (règlement (UE) 2024/1689), applicable depuis le 2 février 2025, oblige toute organisation qui utilise un système d'IA, même un simple assistant comme ChatGPT, Claude ou Copilot, à prendre des mesures pour développer la maîtrise de l'IA de ses équipes. Depuis l'omnibus numérique (règlement (UE) 2026/1744, en vigueur le 27 juillet 2026), c'est une obligation de moyens et non de résultat. Aucune certification n'est imposée, mais il faut garder une trace de ce qui a été fait.
 - [L'IA en entreprise : les réponses aux questions qu'on nous pose](https://3h33.com/ia-en-entreprise/): Pour commencer avec l'IA en entreprise, partez d'une tâche concrète qui prend du temps, mesurez-la, construisez une première réponse avec l'IA et comparez. Les usages qui rapportent le plus vite touchent l'écrit et la recherche d'information. Depuis le 2 février 2025, l'article 4 de l'AI Act demande aux entreprises qui utilisent l'IA de développer la maîtrise de l'IA de leurs équipes, une obligation de moyens depuis juillet 2026.
 - [LMA : le Learning Management Agentique](https://3h33.com/lma-learning-management-agentique/): Le LMA, ou Learning Management Agentique, est une plateforme d'apprentissage dont le cœur n'est plus un catalogue de cours mais des agents d'IA qui retrouvent l'information, l'expliquent, interrogent l'apprenant et suivent sa progression. Il succède au LMS (Learning Management System), qui range des contenus. Le terme est proposé par 3h33 ; son LMA s'appelle BotMoiLeQi LMA.
@@ -78,7 +78,7 @@ Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes 
 - [Formation Claude](https://3h33.com/formation-claude/): formation à Claude (Anthropic) pour salariés et managers, un ou deux jours.
 - [La galaxie 3h33](https://3h33.com/galaxie/): l'annuaire des sites et applications de l'écosystème 3h33.
 - [Cartographie mondiale des usages de l'IA](https://3h33.com/cartographie-mondiale-des-usages-de-l-ia/): étude 2024–2026 sur les usages réels de l'IA dans le monde, 90 pages, plus de 90 sources, 13 zones géographiques, PDF gratuit.
-- [Mon nouveau métier : le vibe coding](https://3h33.com/pour/alexandre-vibe-coding/): le message vidéo d'Alexandre Stopnicki, en moins d'une minute.
+- [Mon nouveau métier : le vibe coding](https://3h33.com/pour/alexandre-vibe-coding/): le message vidéo d'Alexandre Stopnicki, en une minute.
 
 ## Applications éditées par 3h33
 
@@ -91,16 +91,25 @@ Contact : https://3h33.com/contact/ — les réponses aux questions fréquentes 
 
 Podcast gratuit de 3h33 : https://3h33.com/podcast-voix-de-lia/ (flux RSS : https://3h33.com/podcast-voix-de-lia/flux.xml). Chaque portrait cite ses sources sous l'épisode.
 
-- [Éric Briones : fils de couturière, planneur du luxe](https://3h33.com/podcast-voix-de-lia/eric-briones/)
-- [Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée](https://3h33.com/podcast-voix-de-lia/sandra-le-grand/)
-- [Carlos Diaz : l'ancien prof devenu voix de Silicon Carne](https://3h33.com/podcast-voix-de-lia/carlos-diaz/)
+- [Jean-Baptiste Rudelle : de la saladerie au Nasdaq](https://3h33.com/podcast-voix-de-lia/jean-baptiste-rudelle/)
+- [Céline Lazorthes : de la cagnotte Leetchi au suivi du cancer](https://3h33.com/podcast-voix-de-lia/celine-lazorthes/)
+- [Alexandre Lebrun, l'homme des machines qui parlent](https://3h33.com/podcast-voix-de-lia/alexandre-lebrun/)
+- [Patrick Robin : du Minitel à la French Tech](https://3h33.com/podcast-voix-de-lia/patrick-robin/)
 - [Alexandre Michelin : de Nam June Paik au KIF](https://3h33.com/podcast-voix-de-lia/alexandre-michelin/)
-- [Christophe Dané : l'enfant qui rêvait de la Lune](https://3h33.com/podcast-voix-de-lia/christophe-dane/)
+- [Carlos Diaz : l'ancien prof devenu voix de Silicon Carne](https://3h33.com/podcast-voix-de-lia/carlos-diaz/)
+- [Éric Briones : fils de couturière, planneur du luxe](https://3h33.com/podcast-voix-de-lia/eric-briones/)
 - [Vincent Montet : le « fainéant » qui rend l'IA obligatoire](https://3h33.com/podcast-voix-de-lia/vincent-montet/)
+- [Christophe Dané : l'enfant qui rêvait de la Lune](https://3h33.com/podcast-voix-de-lia/christophe-dane/)
 - [Driss Aït Youssef : la sécurité, une affaire de libertés](https://3h33.com/podcast-voix-de-lia/driss-ait-youssef/)
-- [Marc Simoncini : le poète qui a tout perdu avant Meetic](https://3h33.com/podcast-voix-de-lia/marc-simoncini/)
-- [Marc Ménasé : des PC de la rue Montgallet à Founders Future](https://3h33.com/podcast-voix-de-lia/marc-menase/)
 - [Louis Duroulle : de la préfecture au MBA qu'il dirige](https://3h33.com/podcast-voix-de-lia/louis-duroulle/)
+- [Marc Ménasé : des PC de la rue Montgallet à Founders Future](https://3h33.com/podcast-voix-de-lia/marc-menase/)
+- [Marc Simoncini : le poète qui a tout perdu avant Meetic](https://3h33.com/podcast-voix-de-lia/marc-simoncini/)
+- [Pascal Gayat : pionnier de la pub en ligne et des Cas d'OR](https://3h33.com/podcast-voix-de-lia/pascal-gayat/)
+- [Michel Ruiz : de l'armurerie militaire à l'IA incarnée](https://3h33.com/podcast-voix-de-lia/michel-ruiz/)
+- [Pierre Bellanger : des radios libres à l'IA assistée](https://3h33.com/podcast-voix-de-lia/pierre-bellanger/)
+- [Marie-Christine Levet : de Lycos à l'école de demain](https://3h33.com/podcast-voix-de-lia/marie-christine-levet/)
+- [Jérémy Bendayan, le vendeur de pelles qui parie contre l'IA](https://3h33.com/podcast-voix-de-lia/jeremy-bendayan/)
+- [Sandra Le Grand : elle a eu l'envie avant d'avoir l'idée](https://3h33.com/podcast-voix-de-lia/sandra-le-grand/)
 - [Benjamin Perret : les journaux avant de savoir lire](https://3h33.com/podcast-voix-de-lia/benjamin-perret/)
 - [Mike Krieger : de la première photo d'Instagram à Anthropic](https://3h33.com/podcast-voix-de-lia/mike-krieger/)
 - [Arvind Jain, le chèque en blanc et la recherche « pas cool »](https://3h33.com/podcast-voix-de-lia/arvind-jain/)
@@ -127,7 +136,6 @@ Podcast gratuit de 3h33 : https://3h33.com/podcast-voix-de-lia/ (flux RSS : http
 - [Mikey Shulman : des bœufs au sous-sol aux milliards de Suno](https://3h33.com/podcast-voix-de-lia/mikey-shulman/)
 - [Lei Jun : du clavier en papier à Xiaomi, voitures et IA](https://3h33.com/podcast-voix-de-lia/lei-jun/)
 - [Jakub Pachocki : sceptique, puis chef scientifique d'OpenAI](https://3h33.com/podcast-voix-de-lia/jakub-pachocki/)
-- [Jean-Baptiste Rudelle : de la saladerie au Nasdaq](https://3h33.com/podcast-voix-de-lia/jean-baptiste-rudelle/)
 - [Thibaud Hug de Larauze : le pari fou de Back Market](https://3h33.com/podcast-voix-de-lia/thibaud-hug-de-larauze/)
 - [Timothée Lacroix, le normalien qui fait tourner Mistral](https://3h33.com/podcast-voix-de-lia/timothee-lacroix/)
 - [Nicolas Julia : l'envol et le retour sur terre de Sorare](https://3h33.com/podcast-voix-de-lia/nicolas-julia/)
@@ -139,7 +147,6 @@ Podcast gratuit de 3h33 : https://3h33.com/podcast-voix-de-lia/ (flux RSS : http
 - [Joëlle Barral : de l'IRM à Google DeepMind](https://3h33.com/podcast-voix-de-lia/joelle-barral/)
 - [Lucie Basch : de Too Good To Go à Poppins](https://3h33.com/podcast-voix-de-lia/lucie-basch/)
 - [Luc Julia, de Siri à Renault : « l'IA n'existe pas »](https://3h33.com/podcast-voix-de-lia/luc-julia/)
-- [Céline Lazorthes : de la cagnotte Leetchi au suivi du cancer](https://3h33.com/podcast-voix-de-lia/celine-lazorthes/)
 - [Sara Blakely : des ciseaux, un collant et un milliard](https://3h33.com/podcast-voix-de-lia/sara-blakely/)
 - [Cristóbal Valenzuela : la thèse jamais rendue devenue Runway](https://3h33.com/podcast-voix-de-lia/cristobal-valenzuela/)
 - [Alex Karp : le philosophe de Palantir qui a choisi son camp](https://3h33.com/podcast-voix-de-lia/alex-karp/)
@@ -161,8 +168,6 @@ Podcast gratuit de 3h33 : https://3h33.com/podcast-voix-de-lia/ (flux RSS : http
 - [Jacques-Antoine Granjon : le soldeur de vente-privee](https://3h33.com/podcast-voix-de-lia/jacques-antoine-granjon/)
 - [Xavier Niel : de la Freebox à l'IA ouverte](https://3h33.com/podcast-voix-de-lia/xavier-niel/)
 - [Éric Larchevêque : du poker au bitcoin, puis Ledger](https://3h33.com/podcast-voix-de-lia/eric-larcheveque/)
-- [Patrick Robin : du Minitel à la French Tech](https://3h33.com/podcast-voix-de-lia/patrick-robin/)
-- [Alexandre Lebrun, l'homme des machines qui parlent](https://3h33.com/podcast-voix-de-lia/alexandre-lebrun/)
 - [Octave Klaba : de Nowa Ruda au cloud européen](https://3h33.com/podcast-voix-de-lia/octave-klaba/)
 - [Aurélie Jean : derrière les algorithmes, les humains](https://3h33.com/podcast-voix-de-lia/aurelie-jean/)
 - [Brett Adcock : du maïs de l'Illinois aux robots de Figure](https://3h33.com/podcast-voix-de-lia/brett-adcock/)
@@ -233,7 +238,7 @@ Podcast gratuit de 3h33 : https://3h33.com/podcast-voix-de-lia/ (flux RSS : http
 - [Comprendre la guerre des puces · une playlist à thème des Voix de l'IA](https://3h33.com/podcast-voix-de-lia/parcours/guerre-des-puces/)
 - [Elles font l'I.A. : du laboratoire à votre écran · une playlist à thème des Voix de l'IA](https://3h33.com/podcast-voix-de-lia/parcours/elles-font-l-ia/)
 - [De la chute au succès · une playlist à thème des Voix de l'IA](https://3h33.com/podcast-voix-de-lia/parcours/de-la-chute-au-succes/)
-- [Le grand quiz des Voix de l'IA · 1084 questions](https://3h33.com/podcast-voix-de-lia/quiz/)
+- [Le grand quiz des Voix de l'IA · 1119 questions](https://3h33.com/podcast-voix-de-lia/quiz/)
 
 ## Profils officiels
 

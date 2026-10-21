@@ -1,7 +1,7 @@
 ---
 titre: "Vibe coding : construire des outils en dialoguant avec l'IA"
 titre_seo: "Vibe coding en entreprise : de l'idée à l'outil en ligne · 3h33"
-description: "Le vibe coding consiste à fabriquer un logiciel en dialoguant avec une IA. Ce que ça change pour une entreprise, et ce que ça ne remplace pas."
+description: "Le vibe coding : fabriquer un logiciel en le décrivant en français à une IA. Ce que ça change pour une entreprise, des exemples, et comment lancer votre projet."
 url: /vibe-coding/
 gabarit: vibe
 dessin: "flux-vibecoding.jpg|Des mains au clavier et une structure qui s'assemble au-dessus de l'écran, croquis au crayon"
@@ -22,6 +22,8 @@ faq:
   - Le code produit par l'IA est-il sûr ?|Pas par défaut. Une IA écrit vite du code qui fonctionne, mais elle peut laisser une clé d'accès en clair, oublier un contrôle de droits ou une limite de requêtes. Avant toute mise en ligne, nous relisons, testons et vérifions la sécurité et les données personnelles. C'est la partie du travail que nous ne déléguons pas.
   - Peut-on mettre en production une application construite en vibe coding ?|Oui, à condition de la traiter comme n'importe quel logiciel : code versionné, tests, sauvegardes, surveillance, hébergement maîtrisé. Plusieurs sites et applications de la [galaxie 3h33](/galaxie/) ont été construits ainsi et tournent tous les jours.
   - Qui maintient l'outil une fois livré ?|Vous, si vous le souhaitez : le code est à vous, documenté, et nous apprenons à vos équipes à le faire évoluer en dialoguant avec l'IA. Ou nous, pour les outils critiques. Dans les deux cas, pas de dépendance à une plateforme propriétaire.
+  - Quels projets peut-on réaliser en vibe coding ?|Une application ou un outil interne sur mesure, par exemple pour remplacer des fichiers Excel ; un outil qui relie des logiciels qui ne se parlent pas ; un agent qui répond à l'écrit ou à la voix ; un site qui guide et prépare la demande ; et même des contenus, comme un podcast entier. Les exemples de cette page ont tous été fabriqués ainsi.
+  - Combien coûte un projet en vibe coding ?|Cela dépend de ce que l'outil doit faire et de ce qu'il deviendra. Le plus simple est d'en parler : le premier échange, de vingt minutes, est gratuit, et une première version en une demi-journée permet de juger sur pièce avant d'aller plus loin.
   - Comment devenir vibe coder ?|En construisant, tout simplement, sur un vrai besoin plutôt que sur un tutoriel. Une [session Forge](/forge/) ou une [formation Claude](/formation-claude/) donnent la méthode : décrire précisément, découper, vérifier à chaque étape, garder la main sur ce qui part en production.
 ---
 
