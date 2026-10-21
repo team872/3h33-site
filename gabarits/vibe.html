@@ -344,7 +344,7 @@ document.querySelectorAll(".menu a").forEach(function(a){a.addEventListener("cli
 /* chaque exemple (titre « ### » et ce qui le suit jusqu'à sa capture) devient une carte de verre */
 document.querySelectorAll(".prose h3").forEach(function(h){
   var c=document.createElement("div");c.className="exemple verre";h.parentNode.insertBefore(c,h);
-  var n=h;while(n&&!(n!==h&&/^H[23]$/.test(n.tagName))&&!(n.classList&&n.classList.contains("encadre"))){var s=n.nextElementSibling;c.appendChild(n);if(n.classList&&n.classList.contains("vignette"))break;n=s;}
+  var n=h;while(n&&!(n!==h&&/^H[23]$/.test(n.tagName))&&!(n.classList&&(n.classList.contains("encadre")||n.classList.contains("suite")))){var s=n.nextElementSibling;c.appendChild(n);if(n.classList&&n.classList.contains("vignette"))break;n=s;}
 });
 /* les cartes apparaissent en montant ; les tuiles bougent un peu avec le défilement (relief) */
 var cartes=document.querySelectorAll(".apparait,.exemple,.prose ul li,.prose ol li,.en-bref,.faq-page");
