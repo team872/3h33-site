@@ -2209,6 +2209,11 @@
       // « J'en suis là » (16/10/2026, Alexandre : « il faut pouvoir revenir sur son questionnaire ») : le quiz d'un
       // portrait en cours est gardé dans ce navigateur (ordre, question, réponses) ; on le reprend où on l'a laissé
       var cleEnCours = "quiz-en-cours:" + o.id, reponses = {}, actif = false;
+      // Mesure d'audience du quiz (22/10/2026, Alexandre : « est-ce qu'ils ont fait le quiz ? ») : Umami de 3h33.com,
+      // sans cookie (lib/mesure.mjs) ; rien en aperçu (#apercu). Début, chaque réponse, score final, défi.
+      function mesurer(n, d) {
+        try { if (location.hash !== "#apercu" && window.umami && umami.track) { d = d || {}; d.quiz = o.mode === "grand" ? "grand quiz" : String(o.id || ""); umami.track(n, d); } } catch (e) {}
+      }
       function sauver() {
         if (o.mode !== "portrait" || !actif) return;
         ecrireLS(cleEnCours, JSON.stringify({ ordre: liste.map(function (q) { return q.id; }), i: i, bonnes: bonnes, ratees: ratees.map(function (q) { return q.id; }), reponses: reponses }));
@@ -2263,6 +2268,7 @@
         var b = el("button", "btn btn-ghost qz-defier", "Défier un ami");
         b.type = "button";
         b.addEventListener("click", function () {
+          mesurer("quiz-defi", { texte: texte.slice(0, 80) });
           var url = location.href;
           if (navigator.share) { navigator.share({ title: "Les Voix de l'IA", text: texte, url: url }).catch(function () {}); return; }
           var ok = function () { var t = b.querySelector(".qz-fin-btn-titre") || b; t.textContent = "Message copié, collez-le à un ami"; setTimeout(function () { t.textContent = "Défier un ami"; }, 2600); };
@@ -2353,6 +2359,7 @@
           else b.classList.add("autre");
         });
         if (!rejeu) {
+          mesurer("quiz-reponse", { juste: juste ? "oui" : "non", question: o.mode === "grand" ? "" : String(i + 1) });
           if (juste) bonnes++; else ratees.push(q);
           reponses[q.id] = k;
           sauver();
@@ -2501,6 +2508,7 @@
         // à réécouter ; chaque palier met en avant la bonne suite. La voix : un son court commun à tous les portraits
         // (audio/quiz-fin/<palier>.mp3), joué si les voix du quiz sont actives ; absent, rien ne se passe.
         var palier = r === 1 ? "parfait" : r >= 0.75 ? "presque" : r >= 0.5 ? "pasmal" : "reecouter";
+        mesurer("quiz-fin", { score: bonnes, sur: n, palier: palier });
         var mot = { parfait: "Sans faute\u00a0! Vous avez tout retenu.", presque: "Presque parfait\u00a0!", pasmal: "Pas mal\u00a0! Quelques passages à réécouter.", reecouter: "Une deuxième écoute s'impose\u00a0?" }[palier];
         var titre = el("h3", "qz-fin-mot", mot);
         titre.tabIndex = -1;
@@ -2555,6 +2563,7 @@
         i = 0; bonnes = 0; ratees = []; reponses = {}; actif = true;
         if (o.mode === "grand") courante = tirer(); else courante = liste[0];
         sauver();
+        mesurer("quiz-debut", { questions: o.mode === "grand" ? 0 : liste.length, erreurs_seulement: seulement ? "oui" : "non" });
         afficher();
       }
       // reprend le quiz gardé (et remontre la réponse déjà donnée à la question en cours) ; faux s'il n'y en a pas
@@ -2658,8 +2667,8 @@
           cv.innerHTML = '<p>Ada et Alan vous donnent les réponses à voix haute.</p>';
           var avec = el("button", "qz-cv-avec", "Avec les voix (conseillé)"), sans = el("button", "qz-cv-sans", "Sans le son");
           avec.type = sans.type = "button";
-          avec.addEventListener("click", function () { ecrireLS("quiz-voix", "oui"); cv.remove(); $$(".qz-hp").forEach(function (x) { if (x.majHp) x.majHp(); }); });
-          sans.addEventListener("click", function () { ecrireLS("quiz-voix", "non"); couperPassage(); if (lecteurVoix) lecteurVoix.pause(); cv.remove(); $$(".qz-hp").forEach(function (x) { if (x.majHp) x.majHp(); }); });
+          avec.addEventListener("click", function () { try { if (location.hash !== "#apercu" && window.umami) umami.track("quiz-voix", { choix: "avec les voix", quiz: String(dq.id || "") }); } catch (e) {} ecrireLS("quiz-voix", "oui"); cv.remove(); $$(".qz-hp").forEach(function (x) { if (x.majHp) x.majHp(); }); });
+          sans.addEventListener("click", function () { try { if (location.hash !== "#apercu" && window.umami) umami.track("quiz-voix", { choix: "sans le son", quiz: String(dq.id || "") }); } catch (e) {} ecrireLS("quiz-voix", "non"); couperPassage(); if (lecteurVoix) lecteurVoix.pause(); cv.remove(); $$(".qz-hp").forEach(function (x) { if (x.majHp) x.majHp(); }); });
           cv.appendChild(avec); cv.appendChild(sans);
           mention.insertAdjacentElement("afterend", cv);
         }

@@ -39,7 +39,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="/podcast-voix-de-lia/style.css?v=d44fec9d">
+<link rel="stylesheet" href="/podcast-voix-de-lia/style.css?v=d7de9c1a">
 <script>document.documentElement.classList.add('js')</script>
 <script defer src="https://stats.3h33.com/script.js" data-website-id="9456f661-e1ea-4c9d-90bc-dec50970f3b4" data-domains="3h33.com" data-tag="voix-de-lia" data-do-not-track="true" data-before-send="mesureAvant"></script>
 <script>
@@ -47,15 +47,25 @@
 window.mesureAvant=function(t,p){return location.hash==="#apercu"?false:p};
 function envoi(n,d){try{if(location.hash==="#apercu")return;if(window.umami&&umami.track)umami.track(n,d);}catch(e){}}
 function nom(s){try{return decodeURIComponent((s||"").split("?")[0].split("/").pop())||"?"}catch(e){return "?"}}
-var vus=new WeakMap();
-function etat(m){var s=vus.get(m);if(!s){s={};vus.set(m,s)}return s}
-document.addEventListener("play",function(ev){var m=ev.target,s=etat(m);if(s.joue)return;s.joue=1;envoi("ecoute",{fichier:nom(m.currentSrc||m.src),type:m.tagName.toLowerCase()})},true);
-document.addEventListener("timeupdate",function(ev){var m=ev.target,s=etat(m);if(s.moitie||!m.duration||m.currentTime<m.duration/2)return;s.moitie=1;envoi("ecoute-moitie",{fichier:nom(m.currentSrc||m.src)})},true);
+var vus=new WeakMap(),joues=[],PALIERS=[10,25,50,75,90];
+function etat(m){var s=vus.get(m);if(!s){s={ecoute:0,der:null,paliers:{},envoye:-1};vus.set(m,s)}return s}
+function chapitre(t){var c="",d=document.querySelectorAll("[data-titre][data-debut]");for(var i=0;i<d.length;i++){var x=Number(d[i].getAttribute("data-debut"));if(x<=t+0.5)c=d[i].getAttribute("data-titre");}return c.slice(0,60)}
+function arret(){joues.forEach(function(m){var s=etat(m),e=Math.round(s.ecoute);if(e<1||e===s.envoye)return;s.envoye=e;var du=m.duration&&isFinite(m.duration)?Math.round(m.duration):0;envoi("ecoute-arret",{fichier:nom(m.currentSrc||m.src),ecoute_s:e,position_s:Math.round(m.currentTime||0),duree_s:du,part:du?Math.min(100,Math.round(100*e/du)):0,chapitre:chapitre(m.currentTime||0)})})}
+document.addEventListener("play",function(ev){var m=ev.target,s=etat(m);s.der=m.currentTime;if(joues.indexOf(m)<0)joues.push(m);if(s.joue)return;s.joue=1;envoi("ecoute",{fichier:nom(m.currentSrc||m.src),type:m.tagName.toLowerCase()})},true);
+document.addEventListener("timeupdate",function(ev){var m=ev.target,s=etat(m),t=m.currentTime;
+if(s.der!==null&&!m.paused){var dt=t-s.der;if(dt>0&&dt<1.5*(m.playbackRate||1))s.ecoute+=dt;}s.der=t;
+if(!m.duration||!isFinite(m.duration))return;
+PALIERS.forEach(function(p){if(!s.paliers[p]&&s.ecoute>=m.duration*p/100){s.paliers[p]=1;envoi("ecoute-palier",{fichier:nom(m.currentSrc||m.src),palier:p})}});
+if(s.moitie||t<m.duration/2)return;s.moitie=1;envoi("ecoute-moitie",{fichier:nom(m.currentSrc||m.src)})},true);
+document.addEventListener("seeking",function(ev){etat(ev.target).der=null},true);
 document.addEventListener("ended",function(ev){var m=ev.target,s=etat(m);if(s.fin)return;s.fin=1;envoi("ecoute-fin",{fichier:nom(m.currentSrc||m.src)})},true);
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")arret()});
+window.addEventListener("pagehide",arret);
 document.addEventListener("click",function(ev){var c=ev.target.closest&&ev.target.closest("a,button");if(!c)return;
 var txt=(c.getAttribute("aria-label")||c.textContent||"").replace(/\s+/g," ").trim().slice(0,60);
 if(c.matches("[data-quiz-ouvrir]")||/faire le quiz|reprendre le quiz|revenir au quiz/i.test(txt))return envoi("quiz-ouvert",{bouton:txt});
-if(c.classList.contains("qz-reponse"))return envoi("quiz-reponse");
+if(c.classList.contains("qz-reponse"))return;
+if(c.matches(".ecouter-ici,.chapitres a[data-debut]")){var h3=c.closest("[data-titre]");return envoi("chapitre",{titre:(h3?h3.getAttribute("data-titre"):txt).slice(0,60),a_s:Math.round(Number(c.getAttribute("data-debut"))||0)})}
 var h=c.tagName==="A"?c.getAttribute("href")||"":"";
 if(/podcasts\.apple|open\.spotify|deezer|music\.amazon|youtube\.com\/playlist|flux\.xml|overcast|pocketcasts|podcastaddict/i.test(h))return envoi("abonnement",{lien:h.replace(/^https?:\/\//,"").slice(0,80)});
 if(/^(whatsapp:|mailto:|sms:)|wa\.me|api\.whatsapp|linkedin\.com\/(sharing|share|feed\/\?shareActive)|facebook\.com\/sharer|twitter\.com\/intent|x\.com\/intent|bsky\.app\/intent/i.test(h)||/partager|copier le lien|share/i.test(txt))return envoi("partage",{via:h?(/^https?:/i.test(h)?h.replace(/^https?:\/\//i,"").split("/")[0]:h.split(":")[0]):txt});
@@ -408,6 +418,6 @@ if(/^https?:/i.test(h)){try{var u=new URL(h,location.href);if(u.host!==location.
     <p class="rf-pied"><a href="/podcast-voix-de-lia/#recherche">Tous les portraits, par familles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
   </div>
 </dialog>
-<script src="/podcast-voix-de-lia/site.js?v=d44fec9d" defer></script>
+<script src="/podcast-voix-de-lia/site.js?v=d7de9c1a" defer></script>
 </body>
 </html>
