@@ -20,7 +20,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Wed, 21 Oct 2026 21:35:25 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 22 Oct 2026 09:23:40 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA · la tech racontée par des IA</title>
@@ -38,6 +38,50 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Augustin Garcia : l'IA testée, discutée, remise à sa juste place</title>
+      <itunes:title>Augustin Garcia : l'IA testée, discutée, remise à sa juste place</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/augustin-garcia/</link>
+      <guid isPermaLink="false">voix-de-lia-augustin-garcia</guid>
+      <pubDate>Thu, 22 Oct 2026 09:23:40 GMT</pubDate>
+      <description>Il se dit « dinosaure de la presse informatique ». Depuis Biarritz, Augustin Garcia a fondé IN DATA VERITAS, un média collaboratif sur l'intelligence artificielle, et ses deux émissions, IA DÉBAT et IA PLUS KA : une IA qu'on teste et qu'on discute, ni gadget magique, ni apocalypse automatique.
+
+Épisode enregistré le 22 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/augustin-garcia/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il se dit « dinosaure de la presse informatique ». Depuis Biarritz, Augustin Garcia a fondé IN DATA VERITAS, un média collaboratif sur l&#39;intelligence artificielle, et ses deux émissions, IA DÉBAT et IA PLUS KA : une IA qu&#39;on teste et qu&#39;on discute, ni gadget magique, ni apocalypse automatique.</p><p>Épisode enregistré le 22 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/augustin-garcia/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/augustin-garcia.mp3?v=d19b8746" length="12998492" type="audio/mpeg"/>
+      <itunes:duration>538</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/augustin-garcia-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/augustin-garcia/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/augustin-garcia/chapitres.json?v=1bf8b823" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Nicolas Fensch, fondateur de GeniArt : l'IA qui crée à plusieurs</title>
+      <itunes:title>Nicolas Fensch, fondateur de GeniArt : l'IA qui crée à plusieurs</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/nicolas-fensch/</link>
+      <guid isPermaLink="false">voix-de-lia-nicolas-fensch</guid>
+      <pubDate>Thu, 22 Oct 2026 08:29:22 GMT</pubDate>
+      <description>Formé au cinéma d'animation, il a vécu treize ans en Asie du Sud-Est avant de lancer, au printemps 2023, une communauté francophone autour de Midjourney. Nicolas Fensch, « Nico », fondateur de GeniArt, a vu naître sur son Discord un clip de rap fait par l'IA et primé aux AI Film Awards de Cannes 2025.
+
+Épisode enregistré le 22 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/nicolas-fensch/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Formé au cinéma d&#39;animation, il a vécu treize ans en Asie du Sud-Est avant de lancer, au printemps 2023, une communauté francophone autour de Midjourney. Nicolas Fensch, « Nico », fondateur de GeniArt, a vu naître sur son Discord un clip de rap fait par l&#39;IA et primé aux AI Film Awards de Cannes 2025.</p><p>Épisode enregistré le 22 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/nicolas-fensch/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/nicolas-fensch.mp3?v=017783b6" length="12368707" type="audio/mpeg"/>
+      <itunes:duration>511</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/nicolas-fensch-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/nicolas-fensch/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/nicolas-fensch/chapitres.json?v=d943d30c" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Jean-Baptiste Rudelle : de la saladerie au Nasdaq</title>
       <itunes:title>Jean-Baptiste Rudelle : de la saladerie au Nasdaq</itunes:title>
