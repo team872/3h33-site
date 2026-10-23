@@ -20,7 +20,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Fri, 23 Oct 2026 13:07:55 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 15:58:06 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA · la tech racontée par des IA</title>
@@ -38,6 +38,28 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Jean-David Blanc : du 40 30 20 10 d'AlloCiné à la télé de Molotov</title>
+      <itunes:title>Jean-David Blanc : du 40 30 20 10 d'AlloCiné à la télé de Molotov</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/jean-david-blanc/</link>
+      <guid isPermaLink="false">voix-de-lia-jean-david-blanc</guid>
+      <pubDate>Fri, 23 Oct 2026 15:58:06 GMT</pubDate>
+      <description>Enfant, il découvrait l'ordinateur dans la vitrine d'un magasin ; en 1993, il ouvrait le 40 30 20 10, le numéro gratuit d'AlloCiné ; en 2016, il lançait Molotov. Portrait de Jean-David Blanc, l'entrepreneur qui aime faire sauter les verrous.
+
+Épisode enregistré le 23 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/jean-david-blanc/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Enfant, il découvrait l&#39;ordinateur dans la vitrine d&#39;un magasin ; en 1993, il ouvrait le 40 30 20 10, le numéro gratuit d&#39;AlloCiné ; en 2016, il lançait Molotov. Portrait de Jean-David Blanc, l&#39;entrepreneur qui aime faire sauter les verrous.</p><p>Épisode enregistré le 23 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/jean-david-blanc/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/jean-david-blanc.mp3?v=126c3bf3" length="13072631" type="audio/mpeg"/>
+      <itunes:duration>541</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/jean-david-blanc-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/jean-david-blanc/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/jean-david-blanc/chapitres.json?v=f3d32354" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Marc Simoncini : le poète qui a tout perdu avant de fonder Meetic</title>
       <itunes:title>Marc Simoncini : le poète qui a tout perdu avant de fonder Meetic</itunes:title>
