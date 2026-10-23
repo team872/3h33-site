@@ -20,7 +20,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Fri, 23 Oct 2026 15:58:06 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 17:36:50 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA · la tech racontée par des IA</title>
@@ -38,6 +38,28 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Marie-Laure Sauty de Chalon : d'aufeminin au financement du cinéma</title>
+      <itunes:title>Marie-Laure Sauty de Chalon : d'aufeminin au financement du cinéma</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/marie-laure-sauty-de-chalon/</link>
+      <guid isPermaLink="false">voix-de-lia-marie-laure-sauty-de-chalon</guid>
+      <pubDate>Fri, 23 Oct 2026 17:36:50 GMT</pubDate>
+      <description>Elle a commencé à la moitié du SMIC dans un supplément économique, a pris la tête de Carat Interactive dès 1997 et a dirigé aufeminin de 2010 à 2018. Marie-Laure Sauty de Chalon a fondé Factor K et préside, depuis 2022, l'établissement qui finance le cinéma et la culture.
+
+Épisode enregistré le 23 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/marie-laure-sauty-de-chalon/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Elle a commencé à la moitié du SMIC dans un supplément économique, a pris la tête de Carat Interactive dès 1997 et a dirigé aufeminin de 2010 à 2018. Marie-Laure Sauty de Chalon a fondé Factor K et préside, depuis 2022, l&#39;établissement qui finance le cinéma et la culture.</p><p>Épisode enregistré le 23 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/marie-laure-sauty-de-chalon/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/marie-laure-sauty-de-chalon.mp3?v=db9a471c" length="14701075" type="audio/mpeg"/>
+      <itunes:duration>609</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/marie-laure-sauty-de-chalon-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/marie-laure-sauty-de-chalon/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/marie-laure-sauty-de-chalon/chapitres.json?v=a4eb7b4a" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Jean-David Blanc : du 40 30 20 10 d'AlloCiné à la télé de Molotov</title>
       <itunes:title>Jean-David Blanc : du 40 30 20 10 d'AlloCiné à la télé de Molotov</itunes:title>
