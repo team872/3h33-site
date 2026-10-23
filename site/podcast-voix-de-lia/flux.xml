@@ -20,7 +20,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Fri, 23 Oct 2026 10:37:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 13:07:55 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA · la tech racontée par des IA</title>
@@ -38,6 +38,28 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Marc Simoncini : le poète qui a tout perdu avant de fonder Meetic</title>
+      <itunes:title>Marc Simoncini : le poète qui a tout perdu avant de fonder Meetic</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/marc-simoncini/</link>
+      <guid isPermaLink="false">voix-de-lia-marc-simoncini</guid>
+      <pubDate>Fri, 23 Oct 2026 13:07:55 GMT</pubDate>
+      <description>Le fils que son père présentait comme « poète » a choisi l'informatique par ordre alphabétique, découvert Internet un biberon à la main, tout perdu après iFrance, fondé Meetic… puis s'est mis au vibe coding en 2026.
+
+Épisode enregistré le 23 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/marc-simoncini/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Le fils que son père présentait comme « poète » a choisi l&#39;informatique par ordre alphabétique, découvert Internet un biberon à la main, tout perdu après iFrance, fondé Meetic… puis s&#39;est mis au vibe coding en 2026.</p><p>Épisode enregistré le 23 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/marc-simoncini/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/marc-simoncini.mp3?v=ce510f7b" length="15065320" type="audio/mpeg"/>
+      <itunes:duration>623</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/marc-simoncini-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/marc-simoncini/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/marc-simoncini/chapitres.json?v=11aaab5f" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Pierre Bellanger : des radios libres à l'« intelligence assistée »</title>
       <itunes:title>Pierre Bellanger : des radios libres à l'« intelligence assistée »</itunes:title>
@@ -411,28 +433,6 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/benjamin-perret-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/benjamin-perret/transcription.html" type="text/html" language="fr"/>
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/benjamin-perret/chapitres.json?v=3d0c3013" type="application/json+chapters"/>
-    </item>
-    <item>
-      <title>Marc Simoncini : le poète qui a tout perdu avant de fonder Meetic</title>
-      <itunes:title>Marc Simoncini : le poète qui a tout perdu avant de fonder Meetic</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/marc-simoncini/</link>
-      <guid isPermaLink="false">voix-de-lia-marc-simoncini</guid>
-      <pubDate>Wed, 21 Oct 2026 20:40:21 GMT</pubDate>
-      <description>Le fils que son père présentait comme « poète » a choisi l'informatique par ordre alphabétique, découvert Internet un biberon à la main, tout perdu après iFrance, fondé Meetic… puis s'est mis au vibe coding en 2026.
-
-Épisode enregistré le 21 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/marc-simoncini/
-
-Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Le fils que son père présentait comme « poète » a choisi l&#39;informatique par ordre alphabétique, découvert Internet un biberon à la main, tout perdu après iFrance, fondé Meetic… puis s&#39;est mis au vibe coding en 2026.</p><p>Épisode enregistré le 21 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/marc-simoncini/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/marc-simoncini.mp3?v=e1617696" length="12637186" type="audio/mpeg"/>
-      <itunes:duration>522</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/marc-simoncini-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/marc-simoncini/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/marc-simoncini/chapitres.json?v=7d6e71fe" type="application/json+chapters"/>
     </item>
     <item>
       <title>Marie-Christine Levet : de Lycos à l'école, et l'IA qui fait apprendre</title>
