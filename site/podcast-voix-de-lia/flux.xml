@@ -20,7 +20,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Thu, 22 Oct 2026 09:23:40 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 10:37:00 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA · la tech racontée par des IA</title>
@@ -38,6 +38,50 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Pierre Bellanger : des radios libres à l'« intelligence assistée »</title>
+      <itunes:title>Pierre Bellanger : des radios libres à l'« intelligence assistée »</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/pierre-bellanger/</link>
+      <guid isPermaLink="false">voix-de-lia-pierre-bellanger</guid>
+      <pubDate>Fri, 23 Oct 2026 10:37:00 GMT</pubDate>
+      <description>Apprenti biologiste à seize ans, pionnier des radios libres, fondateur de Skyrock et des skyblogs : Pierre Bellanger défend la souveraineté numérique et préfère parler d'« intelligence assistée ».
+
+Épisode enregistré le 23 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/pierre-bellanger/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Apprenti biologiste à seize ans, pionnier des radios libres, fondateur de Skyrock et des skyblogs : Pierre Bellanger défend la souveraineté numérique et préfère parler d&#39;« intelligence assistée ».</p><p>Épisode enregistré le 23 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/pierre-bellanger/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/pierre-bellanger.mp3?v=b8ab6fdd" length="12319965" type="audio/mpeg"/>
+      <itunes:duration>510</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/pierre-bellanger-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/pierre-bellanger/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/pierre-bellanger/chapitres.json?v=b633cee1" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Pascal Gayat : le pionnier de la pub en ligne qui couronne l'IA</title>
+      <itunes:title>Pascal Gayat : le pionnier de la pub en ligne qui couronne l'IA</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/pascal-gayat/</link>
+      <guid isPermaLink="false">voix-de-lia-pascal-gayat</guid>
+      <pubDate>Fri, 23 Oct 2026 10:36:00 GMT</pubDate>
+      <description>Il rêvait d'un métier qui n'existait pas : en 1996, Pascal Gayat vend de la publicité sur Internet en France, passe par Overture et Yahoo!, puis raconte l'histoire du Web français et fonde les Cas d'OR, dont une édition consacrée à l'IA.
+
+Épisode enregistré le 23 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/pascal-gayat/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il rêvait d&#39;un métier qui n&#39;existait pas : en 1996, Pascal Gayat vend de la publicité sur Internet en France, passe par Overture et Yahoo!, puis raconte l&#39;histoire du Web français et fonde les Cas d&#39;OR, dont une édition consacrée à l&#39;IA.</p><p>Épisode enregistré le 23 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/pascal-gayat/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/pascal-gayat.mp3?v=f5ecf850" length="12780499" type="audio/mpeg"/>
+      <itunes:duration>529</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/pascal-gayat-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/pascal-gayat/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/pascal-gayat/chapitres.json?v=ece5cb62" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Augustin Garcia : l'IA testée, discutée, remise à sa juste place</title>
       <itunes:title>Augustin Garcia : l'IA testée, discutée, remise à sa juste place</itunes:title>
@@ -391,28 +435,6 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/marc-simoncini/chapitres.json?v=7d6e71fe" type="application/json+chapters"/>
     </item>
     <item>
-      <title>Pascal Gayat : le pionnier de la pub en ligne qui couronne l'IA</title>
-      <itunes:title>Pascal Gayat : le pionnier de la pub en ligne qui couronne l'IA</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/pascal-gayat/</link>
-      <guid isPermaLink="false">voix-de-lia-pascal-gayat</guid>
-      <pubDate>Wed, 21 Oct 2026 20:37:50 GMT</pubDate>
-      <description>Il rêvait d'un métier qui n'existait pas : en 1996, Pascal Gayat vend de la publicité sur Internet en France, passe par Overture et Yahoo!, puis raconte l'histoire du Web français et fonde les Cas d'OR, dont une édition consacrée à l'IA.
-
-Épisode enregistré le 21 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/pascal-gayat/
-
-Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Il rêvait d&#39;un métier qui n&#39;existait pas : en 1996, Pascal Gayat vend de la publicité sur Internet en France, passe par Overture et Yahoo!, puis raconte l&#39;histoire du Web français et fonde les Cas d&#39;OR, dont une édition consacrée à l&#39;IA.</p><p>Épisode enregistré le 21 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/pascal-gayat/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/pascal-gayat.mp3?v=bd38db20" length="12759183" type="audio/mpeg"/>
-      <itunes:duration>528</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/pascal-gayat-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/pascal-gayat/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/pascal-gayat/chapitres.json?v=0ad5d4a8" type="application/json+chapters"/>
-    </item>
-    <item>
       <title>Marie-Christine Levet : de Lycos à l'école, et l'IA qui fait apprendre</title>
       <itunes:title>Marie-Christine Levet : de Lycos à l'école, et l'IA qui fait apprendre</itunes:title>
       <link>https://3h33.com/podcast-voix-de-lia/marie-christine-levet/</link>
@@ -433,28 +455,6 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
       <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/marie-christine-levet-1400.jpg"/>
       <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/marie-christine-levet/transcription.html" type="text/html" language="fr"/>
       <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/marie-christine-levet/chapitres.json?v=38fd1f0e" type="application/json+chapters"/>
-    </item>
-    <item>
-      <title>Pierre Bellanger : des radios libres à l'« intelligence assistée »</title>
-      <itunes:title>Pierre Bellanger : des radios libres à l'« intelligence assistée »</itunes:title>
-      <link>https://3h33.com/podcast-voix-de-lia/pierre-bellanger/</link>
-      <guid isPermaLink="false">voix-de-lia-pierre-bellanger</guid>
-      <pubDate>Wed, 21 Oct 2026 20:31:50 GMT</pubDate>
-      <description>Apprenti biologiste à seize ans, pionnier des radios libres, fondateur de Skyrock et des skyblogs : Pierre Bellanger défend la souveraineté numérique et préfère parler d'« intelligence assistée ».
-
-Épisode enregistré le 21 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/pierre-bellanger/
-
-Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
-      <content:encoded><![CDATA[<p>Apprenti biologiste à seize ans, pionnier des radios libres, fondateur de Skyrock et des skyblogs : Pierre Bellanger défend la souveraineté numérique et préfère parler d&#39;« intelligence assistée ».</p><p>Épisode enregistré le 21 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/pierre-bellanger/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
-      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/pierre-bellanger.mp3?v=b75fc17b" length="12318084" type="audio/mpeg"/>
-      <itunes:duration>510</itunes:duration>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:season>2</itunes:season>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:author>Alexandre Stopnicki</itunes:author>
-      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/pierre-bellanger-1400.jpg"/>
-      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/pierre-bellanger/transcription.html" type="text/html" language="fr"/>
-      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/pierre-bellanger/chapitres.json?v=b31c6735" type="application/json+chapters"/>
     </item>
     <item>
       <title>Jérémy Bendayan, le vendeur de pelles qui parie contre l'IA</title>
