@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Les Voix de l&#39;IA en vidéo et en teasers audio</title>
+<meta name="description" content="La vidéo de présentation des Voix de l&#39;IA et 3 teasers audio : les 5 géants de la tech, les femmes de la tech, l&#39;IA en une phrase. À écouter et à partager.">
+<meta name="author" content="Alexandre Stopnicki">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="generator" content="Podcast Engine — site/construire.mjs">
+<link rel="canonical" href="https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Les Voix de l'IA · Choucroute Citron">
+<meta property="og:title" content="Les Voix de l&#39;IA en vidéo et en teasers audio">
+<meta property="og:description" content="La vidéo de présentation des Voix de l&#39;IA et 3 teasers audio : les 5 géants de la tech, les femmes de la tech, l&#39;IA en une phrase. À écouter et à partager.">
+<meta property="og:url" content="https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/">
+<meta property="og:image" content="https://3h33.com/podcast-voix-de-lia/videos/presentation-partage.jpg?v=0bc8cd09">
+<meta property="og:image:secure_url" content="https://3h33.com/podcast-voix-de-lia/videos/presentation-partage.jpg?v=0bc8cd09">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Les Voix de l&#39;IA, la vidéo de présentation par Alexandre Stopnicki">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Les Voix de l&#39;IA en vidéo et en teasers audio">
+<meta name="twitter:description" content="La vidéo de présentation des Voix de l&#39;IA et 3 teasers audio : les 5 géants de la tech, les femmes de la tech, l&#39;IA en une phrase. À écouter et à partager.">
+<meta name="twitter:image" content="https://3h33.com/podcast-voix-de-lia/videos/presentation-partage.jpg?v=0bc8cd09">
+<meta name="twitter:image:alt" content="Les Voix de l&#39;IA, la vidéo de présentation par Alexandre Stopnicki">
+<meta name="theme-color" content="#0a0a0c">
+<meta name="color-scheme" content="dark">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-title" content="Les Voix de l'IA">
+<link rel="icon" href="/podcast-voix-de-lia/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/podcast-voix-de-lia/favicon.svg">
+<link rel="apple-touch-icon" href="/podcast-voix-de-lia/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Les Voix de l'IA (flux RSS du podcast)" href="https://3h33.com/podcast-voix-de-lia/flux.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="/podcast-voix-de-lia/style.css?v=4323486d">
+<script>document.documentElement.classList.add('js')</script>
+<script defer src="https://stats.3h33.com/script.js" data-website-id="9456f661-e1ea-4c9d-90bc-dec50970f3b4" data-domains="3h33.com" data-tag="voix-de-lia" data-do-not-track="true" data-before-send="mesureAvant"></script>
+<script>
+(function(){
+window.mesureAvant=function(t,p){return location.hash==="#apercu"?false:p};
+function envoi(n,d){try{if(location.hash==="#apercu")return;if(window.umami&&umami.track)umami.track(n,d);}catch(e){}}
+function nom(s){try{return decodeURIComponent((s||"").split("?")[0].split("/").pop())||"?"}catch(e){return "?"}}
+var vus=new WeakMap(),joues=[],PALIERS=[10,25,50,75,90];
+function etat(m){var s=vus.get(m);if(!s){s={ecoute:0,der:null,paliers:{},envoye:-1};vus.set(m,s)}return s}
+function chapitre(t){var c="",d=document.querySelectorAll("[data-titre][data-debut]");for(var i=0;i<d.length;i++){var x=Number(d[i].getAttribute("data-debut"));if(x<=t+0.5)c=d[i].getAttribute("data-titre");}return c.slice(0,60)}
+function arret(){joues.forEach(function(m){var s=etat(m),e=Math.round(s.ecoute);if(e<1||e===s.envoye)return;s.envoye=e;var du=m.duration&&isFinite(m.duration)?Math.round(m.duration):0;envoi("ecoute-arret",{fichier:nom(m.currentSrc||m.src),ecoute_s:e,position_s:Math.round(m.currentTime||0),duree_s:du,part:du?Math.min(100,Math.round(100*e/du)):0,chapitre:chapitre(m.currentTime||0)})})}
+document.addEventListener("play",function(ev){var m=ev.target,s=etat(m);s.der=m.currentTime;if(joues.indexOf(m)<0)joues.push(m);if(s.joue)return;s.joue=1;envoi("ecoute",{fichier:nom(m.currentSrc||m.src),type:m.tagName.toLowerCase()})},true);
+document.addEventListener("timeupdate",function(ev){var m=ev.target,s=etat(m),t=m.currentTime;
+if(s.der!==null&&!m.paused){var dt=t-s.der;if(dt>0&&dt<1.5*(m.playbackRate||1))s.ecoute+=dt;}s.der=t;
+if(!m.duration||!isFinite(m.duration))return;
+PALIERS.forEach(function(p){if(!s.paliers[p]&&s.ecoute>=m.duration*p/100){s.paliers[p]=1;envoi("ecoute-palier",{fichier:nom(m.currentSrc||m.src),palier:p})}});
+if(s.moitie||t<m.duration/2)return;s.moitie=1;envoi("ecoute-moitie",{fichier:nom(m.currentSrc||m.src)})},true);
+document.addEventListener("seeking",function(ev){etat(ev.target).der=null},true);
+document.addEventListener("ended",function(ev){var m=ev.target,s=etat(m);if(s.fin)return;s.fin=1;envoi("ecoute-fin",{fichier:nom(m.currentSrc||m.src)})},true);
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")arret()});
+window.addEventListener("pagehide",arret);
+document.addEventListener("click",function(ev){var c=ev.target.closest&&ev.target.closest("a,button");if(!c)return;
+var txt=(c.getAttribute("aria-label")||c.textContent||"").replace(/\s+/g," ").trim().slice(0,60);
+if(c.matches("[data-quiz-ouvrir]")||/faire le quiz|reprendre le quiz|revenir au quiz/i.test(txt))return envoi("quiz-ouvert",{bouton:txt});
+if(c.classList.contains("qz-reponse"))return;
+if(c.matches(".ecouter-ici,.chapitres a[data-debut]")){var h3=c.closest("[data-titre]");return envoi("chapitre",{titre:(h3?h3.getAttribute("data-titre"):txt).slice(0,60),a_s:Math.round(Number(c.getAttribute("data-debut"))||0)})}
+var h=c.tagName==="A"?c.getAttribute("href")||"":"";
+if(/podcasts\.apple|open\.spotify|deezer|music\.amazon|youtube\.com\/playlist|flux\.xml|overcast|pocketcasts|podcastaddict/i.test(h))return envoi("abonnement",{lien:h.replace(/^https?:\/\//,"").slice(0,80)});
+if(/^(whatsapp:|mailto:|sms:)|wa\.me|api\.whatsapp|linkedin\.com\/(sharing|share|feed\/\?shareActive)|facebook\.com\/sharer|twitter\.com\/intent|x\.com\/intent|bsky\.app\/intent/i.test(h)||/partager|copier le lien|share/i.test(txt))return envoi("partage",{via:h?(/^https?:/i.test(h)?h.replace(/^https?:\/\//i,"").split("/")[0]:h.split(":")[0]):txt});
+if(/^https?:/i.test(h)){try{var u=new URL(h,location.href);if(u.host!==location.host)envoi("sortie",{lien:(u.host+u.pathname).slice(0,80)})}catch(e){}}
+},true);
+})();
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/#page","url":"https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/","name":"Les Voix de l'IA en vidéo et en teasers audio","description":"La vidéo de présentation des Voix de l'IA et 3 teasers audio : les 5 géants de la tech, les femmes de la tech, l'IA en une phrase. À écouter et à partager.","inLanguage":"fr-FR","isPartOf":{"@type":"PodcastSeries","@id":"https://3h33.com/podcast-voix-de-lia/#serie","name":"Les Voix de l'IA","url":"https://3h33.com/podcast-voix-de-lia/"},"publisher":{"@type":"Organization","name":"Choucroute Citron","url":"https://choucroute-citron.com"},"primaryImageOfPage":"https://3h33.com/podcast-voix-de-lia/videos/presentation-partage.jpg?v=0bc8cd09","hasPart":[{"@id":"https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/#video"},{"@id":"https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/#geants-de-la-tech"},{"@id":"https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/#femmes-de-la-tech"},{"@id":"https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/#l-ia-en-une-phrase"}]},{"@type":"VideoObject","@id":"https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/#video","name":"Les Voix de l'IA, c'est quoi ?","description":"Alexandre Stopnicki présente Les Voix de l'IA en une minute : près de 150 portraits audio des femmes et des hommes de la tech, des faits vérifiés source par source, un quiz après chaque portrait.","thumbnailUrl":["https://3h33.com/podcast-voix-de-lia/videos/presentation.jpg?v=20eff4b4"],"uploadDate":"2026-10-24","duration":"PT1M3S","contentUrl":"https://3h33.com/podcast-voix-de-lia/videos/presentation.mp4?v=24e283d2","inLanguage":"fr-FR","transcript":"Les Voix de l'IA, c'est quoi ? Quand on parle d'intelligence artificielle, tout le monde parle de ChatGPT, de Mistral, de Claude. Mais les humains qui les ont créés, qui les connaît vraiment ? Alors, je me suis mis au travail avec des IA-nimatrices. Résultat : près de 150 portraits audio, des géants de la tech jusqu'aux VIP du numérique français. Je les appelle les Very Internet People. Mes IA trouvent tout ce qui est public : livres, conférences, podcasts entiers. Une IA spécialisée vérifie ensuite chaque fait, source par source. Et à la fin, elle me présente leur travail en comité éditorial, et c'est alors moi qui tranche. Écoutez les histoires des hommes et des femmes de la tech. Et après chaque portrait, un quiz, pour voir ce que vous avez retenu. Et toute la série, je l'ai fabriquée en vibe coding : je décris ce que je veux, et l'IA le construit avec moi. Les Voix de l'IA, c'est gratuit. Abonnez-vous sur Spotify, sur Apple Podcasts ou sur les autres plateformes de streaming. Et sur 3h33.com. Bonne écoute !","author":{"@type":"Person","name":"Alexandre Stopnicki"},"publisher":{"@type":"Organization","name":"Choucroute Citron","url":"https://choucroute-citron.com"}},{"@type":"AudioObject","@id":"https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/#geants-de-la-tech","name":"Les 5 géants de la tech · un teaser des Voix de l'IA","description":"Amazon, Apple, Microsoft, Google, Nvidia : une gaffe à la télévision, un foie offert, une question piège, le feu et trente jours avant la faillite.","contentUrl":"https://3h33.com/podcast-voix-de-lia/audio/teaser-geants-de-la-tech.mp3?v=b2e06ac5","encodingFormat":"audio/mpeg","contentSize":"3527200","duration":"PT2M27S","uploadDate":"2026-10-24","inLanguage":"fr-FR","transcript":"Alexandre : Bonjour, c'est Alexandre, et bienvenue dans Les Voix de l'IA. Amazon, Apple, Microsoft, Google, Nvidia : derrière ces cinq géants, il y a des femmes et des hommes, avec leurs paris fous, leurs gaffes et leurs coups de génie. Mes IA-nimateurs, Ada et Alan, ont enquêté. Écoutez plutôt… Alexandre : Jeff Bezos, Amazon : le jour où on lui a demandé s'il savait épeler « profit »… Ada : Toi, tu as celle du journaliste Tom Brokaw, non ? Alan : Oui ! Brokaw lui demande à la télévision s'il sait seulement épeler « profit ». Il répond : bien sûr, P-R-O-P-H-E-T. Prophète. Alexandre : Tim Cook, Apple, et ce qu'il a offert à Steve Jobs… Alan : Janvier 2009 : Jobs est malade, et Tim Cook propose de lui donner une partie de son foie. Ada : Non ?! Alan : Selon un extrait de Becoming Steve Jobs publié par Vanity Fair en 2015, ils partageaient un groupe sanguin rare. Jobs refuse en lui criant dessus. Ada : Cook l'a raconté ainsi : « Steve ne m'a crié dessus que quatre ou cinq fois en treize ans. » Alexandre : Satya Nadella, Microsoft : la question piège de son entretien d'embauche… Alan : Son entretien d'embauche chez Microsoft, en 1992. Ada : Son dernier recruteur, Richard Tait, lui demande quoi faire devant un bébé tombé dans la rue et qui pleure. Alan : Il répond : « On appelle le 911. » Le recruteur lui explique qu'il faut d'abord prendre l'enfant dans ses bras. Ada : Il repart persuadé d'avoir échoué… et Microsoft l'embauche quand même. Alexandre : Sundar Pichai, Google : l'IA, plus forte que le feu ? Alan : Dans ses prises de parole sur l'IA, une image revient souvent : le feu. Ada : Le feu ? Alan : Le 19 janvier 2018, il dit que l'IA est « plus profonde que, je ne sais pas, l'électricité ou le feu ». Puis, à propos du feu : « Mais il tue aussi des gens. » Alexandre : Jensen Huang, Nvidia, à trente jours de la faillite… Alan : Pour la RIVA 128, en 1997, il reste environ un mois de paie en caisse. Et la fabrication est lancée sans prototype physique, sur la seule foi de l'émulation logicielle. Ada : Sans prototype ? Sacré risque. Alan : Résultat : plus d'un million d'exemplaires en moins de quatre mois. Et la devise maison est née : « à trente jours de la faillite ». Alexandre : Envie de connaître la suite ? Chaque portrait vous attend en entier, avec sa transcription et ses sources, sur 3h33.com et partout où vous écoutez vos podcasts. À très vite !","about":[{"@type":"Person","name":"Jeff Bezos","url":"https://3h33.com/podcast-voix-de-lia/jeff-bezos/"},{"@type":"Person","name":"Tim Cook","url":"https://3h33.com/podcast-voix-de-lia/tim-cook/"},{"@type":"Person","name":"Satya Nadella","url":"https://3h33.com/podcast-voix-de-lia/satya-nadella/"},{"@type":"Person","name":"Sundar Pichai","url":"https://3h33.com/podcast-voix-de-lia/sundar-pichai/"},{"@type":"Person","name":"Jensen Huang","url":"https://3h33.com/podcast-voix-de-lia/jensen-huang/"}],"author":{"@type":"Person","name":"Alexandre Stopnicki"}},{"@type":"AudioObject","@id":"https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/#femmes-de-la-tech","name":"Les femmes de la tech · un teaser des Voix de l'IA","description":"Un pantalon blanc, un masque d'Halloween, une journée « Dress Like Fidji », deux patrons rivaux de la même famille et un conseil consultatif en peluches.","contentUrl":"https://3h33.com/podcast-voix-de-lia/audio/teaser-femmes-de-la-tech.mp3?v=411c05a2","encodingFormat":"audio/mpeg","contentSize":"3673277","duration":"PT2M33S","uploadDate":"2026-10-24","inLanguage":"fr-FR","transcript":"Alexandre : Bonjour, c'est Alexandre. Aujourd'hui, dans Les Voix de l'IA, place à celles qui font la tech. Une idée née d'un pantalon blanc, un masque d'Halloween qui démasque l'IA, une Sétoise au sommet d'OpenAI… Ada et Alan vous racontent leurs histoires. Écoutez… Alexandre : Sara Blakely, fondatrice de Spanx : tout est parti… d'un pantalon blanc. Ada : Et c'est là que tout bascule. À cause d'un pantalon blanc. Alan : Un pantalon blanc ? Ada : Il attendait dans son placard depuis huit mois. En 1998, pour qu'il tombe enfin bien, elle coupe le pied d'un collant gainant. Alan : Elle l'a dit à Fortune en février 2024 : « Je voulais que mes vêtements tombent mieux : c'est donc mon propre derrière qui m'a inspirée. » Alexandre : Joy Buolamwini, MIT et Algorithmic Justice League : le jour où la machine n'a pas vu son visage… Alan : Sauf que le logiciel suit mal son visage à elle. Ada : En 2019, elle raconte qu'après une fête, elle reprend son travail avec un masque blanc d'Halloween. En dernier recours, elle l'enfile. Alan : Et alors ? Ada : Je cite : « Dans le miroir, je suis devenue un lion. » Alan : C'est fou. Pour la machine, le masque ressemblait plus à un visage que son vrai visage. Alexandre : Fidji Simo, de Facebook à OpenAI : l'affaire des talons… Ada : Alan, tu connais celle des talons ? Alan : Chez Facebook, on lui conseille d'attacher ses cheveux et d'enlever son maquillage. Ada : Elle refuse. Alan : Et elle conclut que les talons et le maquillage allaient donc revenir. Ada : Résultat : une journée « Dress Like Fidji », habillez-vous comme Fidji, finit par voir le jour ! Alexandre : Lisa Su, patronne d'AMD, et son drôle de lien avec Jensen Huang… Ada : C'est Jensen Huang, le patron de Nvidia, son grand concurrent. Ce sont des parents éloignés, par la mère de Huang. Alan : Ils ont grandi ensemble ? Ada : Non. Elle disait à Bloomberg en décembre 2024 : « Pas de dîners de famille. C'est une coïncidence intéressante. » Alexandre : Daniela Amodei, présidente d'Anthropic, et ses conseillers très spéciaux… Ada : Son parcours réserve aussi une anecdote étonnante : le conseil consultatif en peluches. Alan : C'est-à-dire ? Ada : D'après un récit de Kevin Roose publié par The Atlantic, elle et son mari, Holden Karnofsky, utilisaient chez OpenAI des peluches comme « conseil consultatif personnel » pour jouer différents profils de management. Alexandre : Elles sont plus de vingt dans notre famille « Elles font l'IA ». Retrouvez tous leurs portraits sur 3h33.com, et choisissez votre préférée. À très vite !","about":[{"@type":"Person","name":"Sara Blakely","url":"https://3h33.com/podcast-voix-de-lia/sara-blakely/"},{"@type":"Person","name":"Joy Buolamwini","url":"https://3h33.com/podcast-voix-de-lia/joy-buolamwini/"},{"@type":"Person","name":"Fidji Simo","url":"https://3h33.com/podcast-voix-de-lia/fidji-simo/"},{"@type":"Person","name":"Lisa Su","url":"https://3h33.com/podcast-voix-de-lia/lisa-su/"},{"@type":"Person","name":"Daniela Amodei","url":"https://3h33.com/podcast-voix-de-lia/daniela-amodei/"}],"author":{"@type":"Person","name":"Alexandre Stopnicki"}},{"@type":"AudioObject","@id":"https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/#l-ia-en-une-phrase","name":"L'IA en une phrase · un teaser des Voix de l'IA","description":"Démon, parrain, matière, langage : ce que cinq grands noms de l'IA en disent vraiment, chacun en une phrase, datée et sourcée.","contentUrl":"https://3h33.com/podcast-voix-de-lia/audio/teaser-l-ia-en-une-phrase.mp3?v=f3641874","encodingFormat":"audio/mpeg","contentSize":"3154172","duration":"PT2M11S","uploadDate":"2026-10-24","inLanguage":"fr-FR","transcript":"Alexandre : Bonjour, c'est Alexandre. L'intelligence artificielle, on en parle tous. Mais ceux qui la construisent, eux, qu'en pensent-ils vraiment ? Démon, parrain, langage, matière… Cinq grands noms, cinq phrases. Écoutez… Alexandre : Elon Musk, Tesla et SpaceX : l'IA, un démon ? Ada : Mais au fond, que pense-t-il de l'IA ? Alan : Il alerte depuis longtemps. Au MIT, le 24 octobre 2014, il a dit : « Avec l'intelligence artificielle, nous invoquons le démon. » Alexandre : Geoffrey Hinton, prix Nobel, le parrain de l'IA… qui a changé d'avis. Alan : Puis, en 2023, son discours public change. Ada : Qu'est-ce qu'il dit ? Alan : Le 1er mai 2023, à propos des machines plus intelligentes que nous : « Je pensais que c'était dans trente à cinquante ans, voire plus. Évidemment, je ne le pense plus. » Ada : Et pour lui, ces IA comprennent ce qu'elles disent ? Alan : Oui. Le 8 octobre 2023, dans l'émission 60 Minutes : « Ces choses comprennent vraiment. » Alexandre : Kate Crawford, Microsoft Research : l'IA, ni artificielle… ni intelligente ? Ada : Alors, dans ses travaux, l'IA, c'est quoi ? Alan : Elle l'a dit le 6 juillet 2021, à l'Université de Sydney : « Elle n'est ni artificielle ni intelligente. Elle est profondément matérielle. » Ada : Matérielle : des minerais, de l'énergie, du travail humain… Alexandre : Andrej Karpathy, cofondateur d'OpenAI : le nouveau langage de programmation à la mode… Ada : Alors, comment décrit-il lui-même l'évolution de l'IA ? Alan : En janvier 2023, il lançait : « Le nouveau langage de programmation à la mode, c'est l'anglais. » Alexandre : Yann LeCun, ex-Meta, aujourd'hui AMI Labs : les grands modèles de langage, une impasse ? Ada : Qu'est-ce qu'il a vraiment dans la tête ? Que pense-t-il des grands modèles de langage, les LLM ? Alan : Il l'a dit au magazine TIME en 2024 : « Ils sont utiles, sans aucun doute. Mais ils ne sont pas une voie vers l'intelligence de niveau humain. » Alexandre : Et vous, vous êtes plutôt Musk, Hinton ou LeCun ? Plus de cent quarante portraits vous attendent sur 3h33.com. Bonne écoute, et à très vite !","about":[{"@type":"Person","name":"Elon Musk","url":"https://3h33.com/podcast-voix-de-lia/elon-musk/"},{"@type":"Person","name":"Geoffrey Hinton","url":"https://3h33.com/podcast-voix-de-lia/geoffrey-hinton/"},{"@type":"Person","name":"Kate Crawford","url":"https://3h33.com/podcast-voix-de-lia/kate-crawford/"},{"@type":"Person","name":"Andrej Karpathy","url":"https://3h33.com/podcast-voix-de-lia/andrej-karpathy/"},{"@type":"Person","name":"Yann LeCun","url":"https://3h33.com/podcast-voix-de-lia/yann-lecun/"}],"author":{"@type":"Person","name":"Alexandre Stopnicki"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Choucroute Citron","item":"https://choucroute-citron.com"},{"@type":"ListItem","position":2,"name":"Les Voix de l'IA","item":"https://3h33.com/podcast-voix-de-lia/"},{"@type":"ListItem","position":3,"name":"Réseaux sociaux","item":"https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/"}]}]}</script>
+</head>
+<body class="page-reseaux">
+<a class="saut" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="/podcast-voix-de-lia/" aria-label="Les Voix de l'IA, accueil de l'émission"><img src="/podcast-voix-de-lia/choucroute-icone.png" alt="" width="64" height="48"><span>Les Voix <em>de l'IA</em></span></a>
+  <a class="retour-marque" href="/podcast-voix-de-lia/#qui-suis-je">par Alexandre Stopnicki</a><!-- 21/10/2026, Alexandre : « par Alexandre Stopnicki » à la place de « ← Choucroute Citron » (la flèche faisait croire à un retour) ; Choucroute Citron reste dans « Podcast · une série Choucroute Citron » -->
+  <div class="barre-droite"><nav aria-label="Navigation principale"><a class="etroit" href="/podcast-voix-de-lia/#portraits">Portraits</a><a class="cta-abonner" href="/podcast-voix-de-lia/#abonnement">S'abonner</a></nav><a class="loupe-barre" href="/podcast-voix-de-lia/#recherche" data-recherche-ouvrir aria-label="Chercher un portrait (touche /)" title="Chercher un portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg></a></div>
+</header>
+<main id="contenu">
+<section class="reseaux-page" aria-labelledby="reseaux-titre">
+  <nav class="fil" aria-label="Fil d'Ariane"><a href="https://choucroute-citron.com" rel="noopener">Choucroute Citron</a><span aria-hidden="true">/</span><a href="/podcast-voix-de-lia/">Les Voix de l&#39;IA</a><span aria-hidden="true">/</span><span aria-current="page">Réseaux sociaux</span></nav>
+  <div class="section-label">Vidéo · teasers · à partager</div>
+  <h1 id="reseaux-titre" class="section-title">Découvrir et <em>partager</em> Les Voix de l'IA</h1>
+  <p class="section-desc">Une minute pour comprendre la série, puis 3 teasers pour en avoir un avant-goût : les vraies anecdotes des épisodes, racontées par Ada et Alan. Tout se partage, et chaque nom mène à son portrait complet, avec ses sources.</p>
+
+  <section class="reseaux-bloc" aria-labelledby="video-titre">
+    <h2 id="video-titre">La vidéo de présentation <span class="reseaux-duree">1 min 03</span></h2>
+    <p class="reseaux-intro">Alexandre Stopnicki présente Les Voix de l&#39;IA en une minute : près de 150 portraits audio des femmes et des hommes de la tech, des faits vérifiés source par source, un quiz après chaque portrait.</p>
+    <div class="video-cadre">
+      <video controls playsinline preload="none" poster="/podcast-voix-de-lia/videos/presentation.jpg?v=20eff4b4" width="1280" height="720" aria-label="Les Voix de l&#39;IA, c&#39;est quoi ? (vidéo, 1 min 03)">
+        <source src="/podcast-voix-de-lia/videos/presentation.mp4?v=24e283d2" type="video/mp4">
+        <track kind="captions" srclang="fr" label="Français" src="/podcast-voix-de-lia/videos/presentation.vtt?v=3bb4de8a">
+        Votre navigateur ne lit pas la vidéo : <a href="/podcast-voix-de-lia/videos/presentation.mp4?v=24e283d2">ouvrez-la ici</a>.
+      </video>
+      <button type="button" class="video-jouer" aria-label="Lire la vidéo : Les Voix de l&#39;IA, c&#39;est quoi ?"><svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="5,3 19,12 5,21"/></svg></button>
+    </div>
+    <p class="video-formats">Pour Reels, TikTok et Shorts : <a href="/podcast-voix-de-lia/videos/presentation-verticale.mp4?v=4a690d6e" download="Les Voix de l'IA - presentation verticale.mp4">la version verticale <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+    <details class="promo-texte">
+      <summary>Lire le texte de la vidéo</summary>
+      <p>Les Voix de l&#39;IA, c&#39;est quoi ? Quand on parle d&#39;intelligence artificielle, tout le monde parle de ChatGPT, de Mistral, de Claude. Mais les humains qui les ont créés, qui les connaît vraiment ? Alors, je me suis mis au travail avec des IA-nimatrices. Résultat : près de 150 portraits audio, des géants de la tech jusqu&#39;aux VIP du numérique français. Je les appelle les Very Internet People. Mes IA trouvent tout ce qui est public : livres, conférences, podcasts entiers. Une IA spécialisée vérifie ensuite chaque fait, source par source. Et à la fin, elle me présente leur travail en comité éditorial, et c&#39;est alors moi qui tranche. Écoutez les histoires des hommes et des femmes de la tech. Et après chaque portrait, un quiz, pour voir ce que vous avez retenu. Et toute la série, je l&#39;ai fabriquée en vibe coding : je décris ce que je veux, et l&#39;IA le construit avec moi. Les Voix de l&#39;IA, c&#39;est gratuit. Abonnez-vous sur Spotify, sur Apple Podcasts ou sur les autres plateformes de streaming. Et sur 3h33.com. Bonne écoute !</p>
+    </details>
+  </section>
+
+  <section class="reseaux-bloc" aria-labelledby="teasers-titre">
+    <h2 id="teasers-titre">3 teasers <em>à écouter</em></h2>
+    <p class="reseaux-intro">Environ deux minutes chacun : Alexandre annonce, Ada et Alan racontent. Chaque anecdote est tirée d&#39;un épisode, telle qu&#39;elle y est dite.</p>
+    <div class="teasers">
+    <article class="teaser-carte" id="geants-de-la-tech" aria-labelledby="geants-de-la-tech-titre">
+      <div class="teaser-tete"><span class="teaser-duree">2 min 27</span><h3 id="geants-de-la-tech-titre">Les 5 géants de la tech</h3></div>
+      <p class="teaser-accroche">Amazon, Apple, Microsoft, Google, Nvidia : une gaffe à la télévision, un foie offert, une question piège, le feu et trente jours avant la faillite.</p>
+      <audio controls preload="none" src="/podcast-voix-de-lia/audio/teaser-geants-de-la-tech.mp3?v=b2e06ac5">Votre navigateur ne lit pas l'audio : <a href="/podcast-voix-de-lia/audio/teaser-geants-de-la-tech.mp3?v=b2e06ac5">écoutez le teaser</a>.</audio>
+      <p class="teaser-avec"><span>Avec</span> <a href="/podcast-voix-de-lia/jeff-bezos/">Jeff Bezos</a>, <a href="/podcast-voix-de-lia/tim-cook/">Tim Cook</a>, <a href="/podcast-voix-de-lia/satya-nadella/">Satya Nadella</a>, <a href="/podcast-voix-de-lia/sundar-pichai/">Sundar Pichai</a>, <a href="/podcast-voix-de-lia/jensen-huang/">Jensen Huang</a></p>
+      
+      <details class="promo-texte">
+        <summary>Lire le texte du teaser</summary>
+        <p><b>Alexandre</b> : Bonjour, c&#39;est Alexandre, et bienvenue dans Les Voix de l&#39;IA. Amazon, Apple, Microsoft, Google, Nvidia : derrière ces cinq géants, il y a des femmes et des hommes, avec leurs paris fous, leurs gaffes et leurs coups de génie. Mes IA-nimateurs, Ada et Alan, ont enquêté. Écoutez plutôt…</p>
+        <p><b>Alexandre</b> : Jeff Bezos, Amazon : le jour où on lui a demandé s&#39;il savait épeler « profit »…</p>
+        <p><b>Ada</b> : Toi, tu as celle du journaliste Tom Brokaw, non ?</p>
+        <p><b>Alan</b> : Oui ! Brokaw lui demande à la télévision s&#39;il sait seulement épeler « profit ». Il répond : bien sûr, P-R-O-P-H-E-T. Prophète.</p>
+        <p><b>Alexandre</b> : Tim Cook, Apple, et ce qu&#39;il a offert à Steve Jobs…</p>
+        <p><b>Alan</b> : Janvier 2009 : Jobs est malade, et Tim Cook propose de lui donner une partie de son foie.</p>
+        <p><b>Ada</b> : Non ?!</p>
+        <p><b>Alan</b> : Selon un extrait de Becoming Steve Jobs publié par Vanity Fair en 2015, ils partageaient un groupe sanguin rare. Jobs refuse en lui criant dessus.</p>
+        <p><b>Ada</b> : Cook l&#39;a raconté ainsi : « Steve ne m&#39;a crié dessus que quatre ou cinq fois en treize ans. »</p>
+        <p><b>Alexandre</b> : Satya Nadella, Microsoft : la question piège de son entretien d&#39;embauche…</p>
+        <p><b>Alan</b> : Son entretien d&#39;embauche chez Microsoft, en 1992.</p>
+        <p><b>Ada</b> : Son dernier recruteur, Richard Tait, lui demande quoi faire devant un bébé tombé dans la rue et qui pleure.</p>
+        <p><b>Alan</b> : Il répond : « On appelle le 911. » Le recruteur lui explique qu&#39;il faut d&#39;abord prendre l&#39;enfant dans ses bras.</p>
+        <p><b>Ada</b> : Il repart persuadé d&#39;avoir échoué… et Microsoft l&#39;embauche quand même.</p>
+        <p><b>Alexandre</b> : Sundar Pichai, Google : l&#39;IA, plus forte que le feu ?</p>
+        <p><b>Alan</b> : Dans ses prises de parole sur l&#39;IA, une image revient souvent : le feu.</p>
+        <p><b>Ada</b> : Le feu ?</p>
+        <p><b>Alan</b> : Le 19 janvier 2018, il dit que l&#39;IA est « plus profonde que, je ne sais pas, l&#39;électricité ou le feu ». Puis, à propos du feu : « Mais il tue aussi des gens. »</p>
+        <p><b>Alexandre</b> : Jensen Huang, Nvidia, à trente jours de la faillite…</p>
+        <p><b>Alan</b> : Pour la RIVA 128, en 1997, il reste environ un mois de paie en caisse. Et la fabrication est lancée sans prototype physique, sur la seule foi de l&#39;émulation logicielle.</p>
+        <p><b>Ada</b> : Sans prototype ? Sacré risque.</p>
+        <p><b>Alan</b> : Résultat : plus d&#39;un million d&#39;exemplaires en moins de quatre mois. Et la devise maison est née : « à trente jours de la faillite ».</p>
+        <p><b>Alexandre</b> : Envie de connaître la suite ? Chaque portrait vous attend en entier, avec sa transcription et ses sources, sur 3h33.com et partout où vous écoutez vos podcasts. À très vite !</p>
+      </details>
+    </article>
+    <article class="teaser-carte" id="femmes-de-la-tech" aria-labelledby="femmes-de-la-tech-titre">
+      <div class="teaser-tete"><span class="teaser-duree">2 min 33</span><h3 id="femmes-de-la-tech-titre">Les femmes de la tech</h3></div>
+      <p class="teaser-accroche">Un pantalon blanc, un masque d&#39;Halloween, une journée « Dress Like Fidji », deux patrons rivaux de la même famille et un conseil consultatif en peluches.</p>
+      <audio controls preload="none" src="/podcast-voix-de-lia/audio/teaser-femmes-de-la-tech.mp3?v=411c05a2">Votre navigateur ne lit pas l'audio : <a href="/podcast-voix-de-lia/audio/teaser-femmes-de-la-tech.mp3?v=411c05a2">écoutez le teaser</a>.</audio>
+      <p class="teaser-avec"><span>Avec</span> <a href="/podcast-voix-de-lia/sara-blakely/">Sara Blakely</a>, <a href="/podcast-voix-de-lia/joy-buolamwini/">Joy Buolamwini</a>, <a href="/podcast-voix-de-lia/fidji-simo/">Fidji Simo</a>, <a href="/podcast-voix-de-lia/lisa-su/">Lisa Su</a>, <a href="/podcast-voix-de-lia/daniela-amodei/">Daniela Amodei</a></p>
+      <p class="teaser-lien"><a href="/podcast-voix-de-lia/#famille=femmes">Tous les portraits « Elles font l&#39;IA » (22) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+      <details class="promo-texte">
+        <summary>Lire le texte du teaser</summary>
+        <p><b>Alexandre</b> : Bonjour, c&#39;est Alexandre. Aujourd&#39;hui, dans Les Voix de l&#39;IA, place à celles qui font la tech. Une idée née d&#39;un pantalon blanc, un masque d&#39;Halloween qui démasque l&#39;IA, une Sétoise au sommet d&#39;OpenAI… Ada et Alan vous racontent leurs histoires. Écoutez…</p>
+        <p><b>Alexandre</b> : Sara Blakely, fondatrice de Spanx : tout est parti… d&#39;un pantalon blanc.</p>
+        <p><b>Ada</b> : Et c&#39;est là que tout bascule. À cause d&#39;un pantalon blanc.</p>
+        <p><b>Alan</b> : Un pantalon blanc ?</p>
+        <p><b>Ada</b> : Il attendait dans son placard depuis huit mois. En 1998, pour qu&#39;il tombe enfin bien, elle coupe le pied d&#39;un collant gainant.</p>
+        <p><b>Alan</b> : Elle l&#39;a dit à Fortune en février 2024 : « Je voulais que mes vêtements tombent mieux : c&#39;est donc mon propre derrière qui m&#39;a inspirée. »</p>
+        <p><b>Alexandre</b> : Joy Buolamwini, MIT et Algorithmic Justice League : le jour où la machine n&#39;a pas vu son visage…</p>
+        <p><b>Alan</b> : Sauf que le logiciel suit mal son visage à elle.</p>
+        <p><b>Ada</b> : En 2019, elle raconte qu&#39;après une fête, elle reprend son travail avec un masque blanc d&#39;Halloween. En dernier recours, elle l&#39;enfile.</p>
+        <p><b>Alan</b> : Et alors ?</p>
+        <p><b>Ada</b> : Je cite : « Dans le miroir, je suis devenue un lion. »</p>
+        <p><b>Alan</b> : C&#39;est fou. Pour la machine, le masque ressemblait plus à un visage que son vrai visage.</p>
+        <p><b>Alexandre</b> : Fidji Simo, de Facebook à OpenAI : l&#39;affaire des talons…</p>
+        <p><b>Ada</b> : Alan, tu connais celle des talons ?</p>
+        <p><b>Alan</b> : Chez Facebook, on lui conseille d&#39;attacher ses cheveux et d&#39;enlever son maquillage.</p>
+        <p><b>Ada</b> : Elle refuse.</p>
+        <p><b>Alan</b> : Et elle conclut que les talons et le maquillage allaient donc revenir.</p>
+        <p><b>Ada</b> : Résultat : une journée « Dress Like Fidji », habillez-vous comme Fidji, finit par voir le jour !</p>
+        <p><b>Alexandre</b> : Lisa Su, patronne d&#39;AMD, et son drôle de lien avec Jensen Huang…</p>
+        <p><b>Ada</b> : C&#39;est Jensen Huang, le patron de Nvidia, son grand concurrent. Ce sont des parents éloignés, par la mère de Huang.</p>
+        <p><b>Alan</b> : Ils ont grandi ensemble ?</p>
+        <p><b>Ada</b> : Non. Elle disait à Bloomberg en décembre 2024 : « Pas de dîners de famille. C&#39;est une coïncidence intéressante. »</p>
+        <p><b>Alexandre</b> : Daniela Amodei, présidente d&#39;Anthropic, et ses conseillers très spéciaux…</p>
+        <p><b>Ada</b> : Son parcours réserve aussi une anecdote étonnante : le conseil consultatif en peluches.</p>
+        <p><b>Alan</b> : C&#39;est-à-dire ?</p>
+        <p><b>Ada</b> : D&#39;après un récit de Kevin Roose publié par The Atlantic, elle et son mari, Holden Karnofsky, utilisaient chez OpenAI des peluches comme « conseil consultatif personnel » pour jouer différents profils de management.</p>
+        <p><b>Alexandre</b> : Elles sont plus de vingt dans notre famille « Elles font l&#39;IA ». Retrouvez tous leurs portraits sur 3h33.com, et choisissez votre préférée. À très vite !</p>
+      </details>
+    </article>
+    <article class="teaser-carte" id="l-ia-en-une-phrase" aria-labelledby="l-ia-en-une-phrase-titre">
+      <div class="teaser-tete"><span class="teaser-duree">2 min 11</span><h3 id="l-ia-en-une-phrase-titre">L&#39;IA en une phrase</h3></div>
+      <p class="teaser-accroche">Démon, parrain, matière, langage : ce que cinq grands noms de l&#39;IA en disent vraiment, chacun en une phrase, datée et sourcée.</p>
+      <audio controls preload="none" src="/podcast-voix-de-lia/audio/teaser-l-ia-en-une-phrase.mp3?v=f3641874">Votre navigateur ne lit pas l'audio : <a href="/podcast-voix-de-lia/audio/teaser-l-ia-en-une-phrase.mp3?v=f3641874">écoutez le teaser</a>.</audio>
+      <p class="teaser-avec"><span>Avec</span> <a href="/podcast-voix-de-lia/elon-musk/">Elon Musk</a>, <a href="/podcast-voix-de-lia/geoffrey-hinton/">Geoffrey Hinton</a>, <a href="/podcast-voix-de-lia/kate-crawford/">Kate Crawford</a>, <a href="/podcast-voix-de-lia/andrej-karpathy/">Andrej Karpathy</a>, <a href="/podcast-voix-de-lia/yann-lecun/">Yann LeCun</a></p>
+      
+      <details class="promo-texte">
+        <summary>Lire le texte du teaser</summary>
+        <p><b>Alexandre</b> : Bonjour, c&#39;est Alexandre. L&#39;intelligence artificielle, on en parle tous. Mais ceux qui la construisent, eux, qu&#39;en pensent-ils vraiment ? Démon, parrain, langage, matière… Cinq grands noms, cinq phrases. Écoutez…</p>
+        <p><b>Alexandre</b> : Elon Musk, Tesla et SpaceX : l&#39;IA, un démon ?</p>
+        <p><b>Ada</b> : Mais au fond, que pense-t-il de l&#39;IA ?</p>
+        <p><b>Alan</b> : Il alerte depuis longtemps. Au MIT, le 24 octobre 2014, il a dit : « Avec l&#39;intelligence artificielle, nous invoquons le démon. »</p>
+        <p><b>Alexandre</b> : Geoffrey Hinton, prix Nobel, le parrain de l&#39;IA… qui a changé d&#39;avis.</p>
+        <p><b>Alan</b> : Puis, en 2023, son discours public change.</p>
+        <p><b>Ada</b> : Qu&#39;est-ce qu&#39;il dit ?</p>
+        <p><b>Alan</b> : Le 1er mai 2023, à propos des machines plus intelligentes que nous : « Je pensais que c&#39;était dans trente à cinquante ans, voire plus. Évidemment, je ne le pense plus. »</p>
+        <p><b>Ada</b> : Et pour lui, ces IA comprennent ce qu&#39;elles disent ?</p>
+        <p><b>Alan</b> : Oui. Le 8 octobre 2023, dans l&#39;émission 60 Minutes : « Ces choses comprennent vraiment. »</p>
+        <p><b>Alexandre</b> : Kate Crawford, Microsoft Research : l&#39;IA, ni artificielle… ni intelligente ?</p>
+        <p><b>Ada</b> : Alors, dans ses travaux, l&#39;IA, c&#39;est quoi ?</p>
+        <p><b>Alan</b> : Elle l&#39;a dit le 6 juillet 2021, à l&#39;Université de Sydney : « Elle n&#39;est ni artificielle ni intelligente. Elle est profondément matérielle. »</p>
+        <p><b>Ada</b> : Matérielle : des minerais, de l&#39;énergie, du travail humain…</p>
+        <p><b>Alexandre</b> : Andrej Karpathy, cofondateur d&#39;OpenAI : le nouveau langage de programmation à la mode…</p>
+        <p><b>Ada</b> : Alors, comment décrit-il lui-même l&#39;évolution de l&#39;IA ?</p>
+        <p><b>Alan</b> : En janvier 2023, il lançait : « Le nouveau langage de programmation à la mode, c&#39;est l&#39;anglais. »</p>
+        <p><b>Alexandre</b> : Yann LeCun, ex-Meta, aujourd&#39;hui AMI Labs : les grands modèles de langage, une impasse ?</p>
+        <p><b>Ada</b> : Qu&#39;est-ce qu&#39;il a vraiment dans la tête ? Que pense-t-il des grands modèles de langage, les LLM ?</p>
+        <p><b>Alan</b> : Il l&#39;a dit au magazine TIME en 2024 : « Ils sont utiles, sans aucun doute. Mais ils ne sont pas une voie vers l&#39;intelligence de niveau humain. »</p>
+        <p><b>Alexandre</b> : Et vous, vous êtes plutôt Musk, Hinton ou LeCun ? Plus de cent quarante portraits vous attendent sur 3h33.com. Bonne écoute, et à très vite !</p>
+      </details>
+    </article>
+    </div>
+  </section>
+
+  <div class="partage reveal" data-url="https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/" data-titre="Les Voix de l&#39;IA en vidéo et en teasers audio" data-texte="Les Voix de l&#39;IA : la vidéo de présentation et trois teasers, pour découvrir les femmes et les hommes de la tech.">
+    <span class="titre-partage">Partager cette page</span>
+    <button type="button" class="partage-natif"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16a3 3 0 0 0-2.4 1.2l-6.7-3.4a3 3 0 0 0 0-1.6l6.7-3.4A3 3 0 1 0 15 7l-6.7 3.4a3 3 0 1 0 0 3.2L15 17a3 3 0 1 0 3-1z"/></svg> Partager</button>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2Freseaux-sociaux%2F%3Fvia%3Dlinkedin" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg> LinkedIn</a>
+    <a href="https://x.com/intent/tweet?text=Les%20Voix%20de%20l'IA%20%3A%20la%20vid%C3%A9o%20de%20pr%C3%A9sentation%20et%20trois%20teasers%2C%20pour%20d%C3%A9couvrir%20les%20femmes%20et%20les%20hommes%20de%20la%20tech.&amp;url=https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2Freseaux-sociaux%2F%3Fvia%3Dx" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3zm-1.08 16.2h1.7L7.4 4.73H5.58L16.67 19.2z"/></svg> X</a>
+    <a href="https://wa.me/?text=Les%20Voix%20de%20l'IA%20%3A%20la%20vid%C3%A9o%20de%20pr%C3%A9sentation%20et%20trois%20teasers%2C%20pour%20d%C3%A9couvrir%20les%20femmes%20et%20les%20hommes%20de%20la%20tech.%20https%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2Freseaux-sociaux%2F" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.5 14.96L2 22l5.2-1.5A9.9 9.9 0 1 0 12.04 2zm0 18.1a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.08.9.9-3-.2-.31a8.2 8.2 0 1 1 6.86 3.74zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.31c-.22.25-.86.84-.86 2.05 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.59.25 1.05.4 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.17-.47-.29z"/></svg> WhatsApp</a>
+    <a href="mailto:?subject=Les%20Voix%20de%20l'IA%20%3A%20la%20vid%C3%A9o%20de%20pr%C3%A9sentation%20et%20trois%20teasers%2C%20pour%20d%C3%A9couvrir%20les%20femmes%20et%20les%20hommes%20de%20la%20tech.&amp;body=Les%20Voix%20de%20l'IA%20%3A%20la%20vid%C3%A9o%20de%20pr%C3%A9sentation%20et%20trois%20teasers%2C%20pour%20d%C3%A9couvrir%20les%20femmes%20et%20les%20hommes%20de%20la%20tech.%0Ahttps%3A%2F%2F3h33.com%2Fpodcast-voix-de-lia%2Freseaux-sociaux%2F"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.3V17h16V7.3l-8 5.6-8-5.6zM5.2 7l6.8 4.8L18.8 7H5.2z"/></svg> E-mail</a>
+    <button type="button" class="partage-copie"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.4-3.4a1 1 0 1 1 1.4 1.4L12 13.4a1 1 0 0 1-1.4 0zm-2.8 5.2a3.5 3.5 0 0 1-2.5-6l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a1.5 1.5 0 0 0 2.1 2.1l2.1-2.1a1 1 0 0 1 1.4 1.4l-2.1 2.1a3.5 3.5 0 0 1-2.4 1.1zm8.3-6.6a1 1 0 0 1-.7-1.7l2.1-2.1a1.5 1.5 0 0 0-2.1-2.1l-2.1 2.1a1 1 0 0 1-1.4-1.4l2.1-2.1a3.5 3.5 0 0 1 5 5l-2.1 2.1a1 1 0 0 1-.8.2z"/></svg> Copier le lien</button>
+  </div>
+  <aside class="abonner-bloc" aria-labelledby="abonner-titre-haut">
+    <div class="section-label"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 17a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 10.5v2.6a7.9 7.9 0 0 1 7.9 7.9h2.6A10.5 10.5 0 0 0 3 10.5zM3 3.5v2.6A14.9 14.9 0 0 1 17.9 21h2.6A17.5 17.5 0 0 0 3 3.5z"/></svg> S'abonner</div>
+    <h2 id="abonner-titre-haut">Les prochains portraits ? <em>Abonnez-vous</em></h2>
+    <p>Chaque nouveau portrait arrive tout seul dans votre application de podcast, gratuitement.</p>
+    <div class="abonner-boutons">
+      <a class="btn-abonner" href="https://podcasts.apple.com/fr/podcast/les-voix-de-lia/id6822430918" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="10" r="2.6"/><path d="M12 13.5v7M7.2 15.3a6.5 6.5 0 1 1 9.6 0M4.6 18.2a10 10 0 1 1 14.8 0"/></svg><span>Apple Podcasts</span></a>
+      <a class="btn-abonner" href="https://open.spotify.com/show/0rdllAOWQFhE8vTfKgAxzV" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg><span>Spotify</span></a>
+      <button type="button" class="btn-abonner btn-flux" data-copier="https://3h33.com/podcast-voix-de-lia/flux.xml"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 17a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 10.5v2.6a7.9 7.9 0 0 1 7.9 7.9h2.6A10.5 10.5 0 0 0 3 10.5zM3 3.5v2.6A14.9 14.9 0 0 1 17.9 21h2.6A17.5 17.5 0 0 0 3 3.5z"/></svg><span>Autre application : copier le flux RSS</span></button>
+    </div>
+    
+  </aside>
+</section>
+</main>
+<footer>
+  <a href="https://choucroute-citron.com" rel="noopener"><img src="/podcast-voix-de-lia/choucroute-logo.png" alt="Choucroute Citron" width="112" height="106" loading="lazy"></a>
+  <p>Les Voix de l&#39;IA · Une série <a href="https://choucroute-citron.com" rel="noopener">Choucroute Citron</a>, imaginée par Alexandre Stopnicki · 2025-2026</p>
+  <p class="mention-ia">Portraits construits à partir de sources publiques analysées et recoupées, dans un but pédagogique. Voix générées par intelligence artificielle : Ada, Alan et Lia. Podcast indépendant, sans lien avec les entreprises citées.</p>
+  <p class="pied-liens"><a href="https://3h33.com/podcast-voix-de-lia/flux.xml"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 17a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 10.5v2.6a7.9 7.9 0 0 1 7.9 7.9h2.6A10.5 10.5 0 0 0 3 10.5zM3 3.5v2.6A14.9 14.9 0 0 1 17.9 21h2.6A17.5 17.5 0 0 0 3 3.5z"/></svg> Flux RSS</a><a href="/podcast-voix-de-lia/annonceurs/">Annonceurs</a><a href="/podcast-voix-de-lia/reseaux-sociaux/">Réseaux sociaux</a><a href="https://3h33.com/">3h33.com</a><a href="https://3h33.com/podcasts/">Tous les podcasts de 3h33</a></p>
+</footer>
+<a class="remonter" href="#contenu" aria-label="Remonter en haut de la page" title="Remonter en haut"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+<script src="/podcast-voix-de-lia/site.js?v=4323486d" defer></script>
+</body>
+</html>

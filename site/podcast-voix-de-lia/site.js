@@ -161,6 +161,28 @@
     $$(".reveal").forEach(function (el) { el.classList.add("visible"); });
   }
 
+  /* ------------------------------------------------ chiffres qui défilent jusqu'à leur valeur (page des annonceurs, 24/10/2026) */
+  var comptes = $$("[data-compte]");
+  if (comptes.length && "IntersectionObserver" in window && !calme) {
+    var ecrire = function (el, n) { el.textContent = String(n).replace(/\B(?=(\d{3})+(?!\d))/g, "\u202f"); };
+    var obsCompte = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        obsCompte.unobserve(e.target);
+        var el = e.target, fin = Number(el.getAttribute("data-compte")), t0 = null;
+        var pas = function (t) {
+          if (t0 === null) t0 = t;
+          var p = Math.min(1, (t - t0) / 1400);
+          ecrire(el, Math.round(fin * (1 - Math.pow(1 - p, 3))));
+          if (p < 1) requestAnimationFrame(pas);
+        };
+        ecrire(el, 0);
+        requestAnimationFrame(pas);
+      });
+    }, { threshold: 0.4 });
+    comptes.forEach(function (el) { obsCompte.observe(el); });
+  }
+
   /* ------------------------------------------------ outils communs du lecteur MP3 */
   function relierCurseur(audio, curseur, txtCourant, txtTotal, onde, autres) {
     var glisse = false;
@@ -225,6 +247,45 @@
     ["play", "pause", "ended"].forEach(function (e) { audio.addEventListener(e, etat); });
     etat();
   }
+
+  /* ------------------------------------------------ vidéo de présentation (24/10/2026) */
+  // Le gros bouton lance la vidéo (chargée seulement à ce moment-là) ; dans le bandeau, le texte dit s'éclaire au fil
+  // de la vidéo et se déplie. Une seule chose joue à la fois : les autres vidéos et audios de la page se mettent en pause.
+  $$(".video-cadre").forEach(function (cadre) {
+    var video = $("video", cadre);
+    var bouton = $(".video-jouer", cadre);
+    if (!video) return;
+    var carte = cadre.closest(".lia-carte");
+    var morceaux = carte ? $$(".lia-citation [data-t]", carte) : [];
+    var courant = -1;
+    var etat = function () {
+      cadre.classList.toggle("lancee", !video.paused || video.currentTime > 0);
+      if (carte) carte.classList.toggle("ecoute", !video.paused && !video.ended);
+    };
+    // avant la lecture, seul le gros bouton : les commandes du navigateur arrivent avec la vidéo
+    if (bouton) {
+      video.controls = false;
+      bouton.addEventListener("click", function () { video.controls = true; video.play().catch(function () {}); });
+    }
+    video.addEventListener("play", function () {
+      video.controls = true;
+      $$("video, audio").forEach(function (m) { if (m !== video && !m.paused) m.pause(); });
+      if (carte) carte.classList.add("deplie", "ecoutee");
+    });
+    ["play", "pause", "ended", "seeked"].forEach(function (e) { video.addEventListener(e, etat); });
+    if (morceaux.length) video.addEventListener("timeupdate", function () {
+      var k = -1, t = video.currentTime;
+      morceaux.forEach(function (m, i) { if (t >= Number(m.getAttribute("data-t"))) k = i; });
+      if (video.ended) k = -1;
+      if (k === courant) return;
+      courant = k;
+      morceaux.forEach(function (m, i) { m.classList.toggle("dit", i === k); m.classList.toggle("deja", i < k); });
+    });
+  });
+  // un teaser qui démarre arrête la vidéo et les autres teasers
+  $$(".teaser-carte audio").forEach(function (a) {
+    a.addEventListener("play", function () { $$("video, audio").forEach(function (m) { if (m !== a && !m.paused) m.pause(); }); });
+  });
 
   /* ------------------------------------------------ bandeau : « Lia vous présente l'émission » */
   var lia = $(".lia-carte");
