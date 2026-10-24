@@ -2604,3 +2604,7 @@ body.quiz-a-reprendre{padding-bottom:calc(110px + var(--safe-bottom))}
 .teaser-lien{margin:0;font-size:.92rem}
 .teaser-carte .promo-texte{margin-top:auto}
 .reseaux-page .partage{margin:0 0 2.5rem}
+/* ligne discrète vers la page des annonceurs, en fin de « Le projet » (25/10/2026) */
+.projet-annonceurs{margin-top:2.2rem;padding-top:1.1rem;border-top:1px solid var(--border);font-size:.92rem;color:var(--text-dim)}
+.projet-annonceurs a{color:var(--accent);text-decoration:none;border-bottom:1px solid #c4a26566;white-space:nowrap}
+.projet-annonceurs a:hover{color:var(--accent-clair);border-bottom-color:var(--accent-clair)}
