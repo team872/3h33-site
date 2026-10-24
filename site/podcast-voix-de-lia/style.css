@@ -2519,3 +2519,8 @@ body.quiz-a-reprendre{padding-bottom:calc(110px + var(--safe-bottom))}
 .qui-alexandre strong{color:var(--text);font-weight:500}
 .qui-alexandre a{color:var(--accent);text-decoration:none;white-space:nowrap;border-bottom:1px solid #c4a26555}
 .qui-alexandre a:hover{border-color:var(--accent)}
+
+/* page des annonceurs (24/10/2026) */
+.annonceurs-page{max-width:1100px;margin:0 auto;padding:6.5rem var(--gouttiere) 4rem}
+.annonceurs-page .section-desc{margin-bottom:2rem}
+.annonceurs-contact{margin-top:2.5rem}

@@ -663,8 +663,8 @@
     b.addEventListener("click", function () {
       var adresse = b.getAttribute("data-u") + "@" + b.getAttribute("data-d");
       var nom = b.getAttribute("data-nom");
-      var objet = "Les Voix de l'IA" + (nom ? " — " + nom : "");
-      var corps = "Passage concerné : …\r\nCe qui est inexact ou ce que je sais : …\r\nSource (lien) : …\r\n\r\nPage : " + (b.getAttribute("data-page") || location.href.split(/[?#]/)[0]);
+      var objet = b.getAttribute("data-objet") || "Les Voix de l'IA" + (nom ? " — " + nom : "");
+      var corps = b.hasAttribute("data-corps") ? b.getAttribute("data-corps") + "\r\nPage : " + (b.getAttribute("data-page") || location.href.split(/[?#]/)[0]) : "Passage concerné : …\r\nCe qui est inexact ou ce que je sais : …\r\nSource (lien) : …\r\n\r\nPage : " + (b.getAttribute("data-page") || location.href.split(/[?#]/)[0]);
       location.href = "mailto:" + adresse + "?subject=" + encodeURIComponent(objet) + "&body=" + encodeURIComponent(corps);
       var etat = b.parentNode && $(".signaler-etat", b.closest(".signaler") || b.closest("section") || document);
       if (etat) {
