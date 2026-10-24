@@ -20,7 +20,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Fri, 23 Oct 2026 17:36:50 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 24 Oct 2026 18:11:32 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA · la tech racontée par des IA</title>
@@ -38,6 +38,28 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Anthony Bourbon : la dalle, du fond du bus au Y Combinator</title>
+      <itunes:title>Anthony Bourbon : la dalle, du fond du bus au Y Combinator</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/anthony-bourbon/</link>
+      <guid isPermaLink="false">voix-de-lia-anthony-bourbon</guid>
+      <pubDate>Sat, 24 Oct 2026 18:11:32 GMT</pubDate>
+      <description>À seize ans, il passait des nuits au fond des bus de Bordeaux ; quelques années plus tard, il photographiait une bouteille remplie de lait pour lancer Feed. Juré de M6, cofondateur de Blast.Club, Anthony Bourbon a fini par trouver, chez les startups américaines de l'intelligence artificielle, plus affamés que lui : « Ils ont la dalle. »
+
+Épisode enregistré le 24 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/anthony-bourbon/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>À seize ans, il passait des nuits au fond des bus de Bordeaux ; quelques années plus tard, il photographiait une bouteille remplie de lait pour lancer Feed. Juré de M6, cofondateur de Blast.Club, Anthony Bourbon a fini par trouver, chez les startups américaines de l&#39;intelligence artificielle, plus affamés que lui : « Ils ont la dalle. »</p><p>Épisode enregistré le 24 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/anthony-bourbon/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/anthony-bourbon.mp3?v=6d973413" length="14639707" type="audio/mpeg"/>
+      <itunes:duration>606</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/anthony-bourbon-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/anthony-bourbon/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/anthony-bourbon/chapitres.json?v=12c4ea36" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Marie-Laure Sauty de Chalon : d'aufeminin au financement du cinéma</title>
       <itunes:title>Marie-Laure Sauty de Chalon : d'aufeminin au financement du cinéma</itunes:title>
