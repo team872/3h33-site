@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Annonceurs et partenaires · Les Voix de l&#39;IA</title>
+<meta name="description" content="Ce système de podcast vous intéresse ? Épisodes présentés par votre marque, design de site, podcast en marque blanche, jeu, assistants vocaux de formation.">
+<meta name="author" content="Alexandre Stopnicki">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="generator" content="Podcast Engine — site/construire.mjs">
+<link rel="canonical" href="https://3h33.com/podcast-voix-de-lia/annonceurs/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Les Voix de l'IA · Choucroute Citron">
+<meta property="og:title" content="Annonceurs et partenaires · Les Voix de l&#39;IA">
+<meta property="og:description" content="Ce système de podcast vous intéresse ? Épisodes présentés par votre marque, design de site, podcast en marque blanche, jeu, assistants vocaux de formation.">
+<meta property="og:url" content="https://3h33.com/podcast-voix-de-lia/annonceurs/">
+<meta property="og:image" content="https://3h33.com/podcast-voix-de-lia/images/partage.jpg">
+<meta property="og:image:secure_url" content="https://3h33.com/podcast-voix-de-lia/images/partage.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Les Voix de l&#39;IA, annonceurs et partenaires">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Annonceurs et partenaires · Les Voix de l&#39;IA">
+<meta name="twitter:description" content="Ce système de podcast vous intéresse ? Épisodes présentés par votre marque, design de site, podcast en marque blanche, jeu, assistants vocaux de formation.">
+<meta name="twitter:image" content="https://3h33.com/podcast-voix-de-lia/images/partage.jpg">
+<meta name="twitter:image:alt" content="Les Voix de l&#39;IA, annonceurs et partenaires">
+<meta name="theme-color" content="#0a0a0c">
+<meta name="color-scheme" content="dark">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-title" content="Les Voix de l'IA">
+<link rel="icon" href="/podcast-voix-de-lia/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/podcast-voix-de-lia/favicon.svg">
+<link rel="apple-touch-icon" href="/podcast-voix-de-lia/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="Les Voix de l'IA (flux RSS du podcast)" href="https://3h33.com/podcast-voix-de-lia/flux.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="/podcast-voix-de-lia/style.css?v=09145643">
+<script>document.documentElement.classList.add('js')</script>
+<script defer src="https://stats.3h33.com/script.js" data-website-id="9456f661-e1ea-4c9d-90bc-dec50970f3b4" data-domains="3h33.com" data-tag="voix-de-lia" data-do-not-track="true" data-before-send="mesureAvant"></script>
+<script>
+(function(){
+window.mesureAvant=function(t,p){return location.hash==="#apercu"?false:p};
+function envoi(n,d){try{if(location.hash==="#apercu")return;if(window.umami&&umami.track)umami.track(n,d);}catch(e){}}
+function nom(s){try{return decodeURIComponent((s||"").split("?")[0].split("/").pop())||"?"}catch(e){return "?"}}
+var vus=new WeakMap(),joues=[],PALIERS=[10,25,50,75,90];
+function etat(m){var s=vus.get(m);if(!s){s={ecoute:0,der:null,paliers:{},envoye:-1};vus.set(m,s)}return s}
+function chapitre(t){var c="",d=document.querySelectorAll("[data-titre][data-debut]");for(var i=0;i<d.length;i++){var x=Number(d[i].getAttribute("data-debut"));if(x<=t+0.5)c=d[i].getAttribute("data-titre");}return c.slice(0,60)}
+function arret(){joues.forEach(function(m){var s=etat(m),e=Math.round(s.ecoute);if(e<1||e===s.envoye)return;s.envoye=e;var du=m.duration&&isFinite(m.duration)?Math.round(m.duration):0;envoi("ecoute-arret",{fichier:nom(m.currentSrc||m.src),ecoute_s:e,position_s:Math.round(m.currentTime||0),duree_s:du,part:du?Math.min(100,Math.round(100*e/du)):0,chapitre:chapitre(m.currentTime||0)})})}
+document.addEventListener("play",function(ev){var m=ev.target,s=etat(m);s.der=m.currentTime;if(joues.indexOf(m)<0)joues.push(m);if(s.joue)return;s.joue=1;envoi("ecoute",{fichier:nom(m.currentSrc||m.src),type:m.tagName.toLowerCase()})},true);
+document.addEventListener("timeupdate",function(ev){var m=ev.target,s=etat(m),t=m.currentTime;
+if(s.der!==null&&!m.paused){var dt=t-s.der;if(dt>0&&dt<1.5*(m.playbackRate||1))s.ecoute+=dt;}s.der=t;
+if(!m.duration||!isFinite(m.duration))return;
+PALIERS.forEach(function(p){if(!s.paliers[p]&&s.ecoute>=m.duration*p/100){s.paliers[p]=1;envoi("ecoute-palier",{fichier:nom(m.currentSrc||m.src),palier:p})}});
+if(s.moitie||t<m.duration/2)return;s.moitie=1;envoi("ecoute-moitie",{fichier:nom(m.currentSrc||m.src)})},true);
+document.addEventListener("seeking",function(ev){etat(ev.target).der=null},true);
+document.addEventListener("ended",function(ev){var m=ev.target,s=etat(m);if(s.fin)return;s.fin=1;envoi("ecoute-fin",{fichier:nom(m.currentSrc||m.src)})},true);
+document.addEventListener("visibilitychange",function(){if(document.visibilityState==="hidden")arret()});
+window.addEventListener("pagehide",arret);
+document.addEventListener("click",function(ev){var c=ev.target.closest&&ev.target.closest("a,button");if(!c)return;
+var txt=(c.getAttribute("aria-label")||c.textContent||"").replace(/\s+/g," ").trim().slice(0,60);
+if(c.matches("[data-quiz-ouvrir]")||/faire le quiz|reprendre le quiz|revenir au quiz/i.test(txt))return envoi("quiz-ouvert",{bouton:txt});
+if(c.classList.contains("qz-reponse"))return;
+if(c.matches(".ecouter-ici,.chapitres a[data-debut]")){var h3=c.closest("[data-titre]");return envoi("chapitre",{titre:(h3?h3.getAttribute("data-titre"):txt).slice(0,60),a_s:Math.round(Number(c.getAttribute("data-debut"))||0)})}
+var h=c.tagName==="A"?c.getAttribute("href")||"":"";
+if(/podcasts\.apple|open\.spotify|deezer|music\.amazon|youtube\.com\/playlist|flux\.xml|overcast|pocketcasts|podcastaddict/i.test(h))return envoi("abonnement",{lien:h.replace(/^https?:\/\//,"").slice(0,80)});
+if(/^(whatsapp:|mailto:|sms:)|wa\.me|api\.whatsapp|linkedin\.com\/(sharing|share|feed\/\?shareActive)|facebook\.com\/sharer|twitter\.com\/intent|x\.com\/intent|bsky\.app\/intent/i.test(h)||/partager|copier le lien|share/i.test(txt))return envoi("partage",{via:h?(/^https?:/i.test(h)?h.replace(/^https?:\/\//i,"").split("/")[0]:h.split(":")[0]):txt});
+if(/^https?:/i.test(h)){try{var u=new URL(h,location.href);if(u.host!==location.host)envoi("sortie",{lien:(u.host+u.pathname).slice(0,80)})}catch(e){}}
+},true);
+})();
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://3h33.com/podcast-voix-de-lia/annonceurs/#page","url":"https://3h33.com/podcast-voix-de-lia/annonceurs/","name":"Annonceurs et partenaires","description":"Ce système de podcast vous intéresse ? Épisodes présentés par votre marque, design de site, podcast en marque blanche, jeu, assistants vocaux de formation.","inLanguage":"fr-FR","isPartOf":{"@type":"PodcastSeries","@id":"https://3h33.com/podcast-voix-de-lia/#serie","name":"Les Voix de l'IA","url":"https://3h33.com/podcast-voix-de-lia/"},"publisher":{"@type":"Organization","name":"Choucroute Citron","url":"https://choucroute-citron.com"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Choucroute Citron","item":"https://choucroute-citron.com"},{"@type":"ListItem","position":2,"name":"Les Voix de l'IA","item":"https://3h33.com/podcast-voix-de-lia/"},{"@type":"ListItem","position":3,"name":"Annonceurs","item":"https://3h33.com/podcast-voix-de-lia/annonceurs/"}]}]}</script>
+</head>
+<body class="page-annonceurs">
+<a class="saut" href="#contenu">Aller au contenu</a>
+<header class="barre">
+  <a class="marque" href="/podcast-voix-de-lia/" aria-label="Les Voix de l'IA, accueil de l'émission"><img src="/podcast-voix-de-lia/choucroute-icone.png" alt="" width="64" height="48"><span>Les Voix <em>de l'IA</em></span></a>
+  <a class="retour-marque" href="/podcast-voix-de-lia/#qui-suis-je">par Alexandre Stopnicki</a><!-- 21/10/2026, Alexandre : « par Alexandre Stopnicki » à la place de « ← Choucroute Citron » (la flèche faisait croire à un retour) ; Choucroute Citron reste dans « Podcast · une série Choucroute Citron » -->
+  <div class="barre-droite"><nav aria-label="Navigation principale"><a class="etroit" href="/podcast-voix-de-lia/#portraits">Portraits</a><a class="cta-abonner" href="/podcast-voix-de-lia/#abonnement">S'abonner</a></nav><a class="loupe-barre" href="/podcast-voix-de-lia/#recherche" data-recherche-ouvrir aria-label="Chercher un portrait (touche /)" title="Chercher un portrait"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg></a></div>
+</header>
+<main id="contenu">
+<section class="annonceurs-page" aria-labelledby="annonceurs-titre">
+  <nav class="fil" aria-label="Fil d'Ariane"><a href="https://choucroute-citron.com" rel="noopener">Choucroute Citron</a><span aria-hidden="true">/</span><a href="/podcast-voix-de-lia/">Les Voix de l&#39;IA</a><span aria-hidden="true">/</span><span aria-current="page">Annonceurs</span></nav>
+  <div class="section-label">Annonceurs et partenaires</div>
+  <h1 id="annonceurs-titre" class="section-title">Travaillons <em>ensemble</em></h1>
+  <p class="section-desc">Ce système de podcast vous intéresse ? Nous avons plein d&#39;options à vous proposer.</p>
+  <div class="a-venir">
+    <article class="a-venir-carte"><span class="a-venir-etat fait">Présenté par</span><h3>Un portrait présenté par votre marque</h3><p>Votre nom en ouverture de l&#39;épisode, « présenté par… », et sur sa page. Le portrait, lui, ne change pas : mêmes sources, même vérification, même indépendance.</p></article>
+    <article class="a-venir-carte"><span class="a-venir-etat fait">Design</span><h3>Le design de votre site</h3><p>Le même soin que pour ce site : une page par épisode, la recherche, les transcriptions, le flux pour Apple Podcasts et Spotify.</p></article>
+    <article class="a-venir-carte"><span class="a-venir-etat fait">Marque blanche</span><h3>Votre podcast, à votre marque</h3><p>L&#39;atelier qui fabrique Les Voix de l&#39;IA (enquête, vérification, voix, site, flux) peut produire un podcast pour vous, sous votre nom.</p></article>
+    <article class="a-venir-carte"><span class="a-venir-etat">Bientôt</span><h3>Le jeu des startups</h3><p>Construisez votre startup d&#39;IA, jusqu&#39;au milliard. Un jeu tiré des portraits du podcast, auquel une marque peut s&#39;associer dès son lancement.</p></article>
+    <article class="a-venir-carte"><span class="a-venir-etat fait">Apprendre en parlant</span><h3>Des assistants vocaux d&#39;entraînement et de formation</h3><p>Préparer une interview face à un journaliste avec Media Training Vox, apprendre un cours en le racontant à voix haute avec LearnVox, se faire aider en réunion avec MeetingVox.</p></article>
+  </div>
+  <aside class="signaler annonceurs-contact" aria-labelledby="annonceurs-contact-titre">
+    <div class="section-label">Parlons-en</div>
+    <h2 id="annonceurs-contact-titre">Une idée, un projet ?</h2>
+    <p class="signaler-texte">Dites-nous ce que vous avez en tête, nous vous répondons.</p>
+    <button type="button" class="btn btn-primary signaler-bouton" data-signaler data-u="voixdelia" data-d="3h33.fr" data-objet="Les Voix de l'IA — Annonceurs" data-corps="Bonjour,&#13;&#10;&#13;&#10;Ce qui m'intéresse : …&#13;&#10;Mon entreprise : …&#13;&#10;" data-page="https://3h33.com/podcast-voix-de-lia/annonceurs/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.3V17h16V7.3l-8 5.6-8-5.6zM5.2 7l6.8 4.8L18.8 7H5.2z"/></svg><span>Nous écrire</span></button>
+    <p class="signaler-etat" role="status" aria-live="polite"></p>
+    <p class="signaler-repli">Écrivez à voixdelia (arobase) 3h33 (point) fr.</p>
+  </aside>
+</section>
+</main>
+<footer>
+  <a href="https://choucroute-citron.com" rel="noopener"><img src="/podcast-voix-de-lia/choucroute-logo.png" alt="Choucroute Citron" width="112" height="106" loading="lazy"></a>
+  <p>Les Voix de l&#39;IA · Une série <a href="https://choucroute-citron.com" rel="noopener">Choucroute Citron</a>, imaginée par Alexandre Stopnicki · 2025-2026</p>
+  <p class="mention-ia">Portraits construits à partir de sources publiques analysées et recoupées, dans un but pédagogique. Voix générées par intelligence artificielle : Ada, Alan et Lia. Podcast indépendant, sans lien avec les entreprises citées.</p>
+  <p class="pied-liens"><a href="https://3h33.com/podcast-voix-de-lia/flux.xml"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 17a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM3 10.5v2.6a7.9 7.9 0 0 1 7.9 7.9h2.6A10.5 10.5 0 0 0 3 10.5zM3 3.5v2.6A14.9 14.9 0 0 1 17.9 21h2.6A17.5 17.5 0 0 0 3 3.5z"/></svg> Flux RSS</a><a href="/podcast-voix-de-lia/annonceurs/">Annonceurs</a><a href="https://3h33.com/">3h33.com</a><a href="https://3h33.com/podcasts/">Tous les podcasts de 3h33</a></p>
+</footer>
+<a class="remonter" href="#contenu" aria-label="Remonter en haut de la page" title="Remonter en haut"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+<script src="/podcast-voix-de-lia/site.js?v=09145643" defer></script>
+</body>
+</html>
