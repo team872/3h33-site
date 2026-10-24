@@ -282,9 +282,66 @@
       morceaux.forEach(function (m, i) { m.classList.toggle("dit", i === k); m.classList.toggle("deja", i < k); });
     });
   });
-  // un teaser qui démarre arrête la vidéo et les autres teasers
-  $$(".teaser-carte audio").forEach(function (a) {
-    a.addEventListener("play", function () { $$("video, audio").forEach(function (m) { if (m !== a && !m.paused) m.pause(); }); });
+  /* ------------------------------------------------ lecteur d'un son court (teasers, 25/10/2026) */
+  // Bouton, barre (toucher, glisser, flèches) et temps ; l'<audio> caché fait le travail. Un son qui démarre arrête
+  // la vidéo et les autres sons de la page.
+  $$("[data-ls]").forEach(function (ls) {
+    var audio = $("audio", ls), bouton = $(".ls-jouer", ls), barre = $(".ls-barre", ls), ecoule = $(".ls-ecoule", ls);
+    if (!audio || !bouton || !barre) return;
+    ls.classList.add("ls-pret");
+    audio.controls = false;
+    var mmss = function (s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0"); };
+    var total = function () { return audio.duration && isFinite(audio.duration) ? audio.duration : Number(audio.dataset.duree) || 0; };
+    var nom = bouton.getAttribute("aria-label").replace(/^Écouter /, "");
+    var maj = function () {
+      var d = total(), t = audio.currentTime || 0;
+      ls.style.setProperty("--p", d ? Math.min(1, t / d) : 0);
+      if (ecoule) ecoule.textContent = mmss(t);
+      barre.setAttribute("aria-valuenow", Math.round(t));
+      barre.setAttribute("aria-valuetext", mmss(t) + " sur " + mmss(Math.round(d)));
+    };
+    var etat = function () {
+      var joue = !audio.paused && !audio.ended;
+      ls.classList.toggle("joue", joue);
+      bouton.classList.toggle("joue", joue);
+      bouton.setAttribute("aria-pressed", joue ? "true" : "false");
+      bouton.setAttribute("aria-label", (joue ? "Mettre en pause " : "Écouter ") + nom);
+    };
+    bouton.addEventListener("click", function () { if (audio.paused) audio.play().catch(function () {}); else audio.pause(); });
+    audio.addEventListener("play", function () { $$("video, audio").forEach(function (m) { if (m !== audio && !m.paused) m.pause(); }); });
+    ["play", "pause", "ended"].forEach(function (e) { audio.addEventListener(e, etat); });
+    ["timeupdate", "loadedmetadata", "seeked"].forEach(function (e) { audio.addEventListener(e, maj); });
+    audio.addEventListener("ended", function () { audio.currentTime = 0; maj(); });
+    var aller = function (t) {
+      var d = total(); if (!d) return;
+      t = Math.max(0, Math.min(d - 0.2, t));
+      if (audio.readyState === 0) { audio.preload = "metadata"; audio.addEventListener("loadedmetadata", function f() { audio.removeEventListener("loadedmetadata", f); audio.currentTime = t; }); audio.load(); }
+      else audio.currentTime = t;
+      ls.style.setProperty("--p", t / d);
+      if (ecoule) ecoule.textContent = mmss(t);
+    };
+    var depuisPointeur = function (ev) { var r = barre.getBoundingClientRect(); aller(total() * Math.max(0, Math.min(1, (ev.clientX - r.left) / r.width))); };
+    barre.addEventListener("pointerdown", function (ev) {
+      ev.preventDefault();
+      barre.setPointerCapture && barre.setPointerCapture(ev.pointerId);
+      ls.classList.add("glisse");
+      depuisPointeur(ev);
+      var bouger = function (e) { depuisPointeur(e); };
+      var lacher = function () { ls.classList.remove("glisse"); barre.removeEventListener("pointermove", bouger); barre.removeEventListener("pointerup", lacher); barre.removeEventListener("pointercancel", lacher); };
+      barre.addEventListener("pointermove", bouger);
+      barre.addEventListener("pointerup", lacher);
+      barre.addEventListener("pointercancel", lacher);
+    });
+    barre.addEventListener("keydown", function (ev) {
+      var pas = { ArrowRight: 5, ArrowUp: 5, ArrowLeft: -5, ArrowDown: -5, PageUp: 15, PageDown: -15 }[ev.key];
+      if (ev.key === "Home") { ev.preventDefault(); return aller(0); }
+      if (ev.key === "End") { ev.preventDefault(); return aller(total()); }
+      if (ev.key === " " || ev.key === "Enter") { ev.preventDefault(); return bouton.click(); }
+      if (!pas) return;
+      ev.preventDefault();
+      aller((audio.currentTime || 0) + pas);
+    });
+    maj();
   });
 
   /* ------------------------------------------------ bandeau : « Lia vous présente l'émission » */
