@@ -4,6 +4,7 @@ Site statique en HTML pur, servi par nginx derrière le Traefik du VPS « vitrin
 
 - `site/` : ce qui est servi (accueil, les sept sites HTML purs, médias).
 - `nginx.conf`, `docker-compose.yml` : le service. Sur le VPS : `/opt/3h33-site`, `docker compose up -d`.
+  Après une modification de `nginx.conf` : sur le VPS, `git pull`, tester la configuration dans un conteneur jetable (`docker run --rm -v /opt/3h33-site/nginx.conf:/etc/nginx/conf.d/default.conf:ro -v /opt/3h33-site/redirections.conf:/etc/nginx/redirections.conf:ro nginx:1.27-alpine nginx -t`), puis `docker compose up -d --force-recreate web`. ⚠ 3h33.com répond alors 404 pendant environ 30 à 40 secondes : Traefik attend le premier contrôle de santé (toutes les 30 s). Le faire à une heure creuse (mesuré le 25/10/2026).
 - `maquettes/` : les pistes de design (la piste 4 « L'aube claire » est la base).
 - `audit/` : l'inventaire du site WordPress (205 contenus en Markdown, classification).
 - `medias/` : logos clients et photo, à la source.
