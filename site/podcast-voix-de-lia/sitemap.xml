@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url><loc>https://3h33.com/podcast-voix-de-lia/</loc><lastmod>2026-10-24</lastmod><video:video><video:thumbnail_loc>https://3h33.com/podcast-voix-de-lia/videos/presentation.jpg?v=20eff4b4</video:thumbnail_loc><video:title>Les Voix de l'IA, c'est quoi ?</video:title><video:description>Alexandre Stopnicki présente Les Voix de l'IA en une minute : près de 150 portraits audio des femmes et des hommes de la tech, des faits vérifiés source par source, un quiz après chaque portrait.</video:description><video:content_loc>https://3h33.com/podcast-voix-de-lia/videos/presentation.mp4?v=24e283d2</video:content_loc><video:duration>63</video:duration><video:publication_date>2026-10-24</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
+  <url><loc>https://3h33.com/podcast-voix-de-lia/</loc><lastmod>2026-10-26</lastmod><video:video><video:thumbnail_loc>https://3h33.com/podcast-voix-de-lia/videos/presentation.jpg?v=20eff4b4</video:thumbnail_loc><video:title>Les Voix de l'IA, c'est quoi ?</video:title><video:description>Alexandre Stopnicki présente Les Voix de l'IA en une minute : près de 150 portraits audio des femmes et des hommes de la tech, des faits vérifiés source par source, un quiz après chaque portrait.</video:description><video:content_loc>https://3h33.com/podcast-voix-de-lia/videos/presentation.mp4?v=24e283d2</video:content_loc><video:duration>63</video:duration><video:publication_date>2026-10-24</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
+  <url><loc>https://3h33.com/podcast-voix-de-lia/thierry-vincent/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://3h33.com/podcast-voix-de-lia/pierre-calmard/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://3h33.com/podcast-voix-de-lia/cecile-moulard/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://3h33.com/podcast-voix-de-lia/gael-duval/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://3h33.com/podcast-voix-de-lia/emmanuel-forsans/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://3h33.com/podcast-voix-de-lia/anthony-bourbon/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://3h33.com/podcast-voix-de-lia/marie-laure-sauty-de-chalon/</loc><lastmod>2026-10-23</lastmod></url>
   <url><loc>https://3h33.com/podcast-voix-de-lia/jean-david-blanc/</loc><lastmod>2026-10-23</lastmod></url>
@@ -155,5 +160,5 @@
   <url><loc>https://3h33.com/podcast-voix-de-lia/parcours/de-la-chute-au-succes/</loc><lastmod>2026-10-16</lastmod></url>
   <url><loc>https://3h33.com/podcast-voix-de-lia/annonceurs/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://3h33.com/podcast-voix-de-lia/reseaux-sociaux/</loc><lastmod>2026-10-24</lastmod><video:video><video:thumbnail_loc>https://3h33.com/podcast-voix-de-lia/videos/presentation.jpg?v=20eff4b4</video:thumbnail_loc><video:title>Les Voix de l'IA, c'est quoi ?</video:title><video:description>Alexandre Stopnicki présente Les Voix de l'IA en une minute : près de 150 portraits audio des femmes et des hommes de la tech, des faits vérifiés source par source, un quiz après chaque portrait.</video:description><video:content_loc>https://3h33.com/podcast-voix-de-lia/videos/presentation.mp4?v=24e283d2</video:content_loc><video:duration>63</video:duration><video:publication_date>2026-10-24</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
-  <url><loc>https://3h33.com/podcast-voix-de-lia/quiz/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://3h33.com/podcast-voix-de-lia/quiz/</loc><lastmod>2026-10-26</lastmod></url>
 </urlset>

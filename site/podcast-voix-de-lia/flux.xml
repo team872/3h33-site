@@ -20,7 +20,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Sat, 24 Oct 2026 18:11:32 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 26 Oct 2026 17:04:36 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA · la tech racontée par des IA</title>
@@ -38,6 +38,116 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Thierry Vincent : l'énergie qu'on ne voit pas</title>
+      <itunes:title>Thierry Vincent : l'énergie qu'on ne voit pas</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/thierry-vincent/</link>
+      <guid isPermaLink="false">voix-de-lia-thierry-vincent</guid>
+      <pubDate>Mon, 26 Oct 2026 17:04:36 GMT</pubDate>
+      <description>Il a quitté la finance de marché au retour du Canada, passé trente ans dans la transition écologique, puis créé, en pleine crise énergétique de 2022, un MBA sur la transition énergétique chez De Vinci. Le clin d'œil d'Ada, Alan et Lia à Thierry Vincent, pour qui l'énergie est le sang invisible de nos vies.
+
+Épisode enregistré le 26 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/thierry-vincent/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il a quitté la finance de marché au retour du Canada, passé trente ans dans la transition écologique, puis créé, en pleine crise énergétique de 2022, un MBA sur la transition énergétique chez De Vinci. Le clin d&#39;œil d&#39;Ada, Alan et Lia à Thierry Vincent, pour qui l&#39;énergie est le sang invisible de nos vies.</p><p>Épisode enregistré le 26 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/thierry-vincent/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/thierry-vincent.mp3?v=4fa00a28" length="8267665" type="audio/mpeg"/>
+      <itunes:duration>341</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/thierry-vincent-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/thierry-vincent/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/thierry-vincent/chapitres.json?v=d5ca93f3" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Pierre Calmard : on ne ferme pas la boîte, le choix reste humain</title>
+      <itunes:title>Pierre Calmard : on ne ferme pas la boîte, le choix reste humain</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/pierre-calmard/</link>
+      <guid isPermaLink="false">voix-de-lia-pierre-calmard</guid>
+      <pubDate>Mon, 26 Oct 2026 13:58:29 GMT</pubDate>
+      <description>En 2001, quand la bulle Internet éclate, ses patrons lui disent : « on ne ferme pas la boîte ». Un an et demi de refus plus tard, les premiers oui arrivent. Président de dentsu France depuis 2020, auteur de « L'Homme à venir » et de « L'entreprise harmonieuse », Pierre Calmard laisse aux agents d'intelligence artificielle « la délégation des emmerdements », et à l'humain le choix.
+
+Épisode enregistré le 26 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/pierre-calmard/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>En 2001, quand la bulle Internet éclate, ses patrons lui disent : « on ne ferme pas la boîte ». Un an et demi de refus plus tard, les premiers oui arrivent. Président de dentsu France depuis 2020, auteur de « L&#39;Homme à venir » et de « L&#39;entreprise harmonieuse », Pierre Calmard laisse aux agents d&#39;intelligence artificielle « la délégation des emmerdements », et à l&#39;humain le choix.</p><p>Épisode enregistré le 26 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/pierre-calmard/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/pierre-calmard.mp3?v=82fde463" length="14388345" type="audio/mpeg"/>
+      <itunes:duration>596</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/pierre-calmard-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/pierre-calmard/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/pierre-calmard/chapitres.json?v=790409f5" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Cécile Moulard : Amazon, les kiosques et la confiance</title>
+      <itunes:title>Cécile Moulard : Amazon, les kiosques et la confiance</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/cecile-moulard/</link>
+      <guid isPermaLink="false">voix-de-lia-cecile-moulard</guid>
+      <pubDate>Mon, 26 Oct 2026 13:55:24 GMT</pubDate>
+      <description>Elle a appelé un inconnu tous les jours à midi pour entrer chez Carat, lancé Amazon en France en 2000 et reçu de Jeff Bezos une leçon sur les kiosques à journaux qu'elle n'a jamais oubliée. Depuis Los Angeles, avec MixR, Cécile Moulard pose à l'intelligence artificielle une question simple : qu'est-ce qui fait de nous des humains ?
+
+Épisode enregistré le 26 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/cecile-moulard/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Elle a appelé un inconnu tous les jours à midi pour entrer chez Carat, lancé Amazon en France en 2000 et reçu de Jeff Bezos une leçon sur les kiosques à journaux qu&#39;elle n&#39;a jamais oubliée. Depuis Los Angeles, avec MixR, Cécile Moulard pose à l&#39;intelligence artificielle une question simple : qu&#39;est-ce qui fait de nous des humains ?</p><p>Épisode enregistré le 26 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/cecile-moulard/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/cecile-moulard.mp3?v=e9156474" length="14711800" type="audio/mpeg"/>
+      <itunes:duration>609</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/cecile-moulard-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/cecile-moulard/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/cecile-moulard/chapitres.json?v=45b7da52" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Gaël Duval : des pelles, des pioches et un avion</title>
+      <itunes:title>Gaël Duval : des pelles, des pioches et un avion</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/gael-duval/</link>
+      <guid isPermaLink="false">voix-de-lia-gael-duval</guid>
+      <pubDate>Mon, 26 Oct 2026 13:52:15 GMT</pubDate>
+      <description>Il a quitté le droit, « saisi par le syndrome du film L'Auberge espagnole », trouvé le nom d'Aucland deux semaines avant son lancement, puis fait pitcher six start-up entre Paris et New York. Le Gaël Duval de La French Touch Conference a une formule : pendant la ruée vers l'or, il faut vendre des pelles et des pioches.
+
+Épisode enregistré le 26 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/gael-duval/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Il a quitté le droit, « saisi par le syndrome du film L&#39;Auberge espagnole », trouvé le nom d&#39;Aucland deux semaines avant son lancement, puis fait pitcher six start-up entre Paris et New York. Le Gaël Duval de La French Touch Conference a une formule : pendant la ruée vers l&#39;or, il faut vendre des pelles et des pioches.</p><p>Épisode enregistré le 26 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/gael-duval/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/gael-duval.mp3?v=0975f352" length="13807511" type="audio/mpeg"/>
+      <itunes:duration>572</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/gael-duval-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/gael-duval/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/gael-duval/chapitres.json?v=4256add3" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Emmanuel Forsans : le samedi après-midi de plus de vingt ans</title>
+      <itunes:title>Emmanuel Forsans : le samedi après-midi de plus de vingt ans</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/emmanuel-forsans/</link>
+      <guid isPermaLink="false">voix-de-lia-emmanuel-forsans</guid>
+      <pubDate>Mon, 26 Oct 2026 12:04:03 GMT</pubDate>
+      <description>En 1986, il trouve son premier emploi dans le bottin ; en 2002, sa société tombe dans la crise. Alors Emmanuel Forsans fait la liste qui manquait, un samedi après-midi, et fonde l'Agence française pour le jeu vidéo. Face à l'IA, ce programmeur de toujours veut un assistant pour progresser, jamais un remplaçant.
+
+Épisode enregistré le 26 octobre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/emmanuel-forsans/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>En 1986, il trouve son premier emploi dans le bottin ; en 2002, sa société tombe dans la crise. Alors Emmanuel Forsans fait la liste qui manquait, un samedi après-midi, et fonde l&#39;Agence française pour le jeu vidéo. Face à l&#39;IA, ce programmeur de toujours veut un assistant pour progresser, jamais un remplaçant.</p><p>Épisode enregistré le 26 octobre 2026. <a href="https://3h33.com/podcast-voix-de-lia/emmanuel-forsans/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/emmanuel-forsans.mp3?v=319b1b94" length="14432472" type="audio/mpeg"/>
+      <itunes:duration>598</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/emmanuel-forsans-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/emmanuel-forsans/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/emmanuel-forsans/chapitres.json?v=9e7e56cc" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Anthony Bourbon : la dalle, du fond du bus au Y Combinator</title>
       <itunes:title>Anthony Bourbon : la dalle, du fond du bus au Y Combinator</itunes:title>
