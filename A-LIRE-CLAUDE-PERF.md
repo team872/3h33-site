@@ -6,7 +6,7 @@
 
 ## 1. Réponse courte
 
-- **Le serveur n'est pas trop faible. Pas d'upgrade de VPS.** Le VPS « vitrine » est un KVM 4 (4 vCPU, 16 Go de RAM, 200 Go, 16 To de trafic/mois). Sur les 7 derniers jours : **CPU 4,7 à 7,7 % (moyenne 5 %)**, **RAM ~2,5 Go sur 16**, disque 31 Go sur 200, trafic sortant total ~15,7 Go (moyenne 0,1 Mbit/s, pic ~650 Mo sur 30 min), uptime 10,5 jours sans redémarrage. Le serveur est utilisé à environ 5 %.
+- **Le serveur n'est pas trop faible. Pas d'upgrade de VPS.** Le VPS « vitrine » est un KVM 4 (4 vCPU, 16 Go de RAM, 200 Go, 16 To de trafic/mois). Sur les 7 derniers jours : **CPU 4,7 à 7,7 % (moyenne 5 %)**, **RAM ~2,5 Go sur 16**, disque 31 Go sur 200, trafic sortant total ~15,7 Go (moyenne ~0,2 Mbit/s, pic ~650 Mo sur 30 min), uptime 10,5 jours sans redémarrage. Le serveur est utilisé à environ 5 %.
 - **Ce n'est pas non plus le poids des pages servies.** Le HTML du deck en ligne n'est pas le fichier de 8,6 Mo : c'est une version allégée de 0,92 Mo (**488 Ko** sur le réseau, compressée en brotli), les images étant chargées depuis `/img/`. Les 8,6 Mo sont la copie locale `dist/acorus.html` (images en base64), qui n'est pas ce qui est publié. L'accueil pèse 28 Ko compressé, `/bebe-punk/` 21 Ko, le configurateur 660 Ko.
 - **Les « timeouts de 8 s » viennent d'un blocage de poignée de main TLS/connexion intermittent, pas de la lenteur nginx.** Voir les preuves au §2. Cause exacte **non établie** depuis l'extérieur : il faut deux ou trois commandes en lecture seule sur le VPS (§3) pour trancher.
 - Beaucoup de petites améliorations nginx/cache/médias sont utiles (§4 à §6), mais **aucune ne guérira à elle seule les échecs de connexion**.
@@ -19,20 +19,20 @@ Commande : `curl -4 -w` (dns, connect, tls, ttfb, total, code, version HTTP), `-
 
 | URL | essais | échecs (code 000, rc=35, **8,01 s pile**) | TLS médian | TTFB médian | total médian (si OK) | octets reçus |
 |---|---|---|---|---|---|---|
-| `/` (accueil) | 30 | ~35 % | 0,48 s | 0,67 s | 0,69 s | 28 Ko (gzip) |
-| `/bebe-punk/` | 29 | ~38 % | 0,43 s | 0,63 s | 0,64 s | 21 Ko |
-| `/acorus/` | 30 | ~20 % | 0,44 s | 0,65 s | 1,23 s | 488 Ko (br) |
-| `/lenotre/configurateur/` | 30 | ~30 % | 0,47 s | 0,69 s | 1,34 s | 661 Ko |
-| `/medias/x-madame-qualite.mp4` (2,5 Mo) | 29 | ~28 % | 0,41 s | 0,62 s | 1,60 s | 2,48 Mo |
-| `/acorus/` **directement sur l'ancien hébergement** (`--resolve 3h33.com:443:147.79.116.46`) | 29 | ~27 % | 0,43 s | 0,66 s | 1,25 s | 488 Ko |
+| `/` (accueil) | 30 | **11 (37 %)** | 0,45 s | 0,65 s | 0,68 s (max 0,89) | 28 Ko (gzip) |
+| `/bebe-punk/` | 30 | **12 (40 %)** | 0,44 s | 0,63 s | 0,65 s (max 0,74) | 21 Ko |
+| `/acorus/` | 30 | **6 (20 %)** | 0,44 s | 0,66 s | 1,23 s (max 2,08) | 488 Ko (br) |
+| `/lenotre/configurateur/` | 30 | **9 (30 %)** | 0,45 s | 0,68 s | 1,34 s (max 1,62) | 661 Ko |
+| `/medias/x-madame-qualite.mp4` (2,5 Mo) | 30 | **8 (27 %)** | 0,41 s | 0,62 s | 1,60 s (max 1,89) | 2,48 Mo |
+| `/acorus/` **directement sur l'ancien hébergement** (`--resolve 3h33.com:443:147.79.116.46`) | 30 | **8 (27 %)** | 0,43 s | 0,66 s | 1,24 s (max 1,46) | 488 Ko |
 
-(Les chiffres exacts par URL sont dans le journal brut de la machine de mesure ; les pourcentages sont arrondis. Les ordres de grandeur sont fiables, pas les unités.)
+Au total : **54 échecs sur 180 requêtes (30 %)**, tous identiques (8,01 s, `rc=35`). Un test à part sur `nouveau.3h33.com` et `old.3h33.com` (même VPS) donne 8/30 et 12/30 échecs.
 
 À retenir :
 1. **Quand ça répond, tout est rapide et régulier** : HTTP/2 partout, TLS 1.3, aucune requête > 2,1 s, pas de lenteur progressive. Les 8,01 s sont **toujours exactement 8,01 s** et toujours `rc=35` (échec TLS) : c'est un délai de coupure fixe, pas une lenteur qui s'étire.
 2. **Les échecs touchent tout pareil** : l'accueil (servi par nginx local), `bebe-punk` (local), `acorus` et le configurateur (relayés vers l'ancien hébergement), **et l'ancien hébergement joint directement** (147.79.116.46), `nouveau.3h33.com` et `old.3h33.com`. Donc ce n'est **pas** le relais nginx → mutualisé, ni la config nginx des chemins : le point commun est la **connexion vers l'une ou l'autre des deux adresses Hostinger**.
-3. **Témoins sans échec sur la même machine, même minute** : wikipedia.org (13/13), hostinger.com (13/13, derrière un CDN), un serveur de test Hetzner (14/14). Donc le réseau de la machine de mesure n'est pas en cause en général.
-4. **Depuis l'extérieur** (service public check-host.net, 10 à 20 nœuds dans le monde, requêtes HTTPS réelles) : **132 requêtes sur l'accueil, `/acorus/`, le configurateur et `/bebe-punk/`, 132 réponses 200, 0 échec.** Médiane ≈ 0,5 s. Les lents sont les nœuds asiatiques (1,8 à 4,7 s). **Un seul vrai cas lent : 19,8 s sur l'accueil, depuis un nœud non identifié**, soit environ 0,8 % des essais. Deux lectures indépendantes (outil de lecture web) : OK du premier coup.
+3. **Témoins sans échec sur la même machine, même minute** : wikipedia.org (30/30), hostinger.com (30/30, derrière un CDN), un serveur de test Hetzner (14/14). Donc le réseau de la machine de mesure n'est pas en cause en général.
+4. **Depuis l'extérieur** (service public check-host.net, 10 à 20 nœuds dans le monde, requêtes HTTPS réelles) : **151 requêtes sur l'accueil, `/acorus/`, le configurateur et `/bebe-punk/`, 151 réponses 200, 0 échec.** Médiane ≈ 0,5 s. Les lents sont les nœuds asiatiques (1,8 à 4,7 s). **Un seul vrai cas lent : 19,8 s sur l'accueil, depuis un nœud non identifié**, soit environ 0,7 % des essais. Deux lectures indépendantes (outil de lecture web) : OK du premier coup.
 
 **Lecture** : depuis la plupart des endroits, le site répond. Le taux d'échec de ~30 % observé depuis la machine de mesure est en partie un artefact de son chemin réseau (sortie partagée, vers les plages d'adresses Hostinger : possible limitation ou filtrage anti-abus de leur côté sur une adresse très sollicitée). **Mais** le cas à 19,8 s et les deux erreurs SSL du configurateur signalées par Alexandre montrent qu'il existe **un décrochage réel, rare** (de l'ordre de 1 %). Les symptômes « ~8 s puis 200 en 1,4 s » rapportés correspondent exactement à ce que la machine de mesure reproduit : je soupçonne que les mesures initiales venaient du même type de sortie réseau. **À confirmer avec un test depuis le poste ou le téléphone d'Alexandre (4G, hors Wi-Fi du bureau)** : si le site y est instantané en permanence, le problème est surtout du côté de l'outil de mesure.
 
@@ -235,7 +235,7 @@ Pour que `/img/` (images), `/lenotre/petites-toques/` et `/lenotre/configurateur
 |---|---|---|---|
 | **Sonde externe 5 min** (§3) | permet de savoir enfin la vraie fréquence | 10 min | nul |
 | **Lire les journaux Traefik/conntrack/fail2ban** (§3) | trouve la vraie cause des décrochages | 15 min | nul (lecture) |
-| **Cloudflare gratuit devant 3h33.com** | HTTP/3, brotli, cache des images et vidéos aux bords du réseau, cache les décrochages d'origine (« Always Online », reprise), cache les poignées de main TLS près du visiteur | moyen : il faut **déléguer les serveurs de noms** de 3h33.com à Cloudflare (le CNAME partiel est réservé aux offres payantes), recopier **tous** les enregistrements (MX, DKIM, SPF, `ia-magique`, `projet`, `veille`, `stats`, `nouveau`…), mettre le SSL en « Full (strict) » ; le défi HTTP de Let's Encrypt de Traefik continue de marcher | **moyen** : une erreur de copie DNS coupe les mails ; les conditions d'usage de la formule gratuite limitent la diffusion de vidéos lourdes depuis son cache (garder les mp4 hors cache ou sur un sous-domaine non proxifié) ; à faire un soir calme, avec TTL à 300 s |
+| **Cloudflare gratuit devant 3h33.com** | HTTP/3, brotli, cache des images et vidéos près du visiteur, poignée de main TLS terminée près du visiteur (réduit l'effet d'un décrochage éventuel sur le chemin vers le VPS) | moyen : il faut **déléguer les serveurs de noms** de 3h33.com à Cloudflare (le CNAME partiel est réservé aux offres payantes), recopier **tous** les enregistrements (MX, DKIM, SPF, `ia-magique`, `projet`, `veille`, `stats`, `nouveau`…), mettre le SSL en « Full (strict) » ; le défi HTTP de Let's Encrypt de Traefik continue de marcher | **moyen** : une erreur de copie DNS coupe les mails ; les conditions d'usage de la formule gratuite limitent la diffusion de vidéos lourdes depuis son cache (garder les mp4 hors cache ou sur un sous-domaine non proxifié) ; à faire un soir calme, avec TTL à 300 s |
 | **Upgrade du VPS** | **aucun** (CPU 5 %, RAM 16 % utilisée) | — | argent perdu |
 | **HTTP/3 sur Traefik** | léger gain sur mobile | ajouter UDP 443 au pare-feu Hostinger + `entryPoints.websecure.http3` | faible, mais inutile derrière Cloudflare |
 | **Fermer le port 22 au monde** (restreindre à l'IP d'Alexandre / Tailscale) et installer fail2ban si absent | sécurité, pas vitesse | 15 min | **risque de se bloquer l'accès SSH** : tester une seconde session avant de fermer |
@@ -259,7 +259,7 @@ Améliorations côté moteur, par impact (à décrire à qui travaille sur le d�
 5. **Polices** : 14 woff2 en base64 (378 Ko) : ne garder que les graisses réellement utilisées, sous-ensemble « latin » (`pyftsubset`, `unicode-range`). Gain plausible : −150 à −250 Ko.
 6. **Sortir les polices et le CSS commun en fichiers versionnés** (`/slides/engine-<hash>.css`, cache 1 an) au lieu de les recopier dans chaque deck : chaque deck pèserait ~600 Ko de moins et le navigateur les réutiliserait d'un deck à l'autre. À peser contre l'intérêt d'un fichier unique autonome.
 7. **Publication FTP** : n'envoyer que ce qui a changé (empreintes) et publier `emporter` en second, comme déjà prévu.
-8. Aucun des décks publiés ne dépasse 0,9 Mo de HTML : **le poids n'est pas la cause des timeouts**, mais l'amélioration du point 1 améliorera sensiblement les téléphones.
+8. Le deck Acorus publié pèse 0,9 Mo de HTML (0,5 Mo compressé) : **le poids n'est pas la cause des timeouts**, mais l'amélioration du point 1 améliorera sensiblement les téléphones. (Les autres decks n'ont pas été mesurés en ligne : leurs copies locales `dist/` font 5 à 11 Mo avec images incorporées ; vérifier qu'ils sont publiés en version allégée.)
 
 ## 7. Résumé des correctifs par ordre de priorité
 
