@@ -49,3 +49,7 @@ Puis ouvrir la page : les quatre cartes s'ouvrent dans un nouvel onglet ; le log
 
 - Ne l'ajouter ni à `site/sitemap.xml`, ni à `llms.txt`, ni à `plan-du-site`, ni au menu.
 - Des délais d'attente dépassés apparaissent par intermittence sur 3h33.com depuis le box (des 000 sur curl, puis 200 au nouvel essai) : déjà signalé dans la note Acorus.
+
+## Fait le 27/10/2026, 20 h 44 (heure de Paris)
+
+Fusionné dans `main` (40ce867a), `git pull` sur le VPS, `nginx -t` réussi dans un conteneur jetable, conteneur `web` recréé. Coupure mesurée : environ 30 s (de 20 h 44 min 41 à 20 h 45 min 12). Toutes les adresses de référence sont revenues à l'identique (dont `/s/` 404 et `/medias/` 403, leur état habituel). `/demos-ia/` répond 200, avec `X-Robots-Tag: noindex…` et la balise robots ; l'image `demo-bebe-punk.jpg` répond 200.
