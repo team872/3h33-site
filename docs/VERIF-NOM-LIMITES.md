@@ -14,6 +14,24 @@ et cela ne coûte rien.
 **Le seul vrai risque : une salle entière sur le même Wi-Fi**, par exemple un atelier en incubateur ou une soirée. Tout le
 monde sort alors par la même adresse internet et partage les limites ci-dessous.
 
+## Comment ça marche, point par point
+
+Quand on tape un nom, la page interroge en même temps des **annuaires publics et gratuits**, ouverts à tous, sans clé
+ni compte. On appelle ces services des « API » : des guichets automatiques où un programme pose une question et reçoit une
+réponse. Personne ne paie et rien ne passe par 3h33.
+
+| Ce qu'on vérifie | À qui on le demande | Comment on lit la réponse |
+|---|---|---|
+| **Le nom de domaine** en .com, .fr, .app, .dev, .net, .org et .xyz | **rdap.org**, qui renvoie vers l'annuaire officiel de chaque extension (Verisign pour le .com, l'Afnic pour le .fr, Google pour le .app…) | « Pas de fiche » : personne n'a déposé le nom, il est **libre**. Une fiche : il est **pris**. |
+| **Le nom de domaine** en .io, .co et .ai | Ces extensions n'ont pas d'annuaire public : on interroge **dns.google**, le carnet d'adresses d'internet | Aucune adresse : **probablement libre**. C'est moins sûr que la ligne du dessus, et l'outil le dit. |
+| **Une entreprise française** qui porte déjà ce nom | **recherche-entreprises.api.gouv.fr**, l'annuaire des entreprises de l'État (le registre RNE, tenu par l'INPI) | La liste des sociétés trouvées, avec leur SIREN et leur adresse. |
+| **Un compte GitHub** à ce nom | **GitHub** (le site où les développeurs rangent leur code) | Le compte existe-t-il ? C'est utile pour réserver le nom d'un projet. |
+| **Une bibliothèque de code** à ce nom | Les registres **npm** (JavaScript), **PyPI** (Python), **crates.io** (Rust) et **RubyGems** (Ruby) | Le nom est-il déjà pris par un programme publié ? |
+| **Une œuvre ou une chose connue** à ce nom | **Wikipedia** (français et anglais), **Wikidata** (la base de faits de Wikipedia), **Open Library** (les livres), la **Bibliothèque du Congrès** (États-Unis) | Un film, un jeu, un livre ou une entreprise célèbre du même nom ? C'est là qu'on a trouvé le jeu « Wildkeepers Rising ». |
+| **Les marques déposées** (INPI, EUIPO/TMview, USPTO, OMPI) et **les brevets** | **Pas de guichet automatique gratuit** : ces bases demandent une clé ou bloquent les programmes | L'outil ouvre la bonne recherche sur le site officiel en un clic, et **on la fait à la main**. C'est ce qu'on a fait pour Vivakeeper et Vivaclock. |
+
+Les 20 dernières recherches restent dans le navigateur du visiteur. Elles ne sont envoyées nulle part.
+
 ## Les limites, base par base
 
 | Base interrogée | Limite (par adresse internet) | Ce que ça donne |
