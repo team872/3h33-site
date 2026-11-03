@@ -20,7 +20,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Mon, 26 Oct 2026 17:04:36 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 00:49:15 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA · la tech racontée par des IA</title>
@@ -38,6 +38,50 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Frédéric Cavazza, ou l'envie de voir comment ça fonctionne</title>
+      <itunes:title>Frédéric Cavazza, ou l'envie de voir comment ça fonctionne</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/frederic-cavazza/</link>
+      <guid isPermaLink="false">voix-de-lia-frederic-cavazza</guid>
+      <pubDate>Tue, 03 Nov 2026 00:49:15 GMT</pubDate>
+      <description>En juin 2003, il ouvre un blog par curiosité ; passé cinquante ans, il reprend des études de code pour tester si écrire un prompt revient à programmer. Frédéric Cavazza, ou vingt ans à aller voir de près ce que le numérique promet.
+
+Épisode enregistré le 3 novembre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/frederic-cavazza/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>En juin 2003, il ouvre un blog par curiosité ; passé cinquante ans, il reprend des études de code pour tester si écrire un prompt revient à programmer. Frédéric Cavazza, ou vingt ans à aller voir de près ce que le numérique promet.</p><p>Épisode enregistré le 3 novembre 2026. <a href="https://3h33.com/podcast-voix-de-lia/frederic-cavazza/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/frederic-cavazza.mp3?v=c6e66342" length="12626865" type="audio/mpeg"/>
+      <itunes:duration>520</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/frederic-cavazza-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/frederic-cavazza/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/frederic-cavazza/chapitres.json?v=94cbfdf4" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>Michel Levy Provençal : ses tournants se prennent le soir</title>
+      <itunes:title>Michel Levy Provençal : ses tournants se prennent le soir</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/michel-levy-provencal/</link>
+      <guid isPermaLink="false">voix-de-lia-michel-levy-provencal</guid>
+      <pubDate>Tue, 03 Nov 2026 00:39:58 GMT</pubDate>
+      <description>Des cours du soir aux Beaux-Arts à une soirée pilote à La Cantine en mai 2009, puis un assistant à qui il confie son Mac en 2026 : l'histoire de Michel Levy Provençal, fondateur de TEDxParis, un ingénieur qui ne voulait pas finir dans une case.
+
+Épisode enregistré le 3 novembre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/michel-levy-provencal/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Des cours du soir aux Beaux-Arts à une soirée pilote à La Cantine en mai 2009, puis un assistant à qui il confie son Mac en 2026 : l&#39;histoire de Michel Levy Provençal, fondateur de TEDxParis, un ingénieur qui ne voulait pas finir dans une case.</p><p>Épisode enregistré le 3 novembre 2026. <a href="https://3h33.com/podcast-voix-de-lia/michel-levy-provencal/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/michel-levy-provencal.mp3?v=89629c84" length="12622049" type="audio/mpeg"/>
+      <itunes:duration>522</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/michel-levy-provencal-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/michel-levy-provencal/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/michel-levy-provencal/chapitres.json?v=10348237" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Thierry Vincent : l'énergie qu'on ne voit pas</title>
       <itunes:title>Thierry Vincent : l'énergie qu'on ne voit pas</itunes:title>
