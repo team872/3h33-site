@@ -20,7 +20,7 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <language>fr</language>
     <copyright>© 2025-2026 Alexandre Stopnicki · Choucroute Citron</copyright>
     <generator>Podcast Engine (site/construire.mjs)</generator>
-    <lastBuildDate>Tue, 03 Nov 2026 00:49:15 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 22:27:14 GMT</lastBuildDate>
     <image>
       <url>https://3h33.com/podcast-voix-de-lia/pochette.jpg</url>
       <title>Les Voix de l'IA · la tech racontée par des IA</title>
@@ -38,6 +38,28 @@ Voix générées par IA. Podcast indépendant, sans lien avec les entreprises ci
     <podcast:guid>5c198e7a-4bcd-5411-90ac-ac369fab290b</podcast:guid>
     <podcast:locked owner="voixdelia@3h33.fr">no</podcast:locked>
     <podcast:medium>podcast</podcast:medium>
+    <item>
+      <title>Loïc Le Meur : il faisait venir la Silicon Valley à Paris</title>
+      <itunes:title>Loïc Le Meur : il faisait venir la Silicon Valley à Paris</itunes:title>
+      <link>https://3h33.com/podcast-voix-de-lia/loic-le-meur/</link>
+      <guid isPermaLink="false">voix-de-lia-loic-le-meur</guid>
+      <pubDate>Wed, 04 Nov 2026 22:27:14 GMT</pubDate>
+      <description>Une agence montée avec un prêt étudiant sur le campus d'HEC, une conférence parisienne où la Silicon Valley venait chaque décembre, puis la méditation et un regard inquiet sur l'intelligence artificielle : l'histoire de Loïc Le Meur, fondateur de LeWeb et de Seesmic.
+
+Épisode enregistré le 4 novembre 2026. Transcription complète, citations et sources : https://3h33.com/podcast-voix-de-lia/loic-le-meur/
+
+Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</description>
+      <content:encoded><![CDATA[<p>Une agence montée avec un prêt étudiant sur le campus d&#39;HEC, une conférence parisienne où la Silicon Valley venait chaque décembre, puis la méditation et un regard inquiet sur l&#39;intelligence artificielle : l&#39;histoire de Loïc Le Meur, fondateur de LeWeb et de Seesmic.</p><p>Épisode enregistré le 4 novembre 2026. <a href="https://3h33.com/podcast-voix-de-lia/loic-le-meur/">Transcription complète, citations et sources sur le site</a>.</p><p>Voix générées par IA. Podcast indépendant, sans lien avec les entreprises citées. Vignette : illustration générée par IA.</p>]]></content:encoded>
+      <enclosure url="https://3h33.com/podcast-voix-de-lia/audio/loic-le-meur.mp3?v=c0fa6cd3" length="12903449" type="audio/mpeg"/>
+      <itunes:duration>534</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:season>2</itunes:season>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:author>Alexandre Stopnicki</itunes:author>
+      <itunes:image href="https://3h33.com/podcast-voix-de-lia/images/loic-le-meur-1400.jpg"/>
+      <podcast:transcript url="https://3h33.com/podcast-voix-de-lia/loic-le-meur/transcription.html" type="text/html" language="fr"/>
+      <podcast:chapters url="https://3h33.com/podcast-voix-de-lia/loic-le-meur/chapitres.json?v=fb43f16f" type="application/json+chapters"/>
+    </item>
     <item>
       <title>Frédéric Cavazza, ou l'envie de voir comment ça fonctionne</title>
       <itunes:title>Frédéric Cavazza, ou l'envie de voir comment ça fonctionne</itunes:title>
