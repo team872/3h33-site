@@ -108,7 +108,7 @@ chapo: "Toutes les pages du site, rubrique par rubrique."
 ## Vibe coding
 - [LMA : le Learning Management Agentique](/lma-learning-management-agentique/) — Le LMA, Learning Management Agentique, succède au LMS : une plateforme où des agents retro
 - [No-code, low-code ou vibe coding : lequel choisir ?](/no-code/) — Bubble, Airtable, Zapier, Power Apps ou une IA qui écrit le code : ce que chaque approche 
-- [Vibe coding : construire des outils en dialoguant avec l'IA](/vibe-coding/) — Le vibe coding consiste à fabriquer un logiciel en dialoguant avec une IA. Ce que ça chang
+- [Vibe coding : construire des outils en dialoguant avec l'IA](/vibe-coding/) — Le vibe coding : fabriquer un logiciel en le décrivant en français à une IA. Ce que ça cha
 
 ## Sites et outils
 - [La galaxie 3h33](/galaxie/)

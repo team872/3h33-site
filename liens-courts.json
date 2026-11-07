@@ -1,0 +1,29 @@
+{
+  "_lisez_moi": "Liens courts de 3h33.com (21/10/2026). Chaque entrée devient une petite page site/<code>/index.html qui renvoie aussitôt vers la destination, avec les étiquettes de campagne (utm). Après une modification : node liens-courts.mjs, puis commit et mise en ligne. Liste lisible : docs/LIENS-COURTS.md. /vibecoding n'est pas ici : il est fabriqué par podcast-engine/outils/page-vibe-coding.mjs.",
+  "liens": [
+    {
+      "code": "li",
+      "vers": "/",
+      "utm": { "utm_source": "linkedin", "utm_medium": "profil", "utm_campaign": "profil", "utm_content": "alexandre" },
+      "usage": "Le lien du profil LinkedIn d'Alexandre (rubrique « Site web » ou « Coordonnées »)."
+    },
+    {
+      "code": "michel",
+      "vers": "/podcast-voix-de-lia/michel-ruiz/",
+      "utm": { "utm_source": "linkedin", "utm_medium": "post", "utm_campaign": "michel-ruiz", "utm_content": "alexandre" },
+      "usage": "Le portrait de Michel Ruiz, quand Alexandre le partage lui-même sur LinkedIn (Michel a son propre lien long, étiqueté michel-ruiz)."
+    },
+    {
+      "code": "podcast",
+      "vers": "/podcast-voix-de-lia/",
+      "utm": { "utm_source": "lien-court", "utm_medium": "adresse", "utm_campaign": "voix-de-lia" },
+      "usage": "Le podcast Les Voix de l'IA, à dire à voix haute ou à écrire partout (signature, diapositive, bio)."
+    },
+    {
+      "code": "qr",
+      "vers": "/",
+      "utm": { "utm_source": "qr", "utm_medium": "imprime", "utm_campaign": "carte" },
+      "usage": "Pour un QR code imprimé (carte de visite, diapositive de fin, affiche) : 3h33.com/qr."
+    }
+  ]
+}

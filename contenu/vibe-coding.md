@@ -1,7 +1,7 @@
 ---
 titre: "Vibe coding : construire des outils en dialoguant avec l'IA"
 titre_seo: "Vibe coding en entreprise : de l'idée à l'outil en ligne · 3h33"
-description: "Le vibe coding consiste à fabriquer un logiciel en dialoguant avec une IA. Ce que ça change pour une entreprise, et ce que ça ne remplace pas."
+description: "Le vibe coding : fabriquer un logiciel en le décrivant en français à une IA. Ce que ça change pour une entreprise, des exemples, et comment lancer votre projet."
 url: /vibe-coding/
 gabarit: vibe
 dessin: "flux-vibecoding.jpg|Des mains au clavier et une structure qui s'assemble au-dessus de l'écran, croquis au crayon"
@@ -11,8 +11,7 @@ rubrique: "Vibe coding|"
 fil: "Vibe coding"
 priorite: 1.0
 eyebrow: "Vibe coding"
-chapo: "Décrire en français ce qu'on veut, voir l'outil apparaître à l'écran, le corriger au fur et à mesure : c'est ainsi que nous fabriquons nos outils."
-en_bref: "Le vibe coding consiste à fabriquer un logiciel en décrivant en français ce qu'on veut obtenir, pendant qu'une intelligence artificielle écrit le code ; on corrige ensuite par itérations jusqu'au résultat. Pour une entreprise, c'est un premier outil interne obtenu en une demi-journée au lieu de plusieurs semaines, du vrai code qui lui appartient, sans abonnement à une plateforme. Il ne dispense ni de relire, ni de tester, ni de sécuriser : c'est le rôle de 3h33."
+chapo: "Un outil, une application, un site : vous le décrivez en français, l'intelligence artificielle écrit le code, et nous le dirigeons, le vérifions et le mettons en ligne."
 definition: "Vibe coding|Fabrication d'un logiciel en décrivant en langage courant ce qu'on veut obtenir, en dialoguant avec une intelligence artificielle qui écrit le code, puis en corrigeant par itérations successives jusqu'au résultat."
 faq:
   - Qu'est-ce que le vibe coding ?|Le vibe coding consiste à fabriquer un logiciel en décrivant en langage courant ce qu'on veut obtenir, en dialoguant avec une intelligence artificielle qui écrit le code, puis en corrigeant par itérations successives jusqu'au résultat.
@@ -23,34 +22,43 @@ faq:
   - Le code produit par l'IA est-il sûr ?|Pas par défaut. Une IA écrit vite du code qui fonctionne, mais elle peut laisser une clé d'accès en clair, oublier un contrôle de droits ou une limite de requêtes. Avant toute mise en ligne, nous relisons, testons et vérifions la sécurité et les données personnelles. C'est la partie du travail que nous ne déléguons pas.
   - Peut-on mettre en production une application construite en vibe coding ?|Oui, à condition de la traiter comme n'importe quel logiciel : code versionné, tests, sauvegardes, surveillance, hébergement maîtrisé. Plusieurs sites et applications de la [galaxie 3h33](/galaxie/) ont été construits ainsi et tournent tous les jours.
   - Qui maintient l'outil une fois livré ?|Vous, si vous le souhaitez : le code est à vous, documenté, et nous apprenons à vos équipes à le faire évoluer en dialoguant avec l'IA. Ou nous, pour les outils critiques. Dans les deux cas, pas de dépendance à une plateforme propriétaire.
+  - Quels projets peut-on réaliser en vibe coding ?|Une application ou un outil interne sur mesure, par exemple pour remplacer des fichiers Excel ; un outil qui relie des logiciels qui ne se parlent pas ; un agent qui répond à l'écrit ou à la voix ; un site qui guide et prépare la demande ; et même des contenus, comme un podcast entier. Les exemples de cette page ont tous été fabriqués ainsi.
+  - Combien coûte un projet en vibe coding ?|Cela dépend de ce que l'outil doit faire et de ce qu'il deviendra. Le plus simple est d'en parler : le premier échange, de vingt minutes, est gratuit, et une première version en une demi-journée permet de juger sur pièce avant d'aller plus loin.
   - Comment devenir vibe coder ?|En construisant, tout simplement, sur un vrai besoin plutôt que sur un tutoriel. Une [session Forge](/forge/) ou une [formation Claude](/formation-claude/) donnent la méthode : décrire précisément, découper, vérifier à chaque étape, garder la main sur ce qui part en production.
 ---
 
 
 ## Le vibe coding, c'est quoi ?
 
-Jusqu'ici, fabriquer un logiciel voulait dire écrire soi-même chaque ligne de code. Le vibe coding change le point de départ : on décrit ce qu'on veut obtenir, en français, et l'intelligence artificielle écrit le programme. On regarde le résultat, on corrige, on recommence. En quelques heures, une première version fonctionne.
+Le vibe coding, c'est fabriquer un logiciel en le décrivant en français. L'intelligence artificielle écrit le code, on regarde le résultat, on corrige, on recommence. En quelques heures, une première version fonctionne.
 
-Ce n'est ni de la magie ni du bricolage. Le code produit est du vrai code, qui vous appartient, qu'on peut relire, tester, héberger et faire évoluer.
+Ce n'est ni de la magie ni du bricolage : c'est du vrai code, qui vous appartient, qu'on peut relire, tester, héberger et faire évoluer.
 
-## Ce que le vibe coding change pour une entreprise
+## Vous aussi, vous avez un projet ?
 
-- **Le délai.** Un outil interne qui demandait plusieurs semaines de développement se construit en une demi-journée, puis se consolide en quelques jours.
-- **Le coût d'un essai.** Tester une idée avec une première version ne demande plus le budget d'un projet entier. On a le droit de se tromper.
-- **La propriété.** Le code vous appartient. Aucun abonnement à une plateforme qui fixe vos limites.
-- **Le sur-mesure.** L'outil suit votre façon de travailler : il est fait pour vous, pas pour le plus grand nombre.
+Si l'une de ces phrases vous ressemble, c'est un projet de vibe coding.
+
+- **« On pilote tout dans des fichiers Excel. »** Une application sur mesure les remplace.
+- **« Nos logiciels ne se parlent pas. »** Un outil les relie, ou en remplace plusieurs.
+- **« On répond toujours aux mêmes questions. »** Un agent répond à votre place, à l'écrit ou à la voix.
+- **« Notre site se contente de présenter. »** Il devient un outil : il guide, il conseille, il prépare la demande.
+
+<p class="appel-projet"><a class="bouton bouton--plein" href="#contact">Décrire mon projet →</a></p>
+
+## Ce que ça change pour vous
+
+- **Plus vite.** Ce qui demandait des semaines de développement prend forme en une demi-journée, puis se consolide en quelques jours.
+- **Moins risqué.** Tester une idée ne demande plus le budget d'un projet entier.
+- **À vous.** Le code vous appartient. Aucun abonnement, aucune plateforme qui fixe vos limites.
+- **Sur mesure.** L'outil suit votre façon de travailler, pas celle d'un logiciel vendu à tout le monde.
 
 ## Ce que le vibe coding ne remplace pas
 
-Autant être clair sur les limites.
-
-Le vibe coding ne dispense pas de savoir ce qu'on veut. Il ne dispense pas non plus de relire, de tester, de penser à la sécurité et aux données personnelles. Une intelligence artificielle produit vite du code qui marche, pas forcément du code sûr. C'est précisément là que nous intervenons.
+Il ne dispense ni de savoir ce qu'on veut, ni de relire, de tester et de sécuriser. Une IA écrit vite du code qui marche, pas forcément du code sûr. C'est précisément là que nous intervenons.
 
 ## Vibe coding ou no-code ?
 
-Beaucoup d'entreprises sont arrivées à ces questions par le no-code : des plateformes où l'on assemble des briques toutes faites, sans écrire de code. Le no-code reste utile pour des besoins simples et bien cadrés.
-
-Le vibe coding va plus loin : pas de brique imposée, pas de limites fixées par un outil, pas de dépendance à un fournisseur. Pour comparer en détail, lisez notre [comparatif no-code, low-code et vibe coding](/no-code/), puis regardez ce que la [méthode Forge](/forge/) produit en une demi-journée.
+Le no-code assemble des briques toutes faites : c'est pratique pour des besoins simples et bien cadrés. Le vibe coding n'impose ni briques, ni limites, ni fournisseur. Pour comparer en détail : notre [comparatif no-code, low-code et vibe coding](/no-code/), et ce que la [méthode Forge](/forge/) produit en une demi-journée.
 
 ## Comment nous travaillons
 
@@ -89,9 +97,29 @@ Une demi-journée de travail avec vos équipes suffit pour obtenir un premier ou
 3. **Nous consolidons**, documentons et mettons en ligne. L'outil est à vous, avec son mode d'emploi.
 </div>
 
+<p class="appel-projet"><a class="bouton bouton--plein" href="#contact">Commencer par un échange de vingt minutes →</a></p>
+
 ## Ce que nous avons construit ainsi
 
-Plus de trente-cinq sites et outils sont en ligne aujourd'hui, tous fabriqués de cette manière. Quatre exemples, très différents les uns des autres.
+Plus de trente-cinq sites et outils sont en ligne aujourd'hui, tous fabriqués ainsi. En voici quelques-uns, très différents les uns des autres.
+
+### Le savez-vous ? — un rituel quotidien
+
+[le-savez-vous.com](https://le-savez-vous.com) publie chaque matin un fait surprenant et sourcé, à lire ou à écouter en quatre-vingt-dix secondes. Un objet simple en apparence, mais qui suppose une chaîne complète : trouver, vérifier, sourcer, rédiger, mettre en voix, publier, tous les jours.
+
+<a class="vignette" href="https://le-savez-vous.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>le-savez-vous.com</em></span><img src="/vignettes/le-savez-vous.jpg" alt="La page d'accueil de Le savez-vous ?" loading="lazy" width="800" height="500"></a>
+
+### Les Voix de l'IA — un podcast fabriqué par une équipe d'IA
+
+[Les Voix de l'IA](/podcast-voix-de-lia/) raconte, en plus de cent quarante portraits audio, les femmes et les hommes qui font la tech et l'intelligence artificielle. Des IA-nimateurs écoutent ce que chaque personne a vraiment dit (livres, conférences, podcasts), une autre IA vérifie les faits source par source, et Alexandre Stopnicki tranche avant chaque épisode. Autour des portraits : un grand quiz de plus de mille questions et des playlists à thème. Une série du podcast Choucroute Citron.
+
+<a class="vignette" href="/podcast-voix-de-lia/"><span class="vignette__barre"><i></i><i></i><i></i><em>3h33.com/podcast-voix-de-lia</em></span><img src="/vignettes/voix-de-lia.jpg?v=20261021" alt="La page d'accueil des Voix de l'IA" loading="lazy" width="800" height="500"></a>
+
+### Listen to my art — le musée à la maison
+
+[listen-to-my-art.com](https://listen-to-my-art.com) fait parler les œuvres. Un QR code est posé à côté d'une photo, d'un tableau ou d'une statue. On le flashe : sur le téléphone, l'œuvre s'anime, raconte son histoire et répond quand on lui parle, à voix haute ou par écrit. Pour la maison, mais aussi pour les hôtels, les restaurants, les entreprises et les musées. On peut l'essayer sur des [chefs-d'œuvre du domaine public](https://listen-to-my-art.com/chefs-d-oeuvre/), de Van Gogh à Vermeer.
+
+<a class="vignette" href="https://listen-to-my-art.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>listen-to-my-art.com</em></span><img src="/vignettes/listen-to-my-art.jpg?v=20261021" alt="La page d'accueil de Listen to my art : une œuvre accrochée dans une salle de bain, et la même qui s'anime sur un téléphone" loading="lazy" width="800" height="500"></a>
 
 ### chapitre.ai — une IA qui écrit votre livre
 
@@ -100,12 +128,6 @@ Plus de trente-cinq sites et outils sont en ligne aujourd'hui, tous fabriqués d
 C'est un produit complet, avec un parcours d'entretien, une fabrication de livre et des options de bande dessinée ou de film.
 
 <a class="vignette" href="https://chapitre.ai" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>chapitre.ai</em></span><img src="/vignettes/chapitre.jpg?v=20261004" alt="La page d'accueil de chapitre.ai" loading="lazy" width="800" height="500"></a>
-
-### Le savez-vous ? — un rituel quotidien
-
-[le-savez-vous.com](https://le-savez-vous.com) publie chaque matin un fait surprenant et sourcé, à lire ou à écouter en quatre-vingt-dix secondes. Un objet simple en apparence, mais qui suppose une chaîne complète : trouver, vérifier, sourcer, rédiger, mettre en voix, publier, tous les jours.
-
-<a class="vignette" href="https://le-savez-vous.com" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>le-savez-vous.com</em></span><img src="/vignettes/le-savez-vous.jpg" alt="La page d'accueil de Le savez-vous ?" loading="lazy" width="800" height="500"></a>
 
 ### BotMoiLeQi — le learning agentique pour la formation
 
@@ -119,7 +141,11 @@ C'est un produit complet, avec un parcours d'entretien, une fabrication de livre
 
 <a class="vignette" href="https://subsidium.world" target="_blank" rel="noopener"><span class="vignette__barre"><i></i><i></i><i></i><em>subsidium.world</em></span><img src="/vignettes/subsidium.jpg" alt="La page d'accueil de Subsidium" loading="lazy" width="760" height="412"></a>
 
-La liste complète se trouve dans [la galaxie 3h33](/galaxie/).
+### Et même un jeu vidéo, en maquette
+
+Un jeu de pâtisserie en 3D pour les enfants : peser, pocher, cuire, monter une pièce montée, puis imprimer un diplôme à son prénom. Une simple démonstration, fabriquée pour une masterclass, mais on peut y jouer.
+
+<p class="suite">La liste complète se trouve dans <a href="/galaxie/">la galaxie 3h33</a>.</p>
 
 <div class="encadre">
 <p><strong>Et chez vous, ça donnerait quoi ?</strong> Décrivez votre besoin en trois lignes dans le formulaire ci-dessous. <a href="#contact">Nous écrire</a></p>
