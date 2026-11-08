@@ -8,6 +8,49 @@
   html.classList.add('js');
 
 
+  var EN = (html.getAttribute('lang') || '').toLowerCase().indexOf('en') === 0;
+  var ASSET = html.getAttribute('data-assets') || '';
+  var I18N = EN ? {
+    sonMusique: 'Right now: with the punk riff (Lyria music mixed at 35%, under the film’s sound).',
+    sonNatif: 'Right now: native sound only (the noises and the voice made with the pictures, without music).',
+    finChoisie: ' Ending chosen: ',
+    plancheAlt: 'Enlarged contact sheet: ',
+    textePage: 'A four-metre monster falls from the sky… and a baby punk is what scares it. BOOM! The film + 9 alternate endings, 2 min 33, by Alexandre Stopnicki for The Loophole Project.',
+    titreSuffix: ' — The Monster and the Baby Punk',
+    texteItem: ' — The Monster and the Baby Punk, an AI film by Alexandre Stopnicki. BOOM!',
+    partagerTel: 'Share… <small>(your phone’s menu)</small>',
+    copier: 'Copy the link',
+    copieOk: '✓ Link copied',
+    leLien: 'The link:',
+    videoInsta: 'The video for Instagram, TikTok… <small>(MP4 file)</small>',
+    prepVideo: 'Preparing the video… ',
+    boutonPartage: 'Share',
+    altPartage: 'Share thumbnail: ',
+    montageFichier: 'medias/bebe-punk-montage-2m33-1080p-en.mp4',
+    montageVignette: 'https://3h33.com/bebe-punk/medias/vignettes/montage-2m33-1080p-en.jpg',
+    base: 'https://3h33.com/bebe-punk/en/'
+  } : {
+    sonMusique: 'En ce moment : avec le riff punk (musique Lyria mixée à 35 %, sous le son du film).',
+    sonNatif: 'En ce moment : son natif seul (les bruits et la voix fabriqués avec les images, sans musique).',
+    finChoisie: ' Fin choisie : ',
+    plancheAlt: 'Planche-contact agrandie : ',
+    textePage: 'Un monstre de 4 mètres tombe du ciel… et c’est un bébé punk qui lui fait peur. BOOM! Le film + 9 fins alternatives, 2 min 33, d’Alexandre Stopnicki pour The Loophole Project.',
+    titreSuffix: ' — Le monstre et le bébé punk',
+    texteItem: ' — Le monstre et le bébé punk, un film IA d’Alexandre Stopnicki. BOOM!',
+    partagerTel: 'Partager… <small>(menu du téléphone)</small>',
+    copier: 'Copier le lien',
+    copieOk: '✓ Lien copié',
+    leLien: 'Le lien :',
+    videoInsta: 'La vidéo pour Instagram, TikTok… <small>(fichier MP4)</small>',
+    prepVideo: 'Préparation de la vidéo… ',
+    boutonPartage: 'Partager',
+    altPartage: 'Vignette de partage : ',
+    montageFichier: 'medias/bebe-punk-montage-2m33-1080p-20261108.mp4',
+    montageVignette: 'https://3h33.com/bebe-punk/medias/vignettes/montage-2m33-1080p-20261108.jpg',
+    base: 'https://3h33.com/bebe-punk/'
+  };
+
+
   /* ------------------------------------------------ 08/11 : vues (menu, ancres, historique, clavier) */
   function arreterMedias(racine) {
     if (!racine) return;
@@ -184,8 +227,8 @@
       film.load();
       document.querySelectorAll('.interrupteur').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
       etat.textContent = musique
-        ? 'En ce moment : avec le riff punk (musique Lyria mixée à 35 %, sous le son du film).'
-        : 'En ce moment : son natif seul (les bruits et la voix fabriqués avec les images, sans musique).';
+        ? I18N.sonMusique
+        : I18N.sonNatif;
     });
   });
   document.querySelectorAll('.liste-chapitres button').forEach(function (b) {
@@ -300,7 +343,7 @@
   /* le cri du bébé, tiré du film (0,8 s) */
   var cri = null;
   function crier() {
-    if (!cri) { cri = new Audio('medias/boom.m4a'); cri.preload = 'auto'; }
+    if (!cri) { cri = new Audio(ASSET + 'medias/boom.m4a'); cri.preload = 'auto'; }
     try { cri.currentTime = 0; } catch (e) {}
     var p = cri.play(); if (p && p.catch) p.catch(function () {});
   }
@@ -358,7 +401,7 @@
         finEnCours.innerHTML = '';
         var s1 = document.createElement('span'); s1.className = 'fin-en-cours-sym'; s1.setAttribute('aria-hidden', 'true'); s1.textContent = sym;
         var st = document.createElement('strong'); st.textContent = b.dataset.titre;
-        finEnCours.appendChild(s1); finEnCours.appendChild(document.createTextNode(' Fin choisie : '));
+        finEnCours.appendChild(s1); finEnCours.appendChild(document.createTextNode(I18N.finChoisie));
         finEnCours.appendChild(st); finEnCours.appendChild(document.createTextNode('. ' + b.dataset.texte));
         charger(b.dataset.src, b.dataset.poster);
         if (innerWidth < 1000) lecteur.scrollIntoView({ behavior: calme ? 'auto' : 'smooth', block: 'center' });
@@ -378,7 +421,7 @@
     document.querySelectorAll('.planche-bouton').forEach(function (b) {
       b.addEventListener('click', function () {
         visImg.src = b.dataset.grand;
-        visImg.alt = 'Planche-contact agrandie : ' + b.dataset.legende;
+        visImg.alt = I18N.plancheAlt + b.dataset.legende;
         visTitre.textContent = b.dataset.legende;
         zoomer(false);
         vis.showModal();
@@ -470,10 +513,10 @@
   }
 
   /* ------------------------------------------------ partager : la page, chaque version, chaque fin */
-  var BASE = 'https://3h33.com/bebe-punk/';
-  var TEXTE_PAGE = 'Un monstre de 4 mètres tombe du ciel… et c’est un bébé punk qui lui fait peur. BOOM! Le film + 9 fins alternatives, 2 min 33, d’Alexandre Stopnicki pour The Loophole Project.';
+  var BASE = I18N.base;
+  var TEXTE_PAGE = I18N.textePage;
   function adresse(slug) { return (!slug || slug === 'page') ? BASE : BASE + 'v/' + slug + '/'; }
-  function vignette(slug) { return BASE + 'medias/vignettes/' + (slug || 'page') + '.jpg'; }
+  function vignette(slug) { return 'https://3h33.com/bebe-punk/medias/vignettes/' + (slug || 'page') + '.jpg'; }
   function enc(x) { return encodeURIComponent(x); }
   function reseaux(o) {
     var u = enc(o.url), t = enc(o.texte), tu = enc(o.texte + ' ' + o.url), ti = enc(o.titre);
@@ -496,7 +539,7 @@
     function li(el) { var l = document.createElement('li'); l.appendChild(el); ul.appendChild(l); }
     if (navigator.share) {
       var nat = document.createElement('button'); nat.type = 'button'; nat.className = 'partage-lien partage-natif';
-      nat.innerHTML = '<span class="partage-ico" aria-hidden="true">↗</span><span>Partager… <small>(menu du téléphone)</small></span>';
+      nat.innerHTML = '<span class="partage-ico" aria-hidden="true">↗</span><span>' + I18N.partagerTel + '</span>';
       nat.addEventListener('click', function () { navigator.share({ title: o.titre, text: o.texte, url: o.url }).catch(function () {}); });
       li(nat);
     }
@@ -508,25 +551,25 @@
       li(a);
     });
     var copie = document.createElement('button'); copie.type = 'button'; copie.className = 'partage-lien partage-copie';
-    copie.innerHTML = '<span class="partage-ico" aria-hidden="true">⧉</span><span>Copier le lien</span>';
+    copie.innerHTML = '<span class="partage-ico" aria-hidden="true">⧉</span><span>' + I18N.copier + '</span>';
     copie.addEventListener('click', function () {
-      var fait = function () { copie.lastChild.textContent = '✓ Lien copié'; setTimeout(function () { copie.lastChild.textContent = 'Copier le lien'; }, 2200); };
-      if (navigator.clipboard) navigator.clipboard.writeText(o.url).then(fait, function () { prompt('Le lien :', o.url); });
-      else prompt('Le lien :', o.url);
+      var fait = function () { copie.lastChild.textContent = I18N.copieOk; setTimeout(function () { copie.lastChild.textContent = I18N.copier; }, 2200); };
+      if (navigator.clipboard) navigator.clipboard.writeText(o.url).then(fait, function () { prompt(I18N.leLien, o.url); });
+      else prompt(I18N.leLien, o.url);
     });
     li(copie);
     if (o.video) {
       // Instagram et TikTok n'acceptent pas de lien : on envoie la vidéo elle-même
       var vid = document.createElement('button'); vid.type = 'button'; vid.className = 'partage-lien partage-video';
-      vid.innerHTML = '<span class="partage-ico" aria-hidden="true">▶</span><span>La vidéo pour Instagram, TikTok… <small>(fichier MP4)</small></span>';
+      vid.innerHTML = '<span class="partage-ico" aria-hidden="true">▶</span><span>' + I18N.videoInsta + '</span>';
       vid.addEventListener('click', function () {
         var nom = o.video.split('/').pop();
         var telecharger = function () { var a = document.createElement('a'); a.href = o.video; a.download = 'bebe-punk-' + nom; document.body.appendChild(a); a.click(); a.remove(); };
         if (!navigator.canShare) return telecharger();
-        vid.lastChild.firstChild.textContent = 'Préparation de la vidéo… ';
+        vid.lastChild.firstChild.textContent = I18N.prepVideo;
         fetch(o.video).then(function (r) { return r.blob(); }).then(function (b) {
           var f = new File([b], 'bebe-punk-' + nom, { type: 'video/mp4' });
-          vid.lastChild.firstChild.textContent = 'La vidéo pour Instagram, TikTok… ';
+          vid.lastChild.firstChild.textContent = I18N.videoInsta.replace(/<[^>]+>/g, '');
           if (navigator.canShare({ files: [f] })) return navigator.share({ files: [f], title: o.titre, text: o.texte + ' ' + o.url }).catch(function () {});
           telecharger();
         }).catch(telecharger);
@@ -537,11 +580,11 @@
   }
   var dlg = document.getElementById('partage');
   function ouvrirPartage(slug, titre, video) {
-    var o = { url: adresse(slug), titre: titre + ' — Le monstre et le bébé punk', image: vignette(slug), video: video,
-              texte: slug === 'page' ? TEXTE_PAGE : titre + ' — Le monstre et le bébé punk, un film IA d’Alexandre Stopnicki. BOOM!' };
-    if (!dlg || !dlg.showModal) { if (navigator.share) navigator.share({ title: o.titre, url: o.url }).catch(function () {}); else prompt('Le lien :', o.url); return; }
+    var o = { url: adresse(slug), titre: titre + I18N.titreSuffix, image: vignette(slug), video: video,
+              texte: slug === 'page' ? TEXTE_PAGE : titre + I18N.texteItem };
+    if (!dlg || !dlg.showModal) { if (navigator.share) navigator.share({ title: o.titre, url: o.url }).catch(function () {}); else prompt(I18N.leLien, o.url); return; }
     document.getElementById('partage-titre').textContent = titre;
-    var img = document.getElementById('partage-vignette'); img.src = 'medias/vignettes/' + (slug || 'page') + '.jpg'; img.alt = 'Vignette de partage : ' + titre;
+    var img = document.getElementById('partage-vignette'); img.src = ASSET + 'medias/vignettes/' + (slug || 'page') + '.jpg'; img.alt = I18N.altPartage + titre;
     remplir(dlg.querySelector('[data-partage-liens]'), o);
     dlg.showModal();
   }
@@ -550,14 +593,14 @@
     dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
   }
   var zonePage = document.querySelector('[data-partage-liens="page"]');
-  if (zonePage) remplir(zonePage, { url: BASE, titre: 'Le monstre et le bébé punk', texte: TEXTE_PAGE, image: 'https://3h33.com/bebe-punk/medias/vignettes/montage-2m33-1080p-20261108.jpg', video: 'medias/bebe-punk-montage-2m33-1080p-20261108.mp4' });
+  if (zonePage) remplir(zonePage, { url: BASE, titre: EN ? 'The Monster and the Baby Punk' : 'Le monstre et le bébé punk', texte: TEXTE_PAGE, image: I18N.montageVignette, video: ASSET + I18N.montageFichier });
   // un bouton « Partager » sur chaque version
   document.querySelectorAll('.carte-version[id]').forEach(function (carte) {
     var v = carte.querySelector('video'), t = carte.querySelector('h4'), zone = carte.querySelector('.carte-texte');
     if (!v || !t || !zone) return;
     var b = document.createElement('button'); b.type = 'button'; b.className = 'bouton-partage-carte';
     b.dataset.partage = carte.id === 'carte-v3' ? 'film' : carte.id; b.dataset.titre = t.textContent; b.dataset.video = v.getAttribute('src');
-    b.innerHTML = '<span aria-hidden="true">↗</span> Partager';
+    b.innerHTML = '<span aria-hidden="true">↗</span> ' + I18N.boutonPartage;
     zone.appendChild(b);
   });
   document.addEventListener('click', function (e) {
