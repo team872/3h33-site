@@ -41,7 +41,7 @@
     });
     html.classList.add('vues-ok');
     document.body.setAttribute('data-vue', nom);
-    document.querySelectorAll('#nav-principale a[data-vue], .accueil-pages a[data-vue]').forEach(function (a) {
+    document.querySelectorAll('#nav-principale a[data-vue], .accueil-pages a[data-vue], .nav-accueil').forEach(function (a) {
       a.setAttribute('aria-current', a.getAttribute('data-vue') === nom ? 'page' : 'false');
     });
     fermerMenu();
@@ -73,6 +73,16 @@
     }
   }
   window.addEventListener('hashchange', function () { appliquerHash({ focus: true }); });
+  function syncMenuAria() {
+    var det = document.querySelector('.nav-details');
+    var sum = det && det.querySelector('summary');
+    if (sum) sum.setAttribute('aria-expanded', det.open ? 'true' : 'false');
+  }
+  var menuDetails = document.querySelector('.nav-details');
+  if (menuDetails) {
+    menuDetails.addEventListener('toggle', syncMenuAria);
+    syncMenuAria();
+  }
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
     var det = document.querySelector('.nav-details');

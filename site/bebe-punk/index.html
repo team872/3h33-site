@@ -34,7 +34,7 @@
 <script>document.documentElement.classList.remove("sans-js");document.documentElement.classList.add("js");</script>
 <link rel="preload" href="polices/anton.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="medias/fond-foret.jpg" as="image">
-<link rel="stylesheet" href="bebe-punk.css?v=9">
+<link rel="stylesheet" href="bebe-punk.css?v=10">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"VideoObject","@id":"https://3h33.com/bebe-punk/#montage","name":"Le monstre et le bébé punk — Le film + 9 fins alternatives","description":"Montage en 1080p du film et de ses 9 fins alternatives : un monstre tombe du ciel dans une forêt morte, un minuscule bébé punk lui crie « BOOM! » et le chasse à coups de biberons-grenades.","thumbnailUrl":["https://3h33.com/bebe-punk/medias/vignettes/montage-2m33-1080p-20261108.jpg","https://3h33.com/bebe-punk/medias/affiche-montage-2m33-1080p-20261108.jpg"],"uploadDate":"2026-11-08T01:22:00+01:00","duration":"PT2M33S","contentUrl":"https://3h33.com/bebe-punk/medias/bebe-punk-montage-2m33-1080p-20261108.mp4","url":"https://3h33.com/bebe-punk/","width":1920,"height":1080,"inLanguage":"fr","creator":{"@type":"Person","@id":"https://3h33.com/#alexandre","name":"Alexandre Stopnicki","url":"https://alexandrestopnicki.com"},"publisher":{"@type":"Organization","@id":"https://3h33.com/#organisation","name":"3h33","url":"https://3h33.com/"}},{"@type":"VideoObject","@id":"https://3h33.com/bebe-punk/#film","name":"Le monstre et le bébé punk","description":"Court-métrage IA de 20 secondes réalisé pour The LoopHole Project, un film collectif : un monstre tombe du ciel dans une forêt morte, un minuscule bébé punk lui crie « BOOM! » et le chasse à coups de biberons-grenades jusqu'à ce qu'il plonge dans un trou noir.","thumbnailUrl":["https://3h33.com/bebe-punk/medias/affiche-v3.jpg","https://3h33.com/bebe-punk/medias/temps-threat.jpg"],"uploadDate":"2026-10-19T18:00:00+02:00","duration":"PT20S","contentUrl":"https://3h33.com/bebe-punk/medias/v3-musique.mp4","url":"https://3h33.com/bebe-punk/","inLanguage":"en","creator":{"@type":"Person","@id":"https://3h33.com/#alexandre","name":"Alexandre Stopnicki","url":"https://alexandrestopnicki.com"},"publisher":{"@type":"Organization","@id":"https://3h33.com/#organisation","name":"3h33","url":"https://3h33.com/"}},{"@type":"WebPage","@id":"https://3h33.com/bebe-punk/#page","url":"https://3h33.com/bebe-punk/","name":"Le monstre et le bébé punk","inLanguage":"fr-FR","primaryImageOfPage":"https://3h33.com/bebe-punk/medias/vignettes/montage-2m33-1080p-20261108.jpg","video":[{"@id":"https://3h33.com/bebe-punk/#montage"},{"@id":"https://3h33.com/bebe-punk/#film"}]}]}</script>
 </head>
 <body>
@@ -67,10 +67,13 @@
   <span class="chute-trou">◯</span>
 </div>
 
-<header class="bandeau">
-  <a class="logo-3h33" href="/" title="Retour à 3h33.com">3h33</a>
+<header class="bandeau" id="bandeau">
+  <div class="bandeau-marque">
+    <a class="logo-3h33" href="/" title="Retour à 3h33.com">3h33</a>
+    <a class="nav-accueil" href="#accueil" data-vue="accueil">Accueil</a>
+  </div>
   <details class="nav-details">
-    <summary class="nav-resume"><span class="nav-resume-texte">Menu</span></summary>
+    <summary class="nav-resume" aria-expanded="false" aria-controls="nav-principale"><span class="nav-resume-texte">Menu</span></summary>
     <nav aria-label="Dans le site" id="nav-principale">
       <a href="#accueil" data-vue="accueil">Accueil</a>
       <a href="#fins" data-vue="fins">Choisis ta fin</a>
@@ -744,6 +747,6 @@ Cinematic creature-feature film, dark comedy tone, energetic camera. Lighting an
   </div>
 </footer>
 
-<script src="bebe-punk.js?v=9" defer></script>
+<script src="bebe-punk.js?v=10" defer></script>
 </body>
 </html>
