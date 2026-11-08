@@ -85,9 +85,9 @@ strong{color:#fff}
 .bandeau::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:10px;background:var(--clous) 0 0/26px 10px repeat-x;opacity:.75;pointer-events:none}
 .logo-3h33{flex:0 0 auto;font:22px/1 var(--affiche);color:var(--lait);text-decoration:none;letter-spacing:.02em;padding:6px 10px;background:#000;transform:rotate(-3deg);box-shadow:3px 3px 0 var(--bleu)}
 .logo-3h33:hover,.logo-3h33:focus-visible{color:var(--bleu)}
-.bandeau nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-start}
-.bandeau nav a{display:inline-flex;align-items:center;min-height:44px;font:17px/1.1 var(--affiche);letter-spacing:.05em;text-transform:uppercase;color:var(--lait);text-decoration:none;padding:10px 12px;border-radius:2px}
-.bandeau nav a:hover,.bandeau nav a:focus-visible{background:var(--bleu);color:#000}
+#nav-principale{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-start}
+#nav-principale a{display:inline-flex;align-items:center;min-height:44px;font:17px/1.1 var(--affiche);letter-spacing:.05em;text-transform:uppercase;color:var(--lait);text-decoration:none;padding:10px 12px;border-radius:2px}
+#nav-principale a:hover,#nav-principale a:focus-visible{background:var(--bleu);color:#000}
 @media (max-width:400px){.bandeau{padding:10px 12px}.logo-3h33{font-size:20px}}
 
 main{position:relative}
@@ -631,7 +631,7 @@ body[data-vue="accueil"] .ouverture{min-height:0}
 .nav-resume{display:none;flex:0 0 auto;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 16px;border:2px solid var(--lait);background:#000;color:var(--lait);
   font:17px/1 var(--affiche);letter-spacing:.08em;text-transform:uppercase}
 .nav-resume:hover,.nav-resume:focus-visible,.bandeau.menu-ouvert .nav-resume{background:var(--bleu);color:#000;border-color:var(--bleu)}
-.bandeau nav a[aria-current="page"]{background:var(--bleu);color:#000}
+#nav-principale a[aria-current="page"]{background:var(--bleu);color:#000}
 main [id]{scroll-margin-top:calc(var(--bandeau-h) + 16px)}
 
 .accueil-pages{grid-area:pages;display:flex;flex-wrap:wrap;gap:8px 10px;margin:8px 0 4px}
@@ -648,14 +648,15 @@ main [id]{scroll-margin-top:calc(var(--bandeau-h) + 16px)}
 
 @media (max-width:1179px){
   .nav-resume{display:inline-flex}
-  .bandeau nav{display:none;position:absolute;top:100%;left:12px;right:12px;padding:10px;flex-direction:column;
+  #nav-principale{display:none;position:absolute;top:100%;left:12px;right:12px;padding:10px;flex-direction:column;
     background:#0c0c0e;border:2px solid var(--lait);box-shadow:6px 6px 0 var(--bleu);z-index:81}
-  .bandeau.menu-ouvert nav{display:flex}
-  .bandeau nav a{white-space:normal;font-size:17px;padding:12px 14px}
+  .bandeau.menu-ouvert #nav-principale{display:flex}
+  #nav-principale a{white-space:normal;font-size:17px;padding:12px 14px}
+  .langues{display:flex;position:static;flex-direction:row;background:none;border:0;box-shadow:none;padding:0}
 }
 @media (min-width:1180px){
   .nav-resume{display:none !important}
-  .bandeau nav{display:flex !important;position:static;background:none;border:0;box-shadow:none;padding:0;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start}
+  #nav-principale{display:flex !important;position:static;background:none;border:0;box-shadow:none;padding:0;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start}
 }
 
 .vue[data-vue="film"] .section,
@@ -672,7 +673,7 @@ main [id]{scroll-margin-top:calc(var(--bandeau-h) + 16px)}
 }
 
 /* ---------------------------------------------------------------- boutique + langue */
-.langues{display:flex;align-items:center;gap:4px;flex:0 0 auto}
+.langues{display:flex;flex-direction:row;align-items:center;gap:4px;flex:0 0 auto;position:static;background:none;border:0;box-shadow:none;padding:0}
 .langue{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:4px 8px;border:2px solid var(--lait);background:#000;color:var(--lait);text-decoration:none;font:15px/1 var(--affiche);letter-spacing:.06em}
 .langue:hover,.langue:focus-visible{background:var(--bleu);color:#000;border-color:var(--bleu)}
 .langue[aria-current="page"]{background:var(--bleu);color:#000;border-color:var(--bleu);box-shadow:3px 3px 0 #000}
