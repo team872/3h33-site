@@ -15,7 +15,8 @@
     sonNatif: 'Right now: native sound only (the noises and the voice made with the pictures, without music).',
     finChoisie: ' Ending chosen: ',
     plancheAlt: 'Enlarged contact sheet: ',
-    textePage: 'A four-metre monster falls from the sky… and a baby punk is what scares it. BOOM! The film + 9 alternate endings, 2 min 33, by Alexandre Stopnicki for The Loophole Project.',
+    textePage: 'Come and see The Monster and the Baby Punk: a four-metre monster falls from the sky… and a baby punk is what scares it. BOOM! The film + 9 alternate endings, 2 min 33, by Alexandre Stopnicki for The Loophole Project.',
+    texteMontage: 'Watch the complete film — The Monster and the Baby Punk + 9 alternate endings, 2 min 33 in 1080p, by Alexandre Stopnicki for The Loophole Project. BOOM!',
     titreSuffix: ' — The Monster and the Baby Punk',
     texteItem: ' — The Monster and the Baby Punk, an AI film by Alexandre Stopnicki. BOOM!',
     partagerTel: 'Share… <small>(your phone’s menu)</small>',
@@ -34,7 +35,8 @@
     sonNatif: 'En ce moment : son natif seul (les bruits et la voix fabriqués avec les images, sans musique).',
     finChoisie: ' Fin choisie : ',
     plancheAlt: 'Planche-contact agrandie : ',
-    textePage: 'Un monstre de 4 mètres tombe du ciel… et c’est un bébé punk qui lui fait peur. BOOM! Le film + 9 fins alternatives, 2 min 33, d’Alexandre Stopnicki pour The Loophole Project.',
+    textePage: 'Venez voir Le monstre et le bébé punk : un monstre de 4 mètres tombe du ciel… et c’est un bébé punk qui lui fait peur. BOOM! Le film + 9 fins alternatives, 2 min 33, d’Alexandre Stopnicki pour The Loophole Project.',
+    texteMontage: 'Regarde le film complet — Le monstre et le bébé punk + 9 fins alternatives, 2 min 33 en 1080p, d’Alexandre Stopnicki pour The Loophole Project. BOOM!',
     titreSuffix: ' — Le monstre et le bébé punk',
     texteItem: ' — Le monstre et le bébé punk, un film IA d’Alexandre Stopnicki. BOOM!',
     partagerTel: 'Partager… <small>(menu du téléphone)</small>',
@@ -540,7 +542,12 @@
     if (navigator.share) {
       var nat = document.createElement('button'); nat.type = 'button'; nat.className = 'partage-lien partage-natif';
       nat.innerHTML = '<span class="partage-ico" aria-hidden="true">↗</span><span>' + I18N.partagerTel + '</span>';
-      nat.addEventListener('click', function () { navigator.share({ title: o.titre, text: o.texte, url: o.url }).catch(function () {}); });
+      nat.addEventListener('click', function () {
+        navigator.share({ title: o.titre, text: o.texte, url: o.url }).catch(function (err) {
+          if (err && err.name === 'AbortError') return;
+          prompt(I18N.leLien, o.url);
+        });
+      });
       li(nat);
     }
     reseaux(o).forEach(function (r) {
@@ -551,10 +558,15 @@
       li(a);
     });
     var copie = document.createElement('button'); copie.type = 'button'; copie.className = 'partage-lien partage-copie';
+    copie.setAttribute('aria-live', 'polite');
     copie.innerHTML = '<span class="partage-ico" aria-hidden="true">⧉</span><span>' + I18N.copier + '</span>';
     copie.addEventListener('click', function () {
-      var fait = function () { copie.lastChild.textContent = I18N.copieOk; setTimeout(function () { copie.lastChild.textContent = I18N.copier; }, 2200); };
-      if (navigator.clipboard) navigator.clipboard.writeText(o.url).then(fait, function () { prompt(I18N.leLien, o.url); });
+      var fait = function () {
+        copie.lastChild.textContent = I18N.copieOk;
+        copie.setAttribute('aria-label', I18N.copieOk);
+        setTimeout(function () { copie.lastChild.textContent = I18N.copier; copie.setAttribute('aria-label', I18N.copier); }, 2200);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(o.url).then(fait, function () { prompt(I18N.leLien, o.url); });
       else prompt(I18N.leLien, o.url);
     });
     li(copie);
@@ -580,11 +592,20 @@
   }
   var dlg = document.getElementById('partage');
   function ouvrirPartage(slug, titre, video) {
-    var o = { url: adresse(slug), titre: titre + I18N.titreSuffix, image: vignette(slug), video: video,
-              texte: slug === 'page' ? TEXTE_PAGE : titre + I18N.texteItem };
-    if (!dlg || !dlg.showModal) { if (navigator.share) navigator.share({ title: o.titre, url: o.url }).catch(function () {}); else prompt(I18N.leLien, o.url); return; }
+    var estPage = !slug || slug === 'page';
+    var estMontage = slug === 'montage';
+    var image = (estMontage || estPage) ? I18N.montageVignette : vignette(slug);
+    var texte = estPage ? TEXTE_PAGE : (estMontage ? I18N.texteMontage : titre + I18N.texteItem);
+    var o = { url: adresse(slug), titre: titre + I18N.titreSuffix, image: image, video: estMontage ? '' : video, texte: texte };
+    if (!dlg || !dlg.showModal) {
+      if (navigator.share) navigator.share({ title: o.titre, text: o.texte, url: o.url }).catch(function (err) { if (err && err.name !== 'AbortError') prompt(I18N.leLien, o.url); });
+      else prompt(I18N.leLien, o.url);
+      return;
+    }
     document.getElementById('partage-titre').textContent = titre;
-    var img = document.getElementById('partage-vignette'); img.src = ASSET + 'medias/vignettes/' + (slug || 'page') + '.jpg'; img.alt = I18N.altPartage + titre;
+    var img = document.getElementById('partage-vignette');
+    img.src = estMontage || estPage ? I18N.montageVignette : (ASSET + 'medias/vignettes/' + (slug || 'page') + '.jpg');
+    img.alt = I18N.altPartage + titre;
     remplir(dlg.querySelector('[data-partage-liens]'), o);
     dlg.showModal();
   }
@@ -593,7 +614,7 @@
     dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
   }
   var zonePage = document.querySelector('[data-partage-liens="page"]');
-  if (zonePage) remplir(zonePage, { url: BASE, titre: EN ? 'The Monster and the Baby Punk' : 'Le monstre et le bébé punk', texte: TEXTE_PAGE, image: I18N.montageVignette, video: ASSET + I18N.montageFichier });
+  if (zonePage) remplir(zonePage, { url: BASE, titre: EN ? 'The Monster and the Baby Punk' : 'Le monstre et le bébé punk', texte: TEXTE_PAGE, image: I18N.montageVignette });
   // un bouton « Partager » sur chaque version
   document.querySelectorAll('.carte-version[id]').forEach(function (carte) {
     var v = carte.querySelector('video'), t = carte.querySelector('h4'), zone = carte.querySelector('.carte-texte');
@@ -605,7 +626,9 @@
   });
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-partage]');
-    if (b) ouvrirPartage(b.dataset.partage, b.dataset.titre, b.dataset.video);
+    if (!b) return;
+    e.preventDefault();
+    ouvrirPartage(b.dataset.partage, b.dataset.titre, b.dataset.video);
   });
   // le bouton « Partager cette fin » suit la fin choisie
   var bFin = document.getElementById('partager-fin');
