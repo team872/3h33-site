@@ -16,6 +16,7 @@
   --affiche:"Anton",Impact,"Haettenschweiler","Arial Narrow Bold","Arial Black",sans-serif;
   --marqueur:"Permanent Marker","Marker Felt","Comic Sans MS",cursive;
   --machine:"Special Elite","Courier New",Courier,monospace;
+  --bandeau-h:4.75rem;
   --chute:0;
   --sy:0px;
   --bruit:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 -.25'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -24,7 +25,7 @@
 }
 
 *,*::before,*::after{box-sizing:border-box}
-html{background:var(--noir);scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip}
+html{background:var(--noir);scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden;overflow-x:clip;scroll-padding-top:calc(var(--bandeau-h) + 16px)}
 body{
   margin:0;color:var(--texte);
   font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -78,21 +79,24 @@ strong{color:#fff}
 @media (max-width:640px){.chute{right:3px;width:18px;top:70px}.chute-haut{display:none}.chute-objet{width:14px;height:22px;margin-left:-7px}.chute-trou{font-size:16px}}
 
 /* ---------------------------------------------------------------- bandeau */
-.bandeau{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:10px;
-  padding:10px 16px;background:linear-gradient(180deg,rgba(12,12,14,.92),rgba(12,12,14,.72));backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
-  border-bottom:1px solid rgba(255,255,255,.08)}
+.bandeau{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:10px 18px;background:#0c0c0e;border-bottom:2px solid var(--lait);box-shadow:0 4px 0 var(--bleu)}
 .bandeau::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:10px;background:var(--clous) 0 0/26px 10px repeat-x;opacity:.75;pointer-events:none}
-.logo-3h33{font:22px/1 var(--affiche);color:var(--lait);text-decoration:none;letter-spacing:.02em;padding:4px 8px;background:#000;transform:rotate(-3deg);box-shadow:3px 3px 0 var(--bleu)}
-.logo-3h33:hover{color:var(--bleu)}
-.bandeau nav{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
-.bandeau nav a{font:15px/1 var(--affiche);letter-spacing:.06em;text-transform:uppercase;color:var(--texte);text-decoration:none;padding:9px 10px;border-radius:2px}
+.bandeau-marque{display:flex;align-items:center;gap:10px;min-width:0}
+.logo-3h33{font:22px/1 var(--affiche);color:var(--lait);text-decoration:none;letter-spacing:.02em;padding:6px 10px;background:#000;transform:rotate(-3deg);box-shadow:3px 3px 0 var(--bleu)}
+.logo-3h33:hover,.logo-3h33:focus-visible{color:var(--bleu)}
+.nav-accueil{display:inline-flex;align-items:center;min-height:44px;padding:10px 14px;border:2px solid var(--lait);background:#000;color:var(--lait);
+  font:17px/1 var(--affiche);letter-spacing:.05em;text-transform:uppercase;text-decoration:none}
+.nav-accueil:hover,.nav-accueil:focus-visible,.nav-accueil[aria-current="page"]{background:var(--bleu);color:#000;border-color:var(--bleu)}
+.bandeau nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.bandeau nav a{display:inline-flex;align-items:center;min-height:44px;font:17px/1.1 var(--affiche);letter-spacing:.05em;text-transform:uppercase;color:var(--lait);text-decoration:none;padding:10px 12px;border-radius:2px}
 .bandeau nav a:hover,.bandeau nav a:focus-visible{background:var(--bleu);color:#000}
-@media (max-width:400px){.bandeau{padding:8px 10px}.bandeau nav a{font-size:13px;padding:8px 6px;letter-spacing:.03em}.logo-3h33{font-size:18px}}
+@media (max-width:400px){.bandeau{padding:10px 12px}.logo-3h33{font-size:20px}.nav-accueil{font-size:16px;padding:10px 12px}}
 
 main{position:relative}
 
 /* ---------------------------------------------------------------- ouverture */
-.ouverture{position:relative;overflow-x:clip;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:110px 20px 120px;isolation:auto}
+.ouverture{position:relative;overflow-x:clip;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:124px 20px 120px;isolation:auto}
 .ouverture-fond{position:absolute;inset:0;z-index:-1;overflow:hidden;background:#111 url(medias/fond-foret.jpg) center/cover}
 .ouverture-video{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;filter:saturate(.85) contrast(1.08) brightness(.62);transform:translateY(calc(var(--sy) * .25)) scale(1.04)}
 .brume{position:absolute;inset:-20% -40%;pointer-events:none;background:radial-gradient(ellipse 40% 30% at 30% 60%,rgba(170,175,182,.32),transparent 70%),radial-gradient(ellipse 35% 25% at 70% 40%,rgba(150,155,162,.25),transparent 70%);animation:brume 28s linear infinite alternate;mix-blend-mode:screen}
@@ -551,10 +555,8 @@ button{font-family:inherit}
 .prompt-exemple pre{font-size:14px}
 .cafe strong{color:#000}
 .bouton-partage-carte{min-height:44px}
-@media (max-width:400px){
-  .bandeau nav a{font-size:14px;padding:12px 7px}
-  .logo-3h33{font-size:20px}
-}
+/* 08/11 : tailles du bandeau gérées plus bas, pour rester lisibles */
+
 @media (max-width:640px){
   .frise{padding-left:34px}
   .frise::before,.frise::after{left:8px}
@@ -563,11 +565,8 @@ button{font-family:inherit}
   .etape::before{left:-33px}
   .prompt-exemple pre{font-size:13px}
 }
-@media (max-width:640px){
-  .bandeau nav{flex-wrap:nowrap;overflow-x:auto;min-width:0;justify-content:flex-start;scrollbar-width:none;-webkit-overflow-scrolling:touch;mask-image:linear-gradient(90deg,#000 88%,transparent)}
-  .bandeau nav::-webkit-scrollbar{display:none}
-  .bandeau nav a{white-space:nowrap;flex:0 0 auto}
-}
+/* 08/11 : plus de menu horizontal compressé ; le bouton Menu + le panneau prennent le relais */
+
 
 /* ------------------------------------------------ 20/10 : le film déposé, visible dès l'ouverture */
 .ouverture-texte{max-width:1240px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-areas:"sur film" "titre film" "accroche film" "actions film" "badge film" "fortuit film" "indice film";column-gap:44px;align-items:start}
@@ -601,7 +600,7 @@ button{font-family:inherit}
 @media (pointer: coarse), (max-width: 899px){
   .grain{inset:0;mix-blend-mode:normal;animation:none;opacity:.06}
   .rayures{display:none}
-  .bandeau{backdrop-filter:none;-webkit-backdrop-filter:none;background:rgba(12,12,14,.94)}
+  .bandeau{backdrop-filter:none;-webkit-backdrop-filter:none;background:#0c0c0e}
   .glitch::before,.glitch::after{mix-blend-mode:normal;animation:none;display:none}
   .brume{animation:none}
   .concours::after{display:none}
@@ -639,14 +638,11 @@ body[data-vue="accueil"] .ouverture{min-height:100svh}
 .nav-details{position:relative;margin:0;min-width:0}
 .nav-details > summary{list-style:none;cursor:pointer}
 .nav-details > summary::-webkit-details-marker{display:none}
-.nav-resume{display:none;align-items:center;gap:8px;padding:9px 12px;border:2px solid var(--lait);background:#000;color:var(--lait);
-  font:15px/1 var(--affiche);letter-spacing:.08em;text-transform:uppercase}
-.nav-resume::before{content:"";width:16px;height:12px;background:linear-gradient(var(--lait),var(--lait)) 0 0/100% 2px no-repeat,
-  linear-gradient(var(--lait),var(--lait)) 0 5px/100% 2px no-repeat,linear-gradient(var(--lait),var(--lait)) 0 10px/100% 2px no-repeat}
-.nav-resume:hover,.nav-resume:focus-visible{background:var(--bleu);color:#000;border-color:var(--bleu)}
-.nav-resume:hover::before,.nav-resume:focus-visible::before{background:linear-gradient(#000,#000) 0 0/100% 2px no-repeat,
-  linear-gradient(#000,#000) 0 5px/100% 2px no-repeat,linear-gradient(#000,#000) 0 10px/100% 2px no-repeat}
+.nav-resume{display:none;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 16px;border:2px solid var(--lait);background:#000;color:var(--lait);
+  font:17px/1 var(--affiche);letter-spacing:.08em;text-transform:uppercase}
+.nav-resume:hover,.nav-resume:focus-visible,.nav-details[open] .nav-resume{background:var(--bleu);color:#000;border-color:var(--bleu)}
 .bandeau nav a[aria-current="page"]{background:var(--bleu);color:#000}
+main [id]{scroll-margin-top:calc(var(--bandeau-h) + 16px)}
 
 .accueil-pages{grid-area:pages;display:flex;flex-wrap:wrap;gap:8px 10px;margin:8px 0 4px}
 .accueil-pages a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:2px solid var(--lait);
@@ -662,25 +658,26 @@ body[data-vue="accueil"] .ouverture{min-height:100svh}
 
 @media (max-width:799px){
   .nav-resume{display:inline-flex}
-  .nav-details nav{display:none;position:absolute;right:0;top:calc(100% + 8px);min-width:min(86vw,280px);padding:8px;flex-direction:column;
-    background:rgba(12,12,14,.97);border:2px solid var(--lait);box-shadow:6px 6px 0 var(--bleu)}
+  .nav-details nav{display:none;position:absolute;right:0;top:calc(100% + 8px);min-width:min(88vw,300px);padding:10px;flex-direction:column;
+    background:#0c0c0e;border:2px solid var(--lait);box-shadow:6px 6px 0 var(--bleu);z-index:81}
   .nav-details[open] nav{display:flex}
-  .bandeau nav a{white-space:nowrap}
+  .bandeau nav a{white-space:normal;font-size:17px;padding:12px 14px}
 }
 @media (min-width:800px){
   .nav-resume{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
   .nav-details nav{display:flex !important;position:static;background:none;border:0;box-shadow:none;padding:0;flex-direction:row;flex-wrap:wrap}
+  #nav-principale a[data-vue="accueil"]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 }
 
 .vue[data-vue="film"] .section,
 .vue[data-vue="fins"] .section,
 .vue[data-vue="coulisses"] .section,
-.vue[data-vue="projet"] .section{padding-top:96px}
+.vue[data-vue="projet"] .section{padding-top:108px}
 .vue[data-vue="fins"] .section.versions{padding-bottom:48px}
-.vue[data-vue="film"] .section.film + .section.versions{padding-top:40px}
+.vue[data-vue="film"] .section.film + .section.versions{padding-top:48px}
 @media (max-width:640px){
   .vue[data-vue="film"] .section,
   .vue[data-vue="fins"] .section,
   .vue[data-vue="coulisses"] .section,
-  .vue[data-vue="projet"] .section{padding-top:80px}
+  .vue[data-vue="projet"] .section{padding-top:96px}
 }
