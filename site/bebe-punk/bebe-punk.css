@@ -102,12 +102,12 @@ main{position:relative}
 @keyframes respire{from{opacity:.4}to{opacity:.9}}
 .vignettage{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 30%,rgba(0,0,0,.75) 100%),linear-gradient(180deg,rgba(12,12,14,.6) 0,transparent 25%,transparent 60%,rgba(12,12,14,.85) 100%)}
 
-.ouverture-texte{position:relative;z-index:2;max-width:980px;margin:0 auto;width:100%;transform:translateY(calc(var(--sy) * -.12))}
+.ouverture-texte{position:relative;z-index:2;max-width:1360px;margin:0 auto;width:100%;transform:translateY(calc(var(--sy) * -.12))}
 .sur-titre{margin:0 0 14px}
 .scotch-txt{display:inline-block;font:15px/1.2 var(--machine);color:#1c1a14;background:var(--scotch);padding:7px 16px;transform:rotate(-2deg);
   clip-path:polygon(0 8%,3% 0,97% 4%,100% 0,99% 92%,96% 100%,4% 96%,1% 100%);box-shadow:0 2px 8px rgba(0,0,0,.4)}
 
-.titre-rancon{margin:0;line-height:.9;font-weight:400}
+.titre-rancon{margin:0 0 4px;line-height:.9;font-weight:400}
 .titre-rancon .ligne{display:block}
 .titre-rancon .l1{font:clamp(30px,9.4vw,112px)/1 var(--affiche);letter-spacing:0;white-space:nowrap}
 .titre-rancon .l2{position:relative;z-index:2;font:clamp(26px,5vw,52px)/1.1 var(--marqueur);color:var(--orange);transform:rotate(-4deg);margin:.1em 0 .18em .6em;text-shadow:2px 2px 0 #000}
@@ -564,12 +564,13 @@ button{font-family:inherit}
 /* 08/11 : plus de menu horizontal compressé ; le bouton Menu + le panneau prennent le relais */
 
 
-/* ------------------------------------------------ 20/10 : le film déposé, visible dès l'ouverture */
-.ouverture-texte{max-width:1240px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-areas:"sur film" "titre film" "accroche film" "actions film" "badge film" "fortuit film" "indice film";column-gap:44px;align-items:start}
+/* ------------------------------------------------ 20/10 : le film déposé, visible dès l'ouverture
+   08/11 : le lecteur passe sous le titre, presque toute la largeur (plus de colonne étroite). */
+.ouverture-texte{max-width:1360px;display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"sur" "titre" "film" "accroche" "actions" "badge" "fortuit" "indice";align-items:start}
 .sur-titre{grid-area:sur}.titre-rancon{grid-area:titre}.accroche{grid-area:accroche}.actions{grid-area:actions}.badge-loophole{grid-area:badge;justify-self:start}.fortuit{grid-area:fortuit}.indice{grid-area:indice}
-.hero-film{grid-area:film;align-self:center;margin:0}
-.hero-ecran{position:relative;background:#000;border:3px solid var(--lait);box-shadow:10px 10px 0 var(--bleu),10px 10px 0 3px #000;transform:rotate(1.2deg)}
-.hero-video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.hero-film{grid-area:film;width:100%;max-width:100%;margin:12px 0 20px;justify-self:stretch}
+.hero-ecran{position:relative;width:100%;background:#000;border:3px solid var(--lait);box-shadow:10px 10px 0 var(--bleu),10px 10px 0 3px #000}
+.hero-video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#000}
 .hero-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:16px;border:0;background:linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,.15));color:var(--lait);cursor:pointer;font:inherit}
 .hero-play-rond{display:grid;place-items:center;width:84px;height:84px;border-radius:50%;background:var(--bleu);color:#000;font-size:36px;padding-left:6px;box-shadow:5px 5px 0 #000;transition:transform .15s}
 .hero-play:hover .hero-play-rond,.hero-play:focus-visible .hero-play-rond{transform:scale(1.08)}
@@ -580,15 +581,10 @@ button{font-family:inherit}
 .hero-legende span{color:var(--lp-rose-clair)}
 .hero-legende strong{color:var(--lp-rose-clair)}
 @media (max-width:900px){
-  .ouverture-texte{grid-template-columns:1fr;grid-template-areas:"sur" "titre" "film" "accroche" "actions" "badge" "fortuit" "indice"}
-  .hero-film{margin:22px 0 4px}
-  .hero-ecran{transform:none;box-shadow:6px 6px 0 var(--bleu),6px 6px 0 3px #000}
+  .ouverture-texte{grid-template-columns:minmax(0,1fr);grid-template-areas:"sur" "titre" "film" "accroche" "actions" "badge" "fortuit" "indice"}
+  .hero-film{margin:14px 0 16px}
+  .hero-ecran{box-shadow:6px 6px 0 var(--bleu),6px 6px 0 3px #000}
   .hero-play-rond{width:64px;height:64px;font-size:28px}
-}
-@media (prefers-reduced-motion: reduce){.hero-ecran{transform:none}}
-@media (min-width:901px){
-  .ouverture-texte{grid-template-areas:"sur sur" "titre titre" "accroche film" "actions film" "badge film" "fortuit film" "indice film"}
-  .hero-film{align-self:start;margin-top:22px}
 }
 
 /* ------------------------------------------------ 20/10 : téléphones et tablettes — la page plantait sur iPhone (mémoire graphique).
@@ -641,12 +637,12 @@ main [id]{scroll-margin-top:calc(var(--bandeau-h) + 16px)}
 .accueil-pages a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:2px solid var(--lait);
   background:rgba(0,0,0,.45);color:var(--lait);text-decoration:none;font:16px/1 var(--affiche);letter-spacing:.05em;text-transform:uppercase}
 .accueil-pages a:hover,.accueil-pages a:focus-visible{background:var(--bleu);color:#000;border-color:var(--bleu)}
-.ouverture-texte{grid-template-areas:"sur film" "titre film" "accroche film" "actions film" "badge film" "fortuit film" "indice film"}
+.ouverture-texte{grid-template-areas:"sur" "titre" "film" "accroche" "actions" "badge" "fortuit" "indice"}
 @media (max-width:900px){
   .ouverture-texte{grid-template-areas:"sur" "titre" "film" "accroche" "actions" "badge" "fortuit" "indice"}
 }
 @media (min-width:901px){
-  .ouverture-texte{grid-template-areas:"sur sur" "titre titre" "accroche film" "actions film" "badge film" "fortuit film" "indice film"}
+  .ouverture-texte{grid-template-columns:minmax(0,1fr);grid-template-areas:"sur" "titre" "film" "accroche" "actions" "badge" "fortuit" "indice"}
 }
 
 @media (max-width:799px){
