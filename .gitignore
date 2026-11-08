@@ -23,3 +23,6 @@ site/podcast-voix-de-lia/videos/
 site/pour/*/*.mp3
 # Vidéos des teasers à partager (16/10/2026) : même chemin que les MP3
 site/pour/*/*.mp4
+
+# Montage Bébé Punk 1080p (~103 Mo) : copié à part sur le serveur (scp/rsync), hors git
+site/bebe-punk/medias/bebe-punk-montage-*.mp4
