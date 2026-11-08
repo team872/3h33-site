@@ -25,8 +25,10 @@
     return 'accueil';
   }
   function fermerMenu() {
-    var det = document.querySelector('.nav-details');
-    if (det && det.open && window.matchMedia && matchMedia('(max-width: 799px)').matches) det.open = false;
+    var barre = document.getElementById('bandeau');
+    var btn = document.getElementById('nav-ouvrir');
+    if (barre) barre.classList.remove('menu-ouvert');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
   }
   function activerVue(nom, ancre, opts) {
     opts = opts || {};
@@ -41,7 +43,7 @@
     });
     html.classList.add('vues-ok');
     document.body.setAttribute('data-vue', nom);
-    document.querySelectorAll('#nav-principale a[data-vue], .accueil-pages a[data-vue], .nav-accueil').forEach(function (a) {
+    document.querySelectorAll('#nav-principale a[data-vue]').forEach(function (a) {
       a.setAttribute('aria-current', a.getAttribute('data-vue') === nom ? 'page' : 'false');
     });
     fermerMenu();
@@ -73,23 +75,24 @@
     }
   }
   window.addEventListener('hashchange', function () { appliquerHash({ focus: true }); });
-  function syncMenuAria() {
-    var det = document.querySelector('.nav-details');
-    var sum = det && det.querySelector('summary');
-    if (sum) sum.setAttribute('aria-expanded', det.open ? 'true' : 'false');
-  }
-  var menuDetails = document.querySelector('.nav-details');
-  if (menuDetails) {
-    menuDetails.addEventListener('toggle', syncMenuAria);
-    syncMenuAria();
+  var boutonMenu = document.getElementById('nav-ouvrir');
+  if (boutonMenu) {
+    boutonMenu.addEventListener('click', function () {
+      var barre = document.getElementById('bandeau');
+      var ouvert = barre && barre.classList.contains('menu-ouvert');
+      if (ouvert) fermerMenu();
+      else {
+        if (barre) barre.classList.add('menu-ouvert');
+        boutonMenu.setAttribute('aria-expanded', 'true');
+      }
+    });
   }
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
-    var det = document.querySelector('.nav-details');
-    if (det && det.open) {
-      det.open = false;
-      var s = det.querySelector('summary');
-      if (s) s.focus();
+    var barre = document.getElementById('bandeau');
+    if (barre && barre.classList.contains('menu-ouvert')) {
+      fermerMenu();
+      if (boutonMenu) boutonMenu.focus();
     }
   });
 
