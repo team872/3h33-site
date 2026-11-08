@@ -700,3 +700,11 @@ main [id]{scroll-margin-top:calc(var(--bandeau-h) + 16px)}
 .form-boutique .retour{min-height:1.4em;margin:0;font:16px/1.4 var(--machine)}
 .form-boutique .retour.ok{color:var(--bleu)}
 .form-boutique .retour.erreur{color:var(--orange)}
+
+.boutique-cartes{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;margin:0 0 28px}
+@media (min-width:800px){.boutique-cartes{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}}
+.tee-carte{margin:0}
+.tee-photo{display:block;width:100%;height:auto;border:3px solid var(--lait);box-shadow:8px 8px 0 var(--bleu);background:#111}
+.tee-carte figcaption,.boutique-clip figcaption{margin:12px 4px 0;font:15px/1.45 var(--machine);color:var(--lait)}
+.boutique-clip{margin:0 0 28px}
+.boutique-video{display:block;width:100%;max-width:840px;height:auto;margin:0 auto;border:3px solid var(--lait);box-shadow:8px 8px 0 var(--bleu);background:#000}

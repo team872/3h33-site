@@ -34,7 +34,7 @@
 <script>document.documentElement.classList.remove("sans-js");document.documentElement.classList.add("js");</script>
 <link rel="preload" href="../polices/anton.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../medias/fond-foret.jpg" as="image">
-<link rel="stylesheet" href="../bebe-punk.css?v=17">
+<link rel="stylesheet" href="../bebe-punk.css?v=18">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -128,21 +128,29 @@
       <p class="chapeau">If you’re a fan of this baby, don’t hesitate. Leave your details: as soon as the shop is online, I’ll let you know.</p>
     </header>
 
-    <div class="boutique-grille">
-      <figure class="tee-maquette">
-        <div class="tee-scene" aria-hidden="true">
-          <svg class="tee-forme" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
-            <path d="M62 28 L28 52 L8 78 L38 92 L48 78 L48 200 L152 200 L152 78 L162 92 L192 78 L172 52 L138 28 C128 38 116 44 100 44 C84 44 72 38 62 28 Z" fill="#141416" stroke="#f4f0e4" stroke-width="3"/>
-            <path d="M62 28 C72 38 84 44 100 44 C116 44 128 38 138 28 C132 18 118 12 100 12 C82 12 68 18 62 28 Z" fill="#0a0a0c" stroke="#f4f0e4" stroke-width="3"/>
-          </svg>
-          <img class="tee-motif" src="../medias/boutique/bebe-punk-rockeur.png" alt="" width="896" height="1200">
-        </div>
-        <figcaption>
-          <strong>Indicative artwork</strong> — a t-shirt mock-up, not a photograph of a manufactured product.
-          Motif: the baby punk rocker (blue mohawk, horns, tongue out, leather jacket, cowboy boots, bottle-grenade belt).
-        </figcaption>
+    <div class="boutique-cartes">
+      <figure class="tee-carte">
+        <img class="tee-photo" src="../medias/boutique/tee-rockeur.jpg" alt="Indicative mock-up: black t-shirt printed with the baby punk rocker" width="864" height="1152">
+        <figcaption><strong>The rocker</strong> — indicative artwork, not a photograph of a manufactured product. Motif: the baby punk standing, horns, tongue out.</figcaption>
       </figure>
+      <figure class="tee-carte">
+        <img class="tee-photo" src="../medias/boutique/tee-biberons.jpg" alt="Indicative mock-up: black t-shirt printed with three toy bottle-grenades" width="864" height="1152">
+        <figcaption><strong>The bottle-grenades</strong> — indicative artwork. Motif: three toy film props, not weapons.</figcaption>
+      </figure>
+      <figure class="tee-carte">
+        <img class="tee-photo" src="../medias/boutique/tee-sourire.jpg" alt="Indicative mock-up: black t-shirt printed with the baby punk’s large smiling face" width="864" height="1152">
+        <figcaption><strong>The big smile</strong> — indicative artwork. Motif: the baby punk’s face, blue mohawk, joyful smile.</figcaption>
+      </figure>
+    </div>
 
+    <figure class="boutique-clip">
+      <video class="boutique-video" controls preload="none" playsinline poster="../medias/boutique/bebe-punk-unboxing-poster.jpg" src="../medias/boutique/bebe-punk-unboxing.mp4" width="848" height="480">
+        The unboxing clip could not be played.
+      </video>
+      <figcaption>A short indicative unboxing clip — not an advertisement for a product on sale.</figcaption>
+    </figure>
+
+    <div class="boutique-grille">
       <form class="form-boutique" id="f-boutique" action="/api/contact" method="post" novalidate>
         <p class="boutique-avert">No payment, no firm order. Indicative artwork.</p>
         <p>
