@@ -17,6 +17,7 @@
   --marqueur:"Permanent Marker","Marker Felt","Comic Sans MS",cursive;
   --machine:"Special Elite","Courier New",Courier,monospace;
   --bandeau-h:4.75rem;
+  --hero-reserve:calc(var(--bandeau-h) + 20px + clamp(9.5rem, 26vh, 14.5rem));
   --chute:0;
   --sy:0px;
   --bruit:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 -.25'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -92,7 +93,7 @@ strong{color:#fff}
 main{position:relative}
 
 /* ---------------------------------------------------------------- ouverture */
-.ouverture{position:relative;overflow-x:clip;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:124px 20px 120px;isolation:auto}
+.ouverture{position:relative;overflow-x:clip;min-height:0;display:flex;flex-direction:column;justify-content:flex-start;padding:calc(var(--bandeau-h) + 12px) 20px 48px;isolation:auto}
 .ouverture-fond{position:absolute;inset:0;z-index:-1;overflow:hidden;background:#111 url(medias/fond-foret.jpg) center/cover}
 .ouverture-video{position:absolute;inset:-4%;width:108%;height:108%;object-fit:cover;filter:saturate(.85) contrast(1.08) brightness(.62);transform:translateY(calc(var(--sy) * .25)) scale(1.04)}
 .brume{position:absolute;inset:-20% -40%;pointer-events:none;background:radial-gradient(ellipse 40% 30% at 30% 60%,rgba(170,175,182,.32),transparent 70%),radial-gradient(ellipse 35% 25% at 70% 40%,rgba(150,155,162,.25),transparent 70%);animation:brume 28s linear infinite alternate;mix-blend-mode:screen}
@@ -102,16 +103,16 @@ main{position:relative}
 @keyframes respire{from{opacity:.4}to{opacity:.9}}
 .vignettage{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 30%,rgba(0,0,0,.75) 100%),linear-gradient(180deg,rgba(12,12,14,.6) 0,transparent 25%,transparent 60%,rgba(12,12,14,.85) 100%)}
 
-.ouverture-texte{position:relative;z-index:2;max-width:1360px;margin:0 auto;width:100%;transform:translateY(calc(var(--sy) * -.12))}
-.sur-titre{margin:0 0 14px}
+.ouverture-texte{position:relative;z-index:2;max-width:1080px;margin:0 auto;width:100%;transform:translateY(calc(var(--sy) * -.12))}
+.sur-titre{margin:0 0 8px}
 .scotch-txt{display:inline-block;font:15px/1.2 var(--machine);color:#1c1a14;background:var(--scotch);padding:7px 16px;transform:rotate(-2deg);
   clip-path:polygon(0 8%,3% 0,97% 4%,100% 0,99% 92%,96% 100%,4% 96%,1% 100%);box-shadow:0 2px 8px rgba(0,0,0,.4)}
 
-.titre-rancon{margin:0 0 4px;line-height:.9;font-weight:400}
+.titre-rancon{margin:0 0 2px;line-height:.86;font-weight:400}
 .titre-rancon .ligne{display:block}
-.titre-rancon .l1{font:clamp(30px,9.4vw,112px)/1 var(--affiche);letter-spacing:0;white-space:nowrap}
-.titre-rancon .l2{position:relative;z-index:2;font:clamp(26px,5vw,52px)/1.1 var(--marqueur);color:var(--orange);transform:rotate(-4deg);margin:.1em 0 .18em .6em;text-shadow:2px 2px 0 #000}
-.titre-rancon .l3{font:clamp(60px,18vw,200px)/.95 var(--affiche);white-space:nowrap;padding-top:.16em;margin-top:-.16em;color:var(--bleu);letter-spacing:.005em;
+.titre-rancon .l1{font:clamp(26px,5.2vw,56px)/1 var(--affiche);letter-spacing:0;white-space:nowrap}
+.titre-rancon .l2{position:relative;z-index:2;font:clamp(20px,3.2vw,32px)/1.1 var(--marqueur);color:var(--orange);transform:rotate(-4deg);margin:.04em 0 .06em .45em;text-shadow:2px 2px 0 #000}
+.titre-rancon .l3{font:clamp(40px,8.4vw,80px)/.92 var(--affiche);white-space:nowrap;padding-top:.08em;margin-top:-.08em;color:var(--bleu);letter-spacing:.005em;
   -webkit-mask:var(--use) 0 0/300px 300px;mask:var(--use) 0 0/300px 300px}
 
 /* lettres découpées façon demande de rançon (posées par le script) */
@@ -566,9 +567,9 @@ button{font-family:inherit}
 
 /* ------------------------------------------------ 20/10 : le film déposé, visible dès l'ouverture
    08/11 : le lecteur passe sous le titre, presque toute la largeur (plus de colonne étroite). */
-.ouverture-texte{max-width:1360px;display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"sur" "titre" "film" "accroche" "actions" "badge" "fortuit" "indice";align-items:start}
+.ouverture-texte{max-width:1080px;display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"sur" "titre" "film" "accroche" "actions" "badge" "fortuit" "indice";align-items:start}
 .sur-titre{grid-area:sur}.titre-rancon{grid-area:titre}.accroche{grid-area:accroche}.actions{grid-area:actions}.badge-loophole{grid-area:badge;justify-self:start}.fortuit{grid-area:fortuit}.indice{grid-area:indice}
-.hero-film{grid-area:film;width:100%;max-width:100%;margin:12px 0 20px;justify-self:stretch}
+.hero-film{grid-area:film;width:min(100%,1080px,calc((100svh - var(--hero-reserve)) * 16 / 9));max-width:1080px;margin:8px auto 16px;justify-self:center}
 .hero-ecran{position:relative;width:100%;background:#000;border:3px solid var(--lait);box-shadow:10px 10px 0 var(--bleu),10px 10px 0 3px #000}
 .hero-video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#000}
 .hero-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:16px;border:0;background:linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,.15));color:var(--lait);cursor:pointer;font:inherit}
@@ -625,7 +626,7 @@ html.js .vue.vue-active{display:block}
 html.sans-js .vue{display:block}
 .vue:focus{outline:none}
 body[data-vue]:not([data-vue="accueil"]) .chute{display:none}
-body[data-vue="accueil"] .ouverture{min-height:100svh}
+body[data-vue="accueil"] .ouverture{min-height:0}
 
 .nav-resume{display:none;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 16px;border:2px solid var(--lait);background:#000;color:var(--lait);
   font:17px/1 var(--affiche);letter-spacing:.08em;text-transform:uppercase}
@@ -645,16 +646,16 @@ main [id]{scroll-margin-top:calc(var(--bandeau-h) + 16px)}
   .ouverture-texte{grid-template-columns:minmax(0,1fr);grid-template-areas:"sur" "titre" "film" "accroche" "actions" "badge" "fortuit" "indice"}
 }
 
-@media (max-width:799px){
+@media (max-width:999px){
   .nav-resume{display:inline-flex}
   .bandeau nav{display:none;position:absolute;top:100%;left:12px;right:12px;padding:10px;flex-direction:column;
     background:#0c0c0e;border:2px solid var(--lait);box-shadow:6px 6px 0 var(--bleu);z-index:81}
   .bandeau.menu-ouvert nav{display:flex}
   .bandeau nav a{white-space:normal;font-size:17px;padding:12px 14px}
 }
-@media (min-width:800px){
+@media (min-width:1000px){
   .nav-resume{display:none !important}
-  .bandeau nav{display:flex !important;position:static;background:none;border:0;box-shadow:none;padding:0;flex-direction:row;flex-wrap:wrap}
+  .bandeau nav{display:flex !important;position:static;background:none;border:0;box-shadow:none;padding:0;flex-direction:row;flex-wrap:nowrap}
 }
 
 .vue[data-vue="film"] .section,
