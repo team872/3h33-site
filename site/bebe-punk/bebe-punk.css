@@ -80,12 +80,12 @@ strong{color:#fff}
 @media (max-width:640px){.chute{right:3px;width:18px;top:70px}.chute-haut{display:none}.chute-objet{width:14px;height:22px;margin-left:-7px}.chute-trou{font-size:16px}}
 
 /* ---------------------------------------------------------------- bandeau */
-.bandeau{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;align-items:center;justify-content:space-between;gap:12px;
+.bandeau{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;align-items:center;justify-content:flex-start;flex-wrap:nowrap;gap:16px;
   padding:10px 18px;background:#0c0c0e;border-bottom:2px solid var(--lait);box-shadow:0 4px 0 var(--bleu)}
 .bandeau::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:10px;background:var(--clous) 0 0/26px 10px repeat-x;opacity:.75;pointer-events:none}
-.logo-3h33{font:22px/1 var(--affiche);color:var(--lait);text-decoration:none;letter-spacing:.02em;padding:6px 10px;background:#000;transform:rotate(-3deg);box-shadow:3px 3px 0 var(--bleu)}
+.logo-3h33{flex:0 0 auto;font:22px/1 var(--affiche);color:var(--lait);text-decoration:none;letter-spacing:.02em;padding:6px 10px;background:#000;transform:rotate(-3deg);box-shadow:3px 3px 0 var(--bleu)}
 .logo-3h33:hover,.logo-3h33:focus-visible{color:var(--bleu)}
-.bandeau nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.bandeau nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-start}
 .bandeau nav a{display:inline-flex;align-items:center;min-height:44px;font:17px/1.1 var(--affiche);letter-spacing:.05em;text-transform:uppercase;color:var(--lait);text-decoration:none;padding:10px 12px;border-radius:2px}
 .bandeau nav a:hover,.bandeau nav a:focus-visible{background:var(--bleu);color:#000}
 @media (max-width:400px){.bandeau{padding:10px 12px}.logo-3h33{font-size:20px}}
@@ -628,7 +628,7 @@ html.sans-js .vue{display:block}
 body[data-vue]:not([data-vue="accueil"]) .chute{display:none}
 body[data-vue="accueil"] .ouverture{min-height:0}
 
-.nav-resume{display:none;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 16px;border:2px solid var(--lait);background:#000;color:var(--lait);
+.nav-resume{display:none;flex:0 0 auto;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 16px;border:2px solid var(--lait);background:#000;color:var(--lait);
   font:17px/1 var(--affiche);letter-spacing:.08em;text-transform:uppercase}
 .nav-resume:hover,.nav-resume:focus-visible,.bandeau.menu-ouvert .nav-resume{background:var(--bleu);color:#000;border-color:var(--bleu)}
 .bandeau nav a[aria-current="page"]{background:var(--bleu);color:#000}
@@ -655,7 +655,7 @@ main [id]{scroll-margin-top:calc(var(--bandeau-h) + 16px)}
 }
 @media (min-width:1000px){
   .nav-resume{display:none !important}
-  .bandeau nav{display:flex !important;position:static;background:none;border:0;box-shadow:none;padding:0;flex-direction:row;flex-wrap:nowrap}
+  .bandeau nav{display:flex !important;position:static;background:none;border:0;box-shadow:none;padding:0;flex-direction:row;flex-wrap:nowrap;justify-content:flex-start}
 }
 
 .vue[data-vue="film"] .section,
