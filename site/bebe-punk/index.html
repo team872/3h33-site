@@ -31,9 +31,10 @@
 <meta name="twitter:description" content="Un monstre tombe du ciel. La menace est un bébé à crête bleue. Le film IA de 20 secondes d'Alexandre Stopnicki pour The LoopHole Project.">
 <meta name="twitter:image" content="https://3h33.com/bebe-punk/medias/vignettes/montage-2m33-1080p-20261108.jpg">
 <meta name="theme-color" content="#0c0c0e">
+<script>document.documentElement.classList.remove("sans-js");document.documentElement.classList.add("js");</script>
 <link rel="preload" href="polices/anton.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="medias/fond-foret.jpg" as="image">
-<link rel="stylesheet" href="bebe-punk.css?v=8">
+<link rel="stylesheet" href="bebe-punk.css?v=9">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"VideoObject","@id":"https://3h33.com/bebe-punk/#montage","name":"Le monstre et le bébé punk — Le film + 9 fins alternatives","description":"Montage en 1080p du film et de ses 9 fins alternatives : un monstre tombe du ciel dans une forêt morte, un minuscule bébé punk lui crie « BOOM! » et le chasse à coups de biberons-grenades.","thumbnailUrl":["https://3h33.com/bebe-punk/medias/vignettes/montage-2m33-1080p-20261108.jpg","https://3h33.com/bebe-punk/medias/affiche-montage-2m33-1080p-20261108.jpg"],"uploadDate":"2026-11-08T01:22:00+01:00","duration":"PT2M33S","contentUrl":"https://3h33.com/bebe-punk/medias/bebe-punk-montage-2m33-1080p-20261108.mp4","url":"https://3h33.com/bebe-punk/","width":1920,"height":1080,"inLanguage":"fr","creator":{"@type":"Person","@id":"https://3h33.com/#alexandre","name":"Alexandre Stopnicki","url":"https://alexandrestopnicki.com"},"publisher":{"@type":"Organization","@id":"https://3h33.com/#organisation","name":"3h33","url":"https://3h33.com/"}},{"@type":"VideoObject","@id":"https://3h33.com/bebe-punk/#film","name":"Le monstre et le bébé punk","description":"Court-métrage IA de 20 secondes réalisé pour The LoopHole Project, un film collectif : un monstre tombe du ciel dans une forêt morte, un minuscule bébé punk lui crie « BOOM! » et le chasse à coups de biberons-grenades jusqu'à ce qu'il plonge dans un trou noir.","thumbnailUrl":["https://3h33.com/bebe-punk/medias/affiche-v3.jpg","https://3h33.com/bebe-punk/medias/temps-threat.jpg"],"uploadDate":"2026-10-19T18:00:00+02:00","duration":"PT20S","contentUrl":"https://3h33.com/bebe-punk/medias/v3-musique.mp4","url":"https://3h33.com/bebe-punk/","inLanguage":"en","creator":{"@type":"Person","@id":"https://3h33.com/#alexandre","name":"Alexandre Stopnicki","url":"https://alexandrestopnicki.com"},"publisher":{"@type":"Organization","@id":"https://3h33.com/#organisation","name":"3h33","url":"https://3h33.com/"}},{"@type":"WebPage","@id":"https://3h33.com/bebe-punk/#page","url":"https://3h33.com/bebe-punk/","name":"Le monstre et le bébé punk","inLanguage":"fr-FR","primaryImageOfPage":"https://3h33.com/bebe-punk/medias/vignettes/montage-2m33-1080p-20261108.jpg","video":[{"@id":"https://3h33.com/bebe-punk/#montage"},{"@id":"https://3h33.com/bebe-punk/#film"}]}]}</script>
 </head>
 <body>
@@ -68,20 +69,23 @@
 
 <header class="bandeau">
   <a class="logo-3h33" href="/" title="Retour à 3h33.com">3h33</a>
-  <nav aria-label="Dans cette page">
-    <a href="#film">Film</a>
-    <a href="#concours">LoopHole</a>
-    <a href="#versions">Versions</a>
-    <a href="#fins">Fins</a>
-    <a href="#fabrique">Fabrique</a>
-    <a href="#partager">Partager</a>
-  </nav>
+  <details class="nav-details">
+    <summary class="nav-resume"><span class="nav-resume-texte">Menu</span></summary>
+    <nav aria-label="Dans le site" id="nav-principale">
+      <a href="#accueil" data-vue="accueil">Accueil</a>
+      <a href="#fins" data-vue="fins">Choisis ta fin</a>
+      <a href="#film" data-vue="film">Le film</a>
+      <a href="#fabrique" data-vue="coulisses">Coulisses</a>
+      <a href="#concours" data-vue="projet">Le projet</a>
+    </nav>
+  </details>
 </header>
 
 <main id="haut">
 
+<div class="vue vue-active" id="vue-accueil" data-vue="accueil">
 <!-- ====================================================== OUVERTURE -->
-<section class="ouverture" aria-labelledby="titre">
+<section id="accueil" class="ouverture" aria-labelledby="titre">
   <div class="ouverture-fond" aria-hidden="true">
     <video class="ouverture-video" src="medias/boucle-ouverture.mp4" poster="medias/temps-run.jpg" muted loop playsinline preload="auto" autoplay></video>
     <div class="brume b1"></div><div class="brume b2"></div><div class="brume b3"></div>
@@ -104,6 +108,12 @@
       <figcaption class="hero-legende"><span aria-hidden="true">★</span> Le film + 9 fins alternatives · 2 min 33 · 1080p</figcaption>
     </figure>
     <p class="accroche">Un monstre de 4 mètres tombe du ciel. <strong>La menace est un bébé</strong>. Il porte une crête bleue, un perfecto clouté et une ceinture de <strong>biberons-grenades</strong>.</p>
+    <nav class="accueil-pages" aria-label="Explorer le film">
+      <a href="#fins" data-vue="fins">Choisis ta fin</a>
+      <a href="#film" data-vue="film">Le film et ses versions</a>
+      <a href="#fabrique" data-vue="coulisses">Coulisses</a>
+      <a href="#concours" data-vue="projet">Le projet</a>
+    </nav>
     <div class="actions">
       <a class="bouton bouton-film" href="#film"><span aria-hidden="true">↓</span> Plan par plan</a>
       <button class="tampon-boom" type="button" id="boom" aria-describedby="boom-aide">BOOM!</button>
@@ -117,6 +127,8 @@
   <div class="ruban ruban-haut" aria-hidden="true"><div class="ruban-defile"><span>FALL. RUN. JUMP. REPEAT. ✶ FALL. RUN. JUMP. REPEAT. ✶ FALL. RUN. JUMP. REPEAT. ✶ FALL. RUN. JUMP. REPEAT. ✶&nbsp;</span><span>FALL. RUN. JUMP. REPEAT. ✶ FALL. RUN. JUMP. REPEAT. ✶ FALL. RUN. JUMP. REPEAT. ✶ FALL. RUN. JUMP. REPEAT. ✶&nbsp;</span></div></div>
 </section>
 
+</div>
+<div class="vue" id="vue-film" data-vue="film">
 <!-- ====================================================== LE FILM -->
 <section id="film" class="section film" aria-labelledby="titre-film">
   <div class="cadre">
@@ -171,71 +183,6 @@
   </div>
 </section>
 
-<!-- ====================================================== LE CONCOURS -->
-<section id="concours" class="section concours" aria-labelledby="titre-concours">
-  <div class="cadre">
-    <header class="entete-section reveal">
-      <p class="numero">02 <span aria-hidden="true">/</span> le film collectif</p>
-      <h2 id="titre-concours" class="titre-section">The <span class="decoupe">Loophole</span> Project</h2>
-      <p class="chapeau">Un film collectif fait avec l'IA, sans jury ni classement : chaque film conforme y entre. Chaque créateur fabrique <strong>20 secondes au maximum</strong>, en suivant <strong>quatre temps imposés, dans l'ordre</strong>. Puis tous les films sont montés bout à bout, en boucle : le trou où plonge mon personnage devient la porte du monde du créateur suivant.</p>
-    </header>
-
-    <a class="bandeau-loophole reveal" href="https://www.theloopholeproject.ai/" rel="noopener" target="_blank"><img src="medias/loophole-bandeau.jpg" alt="The LoopHole Project — Fall. Run. Jump. Repeat. Infinite worlds, one shared story." width="1600" height="686" loading="lazy"></a>
-    <p class="idee-geniale reveal"><span aria-hidden="true">♥</span> <strong>Alexandre a trouvé l'idée absolument géniale</strong> : des créateurs du monde entier, chacun son monde, et un seul film sans fin où l'on tombe de l'un dans l'autre. C'est elle qui a donné naissance au monstre et au bébé punk. <a href="https://www.theloopholeproject.ai/" rel="noopener" target="_blank">Découvrir The LoopHole Project <span aria-hidden="true">↗</span></a></p>
-    <ol class="temps">
-      <li class="carte-temps reveal" style="--i:0">
-        <div class="temps-media">
-          <video muted loop playsinline preload="none" poster="medias/temps-fall.jpg" data-src="medias/temps-fall.mp4" aria-hidden="true"></video>
-          <img src="medias/temps-fall.jpg" alt="Le monstre vient de s'écraser dans la boue d'une forêt morte, au milieu du brouillard" loading="lazy" width="960" height="540">
-        </div>
-        <p class="temps-num"><span aria-hidden="true">↓</span> 1 · <span lang="en">FALL</span></p>
-        <h3>Tomber</h3>
-        <p>Un personnage tombe du ciel et atterrit dans un monde nouveau. Ici : <strong>le monstre</strong>, dans une forêt morte, sur la boue noire.</p>
-        <p class="temps-heure">0:00 → 0:05</p>
-      </li>
-      <li class="carte-temps reveal" style="--i:1">
-        <div class="temps-media">
-          <video muted loop playsinline preload="none" poster="medias/temps-threat.jpg" data-src="medias/temps-threat.mp4" aria-hidden="true"></video>
-          <img src="medias/temps-threat.jpg" alt="Très gros plan du bébé punk, bouche grande ouverte : il crie BOOM" loading="lazy" width="960" height="540">
-        </div>
-        <p class="temps-num"><span aria-hidden="true">!</span> 2 · <span lang="en">THREAT</span></p>
-        <h3>La menace</h3>
-        <p>Il découvre un danger. Ici, l'inversion : la menace, c'est <strong>un bébé punk minuscule</strong> qui lui crie « BOOM! ».</p>
-        <p class="temps-heure">0:05 → 0:09</p>
-      </li>
-      <li class="carte-temps reveal" style="--i:2">
-        <div class="temps-media">
-          <video muted loop playsinline preload="none" poster="medias/temps-run.jpg" data-src="medias/temps-run.mp4" aria-hidden="true"></video>
-          <img src="medias/temps-run.jpg" alt="Une explosion orange éclate sous le monstre qui s'enfuit" loading="lazy" width="960" height="540">
-        </div>
-        <p class="temps-num"><span aria-hidden="true">→</span> 3 · <span lang="en">RUN</span></p>
-        <h3>Fuir</h3>
-        <p>Il fait demi-tour et s'enfuit. Le bébé le poursuit en lançant ses <strong>biberons-grenades</strong> : feu orange et geysers de lait.</p>
-        <p class="temps-heure">0:09 → 0:15</p>
-      </li>
-      <li class="carte-temps reveal" style="--i:3">
-        <div class="temps-media">
-          <video muted loop playsinline preload="none" poster="medias/temps-jump.jpg" data-src="medias/temps-jump.mp4" aria-hidden="true"></video>
-          <img src="medias/temps-jump.jpg" alt="Le monstre plonge tête la première dans un trou noir creusé dans la boue" loading="lazy" width="960" height="540">
-        </div>
-        <p class="temps-num"><span aria-hidden="true">◯</span> 4 · <span lang="en">JUMP</span></p>
-        <h3>Sauter</h3>
-        <p>Il saute dans un trou <strong>bien visible</strong> et disparaît. Le bébé, lui, freine au bord, et triomphe.</p>
-        <p class="temps-heure">0:15 → 0:20</p>
-      </li>
-    </ol>
-
-    <div class="regles reveal">
-      <div class="regle"><span class="regle-gros">20 s</span><span>au maximum, son compris</span></div>
-      <div class="regle"><span class="regle-gros">16:9</span><span>format cinéma obligatoire</span></div>
-      <div class="regle"><span class="regle-gros"><span aria-hidden="true">🔊</span> son</span><span>obligatoire</span></div>
-      <div class="regle"><span class="regle-gros">0 texte</span><span>ni titre, ni logo, ni générique à l'image</span></div>
-      <div class="regle"><span class="regle-gros"><span aria-hidden="true">↻</span> ∞</span><span>tous les films montés en boucle</span></div>
-    </div>
-    <p class="lien-concours reveal">The LoopHole Project : <a href="https://www.theloopholeproject.ai/" rel="noopener">theloopholeproject.ai</a> <span aria-hidden="true">↗</span> · dépôts jusqu'au 21 octobre 2026.</p>
-  </div>
-</section>
-
 <!-- ====================================================== LES VERSIONS -->
 <section id="versions" class="section versions" aria-labelledby="titre-versions">
   <div class="cadre">
@@ -271,6 +218,38 @@
       </li>
     </ul>
 
+    <h3 class="groupe-titre reveal"><span aria-hidden="true">✎</span> Les premières versions</h3>
+    <ul class="grille-versions">
+      <li class="carte-version carte-3d reveal" id="v1-plan-sequence">
+        <div class="carte-media">
+          <video controls playsinline preload="none" poster="medias/affiche-v1-plan-sequence.jpg" src="medias/f/v1-plan-sequence.mp4" aria-label="Version 1, plan-séquence"></video>
+          <button type="button" class="regarder"><span aria-hidden="true">▶</span> Regarder</button>
+        </div>
+        <div class="carte-texte">
+          <p class="etiquettes"><span class="etiquette"><span aria-hidden="true">⏱</span> 20,00 s</span></p>
+          <h4>V1 · Le plan-séquence</h4>
+          <p>Le tout premier : trois plans d'un seul tenant, caméra fixe, comme la dictée d'origine.</p>
+        </div>
+      </li>
+      <li class="carte-version carte-3d reveal" id="v1-4-clips">
+        <div class="carte-media">
+          <video controls playsinline preload="none" poster="medias/affiche-v1-4-clips.jpg" src="medias/f/v1-4-clips.mp4" aria-label="Version 1 en quatre clips"></video>
+          <button type="button" class="regarder"><span aria-hidden="true">▶</span> Regarder</button>
+        </div>
+        <div class="carte-texte">
+          <p class="etiquettes"><span class="etiquette"><span aria-hidden="true">⏱</span> 20,00 s</span></p>
+          <h4>V1 · En quatre clips</h4>
+          <p>Un clip par temps imposé, chacun repartant de la dernière image du précédent.</p>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</section>
+</div>
+<div class="vue" id="vue-fins" data-vue="fins">
+<section class="section versions" aria-labelledby="fins">
+  <div class="cadre">
     <h3 class="groupe-titre reveal" id="fins"><span aria-hidden="true">☠</span> Choisis ta fin</h3>
     <p class="groupe-note reveal">Neuf fins pour le même film, imaginées par Alexandre : quatre chutes surprises et cinq boucles qui renvoient au début. Ici, plus de règle des 20 secondes : chaque version garde <strong>la meilleure séquence, sans contrainte</strong> (26 à 28 s). Choisissez une fin : on ne voit que <strong>ce qui change</strong>, du plongeon dans le trou jusqu'à la chute finale (12 s). « Voir le film en entier » montre la version complète.</p>
     <div class="choix-fin reveal">
@@ -354,32 +333,6 @@
       </li>
     </ul>
 
-    <h3 class="groupe-titre reveal"><span aria-hidden="true">✎</span> Les premières versions</h3>
-    <ul class="grille-versions">
-      <li class="carte-version carte-3d reveal" id="v1-plan-sequence">
-        <div class="carte-media">
-          <video controls playsinline preload="none" poster="medias/affiche-v1-plan-sequence.jpg" src="medias/f/v1-plan-sequence.mp4" aria-label="Version 1, plan-séquence"></video>
-          <button type="button" class="regarder"><span aria-hidden="true">▶</span> Regarder</button>
-        </div>
-        <div class="carte-texte">
-          <p class="etiquettes"><span class="etiquette"><span aria-hidden="true">⏱</span> 20,00 s</span></p>
-          <h4>V1 · Le plan-séquence</h4>
-          <p>Le tout premier : trois plans d'un seul tenant, caméra fixe, comme la dictée d'origine.</p>
-        </div>
-      </li>
-      <li class="carte-version carte-3d reveal" id="v1-4-clips">
-        <div class="carte-media">
-          <video controls playsinline preload="none" poster="medias/affiche-v1-4-clips.jpg" src="medias/f/v1-4-clips.mp4" aria-label="Version 1 en quatre clips"></video>
-          <button type="button" class="regarder"><span aria-hidden="true">▶</span> Regarder</button>
-        </div>
-        <div class="carte-texte">
-          <p class="etiquettes"><span class="etiquette"><span aria-hidden="true">⏱</span> 20,00 s</span></p>
-          <h4>V1 · En quatre clips</h4>
-          <p>Un clip par temps imposé, chacun repartant de la dernière image du précédent.</p>
-        </div>
-      </li>
-    </ul>
-
     <h3 class="groupe-titre reveal" id="chutes"><span aria-hidden="true">✗</span> Les chutes · ce qu'on n'a pas gardé</h3>
     <p class="groupe-note reveal">Les prises écartées, montrées telles quelles. Chacune a appris quelque chose au film. (Le tout premier lancement, avec Seedance 2.0, n'a même pas donné de vidéo.)</p>
     <ul class="grille-versions grille-essais grille-chutes">
@@ -432,6 +385,8 @@
   </div>
 </section>
 
+</div>
+<div class="vue" id="vue-coulisses" data-vue="coulisses">
 <!-- ====================================================== LA FABRIQUE -->
 <section id="fabrique" class="section fabrique" aria-labelledby="titre-fabrique">
   <div class="cadre">
@@ -654,14 +609,72 @@ Cinematic creature-feature film, dark comedy tone, energetic camera. Lighting an
   </div>
 </section>
 
-<dialog class="visionneuse" id="visionneuse" aria-labelledby="visionneuse-titre">
-  <div class="visionneuse-haut">
-    <p id="visionneuse-titre" class="visionneuse-titre"></p>
-    <button type="button" class="bouton bouton-contour" id="visionneuse-zoom" aria-pressed="false"><span aria-hidden="true">⊕</span> Taille réelle</button>
-    <button type="button" class="bouton bouton-film" id="visionneuse-fermer"><span aria-hidden="true">✕</span> Fermer</button>
+</div>
+<div class="vue" id="vue-projet" data-vue="projet">
+<!-- ====================================================== LE CONCOURS -->
+<section id="concours" class="section concours" aria-labelledby="titre-concours">
+  <div class="cadre">
+    <header class="entete-section reveal">
+      <p class="numero">02 <span aria-hidden="true">/</span> le film collectif</p>
+      <h2 id="titre-concours" class="titre-section">The <span class="decoupe">Loophole</span> Project</h2>
+      <p class="chapeau">Un film collectif fait avec l'IA, sans jury ni classement : chaque film conforme y entre. Chaque créateur fabrique <strong>20 secondes au maximum</strong>, en suivant <strong>quatre temps imposés, dans l'ordre</strong>. Puis tous les films sont montés bout à bout, en boucle : le trou où plonge mon personnage devient la porte du monde du créateur suivant.</p>
+    </header>
+
+    <a class="bandeau-loophole reveal" href="https://www.theloopholeproject.ai/" rel="noopener" target="_blank"><img src="medias/loophole-bandeau.jpg" alt="The LoopHole Project — Fall. Run. Jump. Repeat. Infinite worlds, one shared story." width="1600" height="686" loading="lazy"></a>
+    <p class="idee-geniale reveal"><span aria-hidden="true">♥</span> <strong>Alexandre a trouvé l'idée absolument géniale</strong> : des créateurs du monde entier, chacun son monde, et un seul film sans fin où l'on tombe de l'un dans l'autre. C'est elle qui a donné naissance au monstre et au bébé punk. <a href="https://www.theloopholeproject.ai/" rel="noopener" target="_blank">Découvrir The LoopHole Project <span aria-hidden="true">↗</span></a></p>
+    <ol class="temps">
+      <li class="carte-temps reveal" style="--i:0">
+        <div class="temps-media">
+          <video muted loop playsinline preload="none" poster="medias/temps-fall.jpg" data-src="medias/temps-fall.mp4" aria-hidden="true"></video>
+          <img src="medias/temps-fall.jpg" alt="Le monstre vient de s'écraser dans la boue d'une forêt morte, au milieu du brouillard" loading="lazy" width="960" height="540">
+        </div>
+        <p class="temps-num"><span aria-hidden="true">↓</span> 1 · <span lang="en">FALL</span></p>
+        <h3>Tomber</h3>
+        <p>Un personnage tombe du ciel et atterrit dans un monde nouveau. Ici : <strong>le monstre</strong>, dans une forêt morte, sur la boue noire.</p>
+        <p class="temps-heure">0:00 → 0:05</p>
+      </li>
+      <li class="carte-temps reveal" style="--i:1">
+        <div class="temps-media">
+          <video muted loop playsinline preload="none" poster="medias/temps-threat.jpg" data-src="medias/temps-threat.mp4" aria-hidden="true"></video>
+          <img src="medias/temps-threat.jpg" alt="Très gros plan du bébé punk, bouche grande ouverte : il crie BOOM" loading="lazy" width="960" height="540">
+        </div>
+        <p class="temps-num"><span aria-hidden="true">!</span> 2 · <span lang="en">THREAT</span></p>
+        <h3>La menace</h3>
+        <p>Il découvre un danger. Ici, l'inversion : la menace, c'est <strong>un bébé punk minuscule</strong> qui lui crie « BOOM! ».</p>
+        <p class="temps-heure">0:05 → 0:09</p>
+      </li>
+      <li class="carte-temps reveal" style="--i:2">
+        <div class="temps-media">
+          <video muted loop playsinline preload="none" poster="medias/temps-run.jpg" data-src="medias/temps-run.mp4" aria-hidden="true"></video>
+          <img src="medias/temps-run.jpg" alt="Une explosion orange éclate sous le monstre qui s'enfuit" loading="lazy" width="960" height="540">
+        </div>
+        <p class="temps-num"><span aria-hidden="true">→</span> 3 · <span lang="en">RUN</span></p>
+        <h3>Fuir</h3>
+        <p>Il fait demi-tour et s'enfuit. Le bébé le poursuit en lançant ses <strong>biberons-grenades</strong> : feu orange et geysers de lait.</p>
+        <p class="temps-heure">0:09 → 0:15</p>
+      </li>
+      <li class="carte-temps reveal" style="--i:3">
+        <div class="temps-media">
+          <video muted loop playsinline preload="none" poster="medias/temps-jump.jpg" data-src="medias/temps-jump.mp4" aria-hidden="true"></video>
+          <img src="medias/temps-jump.jpg" alt="Le monstre plonge tête la première dans un trou noir creusé dans la boue" loading="lazy" width="960" height="540">
+        </div>
+        <p class="temps-num"><span aria-hidden="true">◯</span> 4 · <span lang="en">JUMP</span></p>
+        <h3>Sauter</h3>
+        <p>Il saute dans un trou <strong>bien visible</strong> et disparaît. Le bébé, lui, freine au bord, et triomphe.</p>
+        <p class="temps-heure">0:15 → 0:20</p>
+      </li>
+    </ol>
+
+    <div class="regles reveal">
+      <div class="regle"><span class="regle-gros">20 s</span><span>au maximum, son compris</span></div>
+      <div class="regle"><span class="regle-gros">16:9</span><span>format cinéma obligatoire</span></div>
+      <div class="regle"><span class="regle-gros"><span aria-hidden="true">🔊</span> son</span><span>obligatoire</span></div>
+      <div class="regle"><span class="regle-gros">0 texte</span><span>ni titre, ni logo, ni générique à l'image</span></div>
+      <div class="regle"><span class="regle-gros"><span aria-hidden="true">↻</span> ∞</span><span>tous les films montés en boucle</span></div>
+    </div>
+    <p class="lien-concours reveal">The LoopHole Project : <a href="https://www.theloopholeproject.ai/" rel="noopener">theloopholeproject.ai</a> <span aria-hidden="true">↗</span> · dépôts jusqu'au 21 octobre 2026.</p>
   </div>
-  <div class="visionneuse-cadre"><img id="visionneuse-img" alt=""></div>
-</dialog>
+</section>
 
 <!-- ====================================================== LE TROU -->
 <section id="saut" class="saut" aria-labelledby="titre-saut">
@@ -687,6 +700,16 @@ Cinematic creature-feature film, dark comedy tone, energetic camera. Lighting an
     </div>
   </div>
 </section>
+
+</div>
+<dialog class="visionneuse" id="visionneuse" aria-labelledby="visionneuse-titre">
+  <div class="visionneuse-haut">
+    <p id="visionneuse-titre" class="visionneuse-titre"></p>
+    <button type="button" class="bouton bouton-contour" id="visionneuse-zoom" aria-pressed="false"><span aria-hidden="true">⊕</span> Taille réelle</button>
+    <button type="button" class="bouton bouton-film" id="visionneuse-fermer"><span aria-hidden="true">✕</span> Fermer</button>
+  </div>
+  <div class="visionneuse-cadre"><img id="visionneuse-img" alt=""></div>
+</dialog>
 
 <dialog class="partage" id="partage" aria-labelledby="partage-titre">
   <div class="partage-haut">
@@ -721,6 +744,6 @@ Cinematic creature-feature film, dark comedy tone, energetic camera. Lighting an
   </div>
 </footer>
 
-<script src="bebe-punk.js?v=8" defer></script>
+<script src="bebe-punk.js?v=9" defer></script>
 </body>
 </html>
