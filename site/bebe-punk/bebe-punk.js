@@ -382,7 +382,7 @@
 
   /* ------------------------------------------------ partager : la page, chaque version, chaque fin */
   var BASE = 'https://3h33.com/bebe-punk/';
-  var TEXTE_PAGE = 'Un monstre de 4 mètres tombe du ciel… et c’est un bébé punk qui lui fait peur. BOOM! Le film IA d’Alexandre Stopnicki pour The Loophole Project.';
+  var TEXTE_PAGE = 'Un monstre de 4 mètres tombe du ciel… et c’est un bébé punk qui lui fait peur. BOOM! Le film + 9 fins alternatives, 2 min 33, d’Alexandre Stopnicki pour The Loophole Project.';
   function adresse(slug) { return (!slug || slug === 'page') ? BASE : BASE + 'v/' + slug + '/'; }
   function vignette(slug) { return BASE + 'medias/vignettes/' + (slug || 'page') + '.jpg'; }
   function enc(x) { return encodeURIComponent(x); }
@@ -461,7 +461,7 @@
     dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
   }
   var zonePage = document.querySelector('[data-partage-liens="page"]');
-  if (zonePage) remplir(zonePage, { url: BASE, titre: 'Le monstre et le bébé punk', texte: TEXTE_PAGE, image: vignette('page'), video: 'medias/v3-musique.mp4' });
+  if (zonePage) remplir(zonePage, { url: BASE, titre: 'Le monstre et le bébé punk', texte: TEXTE_PAGE, image: 'https://3h33.com/bebe-punk/medias/vignettes/montage-2m33-1080p-20261108.jpg', video: 'medias/bebe-punk-montage-2m33-1080p-20261108.mp4' });
   // un bouton « Partager » sur chaque version
   document.querySelectorAll('.carte-version[id]').forEach(function (carte) {
     var v = carte.querySelector('video'), t = carte.querySelector('h4'), zone = carte.querySelector('.carte-texte');
