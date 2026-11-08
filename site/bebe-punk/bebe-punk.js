@@ -605,6 +605,76 @@
     if (document.hidden) document.querySelectorAll('video').forEach(function (v) { if (!v.paused && v.muted) v.pause(); });
   });
 
+
+  /* ------------------------------------------------ liste d'attente boutique (réutilise /api/contact) */
+  (function () {
+    var f = document.getElementById('f-boutique');
+    if (!f) return;
+    var r = document.getElementById('boutique-retour');
+    var ouvert = Date.now();
+    var en = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
+    var msg = en ? {
+      invalide: 'Please enter a valid email address and tick the box to be notified about the shop only.',
+      envoi: 'Sending…',
+      ok: 'Thank you. Your details have been saved. You will hear from us when the shop is online.',
+      erreur: 'Sending failed. Please try again in a moment.'
+    } : {
+      invalide: 'Indiquez une adresse e-mail valide et cochez la case pour être prévenu·e uniquement de la boutique.',
+      envoi: 'Envoi en cours…',
+      ok: 'Merci. Vos coordonnées sont enregistrées. Vous serez prévenu·e quand la boutique sera en ligne.',
+      erreur: 'L’envoi a échoué. Réessayez dans un instant.'
+    };
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = (f.email.value || '').trim();
+      var prenom = (f.prenom.value || '').trim();
+      var okMail = /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(email);
+      if (!okMail || !f.consentement.checked) {
+        if (r) { r.className = 'retour erreur'; r.textContent = msg.invalide; }
+        return;
+      }
+      var b = f.querySelector('button[type="submit"]');
+      if (b) b.disabled = true;
+      if (r) { r.className = 'retour'; r.textContent = msg.envoi; }
+      var nom = prenom.length >= 2 ? prenom : 'Fan';
+      var maintenant = new Date().toISOString();
+      var payload = {
+        nom: nom,
+        email: email,
+        sujet: 'Bébé Punk — liste d’attente boutique',
+        message: [
+          'Liste d’attente boutique Bébé Punk (pas une commande, pas un paiement).',
+          'Prénom : ' + (prenom || '(non indiqué)'),
+          'E-mail : ' + email,
+          'Consentement : être prévenu uniquement de l’ouverture de la boutique.',
+          'Horodatage du consentement : ' + maintenant,
+          'Page : ' + location.pathname + location.hash
+        ].join('\n'),
+        page: location.pathname + location.hash,
+        instant: ouvert,
+        site: f.site ? f.site.value : ''
+      };
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(function (rep) {
+        return rep.json().then(function (j) { return { st: rep.status, j: j }; });
+      }).then(function (x) {
+        if (x.st === 200) {
+          f.reset();
+          if (r) { r.className = 'retour ok'; r.textContent = msg.ok; }
+        } else {
+          if (r) { r.className = 'retour erreur'; r.textContent = (x.j && x.j.erreurs && x.j.erreurs.join(' ')) || msg.erreur; }
+          if (b) b.disabled = false;
+        }
+      }).catch(function () {
+        if (r) { r.className = 'retour erreur'; r.textContent = msg.erreur; }
+        if (b) b.disabled = false;
+      });
+    });
+  })();
+
   if (document.readyState === 'complete') apresChargement();
   else addEventListener('load', apresChargement);
 })();
