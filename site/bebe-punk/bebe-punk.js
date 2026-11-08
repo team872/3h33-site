@@ -7,6 +7,82 @@
   html.classList.remove('sans-js');
   html.classList.add('js');
 
+
+  /* ------------------------------------------------ 08/11 : vues (menu, ancres, historique, clavier) */
+  function arreterMedias(racine) {
+    if (!racine) return;
+    racine.querySelectorAll('video, audio').forEach(function (m) {
+      try { if (!m.paused) m.pause(); } catch (e) {}
+    });
+  }
+  function nomVueDepuisAncre(id) {
+    if (!id || id === 'accueil' || id === 'haut' || id === 'titre') return 'accueil';
+    var el = document.getElementById(id);
+    if (el) {
+      var vue = el.closest('.vue');
+      if (vue && vue.getAttribute('data-vue')) return vue.getAttribute('data-vue');
+    }
+    return 'accueil';
+  }
+  function fermerMenu() {
+    var det = document.querySelector('.nav-details');
+    if (det && det.open && window.matchMedia && matchMedia('(max-width: 799px)').matches) det.open = false;
+  }
+  function activerVue(nom, ancre, opts) {
+    opts = opts || {};
+    var cible = document.querySelector('.vue[data-vue="' + nom + '"]');
+    if (!cible) return;
+    document.querySelectorAll('.vue').forEach(function (v) {
+      var on = v === cible;
+      if (!on) arreterMedias(v);
+      v.classList.toggle('vue-active', on);
+      v.hidden = !on;
+      v.setAttribute('aria-hidden', on ? 'false' : 'true');
+    });
+    html.classList.add('vues-ok');
+    document.body.setAttribute('data-vue', nom);
+    document.querySelectorAll('#nav-principale a[data-vue], .accueil-pages a[data-vue]').forEach(function (a) {
+      a.setAttribute('aria-current', a.getAttribute('data-vue') === nom ? 'page' : 'false');
+    });
+    fermerMenu();
+    var el = ancre ? document.getElementById(ancre) : null;
+    if (el && cible.contains(el) && ancre !== nom && ancre !== 'accueil') {
+      if (opts.scroll !== false) el.scrollIntoView({ block: 'start', behavior: calme || opts.instant ? 'auto' : 'smooth' });
+    } else if (opts.scroll !== false) {
+      window.scrollTo(0, 0);
+    }
+    if (opts.focus) {
+      var f = (el && /^(H[1-4])$/.test(el.tagName) && cible.contains(el)) ? el : cible.querySelector('h1, h2, [id="fins"]');
+      if (f) {
+        if (!f.hasAttribute('tabindex')) f.setAttribute('tabindex', '-1');
+        try { f.focus({ preventScroll: true }); } catch (e2) { try { f.focus(); } catch (e3) {} }
+      }
+    }
+    if (typeof surDefilement === 'function') surDefilement();
+  }
+  function appliquerHash(opts) {
+    opts = opts || {};
+    var raw = '';
+    try { raw = decodeURIComponent((location.hash || '').replace(/^#/, '')); } catch (e) { raw = (location.hash || '').replace(/^#/, ''); }
+    var nom = nomVueDepuisAncre(raw);
+    activerVue(nom, raw, opts);
+    var li = raw && document.getElementById(raw);
+    if (li && li.closest('.liste-fins')) {
+      var f = li.querySelector('.fin');
+      if (f) f.click();
+    }
+  }
+  window.addEventListener('hashchange', function () { appliquerHash({ focus: true }); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    var det = document.querySelector('.nav-details');
+    if (det && det.open) {
+      det.open = false;
+      var s = det.querySelector('summary');
+      if (s) s.focus();
+    }
+  });
+
   var calme = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var pointeurFin = window.matchMedia && matchMedia('(pointer: fine)').matches;
   var scene = null; // l'objet renvoyé par scene3d.js, quand elle est prête
@@ -343,8 +419,8 @@
   var repeat = document.getElementById('repeat');
   if (repeat) repeat.addEventListener('click', function () {
     if (scene) scene.retomber();
-    window.scrollTo({ top: 0, behavior: calme ? 'auto' : 'smooth' });
-    setTimeout(function () { var t = document.getElementById('titre'); if (t) { t.setAttribute('tabindex', '-1'); t.focus({ preventScroll: true }); } }, calme ? 0 : 900);
+    if (location.hash && location.hash !== '#accueil') location.hash = 'accueil';
+    else activerVue('accueil', 'accueil', { focus: true, instant: calme });
   });
 
   /* ------------------------------------------------ la 3D, chargée en dernier */
@@ -483,15 +559,8 @@
       bFin.dataset.partage = f.parentNode.id; bFin.dataset.titre = f.dataset.titre; bFin.dataset.video = f.dataset.film || f.dataset.src;
     });
   });
-  // arrivée par un lien partagé : #fin-… ouvre la bonne fin
-  (function () {
-    var id = decodeURIComponent(location.hash.slice(1));
-    var li = id && document.getElementById(id);
-    if (li && li.closest('.liste-fins')) {
-      var f = li.querySelector('.fin'); if (f) f.click();
-      var ancre = document.getElementById('fins'); if (ancre) setTimeout(function () { ancre.scrollIntoView(); }, 50);
-    }
-  })();
+  // arrivée par un lien partagé : hash → vue + éventuellement la fin choisie
+  appliquerHash({ instant: true, focus: false });
 
   /* ------------------------------------------------ clic droit refusé sur les images et les vidéos (un frein, pas une protection) */
   document.addEventListener('contextmenu', function (e) {
