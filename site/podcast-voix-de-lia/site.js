@@ -750,9 +750,9 @@
     else window.prompt("Copiez l'adresse du flux :", url);
   });
 
-  /* ------------------------------------------------ partage */
-  var partage = $(".partage");
-  if (partage) {
+  /* ------------------------------------------------ partage (07/11/2026 : chaque bloc .partage de la page, plus
+     seulement le premier, pour le partage du podcast dans « S'abonner ») */
+  Array.prototype.forEach.call(document.querySelectorAll(".partage"), function (partage) {
     var natif = $(".partage-natif", partage);
     if (navigator.share && natif) {
       partage.classList.add("natif");
@@ -772,7 +772,7 @@
       if (navigator.clipboard) navigator.clipboard.writeText(url).then(fini, function () { window.prompt("Copiez ce lien :", url); });
       else window.prompt("Copiez ce lien :", url);
     });
-  }
+  });
 
   /* ------------------------------------------------ « Signaler une erreur ou une info » (12/10/2026)
      L'adresse n'est jamais écrite en clair dans la page (robots) : elle est assemblée au clic, avec un objet
@@ -2955,4 +2955,16 @@
     document.querySelectorAll(".info-i.ouverte, .vip-info.ouverte").forEach(function (o) { if (o !== i) o.classList.remove("ouverte"); });
     if (i) { ev.preventDefault(); ev.stopPropagation(); if (i.classList.contains("info-i")) placer(i); i.classList.toggle("ouverte"); }
   }, true);
+  /* ------------------------------------------------ « S'abonner » (07/11/2026) : met en avant l'application qui
+     correspond au téléphone (Apple Podcasts et Overcast sur iPhone, AntennaPod sur Android) et la place en tête. */
+  (function () {
+    var ua = navigator.userAgent || "";
+    var os = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? "ios" : /Android/.test(ua) ? "android" : "";
+    if (!os) return;
+    var liens = document.querySelectorAll('.abo-grands [data-os="' + os + '"], .abo-autres [data-os="' + os + '"]');
+    for (var i = 0; i < liens.length; i++) {
+      liens[i].classList.add("abo-suggere");
+      liens[i].parentNode.insertBefore(liens[i], liens[i].parentNode.firstChild);
+    }
+  })();
 })();

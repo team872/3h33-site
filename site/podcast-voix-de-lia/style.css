@@ -2641,3 +2641,29 @@ html:not(.js) .ls-jouer,html:not(.js) .ls-milieu,html:not(.js) .ls-temps{display
 .portrait-visuel.avec-vip+.pv-partage{margin-top:0}
 @media(min-width:900px){.pv-partage{max-width:600px}}
 .pv-partage .pa-btn.pa-partager{margin:0}
+/* ---------------------------------------------------------------- bloc « S'abonner » plus clair (07/11/2026)
+   promesse en trois lignes, étapes numérotées, grands boutons Apple / Spotify, petits boutons des autres
+   applications, mode d'emploi replié, partage du podcast. site.js ajoute .abo-suggere à l'application du téléphone. */
+.abo-promesse{list-style:none;margin:.2rem 0 1.6rem;padding:0;display:grid;gap:.45rem}
+.abo-promesse li{display:flex;align-items:flex-start;gap:.6rem;color:var(--text-dim);font-weight:300}
+.abo-promesse svg{width:18px;height:18px;flex-shrink:0;color:var(--accent);margin-top:.15rem}
+.abo-promesse strong{color:var(--text);font-weight:500}
+.abo-etape{display:flex;align-items:center;gap:.7rem;margin:2rem 0 .8rem;font-family:var(--ff-display);font-size:1.25rem;font-weight:500}
+.abo-num{display:inline-grid;place-items:center;width:1.8rem;height:1.8rem;border-radius:50%;border:1px solid var(--accent);color:var(--accent);font-family:var(--ff-mono);font-size:.8rem}
+.abo-grands{display:grid;grid-template-columns:1fr;gap:.7rem}
+@media(min-width:560px){.abo-grands{grid-template-columns:1fr 1fr}}
+.abo-grand{display:flex;align-items:center;gap:.9rem;padding:1rem 1.1rem;border:1px solid #c4a26566;background:#c4a2650d;color:var(--text);text-decoration:none;min-height:64px;transition:border-color .3s,background .3s,transform .3s var(--ease)}
+.abo-grand:hover,.abo-grand:focus-visible{border-color:var(--accent);background:#c4a2651f;transform:translateY(-2px)}
+.abo-grand>svg:first-child{width:30px;height:30px;flex-shrink:0;fill:currentColor;color:var(--accent)}
+.abo-grand span{display:flex;flex-direction:column;flex:1;font-size:1.1rem;font-weight:500;line-height:1.2}
+.abo-grand small{font-family:var(--ff-mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);font-weight:400}
+.abo-grand>svg:last-child{width:14px;height:14px;opacity:.6}
+.abo-autres{display:flex;flex-wrap:wrap;gap:.5rem;margin:.8rem 0 .4rem}
+.abo-petit{display:inline-flex;align-items:center;min-height:40px;padding:.45rem .9rem;border:1px solid var(--border-2);color:var(--text-dim);font-family:var(--ff-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:color .3s,border-color .3s}
+.abo-petit:hover,.abo-petit:focus-visible{color:var(--accent);border-color:var(--accent)}
+.abo-grand.abo-suggere,.abo-petit.abo-suggere{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.abo-grand.abo-suggere small::after{content:" · votre téléphone";color:var(--accent)}
+.abo-mode-emploi{margin:.9rem 0 .2rem}
+.abo-mode-emploi summary{cursor:pointer;color:var(--accent);font-size:.92rem;list-style-position:inside}
+.abo-mode-emploi[open] summary{margin-bottom:.6rem}
+.abo-partage{margin-top:.6rem}
