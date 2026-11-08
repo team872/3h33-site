@@ -147,6 +147,7 @@ main{position:relative}
   color:var(--orange);font:40px/1 var(--affiche);letter-spacing:.02em;transform:rotate(-14deg);cursor:pointer;
   -webkit-mask:var(--use) 0 0/220px 220px;mask:var(--use) 0 0/220px 220px;text-shadow:0 0 18px rgba(255,138,43,.6);animation:pulse 2.4s ease-in-out infinite;transition:transform .12s}
 .tampon-boom::after{content:"cliquez";position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font:11px/1 var(--machine);color:var(--lait);letter-spacing:.1em}
+html[lang="en"] .tampon-boom::after{content:"click"}
 .tampon-boom:hover{transform:rotate(-8deg) scale(1.07)}
 .tampon-boom:active{transform:rotate(-20deg) scale(.9)}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,138,43,.0)}50%{box-shadow:0 0 30px 6px rgba(255,138,43,.35)}}
@@ -393,6 +394,7 @@ blockquote::before{content:"";position:absolute;top:-10px;left:24px;width:70px;h
 .fin[aria-pressed=true]{background:#24211d;border-color:var(--lait);box-shadow:4px 4px 0 var(--bleu)}
 .fin[aria-pressed=true] .fin-titre::before{content:"▶ ";color:var(--bleu)}
 .fin[aria-pressed=true]::after{content:"en cours";position:absolute;right:8px;bottom:8px;padding:2px 6px;background:var(--lait);color:#000;font:11px/1.2 var(--machine);text-transform:uppercase;letter-spacing:.06em}
+html[lang="en"] .fin[aria-pressed=true]::after{content:"now playing"}
 
 /* ---------------------------------------------------------------- la fabrique : la part d'Alexandre */
 .accessoires{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 4px;padding:0}
@@ -450,6 +452,8 @@ blockquote::before{content:"";position:absolute;top:-10px;left:24px;width:70px;h
 .prompt-exemple summary::-webkit-details-marker { display: none; }
 .prompt-exemple summary::after { content: " ▸ ouvrir"; font-weight: 400; opacity: .75; }
 .prompt-exemple[open] summary::after { content: " ▾ fermer"; }
+html[lang="en"] .prompt-exemple summary::after { content: " ▸ open"; }
+html[lang="en"] .prompt-exemple[open] summary::after { content: " ▾ close"; }
 .prompt-exemple .prompt-note { margin: 0 1rem .6rem; font-size: .9rem; opacity: .8; }
 .prompt-exemple pre { margin: 0; padding: 1rem; max-height: 26rem; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere;
   font: .82rem/1.55 ui-monospace, SFMono-Regular, Menlo, monospace; color: #f0e9d6; background: #0b0b0b; border-top: 1px solid rgba(240,233,214,.2); }
